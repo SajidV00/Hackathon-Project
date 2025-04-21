@@ -1,0 +1,26 @@
+.st-title {
+    color: #4CAF50; 
+    text-align: center;
+}
+.st-sidebar {
+    background-color: #f0f8f0; 
+}
+.st-text-input > div > div > input {
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    padding: 10px;
+}
+.st-text-area > div > div > textarea {
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    padding: 10px;
+}
+.st-button {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 10px 20px !important;
+}
+.st-button:hover {
+    background-color: #388E3C !important;
+}
