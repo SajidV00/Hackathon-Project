@@ -1,17 +1,20 @@
 import csv
 import json
-from collections import defaultdict
-from langchain.prompts import PromptTemplate
-import json
-from langchain_anthropic import ChatAnthropic
-from langchain.schema import HumanMessage
 import os
-import time
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.docstore.document import Document
+from collections import defaultdict
 from pathlib import Path
+
+from langchain.docstore.document import Document
+from langchain.prompts import PromptTemplate
+from langchain.schema import HumanMessage
+from langchain_anthropic import ChatAnthropic
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+
+from scripts.extract_jira_data import extract_jira_data
+
 finalResult = []
+
 
 def read_json_file(file_name):
     base_dir = Path(__file__).resolve().parent
@@ -26,24 +29,26 @@ def read_json_file(file_name):
         print(f"Invalid JSON in: {file_path}")
     return None
 
+
 def mergingInputJsonWithRC():
-    script_dir = os.path.dirname(os.path.abspath(__file__)) 
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(script_dir, '../RC_Data.csv')
     with open(csv_path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            obj={}
+            obj = {}
             for column in ['RC', 'Result_Text']:
                 value = row[column].strip()
                 if value and column == "RC":
                     json_data = read_json_file(value)
                     if json_data:
-                        #print(f"\nContents of {value}.json:")
-                        #print(json.dumps(json_data, indent=2))
+                        # print(f"\nContents of {value}.json:")
+                        # print(json.dumps(json_data, indent=2))
                         obj["inputText"] = json_data
                 elif column == "Result_Text":
                     obj["expectedOutput"] = row[column]
             finalResult.append(obj)
+
 
 def batchMaking():
     grouped = defaultdict(list)
@@ -67,16 +72,17 @@ def batchMaking():
     batched_prompts = []
     for output, input_list in grouped.items():
         # Format all inputs in this batch
-        inputs_text = "\n\n".join([f"Input {i+1}:\n{txt}" for i, txt in enumerate(input_list)])
+        inputs_text = "\n\n".join([f"Input {i + 1}:\n{txt}" for i, txt in enumerate(input_list)])
         prompt = batch_template.format(inputs=inputs_text, output=output)
         batched_prompts.append({
             "prompt": prompt,
             "expected_output": output
         })
-    
+
     return batched_prompts
 
-def build_test_prompt_rag(prompt,testing_json, vectorstore, k=2):
+
+def build_test_prompt_rag(prompt, testing_json, vectorstore, k=2):
     query_str = json.dumps(testing_json, indent=2)
 
     # Retrieve k most relevant examples
@@ -93,6 +99,8 @@ Now, based on the above examples, interpret the following input and produce the 
 Input:
 {query_str}
 → Final Output:"""
+
+
 def RAGImplementation(batched_prompts):
     docs = [
         Document(page_content=batch["prompt"], metadata={"expected_output": batch["expected_output"]})
@@ -107,15 +115,18 @@ def RAGImplementation(batched_prompts):
     return vectorstore
 
 
-def testing(prompt,testing_json,vectorstore):
-    prompt = build_test_prompt_rag(prompt,testing_json, vectorstore, k=2)
+def testing(prompt, testing_json, vectorstore):
+    prompt = build_test_prompt_rag(prompt, testing_json, vectorstore, k=2)
     api_key = "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"
-    llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", temperature=0 , anthropic_api_key=api_key)
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", temperature=0, anthropic_api_key=api_key)
     # Call Claude
     response = llm.invoke([HumanMessage(content=prompt)])
     return response
 
+
 vectorStore = None
+
+
 def updateToDateRAGDB():
     global vectorStore
     if vectorStore is None:
@@ -128,8 +139,10 @@ def updateToDateRAGDB():
         print("Vector store already initialized.")
 
 
-def testingJsonWithClaude(release_name,prompt):
-    testing_json=read_json_file("RC-2025-5")
-    return testing(prompt,testing_json,vectorStore)
+def testingJsonWithClaude(release_name, prompt):
+    extract_jira_data(release_name)
+    testing_json = read_json_file(release_name)
+    return testing(prompt, testing_json, vectorStore)
+
 
 updateToDateRAGDB()

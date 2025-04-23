@@ -1,5 +1,8 @@
-import anthropic
 import os
+
+import anthropic
+
+
 def call_claude_sonnet(prompt: str) -> str:
     """
     Calls the Claude 3.5 Sonnet API with the given prompt and returns the response.
@@ -38,5 +41,6 @@ def call_claude_sonnet(prompt: str) -> str:
         return f"Anthropic API Rate Limit Error: {e}"
     except Exception as e:
         return f"An unexpected error occurred: {e}"
-    
+
+
 print(call_claude_sonnet("Hi"))
