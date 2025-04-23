@@ -1,0 +1,1046 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-94863",
+        "summary": "Stage - Accounts Payable - Invoice/Memo/PRQ - Item does not highlight Yellow when hovered over in the Item Grid.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+APM@vroozi.com password:  Qwerty@1 Pre Requisite: AP/EMP User should be logged into the Application. Steps to Reproduce: Click to Create Invoice/Memo/PRQ. Add an Item missing any accounting object like plant, purchasing organization, glaccount etc. Please see Validation Error shows in Yellow. Hover over the Item in the Grid, it does not highlight yellow. Actual result: Item does not highlight Yellow when hovered over. Expected Result: Item shoud highlight Yellow when hovered over. Screenshots: PRQ: Invoice: Memo: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2024-01-05T09:18:13.415-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94850",
+        "summary": "Stage - Accounts Payable- OCR Invoice - Getting error message while creating Invoice through OCR when PO is already invoiced.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   aqsa.rani+processor@vroozi.com password:  Qwerty@1 Pre Requisite: PO should be already invoiced Document should be present in the inbox of the AP user having same PO in it Steps to Reproduce: Access the document from inbox Click to create an invoice through OCR  e.g Invocie# 9000028977 Scroll down to see the error coming on invoice screen Actual result: Error showing from backend on the invoice screen Expected Result: Error should show on the screen Screenshot:",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-05T03:01:13.522-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94744",
+        "summary": "Tooltip texts are not displaying on right places in different screens ",
+        "description": "Server Stage unit id 10 Steps to Reproduce: Login from admin  Navigate to different screens and hover on the tooltip icon Verify that tooltip text on both production and stage are coming on same places  Expected Result: System should display tooltip text in same positions as production environment have Actual Result: There is just a slight difference    between both environment tooltip text message places Request Approval Workflow 2. Company > Settings 3.  General Configurations tooltip icon slightly changed  4. Edit buyer modal 5. Accounts Payable > Exceptions",
+        "status": "Released",
+        "assignee": "Unassigned",
+        "created": "2024-01-01T23:19:02.546-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94603",
+        "summary": "No Help Text is appearing while adding new currencies , mouse hover on ? fields display html path",
+        "description": "Description Server: Devqa33 Pre-Condition Login to PMAN application with admin login  notifyvroozi@gmail.com   Steps to Reproduce: Login from admin Once user is successfully login and home screen appears. Click on Master data > Currencies > Add  Currency Mouse hover on ? sign on fields like Min/Max Decimal places and auto round ap document , No Help text is appearing. Expected Result: There should be relevant help text displayed about field. Actual Result: No Help Text message is displayed with all fields having ? sign attached",
+        "status": "Released",
+        "assignee": "Unassigned",
+        "created": "2023-12-26T06:02:21.458-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94602",
+        "summary": "No help text is appearing upon mouse hovering on MinDecimal and MaxDecimal Places on Currencies Grid",
+        "description": "Description Server: Devqa33 Pre-Condition Login to PMAN application with admin login  notifyvroozi@gmail.com   Steps to Reproduce: Login from admin Once user is successfully login go to MasterData >  Currencies Mouse hover on ? sign next to Min Decimal Places or Max Decimal Places. No help text is displayed related to column heading.   Expected Result: There proper Help text should be displayed related to column field heading. Actual Result: Upon clicking on ? some html path is displayed which is wrong.",
+        "status": "Released",
+        "assignee": "Unassigned",
+        "created": "2023-12-26T05:53:30.863-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94499",
+        "summary": "POCR: Prod -PMan- The user is encountering an issue submitting the POCR document.",
+        "description": "The user is encountering an issue submitting the POCR document. Pre-conditions: 1-Sourcing and financial workflow should be enabled. 2-PR/PO should be created with multiple line item for example 3 line item along with line item level attachment's 3-PR should be passed with both the approvals Sourcing/financial approval. 4-Login with Requester Steps To Replicate: 1-Go to the PO. 2-Click on Fap Icon and add a change request. 3-Create POCR, POCR steps: \u2192 Change a line item price of a line item (Reduce the price) \u2192 tax will also be reduced \u2192 Update an attachment 4-Requester Resubmits the CR. POCR will be submitted to the Sourcing approver. 5-Sourcing approver will reject the POCR & it will go back to the Requester 6--Requester will update the same POCR by increasing the price of the newly added line item and adding/update the attachment (try with both steps) 7-Requester resubmits the POCR 8-Sourcing approver attempts to approve. Expected Result: The sourcing user should be able to approve the CR successfully. Actual Result: When Sourcing Approver tries to approve the CR the error triggers URL:   Credentials: Ghulam.mustafa@vroozi.com (Employee/Requester) Ghulam.mustafa+sourcing@vroozi.com (Sourcing approver) (Mustafa Sourcing Rule) Ghulam.mustafa+fin1@vroozi.com (Financial approver) Password:  Welcome1 Note:  Password is default for every user. PO# :2000013941 CR#:11000000848 (Production unit Id: 2)",
+        "status": "Released",
+        "assignee": "Naufil Aziz",
+        "created": "2023-12-19T01:40:04.296-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94485",
+        "summary": "Stage - Create Invoice - Add Item - Count not increasing for multiple Shipping Addresses and Company codes",
+        "description": "URL:   https://stage-go.vroozi.com/#/login username:   aqsa.rani+processor@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login through given credentials and click on create invoice Add two line items with different shipping addresses e.g  MIA Delivery Address 1  and  Aqsa_Shipping_Address Add third line item with another dictinct address e.g  HS Delivery Address Now, scroll up to the Addresses section of the document Please see that the count for the total addresses in the document is not increasing and  showing only +1 Actual Result: Count for the shipping addresses and company code is not increasing on the document Expected Result: Count for the shipping addresses and company code should increase on the document simultaneously Screen shot:",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-12-18T22:37:00.138-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94411",
+        "summary": "Stage - Accounts Payable - Create Invoice/Memo - Header level Shipping Address Count link and Pop over is not working for more than 1 addresses.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create Invoice/Memo.  Add e.g 3 items with different shipping addresses. Please see header level Shipping address has the wrong +n more link count. Click it. Please see pop over is empty. Actual Result: Addresses count link is not depicting correct number of addresses and pop over shows empty.  Expected Result: Addresses count link should depict correct number of addresses and pop over should show the address details correctly. Screenshot: Thanks, Asma  please don\u2019t forget to include  Invoice #  next time, thanks.  This one is  9000028839",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-12-14T10:28:08.149-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94353",
+        "summary": "Stage - Accounts Payable - Create Invoice/Memo/PRQ - Type aheads help text display issue and Error in Console by just hovering over the Accounting Objects.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create/Edit Invoice/Memo/PRQ.  Click to Add/Update/View Item. Hover over the Help Icon of the type ahead. Issue 1:  Please see the Help displayed is on the top left side. Also hover over Company Code, Plant and Purchase Organization fields. Check Console Tab. Issue 2:  Error shows by just hovering over Company Code, Plant and Purchase Organization fields. Actual Result: Issue 1:  Type aheads Help is displayed on the top left side. Issue 2:  Error shows in Console by just hovering over Company Code, Plant and Purchase Organization fields. Expected Result: Issue 1:  Help text should be displayed right over the field it belongs to. Issue 2:  No Error should show in Console hovering over Company Code, Plant and Purchase Organization fields. Thanks, Asma",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-12-13T01:49:03.631-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94332",
+        "summary": "PR Msg : Long Company name/Cost Centre/GL Code are overlapping on ? mark icon if Company code is disabled.",
+        "description": "Server:  Staging User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on the button \u201cCreate a New Accounting String\u201d. Select a combination of company code + Cost Centre + GL Code and save the string. Go to Master data and de-activate the Company code used in Accounting string created in step 3 Open the accounting string upon clicking hyperlink on accounting string listing screen. Actual Results Issue # 1: Long named Company code is overlapping on question mark icon ? explaining user about deactivated / deleted company code. Expected Results Issue # 1: Question mark info icon should not be overlapped with long name company code/Cost Centre / GL Code etc",
+        "status": "Released",
+        "assignee": "Muhammad Ahmar Nadeem",
+        "created": "2023-12-12T23:47:13.282-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94326",
+        "summary": "Acc Val :Company code and GL account fields are already highlighted upon new String creation",
+        "description": "Server:  Staging User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on the button \u201cCreate a New Accounting String\u201d. Company code and GL account fields are already highlighted when Create Accounting String model is opened Actual Results Issue # 1: Company code and GL account fields are already highlighted when Create Accounting String model is opened. Expected Results Issue # 1: Company code and GL account fields should not be highlighted when Create Accounting String model is opened",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-12-12T23:30:21.163-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94314",
+        "summary": "PMan- When making new non-catalog requests, certain Fields in the Line Item model appear highlighted in red.",
+        "description": "Server : stage Credentials: javaid.sattar+11emp@vroozi.com / Welcome1@ Pre-Req: Steps to Reproduce: Log into PMAN using an employee account.  Navigate to Non-catalog request in the left menu.  Click the \"Add Line Item\" button to insert a new line item.  In the line item model, notice certain fields highlighted in red. Actual Result: In the line item model, notice certain fields highlighted in red. Expected Result: The line item model should not display any highlighted fields.",
+        "status": "Released",
+        "assignee": "Javaid Sattar",
+        "created": "2023-12-12T09:11:34.892-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94305",
+        "summary": "SDM- Unable to login to SDM ",
+        "description": "Pre-Req:  SDM users are created Credentials:   ayesha.waseem+7+SDMBasic@vroozi.com  / Welcome1@ ayesha.waseem+sdm+admin+22@vroozi.com / Welcome1@ Steps TO Reproduce: 1-Login With the above user on stage Actual Result: Blank page appears Expected Result: User should login",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-12-12T02:12:56.260-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94299",
+        "summary": "Stage - UI Issues on Create Invoice/Memo pages",
+        "description": "URL:   https://stage-go.vroozi.com/#/login username:   https://stage-go.vroozi.com/#/login password:  Qwerty@1 Issue#1 Steps to Reproduce: Click on create memo/invoice Please see the error coming in console Screenshot: Issue#2 Steps to Reproduce: Click in create invoice and memo Hover over the Tooltips next to the Company code and Supplier fields Please see the message of the tooltip shows on top left side of the page Screenshot:",
+        "status": "Abandoned",
+        "assignee": "Sheikh Mavin",
+        "created": "2023-12-11T23:54:37.981-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94287",
+        "summary": "Stage - Accounts Payable - Create Invoice/Memo/PRQ - Required Typeahead fields start highlighting as the user navigates on the document.",
+        "description": "Environment: https://stage-go.vroozi.com Username : asma.latif+APM @vroozi.com Password:  Welcome1@ Pre-Requisites: Purchasing Organization should be set as Hidden in Admin>Documents>Settings>All documents>Line Item Field Configuration Section. AP User should have logged into the Application. Ordered PO should already exist.  2000029270 Steps to Reproduce: Click to Create Invoice/Memo/PRQ. Please see following Required Typeaheads on the documents start highlighting Red.           - Create Invoice:  Supplier, Payment Terms           - Create PRQ:  Supplier, Payment Terms           - Create Memo:  Supplier Actual Result: Certain Required Typeaheads on the documents start highlighting Red. Expected Result: These fields should not be highlighted unless touched or submitted like in other type of fields. Screen-Shots: Create Invoice: Create Memo: Create PRQ: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-12-11T10:58:50.138-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94283",
+        "summary": "Stage - Accounts Payable - PO based Invoice - Apply to All is giving Something went wrong error.",
+        "description": "Environment: https://stage-go.vroozi.com Username : asma.latif+APM @vroozi.com Password:  Welcome1@ Pre-Requisites: Purchasing Organization should be set as Hidden in Admin>Documents>Settings>All documents>Line Item Field Configuration Section. AP User should have logged into the Application. Ordered PO should already exist.  2000029270 Steps to Reproduce: Click to Create Invoice.  9000028766 Reference a PO with more than 1 items.  Select desired items and click to Apply to All. Select different Accounting details in the Changes to be Applied tab. Click to Submit. Please see the error pop up shows. Actual Result: Error shows and no changes are applied to the items. Expected Result: No error should show and changes applied to the items correctly. Screen-Shot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Jaroslav Bellus",
+        "created": "2023-12-11T03:51:53.992-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94266",
+        "summary": "RC-2023-11 - Payables - Regression Testing",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2023-12-10T22:12:51.782-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94243",
+        "summary": "\"Description\" not shown in response Payload against the location and location Type. ",
+        "description": "Environment : Stage UnitId : 20 PreConditions :  Location is created in master data with \u2018name\u2019 and \u2018description\u2019 added Location Type is created in master data with \u2018name and 'description\u2019 added.  Steps to Reproduce :  Open POSTMAN and send a request to POST PR API.  endpoint: https:// staging-api.vroozi.com /v1/purchase-requests payload: {\n    \"externalId\": \"\",\n    \"requestNumber\": \"\",\n    \"name\": \"\",\n    \"status\": \"SUBMITTED\",\n    \"requesterRef\": {\n\n        \"docNo\": \"sahar.ali+jhon.doe.20@vroozi.com\",\n        \"label\": \"Jhon Doe\",\n        \"type\": \"UserModel\",\n        \"archived\": false\n    },\n    \"powerUserRef\": null,\n    \"purchaseOrderRef\": null,\n    \"shippingAddress\": {\n        \"id\": \"63c57e903e1b0d4c9774f5bf\",\n        \"externalId\": null,\n        \"dateCreated\": \"2023-01-16T16:42:56.983+0000\",\n        \"lastUpdated\": \"2023-01-16T16:42:56.990+0000\",\n        \"addressId\": \"0000000087\",\n        \"name\": \"Jhon Doe\",\n        \"attentionTo\": \"Jhon Doe\",\n        \"addressType\": [\n            \"billing\",\n            \"company\",\n            \"shipping\"\n        ],\n        \"street1\": \"test\",\n        \"street2\": \"test\",\n        \"city\": \"test\",\n        \"postalCode\": \"60007\",\n        \"state\": {\n            \"name\": \"Alabama\",\n            \"code\": \"AL\"\n        },\n        \"country\": {\n            \"name\": \"United States of America\",\n            \"code\": \"US\"\n        },\n        \"phone\": \"+1 (234) 567-8990\",\n        \"buildingCode\": \"test\",\n        \"roomNo\": \"89\",\n        \"floor\": \"45\",\n        \"email\": \"sahar.ali@vroozi.com\",\n        \"active\": true\n    },\n    \"reasonForRequest\": null,\n    \"notesToSupplier\": null,\n    \"rejectionCode\": null,\n    \"approvalCode\": \"100\",\n    \"reasonForReject\": null,\n    \"approvedDate\": null,\n    \"rejectedDate\": null,\n    \"submittedDate\": \"2023-06-13T16:24:56.990+0000\",\n    \"currency\": \"USD\",\n    \"subTotal\": null,\n    \"taxAmount\": null,\n    \"shippingCharges\": null,\n    \"totalAmount\": null,\n    \"items\": [\n        {\n            \"id\": \"00001\",\n            \"accountDistributionList\": [\n                {\n                    \"glAccountRef\": {\n\n                        \"docNo\": \"JD-01\"\n                    },\n                    \"charge\": null,\n                    \"costObjectRef\": {\n\n                        \"docNo\": \"JD-01\",\n                        \"type\": \"CostCenterModel\"\n                    },\n                    \"customerRef\": {\n\n                        \"docNo\": \"JD-01\"\n                    },\n                    \"companyCodeRef\": {\n\n                        \"docNo\": \"JD-01\"\n                    },\n                    \"classRef\": {\n\n                        \"docNo\": \"JD-01\"\n                    },\n                    \"projectRef\": {\n\n                        \"docNo\": \"JD-01\"\n                    },\n                \n                    \"locationRef\": {\n\n                        \"docNo\": \"JD-01\",\n                        \"description\": \"test\"\n                        \n                    },\n                    \"locationTypeRef\": {\"docNo\": \"JD-01\"},\n                    \"budgetRef\": {\"docno\" : \"Jhon Doe Budget\"},\n                    \"profitCenter\": \"JD-01\",\n                    \"splitPercent\": null,\n                    \"distributedAmount\": null,\n                    \"distributedTax\": null,\n                    \"distributedShippingCharges\": null,\n                    \"distributedTotalAmount\": null,\n                    \"distributedUseTax\": null,\n                    \"distributedDiscountAmount\": null\n                }\n            ],\n            \"taxAmount\": 0.000,\n            \"dateCreated\": null,\n            \"lastUpdated\": null,\n            \"buyerGroupRef\": {\n\n                \"docNo\": \"JD-01\"\n            },\n            \"category\": \"1214-01\",\n            \"companyCodeRef\": {\n\n                \"docNo\": \"JD-01\"\n            },\n            \"currency\": \"USD\",\n            \"description\": \"test\",\n            \"notes\": null,\n            \"purchasingOrgRef\": {\n\n                \"docNo\": \"JD-01\"\n            },\n            \"plantCodeRef\": {\n\n                \"docNo\": \"JD-01\"\n            },\n            \"itemDetailUrl\": null,\n            \"taxCodeRef\": {\n                \"docNo\": \"WN_Tax\",\n                \"type\": \"TaxCodeModel\",\n                \"archived\": false\n            },\n            \"taxPercentage\": 0.00,\n            \"uom\": \"EA\",\n            \"type\": \"PRODUCT\",\n            \"accountDistributionType\": \"none\",\n            \"agreement\": null,\n            \"agreementItemNumber\": null,\n            \"externalRequestItemNumber\": \"00001\",\n            \"longDescription\": null,\n            \"quantity\": 5,\n            \"dynamicFields\": [],\n            \"quote\": null,\n            \"validFrom\": \"2023-11-12T11:22:00.105-0700\",\n            \"validTo\": \"2024-03-03T11:22:00.105-0700\",\n            \"unitPrice\": 30,\n            \"priceUnit\": 1,\n            \"serviceStartDate\": null,\n            \"serviceEndDate\": null,\n            \"partNo\": \"\",\n            \"expectedValue\": null,\n            \"freeItem\": null,\n            \"shippingCharges\": null,\n            \"deliveryDate\": \"2023-06-24T17:21:00.000+0700\",\n            \"manufacturerName\": null,\n            \"manufacturerPartNo\": null,\n            \"brandName\": null,\n            \"invoicePlanAmount\": \"20\",\n            \"externalItemNumber\": null,\n            \"supplierAdditionalData\": null,\n            \"attachments\": null,\n            \"customFields\": [\n                \n               \n                \n            ],\n            \"catalogItem\": false,\n            \"catalogItemId\": null,\n            \"externalCatalogItemId\": null,\n            \"listPrice\": null,\n            \"subTotal\": 10.000,\n            \"totalPrice\": 10.000,\n            \"changeActionStatus\": \"NONE\",\n            \"supplierRef\": {\n                \"name\": \"Jhon Doe\",\n                \"vendorId\": \"12341234\"\n            },\n            \"catalogRef\": null,\n            \"shippingAddress\": null,\n            \"approvedDate\": null,\n            \"lineNumber\": \"0\"\n        }\n\n    ],\n    \"approvalGroupRef\": {\n\n        \"docNo\": \"JD-01\"\n    },\n    \"forwardedOn\": null,\n    \"metadata\": {\n        \"errors\": null\n    },\n    \"approverComments\": \"\",\n    \"attachments\": null,\n    \"customFields\": [\n        \n    ],\n    \"changeRequest\": false\n} Actual Result :  The response payload shows \u2018null\u2019 against the description field for location and location field.  Expected Result :  The description added against the location should be displayed here.",
+        "status": "Released",
+        "assignee": "Sahar Habiba",
+        "created": "2023-12-08T01:24:31.838-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94225",
+        "summary": "SmartOCI - If CF was added in the Catalog file then \"Include in PO\" flag's value of CF is not being set as True",
+        "description": "Server : Stage Credentials : Notifyvroozi14@gmail.com  / Welcome1 Pre-Req: Create a CF having \u201cinclude in PO\u201d marked as True Add this CF in Catalog file Steps to Reproduce: Login to the SmartOCI with the given credentials Navigate to Catalog Management Click on Create button on the top left options Upload the catalog file created in the Pre- Req Open the catalog through the working column Verify in the custom fields section that the CF is added Actual :  Include in PO column is not checked against the CF Expected : If we associate a CF who\u2019s Include in PO is true then it should be marked as true, when it is added through the catalog file",
+        "status": "Released",
+        "assignee": "Ayesha Waseem",
+        "created": "2023-12-07T02:51:15.162-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94195",
+        "summary": "PO Transmission Report is not being received to the subscribed email",
+        "description": "PO Transmission Report is not being received to the subscribed email Steps to Replicate: 1-Login with admin. 2-Go to Buy-Route. 3-Click on the  PO Processing Reports. 4-Update the Subscribed Email 5-Select daily 6-Run the cron job. 7-Go to the email inbox.   Expected Result :  PO subscribed email should be triggered to the email provided. Actual Result: Email user should is not receiving the email. here is the exception :  2023-12-01 00:00:10,996 c.v.a.j.POStatusReportScheduler [POStatusReportScheduler.java:87] - Error during process POStatusReportTracker with id => 653afd8ee9ba1a535aea8c3e\n-----------------------------------------------------------------------------------\njava.lang.RuntimeException: Jasper Report Exception\n\tat com.vroozi.integration.utils.POStatusReportPdfGenerator.generatePdfAttachment(POStatusReportPdfGenerator.java:121) ~[classes/:na]\n\tat com.vroozi.api.jobs.POStatusReportScheduler.processUserPOStatusReportTracker(POStatusReportScheduler.java:74) ~[classes/:na]\n\tat com.vroozi.api.jobs.POStatusReportScheduler.lambda$scheduledRun$0(POStatusReportScheduler.java:52) ~[classes/:na]\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\n\tat com.vroozi.api.jobs.POStatusReportScheduler.scheduledRun(POStatusReportScheduler.java:52) ~[classes/:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]\n\tat org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.22.jar:5.3.22]\n\tat org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.22.jar:5.3.22]\n\tat org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95) ~[spring-context-5.3.22.jar:5.3.22]\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]\n\tat java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]\n\tat java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]\nCaused by: net.sf.jasperreports.engine.JRException: Errors were encountered when compiling report expressions class file:\n1. Type mismatch: cannot convert from int to Object\n                value = 1; //$JR_EXPR_ID=3$\n                        ^\n2. Type mismatch: cannot convert from int to Object\n                value = 2; //$JR_EXPR_ID=4$\n                        ^\n3. Type mismatch: cannot convert from int to Object\n                value = 3; //$JR_EXPR_ID=5$\n                        ^\n4. Type mismatch: cannot convert from int to Object\n                value = 4; //$JR_EXPR_ID=6$\n                        ^\n5. Type mismatch: cannot convert from int to Object\n                value = 1; //$JR_EXPR_ID=3$\n                        ^\n6. Type mismatch: cannot convert from int to Object\n                value = 2; //$JR_EXPR_ID=4$\n                        ^\n7. Type mismatch: cannot convert from int to Object\n                value = 3; //$JR_EXPR_ID=5$\n                        ^\n8. Type mismatch: cannot convert from int to Object\n                value = 4; //$JR_EXPR_ID=6$\n                        ^\n9. Type mismatch: cannot convert from int to Object\n                value = 1; //$JR_EXPR_ID=3$\n                        ^\n10. Type mismatch: cannot convert from int to Object\n                value = 2; //$JR_EXPR_ID=4$\n                        ^\n11. Type mismatch: cannot convert from int to Object\n                value = 3; //$JR_EXPR_ID=5$\n                        ^\n12. Type mismatch: cannot convert from int to Object\n                value = 4; //$JR_EXPR_ID=6$\n                        ^\n12 errors\n.\n\tat net.sf.jasperreports.engine.design.JRAbstractCompiler.compileReport(JRAbstractCompiler.java:229) ~[jasperreports-6.15.0.jar:6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95]\n\tat net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:358) ~[jasperreports-6.15.0.jar:6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95]\n\tat net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:618) ~[jasperreports-6.15.0.jar:6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95]\n\tat com.vroozi.api.requests.util.JasperUtils.compileJrxmlToJasper(JasperUtils.java:119) ~[classes/:na]\n\tat com.vroozi.api.requests.util.JasperUtils.generatePdfReport(JasperUtils.java:84) ~[classes/:na]\n\tat com.vroozi.integration.utils.POStatusReportPdfGenerator.generatePdfAttachment(POStatusReportPdfGenerator.java:117) ~[classes/:na]\n\t... 17 common frames omitted There is some issue at our side when we are generating PDFs for the reports. URL: https://go.vroozi.com/#/login Username:  qa.admin@vroozi.com Password: @Welcome299",
+        "status": "Released",
+        "assignee": "Javaid Sattar",
+        "created": "2023-12-06T03:06:48.571-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94183",
+        "summary": "NBCU: When we create a Memo with KEEP_AS_IS then on the PO line item statuses are roll backed.",
+        "description": "NBCU Settings Test Case:  https://vroozi.testrail.net/index.php?/cases/view/6956786&group_by=cases:section_id&group_order=asc&display_deleted_cases=0&group_id=665034 Steps to Reproduced: Stage URL:     Employee Login:  waheed.nawaz+employee_stage83-20@vroozi.com Password: Welcome1! Create a PR from UI. Submit it from UI. PR Went to Sourcing Approver. Sourcing Approver Login:  waheed.nawaz+sourcing_approver_stage83-20@vroozi.com Password: Welcome1! Approve it from Sourcing Approver. PR is in Submitted status. Approve this PR from Status Update API.  Create a Full PR Ref PO through API. Create a Full GR from UI. Create a Full Invoice through from API with final invoice flag as true. Create Full Memo with reInvoicingOption as KEEP_AS_IS. Actual Result: Go the PO and check the line item status are moved back into Received statuses. Expected Result: Line item should not back into received status it should be in Invoiced status. (Similar like internal functionality)",
+        "status": "Released",
+        "assignee": "Sudip Bolakhe",
+        "created": "2023-12-06T00:33:24.897-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94157",
+        "summary": "NBCU: When we create Invoice of a PO with final invoice true Header Level status is not changed and line item status are invoiced.",
+        "description": "NBCU Settings Test Case:  https://vroozi.testrail.net/index.php?/cases/view/6956786&group_by=cases:section_id&group_order=asc&display_deleted_cases=0&group_id=665034 Steps to Reproduced: Stage URL:     Employee Login:  waheed.nawaz+employee_stage83-20@vroozi.com Password: Welcome1! Create a PR from UI. Submit it from UI. PR Went to Sourcing Approver. Sourcing Approver Login:  waheed.nawaz+sourcing_approver_stage83-20@vroozi.com Password: Welcome1! Approve it from Sourcing Approver. PR is in Submitted status. Approve this PR from Status Update API.  Create a Full PR Ref PO through API. Create a Full Invoice through from API with final invoice flag as true. Actual Result: Go to UI and Open the PO. Line items are invoiced but PO header status is still in Ordered Status. Expected Result: Until GR creation line item status should be in Ordered status.",
+        "status": "Abandoned",
+        "assignee": "Sudip Bolakhe",
+        "created": "2023-12-05T21:29:26.672-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94149",
+        "summary": "PMAN - Acc Val - Create Accounting String messages needs to be updated.",
+        "description": "Environment:  Devqa2 unitId 2 User:   Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d from the db \"PURCHASE__ACCOUNTING_STRING_VALIDATION\". Acc val CURD operations feature toggle should be \u201cON\u201d from DB PURCHASE__ACCOUNTING_STRING_UI_CRUD Steps to Reproduce: Navigate to Master Data \u2192 Accounting Strings. Click \u201cCreate a new Accounting String\u201d. Enter mandatory data and Save button. Issue # 1: Verify the green noty message at the left bottom of screen. Actual Result: String Name is missing and only quotes \u201c\u201c are displayed in the message. Expected Results: String name should be displayed in the message. See the attached image. Screenshots: Issue # 1: Issue # 2: Noty message \u201caccountingElement should be unique\u201d should be changed to \u201cThis accounting combo is already in use\u201c.",
+        "status": "Released",
+        "assignee": "Iqtidar Arshad",
+        "created": "2023-12-05T05:22:45.484-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94127",
+        "summary": "Acc Val : Error message displayed once user select inactive/deleted company info related fields from drop down in specific case",
+        "description": "Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. User create new accounting string using specific GL code or Cost Centre. User deactivate GL Account or Company code or Cost Centre values from Master data. Search for same accounting string having deactivated GL code or cost centre. Fields are displayed in drop downs with different colours with exclamation marks saying its deactivated value. click on same drop down, field colour will change as default and user is able to choose deactivated values from list. Choose the deactivated values and save the record. Actual Results Issue # 1: System shows an overlay error message that Field is inactive. Expected Results Issue # 1: Deactivated values should not appear in the list to select again. No error overlay should be displayed,",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-12-04T23:10:29.509-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94112",
+        "summary": "\"Error occurred while contacting the server\" ticker appeared on line Item modal screen when opening the Purchase Request line Item",
+        "description": "Environment : Stage  Unit Id:  83 Pre-Condition: Already created Purchase request ( 1000006846 ) exist on the Vroozi Portal Steps to Reproduce: Employee login:  hasnat.saleem+employee_stage83@vroozi.com Password: Welcome@1 Navigate to the Purchase Request left menu bar and open the PR (mentioned on the Precondition) Open the line Item # 1  Actual Result: while contacting the server\" ticker appeared on line Item modal screen  Expected Result: Ticker should not be appeared on opening the line item",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-12-04T05:02:40.870-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94085",
+        "summary": "Regression Testing Integration Team RC-2023-11",
+        "description": "",
+        "status": "Done",
+        "assignee": "Waheed Nawaz",
+        "created": "2023-12-03T21:59:55.461-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94008",
+        "summary": "PROD-Approve Request Screen :When Sourcing user have additional Financial approver permissions then Resubmitted PR (in sourcing queue) is not showing on the Sourcing and financial review filters ",
+        "description": "Approve Request Screen :  When Sourcing user have additional Financial approver permissions then Resubmitted PR (in sourcing queue) is not showing on the Sourcing and Financial review filters  preconditions: 1-Sourcing and financial workflow should be enabled. 2-Sourcing user Must have additional financial approver permissions. 3-PR should be created and rejected on the financial approver level. 4-PR should be resubmitted and moves to sourcing review. Steps To Replicate: 1-Login with sourcing approver that have additional financial approver rights. 2-See on the approve request Page(Sourcing and financial review filters already applied) Expected Result: Sourcing reviewer should be able to see all PRs in Sourcing Review when he applies both filters. Actual Result: When both filter applies user is not able to see the PR that is in sourcing review but he removes the financial review filter able to see with relevant PR in sourcing review. Credentials: Ghulam.mustafa@vroozi.com  (Employee) Ghulam.mustafa+soucing@vroozi.com  (Sourcing + Financial approver) Ghulam.mustafa+Fin1@vroozi.com  (Financial approver) Password: Welcome@1 (Password is default for all) Sourcing Rule : Mustafa Sourcing Rule Note: Video is attached for clear understanding",
+        "status": "Released",
+        "assignee": "Sahar Habiba",
+        "created": "2023-11-29T23:52:50.296-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94000",
+        "summary": "PMAN - Issues during Loading/stress Testing activity on Stage environment.",
+        "description": "Load/stress testing activity was done on Stage unit ID 26 on 29th November 2023 with 6 QA resources. During this testing we faced following issues: Request resulted into http status code '500' Context: UserNotifications Error: Unhandled exception. Request resulted into http status code '500' Context: Comments Error: Unhandled exception. The above 2 exceptions were common to every user once the load on the application was increased.   please prioritise these issues at your convenience. cc:  Budget Team  (             ),  ,  ,",
+        "status": "Released",
+        "assignee": "Unassigned",
+        "created": "2023-11-29T23:06:11.172-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93999",
+        "summary": "Acc Val : The name field on accounting string UI should allow max 255 characters, similar to budget",
+        "description": "Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on Add New \u201c Accounting String\u201d. Enter name field on accounting string UI should allow max 255 characters Enter valid data in mandatory fields while removing Location value as empty. Click \u201cSave\u201d button Expected Results Issue # 1: Record will be saved with The name field allow max 255 characters",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-11-29T22:55:44.315-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93966",
+        "summary": "PMAN: Date component is not closing the date modal once a date is selected. ",
+        "description": "Based on   comments in Jira    I have created this new defect related to Ng2 upgrade. Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Click on Master Data \u2192 Accounting String. Now click on the button \u201cCreate a New Accounting String\u201d. Enter valid data in mandatory fields. Issue: # 1 \u201cValid From\u201d and \u201cValid To\u201d fields on the \u201cCreate Accounting String\u201d modal flicker when clicked upon. Issue: # 2 Once a date is clicked upon/selected, it should close the calendar and selected date should appear in its corresponding field. Expected Results: \u201cValid From\u201d and \u201cValid To\u201d fields should not flicker when clicked upon. Calendar should close when a date is selected. cc:  ,",
+        "status": "Released",
+        "assignee": "Iqtidar Arshad",
+        "created": "2023-11-28T22:04:04.525-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93936",
+        "summary": "Acc Val : Unable to see exclamation mark for deleted or deactivated accounting strings , as well as related message.",
+        "description": "Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Search for any accounting string. Mark the String as de-active or delete. Actual Results Issue # 1: Record neither marked as de-activate nor deleted. Expected Results Issue # 1: Deleted string should be displayed as RED with exclamation mark. upon hovering on record message should be displayed. \u201cItem has been deleted/deactivated.\u201c\u201c",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-11-28T00:59:31.343-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93930",
+        "summary": "Acc Val :Accounting string should be marked Inactive if Update and saved on Past ValidTo Date.",
+        "description": "Description Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on any existing \u201c Accounting String\u201d. Enter valid data in mandatory fields . Click \u201cSave\u201d button. Search the same accounting string updated in the previous step and open it. change the ValidTo Date as past date and save the Record. Record should be saved making string as  Inactive . Actual Results Issue # 1: Accounting string saved with Past ValidTo Date is not marked as inactive. Expected Results Issue # 1: Accounting string saved with Past ValidTo Date should be marked as inactive.",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-11-27T23:55:43.404-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93926",
+        "summary": "Acc Val : Bigger value provided as String name field or Description doesn't display properly on Modal form ",
+        "description": "Description Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on the button \u201cCreate a New Accounting String\u201d. Enter valid data in mandatory fields giving String Field name OR Description as bigger values like 100 to 200 characters. Click \u201cSave\u201d button. Unique Accounting screen should be saved. Now Turn CURD operation feature as OFF from DB. Go to accounting strings screen and click on same record having bigger data. Actual Results Issue # 1: Text Provided in String name is crossing Modal form boundaries. Expected Results Issue # 1: Text should be displayed in such a way that should not make the screen design distorted. Issue: # 2 Once any field is left Empty (optional field) , saved record. Rederive same record having no values in optional fields. Actual Results Issue # 2: Field is shown as empty Expected Results Issue # 2: As per written in Story, '-' should be displayed in case of empty string.",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-11-27T22:57:14.364-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93916",
+        "summary": "PMAN: AcctVal - While creating new Accounting String from UI the duration is added automatically in the string.",
+        "description": "Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on the button \u201cCreate a New Accounting String\u201d. Enter valid data in mandatory fields while leaving \u201cValid From\u201d and \u201cValid To\u201d empty. Click \u201cSave\u201d button. Search the accounting string created in the previous step and open it. Issue: # 2 \u201cValid From\u201d and \u201cValid To\u201d fields on the \u201cCreate Accounting String\u201d modal flicker when clicked upon. Issue: # 3 Once a date is clicked upon/selected, it should close the calendar and selected date should appear in its corresponding field. Actual Results Issue # 1: \u201cValid From\u201d and \u201cValid To\u201d is already filled. Expected Results Issue # 1: \u201cValid From\u201d and \u201cValid To\u201d fields should be empty. Screenshot:",
+        "status": "Released",
+        "assignee": "Iqtidar Arshad",
+        "created": "2023-11-27T03:52:00.344-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93716",
+        "summary": "PROD - Accounts Payable - Create Invoice/Memo/PRQ - Document Pane - Clicking the Right Navigation Icon Twice shows error in Console and does not work anymore.",
+        "description": "URL: https://go.vroozi.com Username:  asma.latif+EMP@vroozi.com  /  asma.latif+APM@vroozi.com Password: Redangel1!  OR Redangel1@ PreCondition: AP User/Payment Requester should have logged into the Application. Steps: Click to Create Invoice/Memo/PRQ. Upload couple of files in the Left Doc Pane. Now hover over the right Nav icon in the doc pane to move between the  uploaded docs. Double Click on the right Nav Icon. User moves to the next doc. Move back on the first doc using left Nav Icon. Then click on the right Nav Icon. Nothing happens and error shows in Console. Actual result: Clicking the Right Navigation Icon Twice shows error in Console and does not work anymore. Expected result: User should be able to navigate between the docs successfully. Screen Shot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-11-16T00:09:42.163-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93714",
+        "summary": "Footer on External Pages opened through email is not externalized for translation, it appears in English.",
+        "description": "Please see the screenshot attached.  Footer in the screenshot is appearing in English whereas the message is in Japanese. The footer needs to be externalized so that it can be translated in Supplier\u2019s language.",
+        "status": "Released",
+        "assignee": "Javaid Sattar",
+        "created": "2023-11-15T23:48:15.321-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93579",
+        "summary": "Rejected PR approval flow setting is not correct",
+        "description": "Rejected PR approval flow setting is not correct Preconditions: 1-Financial Workflow should be enabled. 2-Stair Case should be enabled. 3-Buyer approver workflow should be enabled Steps To Replicate: 1-Create PR and send it to stair case approvals 2-Approve PR from multiple approvers and send it to buy route 3-From Ready for sourcing return PR to requester 4-Requester need to change anything on header level fields like \u2192 custom fields, shipping address, add attachment at header level PR header level fields 5-Click on the outer section of the header 6-PR status gets change from rejected to Draft 7-Click on approval status \u2192 wrong approval status will get assign to the PR. Expected Result: Workflow should be triggered as per implementation Actual Result: Wrong Workflow triggered Note:  Video is attached for better Understanding After reviewing and debugging code we found that issue is at following point in purchase API \u2192 RequestWorkflowServiceImpl.java \u2192  getApproverWorkflow  \u2192 1496 due to change in status our workflow is getting disturbed",
+        "status": "Released",
+        "assignee": "Javaid Sattar",
+        "created": "2023-11-10T04:00:31.571-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93451",
+        "summary": "Purchase Order Processing-PROD: @ is getting change to %40 when opens the Purchase Order Processing screen from Admin",
+        "description": "Purchase Order Processing-PROD: @ is getting change to %40 when opens the Purchase Order Processing screen from Admin Due to which client is not getting report on daily basis. And according to client he updated the email from the UI basically on updating email only we do not send request to back end to update the email we send email when client change the value from the next drop down from where we can select frequency of the report. To resolve this issue client need to do following steps : put correct email again change frequency from drop daily to weekly and then revert it back to daily Ref Code : DB Email is correct Steps TO Replicate: 1-Login With Admin on Prod Unit Id 2 2-Go To Buy-Route Purchase Order Processing screen Actual Result: on the  Subscribe to the PO Transmission Report  Search section @ is showing as %40 . Expected Result: Correct email should be displayed @ should be visible instead of 40 %. It is also happens when user have updated the Email Address and search it Network call is also not working in case of updating the Email Address",
+        "status": "Released",
+        "assignee": "Naufil Aziz",
+        "created": "2023-11-06T01:30:50.282-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93212",
+        "summary": "Feature flags- Application is not considering the unit ID's added in excluded list when subscriberUnitIds is blank",
+        "description": "server : Production Pre-condition: configured a feature flag such that its  subscriberUnitId\u2019s  are blank and add a UnitID in  excludedUnitIds as an example  QUICK_RFQ Steps to reproduce: Login to the unitID added in  excludedUnitIds Verify that user cannot see RFQ module Now, login to UnitId other than the one added in  the  excludedUnitIds  list Verify that user cannot see the RFQ module Actual : If Subscription UnitId list is blank and excluded UnitId list contains a Unit ID then feature is not visible to any UnitId Expected : In case, SubscriptionUnitId is blank and some Unit Id exists in excludedUnitId list the feature should be visible to all other UnitIds",
+        "status": "Released",
+        "assignee": "Javaid Sattar",
+        "created": "2023-10-31T02:18:46.562-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-92900",
+        "summary": "PMAN: AP: System includes/excludes Shipping Charges and Tax for workflow determination based on settings",
+        "description": "User Story: As an Admin , I want the system the system to include or exclude Shipping Charges and Tax for workflow determination  so that  a given document is routed to the appropriate Approvers for approval, ensuring a 100% compliance with our business processes. Acceptance Criteria: 1.  What is the change?  The system takes the settings to include or exclude Shipping Charges and Tax on the Company \u2192 Workflow page and routes to the appropriate Approvers for approval. 2.  Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true  and  the new workflow rules feature toggle = true. Important Notes:   The new workflow enhancements will only be enabled for Maersk initially. For all other customers for whom this will be turned off, the existing functionality will prevail (for both Vroozi Invoice and Purchase). 3.  What pages should this change impact?  The documents themselves, when they are routed for approval. 4.  Which users should be impacted by the change?  AP Approvers. 5.  How should this feature work? Pre-Requisites:   Conditions in AC #2 are fulfilled. The Financial Approval Workflow is enabled by the Admin. A document is ready to be submitted for approval  or  is already in the approval chain, manually or to be auto-submitted by the system. Exclude Tax Exclude Tax = On: The system excludes Tax from the workflow determination, that is, the system subtracts Tax from the Document Total. Exclude Tax = Off: The system includes Tax from the workflow determination, that is, the system does  not  subtract Tax from the Document Total. Exclude Shipping Charges Exclude Shipping = On: The system excludes Shipping from the workflow determination, that is, the system subtracts Shipping from the Document Total. Exclude Shipping = Off: The system includes Shipping from the workflow determination, that is, the system does  not  subtract Shipping from the Document Total. Approval Determination The system uses the finally computed Total to determine which Approvers should approve the document with everything else being the same. 6.  Do we need a data fix for existing customers?  Potentially yes. 7.  Would this change impact existing documents?  In general, yes. But, existing documents for Maersk will not be impacted as they have turned these settings off, that is, Tax and Shipping are included by default for workflow determination. 8.  To which teams should this change be communicated to?  All teams. Test Data: Approval Chain: Level Approver Approval Limit #1 John $80 #2 James $100 #3 Tim $110 #4 Jim $125 System Behavior: Total Tax = Tax (At footer) + Use Tax (At footer, if it is enabled) # Scenario Total Tax Total Shipping Document Total Document Total considered for approvers determination Approvers document is forwarded to\u2026 1 Exclude Tax = Off Exclude Shipping = Off $10 $15 $125 $125 L1: John L2: James L3: Tim L4: Jim 2 Exclude Tax = On Exclude Shipping = On $10 $15 $125 $100 L1: John L2: James 3 Exclude Tax = Off Exclude Shipping = On $10 $15 $125 $110 L1: John L2: James L3: Tim 4 Exclude Tax = On Exclude Shipping = Off $10 $15 $125 $115 L1: John L2: James L3: Tim L4: Jim Questions: Question # AC # Raised By Inquiry Date Assignee Response Date # Question Recommendation Response Remarks Key Decisions: # Decision Point Decision Reasoning Validation Plan 1 How should we handle existing documents that are already in the approval process? At every event, e.g. approve, submit, etc,. the approvals routing will be determined based on the latest settings. This is current state and it makes sense. None. 2 How should we handle the Withholding Tax and Use Tax scenarios? Do we need to add separate toggles? Both should be included or excluded. Both of these constitute the Total Tax being paid out by AP. Most customers will want both PR and invoice approval to mimic each other. 3 How should we handle Special Handling charges? Special Handling is inserted into the Shipping Charges. It will be included or excluded based on the Shipping Charges setting. There is no way to differentiate this scenario.  Backlog Grooming (October 24, 2023): Points of Discussion: Discussed the scope of the ticket. Reviewed the decision points collectively. Backlog Grooming (November 7, 2023): Attendees:  Jaro, Mavin, Jimena, Ahmed, Asma, Aqsa, Zulkiful, Sujoy, Deepak Points of Discussion: Discussed and answered all the decision points. Played poker to estimate SP.",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-10-19T19:38:45.934-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-92488",
+        "summary": "PROD - PMAN - RFQ Form - Submitting Request form via RFQ List Page shows Failure Error when a Buyer Group has been selected on the Request Form.",
+        "description": "Environment: https://go.vroozi.com Username :  asma.latif+EXpense@vroozi.com Password:  Redangel1@ Note: Try to use credentials from    Pre-Requisites: Expense User should have logged into the Application. Steps to Reproduce: Click to Create \u2018RFQ Form\u2019 in Shopper View. Add details selecting a Buyer Group and click to Save. Access RFQ List Page>Requests in Draft Tab. Click the Ellipses against the saved RFQ Form. Click 'Submit Request Form'. Please see Failure Error shows not letting submit the RFQ Form. Actual Result: Submitting RFQ form via RFQ List Page shows Failure Error. Expected Result: RFQ Form should be submitted successfully. Screen Shot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Javaid Sattar",
+        "created": "2023-10-04T04:29:21.816-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-86052",
+        "summary": "PROD - Accounts Payable - Create Memo -  Original PO # field issue while linking the PO via PO Look up Modal.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+AP2@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: User should be logged into Application as AP User. There should already exist an Ordered PO.  2000028296 \u00a0 Steps to Reproduce: Click to Create Memo.  9500003666 Click Magnifier against PO field. Select the valid PO to reference. Please see the  Original PO #  field is not showing the selected PO number and is empty. Click Link to Memo button. Original PO #  field is still not showing the PO Number. Actual Result: PO Number when Linked via PO Lookup Modal is not showing up in the field. Expected Result: Linked PO Number should display correctly in the  Original PO #  field. Screen-Shot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-03-16T04:27:06.982-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-85492",
+        "summary": "PROD - Accounts Payable - CXML Memo - Credit Memo gets stuck with Re Invoicing is missing error if the associated PO is in Disputed Status.",
+        "description": "URL: https://stage-go.vroozi.com Username:  asma.latif+EMP@vroozi.com  /  asma.latif+APM@vroozi.com Password: Blueangel1!  OR Blueangel1@ PreCondition: Following Memo Re invoicing Settings should exist in Admin>Accounts Payable>Settings>Preferences: Disputed PO should already exist.  2000028277 Submit a CXML Disputed PO based Memo request.  User should have logged into PMAN Application as AP user. Steps: Access Document Inbox and select the received request in Hopper. CXML failure Red Badge shows. Click to Create Memo, anyway. Please see Non PO based Memo gets created.  9500003647 Scroll down at the bottom \u201cRe invoicing type is missing\u201c error shows. Actual result: \u201cRe invoicing type is missing\u201c error shows. Expected result: \u201cRe invoicing type is missing\u201c error should not show based on the memo re invoicing type settings made. Screen Cast:   Thanks, Asma",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-02-26T22:12:49.091-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94090",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Accounting Validation 2024: GA Support Release: Bulk Upload",
+      "description": "Vroozi Accounting Validation GA Phase#3 is post MVP phase(refer to  ) where it will become generally available for all the subscribed customers. In this phase, we will cover the following areas: Accounting String Bulk Upload Implement Accounting Validation in Budget Workflow (implemented in   ) For the following point, please refer to the epic    UI CRUD operations for Accounting String master data",
+      "status": "Open",
+      "assignee": "Muhammad Ahmar Nadeem",
+      "created": "2023-12-03T22:51:44.217-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-94722",
+        "summary": "AccVal: Admin: Admin should not see Bulk Upload Options until the feature is completed.",
+        "description": "Business Case: As an admin, I don\u2019t want to see any Bulk options on the Accounting Strings management screen until the feature is completely developed. Acceptance Criteria: Admin should not be able to see any bulk option on the Accounting Strings management screen until the feature is completely developed. Since the Bulk feature is also behind the UI CRUD operation feature toggle, turning it ON should only show the UI CRUD operations button to the admins. Once the Bulk feature is completely developed, then the Bulk feature should also be visible to the admin upon turning the UI CRUD operation feature toggle. Here is the  accountingStringsBulkFunctionalityVisible  toggle in the company setting that we need to remove.",
+        "status": "Released",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-12-31T23:23:16.144-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-94045",
+        "summary": "Acc Val : Download Template of accounting string is not hookup with \"ACCOUNTING_STRING_UI_CRUD\" toggle",
+        "description": "Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on the button \u201cCreate a New Accounting String\u201d. Download Template icon should be available to download template . Turn the \u201cACCOUNTING_STRING_UI_CRUD toggle Off from db. Actual Results Issue # 1: Download template option still visible on Accounting listing screen  Expected Results Issue # 1: Download Template option should be hooked up behind toggle  \u201cACCOUNTING_STRING_UI_CRUD\u201d. If its  off  Download template  should not be available  if its  On  Template download option  should be  available.",
+        "status": "Released",
+        "assignee": "Masood Safi",
+        "created": "2023-11-30T23:27:06.463-0800",
+        "issue_type": "Defect",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-93321",
+        "summary": "AccVal: Admin: Admin can download the Accounting String Bulk Upload Template",
+        "description": "Business Case: As an admin, I want to download the bulk upload template. So I can fill in the desired fields and upload them. Acceptance Criteria: There should be a  Download Template  icon above the top right corner of the accounting string table on the Accounting String screen. Hovering on the icon should show a tooltip saying  Download Template . Clicking on the  Download Template  icon should download the template in the xlsx format. The name of the downloaded file should be  Accounting-Strings-Bulk-Upload. It should be dependent on a sub-feature toggle for UI CRUD operations(refer to  ). If the above-mentioned feature toggle is ON, the user should be able to see the  Download Template  icon. If the above-mentioned feature toggle is OFF, the user should not be able to see the  Download Template  icon. In the download template, there should be two tabs(sheets): Accounting String Bulk Upload In this sheet(tab), the following column should be there:( Please create their enums according to the existing bulk upload standards in our system ) Row Number String Name Description Valid From Valid To All the Company Object fields All the Accounting Object fields Instructions In this sheet(tab), the instructions for each column\u2019s input from the  Accounting String Bulk Upload  sheet should be there. For reference, Please click the following xlsx file.",
+        "status": "Released",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-11-01T21:26:31.778-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94119",
+      "released_in_current_rc": false,
+      "summary": "AP: Add Purchasing Organization to AP Documents",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Deepak Mohan Kumar",
+      "created": "2023-12-04T16:01:13.200-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-94328",
+        "summary": "Stage - Accounts Payable - Create Invoice/Memo - Pur.Org Field does not save the updated value most of the time.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. AP User Profile should have Company and a Purchase Organization value set already. \u00a0 Steps to Reproduce: Click to Create Invoice/Memo.  Add an Item details ensuring Pur.Org value in the field too. Click to update the Item. Select another Pur.Org value related to the selected company. Save the Item. Edit Open the Item. Please see Pur.Org field is holding the previous value and not the updated one. Actual Result: Purchase Organization field is holding the previous value and not the updated one. Expected Result: Purchase Organization field should hold the updated value. Thanks, Asma",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-12-12T23:35:14.015-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-94327",
+        "summary": "Stage - Accounts Payable - Create Invoice/Memo - Pur.Org Field is not showing value in View Mode.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. AP User Profile should have Company and a Purchase Organization value set already. \u00a0 Steps to Reproduce: Click to Create Invoice/Memo.  Add an Item details ensuring Pur.Org value in the field too. Click to View the Item. Please see Purchase Organization field is showing no value. Actual Result: Purchase Organization field is showing no value. Expected Result: Purchase Organization field should show the value added against it. Screenshot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-12-12T23:33:36.679-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-94241",
+        "summary": "Stage - Accounts Payable - Create Memo - Pur.Org Field is not setting from User Defaults for Non PO CXML Memo and Invoice Based Memo.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. AP User Profile should have Company and a Purchase Organization value which is not associated with Company but a random one. \u00a0 Steps to Reproduce: Issue 1:  Click to Create Invoice.  9000028741/9000028740 Add Details and and an Item missing Purchase Organization value. Save the Invoice. Click to Create Memo via Nav Pane/Inbox against CXML Memo Document(Non PO but Invoice based).  9500004082/9500004080 Link the created invoice to Memo. View/Edit Open the Item coming from Invoice. Please see Purchase Organization is empty. Issue 2:  Click to Create Memo via Inbox against CXML Memo Document(Non PO Non Invoice based)  9500004076 View/Edit Open the Item coming from Invoice on the Memo. Please see Purchase Organization is empty. Actual Result: Purchase Organization is empty. Expected Result: If No Purchase Organization value is coming from Invoice then User default value should be set in the field. Thanks, Asma",
+        "status": "Released",
+        "assignee": "Ahmed Habib",
+        "created": "2023-12-08T00:14:56.417-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-94193",
+        "summary": "Stage - Accounts Payable - Create Invoice - Purchase Organization field's help text issue.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  notifyvroozi@gmail.com Password:  Welcome1@ Pre-Requisites: Feature Toggle ACCOUNTS_PAYABLE_WORKFLOW__PURCHASING_ORGANIZATION should be enable for the UnitId in DB. AP User should have logged into the Application. Steps to Reproduce: Click to Create Invoice and Add an Item. Hover over the Purchasing Organization field\u2019s help icon. Please see the text contains \u2018Plant\u2019 word. Actual Result: Help text showing \u2018Plant information' instead of 'Purchase Organization information\u2019. Expected Result: Help text should be correct. Screen-Shot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Jaroslav Bellus",
+        "created": "2023-12-06T02:51:52.807-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-93971",
+        "summary": "PMAN: AP: Introduce a feature toggle for the Purchasing Organization changes on AP documents",
+        "description": "Proposed Change: Introduce a back-end toggle/setting that will control whether Purchasing Organization and all of its associated changes will be showcased on invoice and memo UI (document screen, grids, audit trail, etc.). Acceptance Criteria: 1.  What is the change?  The system showcases Purchasing Organization field and all of its associated messages only if this new feature toggle is enabled; otherwise, it is  not . 2.  Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true (and ACCOUNTS_PAYABLE_WORKFLOW_MEMO = true, if memos are enabled). Note:  The feature toggle is applied to both invoices and memos alike. 3.  What pages should this change impact?  The invoice and memos pages. 4.  Which users should be impacted by the change?   Users who are allowed to create AP documents, namely, AP Processors, Managers, and Admins, will be able to update the Purchasing Organization field in   and    status, and Users who are allowed to view AP documents. 5.  How should this feature work? Pre-Requisites:   Conditions in AC #2 are fulfilled. The Purchasing Organization setting in Documents \u2192 Settings \u2192 All Documents is configured to one of Optional or Required. Default:  This feature toggle should be set to  off  for all existing and new customers, by default. Feature Toggle = Off When a user creates or views an AP document, the system does  not  showcase the Purchasing Organization field in the  line item  and in the  Audit Trail , and does not showcase any associated messages. Feature Toggle = On On the contrary, when a user creates or views an AP document, the system showcases the Purchasing Organization field in the  line item  and allows the user to make changes. The system also showcases any associated error messages above the line item section. The system reflects changes done to it in the  Audit Trail . 6.  Do we need a data fix for existing customers?  Yes. 7.  Would this change impact existing documents?  Yes \u2013 both documents in process and historically processed documents. 8.  To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date # Question Recommendation Response Remarks Key Decisions: # Decision Point Decision Reasoning Validation Plan 1 How should we handle documents created between RC-2023-11 and RC-2024-1? The Purchasing Organization will be null if the feature toggle is off. Since the user is not explicitly setting it, it doesn\u2019t make sense for the system to set it behind the scenes. None. 2 Identical to the question above, how should we handle the situation when the feature toggle is enabled initially and then disabled at a later point? The latest settings will take effect on documents being processed. This might not apply as the feature toggle will be deprecated when this is rolled out to Production. None. Backlog Grooming (November 29, 2023): Attendees:  Jaro, Mavin, Jimena, Ahmed, Aqsa, Sujoy, Deepak Points of Discussion: Discussed the ticket as a whole and the discussion points.",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-11-28T23:49:16.955-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-93326",
+        "summary": "PMAN: AP: System introduces Purchasing Organization to Memos",
+        "description": "User Story: As an AP person , I want to access and correct the Purchasing Organization field on AP documents  so that  downstream processing such as workflow determination and posting to my payment system can happen seamlessly. Acceptance Criteria: 1.  What is the change?  The system showcases the Purchasing Organization field on AP documents at the line item level. 2.  Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true and ACCOUNTS_PAYABLE_WORKFLOW_MEMO = true. 3.  What pages should this change impact?  Memos only, including auto memos. 4.  Which users should be impacted by the change?  Users who are allowed to create AP documents, namely, AP Processors, Managers, and Admins, will be able to update the Purchasing Organization field in   and    status. Users with read only access to AP documents will be able view the Purchasing Organization information on AP documents. 5.  How should this feature work? Pre-Requisites:   Conditions in AC #2 are fulfilled. The Purchasing Organization setting in Documents \u2192 Settings \u2192 All Documents is configured to one of Hidden, Optional, or Required. When an document is in the Hopper (cXML or email) or if document is already in   and    status. Important Note:  Only the primary differences have been documented in this ticket. All the scope covered in   must also be covered in this ticket, including Audit Trail and Apply All scenarios. Scenarios: Purchasing Organization = Hidden All scenarios The system does  not  showcase the Purchasing Organization field in the  General Information tab  within the line item section (as shown in the screenshot). Purchasing Organization = Optional   or   Required When a user accesses an existing document (this also includes non AP users) The system showcases the Purchasing Organization field in the  General Information tab  within the line item section (as shown in the screenshot) with either an empty/blank or a specific value. When a PO and/or invoice is referenced to a memo / When a PO and/or invoice based cXML memo is created from the Hopper The system instantly downloads and populates the Purchasing Organization information on the document from the PO and/or invoice, if it exists; If not, the system populates the user default (defined by the Admin or the user themselves), if it exists. Otherwise it is left blank. Note:  Additionally, the rules described in the General Rules section will come into play. When a non-PO-non-invoice memo is created from the Hopper (No cXML)   or   when a memo is created from the navigation panel If user defaults are defined (by the Admin or the user themselves), then the system populates that value into the Purchasing Organization field; otherwise, it leaves it empty. When a non-PO-non-invoice memo is created (submitted via cXML) from the Hopper If user defaults are defined (by the Admin or the user themselves), then the system populates that value into the Purchasing Organization field; otherwise, it leaves it empty. Note:  Additionally, the rules described in the General Rules section come into play. The system does  not  apply Machine Learning predictions to the Purchasing Organization field. General Rules: Auto Memos: The user will not be able to update the Purchasing Organization as it is a read-only document entirely. 6.  Do we need a data fix for existing customers?  Yes. 7.  Would this change impact existing documents?  Yes \u2013 both documents in process and historically processed documents. 8.  To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date # Question Recommendation Response Remarks 1 Is there anything else unique to memos to be accounted for? Key Decisions: # Decision Point Decision Reasoning Validation Plan Backlog Grooming (November 1, 2023): Attendees:  Jaro, Jimena, Mavin, Aqsa, Zulkiful, Sujoy, Deepak Points of Discussion: Decided to break   down into two parts and created this ticket. Sized this ticket.",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-11-01T23:12:03.477-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-93246",
+        "summary": "PMAN: AP: Coders are able to code Purchasing Organization in EXCEPTION and CODING",
+        "description": "User Story: As a Coder , I want to be able to correct the coding information when an invoice is assigned to me  so that  I can ensure accuracy of the Purchasing Organization information on the invoice. Acceptance Criteria: 1.  What is the change?  The system allows Coders to code the Purchasing Organization information on an invoice when it is assigned to them in   or   . 2.  Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true. 3.  What pages should this change impact?  Invoices only. 4.  Which users should be impacted by the change?  Users who have coding privileges. Note:  Only users with coding privileges can code the Purchasing Organization information in   and   status. 5.  How should this feature work? Pre-Requisites:   Conditions in AC #2 are fulfilled. The Purchasing Organization setting in Documents \u2192 Settings \u2192 All Documents is configured to one of Optional  or  Required. An invoice is assigned to an Coder in   or   status. Coder Experience in EXCEPTION / CODING Code Users are able to code the Purchasing Organization one line item at a time by clicking on the calculator icon or using the Apply All modal. Return to AP The user is able to re-submit the invoice back to AP even if there are one or more Purchasing Organization is missing error messages. Note:  The implementation of the Purchasing Organization field, e.g. filtering (what values are showcased, etc.) will be the same as described in  . Invoice Returning after being Coded Audit Trail The system captures changes performed by the Coder in   and   status when the invoice transitions back from these statuses, e.g. Invoice Coded audit log for Coding. Informational Message The system also displays the \u201cAccounting Changes Detected..\u201c informational message to the appropriate users when the system detects changes performed to Purchasing Organization when the document returns from Exception Handling. Auto Approval / Submission for Approval (Returning from Exception Handling) Based on the Admin setting, the system either auto processes such invoices further or leaves them in   status when the Purchasing Organization is modified by a Coder in   or   statuses. 6.  Do we need a data fix for existing customers?  Yes. 7.  Would this change impact existing documents?  Yes \u2013 both documents in process and historically processed documents. 8.  To which teams should this change be communicated to?  All teams. Test Data: Questions: Question # AC # Raised By Inquiry Date Assignee Response Date 1 5 Deepak # Question Recommendation Response Remarks 1 Is there a provision where the Admin can specify what Purchasing Organizations a user can have access to? None No. Key Decisions: # Decision Point Decision Reasoning Validation Plan 1 Should Purchasing Organizations be considered to be part of an Accounting string? Yes. 2 Should we show the informational message when the Coder changes the Purchasing Organization in   or   statuses? Backlog Grooming (): Attendees:   Points of Discussion:",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-10-31T20:04:22.695-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94119"
+      },
+      {
+        "key": "VZI-93245",
+        "summary": "PMAN: AP: System introduces Purchasing Organization to Invoices",
+        "description": "User Story: As an AP person , I want to access and correct the Purchasing Organization field on AP documents  so that  downstream processing such as workflow determination and posting to my payment system can happen seamlessly. Acceptance Criteria: 1.  What is the change?  The system showcases the Purchasing Organization field on AP documents at the line item level. 2.  Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true. 3.  What pages should this change impact?  Invoices only. 4.  Which users should be impacted by the change?  Users who are allowed to create AP documents, namely, AP Processors, Managers, and Admins, will be able to update the Purchasing Organization field in   and   status. Users with read only access to AP documents will be able view the Purchasing Organization information on AP documents. 5.  How should this feature work? Pre-Requisites:   Conditions in AC #2 are fulfilled. The Purchasing Organization setting in Documents \u2192 Settings \u2192 All Documents is configured to one of Hidden, Optional, or Required. When an document is in the Hopper (any submission mode) or if document is already in   or   status. Scenarios: Purchasing Organization = Hidden All scenarios The system does  not  showcase the Purchasing Organization field in the  General Information tab  within the line item section (as shown in the screenshot). Purchasing Organization = Optional  or  Required When a user accesses an existing document (this also includes non AP users) The system showcases the Purchasing Organization field in the  General Information tab  within the line item section (as shown in the screenshot) with either an empty/blank or a specific value. When a PO is referenced to a document / When a PO based OCR, cXML, or SP invoice is created from the Hopper / When an invoice is referenced to a memo: The system instantly downloads and populates the Purchasing Organization information on the document from the PO, if it exists; If not, the system populates the user default (defined by the Admin or the user themselves), if it exists. Otherwise it is left blank. Note:  Additionally, the rules described in the General Rules section will come into play. When a non PO invoice (and non-PO-non-invoice memo) is created from the Hopper (No OCR)  or  when an invoice is created from the navigation panel If user defaults are defined (by the Admin or the user themselves), then the system populates that value into the Purchasing Organization field; otherwise, it leaves it empty. When a non PO invoice is created (submitted via cXML or that has undergone OCR) from the Hopper If user defaults are defined (by the Admin or the user themselves), then the system populates that value into the Purchasing Organization field; otherwise, it leaves it empty. Note:  Additionally, the rules described in the General Rules section come into play. The system does  not  apply Machine Learning predictions to the Purchasing Organization field. When a user or system adds a line item: If user defaults are defined (by the Admin or the user themselves), then the system populates that value into the Purchasing Organization field; otherwise, it leaves it empty. They are able to successfully add a line item without populating the Purchasing Organization. Note:  Additionally, the rules described in the General Rules section will come into play. When no Company Code is selected \u2192 user navigates to Purchasing Organization in the line item edit view:   The user is able to search and select any  active  and  undeleted  Purchasing Organization from the drop down. When Company Code is selected by a user while editing a line item  or  while updating the Company Code in the header:   If no Purchasing Organizations are associated to the selected/new Company Code: The system leaves the Purchasing Organization field empty. When the user attempts to fill one manually, they are able to search and select Purchasing Organizations that are  not  associated with any (active and undeleted) Company Code in the system, from the drop down.  If Purchasing Organizations are associated to the selected/new Company Code: Single Value: The system instantly auto-populates the Purchasing Organization associated to that Company Code. Multiple Values: The system leaves the Purchasing Organization empty. When the user attempts to fill one manually, they are able to search and select Purchasing Organizations that are directly associated to the Company Code, from the drop down. General Rules: Custom Labels: If defined, the system showcases the Custom Label defined by the Admin for Purchasing Organization in Documents \u2192 Custom Labels; if not, the system showcases the default \u201cPurchasing Organization\u201c label. Purchasing Organization = Hidden   (Current State) Errors:   The system does  not  display any errors related to Purchasing Organization. Transitions: There is impact to the transitions displayed as the Purchasing Organization is hidden from the user. Purchasing Organization = Required Errors:   If Purchasing Organization = blank/null, the system displays an error that the Purchasing Organization is missing, similar to the Plant missing error message. Transitions: The system displays the following transitions as a result of the Purchasing Organization being blank/null:  (Same behavior if Plant was missing) Park Assign Coding Question:  Does the system also show Exception Handling transition in this scenario? Purchasing Organization = Optional Errors: If Purchasing Organization = blank/null, the system does  not  display an error that the Purchasing Organization is missing. Transitions: There is no change in terms of the transitions that the system displays as a result of the Purchasing Organization being blank/null. Apply All: Important Note:  The system exactly mimics the behavior of the Apply All modal of PRs. Purchasing Organization = Hidden The system does  not  showcase the Purchasing Organization field in the Apply All modal. Purchasing Organization = Required The system showcases the Purchasing Organization field in the Apply All modal with a  Required  label. The user is  not  able to update other fields in the Apply All modal without updating the Purchasing Organization. Purchasing Organization = Optional The system showcases the Purchasing Organization field in the Apply All modal with no label. The user is able to update other fields in the Apply All modal without updating the Purchasing Organization. Audit Trail: Purchasing Organization = Required  or  Optional only The system showcases the updates to the Purchasing Organization as the user makes changes to it, after the initial transition. Note:  The implementation should mimic that of Company Code/Plant.  6.  Do we need a data fix for existing customers?  Yes. 7.  Would this change impact existing documents?  Yes \u2013 both documents in process and historically processed documents. 8.  To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date # Question Recommendation Response Remarks 1 Can we turn off Purchasing Organization from anywhere in the UI or back-end? No. Just the one in the Documents \u2192 Settings \u2192 All Documents. 2 Would this have any impact on Accounting Validation feature we built? Probably not. 3 How would adding the Purchasing Organization impact the Apply All modal? Should not have any unforeseen impact. 4 Where is the Purchasing Organization in the Purchasing Parties populated from? Key Decisions: # Decision Point Decision Reasoning Validation Plan 1 Do we need a add a feature toggle for this change? No, this can be released to all customers at the same time. 2 Should Purchasing Organization be added to the SP? No. This is not relevant for SP users. 3 How should we handle existing documents (documents in process + processed documents) when the change is released in Production? In   and   status, existing documents will reflect the latest configuration. 4 How should we handle documents in process when Purchasing Organization is enabled-disabled, after being enabled initially? In   and   status, existing documents will reflect the latest configuration. 5 How to handle the scenarios when Purchasing Organization = Hidden, that is, should Purchasing Organization = null in the database? Let it remain as-is. Unclear on what the customer expectations are in various scenarios. Understand customer expectations pre-release. 6 Do we need to consider the Accounting filtering feature toggle for the implementation? How does Plant filtering work? No. 7 Where should the Purchasing Organization error message be placed? Along with the Plant error message. Backlog Grooming (October 31, 2023): Attendees:  Jaro, Mavin, Ahmed, Aqsa, Zulkiful, Deepak Points of Discussion: Discussed the overall ticket, including the questions. Need to delve into questions #3, #4, #5 a little deeper. The following need to be covered in the ticket: User defaults. Custom labels. How Purchasing Organization field is filtered.",
+        "status": "Released",
+        "assignee": "Asma Latif",
+        "created": "2023-10-31T13:58:52.449-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94119"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94163",
+      "released_in_current_rc": false,
+      "summary": "API Legacy Issues -> RC-2023-11",
+      "description": "",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-12-05T22:54:15.990-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-94319",
+        "summary": "Vroozi API - Vroozi Supplier API - withholding tax mapping in the Supplier Model",
+        "description": "When the field  subjectToWht  is true then this functionality is not working in supplier Model. Public API documentation exposes field  withholdingTaxDetails  whereas this is not mapping correctly to the BE model and we are getting the following errors. {\"id\":\"79f7dfed-202b-4f24-84a5-642179c92b47\",\"status\":\"400\",\"title\":\"Bad Request\",\"errors\":[{\"code\":\"400\",\"element\":\"supplierModel\",\"message\":\"Field [whtCode] cannot be null, empty or zero value.\",\"detail\":\"Error in object 'supplierModel': codes [whtCode.supplierModel,whtCode]; arguments []; default message [Field [whtCode] cannot be null, empty or zero value.]\",\"level\":\"Data Error\"},{\"code\":\"400\",\"element\":\"supplierModel\",\"message\":\"Field [whtType] cannot be null, empty or zero value.\",\"detail\":\"Error in object 'supplierModel': codes [whtType.supplierModel,whtType]; arguments []; default message [Field [whtType] cannot be null, empty or zero value.]\",\"level\":\"Data Error\"}],\"timestamp\":\"2023-12-12T23:07:32.047+0000\"} This should allow to pass user the values as listed in the documentation. Test payload is {\"address\":{\"city\":\"Osaka\",\"country\":{\"code\":\"JP\"},\"email\":\"usjvrooziusers@nbcuni.com\",\"phone\":\"+81 1111111111\",\"postalCode\":\"5520021\",\"state\":{\"code\":\"-\"},\"street1\":\"2-3-3878\"},\"bankInfo\":{\"accountHolderName\":\"ABC Test\",\"bankAccountNumber\":\"56748930\",\"bankControlKey\":\"01\",\"bankKey\":\"234567\",\"bankName\":\"USA\",\"country\":{\"code\":\"US\"}},\"companyCodeRef\":{\"docNo\":\"R407\"},\"currencyCode\":\"JPY\",\"externalId\":\"0004004223\",\"language\":\"EN\",\"name\":\"ABC test Ltd Test\",\"paymentTermRef\":{\"docNo\":\"JPY\"},\"subjectToWht\":\"true\",\"uniqueId\":\"\",\"vendorId\":\"0004004223\",\"withholdingTaxDetails\":{\"whtCode\":\"J1\",\"whtType\":\"Z1\"}}",
+        "status": "Released",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2023-12-12T21:45:36.615-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-94284",
+        "summary": "Approval Group / Purchasing Organization - When user doesn't pass Id/external Id but update record on the basis of Code then system doesn't update the record",
+        "description": "Issue:   Approval Group / Purchasing Organization - When user doesn't pass Id/external Id but update record on the basis of Code then system doesn't update the record Pre-Condition: Company Code has been created Purchase Organization or Approval Group has been created  Reproducible Steps: 1. Open Postman 2. Run a Upsert request of Purchasing Organization Endpoint:   https://devqa31-api.vroozi.com/v1/purchasing-orgs/upsert Headers: Content-Type:application/json\nAuthorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiI5MDYzNzk5OS05NGY5LTQ1ZmYtYmQ0ZS1lODgwOGQ2OTI0MjIiLCJVTklUX0lEIjoiNCIsIlJBTkRPTV9OVU1CRVIiOiI1MGRlNGM5My1jN2Y5LTQxMmMtOWMyYy1mMGY5OTc0ZWU2YzMifQ.LxuHHWMHFaf6kLzTFAbU8F1GrmN4wmAQrHRujTOkybszJJtpcp9-b28yjWY6fT-cEJwysvV2sqmlUSK1LZxi6w\nx-api-key:4t1xsMJ7ZX6vB4ZXKmbVv66uTE69AL735wbsjyZ0 Request Data: {\n  \n    \"code\": \"test\",\n    \"description\": \"testing\",\n    \"companyCodeRef\": {\n        \"id\": \"\",\n        \"externalId\": null,\n        \"docNo\": \"Bajwa\"\n    },\n    \"active\": true\n} Response Data: {\n    \"id\": \"6708a93d-77fc-4c1d-a3d4-313554e3c8b4\",\n    \"status\": \"409\",\n    \"title\": \"Conflict\",\n    \"errors\": [\n        {\n            \"code\": \"409\",\n            \"element\": \"code\",\n            \"message\": \"Field [code] should be unique within the company code. Provided value: [test] already exists and associated with the company code [Bajwa].\",\n            \"detail\": \"Field error in object 'purchasingOrganizationModel' on field 'code': rejected value [test]; codes [409.purchasingOrganizationModel.code,409.code,409.java.lang.String,409]; arguments []; default message [Field [code] should be unique within the company code. Provided value: [test] already exists and associated with the company code [Bajwa].]\",\n            \"level\": \"Field Error\"\n        }\n    ],\n    \"timestamp\": \"2023-12-11T12:04:05.833+0000\"\n} Expected Behavior: The system should update the record successfully Note:  This issue exists for Approval Group API as well",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-12-11T04:00:30.317-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-94262",
+        "summary": "Vroozi API - lastUpdated date is not being updated on PO Cancellation",
+        "description": "We have to test all Cancellation flows in NBCU when user submits the PO from API. User is not passing any line item in the PO payload. When it submits PO is cancelled we have to verify the last Updated Date is properly updated in DB and properly display in response Payload. User is passing Cancel in all the line item in the PO payload. When it submits PO is cancelled we have to verify the last Updated Date is properly updated in DB and properly display in response Payload. User is passing CANCEL in Header Level in the PO Payload. When it submits PO is cancelled we have to verify the last Updated Date is properly updated in DB and properly display in response Payload.",
+        "status": "Released",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2023-12-08T22:25:24.372-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-93927",
+        "summary": "Acc Val : Unable to save location field as empty(optional Field)",
+        "description": "Server:  DevQA2 User:  Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d within the db \"ACCOUNTING_STRING_VALIDATION\". Acc val CRUD operations feature toggle should be \u201cOn within the db \u201cACCOUNTING_STRING_UI_CRUD\u201d. Steps to Reproduce: Issue: # 1 Click on Master Data \u2192 Accounting String. Click on any existing  \u201c Accounting String\u201d. Enter valid data in mandatory fields while removing Location value as empty. Click \u201cSave\u201d button. Search the same accounting string updated in the previous step and open it. Location value left empty will be filled with previous given location value. Actual Results Issue # 1: Previously saved Location value should not be displayed in empty saved location value. Expected Results Issue # 1: Empty or Null Location should be saved.",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-11-27T23:28:16.379-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-93871",
+        "summary": "Payment card is not appeared on the payment modal screen when void the payment",
+        "description": "Environment:  Stage Unit Id:  \u201c20\u201d Authorization:  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJhNTljMjVmYi1mNWVmLTRhMGQtOTE1YS1jOTViMzg1NTE5Y2EiLCJVTklUX0lEIjoiMjAiLCJSQU5ET01fTlVNQkVSIjoiZjlmYTlmZGUtM2EwOS00YzcwLWIxYjMtY2Q4OGUxNjM1M2RmIn0.YzhXvcNTdo_D-uzHtvB2xXrUixKaxAZuN6byBmM84FV7QSOmg0yZ2KQN6fD9Zqy7QPtgj-dDmthdsEsvfsGf8w x-api-key:  jW5Z4GuQav4uys3VzhNr57HLXElQmLxf7I66TpV1 Pre-Condition: Payment is already done and the PO is in PAID status Steps to Reproduce: Create a void payment request using PUT endpoints https://staging-api.vroozi.com/v1/payments/void { \"paymentRef\": { \"id\": \"\", \"externalId\": \"ext-payment-3000000002-001\", \"docNo\": \"\" }, \"voidedDate\": \"2024-11-11T12:00:00.000+0000\", \"referenceNo\": \"23423342\", \"notes\": \"wanted to add discount, so voiding this payment\" } Login into the Vroozi portal as an employee user  Username:  waheed.nawaz+employee_stage83-20@vroozi.com Password: Welcome1! Open the PO and  Click on the payment icon at the right side of the menu bar Actual Result: Void Payment card is not appeared on the payment modal screen Expected Result: Void Payment card should be appeared on the payment modal screen",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-11-23T05:15:24.878-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-93539",
+        "summary": "Location : When Try to copy PR Line item Multiple times then error triggers",
+        "description": "Location:  When Try to copy PR Multiple times then error triggers Preconditions: 1- Must have the PR  2-Location toggle is enabled from accounting section. 3-Login with the Requester. Steps To Replicate: 1-Go to Approved PR that has Location attached. 2-Copy the PR. 3-Copy the line items Multiple time more than 10 times. Actual Result: System is Throwing Error message related to location. Expected Result: System should not throw any error message  Note: This issue is replicated not every time but off and on but it exist",
+        "status": "Released",
+        "assignee": "Sahar Habiba",
+        "created": "2023-11-08T05:09:58.276-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-92841",
+        "summary": "Accounting Elements field should be marked mandatory in documentations for Accounting String API",
+        "description": "URL:    Steps to reproduce:  Click on the link provided above and navigate to Master Data \u2192 Accounting Strings \u2192 POST /accounting-combos \u2192 Model \u2192 AccountingElement Field Actual Result:  The field is not marked mandatory Expected Result:  The field should be marked mandatory",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-10-18T01:38:21.324-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-91623",
+        "summary": "Acounting Combo bulk Upsert is creating more that 500 records",
+        "description": "Environment:  Devqa12 Unit Id : 2 Steps to Reproduce: Create a bulk upsert with 501 records using mentioned endpoint https://dev-api.vroozi.com/v1/accounting-combos/bulk-upsert Actual Result: Accounting Combo bulk Upsert is creating with 501 records Expected Result: Accounting Combo bulk Upsert should not be created with more that 500 records",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-09-08T03:22:48.655-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      },
+      {
+        "key": "VZI-91552",
+        "summary": "Location is showing concatenation of \"code\" and \"description\" in Postman but in UI it is a concatenation of \"Code\" and \"Name\".",
+        "description": "Environment:  Devqa12 Unit Id:  2 Steps to Reproduce: Create a Purchase Request using the POST method Actual Result: Location is showing a concatenation of \"code\" and \"description\" in Postman but in UI it is a concatenation of \"Code\" and \"Name\" Expected Result: The location should be showing the same on both UI and Postman",
+        "status": "Released",
+        "assignee": "Muhammad Adnan",
+        "created": "2023-09-06T06:28:24.818-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94163"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-89462",
+      "released_in_current_rc": false,
+      "summary": "Accounts Payable: Approval Workflow MVP (2023)",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Deepak Mohan Kumar",
+      "created": "2023-06-26T11:25:46.290-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-94106",
+        "summary": "PROD - Admin - Accounts Payable - Unable to Add Coding Rule if MAERSK Enhanced Work flow is Enabled.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  notifyvroozi@gmail.com Password:  Welcome1@ Pre-Requisites: Feature Toggle ACCOUNTS_PAYABLE_WORKFLOW__ENHANCED_WORKFLOW should be enable for the UnitId in DB. Admin User should have logged into the PMAN Application. Steps to Reproduce: Access Coding Page against Accounts Payable>Settings>Coding. Click to Add Coding Rule, Modal Opens. Enter/Select details (not been used earlier in any existing rule) and click to Submit. Error shows and Coding Rule can\u2019t be added. Actual Result: Error shows and Coding Rule can\u2019t be added. Expected Result: Coding Rule should be added successfully even MAERSK Workflow FT is enabled. Screen-Shot: Thanks, Asma",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-12-04T00:18:08.731-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-89462"
+      },
+      {
+        "key": "VZI-93510",
+        "summary": "PMAN: Workflow: Create a script to upload Maersk's Workflow Rules into SOCI",
+        "description": "Goal: Create a script to upload Maersk workflow rules (see attached files) into their SOCI account. Acceptance Criteria: Environment:  SOCI Customers: Maersk Workflow Rules Upload \u2013 Rules The script only uploads the workflow rules that fulfill the following criteria into SOCI: The workflow rule is  not  a duplicate. All the elements specified in the conditions have already been defined in Master Data, e.g. Building, Department, and Approvers. Error Workflow Rules The script captures all error rules separately, e.g. a file or output logs, ideally along with the reason why they could not be uploaded, for example: Approver not defined. Building/Department not defined. Note:  After the script is ready, please work with Ops to execute the script in SOCI. If approvals are necessary, please seek them from the appropriate stakeholders to get the script executed.",
+        "status": "Done",
+        "assignee": "Jimena Pose",
+        "created": "2023-11-07T19:47:17.962-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-89462"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-88331",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Accounting Validation 2023: GA Support Release: UI CRUD Operations",
+      "description": "Vroozi Accounting Validation Phase#2 is post MVP phase(refer to  ) where it will become generally available for all the subscribed customers. In this phase, we will cover the following areas: UI CRUD operations for Accounting String master dat",
+      "status": "Open",
+      "assignee": "Muhammad Ahmar Nadeem",
+      "created": "2023-05-22T21:50:36.922-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-94061",
+        "summary": "PMAN: AcctVal - Create Accounting String modal, help text is not displayed next to String Name field.",
+        "description": "Environment:  DevQA2 unitId 2 User:   Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d from the db \"PURCHASE__ACCOUNTING_STRING_VALIDATION\". Acc val CURD operations feature toggle should be \u201cON\u201d from DB PURCHASE__ACCOUNTING_STRING_UI_CRUD Steps to Reproduce: Navigate to Master Data \u2192 Accounting Strings. Click \u201cCreate a new Accounting String\u201d.  Actual Result: Verify the issue that help text icon is not appearing next to String Name field. Also when hovering on the icon it should display text as mentioned in the story. Expected Results: Help text icon should be available next to String Name field. When hovering on the icon it should display text as mentioned in the story. Screenshots:",
+        "status": "Released",
+        "assignee": "Unassigned",
+        "created": "2023-12-01T04:35:28.633-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-88331"
+      },
+      {
+        "key": "VZI-88042",
+        "summary": "AccVal: Admin: Admin can edit the Accounting String",
+        "description": "Business Case: As an admin, I want to edit accounting strings that have been created/upload through API, Vroozi Master Data, and Bulk Upload. So they can be updated and used on different documents for accounting validations as needed. Acceptance Criteria: The admin should be able to click the  String Name  from the  Accounting Strings  table.  Clicking on that should open the Edit Accounting String modal. It should depend on a sub-feature toggle for UI CRUD operations(refer to  ). If the above-mentioned feature toggle is ON, the user should be able to editable accounting string modal. If the above-mentioned feature toggle is OFF, the user should be able to see the read-only accounting string modal. The modal label should be  Edit   Accounting String. All the fields on the  Edit Accounting String  modal should be filled in with the values for each string that come from:  API (The Integration team will work on this). Through CRUD operations from Vroozi Master Data Through Bulk Upload If any company or accounting info field is empty, the system should display \u201c-\u201c for the object. Under the  Edit   Accounting String,  there should be the following fields: String Name (Required) (Free Text Field) The system should create a unique string name automatically. (refer to  ) The admin should be able to overwrite the automatically generated string name. The admin should be able to provide a unique string name automatically. Description (Optional) (Free Text Field) Valid From (Required) (Date picker) The admin should be able to pick a: Past Date Current Date Future Date Valid To (Required) (Date picker) The admin should be able to pick a date that can not be older than the date selected for the  Valid From . The system should mark the newly created accounting string  Active  If the current date lies in the Accounting String duration( the period between  Valid From  and  Valid To ). The system should mark the newly created accounting string  Inactive  If the current date doesn\u2019t lie in the Accounting String duration( the period between  Valid From  and  Valid To ). Under the above fields, there should be a line separator. Under the Line Separator, There should be a subheading for the section. The subheading should be  Company Information. The company objects field should be visible in the  Company Information  based on the following criteria: Company Object should be turned on for the Unit ID Company Object should be configured in the Accounting String Configuration Service. The system should check the Accounting String Configuration Service to determine which  Company Info  fields are required. There should be the following fields in the  Company Information  section based on the above-mentioned criteria: The Company Object fields should be a type ahead. The system should fetch only non-deleted active company codes that match the entered phrase in the field. The admin should be able to select one of the available company objects in the type ahead. Under the above Company Information fields, there should be a line separator. Under the Line Separator, There should be a subheading for the section. The subheading should be  Accounting Information. The accounting objects field should be visible in the  Accounting Information  based on the following criteria: Company Object should be turned on for the Unit ID Company Object should be configured in the Accounting String Configuration Service. The system should check the Accounting String Configuration Service to determine which  Accounting Info  fields are required. All the Active accounting objects should be visible in the  Accounting Information  section. The system should check the configuration To determine whether any available  Accounting Information  fields are required.  If any Cost Object is defined in the Accounting String Configuration Service, the system should show the  Account Category  dropdown in the  Company Information  section. Suppose only one cost object is defined in the Accounting String Configuration Service. In that case, that object should be auto-selected in the  Account Category  dropdown, and its type ahead field should automatically be visible beneath the  Account Category  dropdown. If there is more than one cost object defined in the Accounting String Configuration Service, the user must select the cost object type from the  Account Category  dropdown. Based on the Cost Object selection in the  Account Category  dropdown, the system should display the selected cost object field beneath the  Account Category  dropdown. All of the  Accounting Information  fields should be a Type Ahead. The system should fetch only non-deleted active accounting objects that match the entered phrase in the field. The admin should be able to select one of the available options in the type ahead. If the user opens the  Edit Accounting String  modal and any value from the Compay Info or Accounting Info fields has been deleted or Inactive: That should be highlighted in red. The value in that particular field should have a question mark. (updated on   ) Hovering on that question mark should show a message. (updated on   ) The message should be \u201cItem has been deleted/deactivated.\u201c The admin should be able to remove that deleted/deactivated value from the field. The admin should be able to select a new value from the type ahead. The system should show their custom labels in the  Accounting Strings  table if the custom label is defined for any company and, or accounting objects.  The admin should be able to close the  Accounting String  modal by clicking: ESC button on the keyboard. X icon on the top right corner of the modal. Cancel  button Closing the  Accounting String  modal from any of the avenues mentioned above should not save the accounting string in the DB. The admin should be able to save the  Accounting String  by clicking the  Save  button. The  Accounting String  should be saved in the DB. The admin should be able to see that  Accounting String  on the  Accounting String   Listing  screen. The system should show a green noty message upon accounting string update. The message should say \u201cAccounting String updated \u201c. The noty message should be a slider. ( standard existing implementation )",
+        "status": "Released",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-05-14T21:44:42.536-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-88331"
+      },
+      {
+        "key": "VZI-88007",
+        "summary": "AccVal: Admin: Admin can create the Accounting String",
+        "description": "Business Case: As an admin, I want to create accounting strings. So they can be used on different documents for accounting validations. Acceptance Criteria: A new button \u201c Create a New Accounting String\u201d  should be introduced on the Accounting Strings Listing screen under the Accounting Strings table. It should be dependent on a sub-feature toggle for UI CRUD operations(refer to  ). If the above-mentioned feature toggle is ON, the user should be able to see the  Create a New Accounting String  button. If the above-mentioned feature toggle is OFF, the user should not be able to see the  Create a New Accounting String  button.  Clicking on that should open the Create Accounting String modal. The modal label should be  Create   Accounting String. Under the  Create   Accounting String,  there should be the following fields: String Name (Optional) (Free Text Field) The system should create a unique string name automatically. (refer to  ) The admin should be able to overwrite the automatically generated string name. The admin should be able to provide a unique string name. There should be a help text icon next to string name field. Hovering on should display a tooltip. The tooltip should say \u201cThe user can provide the string name optionally. The system will create an auto-generated string name if the user opts not to provide a string name.\u201c Description (Optional) (Free Text Field)( Do we need this? question for Product. ) Valid From (Optional) (Date picker) The admin should be able to pick a: Past Date Current Date Future Date The admin should be able to leave the field empty. In this case, the system will consider the accounting string valid from its creation. The accounting string will be  Active  by default. Valid To (Optional) (Date picker) The admin should be able to pick a date that can not be older than the date selected for the  Valid From . The admin should be able to leave the field empty. In this case, the system will consider the accounting string valid for an indefinite period of time. The accounting string will remain Active until the admin deactivates it from UI/Bulk Upload or API. The system should mark the newly created accounting string  Active  If the current date lies in the Accounting String duration( the period between  Valid From  and  Valid To ). The system should mark the newly created accounting string  Inactive  If the current date doesn\u2019t lie in the Accounting String duration( the period between  Valid From  and  Valid To ). Under the above fields, there should be a line separator. Under the Line Separator, There should be a subheading for the section. The subheading should be  Company Information. The company objects field should be visible in the  Company Information  based on the following criteria: Company Object should be turned on for the Unit ID Company Object should be configured in the Accounting String Configuration Service. The system should check the Accounting String Configuration Service to determine which the  Company Info  fields are required.  There should be the following fields in the  Company Information  section based on the above-mentioned criteria: The Company Object fields should be a type ahead. The system should fetch only non-deleted active company codes that match the entered phrase in the field. The admin should be able to select one of the available company objects in the type ahead. Under the above Company Information fields, there should be a line separator. Under the Line Separator, There should be a subheading for the section. The subheading should be  Accounting Information. The accounting objects field should be visible in the  Accounting Information  based on the following criteria: Company Object should be turned on for the Unit ID Company Object should be configured in the Accounting String Configuration Service. The system should check the Accounting String Configuration Service to determine which  Accounting Info  fields are required.  If there is any Cost Object defined in the Accounting String Configuration Service, the system should show the  Account Category  dropdown in the  Company Information  section. Suppose only one cost object is defined in the Accounting String Configuration Service. In that case, that object should be auto-selected in the  Account Category  dropdown, and its type ahead field should automatically be visible beneath the  Account Category  dropdown. If there is more than one cost object defined in the Accounting String Configuration Service, the user must select the cost object type from the  Account Category  dropdown. Based on the Cost Object selection in the  Account Category  dropdown, the system should start displaying the selected cost object field beneath the  Account Category  dropdown. All of the  Accounting Information  fields should be a Type Ahead. The system should fetch only non-deleted active accounting objects that match the entered phrase in the field. The admin should be able to select one of the available options in the type ahead. The system should show their custom labels in the  Accounting Strings  table if the custom label is defined for any company and, or accounting objects.  The admin should be able to close the  Accounting String  modal by clicking: ESC button on the keyboard. X icon on the top right corner of the modal. Cancel  button Closing the  Accounting String  modal from any of the avenues mentioned above should not save the accounting string in the DB. The admin should be able to save the  Accounting String  by clicking the  Save  button. The  Accounting String  should be saved in the DB. The admin should be able to see that  Accounting String  on the  Accounting String   Listing  screen. The system should show a green noty message upon accounting string creation. The message should say \u201cNew Accounting String \u201cstrinName\u201c created successfully.\u201c The noty message should be a slider. ( standard existing implementation ) Not Required in this Ticket: All these fields on the Accounting String modal should be filled in with the values for each string that come from API (The Integration team will work on this). If any company or accounting info field is empty, the system should display \u201c-\u201c for the object.",
+        "status": "Released",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-05-12T01:27:59.125-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-88331"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94968",
+      "released_in_current_rc": false,
+      "summary": "Tech Upgrades for RC-2023-11",
+      "description": "",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-01-09T03:08:20.680-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-93863",
+        "summary": "Vroozi API - use cache for fetching the accounting configurations",
+        "description": "We have reviewed the Code and found we need to add following indexes unitId_1__id_1_deleted_1 -> accountingComboRepository.findByUnitIdAndIdAndDeletedIsFalse\nunitId_1_uniqueId_1_deleted_1 -> accountingComboRepository.findByUnitIdAndUniqueIdInAndDeletedFalse\n_id_1_deleted_1 -> accountingComboRepository.findAllByIdInAndDeletedFalse\nunitId_1_externalId_1_deleted_1 -> accountingComboRepository.findAllByUnitIdAndExternalIdInAndDeletedFalse\nunitId_1_name_1_deleted_1 -> accountingComboRepository.findAllByUnitIdAndNameInAndDeletedFalse We have created these indexes on Stage, Creating the script file to execute on SOCI, and also will add them to REW. With these indexes we have tested on stage, where we are getting the records created/updated in 20+ seconds, and no request in timedout Accounting combos in stage are around 2.8M Following are the enhancements we can made in the code Need to add cache on the config call\u00a0 public AccountingValidationConfig getAccountingValidationConfig(String unitId)\u00a0 Need cache on the following call\u00a0 accountingComboValidationService.getByExternalId(unitId, externalId)\naccountingComboValidationService.getById(unitId, id)",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-11-22T23:59:20.910-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94968"
+      },
+      {
+        "key": "VZI-93402",
+        "summary": "Memo POST API - Expose new field named 'reInvoicingOption' in Public API",
+        "description": "As an API user, we need to expose the feature to open a purchase order for re-invoicing when a memo is created. This can be achieved through the following ways: Acceptance Criteria: Reopen For Invoicing Field Support : The  reInvoicingOption  field should be exposed in the public API to manage the behavior of purchase orders when creating a memo. Allowed Values : The  reInvoicingOption  field should accept the following three values: REOPEN_PO (internal enum value: REOPEN_FOR_INVOICING) : This option allows the items in the memo to be available for invoicing, and the purchase order status will be changed to the previous status before it was invoiced. DONOT_REOPEN_PO (Internal enum value: DO_NOT_REOPEN_FOR_INVOICING) : This option ensures that the items won't be available for invoicing, and the purchase order status will remain unchanged. KEEP_AS_IS (internal enum value: ALLOW_REOPEN_FOR_INVOICING) : When this option is selected, the purchase order status will be kept as is, but the items will be made available for invoicing. Default Behavior : The value represents user selection for one of the options available for the re invoicing. If the user does not provide any value for this field, it should be null and not set.  The API should accept one of the supported values ( REOPEN_PO, DONOT_REOPEN_PO, KEEP_AS_IS ) in this field as the user selected value. If user does not provide any value in this field, it should not be set and user should be able to update this in the memo update scenario Accounts Payable Workflow (AP Workflow) :? Is this valid use case where the AP workflow is ON and we are creating the Memo from the API, since this will not trigger the AP workflow and Memo will be directly create in POSTED status from API. Do we need to add any validation in case of AP workflow ON, since we could add validation for supported values based on the AP settings If the AP settings support either PO reopen for invoicing or undetermined or both than the Memo creation is not possible without a user selection (purchaseOrderReInvoicingType will be mandatory in this case.) The public API documentation should be updated and following details should be provided into the  documentation. Development Tasks: Expose the  reInvoicingOption  field in the public API. Implement validation to ensure the field accepts the specified values. Implement default behavior based on AP workflow and CompanySettings. Update the documentation, and also update the minor version in the API documentation and add the change to release notes. Testing Tasks: Verify that the  reInvoicingOption  field is exposed in the API. Test that the field accepts the specified values ( REOPEN_PO, DONOT_REOPEN_PO, KEEP_AS_IS ). Validate that the default behavior is correctly determined based on the AP workflow and CompanySettings. Conduct thorough testing to ensure the feature works as expected. QA Testing Criteria: Verify that the API endpoints for creating memos have been updated to include the  reInvoicingOption  field. Confirm that the specified values are accepted and result in the expected behaviours. Validate that default behavior is correctly determined based on the AP workflow and CompanySettings. Perform end-to-end testing to ensure that creating a memo correctly impacts the purchase order re-invoicing. API documentation updated AC We need to update the API release notes and add on the top of the release notes following details. version of the API should be updated to 1.2.0 Memo[Memo](/#/Memos) APIs are updated to support Re Invoicing Options. The link should take the user to the Memo section in the documentation MemoModel should have the reInvoicingOption field",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-11-02T23:17:53.567-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94968"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-93699",
+        "summary": "[ng2] Fully upgrade AttachmentsUiService with UTs",
+        "description": "Goal Fully upgrade  AttachmentsUiService  and all missing unit tests Note:  LineItemService  is now implemented in  line-items.service.ts  (please rename the file to  line-item.service.ts  so it\u2019s in sync with the service name) Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Hamza naseem",
+        "created": "2023-11-15T10:17:30.806-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93525",
+        "summary": "[ng2] Fully upgrade MemoItemService and PaymentRequestItemService with UTs",
+        "description": "Goal Fully upgrade  MemoItemService  and  PaymentRequestItemService  and all missing unit tests See: upgraded  InvoiceItemService Important:  See if we can somehow generalize  InvoiceItemService ,  MemoItemService  and  PaymentRequestItemService  into ONE generic  ApDocumentItemService Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Hamza naseem",
+        "created": "2023-11-08T00:20:47.613-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93484",
+        "summary": "[ng2] Fully upgrade InvoiceEmailNotificationService with UTs",
+        "description": "Goal Fully upgrade  InvoiceEmailNotificationService  and all missing unit tests Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Hamza naseem",
+        "created": "2023-11-06T23:04:02.644-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93395",
+        "summary": "[ng2] Upgrade Advanced Search Box and apply it to the Approval Rules grid",
+        "description": "Goal Upgrade component  vzi-nit-advanced-searchbox  and apply it to the new  Approval Rules  grid in  Company \u2192 Workflow .  Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather RxJS (including the component) If applicable, move all styles related to this component into local styles file Dev test the changes to make sure component works as before Dev Notes Important:  Try to break the work into multiple PRs so that there are at least one or two PRs each week. The final PR should make the new components to be used in the page, so we don't break anything while continually merging the previous PRs",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-11-02T22:38:45.264-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93007",
+        "summary": "[ng2] Fully upgrade DocumentFormUiService with UTs",
+        "description": "Goal Fully upgrade  DocumentFormUiService  and all missing unit tests Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2023-10-24T16:55:27.040-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93006",
+        "summary": "[ng2] Fully upgrade PaymentRequestWorkflowService with UTs",
+        "description": "Goal Fully upgrade  PaymentRequestWorkflowService  and all missing unit tests Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2023-10-24T16:54:05.499-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93005",
+        "summary": "[ng2] Fully upgrade PaymentRequestService with UTs",
+        "description": "Goal Fully upgrade  PaymentRequestService  and all missing unit tests Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2023-10-24T16:53:21.084-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-93004",
+        "summary": "[ng2] Fully upgrade MemoWorkflowService with UTs",
+        "description": "Goal Fully upgrade  MemoWorkflowService  and all missing unit tests Tasks: Upgrade services that are used by the service, with all functions (even those functions which are not used in the service) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) Dev test the changes to make sure the service works as before Try to break work into multiple PRs so there is at least one PR a week, e.g. one PR for one service",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2023-10-24T16:52:02.251-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-92197",
+        "summary": "[ng2] Upgrade missed form element in Invoice / Memo / PRQ page",
+        "description": "Goal Upgrade components following elements in Invoice / Memo / PRQ page: vzi-document-error-info  \u2192  ng2-vzi-document-error-info  (used for posting errors) vzi-document-status  \u2192  ng2-vzi-document-status  (document status labels) vzi-switch-config-button  \u2192  ng2-vzi-switch-config-button  (auto-populate toggle) vzi-doc-data-display  \u2192  ng2-vzi-doc-data-display  and  vzi2-input-label  \u2192  ng2-vzi-input-label  (both in header section, and item section) vzi2-input  ->  ng2-vzi2-input  (e.g. PO line item to be reinvoiced in the memo) vzi-auto-save-notification  \u2192  ng2-vzi-auto-save-notification  (new - save notification) vzi-content-placeholder  \u2192  ng2-vzi-content-placeholder  (new) Note: Feel free to upgrde any other ng1 components which were not yet replaced except  vzi-document-item UI Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) If applicable, move all styles related to this component into local styles file Dev test the changes to make sure component works as before Dev Notes Important:  Try to break the work into multiple PRs so that there are at least one or two PRs each week. The final PR should make the new components to be used in the page, so we don't break anything while continually merging the previous PRs",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-09-25T15:53:41.821-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-93401",
+      "released_in_current_rc": false,
+      "summary": "Credit Memo  Gaps for NBCU usecase",
+      "description": "",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-11-02T23:17:01.019-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-93031",
+        "summary": "Memo are not showing in the related documents of the invoices or PO. ",
+        "description": "Environment:  devqa12.  URL :    PreConditions:   NBCU Settings are enabled.  All the Accounts Payable Feature Toggles are OFF.  PO is successfully Created with Receipt and Invoice against it.  Steps to Reproduce:  Open POSTMAN and use the endpoint to create a MEMO  endpoint: https:// dev-api.vroozi.com /v1/memos/post {\n    \"id\": \"\",\n    \"externalId\": \"\",\n    \"documentNumber\": \"\",\n    \"status\": \"POSTED\",\n    \"memoType\": \"CREDIT\",\n    \"reason\": \"BILLING_ERROR\",\n    \"reasonDetail\": {\n        \"code\": \"BILLING_ERROR\",\n        \"description\": \"Something related to reason code.\"\n    },\n    \"memoDate\": \"2023-05-5T13:56:04.037+0000\",\n    \"vendorMemoNumber\": \"123456789000000000000000\",\n    \"purchaseOrderRef\": {\n        \"docNo\": \"2000005835\"\n\n    },\n    \"items\": [\n        {\n            \"id\": \"00001\",\n            \"poLineNumber\": \"1\",\n\n            \"description\": \"line item 1\",\n            \"quantity\": \"1\",\n            \"unitOfMeasure\": \"EA\",\n            \"unitPrice\": \"20\"\n        }\n    ],\n    \"supplierRef\": {\n        \"name\": \"Jhon Doe supplier\",\n        \"vendorId\": \"11223344\"\n        }\n} Log into the Admin account using the credentials:  username:  notifyvroozi@gmail.com password: Welcome1! From the right panel use the 'Document Flow\u201d button to open the Document Flow page.  Use the Memo number from the response payload from the postman request to search for the Memo.  Open the Related documents and click on the  Purchase Order.  Click on the Related Documents of the Purchase Order.  Actual Result :  The Memo created is not listed there.  Expected Result :  Memo should be displayed there.",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-10-25T04:40:53.782-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-93401"
+      },
+      {
+        "key": "VZI-92713",
+        "summary": "We need to create a Invoices/Memo Tab in the left pane of Vroozi PMAN for Admins only",
+        "description": "Functional Requirement: Addition of Memo Tab in Vroozi PMAN Application Requirement Description: The Vroozi PMAN (Procure-to-Pay Management) application shall include a dedicated \"Memo Tab\" in the left pane of the user interface (UI). This Memo Tab shall serve as a centralized location for managing all memos created through the UI and via API. Functional Components: Memo Tab UI Element: Description : The application's left pane shall contain a clearly labeled \"Memo Tab\" for user access. User Interaction: Users shall be able to click on the \"Memo Tab\" to access the memo management feature. Memo Creation and Management: Description : The Memo Tab shall provide functionality for users to view. User Actions: Users shall be able to view and access existing memos.",
+        "status": "Released",
+        "assignee": "Shoaib Qadir",
+        "created": "2023-10-11T23:50:01.737-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-93401"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-89017",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Accounting Validation 2023: Phase#1: HEB MVP: Payables Module",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jimena Pose",
+      "created": "2023-06-12T19:22:28.770-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-92232",
+        "summary": "PMAN: Invoice: Highlight Accounting changes once a document returns from Exception Handling or Coding.",
+        "description": "Business Case : When an Invoice document is sent to a user for Exception Handling due to Accounting String errors or for Coding purposes (in general), then there should be a way for the next user (such as an AP user), viewing this document, to understand what changes were made by the previous user. Acceptance Criteria : What is the change?  Anybody who can view audit logs should be able to see this banner on the document and they should be navigated to the audit logs after clicking on this banner. Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true. What pages should this change impact?  The invoice page. Which users should be impacted by the change?  Users who are able to handle exceptions and view audit logs. How should this change work? If the  Exception Handler  resolves the Accounting string errors by changing the accounting elements, and  submits  the invoice, then the system should showcase a new  Banner  indicating  Accounting Information Changes , which when clicked on, will open the  Audit trail  and highlight the line item Change Summary where the changes were made. If the  AP Coder  makes changes to the accounting elements in an Invoice, when it is in  Coding  or  Exception  status, then the same thing should happen as mentioned above. When should the Banner  show up ? After the  Exception Handler  or  AP Coder  has  submitted  the Accounting changes, when the Invoice was in  Exception  or  Coding  status. If there is an Audit Trail generated for the Accounting changes in the Change Summary section. Then ideally the Banner would show up in  Draft ,  Parked ,  Pending ,  Exception  (if all exceptions have not been cleared), and  Coding  status. When should the Banner  go away ? Once the Invoice is in  Approved,   Posted ,  Partially Paid  or  Paid  status. If there are  multiple  line items with Accounting changes then how should the Banner behave ? Show  all  line items with accounting changes separately in the Banner. Clicking each one of them takes the user to their appropriate audit trail Summary changes. ( Open to other suggestions if above solutions would hamper the performance. ) If the Invoice went through  multiple iterations  of Accounting Changes during Exception or Coding status, then how should the Banner behave? Show only the  last  update done for all line items with the accounting changes separately in the Banner. Clicking each one of them takes to their last updated audit trail Summary changes. ( Open to other suggestions if above solutions would hamper the performance. ) How should the Banner  look  like ? Banner Description  ( Here are few examples, open to other suggestions )- \" Accounting Changes Detected! Click here to Review Audit Logs \" \"Accounting Update: See Audit Logs\" \"Accounting Data Revised \u2013 Click here to Review\" \"New Accounting Data - Click here for Details\" \"Explore Accounting Changes in Audit Logs\" \"Review Audit Logs for Accounting changes\" Banner Color  ( Here are few examples, open to other suggestions ) - A suitable option could be  Purple  or a shade of  Magenta , as it's distinct from the existing colors and often signifies changes or notifications. Teal  is distinct from the existing colors and is often associated with notifications and important updates. It can catch the user's attention without being overly intense. Banner Icon Design  ( Here are few examples, open to other suggestions ) - A small  yellow triangle icon with an exclamation mark  inside the banner. This icon indicates that there's an important change or action required. A small  bell icon  or a  speech bubble icon  inside the banner. These icons are commonly used to signify notifications and changes. A small  clock icon  similar to the Audit logs icon. This icon indicates that there are important changes in the Audit logs. Highlighting the line item changes in the Audit Trails  ( Here are few examples, open to other suggestions ) - Use the same  Gold Yellow border  over the Line item changes for every line item that had accounting changes.  Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe To which teams should this change be communicated to?  N/A Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 Key Decisions: # Decision Point Decision Reasoning Validation Plan",
+        "status": "Released",
+        "assignee": "Aqsa Rani",
+        "created": "2023-09-26T01:43:05.453-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-89017"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-91602",
+      "released_in_current_rc": false,
+      "summary": "Approval Group CRUD APIs",
+      "description": "New API enhancement by adding Approval Group CRUD APIs completed.",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-09-07T22:08:49.642-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-91601",
+        "summary": "Design and Develop API for Approval Group CRUD operations",
+        "description": "Requirements:   Acceptance Criteria: 1- We need to check for unique code (Approval groups) per company code, and do not allow to create same approval group associated with the same company code. 2- We need to check for unique externalId per unitId, and do not allow to create same externalId associated with the same unitId. 3- All required field should give validation if not provided. 4- Same Channel and description can be used in different Approval groups. API documentation updated AC We need to update the API release notes and add on the top of the release notes following details. version of the API should be updated to 1.2.0 Added new Master Data APIs for [Approval Groups](/#/Approval%20Groups) </BR> The link should take the user to the Approval Group API section in the documentation",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2023-09-07T22:06:50.777-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-91602"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-93093",
+      "released_in_current_rc": false,
+      "summary": "Catalog API Design and Development - Phase I",
+      "description": "Create Catalog API Upload Catalog Item API using existing template Update Catalog Status API",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-10-26T23:01:29.965-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-91591",
+        "summary": "Design and Document new API endpoints to support catalog/catalog items CRUD operation",
+        "description": "We need to run through existing catalog creation to publishing functionality in the UI and design and document additional endpoints to support CRUD operation for catalog and catalog items that would support existing functionality we have in the UI.",
+        "status": "Done",
+        "assignee": "Sudip Bolakhe",
+        "created": "2023-09-07T18:29:07.889-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-93093"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-87653",
+      "released_in_current_rc": false,
+      "summary": "Review queries and collections for high traffic collections",
+      "description": "We are experiencing frequent slow queries in production.  We need an organized review of our high traffic collections where we review: Existing Queries Existing Indexes Index usage stats Slow queries reported against each collection As a result of this review, we should expect the following output: Suggestions on current and future query structures Suggestions on current and future indexes As part of this epic, we will review the following collections: purchase_orders invoices (See comment below and ticket   ) purchase_requests users company_settings memo goods_receipt catalog_item shopper_lists authentication_tokens managedState feature_toggles profile_group",
+      "status": "In Design",
+      "assignee": "Taimur Ahmed Qureshi",
+      "created": "2023-05-04T02:31:18.757-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-90233",
+        "summary": "goods_receipt collection - Queries and Indexes review",
+        "description": "List all queries of goods_receipt collections in the following sheet with details",
+        "status": "Done",
+        "assignee": "Sharjeel Tariq",
+        "created": "2023-07-23T23:07:23.261-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-87653"
+      },
+      {
+        "key": "VZI-90166",
+        "summary": "User collection - Queries and Indexes review",
+        "description": "List all queries of user collections in the following sheet with details",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2023-07-20T06:55:25.279-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-87653"
+      },
+      {
+        "key": "VZI-88706",
+        "summary": "purchase_requests collection - Queries and Indexes review",
+        "description": "",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2023-06-01T12:15:38.028-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-87653"
+      },
+      {
+        "key": "VZI-87975",
+        "summary": "purchase_orders collection - Queries and Indexes review",
+        "description": "List all queries of purchase order collections in the following sheet with details",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2023-05-11T08:02:57.627-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-87653"
+      }
+    ]
+  }
+]

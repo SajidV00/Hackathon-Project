@@ -1,0 +1,1130 @@
+[
+  {
+    "epic": {
+      "key": "VZI-91698",
+      "released_in_current_rc": false,
+      "summary": "Upgrade mongoDB version to version 6.x",
+      "description": "We need to upgrade mongoDB version to version 6.x (latest at the time of this writing) Potential areas of interests for upgrade: new features, security + performance gains, using latest version of our core technology  multi level transaction support  free cloud monitoring  change streams  schema validations  client-side field level encryption  mongodb connector for kafka  time series collection  stable API  cluster to cluster sync  sharded clusters mongodb Charts + Data lake -> Atlas Seems we will need to follow a successive update path: 3.2 \u2192 3.4 \u2192 3.6 \u2192 4.0 \u2192 4.2 \u2192 4.4 \u2192 5.0 \u2192 6.0",
+      "status": "Work Completed",
+      "assignee": "Taimur Ahmed Qureshi",
+      "created": "2022-05-23T07:20:16.853-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-97586",
+        "summary": "Spring data compatibility issue fix",
+        "description": "After careful consideration of multiple versions of Spring Data MongoDB, the closest yet most compatible version found was 3.3.10. Following versions of Spring Data had been tried. 4.0.0 \u274c (Compilation Errors) 3.4.18 \u274c  3.4.16 \u274c 3.4.15 \u274c 3.4.14 \u274c 3.4.9 \u274c 3.4.6 \u274c 3.4.5 \u274c 3.4.2 \u274c 3.4.1 \u274c 3.4.0 \u274c 3.3.10 \u2705 After studying the changelog of releases between 3.3.10 and 3.4.15, nothing of concern has been identified. The version of Spring Data MongoDB being used in Vroozi\u2019s SpringBoot projects is 3.3.4.",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-03-14T01:46:20.083-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-91698"
+      },
+      {
+        "key": "VZI-97042",
+        "summary": "Evaluate instances within code where findOne should be replaced with findFirst",
+        "description": "Since the mongo driver has updated its core implementation , we need to identify the potential areas where findOne should be replaced with findFirst using the production data and spring data mongo repositories. GL Accounts and Cost Centers with same code and company Code are created with different names. Though this seems invalid data as from API documents these accounting elements can be searched by Code while creating e.g. purchase request and in this case the system used to pick anyone of the records based on the first found record. We need to put a validation so that this kind of data is not created. For now since the new driver gives error we can replace findOne with findFirst to mimic the system\u2019s old behaviour. Multiple supplier task with  completed : false  data can be created in an edge case. In such a scenario the previous task should be marked completed before creating another. For now we can replace findOne with findFirst to mimic the system\u2019s old behaviour. The issue can be produced against the following steps create PO (with price 200) Confirm PO from Supplier Portal Create POCR (price increase to 500) Dispute from Supplier Portal POCR again (set price to 300) Create ASN",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-02-29T09:37:43.274-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-91698"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-97531",
+        "summary": "Getting 500 Error message on Accounting APIs",
+        "description": "Environment:  Devqa Unit Id:  \u201c26\u201d Pre-Condition: Accounting String is enabled on Devqa26 Steps to Reproduce: GET Request CURL for Accounting Combo: GET /v1/accounting-combos HTTP/1.1\nHost: staging-api.vroozi.com\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjN2E5MDY3OC1kZjQyLTRhMGMtYTU5YS04ZmE5MWY3NTA4OWQiLCJVTklUX0lEIjoiMjYiLCJSQU5ET01fTlVNQkVSIjoiZWFlNTUzZjEtNTM5Ni00ZTdlLTk5YTItZWVhMTU5NmY3YmIyIn0.5cQjCCanZX2QE_gyyRgAfc7_GpZHDT0CgJXKfIm0rhRxh7DcxrvBOIFn7JF4yqIm9mMi3n4cB45Z4hkLBWfHsg\nx-api-key: wFRTSPMfe7aBBbTe8mWM72axu9ivJdW38PUQ2ehr\nContent-Type: application/json Response Payload: {\n    \"timestamp\": \"2024-03-13T07:12:18.333+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/accounting-service/api/integration/v1/accounting-combos\"\n} Actual Result: 500 \u201cInternal Server Error\u201d is appeared on the response payload of Postman   Expected Result: 500 \u201cInternal Server Error\u201d should not be appeared on the response payload of Postman.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-03-13T00:30:46.465-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-97173",
+        "summary": "If Accounting Element Class is disabled in Master data User is not able to create/update item on PR",
+        "description": "Environment : SOCI Issue Reported by clients : AXPM, Forest Lawn Account : Notify Steps to reproduce :  Make class accounting element disable from master data Go to shopper view Create new PR Click on Add line Item button Fill the required fields Click on submit Item Expected Result: Item should get created  Actual Result: On click save button nothing happening Technical Details:  We are getting following error on FE side in console :  Code Snippet :  vzi-line-item-modal.component.ts",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-03-04T13:33:03.708-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96763",
+        "summary": "NBCU: Payments are not displayed against PO in Payment section on PO related document.",
+        "description": "NBCU Settings:  Stage 20 NBCU Complete Configurations including db. Login:  waheed.nawaz+employee_stage83-20@vroozi.com Password: Welcome1! Steps to Reproduced: Create a PR from UI Submit PR Approve from API. Create a v Payment PO from API against PR. Request Payload CURL: Create a Payment for that PO from API. Request CURL Payment successfully done. Go to UI Open PO Go to related documents. Actual Result: Payment not shown in Related documents. Expected Result Payments should be visible in this payment section.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-02-22T03:14:14.859-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96709",
+        "summary": "UI getting generates Random Error on Stage.",
+        "description": "Steps To Reproduced: Login:  waheed.nawaz+employee_stage83@vroozi.com Password: Welcome1! Create a PR from UI. Submit PR PO automatically created. Create a GR of that PO. Open the PO. PO should be in Received status. Actual Result: The error is generated on PO screen Randomly not even a specific scenario.  Expected Result: Error should not appear in any case.",
+        "status": "Abandoned",
+        "assignee": "Shoaib Qadir",
+        "created": "2024-02-21T00:30:26.086-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96678",
+        "summary": "PMAN: AcctVal - String name getting changed to N/A when updating accounting string.",
+        "description": "Environment:  Stage User:   Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d from the db \"PURCHASE__ACCOUNTING_STRING_VALIDATION\". Acc val CURD operations feature toggle should be \u201cON\u201d from DB PURCHASE__ACCOUNTING_STRING_UI_CRUD. A Bulk Upload Accounting String file is available and already uploaded via Bulk Accounting String Upload. String name in the file should be empty. Steps to Reproduce: Navigate to Master Data \u2192 Accounting Strings. Search the Accounting Combo which was uploaded using Bulk. Verify the auto generated string name exists. Now upload the same Bulk upload file. Actual Result: N/A is displayed against String name. Expected Results: The String name should not be updated and auto generated string name should be displayed.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-02-20T04:53:08.440-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96660",
+        "summary": "PMAN - Acc Val: Noty message for activating the deactivated accounting string is not as per story acceptance criteria.",
+        "description": "Server :  Stage unit Id 2 User:  notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Accounting Strings with Inactive accounting objects are available in the application. Steps to Replicate: Navigate to Master Data \u2192 Accounting Strings Click on the checkbox of inactive accounting string and click \u201cActivate\u201d button. Expected Result: Message should be displayed, \u201cThe accounting string(s) which contain inactive/deleted accounting/organization objects cannot be activated.\u201c Actual Result: Message displayed, \u201cThis accounting string contains inactive/deleted accounting/organization objects that cannot be activated.\u201d Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-02-19T23:56:44.248-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96634",
+        "summary": "PROD: Users - Same User name is repeating on the multiple pages while doing pagination.",
+        "description": "Environment:  Stage User:   Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Same first name user exists in large number so pagination can be applied to it. Steps to Reproduce: Navigate to Master Data \u2192 Users. Enter \u201cIqtidar\u201d in search bar and click enter key. Navigate to next page. Actual Result: Same user name is displayed on multiple pages. Expected Results: User name should not repeat.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-02-19T04:47:03.981-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96594",
+        "summary": "200 OK status is appeared on the response payload when passing the three parameters on the lastUpdated date field",
+        "description": "Steps to reproduce: Navigate to the Catalog APIs \u2192 Catalog \u2192 GET /catalogs CURL: fetched the catalogs using GET endpoint: lasUpdated: btw(2024-02-16, 2024-02-17, 2024-02-18) \ncurl -X 'GET' \\\n  'https://staging-api.vroozi.com/v1/catalogs?lastUpdated=btw(2024-02-16%2C%202024-02-17%2C%202024-02-18)&status=' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjYjNiOGNiNC1jNDQ5LTQ0N2YtYWQ5OS1iMjI1NzljNmY2MjEiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiZGMxMGFjYmYtZmZmNi00NmFiLWI5ZjMtNmI5MDk0YTc3ZWYxIn0.Ln_5-MyhXH5k7kc5kodjGavbb1xyPHA5Bk7eSt0whNQtHU0-BeJAELjcXarYLkQD04a93qpNKugtjfCtHxSnqA' \\\n  -H 'x-api-key: 9vPCZmeKIY3pUXVNBEUD59wHp4r6pKsr87voQj0c' Actual Result: Response Payload: {\n  \"pageDetails\": {\n    \"currentPage\": 1,\n    \"pageCount\": 19,\n    \"totalPages\": 1,\n    \"totalCount\": 19\n  },\n  \"content\": [\n    {\n      \"id\": \"65cf77b4d396fc4497a12d97\",\n      \"externalId\": null,\n      \"dateCreated\": \"2024-02-16T14:56:52.248+0000\",\n      \"lastUpdated\": \"2024-02-16T14:57:19.681+0000\",\n      \"name\": \"HS Catalog UI 022222\",\n      \"catalogType\": \"INTERNAL\",\n      \"editOption\": \"MERGE\",\n      \"versionNumber\": 1,\n      \"description\": null,\n      \"supplierRefs\": null,\n      \"approverRefs\": null,\n      \"contentViewRefs\": null,\n      \"customFieldRefs\": [\n        {\n          \"id\": \"3913\",\n          \"externalId\": null,\n          \"docNo\": \"Sheet Per Roll\",\n          \"label\": \"Sheet Per Roll\",\n          \"type\": \"CustomFieldModel\",\n          \"archived\": false\n        },\n        {\n          \"id\": \"3914\",\n          \"externalId\": null,\n          \"docNo\": \"Roll Case\",\n          \"label\": \"Roll Case\",\n          \"type\": \"CustomFieldModel\",\n          \"archived\": false\n        }\n      ],\n      \"submitterRef\": {\n        \"id\": \"69136\",\n        \"externalId\": \"\",\n        \"docNo\": \"notifyvroozi83@gmail.com\",\n        \"label\": \"Admin Vroozi\",\n        \"type\": \"UserModel\",\n        \"archived\": false\n      },\n      \"active\": true,\n      \"validFrom\": null,\n      \"validTo\": null,\n      \"timeZone\": \"+05:00\",\n      \"contractNumber\": \"\",\n      \"contractLineItem\": \"\",\n      \"catalogStatus\": \"UPDATED\",\n      \"approvedItemsCount\": 0,\n      \"rejectedItemsCount\": 0,\n      \"pendingItemsCount\": 23,\n      \"publishedItemsCount\": 0,\n      \"inputRecordsCount\": 23,\n      \"outputRecordsCount\": 23,\n      \"failedRecordsCount\": 0,\n      \"externalDefinition\": {\n        \"punchOutMethod\": \"POST\",\n        \"customImageField\": \"\",\n        \"communicationType\": \"OCI\",\n        \"encodingType\": \"URL_ENCODING\",\n        \"extrinsicFields\": []\n      },\n      \"clientCatalogId\": \"\",\n      \"language\": \"en\",\n      \"quantityLocked\": false,\n      \"transferItemDescription\": true,\n      \"searchAllowed\": false\n    }, Expected Result: 400 Bad Request error should be appeared {\n  \"id\": \"6ed931cd-51dc-4047-9671-247cc201cd48\",\n  \"status\": \"400\",\n  \"title\": \"Bad Request\",\n  \"errors\": [\n    {\n      \"code\": \"400\",\n      \"element\": \"lastUpdated\",\n      \"message\": \"Invalid parameters provided. Operator [btw] requires two parameters.\",\n      \"detail\": \"Invalid parameters provided. Operator [btw] requires two parameters. Please check documentation for supported formats and parameters.\",\n      \"level\": \"Request Error\"\n    }\n  ],\n  \"timestamp\": \"2024-02-18T17:31:45.710+0000\"\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-02-18T09:45:04.023-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96507",
+        "summary": "\"processingStatus\" is not updated on the response payload when uploading the catalog item ",
+        "description": "Pre-Condition: Catalog \u201cHS Catalog 5005\u201d already created  Steps to reproduce: Upload the catalog Item using POST endpoint 'https://staging-api.vroozi.com/v1/catalogs/HS%20Catalog%205005/upload   CURL: curl -X 'POST' \\\n  'https://staging-api.vroozi.com/v1/catalogs/HS%20Catalog%205005/upload' \\\n  -H 'accept: application/json' \\\n  -H 'useExternalId: true' \\\n  -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjYjNiOGNiNC1jNDQ5LTQ0N2YtYWQ5OS1iMjI1NzljNmY2MjEiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiZGMxMGFjYmYtZmZmNi00NmFiLWI5ZjMtNmI5MDk0YTc3ZWYxIn0.Ln_5-MyhXH5k7kc5kodjGavbb1xyPHA5Bk7eSt0whNQtHU0-BeJAELjcXarYLkQD04a93qpNKugtjfCtHxSnqA' \\\n  -H 'x-api-key: 9vPCZmeKIY3pUXVNBEUD59wHp4r6pKsr87voQj0c' \\\n  -H 'Content-Type: multipart/form-data' \\\n  -F 'resourceFile=@AR Paper.xlsx;type=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' \\\n  -F 'imageFile=@Paper.zip;type=application/x-zip-compressed' Get the status of async request by Tracking Id using GET endpoint: Actual Result: Expected Result: \"processingStatus\" should be updated to completed",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-02-15T05:55:50.397-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96451",
+        "summary": "Stage - Accounts Payable - Draft Invoice Returning from EH has its audits ordering issue (FE temp fix)",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@ Pre-Requisites: AP User should have logged into the Application. Ordered PO should already exist. \u00a0 Steps to Reproduce: Click to Create Invoice. 9000029438 Send it for EH to a Group. Login as one of the users from that Group. Assign it to itself. Click to Create Missing GR. Fully confirm the GR. Invoice returns back to the relevant AP User. Access this Draft Invoice via Track Invoices>All. Access Side Panel>Invoice History. Please see the two Audits: These are not in correct order. Actual Result: Draft Invoice Returning from EH has its audits ordering issue. Expected Result:   The two audits should be in correct ordered. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-02-15T00:39:33.662-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96441",
+        "summary": "\"500 Internal Server\" error appeared on the response payload when updating the status from api",
+        "description": "Pre-Condition: Catalog \u201c HS Catalog 158 \" already created Steps to Reproduce: Update the status of the catalog using POST endpoint: https://staging-api.vroozi.com/v1/catalogs/65a4dac89f483271b89e18a5/status-update CURL: curl --location 'https://staging-api.vroozi.com/v1/catalogs/65a4dac89f483271b89e18a5/status-update' \\\n--header 'Content-Type: application/json' \\\n--header 'x-api-key: 9vPCZmeKIY3pUXVNBEUD59wHp4r6pKsr87voQj0c' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjYjNiOGNiNC1jNDQ5LTQ0N2YtYWQ5OS1iMjI1NzljNmY2MjEiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiZGMxMGFjYmYtZmZmNi00NmFiLWI5ZjMtNmI5MDk0YTc3ZWYxIn0.Ln_5-MyhXH5k7kc5kodjGavbb1xyPHA5Bk7eSt0whNQtHU0-BeJAELjcXarYLkQD04a93qpNKugtjfCtHxSnqA' \\\n--data-raw '{\n    \"payload\": {\n        \"action\": \"APPROVE\",\n        \"submitterRef\": {\n            \"docNo\": \"hasnat.saleem+employee_stage83@vroozi.com\"\n        }\n    }\n\n}' Actual Result: Response Payload: {\n    \"id\": \"df0c0692-ce86-4489-9d2c-9d2119fc157d\",\n    \"status\": \"500\",\n    \"title\": \"Internal Server Error\",\n    \"errors\": [\n        {\n            \"code\": \"500\",\n            \"element\": \"\",\n            \"message\": \"Something is wrong, please contact administrator.\",\n            \"detail\": \"Unable to deserialize the execution context\",\n            \"level\": \"System Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-15T07:35:53.645+0000\"\n} Exception Logs java.lang.IllegalArgumentException: Unable to deserialize the execution context\n        at org.springframework.batch.core.repository.dao.JdbcExecutionContextDao$ExecutionContextRowMapper.mapRow(JdbcExecutionContextDao.java:328)\n        at org.springframework.batch.core.repository.dao.JdbcExecutionContextDao$ExecutionContextRowMapper.mapRow(JdbcExecutionContextDao.java:312)\n        at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)\n        at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)\n        at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:723)\n        at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651)\n        at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:713)\n        at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:744)\n        at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:757)\n        at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:815)\n        at org.springframework.batch.core.repository.dao.JdbcExecutionContextDao.getExecutionContext(JdbcExecutionContextDao.java:129)\n        at org.springframework.batch.core.explore.support.SimpleJobExplorer.getStepExecutionDependencies(SimpleJobExplorer.java:245)\n        at org.springframework.batch.core.explore.support.SimpleJobExplorer.getJobExecutions(SimpleJobExplorer.java:87)\n        at de.codecentric.batch.web.JobOperationsController.getNextJobParameters(JobOperationsController.java:247)\n        at de.codecentric.batch.web.JobOperationsController.createJobParametersWithIncrementerIfAvailable(JobOperationsController.java:215)\n        at de.codecentric.batch.web.JobOperationsController.launch(JobOperationsController.java:182)\n        at com.vroozi.api.catalog.processing.batch.JobManager.trigger(JobManager.java:106)\n        at com.vroozi.api.catalog.processing.batch.JobManager.submitToBatchSystem(JobManager.java:204)\n        at com.vroozi.api.catalog.processing.service.CatalogServiceImpl.process(CatalogServiceImpl.java:971)\n        at com.vroozi.api.catalog.processing.service.CatalogServiceImpl.updateCatalogStatusByCatalogId(CatalogServiceImpl.java:391)\n        at com.vroozi.api.catalog.controller.CatalogController.updateCatalogStatusByCatalogIdStatusId(CatalogController.java:702)\n        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n        at java.base/java.lang.reflect.Method.invoke(Method.java:568)\n        at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n        at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n        at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n        at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n        at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\n        at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\n        at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n        at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)\n        at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)\n        at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n        at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at com.vroozi.api.catalog.authentication.web.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:66)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n        at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n        at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n        at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)\n        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)\n        at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n        at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n        at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n        at java.base/java.lang.Thread.run(Thread.java:833)\nCaused by: com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve subtype of [map type; class java.util.HashMap, [simple type, class java.lang.String] -> [simple type, class java.lang.Object]]: missing type id property '@class'\n at [Source: (ByteArrayInputStream); line: 1, column: 253]\n        at com.fasterxml.jackson.databind.exc.InvalidTypeIdException.from(InvalidTypeIdException.java:43)\n        at com.fasterxml.jackson.databind.DeserializationContext.missingTypeIdException(DeserializationContext.java:2083)\n        at com.fasterxml.jackson.databind.DeserializationContext.handleMissingTypeId(DeserializationContext.java:1596)\n        at com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase._handleMissingTypeId(TypeDeserializerBase.java:307)\n        at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedUsingDefaultImpl(AsPropertyTypeDeserializer.java:185)\n        at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:119)\n        at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserializeWithType(MapDeserializer.java:482)\n        at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:74)\n        at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)\n        at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675)\n        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3675)\n        at org.springframework.batch.core.repository.dao.Jackson2ExecutionContextStringSerializer.deserialize(Jackson2ExecutionContextStringSerializer.java:133)\n        at org.springframework.batch.core.repository.dao.Jackson2ExecutionContextStringSerializer.deserialize(Jackson2ExecutionContextStringSerializer.java:104)\n        at org.springframework.batch.core.repository.dao.JdbcExecutionContextDao$ExecutionContextRowMapper.mapRow(JdbcExecutionContextDao.java:325)\n        ... 73 common frames omitted Expected Result: Catalog should be updated to the Approved status",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-02-14T23:41:30.956-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96431",
+        "summary": "PMAN: AcctVal - Download Error Report for Bulk Upload of Accounting String is not working.",
+        "description": "Environment:  Stage User:   Notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Acc val feature toggle should be \u201cON\u201d from the db \"PURCHASE__ACCOUNTING_STRING_VALIDATION\". Acc val CURD operations feature toggle should be \u201cON\u201d from DB PURCHASE__ACCOUNTING_STRING_UI_CRUD. A jpeg image file is already uploaded via Bulk Accounting String Upload. Steps to Reproduce: Navigate to Master Data \u2192 Accounting Strings. Click on the error report red icon. Actual Result: A blank tab of the browser is displayed. Expected Results: Error report should be displayed properly.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-02-14T22:53:48.640-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96421",
+        "summary": "Hopper Email Failure Report: Support receiving email without attachment",
+        "description": "Pre Conditions: Hopper Email is defined in accounts payable => Settings => Inbox Inbox Notification have user selected in accounts payable => Settings => preferences Steps: Actual Result: Support receiving  Hopper Email Failure  email without attachment Expected Result: Support should not receive Hopper Email Failure  email without attachment",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-02-14T22:03:54.243-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96330",
+        "summary": "Regression Testing Integration Team RC-2024-2",
+        "description": "",
+        "status": "Done",
+        "assignee": "Waheed Nawaz",
+        "created": "2024-02-13T21:43:19.587-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96294",
+        "summary": "PMAN: Navigation on Organization and Accounting screens not working properly.",
+        "description": "Server :  Stage unit Id 2 User:  notifyvroozi@gmail.com Pre Conditions: Above mentioned user is logged into PMAN application. Steps to Replicate: Navigate to Master Data \u2192 Organization   OR Navigate to Master Data \u2192 Accounting Click on the Last button of the navigation.  Expected Result: Navigation should work for the grids properly.  Actual Result: Clicking on the last page redirects user back to first page of grid. This is happening for all grids of Master Data \u2192 Organisation and Accounting screens.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-02-12T23:54:13.893-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96252",
+        "summary": "Vroozi API Release notes",
+        "description": "Please add the new APIs to the release notes section in the Vroozi public API documentation.",
+        "status": "Done",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-02-12T05:44:03.680-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96201",
+        "summary": "Purchase Regression - [RC-2024-2]",
+        "description": "",
+        "status": "In Progress",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-02-11T21:16:12.513-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96168",
+        "summary": "PMAN: Error displayed on Opening Categories screen and also unable to upload category file.",
+        "description": "Environment = DevQA2 User =  Notifyvroozi@gmail.com Steps: Navigate to Master Data \u2192 Categories  Actual Results:  Noty error is displayed as the Category screen is displayed. Also the upload Categories file is not working. Expected Result: No error should be displayed and user should be able to upload Categories file. Screenshot: TypeError: Cannot read properties of undefined (reading 'forEach')     at admin.64e00f0e84100d1fa2fa.js:443:5070268     at vendors.925fa735.js:138:809     at m.$eval (vendors.925fa735.js:152:471)     at m.$digest (vendors.925fa735.js:150:55)     at m.$apply (vendors.925fa735.js:153:253)     at g (vendors.925fa735.js:105:456)     at x (vendors.925fa735.js:110:58)     at v.onload [as __zone_symbol__ON_PROPERTYload] (vendors.925fa735.js:111:538)     at XMLHttpRequest.O (admin.64e00f0e84100d1fa2fa.js:327:1218)     at e.invokeTask (admin.64e00f0e84100d1fa2fa.js:311:7859)",
+        "status": "Abandoned",
+        "assignee": "Iqtidar Arshad",
+        "created": "2024-02-09T00:24:04.014-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96158",
+        "summary": "Integration - DEVQA5 - Accounts Payable - Create invoice - Copied Item has the Split field showing 'undefined%' in its Popover when clicked in the Accounting Tab of the Item dialogue.",
+        "description": "Environment: https://devqa5-go.vroozi.com Username :  asma.latif+APM83@vroozi.com Password:  Blueangel1@ Pre-Requisites: AP User should have logged into the Application. Ordered PO should already exist. \u00a0 Steps to Reproduce: Click to Create Invoice. 9000001979 Add an item with an accounting split by percentage (60% and 40%) Click to Copy. Go to the Accounting tab and click the Percent 1 split field containing  60%  value. Popover shows stating 'Remaining undefined% out of 100.00%' Now click the Percent 2 split field containing  40%  value. Popover shows stating 'Remaining undefined% out of 100.00%' Actual Result: Copied Item has the Split field showing 'undefined%' in its Popover when clicked in the Accounting Tab of the Item dialogue. Expected Result:   Split field\u2019s popover should show the percent value in the field e.g 'Remaining 60% out of 100.00%' Screen shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-02-07T12:42:19.499-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-96014",
+        "summary": "Stage - Accounts Payable - Create Invoice - GL Account's  +n more bubble against Item when viewed has issue and shows error in Console too.",
+        "description": "Environment:  https://stage-go.vroozi.com Username :  asma.latif+APM83@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create Invoice.  9000029324 Add an Item with qty/value/percent Account Splits have the 1st dist. GL account only. View the Item. Click the \u201c+1 more\u201d against the item\u2019s GL Account value in the item list table. Please see it says \u201cno match found\u201c. Also Error generates in Console. Actual Result: GL Account's  +n more bubble against Item when viewed has issue and shows error in Console too. Expected Result: No error should show and popover should show the value of the first dist\u2019s GL account. this is the behavaior on Prod, currently. Screenshot: Stage: Prod: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-02-01T00:25:49.817-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95967",
+        "summary": "Stage - Accounts Payable - Create Invoice - Item Inline Edit - Price length validation issues.",
+        "description": "Environment:  https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create Invoice.  9000029318/9000029319 Add an Item. Inline edit the Price field with longer value. Please see the Price shows 'undefined' on update and error shows in Console too. total, subtotal and payable to supplier fields also start showing trash values. Actual Result: Price field inline edit with longer value has issues. Expected Result: Price field should have length restriction. Screenshot: Note:  this is working fine on Prod , on Prod we have a certain limit defined for Price field against its inline edit. But while adding item, Price field does not have any limit defined on both Stage and Prod. (Prod Invoice:  9000008840 ) Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-01-31T03:16:15.968-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95886",
+        "summary": "Accounts Payable - Invoice - Edit ignores edited fields",
+        "description": "Environment:  https://devqa5-go.vroozi.com Username :  asma.latif+APM83@vroozi.com Password:  Blueangel1@ Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create Invoice and or navigate to the  9000001957 Update unit price or quantity via regular edit (not inline edit) Actual Result: Updated values are not saved Expected Result: Updated values are saved",
+        "status": "Abandoned",
+        "assignee": "Adnan Khalid Shah",
+        "created": "2024-01-29T16:58:40.536-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95876",
+        "summary": "Integration - DEVQA5 - Create Invoice - Auto Dist. Adjusted message not needed to be shown for Percent account splits against items.",
+        "description": "Environment:   https://devqa5-go.vroozi.com Username : asma.latif+APM83@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create Invoice.  9000001950 Add an Item with Percent Account Splits. Inline Edit the Item against qty/price or both. Accounting_Destribution_Auto_Adjusted  message shows along with tax updated message. Actual Result: Accounting_Destribution_Auto_Adjusted  message shows along with tax updated message. Expected Result: Accounting_Destribution_Auto_Adjusted  message shouldn\u2019t show for Percent Account Splits against items.  Screenshot: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2024-01-29T12:57:44.026-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95875",
+        "summary": "Integration - DEVQA5 - Create Invoice - Auto Dist. Adjusted messages are showing for Non Percent Account Splits against Items.",
+        "description": "Environment:  https://devqa5-go.vroozi.com Username : asma.latif+APM83@vroozi.com Password:  Blueangel1@/ Blueangel1! Pre-Requisites: AP User should have logged into the Application. Ordered PO with 3 items, each split by qty, value and percent.  2000002783 \u00a0 Steps to Reproduce: Click to Create Invoice and Reference the PO  9000001956 Or  Non PO invoice.  9000001957/9000001958 Inline Edit each item like item1 (price+qty) item2(price) item3(price+qty) Accounting_Destribution_Auto_Adjusted  message shows for all three items. View the Accounting tab as you edit the item. the split dist (qty, value) for first two items haven't updated in view mode. the split dist (percent) for third item has updated correctly. Actual Result: the split dist (qty, value) for first two items haven't updated in view. mode But the  Accounting_Destribution_Auto_Adjusted  message shows. Expected Result: Accounting_Destribution_Auto_Adjusted  message shouldn\u2019t show for Non Percent Account Splits against items.  Screenshots: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Jimena Pose",
+        "created": "2024-01-29T12:48:21.562-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95868",
+        "summary": "Acc Val : While doing bulk upload from xlsx file Accounting strings status shown as Inactive after upload even From and To date is current date (given in file)",
+        "description": "Environment: DEVQA2 notifyvroozi@vroozi.com Welcome1! Steps to Replicate: Login from Admin user Go to Master Data > Accounting Strings Create a file to upload with valid details of accounting strings provide  Valid FROM  and  TO date  as  Current Date  in File, status as  Active  for records. Save the file and click on bulk upload option top right corner. File should be uploaded with out any error Expected Result: Records uploaded via bulk should be marked/shown with  active status   Actual Result: Records uploaded via bulk shown as  Inactive status .",
+        "status": "Resolved",
+        "assignee": "Masood Safi",
+        "created": "2024-01-29T04:43:13.732-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95840",
+        "summary": "Integration - DEVQA5 - Supplier Portal - Invoice can't be deleted via Invoices Page.",
+        "description": "Environment:  https://devqa5-go.vroozi.com/#/login?view=supplier&org=1027042017 Username :  asma.latif+Betty@vroozi.com Password:  Blueangel1! Pre-Requisites: SP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create an Invoice.  9000019359 Either Add details or not. Save it. Access Invoices Page. Click the Ellipses icon against the saved invoice. Click 'Delete Invoice' option. Click Yes on the Confirmation Pop up. Please see \u201cSomething went wrong..\u201c error shows and invoice can\u2019t be deleted. Actual Result: Invoice can\u2019t be deleted. Expected Result: Invoice should get deleted. Screenshots: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-27T11:22:04.119-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95791",
+        "summary": "Vroozi API - Additional Feedback during the demo Related (Tracking ID and Content view Association)",
+        "description": "1- processingStatus instead of asyncStatus 2- Test the name in different languages (Japanese Urdu etc) 3- /catalogs/async-requests/{trackingId} 4- Model name of the catalog tracking is not correct. 5- 500 error on the upload API, with wrong version number 6- 500 error on the upload to published catalog\u00a0 7- requestPath on the tracking response 8- context path should be removed from the path  /catalog/api 9- requestMethod should be exposed in tracking end point as well 10  /content-views/associate \u00a0 Payload should be\u00a0 [ \u00a0 \u00a0 { \u00a0 \u00a0 \u00a0 \"id\": \"561234cdeacb256789aa\", \u00a0 \u00a0 \u00a0 \"externalId\": \"11001\", \u00a0 \u00a0 \u00a0 \"docNo\": \"CC01\", \u00a0 \u00a0 \u00a0 \"type\": \"CostCenterModel\", \u00a0 \u00a0 \u00a0 \"label\": \"Description for label\", \u00a0 \u00a0 \u00a0 \"archived\": false \u00a0 \u00a0 } ] 11 //content-views/remove [ \u00a0 \u00a0 { \u00a0 \u00a0 \u00a0 \"id\": \"561234cdeacb256789aa\", \u00a0 \u00a0 \u00a0 \"externalId\": \"11001\", \u00a0 \u00a0 \u00a0 \"docNo\": \"CC01\", \u00a0 \u00a0 \u00a0 \"type\": \"CostCenterModel\", \u00a0 \u00a0 \u00a0 \"label\": \"Description for label\", \u00a0 \u00a0 \u00a0 \"archived\": false \u00a0 \u00a0 } \u00a0 ] 12- /content-views/associations",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sahar Ali",
+        "created": "2024-01-26T02:15:25.073-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95774",
+        "summary": "Acc Val : No message (as well as help text ? )displayed once any accounting object is deleted associated with an Accounting String.",
+        "description": "Environment:  DEVQA2 notifyvroozi@vroozi.com Welcome1 Steps to Replicate: Login from Admin  user Go to Master Data > Accounting String Create and save new Accounting string with all accounting objects and mandatory fields Go to any accounting object(involved in above step accounting string) and delete that object  e.g Cost center1 . Cost Centre should be deleted. Go to Master data > Accounting string listing string and open same accounting string against which the  cost centre  object was deleted.  Expected Result: A message should be displayed beneath the status field \u201cThe accounting strings(s) which contain inactive/deleted accounting/organization objects cannot be activated\u201c Help Text should be displayed against the  Cost Centre  field \u201citem has been deactivated or deleted\u201c Actual Result: No Message appearing beneath the status field i.e \u201cThe accounting strings(s) which contain inactive/deleted accounting/organisation objects cannot be activated\u201c. No Help Text is displayed against the deleted  Cost Centre  object.",
+        "status": "Resolved",
+        "assignee": "Masood Safi",
+        "created": "2024-01-26T00:26:03.479-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95764",
+        "summary": "Budget Filter: When Budget approver select any Buget in filter and redirect to different page then moves to filter it still in loading status",
+        "description": "Budget Filter: When Budget approver select any Budget in filter and redirect to different page then moves to filter it still in loading status Steps to Replicate. 1-Login with Budget approver. 2-Select the any budget with in the Budget filter. 3-Go to Budget page. 4-Again Redirect to the approve Request Page. Expected Result: Only Budget field will be selected in the budget filter after Redirecting. Actual Result: Budget field in filter keep on loading. Budget Team  (                 )",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-01-25T22:39:34.573-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95721",
+        "summary": "Invoice: Dates are stored in Long format in Invoice purchaseOrderRefs",
+        "description": "Steps: 1: Create Empty Invoice 2: Add PO reference (In DB dates in purchaseOrderRefs are saved in Date format) 3: Update anything in the invoice (Now date in purchaseOrderRefs are changed in to Long format ) Current Behaviour: createdDate and updatedDate in 'purchaseOrderRefs. additionalDetails`  are updated to Long Expected Behaviour: createdDate and updatedDate in 'purchaseOrderRefs. additionalDetails`  should keep in Date format",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-25T03:27:45.040-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95704",
+        "summary": "On create PO wizard company code field is disabled but when user select any supplier than company code field become editable.",
+        "description": "URL: https://devqa6-go.vroozi.com/#/login Username: javaid.sattar+PMbuyer1@vroozi.com Password: Welcome1@ PreCondition: Login as Admin, Open any buyer user, Enable restrict PR/PO coding on buyer user and save the buyer user Steps: Login with above buyer user. Click on Create order. Company code field is disabled. Chose any supplier in supplier field. Company code field is enabled. Actual Result: Company code field become editable when user select any supplier. Expected Results: Company code field should remain  disabled. .",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2024-01-25T03:05:37.189-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95674",
+        "summary": "DEVQA5 - Integration - Invoice Returning from EH - Clicking Invoice Returned to Draft Event show errors in Console and its Cards can't be collapsed.",
+        "description": "URL: https://purchase.vroozi.com Username:  asma.latif+APM@vroozi.com Password: Redangel1@ PreCondition AP User should have logged into the Application. AP User should have created an Invoice with PO referenced to it.  9000008586 Steps: Access the Invoice and click the Side Panel History Icon. Click the 'Invoice returned to draft' event. Please see errors in Console. Click to \u201cCollapse All\u201d link against the Change Summary. Please see Cards can\u2019t be collapsed. Actual result: Clicking Invoice Returned to Draft Event show errors in Console and its Cards can't be collapsed. expected result: No Errors should generate in Console and Cards should be collapsable. Screen-Shot:  Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Jaroslav Bellus",
+        "created": "2024-01-25T00:01:29.555-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95542",
+        "summary": "PROD - Accounts Payable - Invoice/Memo - Totals Section is misaligned.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  notifyvroozi@gmail.com Password:  Welcome1 Pre-Requisites: Ordered PO should already exist. AP User should have logged into the Application. Steps to Reproduce: Create Invoice/Memo referencing the PO. Add non po Item. Invoice/memo totals section appears at the footer level. Please see its misaligned. Actual Result: Invoice/memo totals section is misaligned. Expected Result: Totals sections should be aligned, Screenshot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-23T00:55:43.478-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95541",
+        "summary": "AccVal: When there are empty rows in the CVS format file system gives error and did not read the file",
+        "description": "Server Devqa2 Credentials Admin notifyvroozi@gmail.com Welcome1 Steps to Reproduce: Login from admin, Navigate to Master Data > Accounting strings Click on upload file icon  Upload file in CSV format and make sure on file after headers just let 1 or 2 empty Verify system will upload the file Expected Result: System will read the data in file and upload it accordingly Actual Result: System is giving error red noty message and on clicking error report icon it isn\u2019t displaying anything",
+        "status": "Resolved",
+        "assignee": "Sahar Habiba",
+        "created": "2024-01-23T00:00:48.673-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95524",
+        "summary": "PMAN: Invoice: Automate Accounting String Exception, when Invoice returns back from Exception Handling, after Goods Receipt has been created.",
+        "description": "Business Case : Currently, our system encounters a challenge when an Invoice returns from Exception Handling with an accounting string error after the Goods Receipt has been created. The system lacks a defined process for handling such accounting validation exceptions during this stage. Acceptance Criteria : What is the change?  If an accounting validation error is detected during the return of an Invoice from Exception Handling after the Goods Receipt has been created, the system should recognize this scenario and accordingly automate the Exception Handling process further. Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true and ACCOUNTING_STRING_VALIDATION = true. What pages should this change impact?  Invoices in Exception status. Which users should be impacted by the change?  AP Processor / AP Manager / Exception Handling group users. How should this change work? Detection of Accounting String Error : If an accounting validation error is detected during the return of an Invoice from Exception Handling after the Goods Receipt has been created, the system should recognize this scenario. Auto-Processing Rule Evaluation : The system should check the Auto-Processing rule configured for cXML and Supplier Portal invoices. Decision Making for Supplier Portal & cXML created Invoices : Based on the Auto-Processing rule, the system should determine whether the Invoice requires further attention by an Exception Handling group or can proceed to the next stage. Invoice created from Auto create invoices from Supplier Portal / cXML toggle GR Exception toggle Accounting String Error toggle Accounting String Error found? Decision Supplier Portal / cXML ON ON ON Yes GR is created and it resolves the Missing GR exception on the Invoice.  When moving to the next state, during Auto-processing, if the system finds  ANY  Accounting String Error,  Send Invoice to the User Group/Type selected for Accounting String Error for resolving the exception. The Assigned Exception Handler is allowed to resolve Accounting String Errors. The Assigned Exception Handler is able to return the Invoice back to AP. Supplier Portal / cXML ON ON ON No GR is created and it resolves the Missing GR exception on the Invoice.  When moving to the next state, during Auto-processing, if the system finds  NO  Accounting String Error, Follow current implementation. Supplier Portal / cXML ON ON OFF Yes GR is created and it resolves the Missing GR exception on the Invoice.  When moving to the next state, during Auto-processing, if the system finds  ANY  Accounting String Error,  Return Invoice back to AP and assign the Invoice Owner or AP Processor / Manager group depending on the Access rules. ( how it works currently in the system ) The AP user should see the Accounting string error. The AP user is allowed to send the Invoice for Exception handling in order to resolve the Accounting String Errors. Supplier Portal / cXML ON ON OFF No GR is created and it resolves the Missing GR exception on the Invoice.  When moving to the next state, during Auto-processing, if the system finds  NO  Accounting String Error, Follow current implementation. Decision Making for Invoices created manually by AP User : Invoice created from GR Exception Accounting String Error found? Decision Hopper or Manually by AP user. Yes Yes GR is created and it resolves the Missing GR exception on the Invoice.  When moving to the next state, during Auto-processing, if the system finds  ANY  Accounting String Error, Return Invoice back to AP and assign the Invoice Owner or AP Processor / Manager group depending on the Access rules. ( how it works currently in the system ) The AP user should see the Accounting string error. The AP user is allowed to send the Invoice for Exception handling for resolving the Accounting String Errors. Hopper or Manually by AP user. Yes No GR is created and it resolves the Missing GR exception on the Invoice.  When moving to the next state, during Auto-processing, if the system finds  NO  Accounting String Error, Follow current implementation. User Notification : Users involved in the Exception Handling group or Accounts Payable Processing should be appropriately notified. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  N/A FYI -   /   /   /",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ahmed Habib",
+        "created": "2024-01-22T12:36:53.769-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95401",
+        "summary": "PROD - Accounts Payable - Create Invoice - Inline edit doesn't do a proper split.",
+        "description": "PreCondition: Create an invoice with an accounting split by percentage (50% each) Steps: Edit the price or quantity by inline editing Verify how the split is updated by viewing the item\u2019s Accounting tab. Actual result: First split is kept as-is, and 2nd one gets the rest Desired result: The values should be split proportionally according to the percentage Example: Devqa5, unitId 2, invoice  9000019356 2nd issue (FE): When cloning an item with proportional account split: (The 50% was already there on the original item, and I didn\u2019t change anything) 3rd and 4th issue (FE): When you create an item, add the frist split (by percent), fill all the details, and then click the \u201c+\u201d to add the 2nd split, it takes you to the \u201cGeneral Information\u201d tab. If you go back to the accounting tab, the 2nd distribution is already added, but it has 50% set as the percent, but the amount is 0",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-01-18T11:17:56.340-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95298",
+        "summary": "PROD - Accounts Payable - Invoice - Footer Totals Withholding Tax field has its Icon's popover Issue and shows error in Console too.",
+        "description": "Environment: https://go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Redangel1@/ Redangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Access a Draft Invoice in View Only Mode.  9000008763 Scroll down to the bottom in footer totals section. Click the Icon against With Holding Tax field. A popover appear with no title, seems disturbed. Click the Cancel 'x' icon on it. Nothing happens. Please see the Error in Console. Actual Result: Footer Totals Withholding field has its Icon's popover Issue and shows error in Console too. Popover title is missing Expected Result: Popover should show correctly and closed when 'x' is clicked on the popover with no error in console. Popover title is displayed Screen shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-01-17T01:46:49.210-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95297",
+        "summary": "Prod: While saving accounting string from frontend date is not saved in db correctly",
+        "description": "Server Staging Steps to Reproduce: Login from admin Navigate to Master Data > Accounting Strings screen Add new accounting strings from UI, save those accounting strings. Check in db dates are saved as given on UI This can be verified by clicking on export accounting string and save xlsx file Expected Result: Exported file should have same date as saved from UI i.e Add new accounting string Actual Result: Date is not being saved as shown in UI this difference can be seen by export accounting string file option see attached screen shot.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-17T01:45:15.972-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95108",
+        "summary": "PROD - Accounts Payable - Create Invoice/Memo/PRQ - Payment Terms Order Issue.",
+        "description": "Environment:  https://go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Redangel1@/ Redangel1! Pre-Requisites: AP User should have logged into the Application. \u00a0 Steps to Reproduce: Click to Create Invoice. Drag open Payment Terms field. Please see the values don\u2019t follow any order. Actual Result: Payment terms are not showing in any order. Expected Result: Payment Terms should populate in ASCENDING order, correctly. Screenshot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-01-11T22:06:09.126-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95095",
+        "summary": "Login: SP registration Terms & Conditions for the Supplier Portal UI Issue",
+        "description": "Steps Navigate to  https://stage-go.vroozi.com/#/login/cfb017b0-a351-4cc4-85f5-07fd8b073a51/registration/supplier?org=880852895&view=supplier Click  Terms and Conditions Actual Result Modal content has some UI issues (header and footer is not fully shown for certain screen sizes) Expected Result Modal content is correctly displayed",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-11T10:49:17.938-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95093",
+        "summary": "PMAN: Invoice: USJ: Introduce a toggle for Auto Invoice Date Calculation, in the Supplier record, and automatically enable it for newly created Suppliers.",
+        "description": "Business Case : As an  Admin , I should be able to turn ON or OFF the Auto Invoice Date calculation settings in the Supplier record. Also, any new Supplier that gets created manually or through USJ / NBCU Interface should have this toggle ON by default. Acceptance Criteria : What is the Change?  Exposing the backend flag -  invoiceDateAutoCalculationEnabled  on to the Supplier record as toggle. What customers should this change impact on?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW  = true  and  accountsPayableSettings.autoCalculationStrategies: ['SET_INVOICE_DATE_BASED_ON_MAX_DELIVERY_DATE'] New feature toggle introduction:  This should have been introduced as part of  . What pages should this change impact?  Master Data > Suppliers How should this change work? Expose the BE field -  invoiceDateAutoCalculationEnabled  by introducing a new toggle in the Master Data > Supplier > Supplier records. This toggle should only appear in the Supplier record if Invoice Date Auto Population Feature Toggle =  true . Toggle Name  - Allow Auto Invoice Date Calculation. Tooltip  - When this toggle is turned ON, the system will automatically calculate the Invoice dates on the Invoice for this supplier. When this Toggle is turned  ON  -  invoiceDateAutoCalculationEnabled  =  true . When this Toggle is turned  OFF  -  invoiceDateAutoCalculationEnabled  =  false . An Admin should be able to turn ON or OFF this toggle manually from the Supplier record. New Implementation  -  When a  NEW  Supplier record is created  Manually  in Purchase Manager or through the USJ / NBCU  Interface  (SAP / TIBCO), then the  Allow Auto Invoice Date Calculation toggle  should be  ON , by default. Note  - These are 4-5 vendors for whom this feature was disabled when this implementation was done in Phase 4. Please review this ticket for reference -    DO NOT update the Allow Auto Invoice Date Calculation setting for Suppliers that exist in the system today. If USJ wants to turn ON Allow Auto Invoice Date Calculation for old suppliers, then they can either do it manually or ask the SWAT Team to turn it ON via a script. New Implementation (mentioned above) will only work for newly created suppliers. Do we need a data-fix for existing customers?  No. Would this change impact existing customers?  Yes. (USJ) To which teams should change be communicated to?  Purchase Team and Integration Team. FYI -",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-01-11T06:26:59.661-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95029",
+        "summary": "PMAN: Invoice: Introduce new toggle for Enabling Coding & Apply to all functionality during Exception Handling.",
+        "description": "Business Case : As an  Admin , I should be able to decide whether Employee, Buyers, AP Coders and AP Managers should also be allowed to Code on Invoices during Exception Handling. Also, this toggle will allow these same users to use the Apply to All functionality during Exception Handling. Acceptance Criteria : What is the change?  Giving Admins the ability to choose whether they want their Requester, Buyer, AP Coder, and AP Manager to Code & use Apply to all on Invoices during Exception Handling. Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true. What pages should this change impact?  Accounts Payable > Settings > Exceptions page and Invoices in Exception Status. Which users should be impacted by the change?  Employee, Buyer, AP Coder and AP Manager. How should this change work? Introduce a  new Section  in Accounts Payable > Settings > Exceptions, in-between Tolerance Definitions and Exception Handler where these new toggles will be introduced. Heading  of the new Section -  Invoice Coding Access Under the Heading, the  Title  message would be - Allow certain user roles with Coding access and Apply to All functionality during Exception Handling. Add a  Note  below the Heading as -  Note : Please check the tooltip for more information . The  Tooltip  should be besides the Title message. Hovering over this Tooltip show display this message -  Turning this Toggle \u201cON\u201d will allow Coding access to these users for a PO based Invoice during Exception Handling. Additionally, these users will also have access to the \u201cApply to All\u201d functionality during Exception Handling . Requester. Buyer. AP Coder. Note :  AP Managers can always Code on Invoices during Exception Handling. Introduce a new toggle beside the Tittle. When this toggle is turned \u201cON\u201d - codingForInvoicesInReconciliationEnabled = true. When this toggle is turned \u201cOFF\u201d - codingForInvoicesInReconciliationEnabled = false. Some Reference tickets  -       Do we need a data fix for existing customers?  No Would this change impact existing documents?  Yes To which teams should this change be communicated to?  None Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 Key Decisions: # Decision Point Decision Reasoning Validation Plan \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 FYI -   /",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-10T02:29:27.153-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-95026",
+        "summary": "Payables: Add invoice field mapping configuration for elastic search",
+        "description": "Right now we are mapping whole invoice document in elastic search but we only need to map those field that required for supplier portal track invoice grid.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-01-10T01:49:22.097-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94974",
+        "summary": "Budget Rejection: When budget approver rejects the CR then flow is working but an exception occurs.",
+        "description": "Budget Rejection: When budget approver rejects the CR then flow is working but an exception occurs. Preconditions: 1-Budget workflow should be enabled. 2-PR should be created | 3-Budget approval  workflow should be enabled 4-POCR should be created with adding/Copying line item 5-Login with budget approver Steps To Replicate: 1-Go to Relevant CR 2-Reject it with notes. 3-Review the logs. Actual Result: Exception occurs related to fetching  budget by approver id. Expected Result: There should be no exception at this point ==> /usr/share/tomcat9/logs/vroozi.err <== 2024-01-09 03:47:21,029 c.v.a.r.s.r.RestClientImpl [RestClientImpl.java:3257] - Exception while fetching the budget by approver id: org.springframework.web.client.HttpClientErrorException$NotFound: 404 : \"{\"timestamp\":\"2024-01-09T11:47:21.008+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/budget-api/api/budgets/approvers//associated-budgets\"}\"         at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:113) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:751) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:651) ~[spring-web-5.3.22.jar:5.3.22]         at com.vroozi.api.requests.service.rest.RestClientImpl.getBudgetIdsByApproverId(RestClientImpl.java:3253) ~[classes/:na]         at jdk.internal.reflect.GeneratedMethodAccessor10708.invoke(Unknown Source) ~[na:na]         at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]         at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]         at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.22.jar:5.3.22]         at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208) ~[spring-aop-5.3.22.jar:5.3.22]         at jdk.proxy6/jdk.proxy6.$Proxy253.getBudgetIdsByApproverId(Unknown Source) ~[na:na]         at com.vroozi.api.budget.service.impl.BudgetWorkflowServiceImpl.addErrorForRejectedPR(BudgetWorkflowServiceImpl.java:477) ~[classes/:na]         at com.vroozi.api.budget.service.impl.BudgetWorkflowServiceImpl.addErrorForApproverIfRequired(BudgetWorkflowServiceImpl.java:470) ~[classes/:na]         at com.vroozi.api.budget.service.impl.BudgetWorkflowServiceImpl.addErrorForApproverIfRequired(BudgetWorkflowServiceImpl.java:429) ~[classes/:na]         at com.vroozi.api.requests.service.impl.RequestsServiceImpl.validateBudget(RequestsServiceImpl.java:3838) ~[classes/:na]         at com.vroozi.api.requests.service.impl.RequestsServiceImpl.validateBudget(RequestsServiceImpl.java:3822) ~[classes/:na]         at com.vroozi.api.requests.service.impl.RequestsServiceImpl.updatePurchaseRequestWithoutValidation(RequestsServiceImpl.java:3588) ~[classes/:na]         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]         at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]         at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]         at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.22.jar:5.3.22]         at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208) ~[spring-aop-5.3.22.jar:5.3.22]         at jdk.proxy6/jdk.proxy6.$Proxy255.updatePurchaseRequestWithoutValidation(Unknown Source) ~[na:na]         at com.vroozi.api.requests.controller.PurchaseRequestController.updatePurchaseRequestWithoutValidation(PurchaseRequestController.java:328) ~[classes/:na]         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]         at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]         at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]         at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:849) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:760) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at javax.servlet.http.HttpServlet.service(HttpServlet.java:699) ~[servlet-api.jar:4.0.FR]         at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.20.RELEASE.jar:4.3.20.RELEASE]         at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[servlet-api.jar:4.0.FR]         at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.68]         at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-websocket.jar:9.0.68]         at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.68]         at com.vroozi.api.authentication.web.AuthenticationFilter.lambda$doFilterInternal$0(AuthenticationFilter.java:33) ~[classes/:na]         at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]         at com.vroozi.api.authentication.web.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:28) ~[classes/:na]         at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.22.jar:5.3.22]         at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.68]         at com.vroozi.api.web.filter.UnhandledExceptionFilter.doFilterInternal(UnhandledExceptionFilter.java:26) ~[classes/:na]         at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]         at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.68]         at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]         at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]         at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[catalina.jar:9.0.68]         at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[catalina.jar:9.0.68]         at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[catalina.jar:9.0.68]         at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[catalina.jar:9.0.68]         at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[catalina.jar:9.0.68]         at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[catalina.jar:9.0.68]         at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-coyote.jar:9.0.68]         at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-coyote.jar:9.0.68]         at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-coyote.jar:9.0.68]         at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-coyote.jar:9.0.68]         at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-coyote.jar:9.0.68]         at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-util.jar:9.0.68]         at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-util.jar:9.0.68]         at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-util.jar:9.0.68]         at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]",
+        "status": "Resolved",
+        "assignee": "Sahar Habiba",
+        "created": "2024-01-09T03:59:36.852-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94917",
+        "summary": "PMAN -  On Create PO Wizard, When user deletes a line item, selection of items should reset",
+        "description": "Server : Production Credentials :  ayesha.waseem+prod+buyer@vroozi.com  / Welcome1@ Steps to Reproduce: Login as a Buyer user Start Creating a PO through Wizard Navigate to  Let\u2019s add some items to your order Add more than 5 line items Select the checkbox against Line item 1 and 3 Click on delete icon against line item 2 Actual : Line Item 3 will be moved to 2nd place and Line item 4 will be selected as it is now on 3rd position Expected : Selection should be reset to uncheck",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-01-08T04:03:37.735-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94905",
+        "summary": "PMan- Application hides Class field on Line Item Modal, If only Organization data is set on user profile",
+        "description": "Server:  Production Credentials:   ayesha.waseem+prod+emp@vroozi.com  / Welcome1@ Pre-Req:   Set Only company code, Purchasing Organisation and Plant on user profile Mark Location Type as required on Company Code Steps to Reproduce: Login with the given credentials Open a PR in draft mode Click on Add line item Observe that Class field is visible Start adding the missing info Select value in Cost Centre Observe that Class field is no more visible Add all the mandatory information Click Save button Actual : Document level error is displayed regarding missing Class field Expected : Class field should not get invisible on Line Item modal",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-01-08T00:58:40.910-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94873",
+        "summary": "Purchase-Api : Use new java 17 switch statement in package com.vroozi.api.requests",
+        "description": "Replace the old  switch  statement with the new Java 17  switch  statement in the below package in purchase-api package com.vroozi.api.requests",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2024-01-07T23:09:47.386-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94859",
+        "summary": "PMan - Document level error is not being removed even after Shipping address field on Line item's have Shipping addresses copied from the Header level Shipping address",
+        "description": "Server : Production Credentials : ayesha.waseem+prod+buyer.com   password: Welcome1@ Steps to Reproduce: Login as a Buyer Start creating a Manual PO by clicking on Create Order link Navigate to  Enter Shipping Address  page. Select an Address Navigate to  Let\u2019s add some items to your order  page Click on  Add Item  button Add line item details Finish the wizard Document level error is coming regarding Missing Shipping address Change the Document level address Open the line item and verify that Shipping address is copied at Line item level Actual :  Although shipping address is set at line item level but Document level error message is still there Expected : Document level error message should be removed once shipping address is copied",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-01-05T03:17:00.989-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94818",
+        "summary": "PMAN: AcctVal - Provide support for Japanese and other supported languages.",
+        "description": "Identify the missing areas of Accounting String Validation functionality to provide Japanese translations against it. Also need to check it for other languages. Budget Team  (                  )",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-03T23:26:07.151-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-94529",
+        "summary": "PROD - Accounts Payable - Invoice/Memo - Side Panel - Invoice History - Change Summary Event Cards are not in correct order.",
+        "description": "URL: https://purchase.vroozi.com Username:  asma.latif+APM@vroozi.com Password: Redangel1@ PreCondition AP User should have logged into the Application. AP User should have created an Invoice with PO referenced to it.  9000008586 Steps: Access the Invoice and check the Side Panel History Icon. Please see the Change Summary event cards these are not in order. Actual result: Change Summary Event cards  are not in correct order. expected result: Change Summary Event cards should be in correct order: PO Reference Invoice Overview Addresses Custom fields Invoice Items Invoice totals Screen-Shot:  Before it Broke: After it broke: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2023-12-20T03:51:05.987-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93741",
+        "summary": "PROD - Accounts Payable - Draft Invoice - CXML Invoice having its PO Cancelled can't be updated.",
+        "description": "URL: https://go.vroozi.com Username:  asma.latif+AtWork@vroozi.com Password: Redangel1!  OR Redangel1@ PreCondition: CXML Invoice Auto Creation/Processing should be ON via Admin>Accounts Payable>Settings>Preferences. AP User should have logged into the Application. PO Based CXML Invoice Request Submitted already.  (9000008550) Steps: Login as Requester and Access the Invoice via Invoices Page. Click to Assign to Me. Access the Associated PO in Purchase Orders Page and Cancel it. Access the Invoice and Click to Return to Draft to an AP Processor. Login as AP Processor and access the Invoice from Tasks Inbox. Add/Select Header/footer details. The required fields error keeps showing at the bottom of the Invoice page. Actual result: The required fields error keeps showing at the bottom of the Invoice page and the data is not being saved at the BE. Expected result: Details should be saved correctly so that Invoice could be processed further. Screen Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2023-11-17T00:18:51.558-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93578",
+        "summary": "PROD PMAN - Budget: On split when deactivated  budget is assigned it stop displaying on the line item modal",
+        "description": "Server stage unit id 10 Steps to Reproduce Login from employee create PR having multiple splits more than 2  Associate same budget on all splits and save line item Now, deactivate the associated budget from admin From employee user open the PR verify on the line item modal there is error message for inactive budget also expired budget is displaying within the budget field Expected Result: System will display expired budget within the budget field with inactive error message on lline item modal Actual Result: System is not displaying the exppired budget within budget field on all splits but only one split is haivng the expired budget name Issue no. 2 On opening saved line item having multiple splits system doesnt dispay the associated budget on all splits Steps to Reproduce: Login from employee create PR having multiple splits more than 2  Associate same budget on all splits and save line item Save the line item modal  Now, again open the line item modal and vierfy all the budgets displaying on the splits Expected Result: System will display all the associated budgets on splits in line item modal Actual Result: System Doesnt display the associated budgets on the line item modal after saving line item",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ghulam Mustafa",
+        "created": "2023-11-10T03:58:06.570-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93415",
+        "summary": "Purchase Request - Sourcing Approver is selected on PR but still system is throwing error related to missing SA selection on PR",
+        "description": "Issue: Purchase Request - Sourcing Approver is selected on PR but still system is throwing error related to missing SA selection on PR Server: Environment: Stage UserName:  notifyvroozi77+NonNBCU@gmail.com  /  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Conditions: \u201cACCOUNTS_PAYABLE_WORKFLOW__ENHANCED_WORKFLOW\u201d feature toggle is enabled Sourcing Rule has been created Step to Reproduce: Login to PMAN as an Employee Create PR (1000000335) on which Sourcing Rule will be applied Select Sourcing Approver on the PR\u2019s header level Try to submit Purchase Request Actual Result: System doesn\u2019t enable Submit button and thorwing error about missing Sourcing Approver selection on PR in the browser\u2019s Network tab Expected Result: If relevant data is selected on document then system should not show any validation about it",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2023-11-04T23:13:35.492-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-93047",
+        "summary": "PMAN: Invoice: System triggers Accounting Validation when the invoice is loaded/refreshed when a document is in Pending status.",
+        "description": "Business Case : When an Invoice is in  Pending  status (waiting for invoice approval), then the system should re-trigger accounting validation when the Pending Invoice is loaded/refreshed. Acceptance Criteria : What is the change?  Re-trigger Accounting string validation when the Pending Invoice is loaded/refreshed. Incorrect accounting strings should be flagged and correct accounting strings should have the error message removed. Which customers should this change impact?  All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true and ACCOUNTING_STRING_VALIDATION = true. What pages should this change impact?  Invoice in  Pending  status. Which users should be impacted by the change?  AP Approvers with  or  without AP Coder  or  Edit AP documents during approval role. How should this change work? Pre-Requisites: Conditions in AC #2 are fulfilled. AP Processor / Manager submits the Invoice for Approval to the AP Approver. If the Accounting information on the invoice becomes invalid after the Invoice has been submitted then - The system re-triggers accounting validation for all  incorrect accounting strings  when the AP Approver accesses the Invoice - for the  first time  or; refreshes  the Invoice page if it was already open  or; if they had  AP Coder  /  Edit AP documents during approval  role and tried to update the accounting information using the calculator / pencil ( this already works seems like )  or; when they click on  Approve  /  Approve and Forward  button . The system discards the accounting string errors pertaining to the ones that are deemed valid. The system continues to display the accounting string errors pertaining to the ones that are still invalid. Currently, in this ticket -  , we are not handling accounting validation on Invoices in Pending status proactively. That's something we need to  extend  to Pending status as well. Reference ticket -   where accounting validation was done for certain Invoice statuses. 6.  Do we need a data fix for existing customers?  No. 7.  Would this change impact existing documents?  No, as this functionality is not available in Production. 8.  To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 Key Decisions: # Decision Point Decision Reasoning Validation Plan \u00a01. Should we allow the AP Approver to approve the Invoice without resolving the accounting string error?",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2023-10-25T14:40:23.494-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-90543",
+        "summary": "PROD - Create Invoice/Memo - Side Panel - Related Docs - Invoice/Memo Table has Supplier Name missing.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  asma.latif+APM@vroozi.com Password:  Redangel1! Pre-Requisites: AP User should have logged into the Application. Invoice should exist already. Steps to Reproduce: Click to Create Memo against the Invoice in Pre conditions. Add details and save. Access the Invoice its side panel>related docs tab. Please see Memo table has Supplier showing N/A. Access the Memo its side panel>related docs tab. Please see Invoice table has Supplier showing N/A. Actual Result: Invoice/Memo table has Supplier should N/A. Expected Result: Invoice/Memo table should show Supplier Name. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2023-08-02T03:57:05.098-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-89427",
+        "summary": "PMAN: Web nodes fail after a limited number of restarts when a user logs in for a company that has enabled Supplier Portal but has no module settings.\n\n\n\n\n ",
+        "description": "Precondition: Company has configured feature toggle SUPPLIER_PORTAL (collection  feature_toggles ) There is no module settings defined for module SUPPLIER_PORTAL (collection  module_settings ) Steps User from given company logs in Actual Result API call to retrieve module settings for module Supplier Portal Fails Additionally, the Node.js server fails ungracefully, which can lead to a complete shutdown of web nodes. Currently, the system allows for 100 restarts after a Node failure per each forever instance (currently there are 4 forever instances per each web node). Expected Result API call will still return 500 However, Node.js server gracefully handles the error, preventing restarts.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2023-06-23T08:31:06.614-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-84915",
+        "summary": "User bulk upload - System pick User Default incorrect If single cost centre is configured against multiple company codes",
+        "description": "Client - Please see attached email. To summarize, we have several users calling in from multiple locations reporting that their default company code and/or default shipping address are loading incorrectly on new purchases. We think it may be only an issue on Catalog purchases but not 100% sure about that. As an example, look at user Mauricio Martinez. His default company is set to C1-031 but on the attached Word doc you can see it is populating as H1-060. Additionally, his default shipping address is loading incorrectly. This is much more serious. With the company code being wrong it is not allowing them to move forward if they don't have access to that company. But with the ship-to wrong and users not aware and being used to this always loading as their default, I am worried this could result in numerous purchases company-wide being shipped to the wrong places causing us not only delays in getting what we need but also to incur significant monetary expenses to correct and re-ship everything where it needs to go ... so we to give this the highest priority and get it resolved as quickly as possible. Support Team: When was this user's profile updated last time ? I don\u2019t believe I have updated it since it was created although I viewed it today. It seems like some changes have been made to users\u2019 profiles maybe through imports or something backend as I see a lot of things have changed I don\u2019t remember changing, specifically associated company codes being populated. Were there any Company Code restrictions added / removed from the user's profile? If yes, then which company code and when was this change made ? No changes that I am aware of, see answer above to  #1 . Which other users are having this issue so that we can compare their profiles and see what is common between them ? Chris Trahan, William Koenig, all users. The Shipping address in Mauricio's default setting and on the PR 1000127600 are the same. Is there an example where the wrong shipping address was selected ? That\u2019s probably because he manually changed it. On new purchases it is defaulting incorrectly. Some users will be astute enough to change it, some will not. Can you provide more PR examples if possible where users are getting the Shipping Address or Company Code issue ? If more issue are reported I will forward. Please consider this issue has URGENT Priority . Development Team: this issue is occurred due to user bulk upload and this is System bug. According to the current implementation,  System get first cost centre from the DB using provided cost centre code in the file, System doesn't check its configured with provided company code or not. this issue only happened if single cost centre is configured against multiple company codes. As you can see in the screenshot, this was implemented in 2015.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2023-02-10T04:57:42.485-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-80108",
+        "summary": "When Restrict PR/PO coding is enabled on buyer user, Buyer user can see Apply to All button as well as using that button can also change accounting info",
+        "description": "URL: https://stage-purchase.vroozi.com Username:  notifyvroozi10@gmail.com Password: Welcome1 PreCondition: Login as Admin, Open any buyer user, Enable restrict PR/PO coding on buyer user and save the buyer user Steps: Login as buyer user discussed in Pre-Condition, Navigate to Create Order and create a PO. Verify there is Apply to All button displaying on the PO as well as Checkbox grid is also coming. Actual Result: Apply to All button is displaying on the PO. Checkboxes are also coming with line items. Clicking on Apply to All button user can also change Accounting info  Expected Results: Apply to All button should not display on PO when user is restricted for PR/PO coding. Checkboxes also stop displaying. User cannot edit or change accounting info when restricted PR/PO coding is enabled",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2022-10-04T05:01:14.419-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-76394",
+        "summary": "Accounts Payable - Recalculate Tax on updating quantity and/or unit price via Item Inline Edit",
+        "description": "Goal As a user creating invoices, I want the tax to automatically recalculate when I inline edit item details, so that I can have accurate tax information without additional steps. Acceptance Criteria: When a user inline edits the price or quantity of an item on the Create Invoice screen, the tax amount for that item should automatically recalculate and display the updated value. A clear notification should be displayed to inform the user that the tax has been recalculated, ensuring visibility of the change. URL: https://purchase.vroozi.com Username:  asma.latif+APM@vroozi.com Password: Redangel1@ PreCondition: User should have logged into Application. Tax Code should be configured as taxable. Tax connector should be OFF. Steps: On Create Invoice Screen. Add an Item with price 100, qty 1 so the tax calculates as 10. Inline Edit item by changing price 200, qty 2. Please see tax is not recalculating. Edit Open the line item. And now change the price 300 , qty 3. Now the tax is recalculating as 30. Actual result: Tax is not recalculating in case of item Inline edit. Desired result: Tax should be recalculated. Show noty to inform user that tax was recalculated Test Data on Prod: 9000006695 Screen-Cast: https://www.screencast.com/t/gY0kXytt   Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2022-04-27T02:05:54.769-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-74102",
+        "summary": "PMAN- Buyer- PO Creation - Payment term data is not appearing in Ascending order",
+        "description": "Username:  khurram.jamil+buyer @vroozi.com Password:  @Welcome1 Step to Reproduce : Login with Buyer user and start creating a PO Now select your supplier Expected Result Payment term data should appear in DESC order. Actual Result Payment term data is appearing without ANY order.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2022-01-24T23:17:35.091-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-72358",
+        "summary": "VWR Punchout L2 catalog | stuck in processing stage (We uploaded file with 940K rows along with custom field)",
+        "description": "Unit Id: 127, CHEM User: Hi Team, We put the VWR punchout level 2 catalog to processing a little less than 5 hours back but the catalog is still showing in the processing stage. I would like to mention that it contains ~940000 items, is it usual fir system to take this much time for that big a catalog to get processed and published. Could you please look into it. Farhan Tariq's feedback - This VWRUSEN-ul_ibuyprod_202110029_without UOM_Punchout L2_29102021-092747.xlsx catalog  is causing issues on prod catalog node and it crashed twice around 3 PM PK time and at 9:40 PM PK time. 2021-10-29 09:27:50.935  INFO 32656 \u2014 [       worker-5] c.v.a.c.p.s.ValidateCatalogProcessStep   : Step validate star ted with: {catalogOrigin=, catalogEvent=IMPORT, catalogTypeId=1, profileIds=[2950, 3012], inputImageFile=, catalogName= VWR US Punchout L2, submittedCatalogId=617c21065542ff7f907955cb, inputFile=/export/gv0/v2-setup/workdir/catalog-upload- files/VWRUSEN-ul_ibuyprod_202110029_without UOM_Punchout L2_29102021-092747.xlsx, catalogId=617c21065542ff7f907955cb, m ethodType=0, run.id=11089, parentCatalogId=617189db5542ff42aa599bb5, submitterId=47216, unitId=127} Steps to Reproduce : 1- Login Smart OCI 2- Open Catalog upload screen (Content Manager > Catalog Management > Create > Catalog) Need to upload file with approx. 1 Million record along with custom fields. 3- Click on \"Create\" Button. 4- In \"working\" column, uploaded catalog will appear. Expected result Status of catalog should change to \"NEW\" *Actual result * Status of catalog become \"ERROR\" Note: - We are not uploading client given file here (size is 128MB).",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2021-11-10T22:45:35.103-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94090",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Accounting Validation 2024: GA Support Release: Bulk Upload",
+      "description": "Vroozi Accounting Validation GA Phase#3 is post MVP phase(refer to  ) where it will become generally available for all the subscribed customers. In this phase, we will cover the following areas: Accounting String Bulk Upload Implement Accounting Validation in Budget Workflow (implemented in   ) For the following point, please refer to the epic    UI CRUD operations for Accounting String master data",
+      "status": "Open",
+      "assignee": "Muhammad Ahmar Nadeem",
+      "created": "2023-12-03T22:51:44.217-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-96277",
+        "summary": "AccVal: Admin: Revert the changes made in VZI-94722.",
+        "description": "Business Case: As an admin, I want to see any Bulk options on the Accounting Strings management screen until the feature is completely developed. Acceptance Criteria: Admin should be able to see any bulk option on the Accounting Strings management screen since the Accounting String Bulk Upload feature is completely developed. Since the Bulk feature is also behind the UI CRUD operation feature toggle, turning it ON should now show the UI CRUD operations button and Bulk Upload icons to the admins. The flag that was used to hide Bulk Upload icons is  accountingStringsBulkFunctionalityVisible.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-02-12T22:47:03.047-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-95191",
+        "summary": "AccVal: On download template and accounting string export file column deleted should be \"delete\"",
+        "description": "Business Case: The  Deleted  column should be relabeled as  Delete  in  Download ,  Export Accounting Strings,  and  Upload  files. Acceptance Criteria: The  Deleted  column name should be relabeled as  Delete  in the following files. Download Export Accounting Strings Upload Here is the updated template",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-15T02:39:59.266-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-95182",
+        "summary": "AccVal: On error report when any accounting info is missing error message says field [id, external id, doc No] should have a value.  ",
+        "description": "Server Stage unit id 10 Steps to Reproduce: Login from admin, Navigate to Master Data > Accounting Strings Upload accounting string file and make sure on file gl account n cost centre columns are empty Once process complete download the error report  Verify error message on the error report Expected Result: The error message on the report will  be related to name of respected  accounting info Actual Result: On error message it says: Field [glAccountRef] cannot be null or empty. At least one of the Field [id, externalId, docNo] should have a value. However on xlsx file we only provide  name of gl account or any other accounting info Concern: It is same for location, cost centre, gl account and company code.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-01-14T23:55:01.732-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-95116",
+        "summary": "AccVal: The system should use Combo Objects to identify uniqueness while updating the accounting string via Bulk Upload.",
+        "description": "Business Case: The system should use the Accounting and Organization objects to check the uniqueness of the Accounting String via Bulk Upload. Acceptance Criteria: The system should determine the uniqueness of the accounting string by checking the unique combination of given accounting and organization objects. If the system finds the given combination in the DB, the system should update the existing accounting string. The validation checks should run as is for the rest of the columns. If the system does not find the given combination in the DB, the system should create a new accounting string. The given accounting and organization obects should be non-deleted and active.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-11T23:17:10.570-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-94976",
+        "summary": "AccVal: Once error report icon is clicked and user download the file system doesn't stop displaying error report icon until there is error report generated",
+        "description": "Server Stage unit id 10 Steps to Reproduce Login from Admin, Navigate to Master Data > Accounting String  Upload file having errors   System will display download error report button Download the error report Now verify system will stop displaying error report icon on accounting string screen Expected Result: System will stop displaying error report once the error file is downloaded Actual Result: System still displays the error report icon however user already downloaded the file",
+        "status": "Awaiting Business Validation",
+        "assignee": "Unassigned",
+        "created": "2024-01-09T04:51:29.264-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-94452",
+        "summary": "AccVal: Admin: Admin can upload the accounting strings in CSV format via bulk upload file",
+        "description": "Business Case: As an admin, I want to be able to upload the accounting strings via bulk upload file in CSV format. So the system can use them for document validation for a file containing more than a million records. Acceptance Criteria: There should be a  Upload Accounting Strings  icon above the top right corner of the accounting string table on the Accounting String screen. ( The following image is just for reference. ) It should depend on a sub-feature toggle for UI CRUD operations(refer to  ). If the feature mentioned above toggle is ON, the user should be able to see the  Upload Accounting Strings  icon. If the feature mentioned above toggle is OFF, the user should not be able to see the  Upload Accounting Strings  icon. Hovering on the icon should show a tooltip saying  Upload Accounting Strings . Clicking on the  Upload Accounting Strings  icon should open a window where users can select and upload the bulk upload file. Upon Selecting the file, the system should validate the bulk upload file to verify all the data is valid. In case of valid data in the bulk upload file, the system should save the accounting strings uploaded via bulk upload in the DB. There should be a green noty message stating that the file has been uploaded successfully. They should start appearing in the accounting string table. If there are errors in the files, the system should generate an error report which the user can download. (refer to the ticket   ). There should a red noty message stating that the file has been failed to upload or there are errors in the file. There is one optional column  DELETE  in the bulk upload file. It is a flag type(true or false). The user can use it to delete the existing record in the system through bulk upload. The user can provide  X or any letter  in the column to mark the  DELETE  flag true. The accounting string with the  DELETE  flag true should be soft-deleted and kept in the DB. The system should keep it in the DB with the  DELETE  flag true if the user marks the  DELETE  flag true for the string that has never existed in the system before.  Please open the  Instructions  of the attached sheet to understand the validations of each field(column) present in the bulk upload file. The column names(fields) should be case-insensitive. The system should support custom labels for accounting and company objects in the bulk upload file as column(field) names.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-12-17T23:00:50.760-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      },
+      {
+        "key": "VZI-94451",
+        "summary": "AccVal: Admin: Admin can download the existing 1 million + accounting strings master data in CSV format",
+        "description": "Business Case: As an admin, I want to download more than 1 million accounting strings in Vroozi master data. Since Excel file has the limitation of not containing records of more than a million, the system should use the CSV format. Acceptance Criteria: There should be an  Export Accounting Strings  icon above the top right corner of the accounting string table on the Accounting String screen. ( The following image is just for reference. ) Hovering on the icon should show a tooltip saying  Export Accounting Strings . It should depend on a sub-feature toggle for UI CRUD operations(refer to  ). If the feature mentioned above toggle is ON, the user should be able to see the  Export Accounting Strings  icon. If the feature mentioned above toggle is OFF, the user should not be able to see the  Export Accounting Strings  icon. Clicking on the  Export Accounting Strings  icon should show an overlay if the accounting strings master data contains more than a million records. There should be an exclamation mark on the overlay. ( For reference, please see the mockup below for download In progress ) Under the exclamation mark, the overlay should state \u201cThe file you're about to download contains a significant amount of data, and it will be delivered in a CSV format. Would you like to proceed with the download?\u201c. Under the text message, there should be two buttons. Continue Clicking on that should continue the export process. Cancel Clicking on that should abort the export process. When the user clicks on the  Continue  button, the system should show the following overlay that should disappear automatically: The In Progress spinner should appear around the  Export Accounting Strings  icon: Once the file is processed, The following overlay should appear that should disappear automatically: The  Export Accounting Strings  icon should turn green:  Clicking on the green  Export Accounting Strings  icon should download the accounting strings file in CSV format. The name of the downloaded file should be  Accounting-Strings-Export-{dateTimeStamp}.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-12-17T22:46:23.862-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94090"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-76095",
+      "released_in_current_rc": false,
+      "summary": "SOC1 Vulnerabilities PMAN & SmartOCI",
+      "description": "",
+      "status": "Open",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2022-04-14T01:47:35.953-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-96027",
+        "summary": "LDAP injection ( smartOCI )",
+        "description": "The  stage_vsd  cookie appears to be vulnerable to LDAP injection attacks. The payloads  7xtginkvjw)(objectClass=*  and  hulq11daqk)(!(objectClass=*)  were each submitted in the stage_vsd cookie. These two requests resulted in different responses, indicating that the input may be being incorporated into a disjunctive LDAP query in an unsafe manner. Fix - If the cookie is compromised a unanimous error should be returned.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-02-01T03:33:50.303-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-76095"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-95649",
+        "summary": "[ng2] Upgrade NavigationSectionService and its dependencies",
+        "description": "Goal Upgrade PurchaseRequestService and its dependencies and write unit tests. Impacted Areas Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) If applicable, move all styles related to this component into local styles file Dev test the changes to make sure component works as before If ng1 components are no longer used, uncomment its usages, specs and styles Update ng2 angular sheet Dev Notes Important:  Try to break the work into multiple PRs so that there are at least one or two PRs each week. The final PR should make the new components to be used in the page, so we don't break anything while continually merging the previous PRs",
+        "status": "Done",
+        "assignee": "majid.akram",
+        "created": "2024-01-24T07:41:07.568-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-95036",
+        "summary": "[ng2] Upgrade PurchaseRequestService and its dependencies",
+        "description": "Goal Upgrade PurchaseRequestService and its dependencies and write unit tests. Impacted Areas Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather rxjs (including the component) If applicable, move all styles related to this component into local styles file Dev test the changes to make sure component works as before If ng1 components are no longer used, uncomment its usages, specs and styles Update ng2 angular sheet Dev Notes Important:  Try to break the work into multiple PRs so that there are at least one or two PRs each week. The final PR should make the new components to be used in the page, so we don't break anything while continually merging the previous PRs",
+        "status": "Done",
+        "assignee": "majid.akram",
+        "created": "2024-01-10T03:11:02.750-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-56209",
+        "summary": "angular-upgrade: Upgrade Image Asset Picker Component",
+        "description": "Goal Fully upgrade component  vzi-image-asset-picker  together with its all child components and services Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather RxJS (including the component) If applicable, move all styles related to this component into local styles file Dev test the changes to make sure component works as before Dev Notes: please make sure to retest all the upgraded usages like in  Supplier Portal \u2192 Settings (Admin)",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ghulam Mustafa",
+        "created": "2020-01-09T23:35:23.541-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94169",
+      "released_in_current_rc": false,
+      "summary": "Catalog API Design and Development - Phase II",
+      "description": "Catalog Delete/Update (CRUD) APIs (with Item) Catalog Upload API with Vroozi standard data model (with Items) Catalog File upload through public API (Max size 10 MB limit)",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-12-05T23:19:15.803-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-95583",
+        "summary": "Vroozi API - Get List of Catalogs with filtering Status and date range with pagination",
+        "description": "As an API user, we need to support filtering on the list of Catalogs API. These filter options should support filter by Status, and date range on the lastUpdatedDate field. status - APPROVED, PUBLISHED lastUpdatedDate - range                                  fromDate -                                    toDate - Technical Details: Add support for the following filtering options on the Catalogs GET API   /catalogs Add filtering by  Status , All Catalog Status can be passed as filters Support single status and multiple status, when providing multiple status, separate them by comma(,) If wrong value is provided in the status, there should be a validation error ignore the comma at the end of the filter e.g APPROVED and APPROVED, should result in same result APPROVED, PUBLISHED should filter all the catalogs in APPROVED and PUBLISHED status, the results are sorted by lastUpdatedDate Added filtering by lastUpdatedDate, when providing the filter by this date, there should be two fields to provide the date range, We already have the field  lastUpdatedAfter  exposed in the API, we need additional  lastUpdatedBefore . When providing the filter options, all the fields are optional. Id dates are provided than the following conditions should be considered only lastUpdatedAfter is provided in the filters, Return all results after this date, if the date is provided in date only format, consider the time of end of the day, e.g 01/29/2024 is provided than filter all records after 01/29/2024 t 00:00:00.000  only lastUpdatedBefore is provided in the filters, Return all results before this date, if the date is provided in date only format, consider the time of start of the day, e.g 01/29/2024 is provided than filter all records after 01/29/2024 t 00:00:00.000 If both the dates are provided than consider the records between provided date ranges. If the date are provided in date only format, consider the following rule (lastUpdateAfter - lastUpdatedBefore). e.g  01/27/2024 t 00:00:00.000 - 01/29/2024 t 00:00:00.000 will filter all the records from the 01/28/2024 If the fields are provided in wrong format, than we need to provide use with validation error, end date cannot be before start date.  the result will be empty, since there is nothing in the provided range e.g selecting (lastUpdateAfter - lastUpdatedBefore). e.g 01/29/2024 t 00:00:00.000 - 01/27/2024 t 23:59:59.999 will return no result as there is nothing in between these dates (One suggestion could be to give a validation error, since this is not a correct date range.) Sort by should be by the last updated date field. Update the Vroozi API documentation to expose these additional query parameters. Dates should be accepted in the supported formats. Testing from Swagger UI and Postman should be performed. Error Messages When we provide the invalid operator  {\n    \"id\": \"5ef39ffa-6185-4564-8340-ee12514b8b64\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"updatedDate\",\n            \"message\": \"Provided operator [gt1] for filtering is invalid.\",\n            \"detail\": \"Provided operator [gt1] for filtering is invalid. Valid operators are: [eq, lt, gte, btw].\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-07T14:05:17.585+0000\"\n} When invalid parameters are provided in filters  {\n    \"id\": \"c7220799-a84c-42d7-81d1-b9c05afb3d70\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"updatedDate\",\n            \"message\": \"Provided date filter format is not supported. Provided value is [updatedDate].\",\n            \"detail\": \"Provided date filter format is not supported. Provided value is [updatedDate]. Please provide the filter in the following formats [btw(start, end), eq(start), gte(start), lt(end)].\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-07T14:13:12.694+0000\"\n} When the date ranges are not in sequence  {\n    \"id\": \"d3427de8-1f50-49ec-95f2-60b5848dcb71\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"lastUpdated\",\n            \"message\": \"Field [startDate] should be before endDate date (2026-12-31T00:00:00.000+0000).\",\n            \"detail\": \"When both startDate and endDate are provided, then startDate (2026-12-31T00:00:00.000+0000) should be before the endDate (2024-12-31T00:00:00.000+0000).\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-08T15:53:00.318+0000\"\n} When the required parameters are missing in the operator  {\n    \"id\": \"3b9357b3-daba-4282-a840-ef99b9399e6f\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"updatedDate\",\n            \"message\": \"Invalid paramters provided. Operator [] supports {1/2} paramters.\",\n            \"detail\": \"Invalid paramters provided. Operator [] supports {1/2} paramters. Please check documentation for supported formats and paramters.\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-07T14:25:32.151+0000\"\n} When the date is not provided in the supported format  {\n    \"id\": \"9afb7edf-b78c-48fd-8703-2f4174322c5a\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"lastUpdated\",\n            \"message\": \"Provided date [2024-12-3133] is not supported.\",\n            \"detail\": \"Provided date [2024-12-3133] is not supported. Please send the date in one of the supported formats [yyyy-MM-dd'T'HH:mm:ss.SSSZ, yyyy-MM-dd'T'HH:mm:ss.SSS, yyyy-MM-dd'T'HH:mm:ss, yyyy-MM-dd, yyyy-MM-dd'T'HH:mm:ssZ].\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-08T15:57:24.314+0000\"\n} When invalid status is provided {\n    \"id\": \"2110bde4-3bc6-4da9-83dc-246cd2ec09a3\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"status\",\n            \"message\": \"Invalid catalog status, Provided value is [ADD].\",\n            \"detail\": \"Invalid catalog status, Provided value is [ADD]. Valid status values are [<status1, status2>]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-02T11:31:45.190+0000\"\n}",
+        "status": "Released",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-01-23T21:57:58.698-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-95193",
+        "summary": "Field \"type\" is not correct on the response payload",
+        "description": "cURL: curl --location 'https://staging-api.vroozi.com/v1/catalogs/content-views-associations/upsert' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization:  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjYjNiOGNiNC1jNDQ5LTQ0N2YtYWQ5OS1iMjI1NzljNmY2MjEiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiZGMxMGFjYmYtZmZmNi00NmFiLWI5ZjMtNmI5MDk0YTc3ZWYxIn0.Ln_5-MyhXH5k7kc5kodjGavbb1xyPHA5Bk7eSt0whNQtHU0-BeJAELjcXarYLkQD04a93qpNKugtjfCtHxSnqA' \\\n--header 'x-api-key:  9vPCZmeKIY3pUXVNBEUD59wHp4r6pKsr87voQj0c' \\\n--header 'association-update-strategy: MERGE' \\\n--data '{\n    \"catalogRef\": {\n        \"docNo\": \"HS Catalog 158\"\n    },\n    \"contentViewRefs\": [\n        {\n            \"id\": \"\",\n            \"externalId\": \"\",\n            \"docNo\": \"HS Content View\",\n            \"type\": \"\",\n            \"label\": \"\",\n            \"archived\": false\n        }\n    ]\n}' Pre-condition: Catalog \u201cHS Catalog 158\u201d and Content View \u201cHS Content View\u201d a;ready created Steps to reproduce: Mapping the content view to the catalog using POST endpoint: https://staging-api.vroozi.com/v1/catalogs/content-views-associations/upsert Actual Result: \u201cProfileModel\u201d is showing in the type field on the response payload Response payload: {\n    \"contentViewRefs\": [\n        {\n            \"id\": \"6532\",\n            \"externalId\": null,\n            \"docNo\": \"HS Content View\",\n            \"label\": \"HS Content View\",\n            \"type\": \"ProfileModel\",\n            \"archived\": false\n        }\n    ],\n    \"catalogRef\": {\n        \"id\": \"65a4dac89f483271b89e18a5\",\n        \"externalId\": \"HS Catalog 158\",\n        \"docNo\": \"HS Catalog 158\",\n        \"label\": \"HS Catalog 158\",\n        \"type\": \"CATALOG_MODEL\",\n        \"archived\": false\n    }\n} Expected Result: \u201ccontentViewModel\u201d should be showing in the type field on the response payload",
+        "status": "Released",
+        "assignee": "Waheed Nawaz",
+        "created": "2024-01-15T03:16:55.191-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-95021",
+        "summary": "Swagger UI Cosmetic UI Issues for Catalog API's",
+        "description": "Environment:  Stage Unit Id:  83 Authorization:  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjYjNiOGNiNC1jNDQ5LTQ0N2YtYWQ5OS1iMjI1NzljNmY2MjEiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiZGMxMGFjYmYtZmZmNi00NmFiLWI5ZjMtNmI5MDk0YTc3ZWYxIn0.Ln_5-MyhXH5k7kc5kodjGavbb1xyPHA5Bk7eSt0whNQtHU0-BeJAELjcXarYLkQD04a93qpNKugtjfCtHxSnqA x-api-key:  9vPCZmeKIY3pUXVNBEUD59wHp4r6pKsr87voQj0c                                                        ISSUE # 01:    Steps to reproduce: Navigate to the Catalog APIs \u2192 POST Catalog APIs Actual Result: Expected Result: Create a new catalog. User must have to provide the required fields in the POST request body for successful creation of a catalog. User must provide the required fields in the POST request body for successful creation of a catalog.<br/> The Response body should have to create a new catalog and return 201 Created. The response body will return the newly created catalog in NEW_PROCESSED status. ISSUE # 02: Steps to reproduce: Navigate to the Catalog APIs \u2192 POST Catalog APIs Actual Result: Expected Result: Catalog created successfully. ISSUE # 03: Steps to reproduce: Navigate to the Catalog APIs \u2192 POST Catalog APIs Actual Result: Expected Result: Forbidden ( The server understood the request but refuses to authorise it .) ISSUE # 04: Steps to reproduce: Navigate to the Catalog APIs \u2192 GET /catalogs/{id} Actual Result: Expected Result: You can either provide system generated Id or user provided externalId. When passing\u00a0 externalId \u00a0as an id in the request url, its required to send the request header\u00a0 useExternalId \u00a0with value of\u00a0 true . ISSUE # 05: Steps to reproduce: Navigate to the Catalog APIs \u2192 GET /catalogs/{id} Actual Result: Expected Result: Catalog successfully returned. ISSUE # 06: Steps to reproduce: Navigate to the Catalog APIs \u2192 GET /catalogs/{id} Actual Result: Expected Result: Forbidden ( The server understood the request but refuses to authorise it .) Provided reference of catalog not found. ISSUE # 07: Steps to reproduce: Navigate to the Catalog APIs \u2192 PUT /catalogs/{id} Actual Result: Expected Result: You can either provide system generated Id or user provided externalId. When passing\u00a0 externalId \u00a0as an id in the request url, its required to send the request header\u00a0 useExternalId \u00a0with value of\u00a0 true . Update request will overwrite the existing data stored in the system. If the request does not contain the specific fields in the payload, those fields will be considered as null. ISSUE # 08: Steps to reproduce: Navigate to the Catalog APIs \u2192 PUT /catalogs/{id} Actual Result: Expected Result: Catalog updated successfully. ISSUE # 09: Steps to reproduce: Navigate to the Catalog APIs \u2192 PUT /catalogs/{id} Actual Result: Expected Result: Forbidden ( The server understood the request but refuses to authorise it .) ISSUE # 10: Steps to reproduce: Navigate to the Catalog APIs \u2192 DELETE /catalogs/{id}  Actual Result: Expected Result: You can either provide system generated Id or user provided externalId. When passing\u00a0 externalId \u00a0as an id in the request url, its required to send the request header\u00a0 useExternalId \u00a0with value of\u00a0 true . Delete request will remove the catalog existing data from system along with disassociating of suppliers with that specific catalog. If the request param do not have id or externalId then it will be consider an invalid request. ISSUE # 11: Steps to reproduce: Navigate to the Catalog APIs \u2192 DELETE /catalogs/{id}  Actual Result: Expected Result: Catalog deleted successfully. ISSUE # 12: Steps to reproduce: Navigate to the Catalog APIs \u2192 DELETE /catalogs/{id}  Actual Result: Expected Result: Forbidden ( The server understood the request but refuses to authorise it .) ISSUE # 13: Steps to reproduce: Navigate to the Catalog APIs \u2192 PUT /catalogs/catalog-name/{name} Actual Result: Expected Result: Catalog updated successfully. ISSUE # 14: Steps to reproduce: Navigate to the Catalog APIs \u2192 PUT /catalogs/catalog-name/{name} Actual Result: Expected Result: Forbidden ( The server understood the request but refuses to authorise it .) ISSUE # 15: Steps to reproduce: Navigate to the Catalog APIs \u2192 DELETE  /catalogs/catalog-name/{name} Actual Result: Expected Result: Catalog deleted successfully. ISSUE # 16: Steps to reproduce: Navigate to the Catalog APIs \u2192 DELETE  /catalogs/catalog-name/{name} Actual Result: Expected Result: Forbidden ( The server understood the request but refuses to authorise it . ISSUE # 17: Steps to reproduce: Navigate to the Catalog APIs \u2192 POST  /catalogs/status-update Actual Result: Expected Result: This is an asynchronous request to perform the specified action. The catalog status will be updated as a result of this action. You must have to provide the required field values in the POST request. ISSUE # 18: Steps to reproduce: Navigate to the Catalog APIs \u2192GET  /catalogs/{id}/items Actual Result: Expected Result: O should be small ISSUE # 19: Steps to reproduce: Navigate to the Catalog APIs \u2192 POST /catalogs/item-upload Actual Result: Expected Result: This is an asynchronous request to perform the specified action. User can upload catalog item in the already created catalog. The supported file extensions are : [.csv, .tsv, .xlsx, .zip, .war] To add catalog items to an existing catalog, use the provided template. The upload process is asynchronous, allowing you to continue other tasks without interruption. Ensure your catalog data is saved in supported formats: [.csv, .tsv, .xlsx, .zip, or .war]. Fill in the template with your item details, and upload the file. You can additionally provide the image file to associate with each item in the file. If you encounter any issues, refer to the documentation or reach out to the system administrator for assistance. ISSUE # 20: Steps to reproduce: Navigate to the Catalog APIs \u2192 POST /catalogs/item-upload Actual Result: Expected Result: Provided file is uploaded successfully. The file will be processed asynchronously.   this is missing in the PR, please update the PR ISSUE # 21: Steps to reproduce: Navigate to the Catalog APIs \u2192 POST /catalogs/item-upload Actual Result: Expected Result: Provided file is upload successfully.   .   this is duplicate of 20?",
+        "status": "Released",
+        "assignee": "Waheed Nawaz",
+        "created": "2024-01-10T00:43:02.435-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94969",
+        "summary": "Vroozi API - Catalog status update API to support additional feedback",
+        "description": "Remove catalogRef from the payload and add end points to support the catalog reference in path variable Paths: POST /catalogs/{catalogId}/status-update?version=2 POST /catalogs/name/{name}/status-update?version=2 Request Payload: {\n  \"payload\": {\n    \"comments\": \"Rejecting catalog\",\n    \"action\": \"APPROVE\",\n    \"submitterRef\": {\n      \"id\": \"561234cdeacb256789aa\",\n      \"externalId\": \"11001\",\n      \"docNo\": \"CC01\",\n      \"type\": \"CostCenterModel\",\n      \"label\": \"Description for label\",\n      \"archived\": false\n    }\n  }\n} Response Payload: The response of the status-update API will be {\n  \"requestId\": \"123-2123\",\n  \"status\": \"Processing\",\n  \"timestamp\": \"2023-03-15T13:56:04.037+0000\"\n} The response of the tracking API will be {\n  \"requestId\": \"b459ab18-4420-4755-af22-ff15e20c432c\",\n  \"path\" : \"status-update\",\n  \"asyncStatus\": \"PROCESSING\",\n  \"comment\" : \"Status update request initiated.\"\n  \"timestamp\": \"2023-03-15T13:56:04.037+0000\",\n  \"errors\":null,\n  \"metadata\" : {\n      \"catalogId\" : \"\",\n      \"version\" : \"2\",\n      \"catalogName\" : \"\",\n      \"externalId\" : \"ext-1\",\n      \"catalogStatus\":\"APPROVED\",\n      \"active\" : true,\n      \"totalItems\":100,\n      \"approvedItems\" : 50,\n      \"pendingItem\" : 50\n  }\n} Error messages: When Version is invalid  {\n    \"id\": \"b459ab18-4420-4745-af22-ff15e20c432c\",\n    \"status\": \"409\",\n    \"title\": \"Conflict\",\n    \"errors\": [\n        {\n            \"code\": \"409\",\n            \"element\": \"externalId/name\",\n            \"message\": \"Field [version] is invalid.\",\n            \"detail\": \"Field [version] is invalid. Provided value: [2]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-17T11:46:33.093+0000\"\n} When Record is not found by the id/externalId/name  {\n    \"id\": \"b459ab18-4420-4745-af22-ff15e20c432c\",\n    \"status\": \"404\",\n    \"title\": \"Not Found\",\n    \"errors\": [\n        {\n            \"code\": \"404\",\n            \"element\": \"id/externalId/name\",\n            \"message\": \"Record [catalog] not found.\",\n            \"detail\": \"Record [catalog] not found. Provided value: [Sudip-01]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-17T11:46:33.093+0000\"\n} When version number is not provided and there are multiple catalogs with name/externalId  {\n    \"id\": \"04d13f51-89d7-48ae-823b-e765b5405c5d\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"version\",\n            \"message\": \"Multiple versions of catalog exist, parameter [version] is required.\",\n            \"detail\": \"Multiple versions of catalog exist, parameter [version] is required. Provided value:[AD-CAT-000000011], please provide the version in the query parameter.\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-17T19:03:42.322+0000\"\n}",
+        "status": "Released",
+        "assignee": "Sahar Ali",
+        "created": "2024-01-09T03:14:52.536-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94927",
+        "summary": "Vroozi API - Catalog Upload Public API to support existing catalog template additional feedback",
+        "description": "Remove catalogRef from the payload and add end points to support the catalog reference in path variable POST /catalogs/{catalogId}/upload?version=2 POST /catalogs/name/{name}/upload?version=2 Return the Async response  {\n  \"requestId\": \"98fea22e-1537-4b6c-b445-eda852132c6f\",\n  \"status\": \"PROCESSING\",\n  \"timestamp\": \"2024-01-25T15:10:11.104+0000\"\n} Response of the tracking API against the requestId {\n  \"requestId\": \"123-2123\",\n  \"request\" : \"status-update\",\n  \"status\": \"Processing\",\n  \"timestamp\": \"2023-03-15T13:56:04.037+0000\",\n  \"errors\":null,\n  \"metadata\" : {\n      \"catalogId\" : \"\",\n      \"version\" : \"2\",\n      \"catalogName\" : \"\",\n      \"externalId\" : \"ext-1\",\n      \"status\":\"APPROVED\",\n      \"active\" : true,\n      \"totalItems\":100,\n      \"approvedItems\" : 50,\n      \"pendingItem\" : 50\n  }\n}",
+        "status": "Released",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-01-08T06:04:28.496-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94871",
+        "summary": "Vroozi API - Additional feedback for Catalog Content View mapping API",
+        "description": "We need to support two end points  add remove for content views to be associated.",
+        "status": "Duplicate",
+        "assignee": "Sahar Ali",
+        "created": "2024-01-07T22:21:28.192-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94860",
+        "summary": "Vroozi API - Add support for Catalog API to store the edit options (Merge/Replace)",
+        "description": "As an API user, we need to support he catalog update options in the Catalogs. Currently we will support two type of edit options. Acceptance Criteria: Catalog POST/PUT API should support  these two New edit options in the Catalog API CatalogUpdateTypeEnum editOption. Supported Values are: MERGE, REPLACE User should be able to store this value in the catalog User will perform any action on the catalog (items upload), it will be based on the stored value in this field. When edit option is stored as MERGE, and user is uploading a new file, this will keep existing items in the catalog, and add new items from the file. Any matching items will be updated from the file. When edit option is stored as REPLACE, and user will perform an action on the file, e.d upload the catalog items than only item provided in the catalog will be present in the catalog. User should get a validation error if the user is providing any other value in the POST/PUT call. {\n    \"id\": \"cf3e7cd5-ac2b-4e1b-8db2-4f8256b9433a\",\n    \"status\": \"422\",\n    \"title\": \"Unprocessable Entity\",\n    \"errors\": [\n        {\n            \"code\": \"422\",\n            \"element\": \"\",\n            \"message\": \"Http message not readable, please check your input data.\",\n            \"detail\": \"JSON parse error: Cannot deserialize value of type `com.vroozi.integration.v1.enums.CatalogUpdateTypeEnum` from String \\\"REPLACEEEEE\\\": value not one of declared Enum instance names: [MERGE, REPLACE]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.vroozi.integration.v1.enums.CatalogUpdateTypeEnum` from String \\\"REPLACEEEEE\\\": value not one of declared Enum instance names: [MERGE, REPLACE]\\n at [Source: (PushbackInputStream); line: 4, column: 19] (through reference chain: com.vroozi.integration.v1.model.CatalogModel[\\\"editOption\\\"])\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-24T10:57:42.398+0000\"\n} For already existing catalogs, when we get the catalog (single catalog or list of catalog) the editOptions field should map the stored value MERGE, REPLACE are supported values in GET APIs, for Catalogs in other status, we get null status. When catalog is updated from MERGE to REPLACE or vice versa and user is performing the action e.g APPROVE on catalog in working column, this will update catalog items based on the editOptions stored in the catalog. Public API documentation Update the documentation to expose the editOption field. Add following details to this field description editOption:\n  type: \"string\"\n  title: Edit option\n  description: Edit option of the catalog.</br>\n  In the context of the catalog API POST/PUT requests, only \"MERGE\" and \"REPLACE\" are accepted as valid values. While there may be additional values stored in existing catalogs, which will be exposed in the GET catalog APIs. It's important to note that these additional values are not supported when creating or updating catalogs through the API.\n  example: \"MERGE\",\n  default: MERGE\n  enum:\n    - MERGE\n    - REPLACE Catalog CRUD operations.",
+        "status": "Released",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-01-05T03:51:18.490-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94858",
+        "summary": "Vroozi API - Add support for Catalog Content views Association additional feedback enhancements",
+        "description": "We need to expose Add and Remove functionality through the new end points. End point for ADD  POST /catalogs/{id/externalId}/content-views POST /catalogs/name/{name}/content-views End point for REMOVE PUT /catalogs/{id/externalId}/content-views/remove PUT /catalogs/name/{name}/content-views/remove Keep the existing Association Endpoint with payload changes (Need to finalize the path) /catalogs/{id}/content-views-associations/upsert /catalogs/{name}/content-views-associations/upsert Payload: {\n  \"contentViewRefs\": [\n    {\n      \"id\": \"561234cdeacb256789aa\",\n      \"externalId\": \"11001\",\n      \"docNo\": \"CC01\",\n      \"type\": \"CostCenterModel\",\n      \"label\": \"Description for label\",\n      \"archived\": false\n    }\n  ]\n} We need to expose the contentViewRefs in the CatalogModel as well. We will only return a generic message in the response if the content views are added or removed. {\n  \"payload\" : {} // Request Payload optional\n  \"message\" : \"Successfuly added/removed the associated content views from the catalog <name>\"\n} Error Message: {\n    \"id\": \"de9713fc-2d09-4f0d-bf70-2637e111f1e6\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"contentViewRefs[0].id\",\n            \"message\": \"Record [Content View] is not associated with the catalog [catalogName].\",\n            \"detail\": \"Record [Content View] is not associated with the catalog [catalogName]. Content view provided value is [233].\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-24T05:57:35.909+0000\"\n}",
+        "status": "Released",
+        "assignee": "Sahar Ali",
+        "created": "2024-01-05T03:12:12.513-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94857",
+        "summary": "Vroozi API - Add support for Catalog Custom fields association with catalog",
+        "description": "As an API user, We need to support custom field association with Catalog. Custom field should already exist in Vroozi. (Custom field CRUD is not in the scope of this ticket). We need to expose these additional end points for Custom Fields association We need to expose Add and Remove functionality through the new end points. End point for ADD  POST /catalogs/{id/externalId}/custom-fields/associate POST /catalogs/name/{name}/custom-fields/associate End point for REMOVE PUT /catalogs/{id/externalId}/custom-fields/remove PUT /catalogs/name/{name}/custom-fields/remove Payload: [\n    {\n      \"id\": \"561234cdeacb256789aa\",\n      \"externalId\": \"11001\",\n      \"docNo\": \"CC01\",\n      \"type\": \"CustomFieldModel\",\n      \"label\": \"Description for custom field\",\n      \"archived\": false\n    }\n] We need to expose the customFieldRefs in the CatalogModel as well. We will only return a generic message in the response if the content views are added or removed. {\n  Catalog will ve Return and verify the custom field associations.\n} Validation Error Messages: When there is no custom field provided in the list  {\n    \"id\": \"204bea0c-3509-4275-a02a-22e4bbe187d1\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"customFieldRefs\",\n            \"message\": \"[customFieldRefs] cannot be null or empty. Please provide one valid reference.\",\n            \"detail\": \"[customFieldRefs] cannot be null or empty. Please provide one valid reference. At least one of the Field [id, externalId, docNo] should have a value.\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-29T08:33:28.156+0000\"\n} If there is invalid reference  {\n    \"id\": \"ac8ad93b-ca3d-4ca0-84b8-1141713d9c1c\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"customFieldRefs[0]\",\n            \"message\": \"[customFieldRefs] is not valid. At least one of the Field [id, externalId, docNo] should have a value.\",\n            \"detail\": \"[customFieldRefs] is not valid. At least one of the Field [id, externalId, docNo] should have a value.\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-29T08:34:07.774+0000\"\n} If the look up is by externalId  {\n    \"id\": \"8f494703-17ba-4a5a-9fca-fc7eb032fb8c\",\n    \"status\": \"501\",\n    \"title\": \"Not Implemented\",\n    \"errors\": [\n        {\n            \"code\": \"501\",\n            \"element\": \"customFieldRefs[0].externalId\",\n            \"message\": \"Field [externalId] is not supported in customFieldRefs\",\n            \"detail\": \"Field [externalId] is not supported in customFieldRefs. Please use id or docNo to perform the lookup.\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-29T08:34:40.270+0000\"\n} If the custom field is not found  {\n    \"id\": \"257d4949-87b3-4526-b726-5ad00b392da4\",\n    \"status\": \"404\",\n    \"title\": \"Not Found\",\n    \"errors\": [\n        {\n            \"code\": \"404\",\n            \"element\": \"customFieldRefs[0].id\",\n            \"message\": \"Record [Custom Field] not found.\",\n            \"detail\": \"Record [Custom Field] not found. Provided value: [690]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-29T08:37:24.115+0000\"\n} If the custom field is in active  {\n    \"id\": \"ea3de235-3d77-4717-bd4a-0bc67de8ea21\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"customFieldRefs[0].id\",\n            \"message\": \"Record [Custom Field] is inactive.\",\n            \"detail\": \"Record [Custom Field] is inactive. Provided value: [69] is inactive.\",\n            \"level\": \"Date Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-29T08:37:57.283+0000\"\n}  When the custom field is not associated with the catalog  {\n    \"id\": \"e682651d-9160-4339-b9ca-71356beeb3a5\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"customFieldRefs[0].id\",\n            \"message\": \"Record [Custom Field] is not associated with the catalog [AD-CUSTOM_FIELDS].\",\n            \"detail\": \"Record [Custom Field] is not associated with the catalog [AD-CUSTOM_FIELDS]. Custom Field provided value is [57].\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-30T07:52:16.364+0000\"\n}",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2024-01-05T03:11:29.632-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      },
+      {
+        "key": "VZI-94814",
+        "summary": "Design and Develop the API to track the progress of the Async Status Update API",
+        "description": "Develop an API to keep track of the Async status update API. When the action is performed e.g catalog moved from working to approved or approved to live column, it might take some time. To track the progress of this action, we need to expose the status api that will return the current status of the catalog. Acceptance Criteria: Update the response of the Action API to return a requestId to the user, that will be used to track of the status of this update request. Expose the GET end point, where requestId return to the user in the action API response GET /catalogs/request-tracking/{requestId} The response of the tracking API will look like {\n  \"requestId\": \"123-2123\",\n  \"path\" : \"status-update\",\n  \"asyncStatus\": \"Processing\",\n  \"dateCreated\": \"2023-03-15T13:56:04.037+0000\",\n  \"lastUpdated\": \"2023-03-15T13:56:04.037+0000\",\n  \"errors\" : [{\n            \"code\": \"400\",\n            \"element\": \"itemTieredPrice\",\n            \"message\" : \"No matching mapping found for this field: [ITEM_TIERED_PRICE]\",\n            \"detail\" : \"Download the error report from this link https://devqa8-admin.vroozi.com/adminui/view-error-report?catId=659fd24f724f391dac56b2d7\",\n            \"level\": \"Data Error\"\n        }\n  ],\n  \"metadata\" : {\n      \"catalogId\" : \"\",\n      \"version\" : \"2\",\n      \"catalogName\" : \"\",\n      \"externalId\" : \"\",\n      \"catalogStatus\" : \"CATALOG status\",\n      \"states\": {\n        \"approvedItems\" : 0,\n        \"pendingItems\" : 10,\n        \"publishedItems\" : 3,\n        \"rejectedItems\" : 0,\n        \"totalItems\" : 0,\n        \"outputRecordsCount\" : 0,\n        \"failedRecordsCount\" : 0,\n        \"inputRecordsCount\" : 0\n     }\n  }\n} If the requestId is not found, give validation error. {\n    \"id\": \"64ce4d74-7b9c-48d2-b356-cdb72ac17a64\",\n    \"status\": \"404\",\n    \"title\": \"Not Found\",\n    \"errors\": [\n        {\n            \"code\": \"404\",\n            \"element\": \"requestId\",\n            \"message\": \"Field [requestId] not found.\",\n            \"detail\": \"Field [requestId] not found. Provided value: [53b80316-221b9-4f0b-a30f-d26ee79aed5b]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-01-16T08:48:32.395+0000\"\n}  Update the public API documentation to include this API and its description. Use the following details summary: Get async request progress tracking By Request Id\ndescription: >\n  Async request tracking By Request Id<br/>\ntags:\n  - Catalogs\nproduces:\n  - 'application/json'\nparameters:\n  - name: 'requestId'\n    in: 'path'\n    required: true\n    type: 'string'\nresponses:\n  200:\n    description: Async request.\n    schema:\n      $ref: '#/definitions/AsyncRequestModel'\n  401:\n    description: Authorization failed.\n    schema:\n      $ref: '#/definitions/GenericErrorModel'\n  403:\n    description: Invalid action.\n    schema:\n      $ref: '#/definitions/GenericErrorModel'\n  404:\n    description: Async Request is not found.\n    schema:\n      $ref: '#/definitions/ErrorDataModel'\n  500:\n    description: Something went wrong. Actual error message will be available in the response body\n    schema:\n      $ref: '#/definitions/ErrorDataModel'\nsecurity:\n  - ${aws.apigateway.authorizer.name}: [ ]\n  - api_key: [ ]\nx-amazon-apigateway-request-validator: 'Validate query string parameters and headers'\nx-amazon-apigateway-integration:\n  responses:\n    default:\n      statusCode: '200'\n  requestParameters:\n    $ref: '../../common/get-by-request-id-param-mapping.yml'\n  uri: 'http://${stageVariables.catalogNodeServerHost}/catalog/api/integration/v1/catalogs/request-tracking/{requestId}'\n  passthroughBehavior: 'when_no_match'\n  connectionType: 'VPC_LINK'\n  connectionId: '${aws.apigateway.vpc.link.id}'\n  httpMethod: 'GET'\n  type: 'http_proxy' type: \"object\"\ntitle: Async Request tracking Response.\ndescription: >\n  A representation of tracking progress of async requests.\n\nproperties:\n  id:\n    type: \"string\"\n    title: ID\n    description: >\n      System generated unique identifier for this object (Read only).\n    default: \"<generated>\"\n    example: \"5a3bd758e61c824a33ded63a\"\n  requestId:\n    type: \"string\"\n    title: Request Id\n    description: System generated id to uniquely identify catalog status update request\n    example: \"123-2123\"\n  path:\n    type: \"string\"\n    title: Path of the async API related to this tracking request\n    description: Path of the async API related to this tracking request.\n    example: \"status-update\"\n  asyncStatus:\n    type: \"string\"\n    title: Status\n    description: Status of Async Request\n    example: \"IN_PROGRESS\"\n    enum:\n      - IN_PROGRESS\n      - ERROR\n      - COMPLETED\n  metadata:\n    $ref: './metadata.yml'\n  errors:\n    type: \"array\"\n    items:\n      $ref: '../common/error-model.yml'\n  dateCreated:\n    type: \"string\"\n    title: Date Created\n    description: >\n      Creation date of the object (Read only). <br/>\n      Date will be output in format: yyyy-MM-dd'T'HH:mm:ss.SSSZ\n    format: \"date-time\"\n    example: \"2023-03-15T13:56:04.037+0000\"\n  lastUpdated:\n    type: \"string\"\n    title: Last Updated\n    description: >\n      Last updated date of the object (Read only). <br/>\n      Date will be output in format: yyyy-MM-dd'T'HH:mm:ss.SSSZ\n    format: \"date-time\"\n    example: \"2023-04-05T13:56:04.037+0000\"\n type: \"object\"\ntitle: Catalog Item States\ndescription:  A representation of Catalog item states\n\nproperties:\n  approvedItemsCount:\n    type: \"integer\"\n    title: Approved Items Count\n    description: Number of items which are approved by the approver (Read only).\n    example: 100\n  rejectedItemsCount:\n    type: \"integer\"\n    title: Rejected Items Count\n    description: Number of items which are rejected by the approver (Read only).\n    example: 10\n  pendingItemsCount:\n    type: \"integer\"\n    title: Pending Items Count\n    description: Number of items which are pending approval (Read only).\n    example: 237\n  totalItems:\n    type: \"integer\"\n    title: Total number of item's in the catalog\n    description: Total number of item in the catalog (Read only).\n    example: 505\n  publishedItemsCount:\n    type: \"integer\"\n    title: Published Items Count\n    description: Number of items which are published (Read only).\n    example: 505\n  inputRecordsCount:\n    type: \"integer\"\n    title: Input Records Count\n    description: Number of records parsed from uploaded request payload (Read only).\n    example: 850\n  outputRecordsCount:\n    type: \"integer\"\n    title: Output Records Count\n    description: Number of records successfully saved in database (Read only).\n    example: 200\n  failedRecordsCount:\n    type: \"integer\"\n    title: Failed Records Count\n    description: Number of records that couldn\u2019t be saved (Read only).\n    example: 55 type: \"object\"\ntitle: Metadata\ndescription: A representation of Catalog metadata\n\nproperties:\n  catalogId:\n    type: \"string\"\n    title: ID\n    description: >\n      System generated unique identifier for this object (Read only).\n    default: \"<generated>\"\n    example: \"5a3bd758e61c824a33ded63a\"\n  externalId:\n    type: \"string\"\n    title: External ID\n    description: >\n      Unique identifier for this object in external system. Should be provided during Creation/Update.\n    example: \"C-100\"\n  catalogName:\n    type: \"string\"\n    title: Catalog Name\n    description: Catalog's name.\n    example: \"Summer'18 Catalog\"\n  version:\n    type: \"integer\"\n    title: Version number\n    description: Version number of the catalog (Read only).\n    example: 2\n  active:\n    type: \"boolean\"\n    description: This flag indicates whether or not this catalog is available for use. Active true means its available, otherwise not.<br/>This field is _*read only*_.\n    example: true\n  states:\n    $ref: './catalog-item-states.yml'\n  catalogStatus:\n    type: \"string\"\n    title: Catalog Status\n    description: Catalog's status.<br/>This field is _*read only*_.\n    example: \"PUBLISHED\"\n    enum:\n      - NEW\n      - UPDATED\n      - REJECTED\n      - ERROR_REJECTING\n      - APPROVED\n      - ERROR_APPROVING\n      - PUBLISHED\n      - ERROR_PUBLISHING\n      - UNPUBLISHED\n      - ERROR_UNPUBLISHING\n      - DISAPPROVED\n      - ERROR_DISAPPROVING",
+        "status": "Released",
+        "assignee": "Sahar Ali",
+        "created": "2024-01-03T22:35:31.436-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94169"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94941",
+      "released_in_current_rc": false,
+      "summary": "Update BOM logic to pick the correct accounting/organization objects",
+      "description": "Currently, the system does not check the given accounting/organization objects paring with the Company Code and all other objects while uploading the BOM file. Due to this, the system picks up the wrong objects from the database, which will eventually cause the accounting validation failure. In this epic, we will enable the system to pick the correct accounting/organization objects from the DB while uploading line items from the BOM file",
+      "status": "Open",
+      "assignee": "Muhammad Ahmar Nadeem",
+      "created": "2024-01-08T22:38:07.876-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-95227",
+        "summary": "QA: Run the BOM scenarios for organization and accounting objects being used by HEB ",
+        "description": "Team, This is a high-priority task. Run the BOM scenarios for organization and accounting objects being used by HEB. Distcate Via Company Code  toggle is ON for HEB. HEB is using the following six objects: Company Code Purchasing Org Plant Cost Center(Product Code) GL Location Here is the attached sheet for Organization Objects.    The scenario sheet link for Accounting Objects will be posted here ASAP. A separate task will be created for all the remaining objects that are not being used by HEB, with both  Distcate Via Company Code  ON and OFF.",
+        "status": "Done",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-15T22:38:19.312-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-94941"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-88331",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Accounting Validation 2023: GA Support Release: UI CRUD Operations",
+      "description": "Vroozi Accounting Validation Phase#2 is post MVP phase(refer to  ) where it will become generally available for all the subscribed customers. In this phase, we will cover the following areas: UI CRUD operations for Accounting String master dat",
+      "status": "Open",
+      "assignee": "Muhammad Ahmar Nadeem",
+      "created": "2023-05-22T21:50:36.922-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-94880",
+        "summary": "AccVal: Admin: Admin cannot activate the accounting string that contains inactive accounting objects.",
+        "description": "Business Case: As an admin, I cannot activate an accounting string that contains the inactive accounting or organization object. Acceptance Criteria: The accounting string was deactivated due to having an inactive accounting/organization object in it. The admin should not be able to reactivate it. Accounting Strings Table: When an admin selects such accounting string(s) and clicks the  Activate  button, the system should show a red NOTY message. The message should be \u201cThe accounting strings(s) which contain inactive/deleted  ( Updated on    )accounting/organization objects cannot be activated.\u201c. The message should be a slider. It should disappear after 3 seconds. When an admin selects multiple accounting strings that contain accounting string(s) having inactivated accounting objects and clicks the  Activate  button, the system should show a red NOTY message. The message should be \u201cThe accounting strings(s) which contain inactive/deleted accounting/organization objects cannot be activated.\u201d. ( Updated on    ) The message should be a slider. It should disappear after 3 seconds. Accounting String Modal: When the admin accesses the Accounting String modal of a deactivated string( due to inactive accounting/organization objects ), the  Status  field should become read-only with an  Inactive  value.  There should be a message beneath the  Status  field. The message should be \u201cThis accounting string contains inactive/deleted accounting/organization objects that cannot be activated.\u201c. ( Updated on    ) The message should disappear once the user changes the inactive/deleted accounting/organization object(s). The  Status  field should be enabled again.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-07T23:16:33.802-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-88331"
+      },
+      {
+        "key": "VZI-94842",
+        "summary": "AccVal: Admin: Admin can Activate/Deactivate accounting strings from the Edit Accounting String modal.",
+        "description": "Business Case: As an admin, I want to activate/deactivate the accounting strings from the Edit Accounting String modal as needed. Acceptance Criteria: There should be a new drop-down field on the Edit Accounting String modal. The drop-down field name should be \u2018 Status \u2019. This field should be in the General Information section. This field should be beneath the  Valid To  field. The default selected value should be  Active . The other value should be  Inactive , which the user should be able to select in certain use cases. Duration is not given: If the duration( Valid From, Valid To ) is not given, the user should be able to select the status of the accounting string as needed. Duration is given but Within the Range: If the duration( Valid From, Valid To ) is given, and the current date falls into that, the user should be able to select the status of the accounting string as needed. Duration is given but Out of Range: If the duration( Valid From, Valid To ) is given, and the current date does not fall into that( duration should be in the past dates or the future ), the user should not be able to select the status of the accounting string. The  Status  field should become read-only. The system should automatically compute the status as  Inactive  based on the given duration. The Status field should display the selected value  Inactive . There should be a text message beneath the  Status  field. The message should be \u201c*The status cannot be changed as the current date does not fall in the given duration*.\u201c Such accounting strings should be activated via the CRON job( existing implementation ). Once the accounting string is activated via the CRON job, the user can manually change the status of the accounting string until the current date falls into the duration( existing implementation ). Please refer to the following sheet for the logic table:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-04T22:50:10.766-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-88331"
+      },
+      {
+        "key": "VZI-94839",
+        "summary": "AccVal: Admin: Admin can Activate/Deactivate accounting strings from the Create Accounting String modal.",
+        "description": "Business Case: As an admin, I want to activate/deactivate the accounting strings from the Create Accounting String modal as needed. Acceptance Criteria: There should be a new drop-down field on the Create Accounting String modal. The drop-down field name should be \u2018 Status\u2019. This field should be in the General Information section. This field should be beneath the  Valid To  field. The default selected value should be  Active . The other value should be  Inactive , which the user should be able to select in certain use cases. Duration is not given: If the duration( Valid From, Valid To ) is not given, the user should be able to select the status of the accounting string as needed. Duration is given but Within the Range: If the duration( Valid From, Valid To ) is given, and the current date falls into that, the user should be able to select the status of the accounting string as needed. Duration is given but Out of Range: If the duration( Valid From, Valid To ) is given, and the current date does not fall into that( duration should be in the past dates or the future ), the user should not be able to select the status of the accounting string. The  Status  field should become read-only. The system should automatically compute the status as  Inactive  based on the given duration. The Status field should display the selected value  Inactive . There should be a text message beneath the  Status  field. The message should be \u201c The status cannot be changed as the current date does not fall in the given duration .\u201c Such accounting strings should be activated via the CRON job( existing implementation ). Once the accounting string is activated via the CRON job, the user can manually change the status of the accounting string until the current date falls into the duration( existing implementation ). Please3 refer to the following sheet for the logic table:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-01-04T22:15:43.612-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-88331"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-95056",
+      "released_in_current_rc": false,
+      "summary": "RC-2024-2 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2024-01-10T09:10:30.901-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-94808",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "Done",
+        "assignee": "Jimena Pose",
+        "created": "2024-01-03T20:35:42.898-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-95056"
+      },
+      {
+        "key": "VZI-94807",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Aqsa Rani",
+        "created": "2024-01-03T20:35:42.067-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-95056"
+      },
+      {
+        "key": "VZI-94806",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "Impacted Areas of Payables RC Functionalities Impacted Area 1 Impacted Area 2 Impacted Areas of Other Teams RC Functionalities Purchase Team Impacted Area 1 Impacted Area 2 Integration Team Impacted Area 1 Impacted Area 2 Budget Team Impacted Area 1 Impacted Area 2",
+        "status": "Abandoned",
+        "assignee": "Asma Latif",
+        "created": "2024-01-03T20:35:42.054-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-95056"
+      },
+      {
+        "key": "VZI-94805",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-01-03T20:35:41.975-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-95056"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94450",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Accounting Validation 2024: GA Support Release:Accounting Validation in PR Budget Workflow",
+      "description": "Vroozi Accounting Validation GA Phase#4 is post MVP phase(refer to  ) where it will become generally available for all the subscribed customers. In this phase, we will cover the following areas: Accounting Validation in Budget Workflow",
+      "status": "Open",
+      "assignee": "Muhammad Ahmar Nadeem",
+      "created": "2023-12-17T22:41:18.370-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-92631",
+        "summary": "AccVal: Purchase: The system should run the validation at CR load in Budget Workflow.",
+        "description": "Business Case: The system should run the accounting string validations at CR load if an invalid accounting string(s) already exists in the document. Acceptance Criteria: The system should run the accounting string validations when the user accesses(loads) the CR having invalid accounting string(s) associated with its line item(s) in the Budget workflow. The CR can be accessed through all the possible avenues in the system. The user refreshes the document. The user should be able to take action on the document(i.e. Budget Approvers) If a user doesn\u2019t act on CR when it is in Budget Workflow, the system should not run the accounting validation on the document load. (e.g. requester accesses the CR in budget workflow) The following scenarios have already been handled in the ticket   : Admin (in  Draft  and  Rejected  state) Requester (in  Draft  and  Rejected  state) Sourcing Approver (in  Sourcing Review  state) Financial Approver (in  Financial Review  state) The validation should be run for the following: Every Line item of the CR has an invalid accounting string. Every split of each line item of the CR has an invalid accounting string. The system should run the validation according to the logic defined in  . The system should display an overlay when the system opens the CR document. The overlay should grey out(silkscreen) the CR screen in the background. The silkscreen should block the user from performing any action in the application.  There should be an In Progress icon on the overlay( not the exclamation icon as shown in. the mockup ) The main text should be  Accounting Validation(s) in progress . The sub-text should be  This may take few seconds. The following highlighted points in red are not required. Clicking  Cancel Button should: (In this scenario, the Cancel button is not required. It should not be visible) Disappear the Overlay. Abort the validation process. The user should be able to work on the CR document. The system should show the  Accounting Validation in Progress  overlay with a silkscreen on the CR document if the user navigates away from the CR document during the accounting validation due to any reason and comes back to the CR document while the accounting validation is still in progress.  Once the accounting validation process is complete: If the system finds all the accounting strings valid: The text on the overlay should be updated. There should be a green tick icon on the overlay( not the exclamation icon as shown in the mockup ) The main text should be  Accounting Validation(s) completed . After 3 seconds, the overlay should disappear( The standard noty interval ). The user should be able to perform their activities on the CR document. If the system finds any accounting string associated with the line items invalid during the validation process, then after the validation process completion: The text on the overlay should be updated. There should be an exclamation icon on the overlay The main text should be  Accounting Validation(s) completed . The sub-text should be  One or more accounting strings are invalid. Clicking the  Close  Button should disappear the overlay. The user should be able to work on the CR document. The  Submit  button should be disabled. The Submit button should be enabled once the user updates the accounting combinations on the line items that were invalidated by the system. Account String Warning Messages: In case invalid accounting strings are identified, the system should show the accounting string warning message(s) as already implemented in   for the CR document.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-10-09T20:37:05.227-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94450"
+      },
+      {
+        "key": "VZI-92630",
+        "summary": "AccVal: Purchase: The system should run the validation at PR load in Budget Workflow.",
+        "description": "Business Case: The system should run the accounting string validations at PR load if an invalid accounting string(s) already exists in the document. Acceptance Criteria: The system should run the accounting string validations when the user accesses(loads) the PR having invalid accounting string(s) associated with its line item(s) in the Budget workflow. The PR can be accessed through all the possible avenues in the system. The user refreshes the document. The user should be able to take action on the document(i.e. Budget Approvers) If a user doesn\u2019t act on PR when it is in Budget Workflow, the system should not run the accounting validation on the document load. (e.g. requester accesses the PR in budget workflow) The following scenarios have already been handled in the ticket   : Admin (in  Draft  and  Rejected  state) Requester (in  Draft  and  Rejected  state) Sourcing Approver (in  Sourcing Review  state) Financial Approver (in  Financial Review  state) The validation should be run for the following: Every Line item of the PR has an invalid accounting string. Every split of each line item of the PR has an invalid accounting string associated with it. The system should run the validation according to the logic defined in  . The system should display an overlay when the system opens the PR document. The overlay should grey out(silkscreen) the PR screen in the background. The silkscreen should block the user from performing any action in the application.  There should be an In Progress icon on the overlay( not the exclamation icon as shown in. the mockup ) The main text should be  Accounting Validation(s) in progress . The sub-text should be  This may take few seconds. The following highlighted points in red are not required. Clicking  Cancel Button should: (In this scenario, the Cancel button is not required. It should not be visible) Disappear the Overlay. Abort the validation process. The user should be able to work on the PR document. The system should show the  Accounting Validation in Progress  overlay with a silkscreen on the PR document if the user navigates away from the PR document during the accounting validation due to any reason and comes back to the PR document while the accounting validation is still in progress.  Once the accounting validation process is complete: If the system finds all the accounting strings valid: The text on the overlay should be updated. There should be a green tick icon on the overlay( not the exclamation icon as shown in the mockup ) The main text should be  Accounting Validation(s) completed . After 3 seconds, the overlay should disappear( The standard noty interval ). The user should be able to perform their activities on the PR document. If the system finds any accounting string associated with the line items invalid during the validation process, then after the validation process completion: The text on the overlay should be updated. There should be an exclamation icon on the overlay The main text should be  Accounting Validation(s) completed . The sub-text should be  One or more accounting strings are invalid. Clicking the  Close  Button should disappear the overlay. The user should be able to work on the PR document. The  Submit  button should be disabled. The Submit button should be enabled once the user updates the accounting combinations on the line items that were invalidated by the system. Account String Warning Messages: In case invalid accounting strings are identified, the system should show the accounting string warning message(s) as already implemented in   for the PR document.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-10-09T20:32:09.746-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94450"
+      },
+      {
+        "key": "VZI-90834",
+        "summary": "AccVal: Purchase: The budget approver should be able to see the error message and highlighted line items on the CR that were invalidated by the accounting validation process.",
+        "description": "Business Case: As a Budget approver, I want to see the error message and red highlighted line item that the system marked erroneous due to invalid associated accounting strings. Acceptance Criteria: After the closing of the Accounting Validation overlay stating that there are invalid accounting strings associated(refer to  ): The system should show the error message above the CR line item grid. There should be a separate error message for each invalid accounting string. The following is the pattern of the error message that should be followed: Accounting String Error - Line Item #\u2026  \u2192 Display all line items containing that Accounting String The following Accounting String has been deactivated  \u2192 Error Code 02 The following Accounting String has been deleted  \u2192 No error code exists yet The following Accounting String is not valid (does not exist)  \u2192 Error Code 01 Company Code = <Code> - <Description> Plant Code = <Code> - <Description> Cost Center / WBS Element / Internal Order = <Code> - <Description> GL Account = <Code> - <Description> \u2026 (display the rest of the elements in the same orderasf the line items in separate lines) The message should read \u201cAccounting String Error - Line item # (comma separated).\u201c. After the message should tell the user why the selected accounting string combination of the mentioned line items was marked invalid. Either the string was deactivated. Or the string does not exist in Vroozi Master Data. Then the message should display the associated accounting combination with the mentioned line items in the strings Please review the following mockup: After these errors, if any other error appears due to adding a new line item or editing the existing line item, those errors will be visible under the accounting string errors.  Below AC highlighted in red is not required at this time.  2023-07-24   The system should highlight the line items which have invalid accounting strings associated with them. ERROR MESSAGE ABOVE THE LINE ITEM GRID: There should be a red error message above the line item grid of the CR if the system determines that there are invalid accounting strings associated with the line items of the CR. The error message should be  There are invalid accounting string(s) associated with one or more line items. Please review the red highlighted line item(s). The red error message should appear when: The financial approver closes the Accounting Validation overlay mentioning the invalid accounting strings associated with the line items. When the financial approver moves away from the CR when the validation process is in progress and navigates back to the CR document after the validation process has been completed and invalid accountings were found. This red error message should disappear once the financial approver resolves(if they have the editing rights) all the accounting validation errors. The red error message should appear for the financial approver in both Edit and Read Only modes. This red error message should be visible to all users who can take action in that particular state of the CR document. The error message should appear to the Financial approvers in Staircase as well. ERRONEOUS LINE ITEM HIGHLIGHT: All the line items having accounting validation errors should be highlighted in red. The erroneous line items should have the info icon next to the line item description. The exclamation icon color should be red. Hovering on the exclamation icon should show a tooltip message. The message should be  Invalid accounting string(s) is associated with this line item. The red highlight and exclamation icon should appear when: The financial approver closes the Accounting Validation overlay mentioning the invalid accounting strings associated with the line items. When the financial approver moves away from the CR when the validation process is in progress and navigates back to the CR document after the validation process has been completed and invalid accountings were found. This red highlight and exclamation icon should disappear once the financial approver (if they have the editing rights)updates the accounting combination on the line item that was invalidated by the system. The red highlight and exclamation icon should appear in both Edit and Read Only modes for the sourcing approver. This red highlight and exclamation icon should be visible to all users who can take action in that particular state of the CR document.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-08-14T23:05:53.538-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94450"
+      },
+      {
+        "key": "VZI-90833",
+        "summary": "AccVal: Purchase: The budget approver should be able to see the error message and highlighted line items on the PR which were invalidated by the accounting validation process.",
+        "description": "Business Case: As a Budget approver, I want to see the error message and red highlighted line item that the system marked erroneous due to invalid associated accounting strings. Acceptance Criteria: After the closing of the Accounting Validation overlay stating that there are invalid accounting strings associated(refer to  ): The system should show the error message above the PR line item grid. There should be a separate error message for each invalid accounting string. The following is the pattern of the error message that should be followed: Accounting String Error - Line Item #\u2026  \u2192 Display all line items containing that Accounting String The following Accounting String has been deactivated  \u2192 Error Code 02 The following Accounting String has been deleted  \u2192 No error code exists yet The following Accounting String is not valid (does not exist)  \u2192 Error Code 01 Company Code = <Code> - <Description> Plant Code = <Code> - <Description> Cost Center / WBS Element / Internal Order = <Code> - <Description> GL Account = <Code> - <Description> \u2026 (display the rest of the elements in the same orderasf the line items in separate lines) The message should read \u201cAccounting String Error - Line item # (comma separated).\u201c. After the message should tell the user why the selected accounting string combination of the mentioned line items was marked invalid. Either the string was deactivated. Or the string does not exist in Vroozi Master Data. Then the message should display the associated accounting combination with the mentioned line items in the strings Please review the following mockup: After these errors, if any other error appears due to adding a new line item or editing the existing line item, those errors will be visible under the accounting string errors.  Below AC highlighted in red is not required at this time.  2023-07-24   The system should highlight the line items which have invalid accounting strings associated with them. ERROR MESSAGE ABOVE THE LINE ITEM GRID: There should be a red error message above the line item grid of the PR if the system determines that there are invalid accounting strings associated with the line items of the PR. The error message should be  There are invalid accounting string(s) associated with one or more line items. Please review the red highlighted line item(s). The red error message should appear when: The financial approver closes the Accounting Validation overlay mentioning the invalid accounting strings associated with the line items. When the financial approver moves away from the PR when the validation process is in progress and navigates back to the PR document after the validation process has been completed and invalid accountings were found. This red error message should disappear once the financial approver resolves(if they have the editing rights) all the accounting validation errors. The red error message should appear for the financial approver in both Edit and Read Only modes. This red error message should be visible to all users who can take action in that particular state of the PR document. The error message should appear to the Financial approvers in Staircase as well. ERRONEOUS LINE ITEM HIGHLIGHT: All the line items having accounting validation errors should be highlighted in red. The erroneous line items should have the info icon next to the line item description. The exclamation icon color should be red. Hovering on the exclamation icon should show a tooltip message. The message should be  Invalid accounting string(s) is associated with this line item. The red highlight and exclamation icon should appear when: The financial approver closes the Accounting Validation overlay mentioning the invalid accounting strings associated with the line items. When the financial approver moves away from the PR when the validation process is in progress and navigates back to the PR document after the validation process has been completed and invalid accountings were found. This red highlight and exclamation icon should disappear once the financial approver (if they have the editing rights)updates the accounting combination on the line item that was invalidated by the system. The red highlight and exclamation icon should appear in both Edit and Read Only modes for the sourcing approver. This red highlight and exclamation icon should be visible to all users who can take action in that particular state of the PR document.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-08-14T23:03:52.379-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94450"
+      },
+      {
+        "key": "VZI-90832",
+        "summary": "AccVal: Purchase: The system should run the validation at CR Budget approval.",
+        "description": "Business Case: The system should run the accounting string validations at CR Budget approval. Acceptance Criteria: The system should run the accounting string validations when the budget approver approves the CR. The validation should be run for the following: Every Line item of the CR Every split of each line item of the CR The system should run the validation according to the logic defined in  . The system should display an overlay when the budget approver clicks the CR  Approve  button. The overlay should grey out(silkscreen) the CR screen in the background. The silkscreen should block the user from performing any action in the application. There should be an In Progress icon on the overlay( not the exclamation icon as shown in. the mockup ) The main text should be  Accounting Validation(s) in progress . The sub-text should be  This may take few seconds. Clicking the  Cancel  Button should: Disappear the Overlay. Abort the validation process. The user should be able to work on the CR document. The system should show the  Accounting Validation in Progress  overlay with a silkscreen on the CR document if the budget approver navigates away from the PR document during the accounting validation due to any reason and returns to the CR document while the accounting validation is still in progress.  The system should show the  Accounting Validation in Progress  overlay with a silkscreen on the CR document if other budget approvers associated with the PR open it during the validation process.  Once the accounting validation process is complete: If the system finds all the accounting strings valid: The text on the overlay should be updated. There should be a green tick icon on the overlay( not the exclamation icon as shown in the mockup ) The main text should be  Accounting Validation(s) completed . After 3 seconds, the overlay should disappear. The CR should be approved successfully and moved into the next state. The user should be navigated to the  Approve Request  page( existing functionality ) If the system finds any accounting string associated with the line items invalid during the validation process, then after the validation process completion: The text on the overlay should be updated. There should be an exclamation icon on the overlay The main text should be  Accounting Validation(s) completed . The sub-text should be  One or more accounting strings are invalid. Clicking the  Close  Button should disappear the overlay. The user should be able to work on the CR document. The  Approve  Button should be disabled for the budget approver. The budget approver should only be able to reject the CR. The system should send the CR back to the requester upon rejection. The requester should be able to see the red error message above the line item grid and highlighted line items having invalid accounting strings. The requester should be able to edit the line items on the Rejected CR( Existing implementation ). Please note that the existing budget functionality should not impact by this accounting validation that is: The system should reject the complete PR if one of the budget approvers rejects the CR. The system should save approval if one of the budget approvers approves the CR while the system is waiting for the other budget approvals. The system should show a slider message that the CR has already been rejected if one of the budget approvers has rejected the PR already when other budget approvers are also reviewing the same CR and also rejecting it.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-08-14T22:57:22.126-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94450"
+      },
+      {
+        "key": "VZI-88554",
+        "summary": "AccVal: Purchase: The system should run the validation at PR Budget approval.",
+        "description": "Business Case: The system should run the accounting string validations at PR Budget approval. Acceptance Criteria: The system should run the accounting string validations when the budget approver approves the PR. The validation should be run for the following: Every Line item of the PR Every split of each line item of the PR The system should run the validation according to the logic defined in  . The system should display an overlay when the budget approver clicks the PR  Approve  button. The overlay should grey out(silkscreen) the PR screen in the background. The silkscreen should block the user from performing any action in the application. There should be an In Progress icon on the overlay( not the exclamation icon as shown in. the mockup ) The main text should be  Accounting Validation(s) in progress . The sub-text should be  This may take few seconds. Clicking  Cancel  Buttton should: Disappear the Overlay. Abort the validation process. The user should be able to work on the PR document. The system should show the  Accounting Validation in Progress  overlay with a silkscreen on the PR document if the budget approver navigates away from the PR document during the accounting validation due to any reason and comes back to the PR document while the accounting validation is still in progress.  The system should show the  Accounting Validation in Progress  overlay with a silkscreen on the PR document if other budget approvers associated with the PR open it during the validation process.  Once the accounting validation process is complete: If the system finds all the accounting strings valid: The text on the overlay should be updated. There should be a green tick icon on the overlay( not the exclamation icon as shown in the mockup ) The main text should be  Accounting Validation(s) completed . After 3 seconds, the overlay should disappear. The PR should be approved successfully and moved into the next state. The user should be navigated to the  Approve Request  page( existing functionality ) If the system finds any accounting string associated with the line items invalid during the validation process, then after the validation process completion: The text on the overlay should be updated. There should be an exclamation icon on the overlay The main text should be  Accounting Validation(s) completed . The sub-text should be  One or more accounting strings are invalid. Clicking the  Close  Button should disappear the overlay. The user should be able to work on the PR document. The  Approve  Button should be disabled for the budget approver. The budget approver should only be able to reject the PR. The system should send the PR back to the requester upon rejection. The requester should be able to see the red error message above the line item grid and highlighted line items having invalid accounting strings. The requester should be able to edit the line items on the Rejected PR( Existing implementation ). Please note that the existing budget functionality should not impact by this accounting validation that is: The system should reject the complete PR if one of the budget approvers rejects the PR. The system should save approval if one of the budget approvers approves the PR while the system is waiting for the other budget approvals. The system should show a slider message that the PR has already been rejected if one of the budget approvers has rejected the PR already when other budget approvers are also reviewing the same PR and also rejecting it.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2023-05-29T22:07:54.067-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-94450"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94164",
+      "released_in_current_rc": false,
+      "summary": "API Legacy Issues -> RC-2024-2",
+      "description": "",
+      "status": "Released",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-12-05T22:54:22.870-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-91036",
+        "summary": "externalId is not working in Swagger UI against Invoice Delete Endpoint.",
+        "description": "Vroozi API:    Go to Invoice Delete Endpoint by using useExternalId:    Actual Result: Its not working with externalId Expected Result: it should work with external id from swagger UI.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Waheed Nawaz",
+        "created": "2023-08-21T02:57:28.764-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94164"
+      }
+    ]
+  }
+]

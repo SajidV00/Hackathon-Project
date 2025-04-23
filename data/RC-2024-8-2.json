@@ -1,0 +1,697 @@
+[
+  {
+    "epic": {
+      "key": "VZI-99317",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Security Enhancements - API Access Control Phase I",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T17:33:45.988-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103887",
+        "summary": "VROOZI API - Revert the Cache and pre-authorization of public APIs",
+        "description": "Description: We have observed varying behaviour of API authoriser cache in Stage and dev environments. Also this cache is not aligned with the individual API permissions. Acceptance Criteria: Revert Cache at the AWS API authoriser Revert the code to check API key association with AWS stage in the lambda function. Verify the existing keys are working fine with the apply to all and specific permissions. Verify the flows with feature toggle ON/OFF.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Adnan",
+        "created": "2024-10-02T01:24:39.240-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-99317"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-100960",
+      "released_in_current_rc": false,
+      "summary": "Add a new reporting dashboard for Modern Niagara's project maangers",
+      "description": "",
+      "status": "Open",
+      "assignee": "Naufil Aziz",
+      "created": "2024-07-02T02:02:37.082-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103819",
+        "summary": "Vroozi API: Add reporting dashboard permissions",
+        "description": "Business Case: As an API user, I should be able to create user records with permission to access the new project manager dashboard. Acceptance Criteria: POST/PUT/UPSERT APIs: The following user APIs should be updated to accept new permissions Create a new user Upsert a user Update User by ID The new permissions should allow the user being created, and, or updated to access different looker dashboards. The system should accept the following dashboard access permissions if the  REPORTING_LOOKER  feature toggle is enabled for the unitID.  Administrator  ( The dev team should decide the proper enum. ) AP Manager  ( The dev team should decide the proper enum. ) The system should throw the  200 OK  in the API response in case of successful acceptance. The newly created or updated user should be able to access the dashboard, based on the given permission(s). The newly created or updated user should be able to see the  Administrator  or  AP Manager  option in the  Dashboards  menu of the left accordion menu. The system should not accept the dashboard permissions mentioned above if the  REPORTING_LOOKER  feature toggle is disabled for the unitID.  The system should throw the  400 Bad Request ( The   dev team to recommend if there is any more suitable error code ) in the API response the system should follow the existing pattern of displaying the error: Code =  400 Bad Request Element = parameterName Message = The requested permission is not available. ( Potential message ) Details = API Framework error message The system should accept the following  Project Manager  ( The dev team should decide the proper enum. ) dashboard access permissions if the  PURCHASE_PROJECT_MANAGER_DASHBOARD  feature toggle is enabled for the unitID.  ( please refer to the ticket   ) The  PURCHASE_PROJECT_MANAGER_DASHBOARD  should only be enabled if the  REPORTING_LOOKER  feature toggle is enabled for the unitID. The system should throw the  200 OK  in the API response in case of successful acceptance. The newly created or updated user should be able to access the dashboard, based on the given permission(s). The newly created or updated user should be able to see the  Project Manager  option in the  Dashboards  menu of the left accordion menu.  (please refer to the ticket  ) The system should not accept the dashboard permissions mentioned above if the   PURCHASE_PROJECT_MANAGER_DASHBOARD  and, or  REPORTING_LOOKER  feature toggle is disabled for the unitID.  The system should throw the  400 Bad Request ( The   dev team to recommend if there is any more suitable error code ) in the API response The system should follow the existing pattern of displaying the error: Code =  400 Bad Request Element = parameterName Message = The requested permission is not available. ( Potential message ) Details = API Framework error message User Permission Restrictions: The Dashboard permissions should not be assigned to a user in addition to the SDM permission If Dashboard permissions are specified along with the SDM permission(s) in the create/upsert/update user API payload, the system should throw  400 Bad Request ( The   dev team to recommend if there is any more suitable error code ) in the API response The system should follow the existing pattern of displaying the error: Code =  400 Bad Request Element = parameterName Message = The requested permission is not available. ( Potential message ) Details = API Framework error message If admin permission is specified in the create/upsert/update user API payload, the system should auto-assign the dashboard permissions to the newly created/updated user, and save it in the DB. Only the  Administrator  and  AP Manager  permissions should be auto-assigned if the  REPORTING_LOOKER  feature toggle is enabled. The  Administrator ,  AP Manager,  and  Project Manager  permissions should be auto-assigned if the  REPORTING_LOOKER  and  PURCHASE_PROJECT_MANAGER_DASHBOARD  feature toggles both are enabled. GET APIs: The following user APIs should be updated to get the new permissions for the user from the DB Get User by ID/External ID Get the list of users The API response should return all permissions, including new ones, if assigned to the fetched user(s). Documentation: All the new permissions should be mentioned in the documentation of the following APIs: Create a new user Upsert a user Update User by ID The details should be mentioned in the list of potential values of the new parameter  dashboard types . ( please refer to the following image ) ( updated on  ) There should be an additional note in this section under the potential permissions. ( added on  ) The note should read  For the ADMINISTRATOR role,  all available dashboard types will be auto-assigned even if they are not specified in the payload.  ( added on  ) , we need to add it in RC-2024-7.1.0 as well.  Technical Details: We will be introducing a new field in the API payload dashboardTypes: [\"ADMIN_DASHBOARD\", \"AP_MANAGER_DASHBOARD\", \"PM_DASHBOARD\"] Please this information about these dashboards in the confluence and documentation. supported enum values are listed in the above sample. \"ADMIN_DASHBOARD\", \"AP_MANAGER_DASHBOARD\", \"PM_DASHBOARD\" \ntitle: Dashboard Types\nexample: ADMIN_DASHBOARD\nThe dashboard visible to this user\n\nEnum:\n\n[ ADMIN_DASHBOARD, AP_MANAGER_DASHBOARD, PM_DASHBOARD ] Q&A:",
+        "status": "Release Candidate",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-09-30T22:44:13.454-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100960"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-98086",
+      "summary": "SmartCoding: Integrate updated models into application flow",
+      "description": "",
+      "status": "Released",
+      "assignee": "Sambhu Sai",
+      "created": "2024-04-01T12:30:40.756-0700",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-103441",
+        "summary": "Create script to enable new feature toggles for all existing customer",
+        "description": "Add unitId to new feature toggle INTELLIGENCE__SMART_CODING for all existing customer with feature toggle ML__ACCOUNT_INFERENCE and remove those unitId from this old feature toggle. For all these unitId, update company_settings collection such that if vrooziIntelligenceEnabled is true, vrooziIntelligenceEnabled should be false, and smartCodingEnabled flag in IntelligenceSettings in AccountsPayable configuration should be true.",
+        "status": "Done",
+        "assignee": "Muhammad Asad Saleem",
+        "created": "2024-09-19T11:38:25.364-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-103314",
+        "summary": "Stage: UoM field is mapped as ML/SC prediction in staging, while its mapping as an OCR prediction in Devqa15 which is giving Null pointer exception for invoice",
+        "description": "Env: Stage Account:  notifyvroozi@gmail.com  | Welcome1 Scenario: PO/Non-PO based Scenario Steps to reproduce Create an invoice with old feature toggle ML Run the data migration Turn on the new feature toggle SC Open the invoice again from track invoices Expected Result Invoice opened with same predictions Actual Result 500 Internal Server error and the invoice didn\u2019t opened Analysis:  UoM field is considered as an OCR field in DEVQA15, while in the staging it is considered as an ML/SC field. This type mismatch sends null for this field in new inference collection i.e.  invoice_fields_inferences  and hence the invoice does not open DEVQA15 UoM field behaviour: Stage UoM field behaviour In stage UoM is showing as OCR prediction under vroozi intelligence section. But in detailed view it is visible as ML/SC prediction",
+        "status": "Release Approved",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-09-16T05:10:00.562-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-103214",
+        "summary": "Stage - Location Type field is not updating the label as expected",
+        "description": "Env: Stage Account:  notifyvroozi@gmail.com  | Welcome1 Invoice attached   Scenario: Non-PO based Scenario Steps to reproduce Send an invoice to stage@invoice.vroozi.com Login to the application on staging using the given credentials Go to Account Payables \u2192 Inbox Create the invoice from the inbox On the invoice page scroll down to line items and click on i icon for any item  You will see no Location code in Intelligence sections Edit that item and add a Company code and save the item Now again click on the i icon, this time Location Type will be present Click on the bulb icon for Location type intelligence and select the highest intelligence with 97.79% Now again click on the i icon for the same item and update the Location type to N/A 1.77 This time the %age will change to 1.77 but the Label will stay as Sam LT 100 which should not be the case Loom:",
+        "status": "Release Candidate",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-09-12T01:55:19.290-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-103090",
+        "summary": "Add support for passing additional fields to model endpoints",
+        "description": "New fields to be mapped: Invoice collection  \u2192  Model Endpoint userId  \u2192  invoice.userId   requesterUserRefs[0].idRef  \u2192  invoice.requesterUserId   items.category  \u2192  invoice.itemCategory   purchaseOrderId != null   \u2192  invoice.isPOBased  (Value should be \u201cTrue\u201d or \u201cFalse\u201d)",
+        "status": "Release Candidate",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-09-09T15:48:54.099-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-102844",
+        "summary": "Labels are not appearing as expected after data migration for 3 fields",
+        "description": "Env: DevQA15 Account: AP Processor/Manager Config: Smart Coding Enabled | Machine Learning Disabled Invoice type: PO/Non-PO based invoices *Steps to reproduce* Machine Learning Enabled | Smart Coding Disabled Send an invoice to the AP Open the Invoice and observe the fields predictions for Location Type, Location, Class on line item level Machine Learning Disabled | Smart Coding Enabled Open the same invoice again and observe the line item predictions for the 3 mentioned field Expected Result Labels on the prediction are the same Actual Result There is a slight difference between Pre and Post labels. Issue is the same for all line items",
+        "status": "Release Candidate",
+        "assignee": "Muhammad Asad Saleem",
+        "created": "2024-09-01T23:50:34.962-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-102482",
+        "summary": "Smart Coding Intelligence/predictions are not working for PO Based invoices",
+        "description": "*Environment*: Devqa15 *Browser*: Chrome *Steps to reproduce* Create a PR \u2192 PO from an Employee account Create a Good Receipt for the PO Copy the PO Number and add it to a PDF invoice for reference Create an invoice with the same items in it as per the PO Create a unique invoice number as well Submit the PDG invoice via email to  devqa15@invoice.vroozi.com \u00a0 Once received in the accounts Payable account inbox, Click on create invoice Observe the invoice created on the right side *Expected result* Each line item have i icon predictions which shows 2 type of prediction sets (ML predictions and Smart Coding) Editing each line item shows ML predictions both in General information section and Accounting Section *Actual Result* No Predictions visible at item level *Video*:",
+        "status": "Resolved",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-08-20T23:20:38.563-0700",
+        "issue_type": "Defect",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-102162",
+        "summary": "Fix new model confidence level between 0 - 1",
+        "description": "",
+        "status": "Done",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-09T13:59:17.629-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-98086"
+      },
+      {
+        "key": "VZI-95755",
+        "summary": "SmartCoding: Update purchase-api layer services to consume new model endpoints for invoice flow",
+        "description": "Acceptance Criteria: A new Feature Toggle named INTELLIGENCE__SMART_CODING  should be introduced to enable this new model endpoints integration into invoicing flow. If this feature toggle is ON, a new settings should appear in the Vroozi Intelligence section in Accounts Payable > Settings > Preferences section in admin panel. Admin user should be able to turn ON/OFF this flag. Enable smart coding on invoice line items (ON/OFF flag) If this new feature toggle is configured and the settings is ON, then the new Model endpoints should be used when invoice coding prediction flow is executed. All existing scenario should be supported using the new integration. DB to Model Input Mappings: INVOICE_COLLECTION: {\n      \"_id\": \"Inv.id\",\n      \"unitId\": \"Inv.unitId\",\n      \"invoiceNumber\": \"Inv.invoiceNumber\",\n      \"supplierUniqueId\": \"Inv.supplierUniqueId\",\n      \"supplierName\": \"Inv.supplierName\",\n      \"purchaseOrderId\": \"Inv.purchaseOrderId\",\n      \"userId\": \"Inv.userId\",\n      \"updatedDate\": \"Inv.updatedDate\",\n      \"items._id\": \"Inv.itemId\",\n      \"items.purchaseRequestId\": \"Inv.purchaseRequestId\",\n      \"items.lineItem.requisitionItemNumber\": \"Inv.prItemNumber\",\n      \"items.description\": \"Inv.itemDescription\",\n      \"items.lineItem.partNo\": \"Inv.itemPartNo\",\n      \"items.lineItemType\": \"Inv.itemType\",\n      \"items.unitOfMeasure\": \"Inv.itemUoM\",\n      \"items.quantity\": \"Inv.itemQuantity\",\n      \"items.amount\": \"Inv.itemAmount\",\n      \"items.shippingAddress.street\": \"Inv.shipStreet1\",\n      \"items.shippingAddress.street2\": \"Inv.shipStreet2\",\n      \"items.shippingAddress.city\": \"Inv.shipCity\",\n      \"items.shippingAddress.state\": \"Inv.shipState\",\n      \"items.shippingAddress.postalCode\": \"Inv.shipPostalCode\",\n      \"items.shippingAddress.country\": \"Inv.shipCountry\",\n      \"items.splitAccountAssignment\": \"Inv.multiAccountAssignmentType\",\n      \"items.taxCode\": f\"Inv.{TAX_CODE_COLLECTION}.id\",\n      \"items.companyCodeRef.idRef\": f\"Inv.{COMPANY_CODE_COLLECTION}.id\",\n      \"items.plantCodeId\": f\"Inv.{PLANT_CODE_COLLECTION}.id\",\n      \"items.accountInfo.accountCategoryTypeSelected\": f\"Inv.{ACCOUNT_CATEGORY}.type\",\n      \"items.accountInfo.accountCategoryValue\": f\"Inv.{ACCOUNT_CATEGORY}.id\",\n      \"items.accountInfo.glCode\": f\"Inv.{GL_ACCOUNT_COLLECTION}.id\",\n      \"items.accountInfo.classRef._id\": f\"Inv.{CLASS_COLLECTION}.id\",\n      \"items.accountInfo.projectRef._id\": f\"Inv.{PROJECT_COLLECTION}.id\",\n      \"items.accountInfo.locationTypeRef._id\": f\"Inv.{LOCATION_TYPE_COLLECTION}.id\",\n      \"items.accountInfo.locationRef._id\": f\"Inv.{LOCATION_COLLECTION}.id\",\n      \"items.accountInfo.customerReference\": f\"Inv.{CUSTOMER_REF_COLLECTION}.id\"\n  },\n  OCR_AP_DOCUMENT_COLLECTION: {\n      \"_id\": \"Ocr.id\",\n      \"unitId\": \"Ocr.unitId\",\n      \"ocrDocumentId\": \"Ocr.documentId\",\n      \"invoiceNumber\": \"Ocr.invoiceNumber\",\n      \"supplierName\": \"Ocr.supplierName\",\n      \"supplierPhoneNumber\": \"Ocr.supplierPhoneNumber\",\n      \"supplierAddress\": \"Ocr.supplierAddress\",\n      \"paymentTerms\": \"Ocr.paymentTerms\",\n      \"subTotal\": \"Ocr.subTotal\",\n      \"taxAmount\": \"Ocr.taxAmount\",\n      \"currency\": \"Ocr.currency\",\n      \"totalAmount\": \"Ocr.totalAmount\",\n      \"documentType\": \"Ocr.documentType\",\n      \"unformattedTotalAmount\": \"Ocr.rawTotalAmount\",\n      \"accountNumber\": \"Ocr.accountNumber\",\n      \"billToName\": \"Ocr.billToName\",\n      \"billToAddress\": \"Ocr.billToAddress\",\n      \"category\": \"Ocr.category\",\n      \"documentReferenceNumber\": \"Ocr.documentRefNumber\",\n      \"documentTitle\": \"Ocr.documentTitle\",\n      \"totalWeight\": \"Ocr.totalWeight\",\n      \"supplierCategory\": \"Ocr.supplierCategory\",\n      \"supplierType\": \"Ocr.supplierType\",\n      \"shipToName\": \"Ocr.shipToName\",\n      \"shipToAddress\": \"Ocr.shipToAddress\",\n      \"items.description\": \"Ocr.itemDescription\",\n      \"items.quantity\": \"Ocr.itemQuantity\",\n      \"items.subtotal\": \"Ocr.itemSubTotal\",\n      \"items.type\": \"Ocr.itemType\"\n  },\n  INCOMING_DOCUMENT_METADATA_COLLECTION: {\n      \"_id\": \"Meta.id\",\n      \"unitId\": \"Meta.unitId\",\n      \"ocrInvoiceId\": \"Meta.ocrInvoiceId\",\n      \"documentId\": \"Meta.invoiceId\",\n      \"emailSubject\": \"Meta.emailSubject\",\n      \"sentBy\": \"Meta.sentBy\",\n      \"receivedBy\": \"Meta.receivedBy\"\n  } Get Model Metadata for Input/Output fields. GET http://devqa15-internal.vroozi.com:8080/purchaseapi/api/smart-coding/model-metadata {\n    \"data\": {\n        \"inputFields\": [\n            \"accountingInfo.accountCategory.type\",\n            \"accountingInfo.accountCategory.value\",\n            \"accountingInfo.classCode\",\n            \"accountingInfo.companyCode\",\n            \"accountingInfo.customerCode\",\n            \"accountingInfo.glAccountCode\",\n            \"accountingInfo.projectCode\",\n            \"accountingInfo.locationCode\",\n            \"accountingInfo.locationTypeCode\",\n            \"accountingInfo.plantCode\",\n            \"accountingInfo.taxCode\",\n            \"invoice.itemAmount\",\n            \"invoice.itemDescription\",\n            \"invoice.itemPartNo\",\n            \"invoice.itemQuantity\",\n            \"invoice.itemType\",\n            \"invoice.itemUoM\",\n            \"invoice.shipCity\",\n            \"invoice.shipCountry\",\n            \"invoice.shipPostalCode\",\n            \"invoice.shipState\",\n            \"invoice.shipStreet1\",\n            \"invoice.shipStreet2\",\n            \"invoice.supplierName\",\n            \"invoice.supplierUniqueId\"\n        ],\n        \"outputFields\": [\n            \"company_codes\",\n            \"plant_codes\",\n            \"account_category\",\n            \"gl_accounts\",\n            \"classes\",\n            \"projects\",\n            \"customer_accounting_elements\",\n            \"location_types\",\n            \"locations\",\n            \"tax_codes\"\n        ]\n    },\n    \"errors\": [],\n    \"warnings\": [],\n    \"paginate\": null,\n    \"meta\": null,\n    \"dataItems\": null,\n    \"timeInIsoFormat\": \"2024-08-12T20:11:06.219336158Z\",\n    \"success\": true\n} Test Scenarios:  Note all these scenarios should be tested with both feature toggles - old ( ML__ACCOUNT_INFERENCE ) and new ( INTELLIGENCE__SMART_CODING ) When creating invoice by sending Non PO based Invoice PDF via email to  devqa15@invoice.vroozi.com , the invoice created should have all the top accounting object from model applied to each line item that was part of the PDF.  Note : Multiple PDF should be used for testing where some invoice should contain supplier that exists in Vroozi supplier record, whereas other might have some supplier that doesn\u2019t exists in Vroozi. All below condition should be covered individual for all above scenarios. With Enable Invoice auto processing for OCR Documents > ON & Auto consolidate line items > OFF With Enable Invoice auto processing for OCR Documents > OFF & Auto consolidate line items > OFF With Enable Invoice auto processing for OCR Documents > OFF & Auto consolidate line items > ON With Enable Invoice auto processing for OCR Documents > ON & Auto consolidate line items > ON When creating invoice by sending PO based Invoice PDF ( make sure PO number used in PDF exists in Vroozi in Ordered or Received status ) via email to  devqa15@invoice.vroozi.com , the invoice created should have model prediction shown in the information section, but shouldn\u2019t be applied to Invoice document, but instead the invoice document should retain the accounting details from PO itself. All below condition should be covered individual for all above scenarios. With Enable Invoice auto processing for OCR Documents > ON & Auto consolidate line items > OFF With Enable Invoice auto processing for OCR Documents > OFF & Auto consolidate line items > OFF With Enable Invoice auto processing for OCR Documents > OFF & Auto consolidate line items > ON With Enable Invoice auto processing for OCR Documents > ON & Auto consolidate line items > ON When manually consolidating items for OCR based PO/Non-PO based Invoices, the top prediction from model should be applied automatically to consolidated single item in the UI. When manually resetting the consolidated items for OCR based PO/Non-PO based Invoices, the accounting objects should be reset back to original one. When adding new item or updating existing item of the invoice where one of the field ( from  inputFields  section from metadata endpoints is changed in the UI ), the model endpoint should be called again for new prediction and if there are new prediction, they should be shown in the information section, but shouldn\u2019t be updated directly on the invoice.",
+        "status": "Released",
+        "assignee": "Sambhu Sai",
+        "created": "2024-01-25T15:16:22.500-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-98086"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-103159",
+        "summary": "Vroozi API Docs Purchase request Number endpoint is not Updated.",
+        "description": "URL:    Actual Result: Please update this endpoint woth all the new changes with details    Expected Result: it should be updated with new request body and responses.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-09-11T00:15:48.731-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103052",
+        "summary": "Gateway-api: SQS: Remove the SQS source from the gateway-api. ",
+        "description": "Base URL:  http://stage-web-internal.vroozi.com:8080/gateway/api/health-check Open the Postman Hit the base url of gateway-api \u201c http://stage-web-internal.vroozi.com:8080/gateway/api/health-check \u201c SQS data source is showing as unavailable  Actual Result: SQS data source is showing in the response of gateway api Expected Result: SQS data source should be removed from gateway response because SQS is now used through CXML api. {\n    \"serviceName\": \"GATEWAY\",\n    \"healthy\": false,\n    \"dataSources\": [\n        {\n            \"name\": \"SQS\",\n            \"url\": \"staging-vroozi-cxml-invoice-incoming-queue\",\n            \"status\": \"UNAVAILABLE\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"PARTNER\",\n            \"url\": \"http://stage-service-internal.vroozi.com:9598/partner/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"NOTIFICATION\",\n            \"url\": \"http://stage-service-internal.vroozi.com:8080/notificationapi/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"AUTHENTICATION\",\n            \"url\": \"http://stage-service-internal.vroozi.com:8080/authenticationapi/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"CONNECTORS\",\n            \"url\": \"http://stage-service-internal.vroozi.com:9595/connectorapi/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"CXML\",\n            \"url\": \"http://stage-service-internal.vroozi.com:9090/cxml-api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"USER_DATA\",\n            \"url\": \"http://stage-service-internal.vroozi.com:8080/userDataService/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"OCR\",\n            \"url\": \"http://stage-service-internal.vroozi.com:9600/ocrapi/api//health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"PURCHASE\",\n            \"url\": \"http://stage-service-internal.vroozi.com:8080/purchaseapi/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        }\n    ]\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-09-09T00:41:47.504-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102805",
+        "summary": "SmartOCI: Allow Vroozi to accept fractional values for the order quantity of an item being added to the shopping cart, from an external punchout catalog",
+        "description": "Business Case: We\u2019ve come across suppliers that have punchout catalogs, where users can order fractional quantities of items, and bring them back to smartOCI. However, when the item is added to the user\u2019s shopping cart in Vroozi, we drop the fractional part of the order quantity. E.g. a 10.55 coming in from the vendor\u2019s website, changes to 10 in the Vroozi shopping cart. We need to enable the Vroozi shopping cart to accept fractional values coming in from punchout catalogs, for order quantities.  Acceptance Criteria: Prerequisite(s): The unitID should already include an active, published punchout catalog that allows items to be ordered in fractional amounts.  If the punchout catalog returns a fractional value upto 3 decimal places for an item\u2019s order quantity. The Vroozi shopping cart should accept that value as it is.  If the punchout catalog returns a fractional value using more than 3 decimal places for an item\u2019s order quantity. The Vroozi shopping cart should round the value up/down to 3 decimal places.  This value; once saved in the Vroozi shopping cart, should be transferable to the PR as is.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-08-29T22:53:11.725-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102779",
+        "summary": "PMAN- Submit button remains enabled, if user add supplier notes while doing POCR and then revert the changes",
+        "description": "Server:  stage Credentials:  javaid.sattar+emp1@vroozi.com  / Welcome1@ Pre-req: Shipping charges should be marked as Optional from document settings. PR should be created Steps to reproduce: Login with above credentials search your PO Initiate POCR Add supplier notes and increase quantity that trigger sourcing rule.  Select sourcing approver Submit button is enabled now Now revert the change you made in step 4 Submit button is still enabled Click on the Submit button Actual: User is able to submit CR without making any changes. Expected:   Submit button should become disable, if changes are reverted",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-08-29T12:10:08.909-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102770",
+        "summary": "DEVQA19 - PMAN -Master Data - Users - Access Section - Company Codes are not saving against User with APM Role.",
+        "description": "url:  https://devqa19-go.vroozi.com/#/login username:  notifyvroozi@gmail.com password:  Welcome1 Pre Conditions: ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS  = ON in DB>Vroozi>Feature Toggles Collection. ADMIN user should have logged into the Application. Steps to Reproduce: Access Master Data \u2192 Users. Click to Create a New user button. Add details and select only APM role. Company Codes field shows under Access Section. Select one or more Company Codes and Save. Edit open the same user created. Please see Company Codes field is empty. Actual Result: Company Code/s should be saved successfully. Expected Result: Company Code/s are not saving against APM User role. Screen-Cast: Note:  the save works if the APM user is also assigned AP Processor role. Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Jimena Pose",
+        "created": "2024-08-29T04:51:19.232-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102703",
+        "summary": "PMAN:  Allow Vroozi to accept fractional values for the order quantity of an item being added to the shopping cart, from an external punchout catalog",
+        "description": "Business Case: We\u2019ve come across suppliers that have punchout catalogs, where users can order fractional quantities of items, and bring them back to PMAN. However, when the item is added to the user\u2019s shopping cart in Vroozi, we drop the fractional part of the order quantity. E.g. a 10.55 coming in from the vendor\u2019s website, changes to 10 in the Vroozi shopping cart. We need to enable the Vroozi shopping cart to accept fractional values coming in from punchout catalogs, for order quantities.  Acceptance Criteria: Prerequisite(s): The unitID should already include an active, published punchout catalog that allows items to be ordered in fractional amounts.  If the punchout catalog returns a fractional value upto 3 decimal places for an item\u2019s order quantity. The Vroozi shopping cart should accept that value as it is.  If the punchout catalog returns a fractional value using more than 3 decimal places for an item\u2019s order quantity. The Vroozi shopping cart should round the value up/down to 3 decimal places.  This value; once saved in the Vroozi shopping cart, should be transferable to the PR as is.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-08-28T00:28:20.036-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102685",
+        "summary": "NBCU Supplier API integration issues",
+        "description": "Fix the supplier API issues.",
+        "status": "Release Candidate",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-08-27T04:29:50.381-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102540",
+        "summary": "Devqa5 - Payment Request - Line Item grid - Few Columns showing twice ",
+        "description": "url:  https://devqa5-go.vroozi.com/#/login username:  aqsa.rani+reqbuyer+devqa5@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login through given user  Click on payment request button  Add line item to payment request save line item Please see that few columns in line item grid are repeating Actual Result: Columns are repeating Expected Result: Columns should not repeat Screenshot:",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2024-08-22T04:43:09.769-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102535",
+        "summary": "User: When searching for data by using typeahead in the GL Account field within the \u2018Access\u2019 section of the User modal, the system only displays 10 records",
+        "description": "Issue: User: When searching for data by using typeahead in the GL Account field within the \u2018Access\u2019 section of the User modal, the system only displays 10 records Credentials: Server URL:  stage-go.vroozi.com Username:  notifyvroozi77+NonNBCU@gmail.com Password: @Welcome1 Unit_Id: 77 Pre-Conditions: 1. Multiple unique Company Codes have been created (e.g., 15) 2. Duplicate GL Accounts (e.g., 15) have been created against the above Company Codes Steps to Replicate: 1. Log in to PMAN as an Admin user 2. Create or update any Employee role user 3. Select all the above Company Codes (15 in total) in the \u2018Access\u2019 section 4. Instead of selecting associated GL Accounts from the default dropdown in the GL Account field, use the typeahead feature to search for the GL Account value 5. Select all GL Accounts using the typeahead feature Actual Result: The system shows only 10 records when searching using the typeahead feature Expected Result: The system should list all matching records when using the typeahead feature",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-08-22T03:04:52.318-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102443",
+        "summary": "STAGE - Apply to All - Issues with Split by Percentage ",
+        "description": "Suggestion : url:   https://stage-go.vroozi.com/#/login username:  aqsa.rani+processor@vroozi.com password:  Qwerty@1 Steps to Reproduce: Add line items to an Invoice and open Apply to All modal Open a preset named  Percentage  or split by percentage manually in changes to be applied tab  e.g. Invoice#   9000030633 Please see that percentage sign (%) is not showing in the percentage field Actual result: Percentage sign (%) is not showing with the value in the percentage field Expected Result: Percentage sign (%) should show with the value in the percentage field Screenshot: Issue url:   https://stage-go.vroozi.com/#/login username:   asma.latif+APM@vroozi.com password:  Blueangel1@ / Blueangel1! Steps to Reproduce: Add line items to an Invoice and open Apply to All modal Add split by percentage in Changes to be Applied tab  Add values in mandatory fields Add value in the percentage field and add (%) sign in percentage field (like (0.5%) e.g. Invoice # 9000030626 Click \u201cApply changes\u201d button  Actual Result: Failure occurs and exception shows in console  Expected Result: Changes should be saved successfully Screenshot: Note: Issue #2 results in freezing Apply to All on PR docs",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-08-19T23:36:21.101-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102268",
+        "summary": "Vroozi API - Invalidate API gateway Authorizer Cache when refresh or delete the API credentials.",
+        "description": "We need to invalidate authorizer API gateway cache when the user refreshes or deletes an existing API credentials.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-15T00:00:24.547-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102209",
+        "summary": "REQUIRED: Update us with your Testing Progress (Vroozi Procurement for NetSuite) on NetSuite 2024 version 2",
+        "description": "Dear SDN Partner, This message is a reminder that the phased roll-out of NetSuite's Release 2024 version 2 has begun. The next set of customers will be upgraded in  16 days . The Upgrade Month 1 is scheduled for 08/28/2024. Please complete your new release regression testing and submission of your 2024.2 BFN Questionnaire as soon as possible. Upgrading of Leading Accounts has started since 07/18/2024. Administrator of the account received a notification about NetSuite version upgrade schedule. You can check yours thru  Setup > Company > Administrative Notification . Go to  Confirmed  tab and check for  REMINDER: Your NetSuite 2024.2 Upgrade Date  notification. Leading account is a permanent account. It is available earlier and longer than the Release Preview environment. Access to Release Preview Accounts remains as OPT-IN only. In summary: *  Leading SDN environments are available as early as  07/18/2024 . Please check the notification on your account for the exact upgrade date. *  Release preview (RP) accounts will now be provisioned on request only. The opt-in page is found in the account that you want copied in to an RP account:  Setup > Company > Release Preview. *  BFN expiration date is on  09/27/2024 . Remember that you are strongly encouraged to set up, maintain and utilize your leading accounts for all new release testing. It takes approximately 3 to 5 days for the requested RP account to be created after you submit your Opt-In. Report your Testing Status, including all issues and blockers: Please click on the link below to raise the testing reminder record and update the status of your SuiteApp testing. Please also record any cases logged and any comments regarding your testing experience. NO Leading accounts? If you require new or additional test account(s) in the SDN leading environment,  please open a support case to request these accounts be provisioned for you. Reminders: *  Performing the new release testing of your SuiteApp is the initial step toward completing the BFN verification, or re-verification, of your SuiteApp for each NS release cycle. You must submit/resubmit your BFN questionnaire in every new release cycle in order to obtain/retain your BFN status. *  This testing reminder email is sent to all contacts in your Partner Solutions Directory record, to the SDNQA team and to your SDN Partner Manager. *  Those members of your team with the APC - SDN Partner Admin role are responsible for updating your corporate contact data. Please remember that the contact data updates to our records are a mandatory BFN compliance rule. *  Please remember to update your contact data in our records. Only those on your team with the proper role, APC - SDN Partner Admin, may do so. Thank you, The SDNQA team",
+        "status": "Done",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-12T12:11:30.881-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102035",
+        "summary": "Response time is getting slow on stage environment after this Authentication Upgrade. ",
+        "description": "Steps to Reproduced: Jmeter Should be installed in the system. Integration_Jmeter Project Should be in the system Executing Combine threads of [Address, Plant Code, Payment Term, Tax Codes, Company Code] together  Actual Result: I have observed a few issues and discussed them with the OPS team. During the execution of test cases, which involve sequential requests, I occasionally encounter authorization issues, causing test cases to fail. I'm uncertain whether this is a gateway or API issue. After discussing with the OPS team, we identified that throttling is enabled on the stage environment but not on the devQA environment. Despite this difference, we need to pinpoint the root cause of these intermittent authorization issues, as they are reproducible. Case 1: Executing on RC-2024-6 and response time of all the requests are 7:15 sec see below image top right corner. Case 2: Executing on RC-2024-7 and response time of all the requests are  17:28 sec see below image top right corner. Expected Result: The pre authentication does not slow the API executions. This difference is high, we need to make similar as we have in RC-2024-6.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-07T01:04:12.659-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101670",
+        "summary": "PO PDF: Improve the PDF UI to highlight better when the PO has been canceled",
+        "description": "Business Case: Certain vendors have raised the issue that they are unable to tell from the PO PDF; communicated after a POCR is done, whether individual items have been canceled, or if the entire PO has been canceled. We need to make visual enhancements to the PO PDF, to help make this information more prominent to the user viewing the PDF.  Acceptance Criteria: Prerequisite(s): The unitID must be configured to allow POCRs The uniID must be configured to allow PO cancellations The unitID must be configured to allow PO line item cancellations, or line item deletions.  NOTE: The outcome on the PO PDF should be the same in both cases.   The Supplier record should be configured to accept POCRs The Supplier should be able to accept POs in PDF form via email The user interacting with the PO should have the ability to do a POCR The user must either cancel or delete line items in the PO, using the POCR method The user must alternatively cancel the entire PO What should happen when a user does a POCR, and Deletes one or more line items in the PO? What should happen when a user does a POCR, and Cancels one or more line items in the PO? What should happen when a user Cancels the entire PO?",
+        "status": "Release Approved",
+        "assignee": "Masood Safi",
+        "created": "2024-07-25T02:07:12.986-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101630",
+        "summary": "PROD - Accounts Payable - Create/Track Invoice/Memo - Item Grid - Column Preferences Menu - Filtering the options with some text does not highlight the relevant text and when one of them is selected the list resets.",
+        "description": "url:  https://devqa5-go.vroozi.com/#/login username:  asma.latif+APM83@vroozi.com password:  Blueangel1@ Pre requisite: AP User should have logged into the PMAN Application.  Steps to Reproduce: Click to Create Invoice/Memo. Add a couple of Items. Click the Cog Wheel and type in \u201ctest\u201c . Please see the options containing this text are filtered. Issue 1:  The text \u201ctest\u201c of these options is not being highlighted/bold. Checkmark an option. Issue 2:  the filtered options are being reset. Actual Result: Filtering the options with some text does not highlight the relevant text and when one of them is selected the list resets. Expected Result: Filtering the options with some text should highlight the relevant text in those options and when one of them is selected the list should not reset until user remove the \u201ctest\u201c filter itself. Screen-Cast: Thanks, Asma",
+        "status": "Release Approved",
+        "assignee": "Aqsa Rani",
+        "created": "2024-07-24T00:45:21.387-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101527",
+        "summary": "Prod-PMAN-  The system is not allowing the user to add a new \"Invoice Type\" item while doing a POCR.",
+        "description": "Environment: Production https://go.vroozi.com/#/login Username:  javaid.sattar+employee@vroozi.com Password: Welcome1@ PreCondition: Feature toggle \" PURCHASE_POCR_LINE_ITEM_TYPE_RESTRICTIONS \" should be disabled on unit ID. PO should be created in Ordered state. Steps: Login with above  user. click on Purchase Order. From Fab icon click on Change request  Click on add New Line item button. select Invoice Type Item and provide all mandatory information. Check Save item button. Actual Result: The \"Save Item\" button remains disabled when the user tries to add an invoice type line item during POCR, even after providing all mandatory information. Expected Results: Users should be able to add an Invoice Type line item while doing a POCR.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-07-20T11:05:19.632-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101599",
+        "summary": "Extrinsic fields are not working",
+        "description": "SOCI I have added FirstName extrinsic in the catalog configuration but it is not picking up the value from the system, below are the screenshots <?xml version='1.0' encoding='UTF-8'?><!DOCTYPE cXML SYSTEM ' http://xml.cxml.org/schemas/cXML/1.2.025/cXML.dtd '><cXML version=\"1.2.025\" payloadID=\"3f231017-3601-4cf3-ab65-dc2a6765cfce\" timestamp=\"2024-06-06T00:44:39-07:00\" xml:lang=\"en_US\"><Header><From><Credential domain=\"NetworkID\"><Identity>vroozi</Identity></Credential></From><To><Credential domain=\"NetworkID\"><Identity>chemdirect</Identity></Credential></To><Sender><Credential domain=\"NetworkId\"><Identity>vroozi</Identity><SharedSecret>chemdirect_vroozi_20240524!</SharedSecret></Credential><UserAgent>Vroozi</UserAgent></Sender></Header><Request><PunchOutSetupRequest operation=\"create\"><BuyerCookie>a9e96c0a-ea3f-47a1-8d4e-99f4fd409340</BuyerCookie><Extrinsic name=\"UserEmail\">employeecan+test@vroozi.com</Extrinsic> <Extrinsic name=\"FirstName\"></Extrinsic> <BrowserFormPost><URL>< https://soci-signin.vroozi.com/gateway/api/cxml/external/checkout?HOOK_URL=https%3A%2F%2Fsoci-purchase.vroozi.com%2FFILLIN%2Fsid%2F498418%3FquantityLocked%3Dfalse&ENCODING_TYPE=BASE64_ENCODING</URL>></BrowserFormPost><SupplierSetup><URL><https://ecommerce.chemdirect.com/gateway/</URL>></SupplierSetup></PunchOutSetupRequest></Request></cXML>",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-06-06T00:56:23.008-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-99445",
+        "summary": "Vroozi API - Supplier Diff with Null values",
+        "description": "In case of BigDecimal values, there is an exception while calculating the difference for auditing. We need to make this diff async from the API as well. Add this exception the error handling notification queue.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-05-14T10:10:41.647-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-98278",
+        "summary": "Supplier Update - If supplier information is updated after PR submission but before PO creation, then the system automatically deletes items from both documents",
+        "description": "Issue: Supplier Update - If supplier information is updated after PR submission but before PO creation, then the system automatically deletes items from both documents Server: URL: stage-go.vroozi.com Username: zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Condition: 1. Sourcing or Financial Workflow is enabled 2. Create & submit Purchase Request (1000000586) which goes for Sourcing Approval or Financial 3. Before the purchase request is moved into the Approved status, update supplier information such as 'Company Name' and 'Display Name' Step to Reproduce: 1. Login to PMAN as a Sourcing or Financial Approver  2. Approved the Purchase Request till it moves into Approved status and then system generated Purchase Order  3. Verify Purchase Request details as well as Purchase Order Actual Result: System removes items from Purchase Request and also Purchase Order has been created without any item Purchase Request: Purchase Order: Expected Result: System should not delete items from the Purchase Requests and Purchase Order should also be created with all details",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-04-09T09:40:12.339-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-92816",
+        "summary": "Layout of GR screen on mobile interface is not appearing correctly.",
+        "description": "See the attached screenshot of GR screen on mobile interface, it needs to be fixed.",
+        "status": "Release Approved",
+        "assignee": "Masood Safi",
+        "created": "2023-10-17T04:00:13.077-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-91787",
+        "summary": "PMAN: Display the Model No. field on the PMAN Shopper UI's product details screen",
+        "description": "Business Case: When a catalog item has a value specified in the  ITEM_MODELNO  field, that value should be displayed on the details grid on the item\u2019s product page.  Acceptance Criteria: If a catalog item has a valid value in the  ITEM_MODELNO  field, that value should be displayed in the \u201c Detailed Information \u201d grid, on the product details screen in PMAN Shopper View.",
+        "status": "Release Approved",
+        "assignee": "Masood Safi",
+        "created": "2023-09-13T01:19:08.692-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-87904",
+        "summary": "PMan - Goods Receipt is successfully created of all items but PO status remains in Ordered ",
+        "description": "tried to reproduce this issue and it is reproducible. Here are my findings: Created Purchase Request  1000000328  with 3 items Created Purchase Order  5100000064  against that PR Without doing POCR on UI, just send direct Purchase Order  5100000064  update by just changing the description of any item (in my case, I\u2019ve changed description of 3rd item.) Actual Result: Purchase Order has been updated but system doesn\u2019t show item status Zulkifal Bajwa\u00a0 May 10, 2023 at 5:15 AM I\u2019ve tried to reproduce this issue and it is reproducible. Here are my findings: Created Purchase Request  1000000328  with 3 items Created Purchase Order  5100000064  against that PR Without doing POCR on UI, just send direct Purchase Order  5100000064  update by just changing the description of any item (in my case, I\u2019ve changed description of 3rd item.) Actual Result: Purchase Order has been updated but system doesn\u2019t show item status 4. Created Goods Receipt one by one of all items Actul Result: Goods Receipt is successfully created of all items but PO status remains in Ordered status and also showing  Create Receipt  and  Close for receiving  options on the UI When user is trying to create receipt through UI then getting this red toast message NBCU Unit id: 54 Client: Please update the PO # 3400556298 status in Purchase Manager, as the GR is updated in SAP. (since the user cannot create GR due to this error  Error creating receipt ) Support: The GR has been created with the full amount and quantities but the PO status is still Ordered. Moreover, there is no status for this line item# 3. We need to investigate why the status of this line item has not been updated.",
+        "status": "Abandoned",
+        "assignee": "Sambhu Sai",
+        "created": "2023-05-10T05:35:49.231-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-73797",
+        "summary": "PMAN: Add an additional check to the logic that automatically assigns the \"AU\" UoM to free-text service type line items",
+        "description": "Business Case: Back when NBCU went live with PMAN, there was logic added to the system, whereby the system would default the \u201cAU\u201d unit of measure for all free-text non-product line items in the PR. This logic works for NBCU as is, but it is causing problems for Gushman & Wakefiled. We need to add an additional check to this logic, so that this default assignment behavior only works when the unitID includes the \u201cAU\u201d unit of measure in it\u2019s UoM master data table.  Acceptance Criteria: When a user is adding a non-catalog/free-text non-product items to a PR, PO or POCR. And they do not manually specify a UoM value for that item, then:  The system should \u2026 Check if the unitID UoM Master Data table includes a UoM with the code \u201cAU\u201d assigned to it.  If this UoM is active.  Then automatically assign that UoM to the saved line item in the document.  Otherwise, if there is no UoM with the code \u201cAU\u201d assigned to it in the unitID\u2019s master data, or if it is inactive \u2026  The system should save the item in the document.  Then display the standard \u201cUoM missing\u201d error message to the user, and block the document\u2019s submission till this error is resolved.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2022-01-13T05:51:08.927-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-26686",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Health Check",
+      "description": "Health Check Architecture Diagram",
+      "status": "In Final Review",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2017-08-24T23:18:52.826-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-102875",
+        "summary": "Gateway-api: Notification and search api url is incorrect in the gateway-api health check response ",
+        "description": "Base URL:  http://devqa31-internal.vroozi.com:8080/gateway/api/health-check Open the Postman Hit the base url of gateway-api \u201c http://devqa31-internal.vroozi.com:8080/gateway/api/health-check \u201c Notification url is showing  \"http://localhost:8080/health-check\" Search-api url is showing  \"http://localhost:8080/searchapi/health-check\" Actual Result: Both notification and search api\u2019s urls are showing incorrect due to this health check status is false. Expected Result: Both notification and search api\u2019s urls should be correct in the response. For Notification-api:   http://localhost:8080/notificationapi/health-check For Search-api:   http://localhost:8080/search/api/health-check. {\n    \"serviceName\": \"GATEWAY\",\n    \"healthy\": false,\n    \"dataSources\": [\n        {\n            \"name\": \"SQS\",\n            \"url\": \"devqa31-vroozi-cxml-invoice-incoming-queue\",\n            \"status\": \"AVAILABLE\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"PARTNER\",\n            \"url\": \"http://localhost:9598/partner/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"NOTIFICATION\",\n            \"url\": \"http://localhost:8080/health-check\",\n            \"status\": \"UNAVAILABLE\"\n        },\n        {\n            \"name\": \"AUTHENTICATION\",\n            \"url\": \"http://localhost:8080/authenticationapi/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"SEARCH\",\n            \"url\": \"http://localhost:8080/searchapi/health-check\",\n            \"status\": \"UNAVAILABLE\"\n        },\n        {\n            \"name\": \"CONNECTORS\",\n            \"url\": \"http://localhost:9595/connectorapi/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"CXML\",\n            \"url\": \"http://localhost:9090/cxml-api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"USER_DATA\",\n            \"url\": \"http://localhost:8080/userDataService/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"OCR\",\n            \"url\": \"http://localhost:9600/ocrapi/api//health-check\",\n            \"status\": \"AVAILABLE\"\n        },\n        {\n            \"name\": \"PURCHASE\",\n            \"url\": \"http://localhost:8080/purchaseapi/api/health-check\",\n            \"status\": \"AVAILABLE\"\n        }\n    ]\n}",
+        "status": "Resolved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-09-03T00:25:33.218-0700",
+        "issue_type": "Defect",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-102738",
+        "summary": "Health Check Core Dependency Update",
+        "description": "Update Health Check Core to v 2.0.1 in the following APIs.  API Endpoint OCR API http://localhost:9600/ocrapi/api/health-check Communications API http://localhost:9605/communicationapi/api/health-check Webhooks http://localhost:9393/health-check Admin UI   http://localhost:8080/adminui/health-check The scope of this ticket is to change the health-check dependency version with no impact on health check of individual services so only testing required for this is the to verify the  available status  of all services.",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-08-28T23:10:13.877-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-99531",
+        "summary": "CXML API : Implement Health Check",
+        "description": "Implement Health Check for CXML API. The API should provide health status by hitting the endpoint for the Data Sources and Services provided below. Endpoint Type: GET Endpoint Name:  http://localhost:9090/cxml-api/health-check Data Sources: Mongo SQS Services: FIle Storage Service Partner API Userdata Service",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-05-16T04:11:05.699-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-61514",
+        "summary": "Health Check For erp-service",
+        "description": "We need to generate Health Check service in Searcher project following the standard defined in  Dependencies DataSources Amazon SQS MySQL Services FILE_STORAGE Healthcheck URL http://localhost:9292/health-check",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2020-07-02T02:03:59.005-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-61475",
+        "summary": "Health Check For File Storage Service",
+        "description": "We need to generate Health Check service in Searcher project following the standard defined in  Dependencies DataSources MONGO S3_STORAGE Service NONE Healthcheck URL http://localhost:8880/file-storage/health-check Healthcheck Stage ELB URL https://storage-stage.vroozi.com/file-storage/health-check",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2020-07-01T01:21:50.876-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-27609",
+        "summary": "Health Check for Gateway",
+        "description": "We need to generate Health Check service in Gateway project following the standard defined in  Dependencies DataSources MONGO GEOAPIFY Services AUTHENTICATION PURCHASE NOTIFICATION CXML PARTNER OCR CONNECTOR USER_DATA Healthcheck URL http://localhost:8080/gateway/api/health-check",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2017-09-15T03:10:54.657-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-27595",
+        "summary": "Health Check for CategoryTree API",
+        "description": "We need to generate Health Check service in CategoryTreeAPI project following the standard defined in  Dependencies DataSources NEO4J MONGO Services CATALOG USER_DATA FILE_STORAGE Healthcheck URL http://localhost:8080/categorytreeapi/health-check",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2017-09-15T00:28:55.012-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-27086",
+        "summary": "Health Check for Purchase API",
+        "description": "We need to generate Health Check service in PurchaseAPI following the standards defined in  Dependencies DataSource MONGO ActiveMq AWS_SNS Services NOTIFICATION USER_DATA PMAN ADMIN_UI INTEGRATION AUTHENTICATION DOCUMENT_HISTORY FILE_STORAGE SHOPPER_API CATALOG WEBHOOKS TAX_INTEGRATION OCR SEARCHER COMMUNICATION CXML BUDGET ACCOUNTING Healthcheck URL http://localhost:8080/purchaseapi/api/health-check Use same standard as being developed for userdata-api (Haris)",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2017-09-05T16:35:55.526-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103185",
+      "summary": "RC-2024-8-2 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Work Completed",
+      "assignee": "Jimena Pose",
+      "created": "2024-09-11T15:08:19.835-0700",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-102731",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Aqsa Rani",
+        "created": "2024-08-28T10:02:00.408-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103185"
+      },
+      {
+        "key": "VZI-102730",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "Impacted Areas of Payables RC Functionalities Impacted Area 1 Impacted Area 2 Impacted Areas of Other Teams RC Functionalities Purchase Team Impacted Area 1 Impacted Area 2 Integration Team Impacted Area 1 Impacted Area 2 Budget Team Impacted Area 1 Impacted Area 2",
+        "status": "Abandoned",
+        "assignee": "Asma Latif",
+        "created": "2024-08-28T10:01:59.928-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103185"
+      },
+      {
+        "key": "VZI-102729",
+        "summary": "Execute Post Production Testing (Asma)",
+        "description": "",
+        "status": "Abandoned",
+        "assignee": "Asma Latif",
+        "created": "2024-08-28T10:01:59.741-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103185"
+      },
+      {
+        "key": "VZI-102728",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "Abandoned",
+        "assignee": "Jimena Pose",
+        "created": "2024-08-28T10:01:59.700-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103185"
+      },
+      {
+        "key": "VZI-102727",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-08-28T10:01:59.663-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103185"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102742",
+      "released_in_current_rc": false,
+      "summary": "Netsuite BFN Verification Tasks",
+      "description": "",
+      "status": "Open",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-08-28T23:22:02.166-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-102695",
+        "summary": "Netsuite BFN - New SuiteTax Compatibility Testing Requirements",
+        "description": "Netsuite Review Response for BFN : Comments : SuiteTax is the default tax framework since 2024.1, we strongly recommend partners to test their SuiteApp if it would fall in the chapter \"SUITETAX COMPATIBILITY TESTING CONSIDERATION\" of the document \"SuiteTax Compatibility Testing Guide\". You can get the document using your APC role then go to SDN Portal > SDN PROGRAM AND RESOURCES > SuiteTax Compatibility Testing Guide. Please update your answer accordingly. We only accept Yes or No response. Actions: Other Comments : When Testing SuiteTax compatibility, please provide the account ID where the SuiteTax is being tested. https://nlcorp.app.netsuite.com/core/media/media.nl?id=233163058&c=NLCORP&h=KlVEmvSKEt84FknZJrlryY0SlvNlRCmr8QYWWt_XIi3O_Tgx&_xt=.pdf",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-27T13:08:50.370-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102742"
+      },
+      {
+        "key": "VZI-102480",
+        "summary": "Upgrade Netsuite Version to use latest SDK for Webservice call",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-20T17:18:03.173-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102742"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-95348",
+      "released_in_current_rc": false,
+      "summary": "Enhancement of Terms & Conditions Management and Assignment in Purchase Orders",
+      "description": "Description Objective: This Epic aims to significantly enhance the Terms & Conditions (T&Cs) management and assignment functionalities in our system, addressing specific needs of our clients, Yukon and Maersk. The primary goal is to provide flexibility and control in the creation, assignment, and management of T&Cs for Purchase Orders (POs), both auto-generated and manually created. Key Features: Admin Capabilities for T&Cs Management: Enable Company Admins to author and manage multiple custom T&Cs. Provide functionality to set default T&Cs and associate custom T&Cs with specific suppliers and/or company codes. Dynamic T&Cs Assignment: Automate the assignment of correct T&Cs to POs based on supplier and/or company code. Buyer Permissions & Capabilities: Empower Buyers with permissions to edit T&Cs on POs, including the use of a rich text editor for ad-hoc T&Cs, with options to save these either for single-use or in their profile for future reuse. PO Change Request (POCR) Enhancements: Implement functionality for Buyers to update T&Cs on POs via POCR, with tracking of changes in the document history UI. Restricted Access for Requesters: Prevent the original requester from altering T&Cs on POs through the POCR function. Admin Overrides and Approvals: Allow Admins to modify T&Cs on POs via POCR, subject to Buyer approval for manually created/transmitted POs. Stakeholders: Primary: Yukon and Maersk Vroozi Divisions: Management, Sales / Marketing, Customer Success, Implementation, Support, Product, Engineering Vroozi Functional teams: Purchase Team, Payables Team ( \u2014 ?), Integration Team ( ?) Timeline and Milestones: Start Date: ASAP Completion Target: May 2024, within Q2 2024 Dependencies and Risks: Application Roles Effected : Company Admins, Buyers Payables Team Cooperation: Required for updating POs in the Supplier Portal. Integration Team Involvement: Potential need for integrating T&Cs communication via cXML POs, which could impact project timeline. Success Criteria: Effective implementation of T&Cs management and assignment system enhancements. Improved flexibility and control for Admins and Buyers in handling T&Cs. Seamless integration with existing systems and processes. Positive feedback from primary stakeholders, Yukon and Maersk. Milestones: MVP - Minimum Viable Product: Product manager to validate assumptions and solution design with stakeholders. Engineering to complete    MUP - Minimum Useable Product:                                     Purchase Order: Allow Buyers to create and associate Ad-hoc T&Cs to a specific PO Purchase Order: Print the correct T&Cs on the PO PDF Vroozi Admin: Allow Admins to specify whether PO T&Cs can be updated via the POCR function POCR: Allow only the \u201cPO Owner\u201d to update T&Cs via POCR POCR: Record and display T&Cs changes done on a PO, in the PO Document Change History Integration team  \u2192 SPIKE: Integration team needs to investigate impact on NBCU, if T&Cs can be updated vai POCR Payables team  \u2192 Supplier Portal: Display PO T&Cs in the Vroozi Supplier Portal Payables team  \u2192 Supplier Portal: Ensure SP users are able to Confirm / Dispute T&Cs changes on a PO updated via POCR MLP - Minimum Lovable Product: Vroozi Admin: Figure out how to introduce an \u201cApply to All\u201d option for associations SPIKE: Investigate how we can compute, store and display a fine grained \u201cDiff\u201d for the T&Cs content, when updated by an Admin         Integration team  \u2192     POCR: Allow Admins to update the T&Cs on a PO via POCR POCR: Allow Central Reciever to update the T&Cs on a PO via POCR POCR: Ensure that T&Cs updates on POs; done via POCR, are reviewed and approved by the \u201cPO Owner\u201d Vroozi PMAN: Allow Buyers, Admins, Central Receivers to create custom T&Cs and save them in their user profile for reuse at a later date Vroozi PMAN: Allow users to view and manage their custom T&Cs from their \u201cMy Data\u201d screen \u00a0 The wireframes for this project can also be found here:",
+      "status": "Implementation In Progress",
+      "assignee": "Naufil Aziz",
+      "created": "2024-01-18T01:03:41.306-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-102538",
+        "summary": "Modify the evaluation of T&C modification on a PO, via the POCR process, to differentiate between Buying Org only changes and changes which should be communicated to a supplier. ",
+        "description": "Business Case: Currently, when a user modifies the Name or Description of the Ad-hoc T&Cs that they associated to a PO, via the POCR process. The system attempts to notify the designated PO supplier of this change. This is happening because the system does not correctly identify these changes as ONLY being relevant to the Buying Organization. We need to update this logic, to be able to track which T&C changes the supplier should be notified of, versus which one\u2019s they should not be updated about.  Acceptance Criteria: Prerequisite(s): The unitID should be configured to use the new enhanced T&Cs functionality.  The unitID must be configured to use Custom Terms & Conditions.  The unitID must be configured to allow POCRs.  The unitID must be configured to allow changes to the T&Cs of a PO, via the POCR process.  The user doing the POCR must be a Buyer.  The Buyer must have the correct permissions; to create Ad-hoc T&Cs, assigned to them.  The PO being acted upon must have already been sent to a vendor.  The PO being acted upon must already have Ad-hoc T&Cs assigned to it.  What should happen when the user does a POCR, and updates the non-content portion of the assigned Ad-hoc T&Cs on a PO? In this scenario, the Buyer has ONLY updated the T&Cs on the PO, and specifically only the name, the description or both on the Ad-hoc T&Cs. Most importantly, the Buyer has NOT modified the content of the Ad-hoc T&Cs.  The system should record the change(s) made to the T&Cs and display them on the CR, and in the PO document history UI on the Buying org side.  The system should NOT \u2026  Update the PO version due to this change. Include the details of this change in the PO PDF (if communicated to the vendor). Display a change event for this modification in the PO document history, in the Supplier Portal.  What should happen when the user does a POCR, and updates the content of the assigned Ad-hoc T&Cs on a PO?  In this scenario, the Buyer has updated the T&Cs on the PO, and specifically changed the content of the Ad-hoc T&Cs, in addition to the name and description.  The system should record the change(s) made to the T&Cs and display them on the CR, and in the PO document history UI on the Buying org side.  The system should \u2026  Update the PO version due to this change. Include the details of this change in the PO PDF (if communicated to the vendor), but only include details of the change(s) made to the content of the T&Cs.  Display a change event for this modification in the PO document history, in the Supplier Portal, but only include details of the change(s) made to the content of the T&Cs.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-08-22T04:05:42.379-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-95348"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-101802",
+      "released_in_current_rc": false,
+      "summary": "Enhance Company Code based restrictions for Vroozi Users",
+      "description": "Please see the PRD here:",
+      "status": "Open",
+      "assignee": "Naufil Aziz",
+      "created": "2024-07-31T04:27:11.839-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-102280",
+        "summary": "PMAN: AP: Allow Admins to Assign Company Code Restrictions for AP Managers in their User profile.",
+        "description": "User Story : As an  Admin,  I want  to assign Company Code restrictions to AP Managers in their user profiles,  So that  their access is limited to only the specific Company Codes they are responsible for, ensuring proper control and management of invoice and memo documents. Acceptance Criteria: What is the change?  The system is being updated to allow Admins to assign Company Code restrictions to AP Managers in their user profiles, limiting their access to specific Company Codes for Invoice and Memo document processing. Which customers should this change impact?  ACCOUNTS_PAYABLE_WORKFLOW = true and/or ACCOUNTS_PAYABLE_WORKFLOW__MEMO = true. May need to introduce a new Feature toggle or use existing Feature toggle -  ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS What pages should this change impact?  Master Data > Users Which users should be impacted by the change?  AP Managers, Admins. How should this feature work? Given  an Admin is editing or creating a user profile for an AP Manager role, When  the Admin selects the AP Manager role for the user, Then  the system should automatically display the \"Company Code Restriction\" field in the Access section. Given  an Admin is assigning Company Code restrictions, When  the Admin selects Company Codes in the restriction field, Then  the Admin should only be able to select active and non-deleted Company Codes. Given  an AP Manager has no Company Code restrictions assigned, When  they access the system, Then  they should have access to Invoices and Memos belonging to all Company Codes, similar to the current system behavior.  (Default Setting) Given  an Admin is assigning Company Code restrictions to an AP Manager, When  the Admin selects one or more Company Codes in the \"Company Code Restriction\" field, Then  the AP Manager should only be able to view, take action on, and process Invoice and Memo documents associated with those selected Company Codes. Given  an AP Manager has Company Code restrictions applied to their profile, When  the Admin or AP Manager accesses the 'My Document Defaults' section in the 'Edit User' modal, Then  the 'Company Code' field should only display the Company Codes that have been assigned as restrictions in the Access section. Do we need a data fix for existing customers? Would this change impact existing documents? To which teams should this change be communicated to? Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-08-15T01:06:04.150-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-101802"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-101001",
+      "released_in_current_rc": false,
+      "summary": "Payables: AP: System able to use Document Settings for accounting elements in AP Documents.",
+      "description": "This epic focuses on integrating the system settings from Documents -> Settings -> All Documents into the Accounts Payable (AP) documents. The objective is to ensure that AP documents can utilize these settings, enhancing their configurability and alignment with organizational requirements. The key components of this epic include: Utilize Document Settings in AP Documents. Location Field Configuration. Class Field Configuration. Project Field Configuration. Customer Field Configuration. Account Category (Cost Center, WBSE, Internal Order, Profit Center) Field Configuration. GL Account Field Configuration. Plant Field Configuration.",
+      "status": "Work Completed",
+      "assignee": "Sujoy Kar",
+      "created": "2024-07-02T10:13:25.581-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-101566",
+        "summary": "PMAN: AP: System uses settings in Documents -> Settings -> All Documents to make GL Account optional / required.",
+        "description": "User Story: As an AP user , I want the settings in Documents \u2192 Settings \u2192 All Documents to dictate if  GL Account  should be optional, or required on AP documents  so that  the behavior is consistent on all documents. Acceptance Criteria: What is the change?  The system uses the settings in Documents \u2192 Settings \u2192 All Documents to dictate if GL Account should be optional, or required on AP documents. Which customers should this change impact? All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true, and All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true and ACCOUNTS_PAYABLE_WORKFLOW_MEMO = true, and All customers who have PAYMENT_REQUEST = true What pages should this change impact?  The invoice, memo and  payment request  pages. Which users should be impacted by the change?  Users who are able to edit an AP document, namely: The document owner (AP Processor/Manager), Assignee, e.g. an AP Coder, an Exception Handler, an Approver, and Any AP Manager. Payment Requester How should this feature work? Pre-Requisites: Conditions in AC #2 are fulfilled. The Admin has enabled this accounting objects in Master Data \u2192 Accounting page. GL Account. The Admin has selected one of the following against the GL Account field in the Documents \u2192 Settings \u2192 All Documents page. The behavior described below comes into play in the following situations, that is, in any editable state of an AP document: Document is in  ,  , or  Document being edited in   or   statuses. Document being edited while it is pending approval. Document being edited after it is approved, in   or   statuses. Document being edited after it is posted, in   status or greater. Feature toggle -   is ON. GL Account = REQUIRED The systems exhibits the current behavior . In any editable state (in any status), a user is able to save a line item without specifying a value in the GL Account field. Errors: If GL Account = blank/null, the system displays an error that the GL Account is missing. Example : Line Item #n Field 'GL Account' missing GL Account = OPTIONAL In any editable state (in any status), a user is able to save a line item without specifying a value in the GL Account field. The system should  not  show an error message, as soon as the user saves the line item. Errors: If GL Account = blank/null, the system does  not  display an error saying that the GL Account is missing. Transitions: There is no change in terms of the transitions that the system displays as a result of the GL Account being blank/null. GL Account = HIDDEN Implementation is done in this ticket -    GL Account = NONE SELECTED The system implements the GL Account = Required, as the default behavior. This can happen if the client is not using the PURCHASE__COMPANY_ACCOUNTING_LINE_ITEM_CONFIGURATION feature toggle. Apply All: Important Note:  The system exactly mimics the behavior of the Apply All modal of PRs. Do we need a data fix for existing customers?  Potentially no. Would this change impact existing documents?  Yes, invoices and memos that are currently in the early stages of the invoice process, e.g.   or   status. To which teams should this change be communicated to?  All teams.",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-07-22T23:03:32.361-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-101001"
+      },
+      {
+        "key": "VZI-101524",
+        "summary": "PMAN: AP: System uses settings in Documents -> Settings -> All Documents to make Cost Center / WBSE / Internal Order / Profit Center optional / required.",
+        "description": "User Story: As an AP user , I want the settings in Documents \u2192 Settings \u2192 All Documents to dictate if  Cost Center  /  WBSE  /  Internal Order  /  Profit Center  should be optional, or required on AP documents  so that  the behavior is consistent on all documents. Acceptance Criteria: What is the change?  The system uses the settings in Documents \u2192 Settings \u2192 All Documents to dictate if Cost Center / WBSE / Internal Order / Profit Center should be optional, or required on AP documents. Which customers should this change impact? All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true, and All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true and ACCOUNTS_PAYABLE_WORKFLOW_MEMO = true, and All customers who have PAYMENT_REQUEST = true What pages should this change impact?  The invoice, memo and  payment request  pages. Which users should be impacted by the change?  Users who are able to edit an AP document, namely: The document owner (AP Processor/Manager), Assignee, e.g. an AP Coder, an Exception Handler, an Approver, and Any AP Manager. Payment Requester How should this feature work? Pre-Requisites: Conditions in AC #2 are fulfilled. The Admin has enabled one or more of these accounting objects in Master Data \u2192 Accounting page. Cost Center. WBSE. Internal Order. Profit Center. The Admin has selected one of the following against the Cost Center / WBSE / Internal Order / Profit Center field in the Documents \u2192 Settings \u2192 All Documents page. The behavior described below comes into play in the following situations, that is, in any editable state of an AP document: Document is in  ,  , or  Document being edited in   or   statuses. Document being edited while it is pending approval. Document being edited after it is approved, in   or   statuses. Document being edited after it is posted, in   status or greater. Feature toggle -   is ON. ASSUMPTIONS : If there are more than 1 accounting category turned ON for a client then they all will be Required / Optional / Hidden at the same time. ANALYSIS : Looking at the data from all of our existing clients using the AP module, there doesn\u2019t seem to be anyone who has different set of document settings if there were multiple accounting categories active. Ignore Vroozi Validation in the screenshot provided below as it is our Test account on Production. In the screenshot below,  Required (ON) = The client is using this Accounting category and has made it a Required field. Required (OFF) = The client is not using this Accounting category but has it as a Required field in the BE. Optional (ON) = The client is using this Accounting category and has made it an Optional field. Optional (OFF) = The client is not using this Accounting category but has it as an Optional field in the BE. Hidden (ON) = The client is using this Accounting category and has made it a Hidden field. Hidden (OFF) = The client is not using this Accounting category but has it as a Hidden field in the BE. (ON) = The client is using this Accounting category but has no document setting choice selected (assuming PR line item config feature toggle is OFF) (OFF) = The client is not using this Accounting category and has no document setting choice selected (assuming PR line item config feature toggle is OFF) (Setting visible) = The client has the plant / purchasing org setting available for the Admin to select from the UI and accordingly they can choose Required / Optional / Hidden. (Setting is not visible) = The client does not have the plant / purchasing org setting available for the Admin to select from the UI but Required / Optional / Hidden maybe selected from the BE. Blank = No info. Cost Center = REQUIRED The systems exhibits the current behavior . In any editable state (in any status), a user is able to save a line item without specifying a value in the Cost Center field. Errors: If Cost Center = blank/null, the system displays an error that the Cost Center is missing. Example :  Line Item #n Field 'Cost Center' missing. Line Item #n Exactly one of 'Cost Center', WBS Element, Internal Order or Profit Center required. Note :  I believe this error message shows up when there are multiple accounting categories enabled in the system. Cost Center = OPTIONAL In any editable state (in any status), a user is able to save a line item without specifying a value in the Cost Center field. The system should  not  show an error message, as soon as the user saves the line item. Errors: If Cost Center = blank/null, the system does  not  display an error saying that the Cost Center is missing. Transitions: There is no change in terms of the transitions that the system displays as a result of the Cost Center being blank/null. Cost Center = HIDDEN Implementation to be done in this ticket -    Cost Center = NONE SELECTED The system implements the Cost Center = Required, as the default behavior. This can happen if the client is not using the PURCHASE__COMPANY_ACCOUNTING_LINE_ITEM_CONFIGURATION feature toggle. Implement the  same  behavior for the remaining accounting categories as well - WBS Element Internal Order Profit Center Apply All: Important Note:  The system exactly mimics the behavior of the Apply All modal of PRs. Do we need a data fix for existing customers?  Potentially no. Would this change impact existing documents?  Yes, invoices and memos that are currently in the early stages of the invoice process, e.g.   or   status. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0How will the system behave if the accounting category is not selected, and Cost Center, WBS, Profit Center, and Internal Order are optional? The system should  not  show an error message, if all the accounting categories are optional, the user has not chosen an accounting category and then the user saves the line item. The user is allowed to save the line item without choosing the accounting category. \u00a0   \u00a08/19/2024 \u00a0   \u00a08/20/2024 # Question Recommendation Response Remarks 1 How should the system handle the scenario where lets say Cost Center is Required but WBSE is Optional or where Cost Center is Required but Internal Order is Hidden? What error message should be displayed? The assumption based on our present client data is that if more than one accounting category is turned ON for a client, then all of them will be set to Required, Optional, or Hidden at the same time. Although this is not a typical use case, it is possible to set up accounting categories that differ from one another. If this occurs, and at least one accounting category is set to Required, then the default error message will be displayed: Exactly one of 'Cost Center', WBS Element, Internal Order or Profit Center required. In this unusual scenario, the user must fill in both the Accounting Category and the Value field to resolve the error message after saving the line item. \u00a0 Key Decisions: # Decision Point Decision Reasoning Validation Plan 1 Should the behavior of \u201cApply All\u201c be changed? We should mimic the behavior that Purchase Team has developed.",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-07-19T18:41:10.665-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-101001"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99543",
+      "released_in_current_rc": false,
+      "summary": "Vulnerability assessment - SBOM generation and vulnerabilities fixes",
+      "description": "The scope of this epic includes but not limited to  Generating SBOM of our complete application. Evaluating SBOM generated files to identify any vulnerabilities within our project using tools e.g.  dependency track . Evaluate and fix any identified vulnerabilities wherever possible.",
+      "status": "In Design",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2024-05-16T09:30:40.706-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-93638",
+        "summary": "SBOM: Project sbom generation and visualization",
+        "description": "Generate sbom files for all the projects/microservices that vroozi uses. RnD on a tool that can merge multiple sbom files into one. RnD on a tool that can provide a visual representation of the generated sbom files. Deploy and test.",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2023-11-13T23:06:35.729-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-99543"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94161",
+      "released_in_current_rc": false,
+      "summary": "Integration - Tech Debt For RC-2024-1",
+      "description": "",
+      "status": "Open",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2023-12-05T22:53:36.956-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-93483",
+        "summary": "Vroozi API - PR submit API should be enhanced to submit PR to sourcing review if PR is eligible souring workflow",
+        "description": "Acceptance Criteria: Update the submit API to move the PR to sourcing approver if there is only one sourcing approver for the current PR. It is similar to auto select sourcing approver on the UI. Expose the approverRef field in the Purchase Request APIs. This field will be mapped to approverId in the purchase request entity.  {\n\"approverRef\" :{\n  \"id\": \"1709\",\n  \"externalId\": \"User - Approver\",\n  \"docNo\": \"approver@vroozi.com\",\n  \"label\": \"User - Id\",\n  \"type\": \"UserModel\",\n  \"archived\": true\n},\n\"souringReviwerRef\" :{\n  \"id\": \"1709\",\n  \"externalId\": \"User - Approver\",\n  \"docNo\": \"approver@vroozi.com\",\n  \"label\": \"User - Id\",\n  \"type\": \"UserModel\",\n  \"archived\": true\n}\n} If there are multiple sourcing approvers applicable to the current PR/CR the system should return a warning with the list of applicable sourcing approvers.  {\n// PR model\n\"metadata\": {\n        \"errors\": [\n            {\n                \"code\": \"BAD_REQUEST\",\n                \"element\": \"approverRef\",\n                \"message\": \"The PR [1000910] cannot be submitted, as it is eligible for sourcing review, please select one approver from the approverRefs list provided.\",\n                \"detail\": \"The Purchase request is eligible for sourcing approval, please select one approver from the list of approverRefs and submit the PR again.\",\n                \"level\": \"Data Error\"\n            },\n            {\n                \"code\": \"BAD_REQUEST\",\n                \"element\": \"souringReviewerRef\",\n                \"message\": \"The PR [1000910] cannot be submitted, as it is eligible for sourcing review, please select one approver from the approverRefs list provided.\",\n                \"detail\": \"The Purchase request is eligible for sourcing approval, please select one approver from the list of approverRefs and submit the PR again.\",\n                \"level\": \"Data Error\"\n            }\n        ]\n    },\n\"approverRefs\": [ {\n     \"id\": \"1709\",\n     \"externalId\": \"User - Approver\",\n      \"docNo\": \"approver@vroozi.com\",\n      \"label\": \"User - Id\",\n      \"type\": \"UserModel\",\n      \"archived\": true\n},\n{\n     \"id\": \"1710\",\n     \"externalId\": \"User - Approver1\",\n      \"docNo\": \"approver1@vroozi.com\",\n      \"label\": \"User - Id\",\n      \"type\": \"UserModel\",\n      \"archived\": true\n},\n{\n     \"id\": \"1711\",\n     \"externalId\": \"User - Approver2\",\n      \"docNo\": \"approver2@vroozi.com\",\n      \"label\": \"User - Id\",\n      \"type\": \"UserModel\",\n      \"archived\": true\n}\n],\n\"souringReviewerRefs\": [ {\n     \"id\": \"1712\",\n     \"externalId\": \"User - Reviwer\",\n      \"docNo\": \"reviewer@vroozi.com\",\n      \"label\": \"User - Id\",\n      \"type\": \"UserModel\",\n      \"archived\": true\n},\n{\n     \"id\": \"1713\",\n     \"externalId\": \"User - Reviwer1\",\n      \"docNo\": \"reviewer1@vroozi.com\",\n      \"label\": \"User - Id\",\n      \"type\": \"UserModel\",\n      \"archived\": true\n},\n{\n     \"id\": \"1714\",\n     \"externalId\": \"User - Reviwer2\",\n      \"docNo\": \"reviewer2@vroozi.com\",\n      \"label\": \"User - Id\",\n      \"type\": \"UserModel\",\n      \"archived\": true\n}\n]\n\n\n//....\n} Error message should be Your PR is eligible for sourcing approval. Please select one of the sourcing approvers and submit the PR again. Once the user selects the sourcing approver this should consider the workflow to move the PR to the selected sourcing approver. PR should be in sourcing review status after submission. The approverRef should accept the payload of the selected approvers. If the provided approver is not in the applicable list the API should return error that the selected approver cannot be applied. If the selected approver does not exist in Vroozi, it should give validation error that the provided approver does not exist.  {\n    \"id\": \"c8b1785c-ed91-447b-94f7-5112b7e7f69d\",\n    \"status\": \"404\",\n    \"title\": \"Not Found\",\n    \"errors\": [\n        {\n            \"code\": \"404\",\n            \"element\": \"approverRef.id\", // \"element\": \"approverRef.docNo\" or \"element\": \"approverRef.externalId\",\n            \"message\": \"Field [approverRef.id] does not exist.\",\n            \"detail\": \"Field [approverRef.id] does not exist. Provided value: [1709] does not exist.\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-21T10:40:31.859+0000\"\n} Once the PR is moved the sourcing approval, the approver should be able to approve/reject from email/UI. If the selected approver is not active in Vroozi, it should give validation error that the provided approver is not active. {\n    \"id\": \"c8b1785c-ed91-447b-94f7-5112b7e7f69d\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"approverRef.id\", // \"element\": \"approverRef.docNo\" or \"element\": \"approverRef.externalId\",\n            \"message\": \"Provided approver is not active.\",\n            \"detail\": \"Provided approver is not active. Provided value: [1709] does not exist.\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-02-21T10:40:31.859+0000\"\n} If there is no sourcing approval required the PR should be moved to financial or budget approvals depending on the workflow enabled. If the PR processing in external system toggle is enabled, the PR should move to submitted status after the Vroozi workflows are complete. PR should be visible and searchable in the approver UI screen. If sourcing review is enabled, it is automatically selected and PR will go to sourcing reviewer. Expose sourcingReviewerRef in the PR API. // We need to expose the approverRef in the PR as well Update public API documentation to reflect new fields. Update the confluence page to reflect the latest changes in the PR APIs. API Documentation updates: When a purchase request has only one eligible sourcing approver, the system automatically selects that sourcing approver. If multiple sourcing approvers are eligible to review or approve the purchase request, the user must select a valid sourcing reviewer or approver from the list generated by the system based on sourcing rules.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2023-11-06T22:41:33.941-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-94161"
+      }
+    ]
+  }
+]

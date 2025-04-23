@@ -1,0 +1,1467 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-109975",
+        "summary": "PMan/SDM: Admin is unable to save Supplier association with Custom fields",
+        "description": "",
+        "status": "In QA",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-04-16T23:07:44.571-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109959",
+        "summary": "SDM/PMan - Admin is unable to open the SDM users from PMan Master Data. Also, he cannot open PMan users if he has first clicked on SDM users",
+        "description": "Server : Stage Credentials :  notifyvroozi10@gmail.com  / Welcome1 Pre-Conditions: Admin must have created SDM users from Supplier discovery module Steps to Reproduce: Login with above user Navigate to Master Data \u2192 Users search and SDM user and try to open it It won\u2019t open Now, click on any PMan user Actual :  Admin cannot open users for editing once he has clicked on SDM users Expected :  Application should open all users for editing from PMan",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-04-16T10:36:09.563-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109958",
+        "summary": "SDM/PMan - When admin tries to create a SDM user from PMan then user creation model is not showing up user model properly",
+        "description": "Server : Stage Credentials :  notifyvroozi10@gmail.com  / Welcome1 Steps to Reproduce: Login with above user Navigate to Master Data \u2192 Users Click on  Add a new user  button Select the role from supplier discovery Actual :  Form below the roles is not showing fields properly. See the screen shot Expected :  Application should show the form correctly",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-04-16T10:28:27.310-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109949",
+        "summary": "Location \u2013 The system does not evaluate the 'active' and 'deleted' flags of the Company Code while creating a Location",
+        "description": "Issue:  Location \u2013 The system does not evaluate the 'active' and 'deleted' flags of the Company Code while creating a Location Server: URL: devQA35-go.vroozi.com Username:  notifyvroozi3@gmail.com Password: @Welcome1 Pre-Condition: API integration is configured and enabled on the relevant server. In the specified  unit_id , there exists at least one  deleted  or  inactive  Company Code with  locationTypeRequired set to  true . Steps to Reproduce: Send a request to create a  Location  element using a minimal payload. curl --location 'https://devqa2-api.vroozi.com/v1/locations' \\\n--header 'Content-Type:  application/json' \\\n--header 'Authorization:  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJmOWY2ZWNjYy02Y2MxLTRhYWQtYTIwMi00ZGQ3MGE5MWJiMmQiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiJkYmFmY2Y3My00OTJmLTQ5OWItODgyNS0wZjdjNTNhZDc0NGIifQ.kDpEZ4lgI6Lr3v1A8yGrdupZpiu6ZM5pEYUTI2DcWU4cIV6M8x_Jv_YsDJIy4VuaOHYSZwIAj--RMo62FkuBmA' \\\n--header 'x-api-key:  rlVKqJfIzb2FDhCbtXNlza3J0G7Ybige7FhqgvHB' \\\n--data '{\n    \"code\": \"Bajwa-02\",\n    \"name\": \"Location\",\n    \"enableForAllCompanyCodes\": true,\n    \"active\": true\n}' Verify the response Actual Result: The system doesn\u2019t process the request successfully and throws an error related to the Location Type. {\n    \"id\": \"86fde126-1648-4fe5-8d15-39ace6cec5a4\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"locationTypeRef\",\n            \"message\": \"Field [Location Type] cannot be null or empty.\",\n            \"detail\": \"\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2025-04-16T10:41:59.710+0000\"\n} Expected Result: The system should process the request successfully with the minimal payload, and it should exclude deleted or inactive Company Codes when creating a Location.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-04-16T03:38:17.041-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109941",
+        "summary": "Multi Unit Id: Everytime user login in the same unit ID for smartOCI, if he has access to multiple unit ID's and have roles for smartOCI on both",
+        "description": "Server : stage Credentials :  ayesha.waseem+P+MAdmin@vroozi.com  / Welcome1@ Pre-Requisite:  - User has been associated with smartOCI roles Steps to Reproduce: Login with the given credentials Navigate to Business Unit 89 click on smartOCI link smartOCI is opened in next tab Now close that tab and go back to the tab where PMan is open Navigate to Business unit ID 90 Click on smartOCI smartOCI is open in new tab Actual : User is logged in in business unit id 89 instead of 90 Expected : User should be logged in to the business unit from where it is coming",
+        "status": "In Dev",
+        "assignee": "Sajid Akram",
+        "created": "2025-04-16T01:12:00.411-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109924",
+        "summary": "Smart OCI - Company settings page is not loading the settings of a unit ID in which admin is logged in",
+        "description": "Server : Stage Credentials :  Notifyvroozi14@gmail.com / Welcome1 Steps to reproduce: Login with above user in smartOCI Click on company settings Actual : Application is picking up company settings of different unitID Expected : Application should show the company settings of the logged in user Note : Due to this issue when admin user navigates to shopper view, catalogs are not being shown",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-04-15T08:01:37.210-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109911",
+        "summary": "Multi Unit ID: When user remove a Unit ID then the data from other unit ID is not being loaded while creating user",
+        "description": "Server : Stage Credentials:  ayesha.waseem+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s Steps to reproduce: Login with the above credentials Click on users Click on  Create a new user Enter the data in \u201cBasic Information\u201d section Select value in \u201cBasic Unit Configuration\u201d  Select Unit ID 90 in  Allow access to these business units   Select business unit 90 in \u201cuser settings\u201d drop down Now, select  \u201dBudget Role\u201d  and observe that  Save User  button is enabled Select Unit ID 89 in  Allow access to these business units   Select business unit 89 in \u201cuser settings\u201d drop down Now remove the Business Unit 89 from  Allow access to these business units Actual Result : User settings for Unit ID 90 are not being loaded, also Save button remains disable Expected Result :  User settings for Unit ID 90 should be loaded, also Save button should become enable",
+        "status": "In Dev",
+        "assignee": "Javaid Sattar",
+        "created": "2025-04-15T01:11:00.548-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109796",
+        "summary": "Tech Debt - Sorting in Paginated Queries causing slowness",
+        "description": "Problem statement: Right now, for all paginated searches, we set the sort filter on  createdDate . However, when the user applies sorting on another field from the UI (default is  paymentDueDate ), sorting is applied to both fields, making the query inefficient. We excluded all date filters from this condition, but we should also exclude any filter which has a unique field. Query: {\"deleted\":false,\"unitId\":\"160\",\"accessibleByAP\":true,\"userId\":{\"$in\":[\"78726\"]}},\"sort\":{\"invoiceNumber\":1,\"createdDate\":1} Code: com.vroozi.api.common.filter.PageFilter#buildPageable   static Pageable buildPageable(\n      Integer pageSize, Integer currentPage, String sortField, Sort.Direction sortOrder\n  ) {\n    Sort.Direction direction = isNull(sortOrder) ? Sort.Direction.DESC : sortOrder;\n    sortField = isNullOrEmpty(sortField) ? CommonFields.CREATED_DATE : sortField;\n    List<Sort.Order> sortOrders = new LinkedList<>();\n    sortOrders.add(new Sort.Order(direction, sortField));\n    if (!DATE_FILTERS.contains(sortField)) {\n      // To make sure fields with repeated values are always sorted in the same order we add this even if a sort field was provided (except for date fields)\n      sortOrders.add(new Sort.Order(direction, CommonFields.CREATED_DATE));\n    }\n    return PageRequest.of(currentPage - 1, pageSize, Sort.by(sortOrders));\n  } Suggested Change: Need to remove the default sort on  CREATED_DATE  if user filter bases on invoiceNumber field as well. (For now we\u2019ll only do invoice number, so impact is not big, but we\u2019ll add the rest of the unique fields in ticket   )",
+        "status": "In RC Testing",
+        "assignee": "Aqsa Rani",
+        "created": "2025-04-10T11:37:34.713-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109751",
+        "summary": "Tax Code: If Tax code is updated then in the default company tax code should be auto updated in the drop down ",
+        "description": "URL:   Stage username:   notifyvroozi2@vroozi.com password:  Welcome1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Navigate to Tax codes grid. Set \u201cA083-11\u201c as a default tax code  Update the tax code \u201cA083-11\u201c Actual Result:  If Tax code is updated then in the default company tax code is not auto updating in the drop down until user refresh the page   Expected Result: If Tax code is updated then in the default company tax code should be auto updated in the drop down  Scenario #2 Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Navigate to Withholding Tax Type grid. Add New Withholding Tax Type and add withholding tax code in it. Go to Withholding Tax Codes and delete the associated Withholding Tax code On Withholding Tax Type grid its not auto updating the Withholding Tax code as \u201cN/A\u201c     Actual Result: If user delete the associated Withholding Tax code with Withholding Tax Type it is not updating the Withholding Tax Type grid with N/A. Expected Result: If user delete the associated Withholding Tax code with Withholding Tax Type it should be updated the Withholding Tax Type grid with N/A.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-04-10T00:44:22.125-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109731",
+        "summary": "Withholding Tax code:  If withholding tax codes have less than 10 codes on the grid and user add the withholding tax code it is not showing on the grid until the user refresh the page ",
+        "description": "URL:   Stage username:   notifyvroozi2@vroozi.com password:  Welcome1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Navigate to Withholding tax code grid. Create new Withholding Tax Actual Result:  If withholding tax codes have less than 10 codes on the grid and user add the withholding tax code it is not showing on the grid until the user refresh the page.  Expected Result:  If withholding tax codes have less than 10 codes on the grid and user add the new withholding tax code it should be displayed on the grid without refreshing the page",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-04-09T03:50:24.280-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109727",
+        "summary": "Multi Unit ID: When Admin revoked user access on some Unit ID, then it is not being marked as Inactive for the specific Unit ID",
+        "description": "Server : devqa20 Credentials :  ayesha.waseem+P+MAdminN@vroozi.com  / Welcome1@ Pre: Req:   There must be user created at parent level who has approver roles in child unit ID\u2019s Approver user has been assigned for financial approvals  Steps to Reproduce: Login with Master Admin user search the approver user and revoke his access from the unit ID\u2019s Now with Employee user create a PR such that it should go the approver Actual : PR is going to the approver who\u2019s access has been revoked Expected:  PR should not go to the approver who\u2019s access has been revoked",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-04-09T01:40:18.207-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109717",
+        "summary": "Aggregrations are not working on the External Accounting Validations in the PR document.",
+        "description": "Pre-Condition: External Accounting Validation is enabled on the devqa22 server. \"aggregationEnabled\": Set this field to true. from accounting_db - accounting_validation-config db collection Steps to reproduce: Login int the vroozi portal as employee user. Username:  hasnat.saleem+employee_devqa22@vroozi.com Password: Welcome@1 Navigate to the Non Catalog Request screen. Enter all the required information. Add a two line items with same Accounting Info and Amount. Click on the submit button. Actual Result: Aggregation are not working in the PR document. Expected Result: Aggregation should be working in the PR document.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2025-04-09T00:10:04.760-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109654",
+        "summary": "Regression Testing - RC-2025-5",
+        "description": "Regression testing of Feature Stories and Defects. Following testing milestone is executed:",
+        "status": "Done",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2025-04-06T18:45:23.813-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109625",
+        "summary": "Multi Unit ID: Unit ID is not being successfully revoked if user first adds a new unit ID and then revoked previous Unit ID",
+        "description": "Server : devqa20 Credentials:  ayesha.waseem+P+MadminN@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s Steps to reproduce: Login with the above credentials Click on users Search a user who has access to 1 unit ID (Let\u2019s say 11) Open this user in Edit modal Select Unit ID 12 in  Allow access to these business units   Select business unit 12 in \u201cuser settings\u201d drop down Now remove the Business Unit 11 from  Allow access to these business units Now add Roles and other user detail for business unit 12 Now,  Save  the user Re-open the user and observe that Business Unit ID 11 is still available in  Allow access to these business units Actual Result : Business Unit ID 11 was not revoked  Expected Result :  Business Unit ID 11 should have been revoked",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-04-03T23:25:14.731-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109619",
+        "summary": "STAGE - Accounts Payable - Dispute Invoices - AP user is not able to dispute invoices created through API",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   aqsa.rani+manager@vroozi.com password:  Qwerty@1 Pre Conditions: PO should be created Allow Access to Supplier Portal  toggle should be  ON  for the supplier in PO Allow Dispute Invoice via Supplier Portal  toggle should be  ON  for the supplier in PO A PO based invoice is sent to AP inbox through API Steps to Reproduce: Login through given user Access the doc in hopper inbox Create the invoices Fill mandatory fields Click on the 3-dots to view destination dialog box Please see that Dispute option is not available Actual Result: Dispute option is not available for AP user submitting the invoice created via API Expected Result: Dispute option should be available for AP user submitting the invoice Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-04-03T22:33:39.674-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109589",
+        "summary": "Budget-api: User is unable to download Budgets in bulk ",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Budgets Click on Export Budgets button No budget is download  Actual result:  User is unable to export budgets in bulk  Expected Result: User should be able to export budgets in bulk",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-04-03T03:21:14.607-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109579",
+        "summary": "Taxes - On updating withholding tax code updates the withholding tax in Withholding tax type grid only when we refresh the screen.",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Navigate to Withholding tax code grid. Click on any Withholding tax code and update it. Navigate to Withholding Tax Types grid. Check the Withholding tax type along which the updated Withholding tax code is associated. Withholding tax code is not updated in this grid. Now Refresh the screen. Withholding tax code is updated on this grid too. Actual Result: Withholding tax code is not updated in associated grids without Refreshing the screen. Expected Result: Withholding tax code should updated in associated grids without Refreshing the screen.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-04-02T23:56:52.939-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109480",
+        "summary": "Multi Unit ID: System is showing some filters on aggregated dashboard when user login with Master admin user on Normal chrome browser.",
+        "description": "Server : devqa20 Credentials:  javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s \u00a0 Steps to reproduce: Login with the above credentials User landed on aggregated dashboard. system is showing some PO related filters on aggregated dashboard   Actual Result :   When login master admin on normal Chrome browser system is showing some PO related filters on aggregated dashboard   When login master admin on Chrome incognito  window system is showing blank page with text display as \u201c You are not authenticated to view this page. \u201d Expected Result :  Master admin user should landed on aggregated dashboard screen and No Po related filters should display.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-27T05:43:30.711-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109477",
+        "summary": "Multi Unit ID: Multi select section drop down icon is different from other drop down.",
+        "description": "Server : devqa20 Credentials:  javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s \u00a0 Steps to reproduce: Login with the above credentials Go to users screen and open any created user  select business unit on business unit multi select. check multi select drop down icon. Actual Result :  Multi select Drop down icon is different from normal drop down icon. Expected Result :  both multi select and normal drop down icon must be same.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-27T03:36:36.719-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109476",
+        "summary": "Multi Unit ID: User is unable to create new user once user remove 1 business unit selection and add new business unit during user creation.",
+        "description": "Server : devqa20 Credentials:  javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s \u00a0 Steps to reproduce: Login with the above credentials click on users From users screen click on \u201cCreate New Users\u201d button Enter user basic information From business unit configuration section  select user Primary role. Select any available business unit from business unit drop down. Select business unit in \u201cuser settings\u201d drop down like \u201cbusiness unit 11\u201d Roles and other user detail section is displayed. Remove selected business unit access Now Select other business unit in \u201cuser settings\u201d drop down like \u201cbusiness unit 12\u201d select business unit to give access. Select user role and provides all information.  Now try to save user  Actual Result :  System is not allow user to save user records  Expected Result :  New user should be created successfully.",
+        "status": "RC Testing Failed",
+        "assignee": "Zain Mehmood",
+        "created": "2025-03-27T03:31:49.686-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109475",
+        "summary": "Multi Unit ID: User role section is not displayed when user remove business unit selection during user creation.",
+        "description": "Server : devqa20 Credentials:  javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s \u00a0 Steps to reproduce: Login with the above credentials click on users From users screen click on \u201cCreate New Users\u201d button Enter user basic information From business unit configuration section  select user Primary role. Select any available business unit from business unit drop down.  Select business unit in \u201cuser settings\u201d drop down  Roles and other user detail section is displayed.  Now remove selected business unit access Access is removed and user Roles and other user detail section is also hidden.  Now select same business unit again to give access Select same business unit in \u201cuser settings\u201d drop down  Actual Result :   System display nothing under Roles and other user detail section  Expected Result :  System should display proper data under Roles and other user detail section .",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-27T03:22:24.180-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109461",
+        "summary": "Fix Ng2 Only / Hybrid StoryBook Projects",
+        "description": "Current State There are multiple issues running Ng2 Only / Hybrid StoryBook projects Goal Fix those issues",
+        "status": "In Review",
+        "assignee": "Jaroslav Bellus",
+        "created": "2025-03-26T23:51:45.608-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109459",
+        "summary": "Updating Test cases for Cypress Automation",
+        "description": "Reviewing existing test cases of HEB Reviewing Default and Scenario Configuration Writing new test cases   https://vroozi.testrail.com/index.php?/suites/view/1816&group_by=cases:section_id&group_order=asc&display_deleted_cases=0",
+        "status": "Done",
+        "assignee": "Hasnat.saleem",
+        "created": "2025-03-26T23:10:32.631-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109453",
+        "summary": "PMan: Application removes Company codes from Access field when user cancel the changes done when there are some inactive data association in the access section",
+        "description": "Server : Stage Pre-Reqs:   User record  (employee)should have associations to 2 Company codes and multiple GL accounts in the access section Add one of the company code in the Document defaults  Credentials:  notifyvroozi14@gmail.com/ Welcome1 Steps to reproduce: Login with the above credentials Navigate to Master data Organisation Deactivate the Company code added at the document level defaults Navigate to Master Data > Accounting Deactivate the GL accounts associated at the user record Now navigate back to the Master Data > Users Open the user record  ( Deactivated data will be in orange pills) Change the Company code in the user defaults  (Active company code will be available to apply) Now click on the SAVE button Application will show red noty message that invalid Company code is assigned  Now, click on the cross icon of User edit model  Model is closed Re-open the User record Actual : When user reopens the user record, data of the valid company codes/Invalid Company Codes has been removed from the access> Company codes Expected : When user clicks on the Cancel button then changes should not be saved",
+        "status": "Open",
+        "assignee": "Naufil Aziz",
+        "created": "2025-03-26T20:39:00.839-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109438",
+        "summary": "STAGE - Accounts Payable - Dispute Invoices - AP user is not able to dispute manually created invoice",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   aqsa.rani+manager@vroozi.com password:  Qwerty@1 Pre Conditions: PO should be created Allow Access to Supplier Portal  toggle should be  ON  for the supplier in PO Allow Dispute Invoice via Supplier Portal  toggle should be  ON  for the supplier in PO Steps to Reproduce: Login with AP user Click Create \u2192 Invoice Reference the PO Fill Mandatory fields Click on the 3-dots to view destination dialog box Please see that Dispute option is not available  Actual Result: Dispute option is not available for AP user submitting the invoice Expected Result: Dispute option should be available for AP user submitting the invoice Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-03-26T01:15:23.848-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109437",
+        "summary": "Taxes: Withholding Tax: Tax% field should have % sign as well with the amount in the place holder on create/edit Withholding Tax Code",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Go to Withholding Tax grid  Click on Create Withholding Tax Code go to Tax field % is missing with the amount  Actual result:  % is not showing with the amount placeholder on the Tax% field Expected Result: Tax% field should have % sign as well with the amount in the place holder on create/edit Withholding Tax Code",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-26T01:14:51.280-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109435",
+        "summary": "Taxes:  Withholding Tax: If user search with at least 2 characters then search result should be appeared in the Withholding Tax",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Go to Withholding Tax grid  Search \u201cm\u201c It shows result by searching only 1 character  Actual result:  If user enter one character in the search bar then it shows result Expected Result: If user enter 2 or more characters in the search bar then search result be displayed",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-26T01:03:15.115-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109433",
+        "summary": "Taxes:  If user delete selected default company tax code then it should be auto removed from the selected default company tax code drop",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Select Default Company Tax Code Now delete selected default tax code  Actual result:   If user delete selected default company tax code then it still selected in the default tax code drop down Expected Result:  If user delete selected default company tax code then it should be auto deleted from the selected default company tax code drop and the drop down value should be none",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-26T00:41:37.028-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109432",
+        "summary": "PMAN - Double click on close for receiving button twice is displayed the red error notification on the left bottom of the screen",
+        "description": "URL:   https://devqa31-go.vroozi.com/    username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. GR should be created against any record. Steps to Reproduce: Login with a given user. Navigate to Receipt Screen. Navigate to Ready for Receiving tab. Double click on Close for Receiving button against any record. Red error notification is displayed on the left bottom of the screen. Actual result:  Red error notification is displayed on the left bottom of the screen. Expected Result: Red error notification should not be displayed.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-26T00:21:39.991-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109430",
+        "summary": "Fix Email Template Utils Project",
+        "description": "Status Quo Currently it is not possible to run  npm start  and  npm run build  because it returns SASS and Image gen errors. Goal Resolve the SASS and image generation errors so that both  npm start  (development mode) and  npm run build  (production build) execute successfully without issues. This includes: Fixing incorrect SASS configurations, dependencies, or syntax causing failures. Resolving image generation issues, whether related to missing files, incorrect paths, or dependency conflicts. Ensuring a development and build process without unexpected crashes or errors.",
+        "status": "In Review",
+        "assignee": "Adnan Khalid Shah",
+        "created": "2025-03-26T00:15:27.186-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109424",
+        "summary": "Multi Unit ID: on left menu \"Users\" and \"SSO\" links are not highlighted.",
+        "description": "Server : devqa20 Credentials:  javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s \u00a0 Steps to reproduce: Login with the above credentials From left menu check user and SSO user links Actual Result :  On left menu \u201cUsers\u201d  and \u201cSSO\u201c links are not highlighted. Expected Result :   On left menu \u201cUsers\u201d  and \u201cSSO\u201c links should be  highlighted.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-25T23:31:30.020-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109418",
+        "summary": "Multi Unit ID: system is not navigate on dashboard screen when click on Vroozi logo on screen. ",
+        "description": "Server : devqa20 Credentials:  javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s \u00a0 Steps to reproduce: Login with the above credentials click on avatar and go to profile. Profile screen is available.  Now click on Vroozi logo Actual Result :  by clicking on VROOZI logo system navigate user to business Unit ID screen instead of dash board screen. Expected Result :  by clicking on VROOZI logo system should navigate user to dashboard screen.",
+        "status": "Release Candidate",
+        "assignee": "Sajid Akram",
+        "created": "2025-03-25T22:55:47.701-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109389",
+        "summary": "Taxes:  Create Tax code model fields are not aligned ",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Click on Create a New tax code  Create Tax code model opened  Fields are not aligned  Actual result:  Create tax code model fields are not aligned. Tax Percentage field placeholder is not correct Expected Result: Create tax code model fields should be aligned like before  Tax Percentage field placeholder should be  \u201c0.00 %\u201d",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-25T03:15:53.864-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109387",
+        "summary": "DEVQA5 - Integration - Create Invoice - Clicking Submit for EH shows error in Console and the User drop down does not contain anything in the Invoice Dest Popup.",
+        "description": "URL:  https://devqa26-go.vroozi.com/ username:   asma.latif+APP1@vroozi.com password:  Blueangel1@ / Blueangel1! Preconditions: AP User should have logged into the Application. Ordered PO should already exist. Steps to Reproduce: Click to Create Invoice. Reference a PO. Introduce Mismatch so that Invoice shows Submit for EH button. Click the button. Error shows in Console. Invoice Dest. Pop up opens. Click User Drop down. Its empty. Actual result: Clicking Submit for EH shows error in Console and the User drop down does not contain anything in the Invoice Dest Popup. Expected result: Users drop down should contain values so that Invoice can be submit for EH. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-25T03:11:38.219-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109386",
+        "summary": "Taxes:  \"Create a New Tax Code\" button size should be little big same like on Stage/Production ",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Go to Tax Codes grid  Go to button \u201cCreate a new tax code\u201c Actual result:  \u201cCreate a new tax code\u201c button size is very small and not button size is not same like stage/production.  Expected Result: \u201cCreate a new tax code\u201c button size should be same like on stage/production",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-25T03:03:10.548-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109380",
+        "summary": "Taxes: Checkbox are added with Taxes on Tax Code grid ",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Checkboxes are added with tha Taxes Actual result:  Checkboxes are added with the taxes on Tax codes grid  Expected Result: Checkbox should not added with the taxes on Tax codes screen",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-25T02:39:47.428-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109375",
+        "summary": "Taxes: Tax Codes grid header name should be in the grey grid ",
+        "description": "URL:    Devqa31 username:   notifyvroozi@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Click on master Data Click on Taxes Navigate to taxes screen  Go to Tax code grid  Tax Codes grid header name is not in the grid box   Actual result:  Tax Codes grid header name is not in the grid box   Expected Result: Tax Code grid header name should be in the grid box same like before",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-25T02:21:06.127-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109362",
+        "summary": "Devqa5 - Integration - Accounts Payable - Track Invoices - Overdue - Voided status filter is showing in overdue section in Track invoices",
+        "description": "url:   https://devqa5-purchase.vroozi.com/ username:   aqsa.rani+apm+devqa5@vroozi.com  /  aqsa.rani+processor1+devqa5@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login with given AP user Navigate to Track Invoices \u2192 Overdue Click on the search bar to view filters Apply status filter Please see that \u2018Voided\u2019 status is showing in Overdue section Actual Result: \u2018Voided\u2019 status is showing in status filter in Overdue section Expected Result: \u2018Voided\u2019 status should not show in status filter in Overdue section Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-03-24T23:58:09.454-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109357",
+        "summary": "Multi Unit ID: System is showing change password section for sometime on child user profile while loading profile screen.",
+        "description": "Server : devqa20 Credentials:  Javaid.sattar+P+12+emp@vroozi.com  / Welcome1@ Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s Steps to reproduce: Login with the above credentials Navigate to the business unit 12 Click on user profile Avatar and click on user profile user Profile screen is available  Actual Result :  on child user profile Change password section is visible  for sometime during screen load. Expected result :  Change password section should not be displayed on child user screen.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-24T21:42:20.204-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109263",
+        "summary": "DEVQA5 - Integration - Accounts Payable - Error on Create/Submit Invoice.",
+        "description": "Environment: https://devqa5-go.vroozi.com Username :  asma.latif+AP2@vroozi.com Password:  Blueangel1@ / Blueangel1! Pre-Requisites: AP User should have logged into the Application.  Steps to Reproduce: Click to Create Invoice. Error shows. Add Details , Add Item and click to Submit. Error shows \u201cfailure\u201c. Click OK and Invoice does not get submitted. Actual Result: Error shows on create invoice. Expected Result: No Error should show on create invoice. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-19T12:59:51.242-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109222",
+        "summary": "Integrate PresidioReversibleAnonymizer into LangChain for PII Anonymization",
+        "description": "Goal Enable privacy-preserving processing in our LangChain workflow by ensuring all PII is anonymized before LLM processing and restored afterward, without compromising functionality or requiring extensive refactoring. Details Enable the functionality for the Smart Chat(excluding RAG functionality) Implement  PresidioReversibleAnonymizer  in our LangChain-based workflow to anonymize and deanonymize PII (e.g., names, email, phone numbers, Mongo DB IDs like 672ca0c487e3a613688f6539) seamlessly. Ensure compatibility with tool calls, retries, and streaming, maintaining a single anonymizer instance for consistent mapping. Target minimal code changes for maintainability. Make the anonymization tool configurable",
+        "status": "In Dev",
+        "assignee": "Jaroslav Bellus",
+        "created": "2025-03-18T20:26:25.668-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109206",
+        "summary": "DEVQA5 - Integration - Supplier Portal - Dispute Reason and Dispute Via translation issue in JA.",
+        "description": "URL:  https://devqa5-go.vroozi.com/#/login?org=1027042017&view=supplier username:  asma.latif+Betty@vroozi.com password:  Blueangel1@ Preconditions: SP User should have logged into the SP Application with JA set in the Profile as its Default Language. Invoice has been disputed by the AP User. Steps to Reproduce: Access Invoices > Disputed Invoice  9000020196 Disputed Invoice Page displays. Please check the Dispute Reason value and Dispute via label and value. These are not being translated in JA.  Actual result: Dispute Reason value and Dispute via label and value are not being translated in JA. Expected result: Fields and their values should be translated in logged in user\u2019s language i.e. JA in this scenario. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-18T02:55:44.456-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109119",
+        "summary": "PMAN API - Swagger UI is not working on all environments.",
+        "description": "Environment:  All environments. Access the path:   Actual Results: Blank page is displayed. Expected Results: Swagger UI should be displayed. Screenshot: Note:   has provided a temporary fix on Production during Post Production Sanity testing activity of RC-2025-3. This fix needs to be permanent and done for all environments. cc:  Integration Team  (                )",
+        "status": "Resolved",
+        "assignee": "Iqtidar Arshad",
+        "created": "2025-03-15T00:53:15.141-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109023",
+        "summary": "PO Status Update API : User Id header should not be required",
+        "description": "Endpoint:   purchase-order/status-update User Id should not be required in the header, and the user should be looked up by userRef in the request Payload.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Iqtidar Arshad",
+        "created": "2025-03-13T02:22:09.663-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108985",
+        "summary": "Stage - Accounts Payable - SP Invoice - Invoice is being disputed without selecting any Dispute Reason.",
+        "description": "URL:  https://stage-go.vroozi.com/ username:  asma.latif+APM@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. SP Invoice should be received from SP User. Steps to Reproduce: Access SP Invoice via Inbox.  9000031486 Click to Select Next Action. Select 'Dispute' in the Invoice Destination popup. Select 'Dispute via' = Supplier Portal and leave Reason empty. Please see Submit button enables. Submit and the Invoice is being disputed without having any Reason selected.  Actual result: Invoice is being disputed without having any Reason selected. Expected result: Submit button shouldn\u2019t get enabled until all mandatory fields are filled in. Screen-Shot: Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Adnan Khalid Shah",
+        "created": "2025-03-12T14:58:43.770-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108945",
+        "summary": "Multi Unit ID: The system does not log out a user when the Master Admin deactivates their account.",
+        "description": "Server : devqa20 Pre-Reqs: Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s Credentials:  javaid.sattar+P+12+app2@vroozi.com  / Welcome1@ Steps to reproduce: Login with the above credentials Now Login with Admin user Search the above  user who is already logged in Select the user and deactivate. User should be deactivated successfully. Actual :  User is not logged out from system when Master admin deactivate that user. Expected :  User should be not logged out from system at once when Master admin deactivate that user.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-11T23:40:31.502-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108906",
+        "summary": "Review user search by production",
+        "description": "See related ticket for more information:    When doing a user search (with a text search), and when SDM is enabled we are also finding users matching the text with their production name. This is the code:     if (!requestDTO.isSupplierUsersOnly() && isSDMFeatureEnabled\n        && isSDMOrNoRoleFilter(requestDTO)) {\n      // FIXME: This code looks wrong, and probably should be done differently, but we don't know where it's being used from or why it was added\n      requestDTO.setUserIds(productionService\n          .findDistinctUserByProductionName(requestDTO.getUnitId(), requestDTO.getSearchText(),\n              requestDTO.getActiveProduction()));\n    } And then when doing the filter into the DB we are adding them with an OR:     if (CollectionUtils.isNotEmpty(requestDTO.getUserIds())) {\n      criteria =\n          new Criteria()\n              .orOperator(criteria, where(UNIT_ID).in(requestDTO.getUnitId()).and(DELETED).is(false)\n                  .and(USER_ID).in(requestDTO.getUserIds()));\n    } The issue is that the DB filter is not considering the rest of the parameters in  FindUserRequestDTO  , so it could show, for example, inactive users, or could be showing the userIDsToExclude. We need to fix this code so that all parameters are considered.",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2025-03-11T06:41:18.512-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108871",
+        "summary": "Multi Unit ID: Application allows user to Save the user record when there are some inactive data association in the access section",
+        "description": "Server : devqa20 Pre-Reqs:   Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s User record should have associations to 2 Company codes and multiple GL accounts (for business unit ID, let\u2019s say 11) Add one of the company code in the Document defaults  Credentials:  ayesha.waseem+P+MAdminN@vroozi.com  / Welcome1@ Steps to reproduce: Login with the above credentials Navigate to the business unit 11 Navigate to Master data Organisation Deactivate the Company code added at the document level defaults Navigate to Master Data > Accounting Deactivate the GL accounts associated at the user record Now navigate back to the Parent Business Unit Open the user record  ( Deactivated data will be in orange pills) Change the Company code in the user defaults  (Active company code will be available to apply) Now click on the SAVE button User edit model is closed Actual : When user reopens the user record data of the valid company codes has been removed from the access> Company codes Expected : When user tries to save user record with invalid data associated in the Access section, then application should enforce user to remove this data first and then allow to save",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-10T21:14:26.015-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108860",
+        "summary": "PROD - Accounts Payable - Create Invoice - Location Missing Error shows even its selected against the line item.",
+        "description": "Environment: https://stage-go.vroozi.com  /  https://go.vroozi.com Username :  asma.latif+APM@vroozi.com  / asma.latif+APM@vroozi.com Password:  Blueangel1@ / Blueangel1! Pre-Requisites: Feature Toggle ACCOUNTS_PAYABLE_WORKFLOW_ENHANCED_WORKFLOW should be enabled for the Unitid in DB. Feature Toggle \"ACCOUNTS_PAYABLE_WORKFLOW__DOCUMENT_SETTINGS_CONFIGURATION\" should be enabled for the Unitid in DB. Location field is set Required in the PMAN>Document>Settings>All> LI Config >Accounting Section.  Class field is set Optional in the PMAN>Document>Settings>All> LI Config >Accounting Section.  AP User should have logged into the Application.  Steps to Reproduce: Click to Create Invoice.  9000031471(Stage) / 9000010629(Prod) Add Header Details. Click to Add Item. Add details on both General Info and Accounting tabs with Location selected also. Click the tick mark to save item. Please see Location missing error starts showing. Edit Open the Item and select a Class too in the Accounting tab. Click the tick mark to save item. Please see this time item saves with Location missing error removed. Actual Result: Location missing error starts showing even location has been selected and saved for the item. Expected Result: Location error message should not show. Screen-Shot: Stage PROD Thanks, Asma Investigation When we are checking for empty location we are using the \u201cclassRef\u201d field instead of the \u201clocation\u201d one. So we need to fix it: (In  APDocumentRequiredFieldsValidationServiceImpl )",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2025-03-10T09:04:09.265-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108830",
+        "summary": "Multi Unit ID: Application allows user to navigate to the Business Unit from which he was revoked, when he was already logged in",
+        "description": "Server : devqa20 Pre-Reqs:   Multi unit ID setup should exist User should have access to multiple Unit ID\u2019s Credentials:  ayesha.waseem+P+emp2@vroozi.com  / Welcome1@ Steps to reproduce: Login with the above credentials Navigate to the child unit ID (Lets' say Business Unit 11) Login with Admin user Search the Employee user who is already logged in Open the user model and Revoked his access from \u201cBusiness Unit 12\u201d Now switch back to the Browser where Employee was logged in Select business Unit 12 from the top drop down  Switch Business Unit: User is successfully logged in \u201cBusiness Unit ID 12\u201d, from where his access was revoked Actual : User was successfully logged in \u201cBusiness Unit ID 12\u201d Expected : User should not  logged in \u201cBusiness Unit ID 12\u201d",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-09T22:50:22.685-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108783",
+        "summary": "DEVQA5 - Integration - PO referenced in Voided Invoice can't be linked to other Invoices.",
+        "description": "URL:  https://devqa5-purchase.vroozi.com/logout?org=1027042017&view=supplier username: asma.latif+Betty@vroozi.com password:  Blueangel1@ Preconditions: SP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be Enabled in the DB for the Company Unit Id. Allow Invoice Dispute should be ON for the logged in Supplier. Steps to Reproduce: Access Disputed Invoice via Invoices Page. Click to Void. Add Comments in the Invoice Dest pop up. Click to Submit. Invoice gets Voided. Access the same Invoice. Please see PO is still referenced to it. Click to Create a New Invoice. Search for the PO referenced to the Voided Invoice. Issue 1: Its not available. Access the Voided Invoice. Click the referenced PO. Issue 2: PO status has become  Invoiced . Access the same PO on AP side. Issue 3: PO status has become  Confirmed . Click to Create Invoice. Search for the PO referenced to the Voided Invoice. Issue 4: its not available. Check the PO Look up popup. Issue 5: Text against this confirmed PO says it cant be referenced. Access the same PO in PMAN. PO status shows Confirmed here. Actual result: PO does not remain usable after the invoice its associated with is Voided. Expected result: PO should be available for referencing to other invoices. TestData:  PO: 2000005939 Invoice: 9000020185 Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-06T21:09:25.492-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108746",
+        "summary": "Devqa5- Supplier Portal - \"Edit Invoice\" action showing for Disputed Invoice clicking three-dot menu in Invoices grid",
+        "description": "url:  https://devqa5-go.vroozi.com/#/login?org=1027042017&view=supplier username:  aqsa.rani+supplier2_devqa5@vroozi.com   password:  Qwerty@1 Steps to Reproduce: Login through given user Navigate to Invoices Search for a Disputed Invoice Click on three-dot menu to view actions Please see that \u201cEdit Invoice\u201d action is showing Actual Result: \u201cEdit Invoice\u201d action is showing on three-dot menu in Invoices grid Expected Result: Only \u201cView Invoice\u201c action should show in Invoices grid Screenshot:",
+        "status": "Abandoned",
+        "assignee": "majid.akram",
+        "created": "2025-03-05T21:57:44.657-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108538",
+        "summary": "Tech Debt - Sorting in Paginated Queries causing slowness",
+        "description": "Problem statement: Right now, for all paginated searches, we set the sort filter on  createdDate . However, when the user applies sorting on another field from the UI (default is  paymentDueDate ), sorting is applied to both fields, making the query inefficient. Query: {\"deleted\":false,\"unitId\":\"160\",\"accessibleByAP\":true,\"userId\":{\"$in\":[\"78726\"]}},\"sort\":{\"paymentDueDate\":1,\"createdDate\":1} Code: com.vroozi.api.common.filter.PageFilter#buildPageable static Pageable buildPageable(\n   Integer pageSize, Integer currentPage, String sortField, Sort.Direction sortOrder\n) {\n Sort.Direction direction = isNull(sortOrder) ? Sort.Direction.DESC : sortOrder;\n sortField = isNullOrEmpty(sortField) ? CommonFields.CREATED_DATE : sortField;\n List<Sort.Order> sortOrders = new LinkedList<>();\n sortOrders.add(new Sort.Order(direction, sortField));\n if (!StringUtils.equals(sortField, CommonFields.CREATED_DATE)) {\n   // To make sure fields with repeated values are always sorted in the same order we add this even if a sort field was provided\n   sortOrders.add(new Sort.Order(direction, CommonFields.CREATED_DATE));\n }\n return PageRequest.of(currentPage - 1, pageSize, Sort.by(sortOrders));\n}\n Suggested Change: Need to remove the default sort on  CREATED_DATE  if user filter bases on some other date field.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-27T05:21:25.600-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107810",
+        "summary": "Budget - While doing CR, application shows that CR will go to Budget approver although Budget toggle is OFF from master data",
+        "description": "Server : Production Pre-Req:   Budget feature toggles are ON from DB Active Budget exists with sending to go for Budget approver in case the amount exceeds budget Later on, Switch off the budget from Master data Create and Submit PR, using the accounting and company info used in budget configuration Credentials :  ayesha.waseem+10+emp@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the given user Open the PO created against the PR in pre-req Initiate POCR process Increase the quantity of the line item such that it should exceed the amount of budget Actual: Approval Status button is visible and enable When user clicks on the button , it shows that CR will go for Budget approver Expected: PR Approval status should say that CR will be auto approve Note:  On submitting this PR, it will be auto approved",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-02-11T04:14:33.566-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107579",
+        "summary": "Multi Unit ID: For Employee users, active GL Codes do not appear in the Access section until a Company Code is selected.",
+        "description": "Server:  devqa20 Pre-Req: Multi Unit ID setup is done on the server and User Creation modal code is deployed. Credentials: javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Click users. Open any employee user. Navigate to user  Access Section Click on  GL code No active GL are displayed in drop down. Actual Result : For Employee users, active GL Codes do not appear in the Access section until a Company Code is selected but if user performs following steps then  GL Codes  are available.  Now first click on Company code and select any company. Remove selected company code.  Now click on  GL Code  field again.  All active  GL\u2019s  are available in drop down now.  Expected Result: Active  GL Codes  should be visible in the  Access  section without requiring the user to select a  Company Code  first.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-04T04:16:34.005-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107571",
+        "summary": "Multi Unit ID: System is showing **Send Confirmation** button instead of **Resend Invite **button on user model at child unit Id level  For Inactive users created by the  master admin.",
+        "description": "Server:  devqa20 Pre-Req: Multi Unit ID setup is done on the server and User Creation modal code is deployed. Credentials: javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Click on create new user.  Create New User with role  Central Receiver .  Click on save button. user created successfully.   Now navigate to child unit Id.  Navigate to Master data \u2192 Users  open same user that is currently inactive. Actual Result : Send Confirmation  button is displayed instead of  Resend Invite  button. Expected Result: Resend invite  button should displayed when child user open inactive user created by  Master Admin",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-04T02:08:58.026-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107547",
+        "summary": "Multi Unit ID: Company code access fields are not available for user with role **Central Receiver**.",
+        "description": "Server:  devqa20 Pre-Req: Multi Unit ID setup is done on the server and User Creation modal code is deployed. Credentials: javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Click on create new user.  Create New User with role  Central Receiver .  Now go to access section on user creation model.  Company code access field not available for central receiver user. Actual Result : Company code access fields are not available for user with role  Central Receiver . Expected Result: Company code access field should available for user with role  Central Receiver .",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-03T03:58:54.363-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107535",
+        "summary": "Multi Unit ID: System allows users to assign the same approver user as its alternate approver.",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: javaid.sattar+P+Madmin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame click on approver user Now from approval settings try to add same user as its alternate user. Actual : System is allowing user to update same approver user as its alternate approver user. Expected: System is not allowing user to update same approver user as its alternate approver user. same approver user should exclude from available approver user list.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-03T00:02:12.231-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107355",
+        "summary": "Multi Unit ID - All roles under Budget, Employee and Approver roles are not showing up while creating user from Parent unit ID",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Following Feature toggle should be enable: PURCHASE_EXPRESS PURCHASE__BUDGET PAYMENT_REQUESTS Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Enter all the mandatory fields for users access to Unit id 1 Expand Vroozi Invoice Purchase Actual : All roles are not showing under Budget and Approver roles. Please refer attachment Expected: All roles should be visible",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-28T22:56:29.506-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107199",
+        "summary": "Multi Unit ID: Company Codes are not polpulating while creating Class in the Master Data",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to the Child Unit ID Navigate to Master Data > Accounting Start Adding a New class Actual :  Company codes are not populating Expected: Company codes should populate to create a new class",
+        "status": "Resolved",
+        "assignee": "Sajid Akram",
+        "created": "2025-01-23T23:04:38.550-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107143",
+        "summary": "Multi Unit-ID: Informational messages are missing under the **Business Unit configuration**. fields",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Enter all the mandatory fields under the Basic Information section Under the  Business Unit Configuration  section > Select a Primary role Issue :  Informational message is missing about  Allow access to these business units Select a value in  Allow access to these business units Issue :  Informational message is missing about  * \u00a0User settings for* Actual : Both informational messages are missings Expected: Informational message should be coming",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-22T00:29:54.150-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107046",
+        "summary": "Multi Unit ID - All roles under Vroozi Invoice are not showing up while creating user from Parent unit ID",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Enter all the mandatory fields for users access to Unit id 1 Expand Vroozi Invoice section Actual : All roles are not showing Expected: All roles should be visible",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-20T23:06:52.957-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106984",
+        "summary": "Multi unit ID- Save Button remains enabled even the mandatory data is missing",
+        "description": "Server:  devqa20 Pre-Req:   Multi Unit ID setup is done on the server and User Creation modal code is deployed. Company and Accounting data is created Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Actual : Save button is enabled, even user has not provided any data   Expected: Save button should be disable till the time user has filled all the mandatory information",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-19T23:16:20.416-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106659",
+        "summary": "Error Response Code is incorrect against Unique index while creating budget.",
+        "description": "Pre Condition: A Budget is already exist in the env with name \u201c RC-2025-1-API \u201c Steps to reproduced: Create a duplicate Budget from API. CURL: curl --location 'https://api.vroozi.com/v1/budgets' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjMjM3OWExZi01YzdlLTQwNWYtYmI2MC1jNzJkMWJjYmY2M2QiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiJiYmM3OWI1ZC1mMjBiLTQ3NzYtYWJmNi0zMTMzYTk2MWEwOTUifQ.N0TIsDn3wq8QdeQ7VXJMZO6-vEdqKRP-f8R_lfsOsEHARKPOBBGbsQK2qoSfcxo5uIDnC1QDslnnda0-CMIXFA' \\\n--header 'x-api-key: Mxapn65qY29r1cIgm2Zz3KNRHAB1GxI33apQLNPf' \\\n--data-raw '{\n    \"name\": \"RC-2025-1-API\",\n    \"description\": \"RC-2025-1-API\",\n    \"totalAmount\": 1000,\n    \"budgetAssociations\": [\n        {\n            \"companyCodeRef\": {\n                \"id\": \"1310\",\n                \"externalId\": null,\n                \"docNo\": \"WNCompany\",\n                \"label\": \"WNCompany - WNCompany\",\n                \"type\": \"CompanyCodeModel\",\n                \"archived\": false\n            },\n            \"plantCodeRef\": {\n                \"id\": \"62db8e8eb74a6915a248dbd3\",\n                \"externalId\": null,\n                \"docNo\": \"WNPlant\",\n                \"label\": \"WNPlant - WNPlant\",\n                \"type\": \"PlantCodeModel\",\n                \"archived\": false\n            },\n            \"purchasingOrgRef\": {\n                \"id\": \"62db8e78b74a6915a248da35\",\n                \"externalId\": null,\n                \"docNo\": \"WNPurchasing\",\n                \"label\": \"WNPurchasing - WNPurchasing\",\n                \"type\": \"PurchasingOrganizationModel\",\n                \"archived\": false\n            },\n            \"costObjectRef\": {\n                \"id\": \"62db8efbb74a6915a248e16a\",\n                \"externalId\": null,\n                \"docNo\": \"WNCost\",\n                \"label\": \"WNCost - WNCost\",\n                \"type\": \"CostCenterModel\",\n                \"archived\": false\n            },\n            \"glAccountRef\": {\n                \"id\": \"62db8ec9b74a6915a248e135\",\n                \"externalId\": null,\n                \"docNo\": \"WNGLAccount\",\n                \"label\": \"WNGLAccount - WNGLAccount\",\n                \"type\": \"GlAccountModel\",\n                \"archived\": false\n            },\n            \"customerRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fd5b74a6915a248e4c4\",\n                \"externalId\": null,\n                \"docNo\": \"WNCustomer\",\n                \"label\": \"WNCustomer - WNCustomer\",\n                \"type\": \"CustomerModel\",\n                \"archived\": false\n            },\n            \"classRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": [\n                    \"1310\"\n                ],\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f5ab74a6915a248e37c\",\n                \"externalId\": null,\n                \"docNo\": \"WNClass\",\n                \"label\": \"WNClass - WNClass\",\n                \"type\": \"ClassModel\",\n                \"archived\": false\n            },\n            \"projectRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f7db74a6915a248e3f8\",\n                \"externalId\": null,\n                \"docNo\": \"WNProject\",\n                \"label\": \"WNProject - WNProject\",\n                \"type\": \"ProjectModel\",\n                \"archived\": false\n            },\n            \"locationRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fb6b74a6915a248e4ae\",\n                \"externalId\": null,\n                \"docNo\": \"WNBranches\",\n                \"label\": \"WNBranches\",\n                \"type\": \"LocationModel\",\n                \"archived\": false\n            },\n            \"locationTypeRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f98b74a6915a248e475\",\n                \"externalId\": null,\n                \"docNo\": \"WNLocationType\",\n                \"label\": \"WNLocationType\",\n                \"type\": \"LocationTypeModel\",\n                \"archived\": false\n            }\n        },\n        {\n            \"companyCodeRef\": {\n                \"id\": \"1310\",\n                \"externalId\": null,\n                \"docNo\": \"WNCompany\",\n                \"label\": \"WNCompany - WNCompany\",\n                \"type\": \"CompanyCodeModel\",\n                \"archived\": false\n            },\n            \n            \"purchasingOrgRef\": {\n                \"id\": \"62db8e78b74a6915a248da35\",\n                \"externalId\": null,\n                \"docNo\": \"WNPurchasing\",\n                \"label\": \"WNPurchasing - WNPurchasing\",\n                \"type\": \"PurchasingOrganizationModel\",\n                \"archived\": false\n            },\n            \"costObjectRef\": {\n                \"id\": \"62db8efbb74a6915a248e16a\",\n                \"externalId\": null,\n                \"docNo\": \"WNCost\",\n                \"label\": \"WNCost - WNCost\",\n                \"type\": \"CostCenterModel\",\n                \"archived\": false\n            },\n            \"glAccountRef\": {\n                \"id\": \"62db8ec9b74a6915a248e135\",\n                \"externalId\": null,\n                \"docNo\": \"WNGLAccount\",\n                \"label\": \"WNGLAccount - WNGLAccount\",\n                \"type\": \"GlAccountModel\",\n                \"archived\": false\n            },\n            \"customerRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fd5b74a6915a248e4c4\",\n                \"externalId\": null,\n                \"docNo\": \"WNCustomer\",\n                \"label\": \"WNCustomer - WNCustomer\",\n                \"type\": \"CustomerModel\",\n                \"archived\": false\n            },\n            \"classRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": [\n                    \"1310\"\n                ],\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f5ab74a6915a248e37c\",\n                \"externalId\": null,\n                \"docNo\": \"WNClass\",\n                \"label\": \"WNClass - WNClass\",\n                \"type\": \"ClassModel\",\n                \"archived\": false\n            },\n            \"projectRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f7db74a6915a248e3f8\",\n                \"externalId\": null,\n                \"docNo\": \"WNProject\",\n                \"label\": \"WNProject - WNProject\",\n                \"type\": \"ProjectModel\",\n                \"archived\": false\n            },\n            \"locationRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fb6b74a6915a248e4ae\",\n                \"externalId\": null,\n                \"docNo\": \"WNBranches\",\n                \"label\": \"WNBranches\",\n                \"type\": \"LocationModel\",\n                \"archived\": false\n            },\n            \"locationTypeRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f98b74a6915a248e475\",\n                \"externalId\": null,\n                \"docNo\": \"WNLocationType\",\n                \"label\": \"WNLocationType\",\n                \"type\": \"LocationTypeModel\",\n                \"archived\": false\n            }\n        }\n    ],\n    \"durationType\": \"MONTHLY\",\n    \"fromDate\": \"2025-01-11\",\n    \"overBudgetAction\": \"ALLOW_WITH_APPROVAL\",\n    \"budgetApproverRefs\": [\n        {\n            \"id\": \"77511\",\n            \"externalId\": null,\n            \"docNo\": \"waheed.nawaz+BA_Prod@vroozi.com\",\n            \"label\": \"Waheed Budget\",\n            \"type\": \"UserModel\",\n            \"archived\": false\n        }\n    ],\n    \"currency\": \"USD\",\n    \"toDate\": \"2025-02-10\",\n    \"active\": true\n}' Actual result: Error message is incorrect it returns 400 bad request. Expected Result Error Response Code should be 409 Conflict in this case.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Iqtidar Arshad",
+        "created": "2025-01-10T22:45:26.785-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106629",
+        "summary": "Multi Unit ID - Save button becomes enable if user has provided Role only against one business unit",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Enter all the mandatory fields for users access to Unit id 1 Select the role Employee Then Continue to add data for another unit ID you are providing access on Do not select role only enter document defaults Click on Save button Actual : Exception is coming in the logs\u2026 Save button should not be enables unless role is selected against all unit IDs Expected: Save button should remain disable",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-09T22:15:47.902-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106614",
+        "summary": "Multi Unit ID - Data in Location type field is not being populated on user creation modal",
+        "description": "Server:  devqa20 Pre-Req:   Multi Unit ID setup is done on the server and User Creation modal code is deployed. Company and Accounting data is created Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Select company code in the company code field of document defaults section Click on Location type field Actual : Data in Location type field is not being populated on user creation modal Expected: Data should be populated",
+        "status": "Resolved",
+        "assignee": "Abdul Qayyum",
+        "created": "2025-01-09T04:51:39.093-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106448",
+        "summary": "Multi Unit ID: Red noty error occurs on selecting data in Business unit IDs",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to the User creation Modal Select data in the following fields: (*Primary User Role*, *Allow access to these business units* and then selects a value in  User settings for ) Actual :  Red noty error occurs on selecting data in Business unit IDs Expected: There shouldn\u2019t be any error",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-03T03:18:28.781-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106445",
+        "summary": "Multi Unit ID - Data in Document defaults fields is not being retained if user is created with Multiple unit ID access",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to Users listing frame Click on Create User button Enter all the mandatory fields for users access to Unit id 1 Fill up the Document defaults Then Continue to add data for another unit ID you are providing access on Now re-select the previous unit ID Actual : Data in various accounting fields is not saved Expected: Data should be populated saved",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-03T02:45:48.335-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106443",
+        "summary": "Multi Unit ID: Multiple issues on line item modal and user profile",
+        "description": "Server:  devqa20 Pre-Req:  Multi Unit ID setup is done on the server and User Creation modal code is deployed Credentials: ayesha.waseem+10+Admin@vroozi.com  / Welcome1@ ayesha.waseem+emp@vroozi.com  / Welcome1@ Steps to Reproduce: Login with the above credentials Navigate to the PR creation page Click on Add line item Actual : Category field is readonly and empty with emp user Purchasing Org field is not being populated (nor on Line item Or on User profile) Company Code is not being populated, if Dictate via company code field is OFF Expected: Data should be populated properly",
+        "status": "Resolved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-03T02:35:38.966-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103593",
+      "released_in_current_rc": false,
+      "summary": "Enable a multi-unitID account for Vroozi clients like Maersk",
+      "description": "",
+      "status": "In Design",
+      "assignee": "Naufil Aziz",
+      "created": "2024-09-24T01:26:04.603-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-109856",
+        "summary": "Multi-unitID: Internal Demo Feedback: Improve the \"?\" icon and associated message text on the user management modal",
+        "description": "Business Case: Feedback received from Hugo Solano, for the internal demo done on 04/09/2025 PKT.  Acceptance Criteria: Update the \u201c?\u201d icon used on the user creation / editing modal from \u2026 to a version with sharper edges, as is common for all icons used in the application, similar to the following example \u2026 We also need to update the text for both instructional messages shown on the modal, as defined below:  Change message text from \u2026  To \u2026 Please allow the user to access one or more business units, in order to configure the user's settings for that account. Please select one or more business units that this user should be allowed access to. Please select a business unit, for which you would like to configure this user's account settings. Please select the business unit that you would like to configure this user's account settings for.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-04-11T03:06:35.125-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-109388",
+        "summary": "Multi-unitID: MVP clean-up: Add icons for left nav bar links in the Parent unitID",
+        "description": "Acceptance Criteria: Use the following icons from the standard left nav bar, in existing unitIDs, for the links shown in the Parent unitID\u2019s left nav bar:  Parent unitID Nav Bar Link Icon to be used Dashboard Business Units Users SSO",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-25T03:14:54.062-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-109008",
+        "summary": "Multi Unit ID: User is not being taken to the correct document, in the appropriate child unitID when user opens document from email",
+        "description": "This ticket has been converted into a SPIKE, so that the team can determine the LOE required to fulfil these requirements.  Note: We will NOT be able to go-live without addressing the scenarios documented in this ticket High-level reqs: When a user clicks on the action button in an email notification, they should be taken to the appropriate document, in the correct unitID.  For users that were created within a single unitiD, the system should continue working as it does today.  For users that have access to multiple unitIDs, the system should intelligently authenticate them against the Parent unitID, and then automatically route them to the correct child unitID, and the correct document within that child unitID. Emails list: Financial approver Sourcing Approver Budget Approver Emails send to Requester user informing about PO (in  this user is being thrown out of system, once user tries to login by clicking \u201cView Purchase Order\u201d Email sent to Requester on PR approval:  'Your purchase request has been approved.' Email sent to Buyer to create PO:  'Ready for Sourcing: Purchase Request 1000012102' Email sent to buyer when he create PO:  'PO 2000009436 has been created and sent out to Ayesha-001' Email sent to requester when buyer rejects PR:  'Your purchase request has been rejected' Email sent to Requester once supplier provides Bid: \u201c ABC Supplier  has submitted bid for RFQ #\u201d. Email sent to Buyer once supplier provides Bid: \u201c ABC Supplier  has submitted bid for RFQ #\u201d. \u2013 When RFQ is created by buyer. Email sent to Requester once buyer Assign PR number: \u201cABC Buyer has assigned PR #\u201c. Rejection emails from sourcing approver :  'Your Purchase Request 1000012091 for Sourcing Review has been Rejected.' Sourcing Approver forwards email  'You have received a purchase request for approval from Ayesha Employee' Rejection emails from Financial approver:  'Your purchase request has been rejected.' Emails in Accounts Payable: Exception encountered in invoice. Please Resolve. You have received an invoice for approval. There are invoices that require your immediate attention. Emails in POCR: Email sent to Sourcing Approver:  'You have received a change request for approval from Ayesha Employee' Email Identified by DEV: Email sent to adhoc provider when final PO created:'{0} created Purchase Order {1} for {2}' Email sent to requester | buyer when PO status changed by supplier actions:                                                                 'Item(s) of PO {0} has been accepted | Purchase Order {0} has been accepted | Purchase Order {0} has been shipped | Purchase Order {0} has been rejected | Item(s) of PO {0} has been disputed | Purchase Order {0} has been disputed' Email sent to supplier on PO cancellation:'{0} - Purchase Order {1} was canceled.' Email sent to requester | buyer on PO cancellation:'Purchase Order {0} was canceled.' Email sent on scheduled PR submission: \u2018PR #{0} was successfully submitted' Email sent to requester when approver is out of office: \u2018Out of Office response\u2019 Email sent to supplier to intimate about item(s) received against a PO ( Email to supplier  on  GR partial/full reception  and  partial/full return ):'Purchase Order {0} has been received | Item(s) of PO {0} has been received' Emails in Accounts Payable: Email sent to requester | buyer when close PO action failed after final invoice posted: \u2018[IMPORTANT] Please close this Purchase Order\u2019 Email sent on expense report approval : \u2018You have received an expense report for approval from\u2019 Email sent when expense report rejected : \u2018Your expense report %s has been Rejected.\u2019 Email sent when expense report approved : \u2018Your expense report %s has been Approved.\u2019 Email sent when expense report paid : \u2018Your expense report %s has been Paid.\u2019 Email sent when expense report is ready for processing / approved : \u2018A new expense report for %s is ready for processing.\u2019 Email sent to requester when payment request is approved: \u2018Your payment request has been approved.\u2019 Email sent to requester when payment request is rejected: \u2018Your payment request has been rejected.\u2019 Email sent to approver and alternate approver when payment request is submitted: \u2018You have received a payment request for approval from {0}\u2019 Email sent to requester when payment request approver is out of office: \u2018Out of Office response\u2019 Email sent to the SP user and to buying org. users upon ASN submission: \u2018ASN {0} has been submitted\u2019 Email sent to the SP user who cancelled the ASN and to buying org. users: \u2018ASN {0} has been canceled\u2019 Email sent to the SP user and to buying org. users upon ASN reception: \u2018ASN {0} has been received\u2019",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-13T00:19:22.966-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108954",
+        "summary": "Multi-unitID: MVP clean-up for go-live: Hide the Change history and Delegation info tabs in the Parent unitID's user modal",
+        "description": "",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-12T00:40:45.059-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108953",
+        "summary": "Multi-unitID: MVP clean-up for go-live: Hide the informational banner on the Parent unitID's landing screen",
+        "description": "",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-12T00:38:36.055-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108952",
+        "summary": "Multi-unitID: MVP clean-up for go-live: Hide the upload/download (+ download template) buttons on the Parent unitID's user management screen",
+        "description": "",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-12T00:36:23.997-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108951",
+        "summary": "Multi-unitID: Allow Master Admins in the Parent unitID to see the aggregate reporting dashboard created in VZI-105776",
+        "description": "to review the PM dashboard ticket for Modern Niagara, and see if any specific implementation details need to be documented here.  This dashboard will be visible ONLY in the Parent unitID. It should NOT be visible in any linked child unitID, regardless of the logged in user\u2019s role. This dashboard will be visible to all active, non-deleted Master Admins in the Parent unitID When a Master Admin logs into the Parent unitID, they will land on this new aggregate dashboard. There should be a link in the left nav-bar of the parent unitID, so the Master Admin can navigate to, and from the dashboard.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-12T00:30:16.071-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108483",
+        "summary": "Ignore / Hide all accounts belonging to Parent unitID users, within the Child unitID's user bulk upload functionality",
+        "description": "impacted Areas: Child UnitID:  User bulk upload / download Simply ignore users in the bulk upload that were created in the parent unitID. We don\u2019t need to do an error report for now.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-27T03:04:30.789-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108449",
+        "summary": "Hide all accounts belonging to Parent unitID users, within the Child unitID's user management table",
+        "description": "impacted Areas: Child UnitID:  User table on the UI User search on the user management screen",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-26T22:53:44.527-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-108448",
+        "summary": "QA: Automatically log out any user whose account is deleted, deactivated by a Master Admin, or their access to the current unitID is revoked.",
+        "description": "",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-26T22:51:20.842-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-107882",
+        "summary": "Parent unitID - Master Admins should be able to delete user records from the Parent unitID ",
+        "description": "Business Case: Allow Master Admins, to delete user records for users that were created in the Parent unitID. This should subsequently delete the corresponding user records created in any of the linked child unitIDs that the affected user may have had access to. The user deletion option should not permanently remove the user records from the database layer, as doing so will have negative repercussions throughout the system. instead, these records should be flagged, so they longer show up in an interactive manner, within the applciation. Acceptance Criteira: Prerequisites: The user carrying out these operations should be logged into the Parent unitID The user carrying out these operations should have the Master Admin role assigned to them within the context of the Parent unitID The user being affected by these operations should have been created in the Parent unitID, with a non-Admin role Deleting a user record in the Parent unitID: The Master should be able to click on the \u201cdelete\u201d icon for an individual user record, in the user management table.  Clicking on this icon should display a secondary pop-up message for the Master Admin, as king them to confirm that they want to proceed with the intended action.  The modal should have the title \u201c Are you sure? \u201c The modal should display the message \u201c Deleting a user will remove their ability to access any of the business units they may have had access to. This is a non-reversible action. Are you sure you want to proceed with this? \u201c The modal should present the user with 2 buttons;  Cancel  and  Yes . Clicking on cancel should dismiss the modal, and the system\u2019s state should not change as a result. The affected user\u2019s records will remain as they were.  Clicking on Yes, will proceed with the user record deletion.  Effect of user record deletion on the system\u2019s state: Once a user\u2019s record has been deleted by a Master Admin; via the Parent unitID, the system should \u2026  Mark the affected user\u2019s record as \u201cdeleted\u201d in the Parent unitID, so that the user is no longer able to access the Parent unitID. Their user is not visible in the user management table. Nor is their user surfaced as an active, selectable option anywhere in the unitID.  Mark the affected user\u2019s record as \u201cdeleted\u201d in all the Child unitIDs that the user had access to, so that the user is no longer able to access those child unitIDs. Their user is not visible in the user management table. Nor is their user surfaced as an active, selectable option anywhere in the unitID. The system should retain all user records at the database layer, so any programmatic / data references to that record remain intact, and none of the system\u2019s functionality breaks as a result of this \u201cdeletion\u201d. Effect on a user\u2019s active session(s), if their record is deleted by a Master Admin: If a user is logged into an active session, when the Master Admin deletes their user record from the Parent unitID, that user needs to be automatically logged out of all active sessions.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-13T02:35:21.130-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-107376",
+        "summary": "Allow a Master Admin to revoke access to a specific child unitID via the user record in the Parent unitID",
+        "description": "When a user is reactivated by the Master Admin, ONLY access to the child unitID\u2019s specified in their user record should be reinstated.  What if a child unitID Admin tries to create a user record, for a user that was already provisioned via the linked Parent unitID? Answer: The system should show an appropriate error message. (This should be handled in a separate ticket, at a later date.) Business Case:   Master Admins need the ability to manage user access efficiently across linked child unitIDs from within the Parent unitID. This includes the capability to revoke a user\u2019s access to a specific child unitID when necessary. Currently, while users can be assigned access to multiple child unitIDs, there is no streamlined process for revoking access at the Parent unitID level. Implementing this feature ensures better control over user permissions, reduces security risks, and aligns with governance policies. Acceptance Criteria: Prerequisites: The user must have been originally provisioned via the Parent unitID. The user performing these actions should be a Master Admin, and present in the Parent unitID. Access Revocation Execution: Master Admins should be able to navigate to the user management screen in the Parent unitID. Master Admins should be able to revoke access to a child unitID, by clicking on the \"x\" within the \"pill\" representing that specific unitID, within the \"<add field label here>\" field. Confirmation Message: When a Master Admin clicks on the \"x\" for a child unitID, a confirmation message should appear. The message should inform the Admin of the consequences of revoking access, including: The user will lose access to the selected child unitID. The action is reversible only from the Parent unitID. The user record in the Parent unitID will retain necessary data for potential reinstatement. Message to be displayed in the confirmation modal:  'You are about to revoke this user's access to [Child UnitID]. This action will immediately remove their ability to operate within this account. If needed, access can be restored later. Are you sure you want to proceed?' The message should include options to  Confirm  or  Cancel  the action. Effects of Revocation: Once confirmed, the following actions should occur: The user should no longer have access to the revoked child unitID. The child unitID should no longer appear in the user\u2019s record within the Parent unitID as an accessible option. The user\u2019s profile should be removed from the child unitID\u2019s user management list. All permissions and configurations for that child unitID should be archived for potential restoration. The user\u2019s Change history should be updated with the details of this event.  The event should record this change the same way that removing values from other multi-select fields (e.g. the Company Code field in the Access section) works. The main change should be displayed in the audit log as \u201c The value in <field display name> was modified. \u201c Underneath this, the system should display exactly what change was made, \u201c - Removed: Business Unit - <Company Name of the Child unitID that was removed> \u201c Data Retention for Future Restoration: The system should retain the user\u2019s prior configurations for the revoked child unitID. If access is later reinstated, the system should restore the user\u2019s previous configurations by default, if still valid. If any previous configurations are no longer valid, affected fields should be left empty for manual reassignment. Restoration Process & Configuration Validation: If a Master Admin chooses to restore access to the revoked child unitID: The child unitID should be re-added to the user\u2019s accessible unitIDs list. The system should verify the validity of previously assigned configurations. If any settings are outdated or unavailable \u2026  For single select fields, the system should remove the old value and leave them empty For multi-select fields, the system should highlight the affected \u201cpill\u201d with an orange border, show a \u201c?\u201d icon in the pill, where hovering over it will show a message to the Master Admin letting them know what the problem is.  Error Handling: If access revocation fails due to system issues, an error message should notify the Admin and prompt a retry. The message should read: 'An error occurred while revoking access to [Child UnitID]. Please try again. If the issue persists, contact support.' This message should be clearly displayed and provide guidance on the next steps. Testing Considerations: Verify that only Master Admins can revoke access. Ensure that access revocation immediately removes the user from the child unitID\u2019s user list. Validate that reinstating access restores previous configurations unless outdated. Confirm that actions are logged appropriately for audit purposes.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-29T01:00:22.534-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-107078",
+        "summary": "Ensure that Master Admins are ONLY able to see the child unitIDs in another user's record, which they themselves have access to.",
+        "description": "Business Case:   Master Admins in a Parent unitID have the ability to manage access for other users to child unitIDs linked to the Parent unitID they are currently logged into. However, a Master Admin should only be able to assign access to child unitIDs that they themselves have access to. Additionally, if a user\u2019s record contains child unitIDs that the Master Admin does not have access to, those unitIDs should remain hidden from the Master Admin. This ensures that sensitive access information remains restricted, maintaining the principle of least privilege and preventing unnecessary exposure of data. Acceptance Criteria: Prerequisites: The Master Admin must be logged into the Parent unitID. The user record being accessed should contain child unitIDs that may or may not overlap with the Master Admin\u2019s accessible unitIDs. User Record Access & Visibility Constraints: Master Admins should be able to access another user's record via the user management screen in the Parent unitID. When opening a user\u2019s record, the system should display the child unitIDs that the user currently has access to. The only exception to the above rule is that the system should filter out any child unitIDs that the Master Admin does not have access to. The Master Admin should neither see these restricted child unitIDs as selected, nor as selectable options in the user record. Handling of Hidden Child unitIDs: If a user has access to child unitIDs that the Master Admin does not, the system should present the user record as if the user has no access to those unitIDs. There should be no indication that additional child unitIDs exist outside the Master Admin\u2019s scope. Assignment Restrictions: When modifying a user\u2019s child unitID access, the Master Admin should only be able to assign unitIDs that they themselves have access to. Testing Considerations: Verify that a Master Admin can only see and assign child unitIDs that they have access to. Validate that when a Master Admin opens a user record, restricted child unitIDs remain hidden. Test various permission scenarios, including: A Master Admin with full access to all child unitIDs. A Master Admin with limited access to specific child unitIDs. A Master Admin attempting to modify a user\u2019s access beyond their scope.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-21T03:34:41.687-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-107063",
+        "summary": "Hide SDM roles on the User creation/editing modal in the Parent unitID",
+        "description": "Business Case: As all SDM related configuration will be done in the specific child unitIDs that have SDM enabled, the related user role assignment controls should not be visible on the Parent unitID\u2019s user modal.  These roles need to be hidden on the UI, as we do not want to add SDM specific configurations, to the User creation/editing modal in the Parent unitID.  Acceptance Criteria: The currently logged in user should be a Master Admin The user should be present in the Parent unitD The user should have already opened the user creation / editing modal Which UI controls should be hidden on the UI? SDM related user roles should NOT be visible on the UI.  These roles; and their related configurations, should only be visible on the user creation/editing modal, in thee specific child untiIDs that have the SDM module enabled in them.  Questions:  Question Answer Asked by \u2026 Asked on \u2026 Answered by \u2026 Answered on \u2026",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-21T00:32:17.987-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106783",
+        "summary": "Allow Master Admins to use the \"Resend Invite\" functionality to reset a specific user's login credentials",
+        "description": "Original ticket dealing with the \u201cResend Invite\u201d button:",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-15T02:11:21.696-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106779",
+        "summary": "Allow child unitID users to access smartOCI from the PMAN navigation column",
+        "description": "Acceptance Criteria: Once the user navigates to the child unitID Check if they have any smartOCI roles assigned at the DB level If so, show a link to smartOCI in the left nav column The label should read \u201csmartOCI\u201d This should be located under \u201cShopper View\u201d but above \u201cDashboards\u201d Clicking on this will open smartOCI in a new tab The user should be automatically logged into smartOCI, going directly to the landing screen Their access to features/functions/data in smartOCI should be based on their assigned role(s) and Content Views/Groups They should NOT see the \u201cLogout\u201d button in smartOCI Closing the tab should NOT end their logged in session in the browser Closing the tab should return them to the tab with PMAN open in it.  This will be handled in a separate ticket. Prob at a later date.   Stupidly complex scenario which makes sense sirf Abdul ke dimagh mein: User goes to parent unitid user goes to child unitid 1 opens smartOCI in tab 2 User goes to tab 1 User changes to child unitID 2 User goes to smartoci in tab 3 User goes to tab 2 User interacts with smartoci system should show a UI blocking message telling them that they are going to be kicked out of this smartoci session tab auto closes on user clicking the OK button User is moved over to the next active tab/back to the PMAN tab",
+        "status": "In QA",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-15T01:33:39.998-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106778",
+        "summary": "Allow Parent unitID Master Admins to configure SSO settings from the Parent unitID for all linked child unitIDs",
+        "description": "The SSO config screen should ONLY be visible in the Parent UnitID The SSO config screen should be read-only in the linked child unitIDs When the Admin configures SSO settings for their company; from the Parent unitID, those configs should be saved in ALL the linked child unitIDs The SSO ID field; in the user record, should ONLY be editable in the Parent unitID, for users that were created in that parent unitID Users, that were originally created via the Parent unitID, will no longer be visible in the linked Child unitIDs ( future ticket ). The SSO ID field; in the user record, should be editable in the child unitID, for users that were directly created in that child unitID The SSO ID field in the user record will be editable in the child unitID for such users.  We need to figure out what changes may need to be made to the actual SSO login logic, to allow all users belonging to the same company, to be directed into the correct unitID, without relying on unitID specific identifiers in the SSO Consumer URL.  We will need a data-fix for existing users that have SSO IDs, as well as for replicating the SSO configs across all linked unitIDs (Parent + Children).  We need to make sure that the SSO Consumer URL for each child unitID should be the same as the SSO Consumer URL of the Parent unitID.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-15T01:32:57.360-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106776",
+        "summary": "Allow Parent unitID Admins to update existing user records, and propagate changes to appropriate child unitIDs",
+        "description": "Info added based on discussion on 01/02/2025:  If a Master Admin is restricted to a subset of child unitIDs, any user record they open up, they should be able to see all the child unitIDs that user has access to. However, they can only assign, view and configure access for the child unitIDs that they themselves have access to.  Info added based on discussion on 01/16/2025:  This ticket will  NOT  deal with scenarios related to revoking access to a specific child unitID, from the user record in the Parent unitID. Business Case: Master Admins need a way to provision and manage accounts for users that will be granted access to multiple child unitIDs. We need to introduce a user management screen to enable this. We also need to update the user record modal to allow Master Admins to configure an individual user\u2019s settings for each child unitID they will have access to.   Acceptance Criteria: Prerequisites: The currently logged in user must be a Master Admin.  The user should be present in the Parent unitID.  The user must have already opened an existing user record, and the system should have already loaded all child unitID configs for that user record.  What can the Master Admin do on the user modal, when editing the user record? Screen 1 Screen 2 Screen 3 When a Master Admin clicks on the \u201cCreate a new user\u201d button, the system should display the standard user creation modal to them.  This modal will be different in the following ways from the standard user creation modal shown in child / standalone unitIDs:  In the \u201cBasic Information\u201c section of the modal, there should be a new single-select drop-down field.  This field should be titled \u201cPrimary user Role\u201c.  This drop-down should list 2 options; \u201cMaster Administrator\u201c & \u201cNon-Administrator\u201c.  This field should be empty by default on the modal.  This field should be a required field.  if the user does not select a value in this field, the field should be highlighted with a red border, and the \u201cSave User\u201d button on the modal should remain disabled.  Under the \u201cBasic Information\u201d section, there should be a new section added to the modal, titled \u201cBusiness Unit Configuration\u201c.  This new section should have the following controls:  A first multi-select type-ahead field titled \u201cAllow access to these business units\u201c. The user should see options for the child unitIDs connected to the currently logged in Parent unitID. The options list should present these options using their respective Company Name values.  The user should be able to search for an option by it\u2019s name, by typing the search terms into the field.  The user should be able to select more than one of these options.  Any option already selected by the user, should no longer be presented as a selectable option in the list.  The selected values should be displayed in the field, in individual \u201cpills\u201d. With a \u201cx\u201d in each pill, to allow the user to remove/deselect one of these choices.  The second single-select type-ahead field titled \u201cUser settings for\u201c, should only become visible once the Master Admin has selected at least 1 option in the 1st field.  This drop-down should only present; as options, the choices that the the Master Admin has already selected in the 1st field.  The options should be presented using the child unitID\u2019s company name value.  The user should ONLY be able to select 1 of the listed options at a time.  There should be an informational message in this section, below the fields mentioned above.  The message should be preceded by a yellow \u201c?\u201d (already used elsewhere in the application)  Under this image, there should be the message \u201cPlease allow the user to access one or more business units, in order to configure the user's settings for that account.\u201c This message should be visible whilst the user hasn\u2019t selected any value in the 1st field.  Once the user select\u2019s a value in the 1st field, but has yet to select one in the 2nd field, this message should be replaced by a new message, stating \u201cPlease select a business unit, for which you would like to configure this user's account settings.\u201c The updated message, as well as the \u201c?\u201d image should disappear once the user select's a value in the 2nd field.  The other standard sections of the user modal should be hidden by default.  These sections should ONLY become visible once the Master Admin selects a value for the 2nd field mentioned above.  Every time the Master Admin changes the selection within the 2nd field, the other sections below the \u201cBusiness Unit Configuration\u201c section, should be reloaded to reflect the data/settings for the respective child unitID.  All data / configurations from these sections should ONLY be applicable to the user\u2019s record in the child unitID that is currently selected on the modal.  The \u201cSave User\u201d button should remain disabled, until the Master Admin has filled out all required fields on the modal.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-15T01:31:38.340-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106054",
+        "summary": "Allow a Parent unitID's user to edit their own profile from a child unitID",
+        "description": "Business Case: Users; that were originally created within the Parent unitID, that are now present in a Child unitID should be able to edit their own profile, in order to make any necessary changes. They must be able to access these settings from their \u201cMy Profile\u201d screen, as they will not have access to their own user record, from the user management screen. \u00a0 Acceptance Criteria: Prerequisites: The user must be logged into the Parent unitID The user must have navigated into a Child unitID that they have access to The user can have either the Master Admin, or a Non-admin user role within the context of the Parent unitID The user must have one or more roles assigned to them within the context of the Child unitID. Accessing the profile screen: The user should be able to click on the icon / avatar at the top of the left nav bar, and access their profile screen Users within the Child unitID should continue being able to access their \u201cMy Data\u201d screen as well. There is no ticket for this screen, since there is no change that is expected to be made to the functionality of this screen. \u00a0 Allowing the user to see / edit specific information on their profile screen: The user should ONLY see the \u201c Personal Details \u201d section, and NOT see the \u201c Change Password \u201c section on this screen. All other sections should be visible to the user on this screen, based on their assigned roles within the current Child UnitID, including: OoO settings Alternate Approver / Buyer settings My System Preferences My Document Defaults Within the \u201c Personal Details \u201d section, the \u201c PIN Code \u201d field should be visible, and editable. Users will only be able to set their PIN Code within the context of a Child unitID. Outside of the Personal Details section, users should be able to edit any information on this screen, that they are able to see. Any changes made by the user, via this screen, should be persisted in their Parent unitID user record, as well as propagated to the replica user record within the current Child unitID.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2024-12-18T22:59:19.594-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106053",
+        "summary": "Allow a Parent unitID's user to edit their own profile from the Parent unitID",
+        "description": "Business Case: Users logged into the Parent unitID should be able to edit their own profile, in order to make any necessary changes. They must be able to access these settings from their \u201cMy Profile\u201d screen, as they will not have access to their own user record, from the user management screen. Acceptance Criteria: Prerequisites: The user must be logged into the Parent unitID The user can have either the Master Admin, or a Non-admin user role within the context of the Parent unitID Accessing the profile screen: The user should be able to click on the icon / avatar at the top of the left nav bar, and access their profile screen Allowing the user to see / edit specific information on their profile screen: The user should ONLY see the \u201c Personal Details \u201d and \u201c Change Password \u201c sections on this screen. All other sections should be hidden on this screen, including: OoO settings Alternate Approver settings My System Preferences My Document Defaults Within the \u201c Personal Details \u201d section, the \u201c PIN Code \u201d field should be hidden. Users should be able to edit any information on this screen, that they are able to see.  Any changes made by the user, via this screen, should be persisted in their Parent unitID user record, as well as propagated to any replica user records within Child unitIDs.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-12-18T22:59:08.853-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-106047",
+        "summary": "Allow a Master Admin to activate / deactivate user records from a parent unitID",
+        "description": "Business Case: Master Admins managing users across multiple child unitIDs need the ability to activate or deactivate user records directly from the Parent unitID. This feature will ensure consistent user access control across the system, reducing manual work and the risk of mismanagement. When a user\u2019s record is activated or deactivated (which can be done from the user management grid, or by dismissing an assigned child unitID from the user modal) in the Parent unitID, the system should propagate the change to the relevant child unitIDs, ensuring appropriate access and configurations are maintained or revoked automatically. Acceptance Criteria: Prerequisites: The currently logged-in user must be a Master Admin. The user record being updated must belong to the Parent unitID and has access to at least 1 child unitID. Deactivating a User Record When a Master Admin deactivates a user\u2019s record in the Parent unitID: The system should deactivate the affected user\u2019s record in the Parent unitID. The system should automatically propagate the deactivation to the child unitIDs that the user had access to: Deactivate the user\u2019s record in each of these child unitIDs. A success confirmation message should display, summarizing the changes: \" The selected user records have been deactivated. \" In the case of this operation failing, the system should display the following message to the user: \" Oops! Something went wrong, and the selected user records could not be deactivated. \" Activating a User Record When a Master Admin activates a user\u2019s record in the Parent unitID: The system should reactivate the affected user\u2019s record in the Parent unitID. Automatically reactivate the user\u2019s records in all previously accessible child unitIDs. Display a success message: \" The selected user records have been reactivated with their previous configurations restored. \" In the case of this operation failing, the system should display the following message to the user: \" Oops! Something went wrong, and the selected user records could not be reactivated. \" General Requirements: The \" Activate/Deactivate \" actions should be available in the main user management screen as buttons or actions in a dropdown menu. Bulk activation/deactivation should be supported: If multiple records are selected, the system should display a consolidated success/failure message summarizing the results. Any errors encountered during propagation to child unitIDs should be logged, and a partial success message should be displayed, e.g., \" The selected user records were < deactivated / activated> in the Parent Company Account, but some child Company Accounts failed to update. Please contact Vroozi Support with details of the user record your were tryig to update. \" Audit Logging: Log every activation/deactivation action performed by the Master Admin, in the affected user\u2019s record. Include details of: Who made the change What change was made When the change was made Whether the updates were successfully applied to all the linked Child unitID\u2019s user records as well, or not.  If not, record this failure as a detail in the event.  Question Answer Asked by Asked on Answered by Answered on What should happen, if a Master Admin is editing an Inactive user record, and provides that user access to a child unitID? Should the user record in the child unitID be created in active, or inactive state?  We should prevent the Master Admin from assigning access to additional child unitIDs, on an inactive user record. The Master Admin should be asked to first reactivate the user record.            to split the 2nd option in the reactivation flow, into it\u2019s own ticket. A modal dialogue; with the title \u201c Activate User Record \u201c,  should prompt the Master Admin to choose how to proceed: The modal should display the message \u201c When activating a user, you can choose one of the following options: \u201c Option 1: Reactivate the user record and restore access to the same child unitIDs as previously configured. Option 2: Reactivate the user record without restoring access to child unitIDs, requiring manual reassignment and reconfiguration. There should be 2 action buttons presented to the user on this modal: \u201c Activate and Restore Access \u201c \u201c Only Activate \u201c For Option 1 ( Reactivate and Restore Access ): For Option 2 ( Only Reactivate ): The system should reactivate the affected user\u2019s record in the Parent unitID. Remove the user\u2019s access to all previously configured child unitIDs, and soft-delete the affected user\u2019s record(s) in the child unitIDs that they\u2019re losing access to.  Automatically open the user record modal for reconfiguration (if activating a single user): The modal should display a message: \" Please configure the user\u2019s access to child unitIDs. \" If multiple user records are activated in one go, skip opening the user record modal. Display a success message: \" The selected <user record has / user records have> been reactivated in the Parent Company Account. Child Company Account access has been removed. \"",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-12-18T22:57:52.127-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-104990",
+        "summary": "Parent unitID - Admin: Allow a Master Admin to view the child unitID specific configurations, for existing user records, in the Parent unitID. ",
+        "description": "Info added based on discussion on 01/02/2025:  If a Master Admin is restricted to a subset of child unitIDs, any user record they open up, they should be able to see all the child unitIDs that user has access to. However, they can only assign, view and configure access for the child unitIDs that they themselves have access to.  Business Case: Master Admins need a way to provision and manage accounts for users that will be granted access to multiple child unitIDs. We need to introduce a user management screen to enable this. We also need to update the user record modal to allow Master Admins to configure an individual user\u2019s settings for each child unitID they will have access to.   Acceptance Criteria: Prerequisites: The currently logged in user must be a Master Admin.  The user should be present in the Parent unitID.  How can a Master Admin edit an existing user record?  The user should be able to open an existing user record by clicking on it\u2019s \u201cFirst Name\u201d, in the table, on the main user management screen.  Once the user modal is open, the data already configured for that user record should be prefilled in.  By default, the modal should display the settings/configurations/data applicable to the first child unitID that the user has access to.  The Master Admin should be able to switch between a user\u2019s child unitID\u2019s and their respective settings/configurations/data by changing the selection in the \u201cUser settings for\u201c field.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-11-07T23:34:13.518-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-104455",
+        "summary": "Parent unitID - Admin Users: Enable Admins to edit the name and description for the linked child unitIDs. ",
+        "description": "This ticket was split from   , on 10/21/2024 at the dev team\u2019s request, to simplify testing efforts. It is only meant to deal with the original tickets' requirements for making the cells in the first 2 columns of the table editable. See the section highlighted in  Red .  Business Case: As a standard feature, all users that log into a Parent unitID must be able to access a list of child unitIDs that they can navigate to, in order to conduct business. This should be available to Non-admin users in the Parent unitID by default, and to Admin users as an option (once we introduce the reporting dashboard for them).  Acceptance Criteria: Prerequisites: The unitID must be configured to work as a Parent unitID There must be at least 2 Child unitIDs connected to it.  The user logging in has access to child unitIDs and must be a Parent unitID user How should the user be able to get to this list of Child unitIDs? When the user logs into the Parent unitID, this is the screen they should land on.  If the user is on another screen in the Parent unitID, they should be able to navigate to this screen by clicking on the \u201cBusiness Units\u201d link in the left nav bar.  What should the user see on this screen when they land on it? The user should see a message at the top of the screen.  This message should read \u201c TBD \u201c. The user should be able to dismiss this message by clicking on a \u201cClose\u201d button in the section containing the message.  However, this message should reappear when the user logs into the application again. While still logged in, if the user dismisses the message, there is no need to display it again, for the duration of that logged in session.  When the user navigatess back to the Parent unitID, from a child unitID, the system can once again display the message, unless the user had previously clocked on the \u201cDon\u2019t show again\u201c checkbox.  The user should be able to dismiss the message for good, by checking the \u201cDon\u2019t show again\u201c checkbox next to the \u201cClose\u201d button.  The user should see the page title as \u201cBusiness Units\u201c The user should see a table below that, with the following columns:  Business Unit Description Last Accessed on Action The Business Unit column should list all the Child unitIDs linked to the current Parent unitID, that the logged in user has access to. By default, this list should display the values found in these Child unitID\u2019s Company  \u2192 Profile \u2192 Company Name field.  The Description column should only display a value if the Parent unitID Admin provides a description for this Child unitID. Otherwise, the column can show an \u201cn/a\u201d for rows that do not have a description.  The Last Accessed on column should display the most recent date that the user navigated to that specific child unitID. This value should be updated by the system, every time the user navigates to that specific Child unitID.  The Action column should include icons for the following controls:  Edit The Edit icon should ONLY be available to the user if they have the Parent unitID Admin role assigned.  The Edit icon should be a pencil glyph Clicking on this should make the first 2 cells for that specific row editable. and change the pencil icon to a \u201csave\u201d icon (perhaps a \u201ctick mark\u201d).  The cell in the Business Unit column is mandatory. The user should not be able to save the row without providing some value in this cell. This cell CANNOT use the same value as another Child unitID that\u2019s connected to the current Parent unitID. If the user enters such a value, the system should highlight the text input field with a red border, and display a red \u201c!\u201d icon in the input field; aligned to the right edge of the field. Hovering over this icon should display a tool-tip with the message \u201cTBD\u201c.  The cell in the Description column is optional. The user can save the row without providing a value in this field if they don\u2019t want to.  Navigate to The Navigate to icon should be visible to all users that log into the Parent unitID and have access to that specific Child unitID.  The Navigate to icon should be a square with an arrow pointing up and to the right, out of it.  Clicking on this should navigate the user to that specific child unitID, in the same browser tab.  How many unitIDs will be listed in this table? There is no restriction at the moment, on how many child unitIDs can be linked to a parent unitID, or how many of those a single user can be given access to.  The table should list a maximum of 10 rows, after which it should paginate the data.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-10-21T01:54:21.091-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-104090",
+        "summary": "Parent / Child unitID - All users: Allow users to navigate from the Parent unitID to a specific child unitID",
+        "description": "Business Case: We need to enable users with access to multiple child untiIDs, to navigate to those unitID\u2019s, from the parent unitID. These users should also be able to navigate back to the Parent unitID, and even jump to another child unitID, from the one they\u2019re already present in. This ticket build upon the following previous JIRAs:         Acceptance Criteria: Prequisites: The user must be logged into the Parent unitID.  The user must have access to Child unitIDs.  How can a user navigate from the Parent unitID, to a child untiID? When the user logs into the Parent unitID, they will be presented with this list of child unitID\u2019s they have access to. (See   for details) This list will be populated based on the data in the user\u2019s record. (See   for details) The user can either click on the child unitID\u2019s name, or the \u201c \u2192 \u201c icon for that row.  Clicking on either will navigate the user to that specific child unitID, in the same browser window/tab.  How will the user know when they are in a child unitID? When the user is in a child unitID, the application will include a persistent header at the top of the standard Vroozi UI.  This header will include the message \u201cYou are currently logged into <Business Unit>\u201c.  Where the value of <Business Unit> will be dynamically determined based on the specific child unitID\u2019s Company Name value.  This header will remain in place as long as the user is present in the child unitID, to ensure that they are always aware of the context in which they are operating.  How will the user navigate back to the Parent unitID? At any point, if the user feels like navigating back to the parent unitID that they originally logged into, they can click the \u201cGo back to <Business Unit>\u201c button.  The value of <Business Unit> in this case will be determined dynamically based on the company name value of the Parent unitID.  This button will be a persistent presence in the header mentioned above.  When the user clicks on this button, the system will navigate the user to the landing screen of the Parent unitID, in the same browser window/tab.  once they\u2019re back in the parent unitID, the persistent banner; mentioned above, will no longer be visible on the screen.  How can a user navigate to another child unitID, from the one they\u2019re currently logged into? At any point; whilst logged into a child unitID, if the user feels like navigating to a different child unitID, they can do so by using the unitID selection control in the persistent header.  There will be a single-select drop-down field in the header, labeled \u201cSwitch Business Unit:\u201c.  This drop-down will present as a list of options, the child unitIDs that the user has access to, based on their user record. (See   for details) This drop-down must display; as the selected option, the child unitID that the user is currently present in.  The user can click into this drop-down and change the selection to another child unitID that they have access to.  When they do so, the application should navigate them to the selected child unit in the same browser window/tab.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-10-10T02:27:09.175-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-103599",
+        "summary": "Parent unitID - Admin: Allow a Master Admin user to create users in the Parent unitID",
+        "description": "Business Case: Master Admins need a way to provision and manage accounts for users that will be granted access to multiple child unitIDs. We need to introduce a user management screen to enable this. We also need to update the user record modal to allow Master Admins to configure an individual user\u2019s settings for each child unitID they will have access to.   Acceptance Criteria: Prerequisites: The currently logged in user must be a Master Admin.  The user should be present in the Parent unitID.  How should the Master Admin access the user management screen? The user should be able to see a navigation option in the left nav bar titled \u201cUsers\u201c.  Clicking on this link should navigate the user to the User management screen.  This screen should be similar to the standard Vroozi user management screen in child / standalone unitIDs.  Note: This ticket does not cover the Bulk Upload Functionality for this screen.  The Master Admin should be able to perform all the standard CRUD operations related to user records, from this screen. Including:  User creation User activation / deactivation User deletion How should a Master Admin add a new user record? Screen 1 Screen 2 Screen 3 When a Master Admin clicks on the \u201cCreate a new user\u201d button, the system should display the standard user creation modal to them.  This modal will be different in the following ways from the standard user creation modal shown in child / standalone unitIDs:  In the \u201cBasic Information\u201c section of the modal, there should be a new single-select drop-down field.  This field should be titled \u201cPrimary user Role\u201c.  This drop-down should list 2 options; \u201cMaster Administrator\u201c & \u201cNon-Administrator\u201c.  This field should be empty by default on the modal.  This field should be a required field.  if the user does not select a value in this field, the field should be highlighted with a red border, and the \u201cSave User\u201d button on the modal should remain disabled.  Under the \u201cBasic Information\u201d section, there should be a new section added to the modal, titled \u201cBusiness Unit Configuration\u201c.  This new section should have the following controls:  A first multi-select type-ahead field titled \u201cAllow access to these business units\u201c. The user should see options for the child unitIDs connected to the currently logged in Parent unitID. The options list should present these options using their respective Company Name values.  The user should be able to search for an option by it\u2019s name, by typing the search terms into the field.  The user should be able to select more than one of these options.  Any option already selected by the user, should no longer be presented as a selectable option in the list.  The selected values should be displayed in the field, in individual \u201cpills\u201d. With a \u201cx\u201d in each pill, to allow the user to remove/deselect one of these choices.  The second single-select type-ahead field titled \u201cUser settings for\u201c, should only become visible once the Master Admin has selected at least 1 option in the 1st field.  This drop-down should only present; as options, the choices that the the Master Admin has already selected in the 1st field.  The options should be presented using the child unitID\u2019s company name value.  The user should ONLY be able to select 1 of the listed options at a time.  There should be an informational message in this section, below the fields mentioned above.  The message should be preceded by a yellow \u201c?\u201d (already used elsewhere in the application)  Under this image, there should be the message \u201cPlease allow the user to access one or more business units, in order to configure the user's settings for that account.\u201c This message should be visible whilst the user hasn\u2019t selected any value in the 1st field.  Once the user select\u2019s a value in the 1st field, but has yet to select one in the 2nd field, this message should be replaced by a new message, stating \u201cPlease select a business unit, for which you would like to configure this user's account settings.\u201c The updated message, as well as the \u201c?\u201d image should disappear once the user select's a value in the 2nd field.  The other standard sections of the user modal should be hidden by default.  These sections should ONLY become visible once the Master Admin selects a value for the 2nd field mentioned above.  Every time the Master Admin changes the selection within the 2nd field, the other sections below the \u201cBusiness Unit Configuration\u201c section, should be reloaded to reflect the data/settings for the respective child unitID.  All data / configurations from these sections should ONLY be applicable to the user\u2019s record in the child unitID that is currently selected on the modal.  The \u201cSave User\u201d button should remain disabled, until the Master Admin has filled out all required fields on the modal.  Should the user history functionality be split out into a separate ticket? Or will that just work out of the box?  Need a new ticket for the user audit trail.  How should the user be informed that their account has been provisioned in the Parent unitID? The user whose account has just been created, should receive the standard account creation confirmation email.  This email should allow them to create a password for the Parent unitID.",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-09-24T02:35:13.851-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-103598",
+        "summary": "Parent unitID - All users: Display a list of Child unitID's that the user can navigate to",
+        "description": "Business Case: As a standard feature, all users that log into a Parent unitID must be able to access a list of child unitIDs that they can navigate to, in order to conduct business. This should be available to Non-admin users in the Parent unitID by default, and to Admin users as an option (once we introduce the reporting dashboard for them).  Acceptance Criteria: Prerequisites: The unitID must be configured to work as a Parent unitID There must be at least 2 Child unitIDs connected to it.  The user logging in has access to child unitIDs and must be a Parent unitID user How should the user be able to get to this list of Child unitIDs? When the user logs into the Parent unitID, this is the screen they should land on.  If the user is on another screen in the Parent unitID, they should be able to navigate to this screen by clicking on the \u201cBusiness Units\u201d link in the left nav bar.  What should the user see on this screen when they land on it? The user should see a message at the top of the screen.  This message should read \u201c TBD \u201c. The user should be able to dismiss this message by clicking on a \u201cClose\u201d button in the section containing the message.  However, this message should reappear when the user logs into the application again. While still logged in, if the user dismisses the message, there is no need to display it again, for the duration of that logged in session.  When the user navigatess back to the Parent unitID, from a child unitID, the system can once again display the message, unless the user had previously clocked on the \u201cDon\u2019t show again\u201c checkbox.  The user should be able to dismiss the message for good, by checking the \u201cDon\u2019t show again\u201c checkbox next to the \u201cClose\u201d button.  The user should see the page title as \u201cBusiness Units\u201c The user should see a table below that, with the following columns:  Business Unit Description Last Accessed on Action The Business Unit column should list all the Child unitIDs linked to the current Parent unitID, that the logged in user has access to. By default, this list should display the values found in these Child unitID\u2019s Company  \u2192 Profile \u2192 Company Name field.  The Description column should only display a value if the Parent unitID Admin provides a description for this Child unitID. Otherwise, the column can show an \u201cn/a\u201d for rows that do not have a description.  The Last Accessed on column should display the most recent date that the user navigated to that specific child unitID. This value should be updated by the system, every time the user navigates to that specific Child unitID.  The Action column should include icons for the following controls:  Edit The Edit icon should ONLY be available to the user if they have the Parent unitID Admin role assigned.  The Edit icon should be a pencil glyph Clicking on this should make the first 2 cells for that specific row editable. and change the pencil icon to a \u201csave\u201d icon (perhaps a \u201ctick mark\u201d).  The cell in the Business Unit column is mandatory. The user should not be able to save the row without providing some value in this cell. This cell CANNOT use the same value as another Child unitID that\u2019s connected to the current Parent unitID. If the user enters such a value, the system should highlight the text input field with a red border, and display a red \u201c!\u201d icon in the input field; aligned to the right edge of the field. Hovering over this icon should display a tool-tip with the message \u201c TBD \u201c.  The cell in the Description column is optional. The user can save the row without providing a value in this field if they don\u2019t want to.  Navigate to The Navigate to icon should be visible to all users that log into the Parent unitID and have access to that specific Child unitID.  The Navigate to icon should be a square with an arrow pointing up and to the right, out of it.  Clicking on this should navigate the user to that specific child unitID, in the same browser tab.  The requirements above; which have been  strikethrough , are going to be handled in    How many unitIDs will be listed in this table? There is no restriction at the moment, on how many child unitIDs can be linked to a parent unitID, or how many of those a single user can be given access to.  The table should list a maximum of 10 rows, after which it should paginate the data.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-09-24T02:34:24.835-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-103597",
+        "summary": "Allow the system to always direct users of a Parent unitID, to that unitID when logging in",
+        "description": "Business Case: When a user belonging to a \u201cParent\u201d unitID; as defined in   , logs into the system with their username & password, Vroozi needs a way to identify this user and upon authenticating them, must route them into the parent unitID, instead of a child unitID. Alternatively, if the user logging into the system is identified as NOT belonging to a parent unitID, they should be directed to the single child unitID that they belong to, as usual.  Why do this? Why don\u2019t we just log the parent unitID\u2019s user directly into the parent unitID, like we do for child unitID users? The reason we are adding this logic to the authentication process is because, in the future, we will want to allow Admins in the parent unitID to selectively \u201cupgrade\u201d a child unitID\u2019s user to a parent unitID user. Whereby, when that upgraded user logs into Vroozi in the future, we will want to route them to the parent unitID, instead of the child unitID their user account was originally created in.  Acceptance Criteria: Prerequisites: The feature flag added in    should be enabled for this parent unitID.  There should be at least 1 child unitID linked to this parent unitID.  One or more users should exist in this parent unitID and be active.  One or more users should exist in the linked child unitID(s) and be active.  There should be a way to identify users with access to a parent unitID. This identifier could, in the futre, be used for reporting as well.  When the user enters their username/passwrod combination on the Vroozi login screen, and submits it to the BE service for processing, the system should fetch the user\u2019s record from the DB based on the provided credentials.  From this user record, the system needs to determine if this user has access to the parent unitID, or to a child unitID. If the system determines that the user belongs to a parent unitID, then the user should be routed to the relevant parent unitID.  If the system determines that the user does not belong to a parent unitID, then the user should be routed to the appropriate child unitID that they belong to.   to create a separate ticket for this requirement below:   A user CANNOT exist in multiple child unitIDs without also belonging to a parent unitID.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-09-24T02:33:23.252-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      },
+      {
+        "key": "VZI-103596",
+        "summary": "Enable Vroozi Ops to define a Parent unitID's Child unitIDs",
+        "description": "Business Case: We need to enable specific users in Maersk to oversee, and to some degree, manage the multiple Vroozi unitIDs that they will be using in PROD. We do NOT want to change how indivudal unitIDs are provisioned, or run on a given server. However, we want to enable the creation of a \u201cParent\u201d entity over an arbitrary number of individual unitIDs. This \u201cParent\u201d will be used to view aggregrate reporting data against all the child unitIDs, and also wo provision user accounts for users that need to access multiple child unitIDs.  Acceptance Criteria: Prerequisites: The feature toggle introduced in    should be enabled for the unitID.  Vroozi should be able to specify an arbitrary number of active unitIDs on a given server, as \u201cChild\u201d unitIDs of the current \u201cParent\u201d unitID.  A single unitID cannot be the \u201cChild\u201d of multiple \u201cParent\u201d unitIDs.  A unitID that is already flagged as a \u201cParent\u201d unitID cannot be the \u201cChild\u201d unitID of another parent.  A unitID that is already a \u201cChild\u201d unitID and is linked to an eisting \u201cParent\u201d, cannot be designated as a Parent unitID.  It should be possible for Vroozi to establish this link between parent/child unitIDs at both unitID creation time, as well as after the fact.  We will need to create data-fix scripts for use by Ops, which will:  Convert an existing unitID into a Child unitID of an existing Parent unitID Convert multiple existing unitIDs into Child unitIDs of an existing Parent unitID",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-09-24T02:32:03.470-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103593"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-109376",
+        "summary": "Angular Upgrade: Upgrade VziSupplierBankInfoController with UTs",
+        "description": "Upgrade the  VziSupplierBankInfoController",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2025-03-25T02:22:10.680-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-108932",
+        "summary": "Angular Upgrade: Upgrade Insurance Fields Grid Component",
+        "description": "",
+        "status": "Done",
+        "assignee": "Hamza naseem",
+        "created": "2025-03-11T22:46:48.062-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-108930",
+        "summary": "Angular Upgrade: Upgrade Insurance Field Modal Component",
+        "description": "",
+        "status": "Done",
+        "assignee": "Hamza naseem",
+        "created": "2025-03-11T22:45:19.209-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-108637",
+        "summary": "Angular Upgrade: Upgrade VziSupplierBasicInfo with UTs",
+        "description": "Upgrade the whole page  Master Data -> Suppliers:",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2025-03-03T00:53:20.967-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-105950",
+        "summary": "Angular Upgrade: Upgrade Shopper -> Receipts (QA)",
+        "description": "Upgrade the whole page  Shopper \u2192 Receipts  to Ng2 and use ng2  vzi-grid  /  vzi-grid-view : Bonus Feature : Introduce search bar and quick filters like in Shopper \u2192 Purchase Orders page if supported by BE.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2024-12-16T22:37:31.648-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-26686",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Health Check",
+      "description": "Health Check Architecture Diagram",
+      "status": "In Final Review",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2017-08-24T23:18:52.826-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-109189",
+        "summary": "Add all environments profiles for budget-api & accounting-api",
+        "description": "After the finalization done in this spike  We need to add profiles for all finalised environments for these two apis budget-api & accounting-api.  Question: Do QA needs to test all environments? Profile Sheet",
+        "status": "Investigation Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2025-03-17T23:06:56.534-0700",
+        "issue_type": "Spike",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-108950",
+        "summary": "Add Health Check In Kafka-UI",
+        "description": "Endpoint Type: GET Endpoint Name: http://devqa31-internal.vroozi.com:9510/health-check http://stage-service-1-internal.vroozi.com:9510/health-check Data Sources: Mongo Kafka Kafka Connectors Data Services:   N/A This ticket needs to be tested in three ways. Postman CURL Health-check-UI Note - On stage environment this api is deployed on service nodes while on production this is deployed on ERP node. So this factor needs to be considered during the development and testing, If one of the connector is down it will say Unavailable on the the curl",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-03-12T00:18:16.283-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-109869",
+      "summary": "RC-2025-5 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Open",
+      "assignee": "Jimena Pose",
+      "created": "2025-04-11T06:52:17.854-0700",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-108912",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "To Do",
+        "assignee": "Jimena Pose",
+        "created": "2025-03-11T08:08:08.921-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-109869"
+      },
+      {
+        "key": "VZI-108911",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "To Do",
+        "assignee": "Aqsa Rani",
+        "created": "2025-03-11T08:08:08.498-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-109869"
+      },
+      {
+        "key": "VZI-108910",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "To Do",
+        "assignee": "Asma Latif",
+        "created": "2025-03-11T08:08:08.478-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-109869"
+      },
+      {
+        "key": "VZI-108909",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "Impacted Areas of Payables RC Functionalities Impacted Area 1 Impacted Area 2 Impacted Areas of Other Teams RC Functionalities Purchase Team Impacted Area 1 Impacted Area 2 Integration Team Impacted Area 1 Impacted Area 2 Budget Team Impacted Area 1 Impacted Area 2",
+        "status": "To Do",
+        "assignee": "Asma Latif",
+        "created": "2025-03-11T08:08:08.459-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-109869"
+      },
+      {
+        "key": "VZI-108908",
+        "summary": "Execute Post Production Testing (Asma)",
+        "description": "",
+        "status": "To Do",
+        "assignee": "Asma Latif",
+        "created": "2025-03-11T08:08:08.456-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-109869"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105624",
+      "released_in_current_rc": false,
+      "summary": "Payables: Implement Invoice Dispute Process",
+      "description": "Develop the Invoice Dispute Process to enable clients to manage invoice discrepancies effectively with the Supplier.",
+      "status": "Implementation In Progress",
+      "assignee": "Jimena Pose",
+      "created": "2024-12-03T06:48:34.026-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-108868",
+        "summary": "Supplier Portal: SP User Actions (3-dots) for Disputed Invoices",
+        "description": "Business Case: This enhancement enables Supplier Portal users to quickly and clearly address disputed invoices by providing intuitive action options (View or Edit). By streamlining the dispute resolution process, it reduces confusion, accelerates invoice corrections, and ultimately enhances supplier satisfaction and operational efficiency. Context -   and    Acceptance Criteria: What is the change? As a  Supplier Portal (SP)  user, I want to see appropriate action options for invoices that are in \" Disputed \" status so that I can effectively manage invoice disputes. Which customers should this change impact? Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact? Supplier Portal > Invoices page Which users should be impacted by the change? SP User. How should this feature work? Invoice Action Options: For any invoice in \"Disputed\" status, the SP user should see two distinct action options when clicking the 3 dots against the invoice: View Invoice. Edit Invoice. View Invoice Action: Clicking on  \"View Invoice\"  opens the invoice in a  non-editable  (read-only) view. The user sees the standard set of invoice options:  Void, Amend, and Reject . Edit Invoice Action: Clicking on  \"Edit Invoice\"  moves the invoice directly into an  \"Amend\"  state. Invoice immediately becomes editable, allowing modifications. All standard editing functionalities applicable to invoices in the \"Amend\" state are available to the user. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-03-10T17:11:08.257-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-108545",
+        "summary": "Exclude voided invoices for Final Invoice calculation ",
+        "description": "Business Case: Voided Invoices should be excluded from final invoice calculations.  To know more about final invoices see tickets:      Epic:    Acceptance Criteria: When an invoice is marked as final, and posted the related PO is closed for receiving or invoicing as per the mentioned ticket describes. So when doing the calculation of how many items were received or invoiced by partial invoices, voided invoices should not be taken into account (as if they were deleted). When there is a voided partial invoice referencing the same PO, it shouldn\u2019t be considered to display the warning message when submitting a final invoice.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-27T09:48:41.589-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-108544",
+        "summary": "View and Search Disputed and Voided Invoices in Document Flow",
+        "description": "Business Case: Users currently do not have the capability to search for  Disputed  or  Voided  invoices in the Document Flow page. Providing this functionality will enable users to easily locate and review these invoice types, enhancing overall visibility and document management. Acceptance Criteria: What is the change? Implement the capability to search and view Disputed and Voided invoices in the Document Flow page, including the ability to view high-level invoice details and linked documents. Which customers should this change impact? Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true. What pages should this change impact? Document Flow Which users should be impacted by the change? Admin AP Manager Invoice assignee / group (targetUserId / group) Invoice creator (userId) Invoice owner (apProcessorId) Employee of the PO Buyer of the PO Users who were assigned to the invoice at some point, e.g.: Exception Handlers Invoice Approver Invoice Coder Invoice Assignee (user who is explicitly assigned an invoice) How should this feature work? Disputed and Voided invoices appear in search results when matching search criteria. Users can view high-level details of Disputed or Voided invoices by clicking the Eye (\ud83d\udc41\ufe0f) icon. Users can view documents linked to Disputed or Voided invoices by clicking the Tree (\ud83c\udf33) icon. Users' access is controlled according to their defined role and historical interactions. Users without appropriate permissions will not see Disputed or Voided invoices in their results. Example : Admins: Can search and view all Disputed and Voided invoices. AP Managers: Can search and view all Disputed and Voided invoices. AP Processors: Can search and view Disputed and Voided invoices that were created by them, assigned to them, or were disputed by them with the supplier. Employee: Can search and view Disputed and Voided invoices if they are the owner of the PO linked to this Invoice. Buyer: Can search and view Disputed and Voided invoices if they are the owner of the PO linked to this Invoice. Exception Handler: Can search and view Disputed and Voided invoices if they were assigned to the Invoice at some point of time. AP Approver: Can search and view Disputed and Voided invoices if they were assigned to the Invoice at some point of time. AP Coder: Can search and view Disputed and Voided invoices if they were assigned to the Invoice at some point of time. Invoice Assignee   (user who was explicitly assigned to the invoice) : Can search and view Disputed and Voided invoices if they were assigned to the Invoice at some point of time. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-27T09:28:31.065-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-108543",
+        "summary": "UI Enhancements for Dispute Destination Dialog Box Fields",
+        "description": "Business Case: Enhance the UI of the  Dispute Destination Dialog Box  to improve clarity and usability of the  Reason(s)  field and overall layout. Review comment in this ticket for more context -    Acceptance Criteria: What is the change? As a  user submitting a dispute , I want the  Reason(s)  field to be clearer, better aligned, and easier to read when multiple reasons are selected, So that I can accurately understand and review the dispute reasons without confusion. Which customers should this change impact? Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Invoices in these statuses - Draft. Parked. Rejected. Which users should be impacted by the change? Document creator/owner (AP Processor). Any AP Manager How should this feature work? Field Title Update: Update the field title from  \" Reason* \"  to  \"Reason(s)*\"  to reflect that multiple dispute reasons can be selected. Field Alignment & Length: Increase the length of the  Reason(s)  field so that it aligns with other fields in the  Dispute Destination Dialog Box  for a consistent UI. Improved Multi-Selection Display: Modify the way multiple dispute reasons are displayed in the  Reason(s)  field. Instead of truncating selections (which currently limits visibility to 1 or 2 reasons), display multiple reasons in a  stacked format (one below the other)  similar to how the  Company Code Restrictions  field is displayed in the system today. Ensure users can clearly see all selected dispute reasons without needing to expand the field. If the text exceeds the field size, the user can hover over the reason to view the full text. Spacing Improvement: Reduce the space between the  Dispute sub-text  and the  warning message  within the dialog box to improve readability and maintain a cleaner layout. Re-positioning of the Dispute Via field: Move the  Dispute Via field  above the User field in the  Dispute Destination Dialog Box . Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-27T09:27:08.974-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105930",
+        "summary": "Payables: Exclude Voided Invoices from Overdue Email Notifications",
+        "description": "Business Case: As a  system , I want to ensure that invoices with a  Voided  status do not trigger overdue email notifications once their payment due date has passed, so that AP users are not unnecessarily notified about invoices that are no longer valid or actionable. Acceptance Criteria: What is the change?  System should not trigger overdue email notification once their payment due date has passed for Voided status invoices. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true. What pages should this change impact?  Navigation Panel > Track Invoices. Which users should be impacted by the change? AP Processor. AP Manager. How should this feature work? Key Feature: Overdue handling for Voided invoices : Voided invoices should not go into overdue status. Voided invoices should not show up in Track Overdue Invoice page. Overdue invoice page should not showcase the filter for status = voided. If an invoice has a status of  Voided , it should not trigger overdue email notifications even if the  Payment Due Date  has passed. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-16T17:17:15.104-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105757",
+        "summary": "Supplier Portal / Payables: Display Dispute Reason, Comments, and Resolution at the Top of the Invoice Page",
+        "description": "Business Case: I want to be able to see the dispute reason and any comments provided by the  AP user , at the top of the invoice when it is sent to the  SP user  for dispute resolution. Additionally, as soon as the  SP user  has made a decision (e.g., Void, Amend, or Reject) and submitted their resolution, I should be able to see the resolution choice and corresponding comments at the top of the invoice page once it returns from the dispute process. Acceptance Criteria: What is the change?  AP and SP Users should be able to see the dispute reason, dispute resolution decision and comments at the top of the invoice page. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Invoice page. Which users should be impacted by the change? SP User. AP Processor. AP Manager. Any user who is able to view the Invoice (ex: Admin, Requester, etc.) How should this feature work? Key Features: Display of AP Dispute Reason & Comments to SP: Given an invoice is sent to the SP user as \"Disputed,\" When the SP user opens the disputed invoice page, Then the AP user's dispute reason and any comments provided are displayed at the top of the invoice page. Visibility of SP Resolution & Comments to AP: Given the SP user has submitted a dispute resolution decision (Void/Amend/Reject) along with resolution comments, When the invoice returns to the AP user's view post-dispute resolution, Then the SP user's chosen resolution and any resolution comments are prominently displayed at the top of the invoice page. When the supplier voids the Invoice: Comment Example - \u201cThis invoice was submitted twice, voiding the duplicate.\u201d Resolution:  Invoice voided When the supplier rejects the dispute: Comment Example - \u201cThe dispute is invalid; no changes required.\u201d Resolution:  Dispute rejected When the supplier amends the invoice: Comment Example - \u201cThe invoice has been updated.\u201d Resolution:  Invoice amended Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-12-09T15:50:41.593-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105633",
+        "summary": "Payables: Email Notifications for Disputed Invoices and Supplier Actions",
+        "description": "Business Case: Introduce email notifications for all key actions related to disputed invoices, ensuring timely communication between AP users and suppliers during the dispute resolution process. Acceptance Criteria: What is the change?  Send email notifications to AP and SP users for all key actions in the invoice dispute lifecycle. Notifications include links to the invoice and are triggered for the following actions mentioned in the Key Features below. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Email notification. Which users should be impacted by the change? SP User. AP Processor. AP Manager. How should this feature work? Key Features : Email Notification for SP User Receiving  Dispute : An email is sent to the  SP user  to whom the invoice was sent for  dispute  resolution . Subject Line:   \"Invoice [Supplier Invoice number:  Inv-2345 ] sent to you for  Dispute  resolution.\" When the SP user clicks on the  View Invoice  button in the email notification: The system should  redirect  the SP user to the Supplier Portal login page (based on the Unit ID\u2019s Supplier Portal URL). After successfully logging in, the system should  directly open the disputed invoice page . Invoice Template for SP user at time of dispute submission - Email Notification for  Void  Resolution : An email notification is triggered when the SP user submits a  Void resolution . Subject Line:   \"Invoice [Vroozi Invoice number:  9000056789 ] has been  Voided  by the Supplier.\" The email is sent to the  AP user  who originally submitted the invoice for dispute. When the AP user clicks on the  View Invoice  button in the email notification: The system should  redirect  the AP user to the Purchase Manager\u2019s login page. After successfully logging in, the system should  directly open the disputed invoice page . Invoice Template for AP user at time of Void resolution submission  - Email Notification for  Amend  Resolution : An email notification is triggered when the SP user submits an  Amend resolution . Subject Line:   \"Invoice [Vroozi Invoice number:  9000056789 ] has been  Amended  by the Supplier.\" The email is sent to the  AP user  who originally submitted the invoice for dispute. When the AP user clicks on the  View Invoice  button in the email notification: The system should  redirect  the AP user to the Purchase Manager\u2019s login page. After successfully logging in, the system should  directly open the disputed invoice page . Invoice Template for AP user at time of Amend resolution submission  - Email Notification for  Reject  Resolution : An email notification is triggered when the SP user submits a  Reject resolution . Subject Line:   \"Invoice [Vroozi Invoice number:  9000056789 ] has been  Returned without changes  by the Supplier.\" The email is sent to the AP user who originally submitted the invoice for dispute. When the AP user clicks on the  View Invoice  button in the email notification: The system should  redirect  the AP user to the Purchase Manager\u2019s login page. After successfully logging in, the system should  directly open the disputed invoice page . Invoice Template for AP user at time of Reject resolution submission  - Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0Should we have some type of configuration for who is supposed to receive an email notification? \u00a0 \u00a0   \u00a0 \u00a0   \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-12-03T08:35:26.160-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105628",
+        "summary": "Supplier Portal: Handling Disputed Invoices on SP Side",
+        "description": "Business Case: Allow Supplier Portal Users to review and take action on disputed invoices assigned to them. Acceptance Criteria: What is the change?  Allow Supplier Portal Users to review and take action on disputed invoices assigned to them. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Supplier Portal > Disputed Invoice. Which users should be impacted by the change? SP User. How should this feature work? Disputed Invoice View Mode : When the SP user opens a disputed invoice assigned to them, the invoice opens in  view mode . Action Buttons  are displayed at the bottom of the invoice page, corresponding to the three choices: Void   (Gray button) Amend   (Blue button) Reject   (Red button) Action Buttons and Their Functions : Choice 1 - Void: Button Color:   Gray Action: If the SP user clicks on the  Void  button: Check this ticket for implementation -    Choice 2 - Amend: Button Color:   Blue Action: If the SP user clicks on the  Amend  button: The system updates the  view mode  on the invoice to  edit mode , allowing the SP user to make changes to the invoice. The invoice remains in  Disputed  status. All buttons below the invoice are replaced with: A  Return to AP  button. A  three-dot menu  beside the Return to AP button. Return to AP Button: Disabled by Default: The  Return to AP  button remains  active  by default. Clicking Return to AP: Opens the  Invoice Destination section  with the following: Next Action Text:  Return to AP Subtext:  The invoice will be returned to AP for processing after amendments. Warning Message:   Warning:   Please confirm that all details are accurate before submitting the invoice to Accounts Payable. An  Optional  Comments field  where the SP user can add additional details about the amendments made. A  Submit button  that submits the invoice back to the AP side. Three-Dot Menu: Clicking the Three-Dot Menu: Opens the  Invoice Destination section  with two alternative options: Void Reject Selecting Void or Reject: Triggers the respective implementation for that choice. A  Show All Actions  button is displayed, allowing the SP user to revisit the choice selection screen in the Invoice Destination Box. Submission Process: Once the SP user submits the invoice after making amendments: The invoice status changes to: In Process  on the SP side. Draft  on the AP side. The invoice is reassigned to the AP user for further action. Choice 3 - Reject: Button Color:   Red Action: If the SP user clicks on the  Reject  button: The  Invoice Destination Box  opens with the following: Next Action Text:  Reject Sub-text:  The invoice will be returned to AP without changes. Warning Message:   Warning:   Please ensure the reason for rejecting the dispute is clear before submitting. A  Comment Field  that is  mandatory , requiring the SP user to explain the reason for rejecting the dispute. A  Submit Button  that remains  disabled  until text is entered in the Comment Field. Upon Submission: The invoice is sent back to the AP user  without any changes . The invoice status updates to: In Process  on the SP side. Draft  on the AP side. The invoice is  reassigned  to the AP user. No Action Taken by SP User: If the SP user does not take any action on the disputed invoice, the invoice remains in  Disputed  status on both the SP and AP sides. Audit History Updates: All actions taken by the SP user (e.g., selection, comments, submissions) are logged in the  Audit History  for transparency. When the AP user submits the Invoice for dispute: Invoice submitted for dispute AP User Name Comment Reason Dispute Via Icon - Scale-balanced    When the supplier voids the Invoice: Invoice voided SP User Name Comment Icon - Ban  When the supplier rejects the dispute: Dispute rejected SP User Name Comment Icon - X mark  When the supplier amends the invoice: Invoice amended SP User Name Comment All Invoice changes recorded inside the tile. Icon - Pencil  Mock Screenshot: Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-03T08:07:24.731-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103542",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Additional New Development Work to support External API Call - 3",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-09-23T04:49:42.161-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-108771",
+        "summary": "Vroozi API: Company Settings: Segregation of feature flags of External Workflow and External Accounting Validation.",
+        "description": "Business Case: The system should allow users to enable or disable feature flags for  External Workflow ,  External Accounting Validation , or both as needed. Acceptance Criteria: The  Company Settings  collection currently contains a single flag for  External Workflow  and  External Accounting Validation.  The feature flag of these two functionalities should be segregated. This should allow the admins to configure whichever external service they require. Please review the technical details section for all the potential texting scenarios after this implementation. Technical Details: We are using the externalFlowEnalbed flag in company settings to determine if the internal or external service for (accounting validation, timeline preview etc). This flag is not enough for handling mix of use cases where one service is using internal workflow and other using the external workflow. We need to introduce new setting in company_settings, that can be used to determine if the external services are enabled and than we need to check for individual services like accounting validation and workflow time line to be enabled for external or internal workflow. We need to introduce new externalSericeConfigurations in companySettings that will have following details.     \"externalServiceConfiguration\" : {\n           \"accountingValidation\":boolean,\n           \"timeline\": boolean\n           } Based on this setting we need to update both FE and BE to use these flags. Possible use cases to consider: 0: Any one of them is configured, only that will execute 1- both internal 2 - both external 3- accounting external (USJ) and timeline internal 4- accounting external (USJ) and timeline external (NBCU) 5- accounting external (USJ) and timeline external (NEW) 6- accounting external (NEW) and timeline internal 7- accounting external (NEW) and timeline external (NBCU) 8- accounting external (NEW) and timeline external (NEW) 9- accounting internal and timeline external (NBCU) 10- accounting internal and timeline external (NEW) Pre-Condition: External Approval Workflow is configured on the devqa2 server. Steps to reproduce: Server : DEVQA2  PMan DevQA2 Login : masood.safi+ employee@vroozi.com Password : Welcome1! Navigate to the Purchase Requests - Go to the Pending screen and create new PR . Provide all mandatory fields. Click on the Submit Button. PR should be submitted. Actual Result: Following Error is displayed 404 : \"HTTP Status 404 \u2013 Not Found HTTP Status 404 \u2013 Not Found Type  Status Report Message  The requested resource [/integrationapi/api/mock/nbcu/pr/submit/action/create] is not available Description  The origin server did not find a current representation for the target resource or is not willing to disclose that one exists. Apache Tomcat/9.0.68 Expected Result: PR should be submitted without error",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2025-03-06T02:15:44.767-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-108170",
+        "summary": "Vroozi API: External Workflow: Audit Trail for each response from the external workflow service.",
+        "description": "Business Case: The system should store all timeline previews and history responses received from the external system. This stored data will enable future reporting. Acceptance Criteria: The system should store all timeline preview responses from the external system in the database. The system should store all timeline history responses from the external system in the database. The system should track and store each preview and history response from the external system for the PR document. The date time stamp should also be captured while the preview and history response are stored in the database. Technical Details:    Documentation: Q&A:   (                         )",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2025-02-21T02:59:50.493-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-106266",
+        "summary": "VROOZI API - Implement MOCK behaviors in the external accounting validation flows with mock endpoints",
+        "description": "Business Case: Create a mock endpoint to facilitate testing various use cases for external accounting validation, ensuring comprehensive scenario coverage and validation accuracy. Acceptance Criteria: A new mock endpoint should created to support different use cases of external accounting validation. This new mock endpoint should be able to cover the following use cases of external accounting validation with both  Aggregation ON/OFF : Line item with no splits Line item with splits Need to add mock end points to trigger the different use cases for external workflow validations.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2024-12-30T22:19:56.846-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-69349",
+      "released_in_current_rc": false,
+      "summary": "Configuration management using config server",
+      "description": "Setup a config server which will serve the property files to different micro services.",
+      "status": "In Design",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2021-08-01T07:51:25.580-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-108594",
+        "summary": "Actuator : Add Actuator to the services",
+        "description": "Add Actuator to the list of services for pre state verification",
+        "status": "Investigation Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2025-02-28T04:36:21.893-0800",
+        "issue_type": "Spike",
+        "parent_id": "VZI-69349"
+      },
+      {
+        "key": "VZI-107336",
+        "summary": "Config : Convert accounting-api to load properties via config server",
+        "description": "The successful POC was done under this spike   The t scope of this ticket includes converting accounting-api to load properties from config server. Following action needs to be taken to achieve this goal. Use the existing deployed Spring Config Server and get the config server URI for devqa environment  Split the accounting-api properties into two parts Configurational properties (These will be moved to config server) Non configurational properties (These properties will be moved to project\u2019s classpath) Change bootstrap properties according to the POC deploy and test. Endpoint:   http://localhost:9608/accounting-service/api/ actuator/env Please refer to this sheet for deployment details",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-28T03:28:44.104-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-69349"
+      },
+      {
+        "key": "VZI-106705",
+        "summary": "Config : Convert budget-api to load properties via config server",
+        "description": "The successful POC was done under this spike   The scope of this ticket includes converting budget-api to load properties from config server. Following action needs to be taken to achieve this goal. Deploy Spring Config Server to a centralised location e.g. \u201cbuild server\u201c and get the config server URI for devqa environment  Split the budget-api properties into two parts Configurational properties (These will be moved to config server) Non configurational properties (These properties will be moved to project\u2019s class-path) Change bootstrap properties according to the POC deploy and test. Endpoint:  http://devqa31-internal.vroozi.com:9599/budget-api/api/actuator/env Please refer to this sheet for deployment details",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-13T05:58:16.583-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-69349"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105512",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Budgets Phase V : Add support for all the Accounting Objects in Budget APIs and add Budget Bulk Upload API",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-11-27T22:07:33.488-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-106591",
+        "summary": "QA Task: Verify Budget is consumed when PO is submitted via API.",
+        "description": "Verify that the budget is properly consumed or de allocate on cancellation. Test of reopen PO for NBCU flow from UI and if this is implemented than we need to test from API, if that is not implemented from UI than API is not need to tested. It will contain the DB and logs verification as well.",
+        "status": "Investigation Done",
+        "assignee": "Iqtidar Arshad",
+        "created": "2025-01-08T23:38:10.676-0800",
+        "issue_type": "Spike",
+        "parent_id": "VZI-105512"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99320",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Upgrade - Major Documentation Upgrade Phase II",
+      "description": "Vroozi API Upgrade: Part 1 - Major version upgrade from Swagger v2 to OpenAPI v3 Vroozi API Upgrade: Part 2 - Master Data Documentation enhancement",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T21:17:05.210-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106383",
+        "summary": "Vroozi API Upgrade: Part 14 - Update Classes API Documentation and Examples",
+        "description": "Requirements: Update all API endpoints and model descriptions in the documentation with proper examples, defaults and required flags Add multiple different examples of the API usages to cover multiple use cases including minimal required payload, minimal recommended payload and all available fields example. All the payload should be properly formatted and should work using Try it from documentation itself. Add the read only fields in the default response to mention them as Read only fields, e.g id, dateCreated, lastUpdated etc. It is read only field. Mention the behaviour of the field in case the value is not provided in the payload for update flows. e.g Not providing a field at all in the payload vs providing empty or null value in that field during update. Update the 403 error message in the documentation Forbidden (The server understood the request but refuses to authorise it). Technical Details: Minimal Payload: {\n  \"code\": \"C011\",\n  \"name\": \"Class-01\",\n  \"enableForAllCompanyCodes\": true,\n  \"active\": true\n} Recommended Payload: {\n  \"externalId\": \"1001\",\n  \"code\": \"C01\",\n  \"name\": \"Class-01\",\n  \"enableForAllCompanyCodes\": true,\n  \"active\": true,\n  \"description\": \"Class 11\",\n  \"validFrom\": \"2025-01-01\",\n  \"validTo\": \"2030-12-31\",\n  \"companyCodeRefs\": [\n    {\n      \"docNo\": \"DCC01\"\n    }\n  ]\n} Default Payload: {\n  \"externalId\": \"1001\",\n  \"code\": \"C01\",\n  \"name\": \"Class-01\",\n  \"enableForAllCompanyCodes\": true,\n  \"active\": true,\n  \"description\": \"Class 01\",\n  \"validFrom\": \"2025-01-01\",\n  \"validTo\": \"2030-12-31\",\n  \"companyCodeRefs\": [\n    {\n      \"docNo\": \"DCC01\"\n    }\n  ],\n  \"parentRef\": {\n    \"docNo\": \"CC02\"\n  },\n  \"ancestors\": {\n    \"docNo\": \"CC02\"\n  }\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-01-01T23:34:00.984-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-99320"
+      },
+      {
+        "key": "VZI-106382",
+        "summary": "Vroozi API Upgrade: Part 13 - Update Location API Documentation and Examples",
+        "description": "Requirements: Update all API endpoints and model descriptions in the documentation with proper examples, defaults and required flags Add multiple different examples of the API usages to cover multiple use cases including minimal required payload, minimal recommended payload and all available fields example. All the payload should be properly formatted and should work using Try it from documentation itself. Add the read only fields in the default response to mention them as Read only fields, e.g id, dateCreated, lastUpdated etc. It is read only field. Mention the behaviour of the field in case the value is not provided in the payload for update flows. e.g Not providing a field at all in the payload vs providing empty or null value in that field during update. Update the 403 error message in the documentation Forbidden (The server understood the request but refuses to authorise it). Technical Details: Minimal Payload: {\n  \"code\": \"LC01\",\n  \"name\": \"LC01\",\n  \"enableForAllCompanyCodes\": true,\n  \"active\": true\n} Recommended Payload: {\n  \"externalId\": \"1001\",\n  \"code\": \"LC01\",\n  \"name\": \"LC01\",\n  \"description\": \"Location LC01\",\n  \"companyCodeRef\": {\n    \"docNo\": \"CC01\"\n  }\n  \"active\": true\n} Default Payload: {\n  \"externalId\": \"1001\",\n  \"code\": \"LC01\",\n  \"name\": \"LC01\",\n  \"description\": \"Location LC01\",\n  \"companyCodeRef\": {\n    \"docNo\": \"CC01\"\n  },\n  \"plantCodeRef\": {\n    \"docNo\": \"PC01\"\n  },\n  \"locationTypeRef\": {\n    \"docNo\": \"LT01\"\n  },\n  \"classRef\": {\n    \"docNo\": \"C01\"\n  }\n  \"active\": true\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-01-01T23:33:22.335-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-99320"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102948",
+      "summary": "Angular Upgrade: Upgrade Master Data -> Taxes",
+      "description": "Upgrade the whole page  Master Data \u2192 Taxes  to Ng2:",
+      "status": "Work Completed",
+      "assignee": "Hamza naseem",
+      "created": "2024-09-04T13:04:04.426-0700",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-106196",
+        "summary": "Angular Upgrade: Fully upgrade taxes component from ng1 to ng2",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2024-12-26T03:28:35.039-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-102948"
+      },
+      {
+        "key": "VZI-103019",
+        "summary": "Angular Upgrade: Fully upgrade Withholding tax types component from ng1 to ng2",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2024-09-06T02:23:15.226-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102948"
+      },
+      {
+        "key": "VZI-103018",
+        "summary": "Angular Upgrade: Fully upgrade Withholding tax codes component from ng1 to ng2",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2024-09-06T02:08:09.762-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102948"
+      },
+      {
+        "key": "VZI-103011",
+        "summary": "Angular Upgrade: Fully upgrade Tax codes component from ng1 to ng2",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2024-09-06T00:44:39.340-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102948"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102368",
+      "released_in_current_rc": false,
+      "summary": "Custom Goods - Migration to Netsuite Integration",
+      "description": "Interfaces in Scope: Transactional Inbound Interfaces Accounting Suppliers Payment Terms Payment Information Transactional Outbound Interfaces Invoices Credit Memos",
+      "status": "Implementation In Progress",
+      "assignee": "Talqeen Ahmad",
+      "created": "2024-08-16T10:56:59.863-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106100",
+        "summary": "Plant code - API Upsert call updating the same record",
+        "description": "Plant code - upsert API. Issue: The middleware is sending an API request for duplicate Plant Code and description with unique external IDs. However, the API is updating the same record multiple times since the request has a duplicate code which already exists. Case: There are multiple duplicate plant codes linked with different company codes and each has unique externalIds. whenever an API request is sent with same Plant Code but unique company code and externalID. Instead of creating a new Plant code, the system is updating an existing Plant code. Sample request. payload: {'active': True, 'code': 'B005 - 809/907', 'companyCodeRef': {'id': '2403'}, 'description': '809 E. 236th St', 'externalId': '6_12'}\nURL: POST plant-codes/upsert",
+        "status": "Awaiting Business Validation",
+        "assignee": "Iqtidar Arshad",
+        "created": "2024-12-20T06:26:17.867-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-102368"
+      }
+    ]
+  }
+]

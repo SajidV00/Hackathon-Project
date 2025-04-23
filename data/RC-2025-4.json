@@ -1,0 +1,1130 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-109773",
+        "summary": "Production Deployment- RC-2025-4",
+        "description": "Following Milestones successfully created for POST PROD Sanity RC-2025-4 Purchase Team https://vroozi.testrail.net/index.php?/milestones/view/1101 PlatForm Team https://vroozi.testrail.net/index.php?/milestones/view/1102 Integration Team https://vroozi.testrail.net/index.php?/milestones/view/1104 Payables Team https://vroozi.testrail.net/index.php?/milestones/view/1100",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2025-04-10T04:54:56.341-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109715",
+        "summary": "Purchase Request \u2013 When a Purchase Request is auto-approved, the system does not display any details in the Approval Status pop-up",
+        "description": "Issue:  Purchase Request \u2013 When a Purchase Request is auto-approved, the system does not display any details in the Approval Status pop-up Server: URL:  https://stage-go.vroozi.com/#/login Username:  zulkiful.bajwa+employeeStage85NBCU@vroozi.com Password: @Welcome1  Pre-Conditions: The feature toggle  INTEGRATION__EXTERNAL_TIMELINE  should be  disabled  for the relevant Unit ID The following flags should be set to  true  in the  company_settings  collection: externalWorkflowEnabled: true externalServiceConfiguration.timeline: true  (This setting was introduced in  RC-2025-5 . So, if you are testing this ticket before  RC-2025-5  code, please exclude this setting.) A Purchase Request should be created in  Draft  status, and no approval should be required for it Steps to Reproduce: Log in to PMAN as an Employee user Load the above-created Purchase Request Click on the Approval Status button Verify the Approval History in the Approval Status pop-up Actual Result: The system does not display any details in the Approval Status pop-up Screen Shot on Stage: ScreenShot on Production: Expected Result: The system should display the correct Approval History or an appropriate message in the Approval Status pop-up",
+        "status": "Resolved",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-04-08T23:05:22.136-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109711",
+        "summary": "API: Unable to set Active true to WBS element through Bulk Upsert.",
+        "description": "Environment:  SOCI (RC-2025-4) Pre Conditions: Postman endpoint  https://{{domain}}/v1/wbs-elements/bulk-upsert/async  is accessible. Postman endpoint https://{{domain}}/v1/wbs-elements/async_requests/ is accessible. Steps to Reproduce: A WBS record exists with Active false record. Send below request on endpoint  https://{{domain}}/v1/wbs-elements/bulk-upsert/async . curl --location 'https://devqa21-api.vroozi.com/v1/wbs-elements/bulk-upsert/async' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiIzYTQ2YjU5ZS1lYTdlLTRhMTktODc5My04YzM2NTE2YWQyYzYiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiJkZDI3YTkyNi1jZTEwLTRlNGItOTRiYi0yYzNiNTJkOTUyMTYifQ.mCzuKt8IKmYxjg9M8N0s1uAcayUH_rpyds2gqOZW1gZ9Z1cUQxCYHUrYxqHSAeDXgtzF9xTrafv7rz2_mGYCDQ' \\\n--header 'x-api-key: emzJqXWzOu5UHgTWYgXFH7Hhtf6s042R95cq2NwN' \\\n--data '[\n    {\n        \"code\": \"MIA_1002-devqa21\",\n        \"description\": \"MIA_1002-devqa21 - WBS Element\",\n        \"companyCodeRef\": {\n            \"docNo\": \"CC MIA 001\"\n        },\n        \"active\": true,\n        \"profitCenter\": \"MIA_001-devqa21\",\n        \"project\": \"MIA_001-devqa21 Code\",\n        \"projectDescription\": \"MIA_001-devqa21 - Project Description\"\n    }\n]' Expected Result: WBS element should be activated. Also need to validate the auditInfo in the create and update use cases.",
+        "status": "Resolved",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-04-08T11:15:22.585-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109669",
+        "summary": "Vroozi API - Release notes for RC-2025-4",
+        "description": "Please update the release notes for RC-2025-4",
+        "status": "Done",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-04-07T02:47:48.283-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109578",
+        "summary": "Stage - Accounts Payable - Enhanced Workflow - Enhanced WF Settings are available on UI when Feature Toggle is disabled in DB",
+        "description": "url:  https://stage-go.vroozi.com/#/login username:   aqsa.rani+admin@vroozi.com password:  Qwerty@1 Steps to Reproduce: Access the DB Disable Feature Toggle:  ACCOUNTS_PAYABLE_WORKFLOW__ENHANCED_WORKFLOW Login in application through given Admin user Navigate to Company \u2192 Workflow \u2192 Financial and Invoice Approval Workflow Please see that Enhanced Workflow settings are available on UI Actual Result: Enhanced Workflow settings are available on UI when feature toggle is disabled in DB Expected Result: Enhanced Workflow settings should not be available on UI when feature toggle is disabled in DB Screenshot:",
+        "status": "Abandoned",
+        "assignee": "Aqsa Rani",
+        "created": "2025-04-02T23:23:21.808-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109441",
+        "summary": "Tax distribution is not calculated on invoices when a PO has splits with different cost centre\u2019s and not having class Ref in accounting info, and the invoice response payload returns a tax distribution validation message.",
+        "description": "Environment:    DEVQA1 Credentials:    Employee User:  waheed.nawaz+employee_devqa1@vroozi.com  / Welcome1!   Approver User:  waheed.nawaz+approver_devqa1@vroozi.com  / Welcome1! References:    PR Number: #1000007643   PO Number: #2000002229 Steps to Reproduce:    Login as employee user   Create PR with multiple line items, each split 50% with different Cost Centers. (Make sure do not pass class in each line item spilts) Submit the PR   Approve the PR as approver user   Observe PO is automatically created   Attempt to create partial invoice via API with the provided CURL below Actual Result:    Invoice creation fails with multiple validation errors:   Tax amount mismatch errors (reported amount is exactly half of expected for each line item)   Split percentage errors claiming total doesn't add up to 100%   Error Response:    {\n    \"id\": \"62730895-85fd-4de9-b106-323dbc577e59\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $27.55 is not equal to the sum of 'Distributed Tax Amount' $13.78\",\n            \"detail\": \"'Tax Amount' $27.55 is not equal to the sum of 'Distributed Tax Amount' $13.78\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $6.43 is not equal to the sum of 'Distributed Tax Amount' $3.22\",\n            \"detail\": \"'Tax Amount' $6.43 is not equal to the sum of 'Distributed Tax Amount' $3.22\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $6.64 is not equal to the sum of 'Distributed Tax Amount' $3.32\",\n            \"detail\": \"'Tax Amount' $6.64 is not equal to the sum of 'Distributed Tax Amount' $3.32\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $2.12 is not equal to the sum of 'Distributed Tax Amount' $1.06\",\n            \"detail\": \"'Tax Amount' $2.12 is not equal to the sum of 'Distributed Tax Amount' $1.06\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $7.92 is not equal to the sum of 'Distributed Tax Amount' $3.96\",\n            \"detail\": \"'Tax Amount' $7.92 is not equal to the sum of 'Distributed Tax Amount' $3.96\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $53.54 is not equal to the sum of 'Distributed Tax Amount' $26.77\",\n            \"detail\": \"'Tax Amount' $53.54 is not equal to the sum of 'Distributed Tax Amount' $26.77\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $44.77 is not equal to the sum of 'Distributed Tax Amount' $22.39\",\n            \"detail\": \"'Tax Amount' $44.77 is not equal to the sum of 'Distributed Tax Amount' $22.39\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $7.58 is not equal to the sum of 'Distributed Tax Amount' $3.79\",\n            \"detail\": \"'Tax Amount' $7.58 is not equal to the sum of 'Distributed Tax Amount' $3.79\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $11.83 is not equal to the sum of 'Distributed Tax Amount' $5.92\",\n            \"detail\": \"'Tax Amount' $11.83 is not equal to the sum of 'Distributed Tax Amount' $5.92\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $18.89 is not equal to the sum of 'Distributed Tax Amount' $9.45\",\n            \"detail\": \"'Tax Amount' $18.89 is not equal to the sum of 'Distributed Tax Amount' $9.45\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $31.33 is not equal to the sum of 'Distributed Tax Amount' $15.67\",\n            \"detail\": \"'Tax Amount' $31.33 is not equal to the sum of 'Distributed Tax Amount' $15.67\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $2.20 is not equal to the sum of 'Distributed Tax Amount' $1.10\",\n            \"detail\": \"'Tax Amount' $2.20 is not equal to the sum of 'Distributed Tax Amount' $1.10\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $15.38 is not equal to the sum of 'Distributed Tax Amount' $7.69\",\n            \"detail\": \"'Tax Amount' $15.38 is not equal to the sum of 'Distributed Tax Amount' $7.69\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $4.11 is not equal to the sum of 'Distributed Tax Amount' $2.06\",\n            \"detail\": \"'Tax Amount' $4.11 is not equal to the sum of 'Distributed Tax Amount' $2.06\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Invalid amount\",\n            \"element\": \"Invoice\",\n            \"message\": \"'Tax Amount' $16.74 is not equal to the sum of 'Distributed Tax Amount' $8.37\",\n            \"detail\": \"'Tax Amount' $16.74 is not equal to the sum of 'Distributed Tax Amount' $8.37\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        },\n        {\n            \"code\": \"Split Percentage Error\",\n            \"element\": \"Invoice\",\n            \"message\": \"Total split percentage not adding up to 100%\",\n            \"detail\": \"Total split percentage not adding up to 100%\",\n            \"level\": \"Field Error\"\n        }\n    ],\n    \"timestamp\": \"2025-03-26T09:21:40.843+0000\"\n} Expected Result:    Invoice should be successfully created with tax amounts properly distributed according to the 50% split. Attachments:    Suggested Fix:    Review the tax distribution calculation logic for split cost center items and empty class ref. Ensure the system properly aggregates split amounts when validating totals",
+        "status": "Resolved",
+        "assignee": "Iqtidar Arshad",
+        "created": "2025-03-26T02:42:10.315-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109186",
+        "summary": "Stage - MEMO/PRQ - Approval Chain is not showing for the Memo/PRQ having Approval Rule Matched.",
+        "description": "URL:  https://stage-go.vroozi.com/ username:   asma.latif+EMP2504@vroozi.com password:  Blueangel1@ Preconditions: PRQ User should have logged into the Application. Dynamic WF should be enabled and Rule should exist for PRQ document. Steps to Reproduce: Create a PRQ with its item having Accounting elements matched with the Active Approval Rule.  7500002532 Click the Approval Chain Icon from right side panel. Please see it says \u201cNo Approval Chain Available\u201d. Logout and Login as AP User. Click to Create a Memo with its item having Accounting elements matched with the Active Approval Rule.  9500004516 Click the Approval Chain Icon from right side panel. Please see it says \u201cNo Approval Chain Available\u201d. Actual result: It says \u201cNo Approval Chain Available\u201d when PRQ has an approval rule matched. Expected result: Approval Chain should show. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-17T22:56:36.047-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109103",
+        "summary": "Stage - PMAN/SDM - Reports - Excel File Download is not working for Report Types except Users Report.",
+        "description": "URL:  https://stage-go.vroozi.com/ username:   asma.latif+RC4_SDM_Admin1@vroozi.com  /  asma.latif+RC4_SDM_PU1@vroozi.com  /  asma.latif+RC4_SDM_BU1@vroozi.com password:  Blueangel1@ Preconditions: SDM Admin/Power/Basic User with Default Location set as 'ALL' should have logged into the Application. Steps to Reproduce: Access Reports > Select any Type and Click Excel File. Click Download Excel. Please see blank tab opens in the browser and no file is being downloaded. Actual result: Clicking Download Excel File opens a blank Browser Tab with the following URL hence the file isn\u2019t downloaded. https://stage-purchase.vroozi.com/api/sdm-reports/report/download/QUICK_CONTACT_EXCEL_REPORT/Quick-Contacts-Report-03-14-2025-122907648UTC   Expected result: Excel file should be downloaded and viewed successfully. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-14T05:31:52.519-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109031",
+        "summary": "External Workflow: Configuration Service \u2013 We do not need the 'POCR_ACCOUNTING_VALIDATION' enum separately, and we also need to remove the 'PR' prefix from the 'PR_ACCOUNTING_VALIDATION' enum",
+        "description": "Issue#1:  External Workflow: Configuration Service \u2013 We do not need the 'POCR_ACCOUNTING_VALIDATION' enum separately Issue#2: We need to remove the 'PR' prefix from the 'PR_ACCOUNTING_VALIDATION' enum",
+        "status": "Awaiting Business Validation",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-03-13T03:08:30.121-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-109007",
+        "summary": "Stage - Supplier Portal - Dashboard - Voided Invoices Tile - Voided Invoices count is not correct",
+        "description": "url:  https://stage-go.vroozi.com/#/login?org=880852895&view=supplier username:  aqsa.rani+supplier_comp@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login with given user Navigate to Invoices Filter Invoices by Status \u2192 Voided filter Check the count in left corner under the invoices grid Navigate to Dashboard Look for the voided invoices count in 'Voided invoices' tile  Check the count Please see the count doesn't match Actual Result: Count in voided invoice tile is not correct Expected Result: Count in voided invoices tile should be correct  Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-03-13T00:17:53.868-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108986",
+        "summary": "Stage - PMAN - Master Data - Suppliers - Supplier Discovery Call is getting 404 Error if a Supplier  Modal is opened.",
+        "description": "URL:  https://stage-go.vroozi.com/ username:  notifyvroozi@gmail.com password:  Welcome1@ Preconditions: PMAN Admin User should have logged into the Application. Steps to Reproduce: Access Master Data > Suppliers. Search and click 'SUP2504'. Supplier Modal Opens. Please check Network logs. SUPPLIER DISCOVERY call is failing with 404 and URL:  https://stage-purchase.vroozi.com/vrooapi/company/module-settings/get-module-settings-batch/SUPPLIER_DISCOVERY?sdmUserGroupIds=    Actual result: Supplier Discovery Call is getting 404. Expected result: Supplier Discovery Call shouldn\u2019t fail. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-12T15:15:59.136-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108967",
+        "summary": "Stage - PMAN : Clicking on Supplier tab for sorting under Awarded bid tab on RFQ List screen changes the supplier name for all records to N/A.",
+        "description": "URL:     username:   misbah.azeem+10+emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Navigate to Awarded Bid tab. Click on  \u201cSupplier\u201d  field for sorting. Supplier name for all records in Supplier field changes to N/A instead of sorting. Actual result:  Supplier name for all records in Supplier field changed to N/A instead of sorting Expected Result: It should sort the Supplier field.",
+        "status": "In Biz Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-12T02:57:12.329-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108933",
+        "summary": "Stage - PMAN: Clicking on the Bid number under the Awarded Bid tab on the RFQ List screen opens the RFQ instead of the Bid.",
+        "description": "URL:     username:   misbah.azeem+10+emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Navigate to Awarded Bid tab. Click on any Bid number against any RFQ RFQ screen is displayed instead of Bid. Actual result:  It displays the RFQ screen instead of Bid screen. Expected Result: It should display the Bid screen.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-11T22:47:58.264-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108917",
+        "summary": "PR get stuck on loader when we change header level address ",
+        "description": "Pre-Condition :  Create Address in master data which do not have email set on it. Steps to reproduce :  add item in cart on shopper view move cart to new purchase request change address on header level and add above mentioned address we will get error to fill required fields related to address  click on pencil icon and fill required fields save the address Expected result :  Address should get save on header level and error should get remove Actual result :  PR get stuck on loader Note : this only happens for the first time if we refresh and update the address it works. its NG2 issue on disabling NG2 it works fine. This is the error we get on console :",
+        "status": "Resolved",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-03-11T12:34:30.543-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108858",
+        "summary": "PROD - Enhanced WF - Approval Rule Modal - SDM Users are available in the Approver Drop Down.",
+        "description": "Environment: https://stage-go.vroozi.com Username :  notifyvroozi@gmail.com Password:  Welcome1@/@Welcome1 Pre-Requisites: Feature Toggle ACCOUNTS_PAYABLE_WORKFLOW_ENHANCED_WORKFLOW should be enabled for the Unitid in DB. Admin User should have logged into the Application. Steps to Reproduce: Access Company>Workflow. Click to Add an Approval Rule in the  Approval Rules  Subsection of  Financial and Invoice Approval Workflow   Section. Approval Rule Modal opens. Select Applies to = PR, CR, Invoices, Memo, PRQ. Add Conditions. Click + to Add Approval Chain. Search for \u201cAsma\u201d. Please see Users holding Fin and AP Approver roles start appearing and also SDM role users too which aren\u2019t either financial/Ap Approvers. Actual Result: Users holding Fin and AP Approver roles start appearing and also SDM role users too which aren\u2019t either financial/Ap Approvers. \u2192   FYI: The system is matching any user that has a production with the name containing the text you used for a search (disregarding the role) Expected Result: Only Financial, AP approvers or Users holding both roles should appear in the Approver drop down. Screen-Cast: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Aqsa Rani",
+        "created": "2025-03-10T07:07:38.111-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108836",
+        "summary": "Platform Regression [RC-2025-4]",
+        "description": "",
+        "status": "Done",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-03-10T00:36:17.653-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108812",
+        "summary": "DEVQA5 - Integration - Accounts Payable - Track Invoices - Disputed Page - Voided & other Status Invoices are also available.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:  asma.latif+AP2@vroozi.com password:   Blueangel1@ Steps to Reproduce: Access Track Invoices > Disputed. Traverse through Invoices available in the Grid. Invoices with Status other than Disputed are also available in the grid. Actual Result: Voided and other Status Invoices  are also showing. Expected Result: Only Disputed status invoice should be available. Thanks, Asma",
+        "status": "Duplicate",
+        "assignee": "majid.akram",
+        "created": "2025-03-07T03:34:40.276-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108784",
+        "summary": "DEVQA5 - Integration - Voided Invoice has the Assignee against it.",
+        "description": "URL:  https://devqa5-purchase.vroozi.com username: asma.latif+AP2@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be Enabled in the DB for the Company Unit Id. Allow Invoice Dispute should be ON for the logged in Supplier. Voided Invoice Exists. Steps to Reproduce: Access Voided Invoice via Voided Page. Please see the Assignee label on the top right side. Assignee shows the SP User who Voided the Invoice. Access ALL Page under Track Invoices. Remove Assigned to me filter. Please see this Invoice has the Assignee shows the SP User logo. Actual result: Voided Invoice has the Assignee against it. Expected result: Voided Invoice should not have any Assignee and behave just like the Posted Invoice which also does not have any Assignee. Screen-shot:  Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-06T21:11:55.077-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108768",
+        "summary": "Audit Log UI: UI become disturbed after adding OperationType column",
+        "description": "URL:   https://devqa31-healthcheck.vroozi.com/audit Steps:  hit the above url UI become disturbed under action column Actual: Result: UI become disturbed after adding new column \u201cOperationType\u201c Expected Result: UI should be correct",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-03-06T01:47:23.909-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108760",
+        "summary": "Stage - PMAN Admin/ SP - Track Invoices ALL/ Invoices & Generic Search  - Disputed Status Filters are available even the Invoice_Dispute Feature Toggle is disabled for the Company Unit Id.",
+        "description": "URL:  https://stage-go.vroozi.com  /    https://stage-go.vroozi.com/#/login?org=880852895&view=supplier username:   notifyvroozi@gmail.com  / asma.latif+SUP2503-Admin@vroozi.com password:  Welcome1@ / Blueangel1@ Preconditions: Admin User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be disabled in the DB for the Company Unit Id. Steps to Reproduce: Access Accounts Payable > Track Invoices > ALL Page. Click in the Search Bar and select Status Filter option. Please see Disputed Status is available in the Status Filter twice. Log out and Login to SP Application. Access Invoices Page. Click in the Search Bar and select Status Filter option.  Please see Disputed Status is available in the Status Filter. Access Generic Search on top right side. Click in the Search Bar and select Status Filter option. Please Disputed Status is available in the Status Filter twice 1 of which is for PO and the other for Invoice when the FT is OFF? Actual result: Disputed Status are available in the Status Filter on Invoices and Generic Search Pages. Expected result: Disputed Statuses should Not be available in the Status Filter. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-03-06T00:14:51.335-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108758",
+        "summary": "Devqa5 - Accounts Payable - Track invoices - Voided/Disputed - Invoices in other statuses are also showing in Voided/Disputed page ",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   aqsa.rani+processor1+devqa5@vroozi.com password:   Qwerty@1 Steps to Reproduce: Login through given user Navigate to Track invoices \u2192 Voided/Disputed Please see that Invoices in other statuses are also showing  Actual Result: Invoices in other statuses are also showing  Expected Result: Only Voided/Disputed status invoice should show  Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-03-05T23:50:47.138-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108731",
+        "summary": "DEVQA5 - Integration - PMAN Admin/ SP - Track Invoices ALL/ Invoices & Generic Search  - Voided Status Filters are available even the Invoice_Dispute Feature Toggle is disabled for the Company Unit Id.",
+        "description": "URL:  https://devqa5-go.vroozi.com  /    https://devqa5-purchase.vroozi.com/logout?org=1027042017&view=supplier username:   notifyvroozi@gmail.com  /  asma.latif+Betty@vroozi.com password:  Welcome1@ / Blueangel1@ Preconditions: Admin User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be disabled in the DB for the Company Unit Id. Steps to Reproduce: Access Accounts Payable > Track Invoices > ALL Page. Click in the Search Bar and select Status Filter option. Please see Voided Status is available in the Status Filter twice. Log out and Login to SP Application. Access Invoices Page. Click in the Search Bar and select Status Filter option.  Please see Voided Status is available in the Status Filter. Inspect and see the Network Call. Both Disputed&Voided are coming which shows these status invoice records. Access Generic Search on top right side. Click in the Search Bar and select Status Filter option. Please see Voided Status is available in the Status Filter twice 1 of which is for PO and the other for Invoice when the FT is OFF? Actual result: Voided Status are available in the Status Filter on Invoices and Generic Search Pages. Expected result: Voided Statuses should Not be available in the Status Filter. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-05T01:09:20.959-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108718",
+        "summary": "DEVQA5 - Integration - Supplier Portal - Dashboard - Voided Invoices Tile is available even the Invoice_Dispute Feature Toggle is disabled for the Company Unit Id.",
+        "description": "URL:  https://devqa5-purchase.vroozi.com/logout?org=1027042017&view=supplier username:   asma.latif+Betty@vroozi.com password:  Blueangel1@ Preconditions: SP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be disabled in the DB for the Company Unit Id. Steps to Reproduce: Access Dashboard. Please see Voided Tile is available. Actual result: Voided Tile is available in the Dashboard. Expected result: Disputed Process Features should not be available in the SP Application if the Feature Toggle is disabled for the Company Unit Id.  Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-03-04T20:48:05.959-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108610",
+        "summary": "PMAN - Action buttons are not displayed on filter popup under \"Submitted requests\" tab on RFQ list screen.",
+        "description": "URL:      username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Click on \u201cSubmitted Requests\u201d tab. \"Click on the ellipses next to any request form with any status. Action buttons are not displayed in the filter popup for all three statuses. Actual result:  Action buttons are not displayed in the filter popup for all three statuses. Expected Result: Action buttons should be displayed in the filter popup for all three statuses.",
+        "status": "In Biz Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-01T05:28:56.977-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108608",
+        "summary": "PMAN - Copy Request form, Delete Request form and Submit Request form buttons are not showing on filter popup under \"Requests in Draft\" tab on RFQ list screen.",
+        "description": "URL:      username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Click on Request Draft tab. Click on ellipses against any Request form. Copy Request form, Delete Request form and Submit Request form button are not showing on filter popup. Actual result:  Copy Request form, Delete Request form and Submit Request form buttons are not showing on filter popup. Expected Result: Copy Request form, Delete Request form and Submit Request form buttons should shown successfully on filter popup.",
+        "status": "In Biz Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-01T03:16:02.827-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108607",
+        "summary": "PMAN - Applying Request name, RFQ name, Bid number and Description filter on search bar shows \"undefined\" placeholder on RFQ list screen.",
+        "description": "URL:      username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Click on  \u201cRequests in Draft\u201d  tab. Select \u201cRequest name\u201d filter. It shows \u201cundefined\u201d placeholder. Select \u201cDescription\u201d filter. It shows \u201cundefined\u201d placeholder. Click on  \u201cSubmitted Requests\u201d  tab. Select Request name filter. It shows \u201cundefined\u201d placeholder. Select \u201cDescription\u201d filter. It shows \u201cundefined\u201d placeholder. Click on  \u201cRFQs in Draft\u201d  tab. Select RFQ name filter. It shows \u201cundefined\u201d placeholder. Select \u201cDescription\u201d filter. It shows \u201cundefined\u201d placeholder. Click on  \u201cSubmitted RFQs\u201d  tab. Select RFQ name filter. It shows \u201cundefined\u201d placeholder. Select \u201cDescription\u201d filter. It shows \u201cundefined\u201d placeholder. Click on  \u201cAwarded bids\u201d  tab. Select   Bid number filter. It shows \u201cundefined\u201d placeholder. Select \u201cDescription\u201d filter. It shows \u201cundefined\u201d placeholder. Actual result:  Applying Request name, RFQ name, Bid number and Description filter on search bar is showing \"undefined\" placeholder. Expected Result: Applying Request name, RFQ name, Bid number and Description filter on search bar should not show any placeholder.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-01T02:46:56.544-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108605",
+        "summary": "PMAN - Copy RFQ button is not showing on filter popup under \"Submitted RFQs\" tab on RFQ list screen.",
+        "description": "URL:      username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Click on Submitted RFQs tab. Click on ellipses against any RFQ. Copy RFQ button is not showing on filter popup. Actual result:  Copy RFQ button is not showing on filter popup. Expected Result: Copy RFQ button should shown successfully on filter popup.",
+        "status": "In Biz Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-01T02:10:54.485-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108604",
+        "summary": "PMAN - Assign PR button is not showing on filter popup under \"Awarded bids\" tab on RFQ list screen.",
+        "description": "URL:      username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Click on Awarded bids tab. Click on ellipses against any RFQ with  \u201cAwarded\u201d  status Assign PR button is not showing on filter popup. Actual result:  Assign PR button is not showing on filter popup. Expected Result: Assign PR button should shown successfully on filter popup.",
+        "status": "In Biz Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-01T01:59:50.811-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108603",
+        "summary": "PMAN - Copy RFQ, Delete RFQ and Submit RFQ button are not showing on filter popup under \"RFQs in Draft\" tab on RFQ list screen.",
+        "description": "URL:      username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: User has logged into the PMAN Application. Steps to Reproduce: Login with a given user. Navigate to RFQ List Screen. Click on RFQs in Draft tab. Click on ellipses against any RFQ Copy RFQ, Delete RFQ and Submit RFQ button are not showing on filter popup. Actual result:  Copy RFQ, Delete RFQ and Submit RFQ buttons are not showing on filter popup. Expected Result: Copy RFQ, Delete RFQ and Submit RFQ buttons should shown successfully on filter popup.",
+        "status": "In Biz Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-03-01T01:45:20.907-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108279",
+        "summary": "PMAN: In the \"Apply to All\" model, when the cost center toggle is off, the system incorrectly assigns a global tax code to line items associated with a company code that already has a predefined tax code.",
+        "description": "Server:  https://go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+employee24-5@vroozi.com  / Welcome1@ Pre- Requisite: \u00a0Go to Master Data \u2192 Accounting  Disable Cost centre toggle. Disable WBS element toggle Disable Profit centre toggle Disable Internal Order toggle Steps to Reproduce: Login into the above employee user Create PR by adding multiple line items Add company code having predefined Tax code against it. Tax value is calculated Now from apply to all Model select  company code having predefined Tax code against it Check Tax code field. Global tax code is appearing in drop down  Actual: When selecting a company code with a predefined tax code from the \"Apply to All\" model, the system incorrectly displays the global tax code in the dropdown instead of retaining the predefined tax code. Expected: The system should retain and display the predefined tax code associated with the selected company code in the tax code field, rather than showing the global tax code in the dropdown.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-02-25T03:05:04.374-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108248",
+        "summary": "DEVQA5 - Integration - Track Invoices - Disputed Page - N/A is showing in the Disputed Date Column.",
+        "description": "URL:  https://devqa5-go.vroozi.com/ username:   asma.latif+APM@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be Enabled in the DB for the Company Unit Id. Steps to Reproduce: Access Track Invoices. Access Dispute Page. Please check the 'Disputed Date' column value. Its showing N/A Actual result: Disputed Date Column is showing N/A against a disputed invoice. Expected result: Disputed Date should be displayed with correct format. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-25T00:21:27.878-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108246",
+        "summary": "Devqa5 - Accounts Payable - Disputed Invoice Screen - Enum showing in 'Reasons' for Disputed Invoice screen",
+        "description": "url:  https://devqa5-go.vroozi.com/#/login username:  aqsa.rani+apm+devqa5@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login with given user Access the Invoice from Document Inbox sent through Supplier Portal In the destination pop up Add Supplier, Reasons, and Dispute via Mark the Invoice as Disputed  Navigate to Track invoices \u2192 Disputed  e.g Invoice # 9000020140 Click to view same Disputed invoice Please see that \u2018enum\u2019 text is showing in  Reasons   on Disputed Invoice Screen Actual Result:  \u2018enum\u2019 text is showing in  Reasons   on Disputed Invoice Screen Expected Result: Only Reasons should be showing on the screen Screenshot:",
+        "status": "Abandoned",
+        "assignee": "Jimena Pose",
+        "created": "2025-02-25T00:16:39.593-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108245",
+        "summary": "DEVQA5 - Integration - Track Invoices - Disputed Page - Disputed Date Column display issue in the Grid.",
+        "description": "URL:  https://devqa5-go.vroozi.com/ username:   asma.latif+APM@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be Enabled in the DB for the Company Unit Id. Steps to Reproduce: Access Track Invoices. Access Disputed Page. Please see 'Disputed Date' Column is not showing in the grid. Check 'Column preferences list' by clicking the Cog Wheel. 'Disputed Date' is sitting at the end, unchecked and disabled. Click to  Restore defaults . It now has moved into the Default options list, checked and disabled. Actual result: Disputed Date column is not in the grid as we initially access the Disputed Page. Disputed Date option sits at the last in the other columns section of the Column preferences list Expected result: Disputed Date column should always be there in the grid as we access the Disputed Page. Disputed Date option should always be staying in the Default list on Column preferences list Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-25T00:14:37.926-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108230",
+        "summary": "DEVQA5 - Integration - Track Invoice - Disputed/Void Status Pages sub heading issue.",
+        "description": "URL:  https://devqa5-go.vroozi.com/ username:   asma.latif+APM@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be Enabled in the DB for the Company Unit Id. Steps to Reproduce: Access Track Invoices. Access Dispute Page. Please see the Subheading its containing \u201cdisputed\u201c word. Access Void Page. Please see the Subheading its containing \u201cVoid\u201c word. Dispute and Void Page subheadings are not consistent with other status page subheadings. Actual result: Dispute and Void Page subheadings are not consistent with other status page subheadings. Expected result: Dispute and Void Page subheadings should be consistent with other status page subheadings. Screen-Shot: Dispute Status Page: Void Status Page : Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-24T23:07:20.460-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108228",
+        "summary": "DEVQA5 - Integration - Accounts Payable - Track Invoices - Void page is showing even the Invoice_Dispute Feature Toggle is disabled for the Company Unit Id.",
+        "description": "URL:  https://devqa5-go.vroozi.com/ username:   asma.latif+APM@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be disabled in the DB for the Company Unit Id. Steps to Reproduce: Access Track Invoices. Please see Void Page is available even the Feature Toggle is disabled for the Company Unit Id. Actual result: Void Page is available even the Feature Toggle is disabled for the Company Unit Id. Expected result: Void Page should not be available if the Featue Toggle is disabled for the Company Unit Id.  Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-24T22:21:11.117-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108166",
+        "summary": "Devqa5 - Accounts Payable - Dispute Invoice - Scroll bar missing for Reasons to Dispute Invoice in Invoice Destination box",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:  aqsa.rani+processor1+devqa5@vroozi.com password:  Qwerty@1 Steps to Reproduce: Access an SP Invoice from Document Inbox Click on the  ellipses button next to Approve Button Click on the Dispute Button in Invoice Destination Box Click to add reasons  Please see that scroll bar is not showing in the Reasons list Actual Result: Scroll bar is not available and some text in Reasons list not showing Expected Result: Scroll bar should be available in the Reasons list Screenshot:",
+        "status": "Abandoned",
+        "assignee": "Adnan Khalid Shah",
+        "created": "2025-02-21T02:34:11.517-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108098",
+        "summary": "DEVQA5 - Integration - Accounts Payable - Track Invoices - Disputed page is showing even the Invoice_Dispute Feature Toggle is disabled for the Company Unit Id.",
+        "description": "URL:  https://devqa5-go.vroozi.com/ username:   asma.latif+APM@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be disabled in the DB for the Company Unit Id. Steps to Reproduce: Access Track Invoices. Please see Disputed Page is available even the Feature Toggle is disabled for the Company Unit Id. Actual result: Disputed Page is available even the Feature Toggle is disabled for the Company Unit Id. Expected result: Disputed Page should not be available if the Featue Toggle is disabled for the Company Unit Id.  Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-20T03:12:35.310-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108067",
+        "summary": "PROD - SDM  - Clicking Advanced Search link after Search resulting nothing is throwing out of the Application.",
+        "description": "URL:  https://go.vroozi.com/ username:   asma.latif+SDMBU2502@vroozi.com password:  Redangel1@ Preconditions: SDM Basic User should have logged into the Application. Steps to Reproduce: Access Dashboard > Search Bar. Input a string e.g. 'abc' which returns no results. Click Advanced search link under right side of the search bar. The same string \u2018abc\u2019 appears on the Advanced Search Modal. Click to Search. Please see Application is throwing the user out on the Login Page. Actual result: Application is throwing the user out on the Login Page  Expected result: User should not be thrown out. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-19T02:54:32.713-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107827",
+        "summary": "PROD - SDM Admin - Reports - Users - Downloaded Users Report is empty with Row Numbers prefilled.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username: asma.latif+RC2503_DEMO_Admin2@vroozi.com password:  Blueangel1@ Preconditions: PMAN Admin User should have logged into the Application. Steps to Reproduce: Access Reports. Select 'Users' as Report type. Click to Excel Button. File generates. Click to Download. File Downloads. Open it. Please see its Empty but the Row Number column field has values in two rows. Actual result: Downloaded field is Empty but the Row Number column field has values in two rows. Expected Result: Users Data should be downloaded and populated correctly in the file. Screen-Shot: As attached.. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-11T23:40:31.148-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107672",
+        "summary": "PO document should contain same quotes (\") ",
+        "description": "On the cXML PO document, first 2 lines contains single quotes ( ' ) whereas the remaining whole document contains double quote ( \u201c ). Some suppliers are not able to process the PO in this way. There should be same schema through out the whole PO document.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-02-07T05:32:47.415-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107632",
+        "summary": "SDM Admin - Vroozi Logo - Clicking the Logo is not navigating on to the SDM Dashboard if the User has both SDM Admin and Employee Roles.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: User with SDM Admin and Employee Roles should have logged into the Application. SDM Module should have been accessed. Steps to Reproduce: Access SDM>Settings or Any page under Master Data. Click the 'Vroozi' logo on the top left. Nothing Happens. Again Click on the 'Vroozi' logo. Please see Nothing Happens and Error in Console. Actual result: Clicking the Logo is not navigating on to the SDM Dashboard if the User has both SDM Admin and Employee Roles. Expected Result: NO Error should show and \u2018Vroozi\u2019 logo clicked from anywhere should navigate the user on to the Dashboard. Screen-Shot: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-06T12:24:51.814-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106658",
+        "summary": "POST API getting 500 internal Server Error while creating Budget.",
+        "description": "Steps to reproduced: Create a Budget with multiple associations with cost center Only having different combinations. In the second combination i have removed only company code its is not a required field. CURL: curl --location 'https://api.vroozi.com/v1/budgets' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjMjM3OWExZi01YzdlLTQwNWYtYmI2MC1jNzJkMWJjYmY2M2QiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiJiYmM3OWI1ZC1mMjBiLTQ3NzYtYWJmNi0zMTMzYTk2MWEwOTUifQ.N0TIsDn3wq8QdeQ7VXJMZO6-vEdqKRP-f8R_lfsOsEHARKPOBBGbsQK2qoSfcxo5uIDnC1QDslnnda0-CMIXFA' \\\n--header 'x-api-key: Mxapn65qY29r1cIgm2Zz3KNRHAB1GxI33apQLNPf' \\\n--data-raw '{\n    \"name\": \"RC-2025-1-APII\",\n    \"description\": \"RC-2025-1-APII\",\n    \"totalAmount\": 1000,\n    \"budgetAssociations\": [\n        {\n            \"companyCodeRef\": {\n                \"id\": \"1310\",\n                \"externalId\": null,\n                \"docNo\": \"WNCompany\",\n                \"label\": \"WNCompany - WNCompany\",\n                \"type\": \"CompanyCodeModel\",\n                \"archived\": false\n            },\n            \"plantCodeRef\": {\n                \"id\": \"62db8e8eb74a6915a248dbd3\",\n                \"externalId\": null,\n                \"docNo\": \"WNPlant\",\n                \"label\": \"WNPlant - WNPlant\",\n                \"type\": \"PlantCodeModel\",\n                \"archived\": false\n            },\n            \"purchasingOrgRef\": {\n                \"id\": \"62db8e78b74a6915a248da35\",\n                \"externalId\": null,\n                \"docNo\": \"WNPurchasing\",\n                \"label\": \"WNPurchasing - WNPurchasing\",\n                \"type\": \"PurchasingOrganizationModel\",\n                \"archived\": false\n            },\n            \"costObjectRef\": {\n                \"id\": \"62db8efbb74a6915a248e16a\",\n                \"externalId\": null,\n                \"docNo\": \"WNCost\",\n                \"label\": \"WNCost - WNCost\",\n                \"type\": \"CostCenterModel\",\n                \"archived\": false\n            },\n            \"glAccountRef\": {\n                \"id\": \"62db8ec9b74a6915a248e135\",\n                \"externalId\": null,\n                \"docNo\": \"WNGLAccount\",\n                \"label\": \"WNGLAccount - WNGLAccount\",\n                \"type\": \"GlAccountModel\",\n                \"archived\": false\n            },\n            \"customerRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fd5b74a6915a248e4c4\",\n                \"externalId\": null,\n                \"docNo\": \"WNCustomer\",\n                \"label\": \"WNCustomer - WNCustomer\",\n                \"type\": \"CustomerModel\",\n                \"archived\": false\n            },\n            \"classRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": [\n                    \"1310\"\n                ],\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f5ab74a6915a248e37c\",\n                \"externalId\": null,\n                \"docNo\": \"WNClass\",\n                \"label\": \"WNClass - WNClass\",\n                \"type\": \"ClassModel\",\n                \"archived\": false\n            },\n            \"projectRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f7db74a6915a248e3f8\",\n                \"externalId\": null,\n                \"docNo\": \"WNProject\",\n                \"label\": \"WNProject - WNProject\",\n                \"type\": \"ProjectModel\",\n                \"archived\": false\n            },\n            \"locationRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fb6b74a6915a248e4ae\",\n                \"externalId\": null,\n                \"docNo\": \"WNBranches\",\n                \"label\": \"WNBranches\",\n                \"type\": \"LocationModel\",\n                \"archived\": false\n            },\n            \"locationTypeRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f98b74a6915a248e475\",\n                \"externalId\": null,\n                \"docNo\": \"WNLocationType\",\n                \"label\": \"WNLocationType\",\n                \"type\": \"LocationTypeModel\",\n                \"archived\": false\n            }\n        },\n        {\n            \n            \"plantCodeRef\": {\n                \"id\": \"62db8e8eb74a6915a248dbd3\",\n                \"externalId\": null,\n                \"docNo\": \"WNPlant\",\n                \"label\": \"WNPlant - WNPlant\",\n                \"type\": \"PlantCodeModel\",\n                \"archived\": false\n            },\n            \"purchasingOrgRef\": {\n                \"id\": \"62db8e78b74a6915a248da35\",\n                \"externalId\": null,\n                \"docNo\": \"WNPurchasing\",\n                \"label\": \"WNPurchasing - WNPurchasing\",\n                \"type\": \"PurchasingOrganizationModel\",\n                \"archived\": false\n            },\n            \"costObjectRef\": {\n                \"id\": \"62db8efbb74a6915a248e16a\",\n                \"externalId\": null,\n                \"docNo\": \"WNCost\",\n                \"label\": \"WNCost - WNCost\",\n                \"type\": \"CostCenterModel\",\n                \"archived\": false\n            },\n            \"glAccountRef\": {\n                \"id\": \"62db8ec9b74a6915a248e135\",\n                \"externalId\": null,\n                \"docNo\": \"WNGLAccount\",\n                \"label\": \"WNGLAccount - WNGLAccount\",\n                \"type\": \"GlAccountModel\",\n                \"archived\": false\n            },\n            \"customerRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fd5b74a6915a248e4c4\",\n                \"externalId\": null,\n                \"docNo\": \"WNCustomer\",\n                \"label\": \"WNCustomer - WNCustomer\",\n                \"type\": \"CustomerModel\",\n                \"archived\": false\n            },\n            \"classRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": [\n                    \"1310\"\n                ],\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f5ab74a6915a248e37c\",\n                \"externalId\": null,\n                \"docNo\": \"WNClass\",\n                \"label\": \"WNClass - WNClass\",\n                \"type\": \"ClassModel\",\n                \"archived\": false\n            },\n            \"projectRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f7db74a6915a248e3f8\",\n                \"externalId\": null,\n                \"docNo\": \"WNProject\",\n                \"label\": \"WNProject - WNProject\",\n                \"type\": \"ProjectModel\",\n                \"archived\": false\n            },\n            \"locationRef\": {\n                \"companyCodeId\": \"1310\",\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8fb6b74a6915a248e4ae\",\n                \"externalId\": null,\n                \"docNo\": \"WNBranches\",\n                \"label\": \"WNBranches\",\n                \"type\": \"LocationModel\",\n                \"archived\": false\n            },\n            \"locationTypeRef\": {\n                \"companyCodeId\": null,\n                \"companyCodeRefIds\": null,\n                \"active\": true,\n                \"enableForAllCompanyCodes\": false,\n                \"id\": \"62db8f98b74a6915a248e475\",\n                \"externalId\": null,\n                \"docNo\": \"WNLocationType\",\n                \"label\": \"WNLocationType\",\n                \"type\": \"LocationTypeModel\",\n                \"archived\": false\n            }\n        }\n    ],\n    \"durationType\": \"MONTHLY\",\n    \"fromDate\": \"2025-01-11\",\n    \"overBudgetAction\": \"ALLOW_WITH_APPROVAL\",\n    \"budgetApproverRefs\": [\n        {\n            \"id\": \"77511\",\n            \"externalId\": null,\n            \"docNo\": \"waheed.nawaz+BA_Prod@vroozi.com\",\n            \"label\": \"Waheed Budget\",\n            \"type\": \"UserModel\",\n            \"archived\": false\n        }\n    ],\n    \"currency\": \"USD\",\n    \"toDate\": \"2025-02-10\",\n    \"active\": true\n}' Actual result: System is getting internal server error 500. Expected Result It should not give 500 server error it should create a Budget via API.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2025-01-10T22:38:18.744-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105532",
+        "summary": "Purchase Order - When a user performs any action directly on the Purchase Order or indirectly through a related transactional document of a particular Purchase Order that causes a change, the system does not update the Externally Synced flag on the PO",
+        "description": "Issue: Purchase Order - When a user performs any action directly on the Purchase Order or indirectly through a related transactional document of a particular Purchase Order that causes a change, the system does not update the Externally Synced flag on the PO Server: URL:  https://stage-go.vroozi.com/#/login Username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Condition: A Purchase Order, such as \u20182000009941\u2019, has been successfully created, and its  externallySynced  flag is set to  true Steps to Reproduce: Log in to PMAN as an Employee user Load the Purchase Order \u20182000009942\u2019 and create a partial or full Goods/Service Receipt Fetch the Purchase Order using the GET API and verify the  externallySynced  flag value Actual Result: The system retains the  externallySynced  flag as  true Expected Result: The system should update the  externallySynced  flag to  false Note: This issue needs to be fixed for scenarios where a user performs any action on the Purchase Order directly or indirectly, such as  Invoiced, Confirmed, Disputed, Partially Confirmed, Partially Disputed, Shipped, etc.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-28T04:03:00.645-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105296",
+        "summary": "PROD PMan: API - Cost Centers Create/Update request not storing \"parentRef\" through \"id\", \"externalId\" and \"DocNo.\"",
+        "description": "Environment:  Devqa21, unitId 2 and on Production. Pre Conditions: Postman endpoint  https://{{domain}}/v1/cost-centers  is accessible. Postman endpoint  https://{{domain}}/v1/cost-centers /upsert is accessible. Steps to Reproduce: Send below request on endpoint  https://{{domain}}/v1/cost-centers Request: {\n    \"id\": \"\",\n    \"externalId\": \"MIA_030-{{env}}\",\n    \"code\": \"MIA_030-{{env}}\",\n    \"description\": \"MIA_030-{{env}} - Cost Center\",\n    \"profitCenter\": null,\n    \"companyCodeRef\": {\n        \"id\": \"\",\n        \"externalId\": \"\",\n        \"docNo\": \"MIA_001-{{env}}\",\n        \"label\": \"\",\n        \"type\": \"CompanyCodeModel\",\n        \"archived\": false\n    },\n    \"budgetInfo\": {\n        \"amount\": 50.3,\n        \"timeFrequency\": \"MONTHLY\"\n    },\n    \"validFrom\": \"2024-11-19\",\n    \"validTo\": \"2025-11-18\",\n    \"active\": true,\n    \"ancestorsRef\": [],\n    \"parentRef\": {\n        \"id\": \"65bb62e82c75751c05ad4311\",\n        \"externalId\": \"\",\n        \"docNo\": \"\",\n        \"label\": \"\",\n        \"type\": \"CostCenterModel\",\n        \"archived\": false\n    }\n} Response: {\n    \"id\": \"0cab11c4-161d-44f0-8cf4-fa592123deae\",\n    \"status\": \"404\",\n    \"title\": \"Not Found\",\n    \"errors\": [\n        {\n            \"code\": \"404\",\n            \"element\": \"parentRef\",\n            \"message\": \"Cost Center not found. Provided value: [ReferenceModel(id=65bb62e82c75751c05ad4311, externalId=, docNo=, label=, type=CostCenterModel, archived =false)]\",\n            \"detail\": \"Cost Center [ReferenceModel(id=65bb62e82c75751c05ad4311, externalId=, docNo=, label=, type=CostCenterModel, archived =false)] not found for Company Code [ReferenceModel(id=10673, externalId=MIA_001-devqa21, docNo=MIA_001-devqa21, label=MIA_001-devqa21 - MIA_Comp_001-devqa21 - Company Description, type=CompanyCodeModel, archived =false)]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2024-11-20T07:57:05.809+0000\"\n}",
+        "status": "Abandoned",
+        "assignee": "Muhammad Adnan",
+        "created": "2024-11-20T00:00:53.249-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102176",
+      "released_in_current_rc": false,
+      "summary": "Thomas Supply & Distribution - Netsuite Integration",
+      "description": "Thomas Supply & Distribution - Netsuite Integration Phase 2 PROD & SOCI unitIds: 276 Admin user email:  admin.tos2@vroozi.com The Scope of work includes the following items. Bring new master data from Netsuite Read re-order quantities from Netsuite create Purchase Request / or Purchase Order in Vroozi for the re-order items. Create the Purchase order in Netsuite. Create Item Receipt in Netsuite. Post Invoices to Netsuite. Post Credit memo to Netsuite. Bring Payment information from Netsuite In review by Project team. Bring Inventory items into Netsuite and create catalogs",
+      "status": "Implementation In Progress",
+      "assignee": "Talqeen Ahmad",
+      "created": "2024-08-11T12:36:25.631-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-109342",
+        "summary": "Unable to update externalID via Submit Purchase Order endpoint",
+        "description": "Client: Thomas Supply Issue statement: The Netsuite Integration with Thomas Supply requires the middleware to store the Netsuite Internal ID of the Purchase Order to reference it on the Invoice document when posting to Netsuite. The middleware is doing so using the  /purchase-orders/submit  endpoint to submit an existing Purchase Order along with the external Id. It appears that the  /purchase-orders/submit  endpoint is not storing the external ID when posting the Purchase Order information with the external ID instead it is trying to create a new Purchase Order. Steps to reproduce: Fetch an existing Purchase Order using the  /purchase-orders/{id} endpoint and utilize the response and submit a Request to  /purchase-orders/submit  including the data in the externalId field. Current Result:  The API is creating another Purchase Order. Expected Result: The API should update the existing Purchase Order and populate the externalId field.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Saad Khawaja",
+        "created": "2025-03-24T15:11:31.691-0700",
+        "issue_type": "Bug",
+        "parent_id": "VZI-102176"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-69349",
+      "released_in_current_rc": false,
+      "summary": "Configuration management using config server",
+      "description": "Setup a config server which will serve the property files to different micro services.",
+      "status": "In Design",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2021-08-01T07:51:25.580-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-108897",
+        "summary": "Convert Shopper API from spring to spring boot",
+        "description": "User Data Api Purchase Api We need to identify the effort and possibility of converting the above mentioned micro-services to spring boot application.",
+        "status": "Duplicate",
+        "assignee": "Muhammad Hamza",
+        "created": "2025-03-11T02:30:10.852-0700",
+        "issue_type": "Spike",
+        "parent_id": "VZI-69349"
+      },
+      {
+        "key": "VZI-107955",
+        "summary": "QA: Properties Comparison Test script",
+        "description": "The goal of this ticket is to compare the properties loaded with and without config server help. This actuator can be used to get the properties here at this link  http://localhost:8080/actuator/env .  The goal of this ticket is to create a script that compares the pre loaded properties in spring context with the ones that are loaded with the help of config server. Steps are as follows Get the pre and post implementation properties json files using actuator. Create a python script that load these properties and compare the values between them Identify if any value is changed from pre state to post state or if any key is missing. Create a new file that contains the results. If the file is empty this means there is no change. The no changes explains that all properties are loaded correctly.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-02-13T22:15:40.433-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-69349"
+      },
+      {
+        "key": "VZI-107859",
+        "summary": "Queue rename for services on stage",
+        "description": "Change queue name from stagging to stage so that it will allign with serverName as of dev and prod server For the list of services * erp-service",
+        "status": "Abandoned",
+        "assignee": "Muhammad Azeem",
+        "created": "2025-02-12T23:52:57.723-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-69349"
+      },
+      {
+        "key": "VZI-104724",
+        "summary": "Identify effort to convert listed services from spring to spring boot",
+        "description": "User Data Api Purchase Api We need to identify the effort and possibility of converting the above mentioned micro-services to spring boot application.",
+        "status": "Investigation Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-10-28T23:03:38.612-0700",
+        "issue_type": "Spike",
+        "parent_id": "VZI-69349"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-11810",
+      "released_in_current_rc": false,
+      "summary": "Platform Audit Log",
+      "description": "",
+      "status": "In Design",
+      "assignee": "Stefan Deusch",
+      "created": "2016-03-28T17:53:57.237-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-108615",
+        "summary": "Audit logging UI changes - Continued",
+        "description": "Few changes are required on the audit logging UI UpdatedBy  field should contains the  name  username  of the person instead of the  Id  in the grid view. Rename the field to  lastUpdatedBy  to match the field in the db record.  (This requirement has been parked for now due to performance impact. For now just rename the  updatedBy  field to  lastUpdatedById ) In the  popup   view  rename  lastUpdatedBy  to  lastUpdatedById . In the  popup view  rename  lastUpdatedByName  to  lastUpdatedBy  and this should include the  username  of the person making the changes. Rename the  updatedOn  field to  updatedDate  in grid view.  Move the  OperationType  to  grid view. Divide the pop-up screen into two sections Audit log data All the fields coming from change set data should be part of this section apart from the ones mentioned in the below section called  meta data . We need to sort these records and string fields should be placed on top and json fields should be at bottom for easy readability. Meta data This section should contains the following fields. lastUpdatedBy (username of the actor) lastUpdatedByid (userId of the actor) updatedDate (Time of the action)",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-03-02T21:08:27.023-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-11810"
+      },
+      {
+        "key": "VZI-107964",
+        "summary": "Audit logging UI changes",
+        "description": "Few changes are required on the audit logging UI Dev: sort the company field by unitId ASC Dev: mask any critical information in the audit data. Fields and collections should be dynamic, any new collection and its field should be controlled by configuration. For company settings following two fields should be masked. password erpConnectionSettings Dev:  Add a new configuration  masked-fields.enabled=true . The masking should only happen if this feature is set to true. QA: Create a mapping document which associates the company settings UI flags and other fields with the audit log data fields.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-02-14T02:11:00.466-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-11810"
+      },
+      {
+        "key": "VZI-105907",
+        "summary": "kafka topic size configuration",
+        "description": "Identified the kafka topics default size of 1mb which is enough for company settings auditing, the scope of this spike is to identify how can we change this limit which might be required for auditing other collections.",
+        "status": "Investigation Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-16T03:36:19.978-0800",
+        "issue_type": "Spike",
+        "parent_id": "VZI-11810"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105624",
+      "released_in_current_rc": false,
+      "summary": "Payables: Implement Invoice Dispute Process",
+      "description": "Develop the Invoice Dispute Process to enable clients to manage invoice discrepancies effectively with the Supplier.",
+      "status": "Implementation In Progress",
+      "assignee": "Jimena Pose",
+      "created": "2024-12-03T06:48:34.026-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-108465",
+        "summary": "Supplier Portal: Display and Filter Disputed and Voided Invoices in the Invoices page",
+        "description": "Business Case: Enable Supplier Portal users to view and filter invoices with \"Disputed\" and \"Voided\" statuses on the Invoices page. Acceptance Criteria: What is the change? As a  Supplier Portal user , I want to be able to see invoices that are in  Disputed  and  Voided  status on the Invoices page, So that I can track and manage invoices that require my attention. Which customers should this change impact? Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact? Supplier Portal > Invoices page Which users should be impacted by the change? SP User. How should this feature work? The  Invoices page  in the Supplier Portal should display invoices with the following statuses: Disputed Voided The  Status Filter  on the Invoices page should include the following options: Disputed Voided All other existing invoice statuses When a Supplier Portal user selects  Disputed  from the Status Filter, only invoices marked as  Disputed  should be displayed. When a Supplier Portal user selects  Voided  from the Status Filter, only invoices marked as  Voided  should be displayed. If no status filter is applied, all invoices (including  Disputed  and  Voided  invoices) should be displayed by default. When the Supplier Portal user  clicks on the three-dot menu (More Actions)  for an invoice in  Disputed  or  Voided  status: The only available action should be  \"View Invoice.\" Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-27T00:02:46.301-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-106041",
+        "summary": "PMAN: Users should not see the Invoice Dispute Process until the feature is at least completed for Supplier Portal.",
+        "description": "Business Case : As a  user  interacting with the Supplier Portal, I  do not  want to see the Invoice Dispute Process enhancements until they have been fully developed and are ready for release. This ensures that I am not exposed to incomplete or non-functional features and reduces potential confusion or frustration. Acceptance Criteria : Initial State (Feature Hidden): Users should not see any Invoice Dispute Process-related UI elements or functionalities. Feature Toggle Implementation: Introduce a temporary feature toggle (e.g.,  ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE ) to control the visibility of the Invoice Dispute Process features. When the toggle is  off , the Invoice Dispute Process features remain hidden. When the toggle is  on , all developed Invoice Dispute Process features become visible and usable by all users. Toggle Removal Post-Completion: Once the Invoice Dispute Process feature is completely developed for Supplier Portal clients, remove the temporary feature toggle and ensure the feature is permanently visible to the users. Testing & Verification: Verify that toggling the switch on/off reliably hides and shows the Invoice Dispute Process features. Ensure no partial or placeholder elements are visible when the toggle is off.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-18T16:26:53.085-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105929",
+        "summary": "PMAN: Introduce 'Voided' status page to Track Invoices.",
+        "description": "Business Case: Allow AP users to view invoices voided by the supplier on the new 'Voided' page under Track Invoices section in the navigation panel. Acceptance Criteria: What is the change?  Add a new tracking page for \u2018Voided' Invoices under the 'Track Invoices' section in the navigation panel. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true. What pages should this change impact?  Navigation Panel > Track Invoices. Which users should be impacted by the change? AP Processor. AP Manager, Admin. How should this feature work? Navigation Panel Display: A new option labeled  'Voided'  is added under the  'Track Invoices'  section in the navigation panel. Count Display: No count is displayed next to the  'Voided'  option, even if voided invoices are assigned to an individual AP user, as no further action can be taken on these invoices. The  'Voided'  page is accessible to all users with appropriate permissions, regardless of the presence of disputed invoices. Page Behavior: Clicking the  'Voided'  option opens the  Voided  page, displaying the relevant invoices based on the user's role: AP Processor:  The page displays non-deleted invoices in  'Voided'  status: Invoices that were submitted for dispute by the logged-in user and subsequently voided by the supplier. Or where the logged-in user is the owner of the invoice. AP Manager & Admin Users:  The page displays all non-deleted invoices in  'Voided'  status linked to the  unitId  of the logged-in user. Default Columns Displayed:  The following columns are displayed by default when users navigate to the  Voided  invoice page: Invoice #:  Displays the system-generated invoice number. PO #:  Displays the Purchase Order number linked to the invoice (if available). Supplier Invoice #:  Displays the invoice number provided by the supplier. Supplier:  Displays the name of the supplier associated with the invoice. Total:  Displays the total amount of the invoice. Voided Date:  Displays the date the invoice was voided. Column Preferences: Users can configure which columns to display on the  Voided  invoice page. Along with the default columns listed above, users can choose to display the following additional columns: Invoice Date : Displays the date the invoice was issued. Created Date : Displays the date the invoice was created in the system. Updated Date:  Displays the date the invoice was last updated. Payment Due Date:  Date payment is due based on payment terms. Company Code : Displays the company code associated with the invoice. Total Shipping : Displays the total shipping charges on the invoice. Total Tax : Displays the total tax amount on the invoice. Requester | Buyer : Displays the Requester | Buyer on the Invoice. Voided   Status specific filtering in the search bar : Track All Invoices page. Pagination: Pagination is displayed on the bottom-right corner of the  Voided  invoice page. Ten (10) invoices are displayed per page. Users can navigate between pages using the pagination controls. Invoice Counts: The total count of invoices in  'Voided'  status is displayed on the bottom-left corner of the page. The range of invoices displayed on the current page (e.g., \"1-10 of 50\") is also shown. Search Bar: A search bar is available at the top of the page where users can input search criteria. The search bar supports filtering by fields such as  Assignee, Created By, Supplier, Invoice Total,  and more. Column Sorting: All columns, are sortable in both ascending and descending order. Users can click column headers to apply sorting. Default Sorting: The  Voided  invoice page is sorted in descending order by the  Invoice #  field by default. Ellipsis Menu: Should function in a similar manner to other status pages . Note to QA: In addition to testing the AC, please also perform the following: Test negative test cases when the ACCOUNTS_PAYABLE_WORKFLOW toggles is 'off'. Verify that deleted invoices are not displayed in the disputed status page. Verify for users with multiple combination of roles: AP Processor + AP Approver, etc. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-12-16T16:48:27.747-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105632",
+        "summary": "Supplier Portal: Activity Stream Enhancements for disputed and voided invoices",
+        "description": "Business Case: Extend the Activity Stream to track all actions related to invoice disputes and voiding. Acceptance Criteria: What is the change?  Log actions related to invoice disputes and voiding in the Activity Stream for tracking. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Supplier Portal > Dashboard and Invoices page. Which users should be impacted by the change? SP User. How should this feature work? Key Features : Log when an invoice is submitted for  dispute . AP User's initials (avatar) Invoice number (clickable link) Clicking the invoice number opens the disputed invoice. Timestamp of dispute (e.g., \"AP user initials \u2192 Invoice #9000000505 has been disputed at 12:49 PM on 11/11/2024\") Log when an invoice is  voided . SP User's initials (avatar) Invoice number (clickable link) Clicking the invoice number opens the voided invoice. Timestamp of voiding (e.g., \"SP user initials \u2192 Invoice #9000000505 has been voided at 12:49 PM on 11/11/2024\") Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-12-03T08:32:38.905-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105631",
+        "summary": "Supplier Portal: Dashboard Tile for Disputed and Voided Invoices.",
+        "description": "Business Case: Improve SP user experience by adding dashboard tiles for quick access to Disputed and Voided invoices. Acceptance Criteria: What is the change?  Add dashboard tiles for Disputed and Voided invoices in the Supplier Portal with direct links to filtered lists. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Supplier Portal > Dashboard and Invoices page. Which users should be impacted by the change? SP User. How should this feature work? Key Features : Add a new dashboard tile: Disputed Invoices : Shows count of invoices in Disputed status. Voided Invoices : Shows count of invoices in Voided status. Clicking a tile opens a filtered view: Disputed Invoices : Filter by status = Disputed. Voided Invoices : Filter by status = Voided. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-12-03T08:28:36.120-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105630",
+        "summary": "PMAN: Introduce 'Disputed' status page to Track Invoices.",
+        "description": "Business Case: Allow AP users to view invoices submitted for dispute on the new 'Disputed' page under Track Invoices section in the navigation panel.  Acceptance Criteria: What is the change?  Add a new tracking page for \u2018Disputed' Invoices under the 'Track Invoices' section in the navigation panel. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true. What pages should this change impact?  Navigation Panel > Track Invoices. Which users should be impacted by the change? AP Processor. AP Manager, Admin. AP Auditor  (Need to confirm) How should this feature work? Navigation Panel Display: A new option labeled  'Disputed'  is added under the  'Track Invoices'  section in the navigation panel. Count Display: No count is displayed next to the  'Disputed'  option, as disputed invoices cannot be assigned to individual AP users. The  'Disputed'  page is accessible to all users with appropriate permissions, regardless of the presence of disputed invoices. Page Behavior: Clicking the  'Disputed'  option opens the  Disputed  page, displaying the relevant invoices based on the user's role: AP Processor:  The page displays non-deleted invoices in  'Disputed'  status: Submitted for dispute by the logged-in user. Or where the logged-in user is the owner of the invoice. AP Manager & Admin Users:  The page displays all non-deleted invoices in  'Disputed'  status linked to the  unitId  of the logged-in user. Default Columns Displayed:  The following columns are displayed by default when users navigate to the  Disputed  invoice page: Invoice #:  Displays the system-generated invoice number. PO #:  Displays the Purchase Order number linked to the invoice (if available). Supplier Invoice #:  Displays the invoice number provided by the supplier. Supplier:  Displays the name of the supplier associated with the invoice. Payment Due Date : Displays the payment due date associated with this invoice. Reason:  Displays the reason for disputing the invoice.   (We can live without this due to it being a multi-select field) Total:  Displays the total amount of the invoice. Disputed Date:  Displays the date when the invoice was submitted for dispute. Assignee:  Displays the individual or entity associated with the dispute. Column Preferences: Users can configure which columns to display on the  Disputed  invoice page. Along with the default columns listed above, users can choose to display the following additional columns: Invoice Date : Displays the date the invoice was issued. Created Date : Displays the date the invoice was created in the system. Updated Date : Displays the date the invoice was last updated. Company Code : Displays the company code associated with the invoice. Total Shipping : Displays the total shipping charges on the invoice. Total Tax : Displays the total tax amount on the invoice. Requester | Buyer : Displays the Requester | Buyer on the Invoice. Dispute Status specific filtering in the search bar : Track All Invoices page. Overdue Invoices page. Pagination: Pagination is displayed on the bottom-right corner of the  Disputed  invoice page. Ten (10) invoices are displayed per page. Users can navigate between pages using the pagination controls. Invoice Counts: The total count of invoices in  'Disputed'  status is displayed on the bottom-left corner of the page. The range of invoices displayed on the current page (e.g., \"1-10 of 50\") is also shown. Search Bar: A search bar is available at the top of the page where users can input search criteria. The search bar supports filtering by fields such as  Assignee, Created By, Supplier, Disputed Date, Reason, Invoice Total,  and more. Column Sorting: All columns, except  Assignee,  are sortable in both ascending and descending order. Users can click column headers to apply sorting. Default Sorting: The  Disputed  invoice page is sorted in descending order by the  Payment Due Date  field by default. Ellipsis Menu: Should function in a similar manner to other status pages . Note to QA: In addition to testing the AC, please also perform the following: Test negative test cases when the ACCOUNTS_PAYABLE_WORKFLOW toggles is 'off'. Verify that deleted invoices are not displayed in the disputed status page. Verify for users with multiple combination of roles: AP Processor + AP Approver, etc. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0How many Invoices can we expect to be in Disputed status lets say for a week or so? \u00a0 \u00a0   \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-03T08:25:39.209-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105629",
+        "summary": "Supplier Portal / Payables: Introducing Voided Status for Invoices",
+        "description": "Business Case: Allow SP users to void invoices when appropriate, marking them as unusable but visible for tracking. Acceptance Criteria: What is the change?  Add a Voided status for disputed invoices, allowing SP users to cancel invoices with proper tracking and notifications. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Disputed Invoices. Which users should be impacted by the change? SP User. How should this feature work? Key Features : New \" Void \" button for disputed invoices on the SP side.  Visible only for disputed invoices. Button Color:   Gray  ( Open to the Team\u2019s color suggestions ) If the SP user clicks on the  Void  button: The  Invoice Destination Box  opens with the following: Next Action Text . Void Sub-text . This cancels the invoice and stops further processing. Warning Message .   (To avoid any accidental disputes) Warning: Please confirm this action carefully. Once voided, the invoice cannot be edited or processed further. Comments  (free-text field for additional details). Required  for Void action. Voiding the disputed invoice : The invoice status updates to: Voided  on the SP side. ( Team to suggest color schemes for the Voided status ) Voided  on the AP side. ( Team to suggest color schemes for the Voided status ) Invoice becomes un-editable and non-processable. AP user or SP user can no longer take action on this invoice. Sends a notification (NOTY message) to AP user(s). AP user & SP user should also be able to see Invoices in Voided status. Voided invoices are treated as if they are deleted but remain visible to both SP and AP users. ( Don\u2019t take this in literal sense, this is just for understanding purposes .) The user assignment after the invoice has moved over to Voided status should work in a similar manner to Posted invoices where there is no user assigned to the Invoice. PO Handling : PO details remain linked to the voided invoice for tracking. Line items/quantities become reusable for a different Invoice. Mock Screenshot : Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks \u00a0 \u00a0Using a warning message in the Invoice destination as part of the confirmation message when voiding.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-03T08:17:21.442-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      },
+      {
+        "key": "VZI-105627",
+        "summary": "Payables: Allow AP users to Dispute Invoice to Supplier Portal.",
+        "description": "Business Case: Allow AP users to submit invoices for dispute purposes when the supplier has the \"Allow Dispute Invoice via Supplier Portal\" toggle ON. Acceptance Criteria: What is the change?  Allow AP users to dispute invoices in eligible statuses and submit them to the Supplier Portal with specific reasons and recipients. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, and  Dispute Invoice via Supplier Portal  toggle = ON. What pages should this change impact?  Invoices in these statuses - Draft. Parked. Rejected. Which users should be impacted by the change? Document creator/owner (AP Processor). Any AP Manager How should this feature work? Key Features : AP users  can  dispute invoices if the ' Dispute Invoice via Supplier Portal ' toggle is set to  ON  for the supplier linked to the respective invoice. AP users  cannot  dispute invoices if the ' Dispute Invoice via Supplier Portal ' toggle is set to  OFF  for the supplier linked to the respective invoice. AP users can dispute invoices in  Draft ,  Parked , or  Rejected  statuses. AP users are allowed to dispute invoices created via  Supplier Portal ,  Email (OCR) ,  CXML ,  API   (need some info about this method) . AP users are allowed to dispute invoices created  Manually   (Will confirm with internal stakeholders regarding disputes for manual invoices) . In the Invoice destination section, the dispute submission includes: Warning Message .   (To avoid any accidental disputes) Warning: Please confirm that all details are correct before submitting. This action cannot be undone. Reason .  ( The team will review and confirm whether we can implement the multi-select reason option, similar to company code restriction or PO line item dispute. ) Configurable via backend to remove options. Dropdown options - Billing Error Price Discrepancy Quantity Mismatch Incorrect Tax Calculation Invalid or Missing Purchase Order Number Duplicate Invoice Unauthorized Charges Missing or Incorrect Invoice Details Delivery Issues Incorrect Document Type Incorrect Billing Address or Subsidiary Dispute Via . Supplier Portal. If the invoice can only be disputed via the Supplier Portal, it should be  pre-selected  and cannot be changed by the AP user. Email. ( Future - not part of this ticket, but for reference ) If the invoice can only be disputed via email, it should be pre-selected and cannot be changed by the AP user. Recipient : For Supplier Portal (SP) Invoices: If an SP invoice is disputed, the dispute is assigned to the SP user who created and sent the invoice, as long as they are still active. Example :   Adam creates SP Invoice 90000056789. If disputed, the dispute goes to Adam if he's still active. If the original SP user is inactive, the AP user can select another SP user from a list of all SP users linked to the supplier. (   to check what the current system behavior is on who can see the invoice and accordingly decide Administrator or Order Processor should be allowed to take the action. ) Example :   If Adam is inactive, the AP user can assign the dispute to another SP user, like Ryan. If no SP users are active for the supplier, the invoice cannot be disputed via the Supplier Portal. For Non-SP Invoices (Email, OCR, cXML, API) and Manually Created Invoices  (Will confirm with internal stakeholders regarding disputes for manual invoices) : If disputed, the AP user can assign the dispute to an SP user from a list of SP users linked to the supplier. Example :   Matthew sends Invoice 90000056452 via email. If disputed, the AP user can assign it to Adam, Matthew, or Ryan. If no SP users are active for the supplier, the invoice cannot be disputed. Future Consideration: Support for notifying multiple or all SP users linked to the supplier for disputes may be added later.  (Not needed right now) Smart assignment for Non-SP invoices in the future where we could try to link email address or supplier name, etc. from the Email / cXML / API to see if there is a matching SP user with that same credentials in the system.  (Not needed right now) Comments  (free-text field for additional details). Submitting the dispute : Changes the invoice status on the AP side to  Disputed  status. Invoice status on the SP side would change to  Disputed  status as well. Sends an email notification to the SP user letting them know that the invoice has been disputed  (Separate ticket for the SP User email template) . Sends a notification (NOTY message) to eligible SP users. AP Processor / AP Manager should not be allowed to edit this disputed invoice until the dispute has been resolved. Audit Log Tracking : Track all dispute actions in the AP system\u2019s Audit Logs to allow a historical view of disputes and resolutions. Lets re-use the texts that we used for our demo in the audit history section -    Mock Workflow :   Mock Screenshot : Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0What are the common reasons that should always be used for all customers and how reporting can be affected by adding or removing a reason from the backend? \u00a0 \u00a0   \u00a012/03/2024 \u00a0   \u00a0 Should we allow AP users to add attachments to explain the dispute in more detail, which can be shared via the Supplier Portal or Email?   12/05/2024  /    Should AP users be allowed to dispute invoices that they manually created?   12/05/2024  /    Should comments be required for the AP user when submitting the dispute.   12/05/2024  /    # Question Recommendation Response Remarks \u00a0 \u00a0Should we use multi-select option like dispute on PO line item for the Reason section? Team needs to check how this can be efficiently implemented.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-12-03T07:57:38.854-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-107737",
+      "released_in_current_rc": false,
+      "summary": "SDM: NBCU Supplier Discovery Module Enhancement (Phase 3)",
+      "description": "Phase 3 of Supplier Discovery Management (SDM) Enhancements focuses on improving configurability, access control, and user experience through various quality-of-life (QoL) improvements and fixes. Key updates include configurable guidelines by user group, enhanced SDM Location toggle behavior, hiding the Supplier Exception Form link when EF access is disabled, and updating tooltips for clarity. Additional optimizations will further refine SDM functionality and usability. Business Objectives: Enhance Configurability  \u2013 Provide organizations with greater control over SDM settings by allowing user group-based configurations. Improve User Experience  \u2013 Reduce confusion by ensuring that UI elements, tooltips, and messages are contextually accurate. Strengthen Access Control  \u2013 Ensure users only see and interact with features they are authorized to use. Optimize System Usability  \u2013 Implement QoL improvements that streamline workflows and reduce inefficiencies in supplier discovery and management.",
+      "status": "Open",
+      "assignee": "Jimena Pose",
+      "created": "2025-02-10T22:11:01.117-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-108444",
+        "summary": "PMAN / SDM: Improve Role Labels Displayed to PMAN Admins in User Grid Based on User Group Selection",
+        "description": "Business Case: Currently,  PMAN Admins  see all users in the  SDM > Master Data > Users  and  PMAN > Master Data > Users  grids with a role label based on the  Default User Group setting  rather than the user\u2019s actual assigned user group. This causes confusion, as the displayed role does not accurately reflect the user\u2019s group-based designation. To enhance clarity, the system should update the  Role  column in the  Users Grid  to reflect the  correct role label  based on the  user's assigned user group  instead of the default group setting. Note :    We had briefly discussed this back during the Phase 2 implementation. I believe this can be done more efficiently with fewer API calls, but we didn\u2019t pursue it at the time due to the tight deadline for completing the MVP project. Here is comment for reference -   and     Acceptance Criteria: What is the change? As a  PMAN Admin , I want to see the  correct role labels  in the  User Grid  of  SDM > Master Data > Users  and  PMAN > Master Data > Users , So that I can accurately identify users based on their  actual assigned user group  rather than a default setting. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? PMAN > Master Data > Users. SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin. How should this feature work? Role Label Updates Based on User Group: The  Role  column in the  Users Grid  should reflect the  correct user group label  configured for each user, rather than using the  Default User Group  setting. Example -  If a user belongs to the  Redbook  user group, their role should be displayed as: Redbook Admin Redbook Power User Redbook Basic User Example - If a user belongs to the  Directory  user group, their role should be displayed as: Directory Admin Directory Power User Directory Basic User This applies to  both  the  SDM  and  PMAN User Grid  views. PMAN Admins See the Correct Labels for Users from Different User Groups: Instead of seeing all users under a  single default group label  (e.g., \"Discovery Power User\" for all users), PMAN Admins should see: John as a Redbook Power User Matt as a Directory Power User Other users based on their user group labels Retain Existing Labeling for Redbook and Directory Admins: Redbook Admins should continue to see only Redbook users with the appropriate  Redbook  role labels. Directory Admins should continue to see only Directory users with the appropriate  Directory  role labels. No change in behavior for these user groups. Current View  - Expected View  - Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 FYI -   /   /",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-26T17:26:39.537-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-108220",
+        "summary": "PMAN: Move Project Section Below Access Section in PMAN > Master Data > Users",
+        "description": "Business Case: Rearrange the  PMAN > Master Data > Users  page layout by moving the  Project  section below the  Access  section to improve the user experience for PMAN Admins when assigning SDM roles. Acceptance Criteria: What is the change? Currently, in  PMAN > Master Data > Users , the  Project  section appears  before  the  Access  section. This ordering is not ideal when a  PMAN Admin  selects an  SDM role , as they should first assign a  User Group  in the  Access  section before determining whether the  Project  section should be displayed. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? PMAN > Master Data > Users. Which users should be impacted by the change? PMAN Admin. How should this feature work? The  Project  section is repositioned  below  the  Access  section on the  PMAN > Master Data > Users  page. The  Project  section remains or disappears dynamically based on the selected  User Group's  settings. ( existing implementation ) The UI update should not impact existing user permissions, access settings, or backend functionality. Reason for this change  -  When a  PMAN Admin  selects an  SDM role , they first configure the  Access  section before seeing the  Project  section. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-24T17:35:43.768-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-108154",
+        "summary": "SDM: Report Export Restrictions for SDM Users",
+        "description": "Business Case: Currently, SDM users exporting reports from the Reports section receive all data irrespective of their user group. This user story ensures that report exports for specific report types adhere to the SDM user's assigned user group restrictions while maintaining full data access for PMAN Admins. Acceptance Criteria: What is the change? As an SDM user, I want the reports I export to reflect only the data relevant to my user group so that I can access accurate and authorized information. PMAN Admins should continue receiving all data without restrictions. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Reports Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) SDM Basic User SDM Power User How should this feature work? Report Type - Quick Contact List: The PDF or Excel export should return results based on the SDM user's assigned user group. PMAN Admins should continue to receive all data as usual. If the SDM Location settings are ON, the Location filter should be applied accordingly. Report Type - Suppliers: The Excel export should return results based on the SDM user's assigned user group. PMAN Admins should continue to receive all data as usual. If the SDM Location settings are ON, the Location filter should be applied accordingly. Report Type - Users: The Excel export should return results based on the SDM user's assigned user group. PMAN Admins should continue to receive all data as usual. Report Type - Supplier Discovery Download: No changes to this report at this time. Further analysis is required to understand the report's purpose before implementing any modifications. Report Type - Exception Form: This option should only be available in the dropdown for SDM users who have the \"Enable EF Access\" setting ON for their user group. The Excel export should return results based on the SDM user's assigned user group. PMAN Admins should continue to receive all data as usual. Note : Reports  PMAN Admin  can see today - Quick Contact List Suppliers Users Supplier Discovery Download Exception Form Reports  SDM Admin  can see today - Quick Contact List Suppliers Users Supplier Discovery Download Exception Form Reports  SDM Power User  can see today - Quick Contact List Suppliers Exception Form Reports  SDM Basic User  can see today - Quick Contact List Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2025-02-20T08:46:14.308-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-108152",
+        "summary": "SDM: UI Enhancement for Supplier Information Display",
+        "description": "Business Case: The current Supplier Information UI does not dynamically adjust when additional fields, such as Custom fields, are introduced in different sections (e.g., Supplier Details, Business Information, Contract Information, Insurance Information). This results in users having to click on the 'Show Additional' button to view all relevant details. To improve usability and visibility, the system should adapt to fit or introduce scrolling within a particular section, ensuring that important details are readily visible at first glance. Acceptance Criteria: What is the change? The Supplier Information UI will dynamically adjust when Custom fields are added to different sections (Supplier Details, Business Information, Contract Information, Insurance Information). Instead of relying on a fixed-length \u2018Show Additional\u2019 button, the UI will either expand within reasonable limits or introduce scrolling within the section to ensure important information is visible at first glance. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Supplier Search > Supplier Information. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) SDM Basic User SDM Power User How should this feature work? If Custom fields are added to a section, the UI should automatically expand to accommodate them within reasonable limits. Replace the fixed-length \u2018Show Additional\u2019 button with an adaptive expansion mechanism. Implement smooth scrolling within sections to avoid abrupt changes in layout. Maintain a clean and readable format when multiple custom fields are added. Ensure the updated UI works well across different screen sizes and resolutions. Maintain consistency in section heights and scrolling behavior across all sections. Ensure that dynamically adjusting sections do not impact page load time. Provide UI mock ups or suggestions on how we can improve the viewing experience. Fix labeling issue for attributes when viewing Supplier information - Current: Expected: Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-20T08:01:48.704-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-107735",
+        "summary": "SDM: Hide Supplier Exception Form Link When EF Access is Disabled",
+        "description": "Business Case: When a user group has the  Enable EF Access  toggle set to  OFF , the  \"No Current Supplier(s) found\"  message should not display the last line containing the  \" Have a supplier that's not in the system? Fill out our  Supplier Exception Form \"  hypertext link. Since this link directs users to create an  EF Document , and the user group does not have EF access, showing the link is misleading and should be removed when EF Access is OFF. Acceptance Criteria: What is the change? If  Enable EF Access  is  OFF , the  Supplier Exception Form  link will be removed from the  \"No Current Supplier(s) found\"  message. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Search. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) SDM Power User SDM Basic User How should this feature work? When EF Access is OFF: The  \"No Current Supplier(s) found for 'xyz'\"  message  should NOT display  the line: \"Have a supplier that's not in the system? Fill out our  Supplier Exception Form \" When EF Access is ON: The  \"No Current Supplier(s) found for 'xyz'\"  message should  continue to display  the last line with the  Supplier Exception Form  link. Reason for Change: Prevents users without  EF Access  from seeing and attempting to access a link that directs them to an EF Document they cannot create. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2025-02-10T21:49:12.875-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-107734",
+        "summary": "SDM: Update Tooltips for Project and SDM Locations in Access Control Settings",
+        "description": "Business Case: We need to update the tooltip text for the  Project  and  Supplier Discovery Label Locations  settings in  SDM > Settings > Access Settings > Master Data Settings  to reflect dynamic label names and the updated behavior of the SDM Locations toggle. Acceptance Criteria: What is the change? Project Tooltip:  The tooltip text for  Project  will now dynamically display the  Project Label Name  based on the user group settings instead of a fixed \u201cProject (Production)\u201d text. SDM Locations Tooltip:  The tooltip for  SDM Locations  (now  Supplier Discovery Label Locations ) is updated to reflect the extended functionality of the toggle, which now controls user access beyond just viewing, creating, and editing location data. SDM Renaming:   \"SDM\"  in the tooltips is replaced with  \"Supplier Discovery Label\"  for consistency. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Settings > Access Control Settings > Master Data Settings. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? Project Tooltip Update: Tooltip should dynamically display the  Project Label Name  based on user group settings. New Format:   \"Enable or disable the  <Project Label Name>  section for users in this User Group and adjust login requirements accordingly.\" Example:  \"Enable or disable the Production section for users in this User Group and adjust login requirements accordingly.\" Supplier Discovery Label Locations Tooltip Update: Tooltip should reflect the updated behavior of the toggle. New Format:   \"Control access to the  <Supplier Discovery Label>  Locations page, determining whether users in this User Group can view, create, edit, or manage location data.\" Example:  \"Control access to the Directory Locations page, determining whether users in this User Group can view, create, edit, or manage location data.\" Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2025-02-10T21:30:12.158-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-107724",
+        "summary": "SDM: Configurable Guidelines by User Group",
+        "description": "Business Case: Currently, Guidelines are not configurable by User Group, limiting the ability to provide tailored guidelines for different groups. This enhancement enables each User Group to have its own specific Guidelines, such as Redbook or Directory Guidelines, ensuring relevant information is available to the appropriate users. Acceptance Criteria: What is the change? Introduce a  User Group  typeahead dropdown in the Guidelines page, similar to SDM Settings. Allow  PMAN Admins  to select between  Default  and  User Group-specific  Guidelines. User Group Admins  can only manage Guidelines for their assigned User Group. When a new User Group is created, the Guidelines page starts blank for that group\u2014 no inheritance from Default Guidelines. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Guidelines page. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? User Group Dropdown: Add a  User Group  typeahead dropdown on the Guidelines page, pre-selected to  Default  when a PMAN Admin navigates to it. PMAN Admins  can switch between Default and other User Groups. User Group Admins  can only see and edit their assigned User Group\u2019s Guidelines. New User Groups: When a new User Group is created, its Guidelines page should inherit the settings from the Default Guideline settings. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Which one is the easier and better solution here - inherit or do not inherit default guidelines to user group guidelines   2/10/2025  /    # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-10T11:46:14.650-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      },
+      {
+        "key": "VZI-107584",
+        "summary": "SDM / PMAN: Update SDM Location Behavior When SDM Locations Toggle is Turned OFF for a User Group setting",
+        "description": "Business Case: If the  SDM Locations  toggle is turned OFF in the settings for a User Group, users assigned to this User Group should no longer interact with location-related fields or search filters. This ensures that location dependency is removed from the user profile and supplier search functionality while still allowing users to retrieve relevant supplier data based on their User Group association. Acceptance Criteria: What is the change? User Modal (PMAN & SDM):  The  Default Location  field should be hidden for users belonging to a User Group where  SDM Locations  is turned OFF. SDM Supplier Search Bar:  The  Location dropdown  should not be displayed. Advanced Search Modal:  The  Search by Location  dropdown should not be displayed. Supplier Search Behavior:  Location should no longer be required as part of the search criteria. Instead, the system should return supplier results based on the User Group assigned to the SDM user. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. PMAN > Master Data > Users. SDM Search. SDM Advanced Search. SDM > Master Data > Suppliers. PMAN > Master Data > Suppliers. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) SDM Basic User SDM Power User How should this feature work? Default Location Field in User Modal (PMAN & SDM Users) If  SDM Locations  is turned OFF for a User Group: The  Default Location  field should be hidden in the PMAN & SDM User Modal for users assigned to this User Group. If  SDM Locations  is turned ON: The  Default Location  field should be displayed as usual. SDM Locations Field in Supplier Records For User Group Admins: If  SDM Locations  is turned OFF for their assigned User Group, the  SDM Locations  field should be hidden in supplier records. For PMAN Admins: If the supplier is linked to only  one  User Group with  SDM Locations  turned OFF, the  SDM Locations  field should be hidden. If the supplier is linked to  multiple  User Groups where at least one has  SDM Locations  turned ON, the  SDM Locations  field should be visible. SDM Supplier Search Bar Updates If  SDM Locations  is turned OFF for the User Group: The  Location dropdown  should be removed from the search bar. If  SDM Locations  is turned ON: The  Location dropdown  should remain available. Advanced Search Modal Updates If  SDM Locations  is turned OFF for the User Group: The  Search by Location dropdown  should be removed from the Advanced Search modal. If  SDM Locations  is turned ON: The  Search by Location dropdown  should remain available. Supplier Search Criteria Updates If  SDM Locations  is turned OFF for the User Group: The system should not require location as part of the supplier search criteria. Supplier search results should be based solely on suppliers linked to the User Group of the SDM user performing the search. If  SDM Locations  is turned ON: Supplier search should continue functioning as per current behavior with location as a searchable criteria. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date # Question Recommendation Response Remarks",
+        "status": "Release Approved",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-04T07:58:49.437-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107737"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103542",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Additional New Development Work to support External API Call - 3",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-09-23T04:49:42.161-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-108169",
+        "summary": "Vroozi API: External Accounting Validation: Audit Trail for each response from the external validation service.",
+        "description": "Business Case: The system should store all validation responses received from the external system. This stored data will enable future reporting. Acceptance Criteria: The system should store all validation responses from the external system in the database. The system should store all validation responses from the external system for each supported document. The system should track and store each validation response from the external system for every document. The date time stamp should also be captured while the validation response is stored in the database. The design should accommodate both currently supported and future-supported documents. Technical Details:    DB collection created in the webhooks api Collection name : audit_logs\n{\n  \"id\": String,\n  \"unitId\": String,\n  \"requestTime\": Date,\n  \"responseTime\": Date,\n  \"httpMethod\": String,\n  \"request\": {},\n  \"response\": {},\n  \"httpStatus\": String,\n  \"url\": {}\n} Documentation: Q&A:   (                         )",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-02-21T02:58:31.550-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-107034",
+        "summary": "Vroozi UI: External Workflow: The requester can see the right menu when the PR is in DRAFT state.",
+        "description": "Business Case: As a requester, I want to see the right menu on the PR document when it is in the DRAFT state. So I can review the potential approval chain of the document in case a workflow is applied. Acceptance Criteria: The right menu should be visible on the PR when it is in DRAFT state. All the options in the right menu should be visible in the right menu based on their visibility settings. ( existing implementation ) All the options should be greyed out. All the options should be non-clickable. The  Approval Chain  option in the right menu should remain greyed out. Hovering on the  Approval Chain  option should display a tooltip that reads \u201c Approval Chain\u201d. Hovering on the  Approval Chain  option should highlight it. Clicking on the  Approval Chain  option should open the Approval Chain section. This expanded  Approval Chain  section in the right menu should cover the following possible scenarios: ( As currently managed in the existing implementation with the Approval Status button on the PR. ) (Please refer to   and   ) When PR is not subject to any workflow and is approved automatically. When PR is subject to an internal, external, or both workflows, the requester should be able to see the Potential Approvers list: Clicking anywhere on the PR document should collapse the expanded  Approval Chain  section. Technical Details: Documentation: Q&A: Question For now as Approval Timeline new UI design ticket is not completed we\u2019ll display old Internal / External UI design on the right side panel?",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-20T21:01:31.755-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-107033",
+        "summary": "Vroozi UI: External Workflow: The requester can see the Approval Chain(Approval Status) in the right menu of the PR.",
+        "description": "Business Case: As a requester, I want to see the  Approval Chain  option in the right menu of the PR so I can review the Potential approvers and their actions. Acceptance Criteria: Currently, the  Approval Status  button appears on the PR document. Now, this  Approval Status  button should no longer be visible. Instead, a new option should appear on the right menu. (refer to the following image)  The new option in the right menu should be positioned at the top, above all other options. It should be greyed out by default. Hovering on it should highlight this new option. Hovering on it should display a tooltip. The tooltip should read  Approval Chain . Clicking on this new  Approval Chain  option should expand the right menu with the potential approves( preview ) and actions they have taken( history ). This expanded  Approval Chain  section in the right menu should cover the following possible scenarios: ( As currently managed in the existing implementation with the Approval Status button on the PR. ) (Please refer to   and   ) When PR is not subject to any workflow and is approved automatically. When PR is subject to an internal, external, or both workflows, the requester should be able to see: Potential Approvers list Actions which approvers have taken. Clicking anywhere on the PR document should collapse the expanded  Approval Chain  section. Technical Details: Documentation: Q&A: Question Answer For now as Approval Timeline new UI design ticket is not completed we\u2019ll display old Internal / External UI design on the right side panel?      This should be moved into side panel, and depends on the feature toggle settings to display new or old time line model. Attention :     The approval button and timeline are both appearing simultaneously on the PR when the  \u201cPURCHASE__NG2_PURCHASE_REQUEST\u201d  toggle is  OFF  in any environment. This issue needs to be addressed in the configuration settings as well. Please suggest? This should be tested with the feature toggle enabled. Since this is a temporary toggle and enabled for all in production. Soon it will be removed.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-20T21:00:38.542-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-107031",
+        "summary": "Vroozi UI: External Workflow: The requester can see the new approval timeline for the external workflow",
+        "description": "Business Case: As a requester, I want to see the new approval chain timeline when the external workflow is enabled. So I can review the potential approvers and actions they have taken. Acceptance Criteria: The new approval chain timeline for the external workflow should only be visible if the feature flag is ON. (refer to  ). If the feature flag is OFF, the requester should be able to see the existing approval timeline for the external workflow. When enabled, clicking the  Approval Status  button on the PR should open the new Approval timeline for external workflow. Vroozi should fetch the timeline preview and history from the external system. The new approval timeline should look like this: Every node in the timeline should be considered a stair or level in the workflow( e.g. staircase financial workflow ) Every next node on the timeline should be the next stair for the previous node(level). Seeking approval from each node should be compulsory. Once the document is approved from the current node(level), it should proceed to the next node(level). If a single node(level) has multiple approvers, the system should check how many are required to approve to proceed to the next level. The document should move to the next level once all the required approvals are received at the current level. When the PR is in a DRAFT state: The approval timeline overlay should display the following message when no workflow is applicable: The approval timeline should look like this when an external workflow is applicable: The timeline should display all the pending potential approvers. When a timeline node (level) has a single approver: The node should read  Approval Required Display the approver's information, including their first and last name, alongside the single circle containing their initials. When the timeline node(level) has multiple approvers: The node should read  X Approvals Required Multiple Approvers  should appear next to the multiple overlapping circles. Under that, a hyperlink \u201c Click here for details\u201d  should appear. ( For details. go to the  Child screen for multiple approvers on the same Node(Level):  section of the AC ). Once the PR is rejected, and the requester clicks the  Approval Status  button while  working on the rejected PR in the  Rejected  or  Draft  state: The timeline should display all the pending potential approvers after the Rejected node(level). When a timeline node (level) has a single approver: The node should read  Approval Required Display the approver's information, including their first and last name, alongside the single circle containing their initials. When the timeline node(level) has multiple approvers: The node should read  X Approvals Required Multiple Approvers  should appear next to the multiple overlapping circles. Under that, a hyperlink \u201c Click here for details\u201d  should appear. ( For details. go to the  Child screen for multiple approvers on the same Node(Level):  section of the AC ). When the PR is in a post-DRAFT state e.g. Sourcing Review, Submitted(to an external system): The approval timeline overlay should display the following message when no workflow is applicable: The approval timeline should look like this when an external workflow is applicable: The timeline should display the submission, all the pending potential approvers, and all the actions approvers have taken. The submission node(level) should display: The DateTime stamp of the submission  Submitter\u2019s information i.e. First Name and Last Name, alongside the single circle containing their initials. When a timeline node (level) has a single approver and approval is still pending: The node should read  Approval Required Display the approver's information, including their first and last name, alongside the single circle containing their initials. When a timeline node (level) has multiple approvers, and some or all approvals are still pending: The node should read  X Approvals Required Multiple Approvers  should appear next to the multiple overlapping circles. Under that, a hyperlink \u201c Click here for details\u201d  should appear. ( For details. go to  Child screen for multiple approvers on the same Node(Level):  section of the AC ) The actions taken by the approvers should be: Approved Rejected Any other action information comes from the External System( is it even a valid scenario? ) Once the Approval or Rejection is obtained, that approval node(level) should display: When a timeline node (level) has a single approver: In the case of Approval The node should read  Approved. The DateTime stamp of the approval.  Display the approver's information, including their first and last name, alongside the single circle containing their initials. In the case of Rejection The node should read  Rejected. The DateTime stamp of the rejection.  Display the approver's information, including their first and last name, alongside the single circle containing their initials. When a timeline node (level) has multiple approvers: In the case of Approval: The node should read  Approved  once all the required approvals are obtained . The DateTime stamp of the last required approval.  Multiple Approvers  should appear next to the multiple overlapping circles. Under that, a hyperlink \u201c Click here for details\u201d  should appear. ( For details. go to  Child screen for multiple approvers on the same Node(Level):  section of the AC ) In the case of Rejection: The node should read  Rejected  once all the required approvals are obtained . The DateTime stamp of the last required rejection.  Multiple Approvers  should appear next to the multiple overlapping circles. Under that, a hyperlink \u201c Click here for details\u201d  should appear. ( For details. go to  Child screen for multiple approvers on the same Node(Level):  section of the AC ) Once the PR is re-submitted after the rejection, there should be a separate node on the timeline. The re-submission node(level) should display after the rejected node: The DateTime stamp of the re-submission  Submitter\u2019s information i.e. First Name and Last Name, alongside the single circle containing their initials. Child screen for multiple approvers on the same Node(Level): Clicking the \u201c Click here for details \u201d hyperlink should open the child screen. When all the required approvals are yet to be obtained The child screen should contain the following information: y  approvals required. A list of potential approvers. When some of the required approvals are obtained: x of y  approvals received. A reverse chronological list of approvers who have taken action on the document. A list of potential approvers who have not yet acted or are no longer required to act When rejection is received: 'x of y  approvals received' or \u2018 y  approvals required\u2019 accordingly. y  rejection received. A reverse chronological list of approvers who have taken action on the document. A list of potential approvers who have not yet acted or are no longer required to act When all required approvals are received: y of y  approvals received. A reverse chronological list of approvers who have taken action on the document. A list of potential approvers who have not yet acted or are no longer required to act Workflow type segmentation: Workflow segmentation should be visible on the timeline. By default, the system should display  External Review  for all the external workflow . If any specific workflow type is received from the external system, the system should append it after the  External Review  label. e.g.  External Review: FI. Technical Details: Documentation: Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-20T20:55:38.367-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-106393",
+        "summary": "Vroozi API: External Accounting Validation: The system should allow the external system, to validate accounting info on POCR Submission",
+        "description": "Business Case: The system should ensure that the accounting information is validated on POCR Submission through an external system. Acceptance Criteria: All the implementation regarding the  External Accounting Validation Configuration Service  has already been implemented in  . A new configurable event should be added to the  External Accounting Validation Configuration Service. This new event should be POCR Submission. To accommodate this new event, a new object \u201c PO\u201d  should be added to the  External Accounting Validation Configuration Service.  ( Please check the  Internal Accounting Validation Configuration Service  for reference ) For a PO change request, either a brand new POCR can be created or an existing CR can be used.  POCR Submission: When the user hits the POCR  Submit  button, the system should: An In Progress icon should appear on the  Submit  button. ( existing implementation ) Send the request to the external system ( as defined in the Accounting Validation Configuration Service ) The system should submit the POCR only when the accounting validation is completed successfully with no errors. If the accounting validation is completed successfully, and find errors, the system should keep the POCR in its current state.  The  Submit  button label should be updated from Submit to Validation Error(s). ( existing implementation ) Clicking on that should navigate the user to the Accounting Validation Error message visible above the line item grid. ( Please refer to the next section ) The system should keep the document in its current state if the accounting validation call is timed out for any reason. The system should have a red Noty message. ( Please refer to the next section ) The Noty message should be a slider. After 5 seconds, the Noty message should slide away. Accounting Validation Error Message: The system should use the existing error message on the document. Documentation: Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action Status  New question",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-02T00:54:17.638-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-105839",
+        "summary": "Vroozi API: External Workflow: Configuration Service",
+        "description": "Business Case: Provide a configuration option to define the external workflow system\u2019s endpoint, authorization type, and credentials. Acceptance Criteria: A new External Workflow configuration service should be developed. It should accept the: External Service Type: ( apiActionEnum )  required   ( added on   based on #5 in. the  Q&A ) There should be the following options acceptable under this parameter( based on their feature flag setting ): External Accounting Validation:  PR_ACCOUNTING_VALIDATION External Workflow:   PR_APPROVAL_PREVIEW, PR_APPROVAL_HISTORY The system should throw the validation error if the user tries to provide any other value. url :  required The External Workflow configuration service should be flexible enough so that based on external system requirements, It should accept one or multiple endpoints. Authorization Type:  required No authorization:  Default value Token Username/Password UnitID info ( in the background. It should not be asked to specify ) This configuration should only become relevant if the External Workflow Augmentation toggle is ON ( refer to  )( This is the answer for #1 in the  Q&A ) If the feature flag is off, the system should throw a validation error when a user tries to provide the endpoint and credentials for the external workflow. ( added on   based on #1 in. the  Q&A ) This configuration should only become relevant if the External Accounting Validation toggle is ON ( refer to   )( This is the answer for #1 in the  Q&A ) If the feature flag is off, the system should throw a validation error when a user tries to provide the endpoint and credentials for the external accounting validation. ( added on   based on #1 in. the  Q&A ) This configuration should enable Vroozi to: Get the external workflow timeline information in real-time and keep the Approval Status UI up to date.  Get the external accounting validation information from the external system. In case of duplicate configuration, the system should throw the validation error. The system should not allow the creation of a redundant entry for the same endpoint for the same service. ( added on   based on #5 in. the  Q&A ) The following parameters should be considered to check the duplication of service configuration: External Service Type URL Authentication Validation Error Messages: ( added on    ) When Feature Toggle is disabled. The message should be \u201cFeature not enabled. Please contact your administrator to enable it before proceeding.\u201c When API name is duplicated. The message should be \u201cConfiguration name already exists. Please provide a unique name.\u201c When API Action is duplicate The message should be \u201cDuplicate action type found. Only one configuration per action type is allowed.\u201c  For leaving the name field null or empty The message should \u201cField [name] cannot be null or empty.\u201c For invalid URL The message should be \u201cNot a valid URL.\u201c Technical Details:    Internal endpoint: internal-service/9393/external-api-configuration  Payload with token {\n    \"name\": \"Accounting\",\n    \"url\": \"http://localhost:8080/purchaseapi/api/mock/validate-accounting\",\n    \"authType\": \"BEARER_TOKEN\", // BASIC_AUTH, NONE\n    \"apiActionEnum\": \"PR_ACCOUNTING_VALIDATION\", // PR_APPROVAL_PREVIEW, PR_APPROVAL_HISTORY\n    \"active\": true,\n    \"credentials\": {\n        \"TOKEN\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bml0SWQiOiIyIiwidXNlcklkIjoiNjczOTciLCJzb3VyY2VTeXN0ZW0iOiJQTUFOIiwiaWF0IjoxNzM2NDk0MTIxfQ.HnVwqMwPUQYA2XRnDOD-3OUkM1VD2b_72TEDLOwqOZ4\"\n    }\n} payload with username and password: {\n    \"name\": \"Accounting\",\n    \"url\": \"http://localhost:8080/purchaseapi/api/mock/validate-accounting\",\n    \"authType\": \"BEARER_TOKEN\", // BASIC_AUTH, NONE\n    \"apiActionEnum\": \"PR_ACCOUNTING_VALIDATION\", // PR_APPROVAL_PREVIEW, PR_APPROVAL_HISTORY\n    \"active\": true,\n    \"credentials\": {\n        \"USERNAME\": \"username\", // string\n        \"PASSWORD\": \"password\" // string\n    }\n} it is stored in the  external_api_configuration  in the vroozi_webhooks. Note: These credentials are case-sensitive. Q&A:  Integration Team  (                           ) Sr.# Question Response Action Status 1 BE - Validation for enabled feature? 2 BE - Hit the external service and get the response and return, synchronous call? No, we do not need to connect to the service at the time of configuration, we need to store this information properly. 3 Need to have the gateway or connector API as well No, we do not need a way to communicate to external system during configuration, this is already done during the actual invocation of the service. 4 IF there is no endpoint from the external system to validate credentials without the actual payload. 5 Do we need to add the type of the service as well? Yes, I think it should be to make this configuration generic. 6 Can you please confirm the expected behavior for the  url  field? Should the system allow storing plain text if no valid URL is provided, or should it strictly enforce a proper URL format?     It should be URL only field.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-11T23:24:19.708-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-105830",
+        "summary": "Vroozi API: Design External Workflow Timeline Data Model using GET API",
+        "description": "Business Case: Develop a new data model to receive and process information regarding the external workflow from the external system. Acceptance Criteria: A new data modal should be developed. This new data modal should accept a consolidated list containing the potential approvers from the external system. This data modal should accept the information from the endpoint specified in the configuration service. ( refer to  ) For NBCU, There should be two endpoints: One for PR when it is in DRAFT state( Preview ) One for the PR when it is in post SUBMITTED state( History ) This data model should allow the FE to display this information on UI in PR Approval Status. {  \"Approval Timeline\":  [  { Name = David,  ( Name of the approver )       Title = Senior Approver, ( Title of the approver )      SSOiD =1234, ( External System   Unique ID of the approver )      Order = 0,\u00a0( Order in which approver\u2019s node should appear on the timeline )    Action/History = Approves, Reject, Any other action ( Action that approver has taken )    Inbox = True/False,\u00a0( Document currently assigned to this approver )    Flag =  AND/OR, ( If multiple approvers in the list have the same  Order , it will become a required field ) AND  means approval is required from all the approvers residing in the same order. OR  means approval is required from at least one, or some of the approvers residing in the same order. Required = 2, ( if  Flag  is set to  OR , this field will become relevant. ) If no value is specified, the system should automatically set value = 1. This means approval is required from any approvers residing in the same order. ( A potential use case ) If any value is specified, the system should seek that number of approvals from the approvers residing in the same order. The specified value cannot be equal to or greater than the approvers residing in the same order approvalType = Document Level/Line Item Level, ( To determine if the approval is required for the whole document or any specific line item ) approvalLineItem = 2,3,5, ( Optionally, line item number can be provided   If approvalType = Line Item Level ) workFlowSegment = Sourcing/Financial/Budget/Business/Any other value, ( Our system can optionally accept the information about the segments of the workflow )  },   ], Technical Requirement: {\n  \"workflowConfig\" : {\n      \"approvalHierarchy\": OR/AND, // if OR than only one approval is required in the same order poition\n      \"requiredApprovals\": 2,\n      \"documentType\" : \"PREQ\" // POCR\n  },\n  \"approvalTimeline\": [\n    // History\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"111\",\n        \"type\": \"UserModel\",\n        \"name\": \"David\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"111\",\n      \"order\": \"0\",\n      \"action\": \"Approved\",\n      // \"approverNotes\" : \"\", any comments from the approver while approving or rejecting the PR\n      \"inbox\": \"false\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    },\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"222\",\n        \"type\": \"UserModel\",\n        \"name\": \"Valentino Rossi\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"222\",\n      \"order\": \"1\",\n      \"action\": \"Rejected\",\n      \"inbox\": \"false\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    },\n\n    // Inbox\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"333\",\n        \"type\": \"UserModel\",\n        \"name\": \"Mike Judd\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"333\",\n      \"order\": \"1\",\n      \"action\": null,\n      \"inbox\": \"true\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    },\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"444\",\n        \"type\": \"UserModel\",\n        \"name\": \"Mario\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"444\",\n      \"order\": \"2\",\n      \"action\": null,\n      \"inbox\": \"false\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    },\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"555\",\n        \"type\": \"UserModel\",\n        \"name\": \"Mike Judd\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"555\",\n      \"order\": \"2\",\n      \"action\": null,\n      \"inbox\": \"false\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    },\n\n    // Potential, PR will move to these approvers\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"666\",\n        \"type\": \"UserModel\",\n        \"name\": \"Harry Jackson\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"666\",\n      \"order\": \"3\",\n      \"action\": null,\n      \"inbox\": \"false\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    },\n    {\n      \"approverRef\": {\n        \"externalId\": \"1001\",\n        \"userId\": \"777\",\n        \"type\": \"UserModel\",\n        \"name\": \"Jason Stathem\",\n        \"title\": \"Senior Approver\",\n      },\n      \"SSOID\": \"777\",\n      \"order\": \"3\",\n      \"action\": null,\n      \"inbox\": \"false\", // When true mean, PR is waiting for action (APPROVED/REJECTED) and action is PENDING, When the PR is in DRAFT status action is null, when PR is not in DRAFT status false mean action is taken \n      \"approvalType\": \"Document Level\",\n      \"lineItemRefs\": null, // When linelevel approvalType, than this field will have line references\n      \"workflowName\": \"Sourcing\", // Sourcing, financial, budget, anyother external workflow in the pipeline\n      \"submissionDate\" : \"Timestamp utc\", //Submission of this PR to this approver\n      \"lastUpdatedDate\" : \"Timestamp utc\" // Time of the action taken by this approver\n    }\n  ]\n} Documentation: Q&A: Based on the Discussions with    (10 Jan 2025) we need to send the whole PR document in the request for the approval timeline.  We need to keep the same configuration fields in the external_api_configuration collection as we have in the webhook_settings as in the future we need to replace them with the single generic collection. {\n    \"id\" : \"6746c6dd19eb455bcd546c0f\",\n    \"unitId\" : \"2\",\n    \"name\" : \"Accounting Validations\",\n    \"url\" : \"http://localhost:8080/purchaseapi/api/mock/validate-accounting?validationStatus=INACTIVE\",\n    \"authType\" : \"BEARER_TOKEN\",\n    \"apiActionEnum\" : \"PR_ACCOUNTING_VALIDATION\",\n    \"active\" : true,\n    \"credentials\" : {\n        \"TOKEN\" : \"BL0l/zhwlcnw541Y7ib7T+KIPfh71gK42pNNfEMSZpgV90yA1vNXV25bWPYf6YFQfpKoAyK1LK5stSAw2MD6rkX9B3SqDXdeII5NmYJzuRsLFHH5QGOHsfDxm+IbJWtUNx8EurM15vC9PQWs+nEaflaUIiaEXsfNmM90cGrDdP/BrZ3LObAOIbybc8wfJhqC4mGDIVjw6z6fcpPTB+Zz3dVsQj/gIMThRe8/5I7C04UfDjetD36x0Q==\"\n    },\n    \"createdDate\" : ISODate(\"2019-11-26T10:42:14.000Z\"),\n    \"lastModifiedDate\" : ISODate(\"2019-11-26T17:37:26.527Z\"),\n    \"version\" : NumberLong(2),\n    \"deleted\" : false\n} There are two different configuration-based these values.  PR_APPROVAL_PREVIEW,\nPR_APPROVAL_HISTORY How do we handle these? To which status should we call the preview and history endpoints? Can we decide on the PR statuses? The FE has provided a parameter to determine which one to call.  has provided the updated model for the response we need to review. ( 14 Jan 2025 ). {\n    \"documentRef\": {\n        \"id\": \"DocumentId\",\n        \"externalId\": \"ExternalId\",\n        \"docNo\": \"DocNo\",\n        \"type\": \"PurchaseRequestModel\"\n    },\n    \"approvalStatus\": [\n        {\n            \"workflowType\": \"FI\",\n            \"levels\": [             \n                {\n                    \"level\": \"1\",\n                    \"approvalType\": \"Sequential\", \n                    \"status\": \"Partially Approved\",\n                    \"approvals\": [              \n                        {\n                            \"order\": \"1\",\n                            \"approverRef\": {\n                                \"id\": \"ApproverId1\",\n                                \"externalId\": \"ExternalId1\",\n                                \"docNo\": \"DocNo1\",\n                                \"type\": \"UserModel\"\n                            },\n                            \"action\": \"Approved\",\n                            \"actionDate\": \"2025-01-13T12:00:00Z\",\n                            \"comments\": \"Approved with reason\"\n                        },\n                        {\n                            \"order\": \"2\",\n                            \"approverRef\": {\n                                \"id\": \"ApproverId2\",\n                                \"externalId\": \"ExternalId2\",\n                                \"docNo\": \"DocNo2\",\n                                \"type\": \"UserModel\"\n                            },\n                            \"action\": \"Pending\",\n                            \"actionDate\": null,\n                            \"comments\": null\n                        }\n                    ]\n                },\n                {\n                    \"level\": \"2\",\n                    \"approvalType\": \"Parallel\",\n                    \"status\": \"Pending\",\n                    \"approvals\": [\n                        {\n                            \"approverRef\": {\n                                \"id\": \"ApproverId3\",\n                                \"externalId\": \"ExternalId3\",\n                                \"docNo\": \"DocNo3\",\n                                \"type\": \"UserModel\"\n                            },\n                            \"action\": \"Rejected\",\n                            \"actionDate\": \"2025-01-13T12:00:00Z\",\n                            \"comments\": \"Approved with reason\"\n                        },\n                        {\n                            \"approverRef\": {\n                                \"id\": \"ApproverId4\",\n                                \"externalId\": \"ExternalId4\",\n                                \"docNo\": \"DocNo4\",\n                                \"type\": \"UserModel\"\n                            },\n                            \"action\": \"Pending\",\n                            \"actionDate\": null,\n                            \"comments\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"workflowType\": \"BO\",\n            \"levels\": [\n                {\n                    \"level\": \"1\",\n                    \"approvalType\": \"Parallel\",\n                    \"status\": \"Approved\",\n                    \"approvals\": [\n                        {\n                            \"order\": \"0\",\n                            \"approverRef\": {\n                                \"id\": \"ApproverId5\",\n                                \"externalId\": \"ExternalId5\",\n                                \"docNo\": \"DocNo5\",\n                                \"type\": \"UserModel\"\n                            },\n                            \"action\": \"Approved\",\n                            \"actionDate\": \"2025-01-13T12:00:00Z\",\n                            \"comments\": \"Approved with reason\"\n                        },\n                        {\n                            \"order\": \"0\",\n                            \"approverRef\": {\n                                \"id\": \"ApproverId6\",\n                                \"externalId\": \"ExternalId6\",\n                                \"docNo\": \"DocNo6\",\n                                \"type\": \"UserModel\"\n                            },\n                            \"action\": \"Pending\",\n                            \"actionDate\": null,\n                            \"comments\": null\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"nextApprovers\": [\n        {\n            \"workflowType\": \"FI\",\n            \"level\": \"1\",\n            \"approverRef\": {\n                \"id\": \"ApproverId3\",\n                \"externalId\": \"ExternalId3\",\n                \"docNo\": \"DocNo3\",\n                \"type\": \"UserModel\"\n            }\n        },\n        {\n            \"workflowType\": \"FI\",\n            \"level\": \"1\",\n            \"approverRef\": {\n                \"id\": \"ApproverId3\",\n                \"externalId\": \"ExternalId3\",\n                \"docNo\": \"DocNo3\",\n                \"type\": \"UserModel\"\n            }\n        }\n    ],\n    \"approvalHistory\": [\n        {\n            \"approverRef\": {\n                \"id\": \"ApproverId1\",\n                \"externalId\": \"ExternalId1\",\n                \"docNo\": \"DocNo1\",\n                \"type\": \"UserModel\"\n            },\n            \"action\": \"Approved\",\n            \"actionDate\": \"2025-01-13T12:00:00Z\",\n            \"comments\": \"Approved with reason\"\n        },\n        {\n            \"approverRef\": {\n                \"id\": \"ApproverId2\",\n                \"externalId\": \"ExternalId2\",\n                \"docNo\": \"DocNo2\",\n                \"type\": \"UserModel\"\n            },\n            \"action\": \"Rejected\",\n            \"actionDate\": \"2025-01-13T12:00:00Z\",\n            \"comments\": \"Rejected with reason\"\n        }\n    ]\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-11T20:38:59.776-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104938",
+      "released_in_current_rc": false,
+      "summary": "Sonar: Vulnerability Issue Fixes ",
+      "description": "This epic includes all the critical vulnerabilities fixes as suggested by sonar.",
+      "status": "In Design",
+      "assignee": "Muhammad Hamza",
+      "created": "2024-11-06T22:17:09.137-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-107963",
+        "summary": "QA: Cypress: Automation test case review",
+        "description": "Review existing Test cases. Add Test cases into Test Rails Compare Manual and Automation test execution time",
+        "status": "Done",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-02-14T02:06:41.220-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-107662",
+        "summary": "Purchase-api - Sonar: Fix Maintainable Issues",
+        "description": "Fix Maintainable Sonar Issues   total Issues: 14809 Remaining Issues: 13629 Fixed Issues: 1180",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2025-02-06T23:08:36.989-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104330",
+      "released_in_current_rc": false,
+      "summary": "Integration: Spikes Investigation - Support Issues",
+      "description": "",
+      "status": "Open",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-16T15:11:00.620-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-107951",
+        "summary": "Integration: NBCU PR Attachment Interface - Review and Fix SFTP Upload Error",
+        "description": "Requirements: We are receiving error notification as shown below in PR Attachment Interface for NBCU.  Acceptance Criteria: Investigate and provide details on the root cause for the error notification. Provide fix if the issue is on the Vroozi side. Add details on the issue if this is on the NBCU side.",
+        "status": "Investigation Done",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2025-02-13T18:43:12.326-0800",
+        "issue_type": "Spike",
+        "parent_id": "VZI-104330"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-83296",
+      "released_in_current_rc": false,
+      "summary": "Cypress - Functional Automation Testing",
+      "description": "We have to perform following tasks 1- Update E2E flows & mapping                                                          9 MD 2- Golden Test Data for above mentioned E2E flows                       5 MD 3- Recording of E2E flows                                                                    6 MD 4- Scripting of E2E flows (Currently out of QA scope) Effort = 20 MD Note: - 1 Senior QA resource is required for 1 month.",
+      "status": "Open",
+      "assignee": "Khurram Jamil",
+      "created": "2023-01-03T01:10:07.865-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-107590",
+        "summary": "Cypress: Fix All UI Tests Related to Purchase Request Logic",
+        "description": "Goal The objective of this task is to ensure that all Cypress UI tests related to the purchase request logic are functioning correctly and passing without issues. Scope of Work Identify all failing Cypress tests associated with purchase requests. Analyze the root cause of the failures (e.g., changes in UI, backend responses, or test flakiness). Update, refactor, or fix the tests to align with the current logic and UI behavior. Ensure tests cover all key scenarios, including edge cases. Run the entire test suite to validate the stability of the fixes. Acceptance Criteria All purchase request-related tests pass successfully. Any necessary updates to test data, assertions, or workflow steps are implemented. The test suite runs reliably without flakiness. Code changes are reviewed and merged following best practices.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-02-04T21:56:26.151-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-83296"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-107502",
+      "released_in_current_rc": false,
+      "summary": "Integration: Tax Connectors Upgrade Review",
+      "description": "",
+      "status": "Open",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2025-01-30T20:32:39.186-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-107503",
+        "summary": "R&D on Avalara Tax Upgrade Need",
+        "description": "Background & Objective The Avalara Tax Connector for our application was developed and tested in a sandbox environment several years ago but was never deployed to client production environment. With client interest growing, we need to ensure our integration meets Avalara\u2019s latest connection guidelines and security requirements. So, the objective of this R&D initiative is to: Assess the current integration to determine its compatibility with Avalara\u2019s latest API and security standards. Identify required upgrades to meet the new connection guidelines and ensure a stable, production-ready integration. Document findings and provide recommendations for implementation. Scope Review the existing Avalara integration. Compare against Avalara\u2019s latest API and integration guidelines. Identify deprecated endpoints, authentication changes, and compliance needs. Test the existing integration using sandbox/production credentials and validate actual features. Document findings and provide recommendations for upgrades. Research & Approach Review Avalara\u2019s latest API documentation to check for changes, deprecations, and security updates. Assess authentication and security to ensure compliance with Avalara\u2019s policies. Test the existing sandbox integration to identify failures, performance issues, and API updates required. Compare sandbox vs. production requirements to ensure a seamless upgrade. Document findings and risks, including code changes, potential challenges, and mitigation strategies. Acceptance Criteria Technical Assessment Report:  Current state analysis, compatibility gaps, and required updates. Upgrade Roadmap:  Action plan with development and testing estimates. Test Plan:  Steps for validating the upgraded integration.",
+        "status": "Investigation Done",
+        "assignee": "Sambhu Sai",
+        "created": "2025-01-30T20:33:39.715-0800",
+        "issue_type": "Spike",
+        "parent_id": "VZI-107502"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-108907",
+      "summary": "RC-2025-4 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Work Completed",
+      "assignee": "Jimena Pose",
+      "created": "2025-03-11T08:08:00.288-0700",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-106808",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-15T09:08:45.041-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-108907"
+      },
+      {
+        "key": "VZI-106807",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "Impacted Areas of Payables RC Functionalities Impacted Area 1 Impacted Area 2 Impacted Areas of Other Teams RC Functionalities Purchase Team Impacted Area 1 Impacted Area 2 Integration Team Impacted Area 1 Impacted Area 2 Budget Team Impacted Area 1 Impacted Area 2",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2025-01-15T09:08:44.650-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-108907"
+      },
+      {
+        "key": "VZI-106806",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "Done",
+        "assignee": "Jimena Pose",
+        "created": "2025-01-15T09:08:44.615-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-108907"
+      },
+      {
+        "key": "VZI-106804",
+        "summary": "Execute Post Production Testing (Asma)",
+        "description": "",
+        "status": "Abandoned",
+        "assignee": "Asma Latif",
+        "created": "2025-01-15T09:08:44.549-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-108907"
+      },
+      {
+        "key": "VZI-106805",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2025-01-15T09:08:44.548-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-108907"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106576",
+        "summary": "Angular Upgrade: Upgrade Shopper -> RFQ List (QA)",
+        "description": "Upgrade the whole page  Shopper \u2192 RFQ List  to Ng2 and use ng2  vzi-grid  /  vzi-grid-view :",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-01-08T17:51:51.814-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-105951",
+        "summary": "Angular Upgrade: Upgrade Shopper -> Shipping Notices (QA)",
+        "description": "Upgrade the whole page  Shopper \u2192 Shipping Notices  and use ng2  vzi-grid  /  vzi-grid-view :",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-12-16T22:38:25.284-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99320",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Upgrade - Major Documentation Upgrade Phase II",
+      "description": "Vroozi API Upgrade: Part 1 - Major version upgrade from Swagger v2 to OpenAPI v3 Vroozi API Upgrade: Part 2 - Master Data Documentation enhancement",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T21:17:05.210-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106386",
+        "summary": "Vroozi API Upgrade: Part 16 - Update Project API Documentation and Examples",
+        "description": "Requirements: Update all API endpoints and model descriptions in the documentation with proper examples, defaults and required flags Add multiple different examples of the API usages to cover multiple use cases including minimal required payload, minimal recommended payload and all available fields example. All the payload should be properly formatted and should work using Try it from documentation itself. Add the read only fields in the default response to mention them as Read only fields, e.g id, dateCreated, lastUpdated etc. It is read only field. Mention the behaviour of the field in case the value is not provided in the payload for update flows. e.g Not providing a field at all in the payload vs providing empty or null value in that field during update. Update the 403 error message in the documentation Forbidden (The server understood the request but refuses to authorise it). Technical Details: Minimal Payload: {\n  \"code\": \"DPROJ01\",\n  \"name\": \"Project 1\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true\n} Recommended Payload: {\n  \"externalId\": \"1001\",\n  \"description\": \"Project 1001\",\n  \"code\": \"DPROJ01\",\n  \"name\": \"Project 1\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true,\n  \"startDate\": \"2025-01-01\",\n  \"endDate\": \"2025-01-29\"\n} Default Payload: {\n  \"externalId\": \"1001\",\n  \"description\": \"Project 1001\",\n  \"code\": \"DPROJ01\",\n  \"name\": \"Project 1\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true,\n  \"startDate\": \"2025-01-01\",\n  \"endDate\": \"2025-01-29\",\n  \"parentRef\": {\n    \"docNo\": \"CC01\"\n  },\n  \"classRef\": {\n    \"docNo\": \"CC01\"\n  },\n  \"ancestors\": [\n    {\n      \"docNo\": \"CC01\"\n    }\n  ]\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-01T23:35:23.911-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-99320"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105512",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Budgets Phase V : Add support for all the Accounting Objects in Budget APIs and add Budget Bulk Upload API",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-11-27T22:07:33.488-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-105680",
+        "summary": "Vroozi API: Update the Budget validation logic to the line item of the PO",
+        "description": "Business Case: As an external system user, I want the API to ensure budget validation is performed based on the chosen accounting and organizational object values during PO submission. Acceptance Criteria: Currently, the budget fetching query on the  PO API  modal is: find \n(     (costCenter = enteredValue OR costCenter is Empty)\n  AND (GL = enteredValue OR GL is Empty)\n  AND (companyCode = enteredValue OR companyCode is Empty)\n  AND (purchasingOrganization = enteredValue OR purchasingOrganization is Empty)\n  AND (plant = enteredValue OR plant is Empty)\n) The above query only considers the objects that are ON for the unitID The above budget query should now handle all the Organization and Accounting objects: find \n(     (companyCode = enteredValue OR companyCode is Empty)\n  AND (purchasingOrganization = enteredValue OR purchasingOrganization is Empty)\n  AND (plant = enteredValue OR plant is Empty)\n  AND (selectedCostObject = enteredValue OR selectedCostObject is Empty)\n  AND (GL = enteredValue OR GL is Empty)\n  AND (Customer = enteredValue OR Customer is Empty)\n  AND (Class = enteredValue OR Class is Empty)\n  AND (Project = enteredValue OR Project is Empty)\n  AND (locationType = enteredValue OR locationType is Empty)\n  AND (location = enteredValue OR location is Empty)\n)\n This updated query should only consider the objects that are ON for the unitID This change should impact the  Submit Purchase Order document to Vroozi  API: The system should validate the budget if the specified budget is present in the list of budgets fetched based on the update logic mentioned above. The system should throw the validation error if the specified budget is not in the list of budgets fetched based on the update logic mentioned above. Please note that we will update the budget query soon as it is intricate and very cumbersome to understand. \u00a0 Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action Status Where is the budget query in PO?",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-04T22:51:47.065-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105512"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104339",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Design and Develop Bulk Load API for Locations",
+      "description": "",
+      "status": "In Final Review",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-16T21:00:43.747-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104836",
+        "summary": "Vroozi API - Bulk upsert Locations",
+        "description": "Business Case: As an External system user, I want to create/update the Locations in bulk via the API. Acceptance Criteria: Location Bulk Upsert POST API: A New upsert API should be built that allows the user to create/update the Locations in bulk. The type of the API should be POST. The user should be able to provide Locations in bulk. The API should adhere to the API Payload size standards. This API should work asynchronously. The system should validate the Locations' information in the background. The system should let the API user know the API request is accepted. The API should issue a tracking number once the user posts the API. Location Bulk Upsert Status GET API: Another API should be built that allows the user to get the status of the Location Bulk Upsert POST API by providing the tracking number. The type of the API should be GET. If the API does not return the status of the Location Bulk Upsert POST API does not return the status, the system should return the error with details. This Location Bulk Upsert Status GET API should return the following statuses of the Location Bulk Upsert POST API: If all the Locations are created/updated successfully, the header level response status should be COMPLETED. Each Object status should be SUCCESS. If some or all Locations are still being created or updated, the header level status should be IN PROGRESS. Each Object status should be SUCCESS/IN PROGRESS/ERROR accordingly. If all of the Locations are processed and some or all of them have validation errors, the status should be COMPLETED WITH ERRORS. Each Object status should be SUCCESS/ERROR accordingly. If all the Locations are processing failed due to some technical error (e.g. time out) that can be fixed by retrying, the status should be FAILURE. Each Object status should be FAILED If some of the Locations are processing failed due to some technical error (e.g. time out) that can be fixed by retrying and some are processed successfully without any error, the status should be COMPLETED WITH FAILURE. Each Object status should be SUCCESS/FAILED accordingly. This Location Bulk Upsert Status GET API should return the count of: Total items Items successfully uploaded Items failed(due to failure or validation error) The Location Bulk Upsert Status GET API should return the state of each Location in the API payload: The status should be In Progress if the Location is still in Progress. The status should be Success if the Location is created successfully. The status should be Error if the Location is not created due to: Validation Error Duplication Failure (time out etc) The response should also contain the details of each error type according to the set pattern of showcasing the error details. Documentation: There should be two new entries in the API Documentation in the  Location  sub-menu of the  Master Data  menu Those two entries should be for the following APIs: Location Bulk Upsert POST API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Create or Update the Locations   in bulk asynchronously\u2019 . The details should be ' Create or Update the Locations in bulk asynchronously '. Location Bulk Upsert Status GET API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Get progress status of the bulk upsert Location by Tracking ID \u2019. The details should be ' Get progress status of the bulk upsert Location by Tracking ID '. Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-03T22:31:44.245-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104339"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104340",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Design and Develop Bulk Load API for Classes",
+      "description": "",
+      "status": "In Final Review",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-16T21:01:27.513-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104835",
+        "summary": "Vroozi API - Asynchronous Bulk upsert Classes",
+        "description": "Business Case: As an External system user, I want to create/update the Classes in bulk via the API. Acceptance Criteria: Class Bulk Upsert POST API: A New upsert API should be built that allows the user to create/update the Classes in bulk. The type of the API should be  POST . The user should be able to provide Classes in bulk. The API should adhere to the API Payload size standards. This API should work asynchronously. The system should validate the Classes' information in the background. The system should let the API user know the API request is accepted. The API should issue a tracking number once the user posts the API. Class Bulk Upsert Status GET API: Another API should be built that allows the user to get the status of the  Class Bulk Upsert POST API  by providing the tracking number. The type of the API should be  GET . If the API does not return the status of the  Class Bulk Upsert POST API  does not return the status, the system should return the error with details. This  Class Bulk Upsert Status GET API  should return the following statuses of the  Class Bulk Upsert POST API: If all the Classes are created/updated successfully, the header level response status should be  COMPLETED. Each Object status should be  SUCCESS. If some or all Classes are still being created or updated, the header level status should be  IN PROGRESS. Each Object status should be  SUCCESS/IN PROGRESS/ERROR  accordingly. If all of the Classes are processed and some or all of them have validation errors, the status should be  COMPLETED WITH ERRORS. Each Object status should be  SUCCESS/ERROR  accordingly. If all the Classes are processing failed due to some technical error (e.g. time out) that can be fixed by retrying, the status should be  FAILURE. Each Object status should be  FAILED If some of the Classes are processing failed due to some technical error (e.g. time out) that can be fixed by retrying and some are processed successfully without any error, the status should be  COMPLETED WITH FAILURE. Each Object status should be  SUCCESS/FAILED  accordingly. This  Class Bulk Upsert Status GET API  should return the count of: Total items Items successfully uploaded Items failed(due to failure or validation error) The  Class Bulk Upsert Status GET API  should return the state of each Class in the API payload: The status should be  In Progress  if the Class is still in Progress. The status should be  Success  if the Class is created successfully. The status should be  Error  if the Class is not created due to: Validation Error Duplication Failure (time out etc) The response should also contain the details of each error type according to the set pattern of showcasing the error details. Documentation: There should be two new entries in the API Documentation in the  Class  sub-menu of the  Master Data  menu Those two entries should be for the following APIs: Class Bulk Upsert POST API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Create or Update the Classes   in bulk asynchronously\u2019 . The details should be ' Create or Update the Classes in bulk asynchronously '. Class Bulk Upsert Status GET API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Get progress status of the bulk upsert Class by Tracking ID \u2019. The details should be ' Get progress status of the bulk upsert Class by Tracking ID '. Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-03T22:17:22.803-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104340"
+      }
+    ]
+  }
+]

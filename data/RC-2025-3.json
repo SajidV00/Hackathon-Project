@@ -1,0 +1,1082 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-108937",
+        "summary": "Stage - PMAN Admin - SDM - Master Data - Users - Role Prefixes update issue on SDM User Modal.",
+        "description": "URL:  https://stage-go.vroozi.com/ username:   notifyvroozi@gmail.com password:  Welcome1@ Preconditions: PMAN Admin User should have logged into the Application. Following User Group\u2019s should be configured: Default ---> Supplier Discovery Label set as 'Redbook/Directory' UG One ---> Supplier Discovery Label set as 'UG One' Keerthi ---> Supplier Discovery Label set as 'Keerthi' \u2018Asma SDM_Admin_2' SDM User should already Exist with 'UG One \u2019 User Group Associated to it. Steps to Reproduce: Access Master Data > Users. Search and Edit open 'Asma SDM_Admin_2'. Please check Role Prefixes. These are showing \u2018Default' User Group\u2019s  Supplier Discovery Labe l i.e 'Redbook/Directory\u2019. Change the User Group on this User Modal from \u2018UG One\u2019 to 'Keerthi'.  Actual result: Issue 1: Edit SDM User Modal is showing 'Default' User Group\u2019s  Supplier Discovery Label  as the roles prefix. Issue 2: Role Prefixes should instantly update when the User Group is changed. Expected result: Issue 1: Edit SDM User Modal should show associated User Group\u2019s  Supplier Discovery Label  as the roles prefix. Issue 2: Role Prefixes should instantly update when the User Group is changed. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-03-11T23:11:22.188-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108782",
+        "summary": "PMan- Default Company Tax code is not being populated on catalog line items if Document defaults are missing for a user",
+        "description": "Server : Production Pre-Req:   Default Tax code should be set on the unit Id User defaults should be missing in the Requester profile Catalog items are added in the cart Steps to Reproduce: Login with the requester user credentials Open the cart Move the catalog item to Purchase Request Open the line item Actual: Default tax code is not populating  Expected: Default tax code should be populating if user defaults are missing and no company code is selected on line item",
+        "status": "Resolved",
+        "assignee": "Javaid Sattar",
+        "created": "2025-03-06T19:54:22.165-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108757",
+        "summary": "Stage - Supplier Portal - Dashboard - Disputed Invoices Tile is available even the Invoice_Dispute Feature Toggle is disabled for the Company Unit Id.",
+        "description": "URL:  https://stage-go.vroozi.com/#/login?org=880852895&view=supplier username:   asma.latif+SUP2503-Admin@vroozi.com password:  Blueangel1@ Preconditions: SP User should have logged into the Application. \"ACCOUNTS_PAYABLE_WORKFLOW__INVOICE_DISPUTE\" should be disabled in the DB for the Company Unit Id. Steps to Reproduce: Access Dashboard. Please see Disputed Invoices Tile is showing. Actual result: Disputed Invoices Tile is available in the Dashboard. Expected result: Disputed Process Features should not be available in the SP Application if the Feature Toggle is disabled for the Company Unit Id.  Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-03-05T23:48:10.173-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108648",
+        "summary": "PMan - Unable to download users data  if SDM configurations are not available",
+        "description": "Server : Stage Pre-Req:  SDM feature never enabled on this Unit ID Credentials :  notifyvroozi89@gmail.com \u00a0 / Welcome1 Steps to Reproduce: Login with above user Navigate to Master Data > Users Click on Export users link Message is shown that file is processing Actual: When message is closed there is no file to download Expected :  There should be a file to download",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-03-03T02:11:00.908-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108625",
+        "summary": "Stage/SOCI - SDM - 404 being sent against Supplier Discovery call.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   notifyvroozi@@gmail.com password:  Welcome1@ Preconditions: PMAN Admin should have logged into the Application. Supplier_Discovery FT should be enabled for the Company Unit ID. Steps to Reproduce: Access Master Data > Suppliers Page. Click to Create a New Supplier or Access an existing one. Please see the error shows against Supplier Discover Call. Actual result: Error shows. Expected Results: No error should show. Screen-Shot: Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Ahmed Habib",
+        "created": "2025-03-02T22:38:42.030-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108446",
+        "summary": "Stage - Accounts Payable - Track Invoices - Unable to add columns using the Cog Wheel. ",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: AP User should. have logged into the Application. Steps to Reproduce: Access Track Invoices > ALL. ALL Page displays Click the Cog Wheel on most right in the Grid\u2019s Header. Select a Column and click to Done. Please see error in Console and column couldn\u2019t be added. Actual result: Unable to add columns using the Cog Wheel.  Expected Results: Columns should be added in the Track Invoices Page Grid. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-26T21:11:07.621-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108068",
+        "summary": "Stage - Accounts Payable - Processor not able to create GR from Draft Invoice screen",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:  aqsa.rani+processor@vroozi.com p assword:  Qwerty@1 Pre Condition: A PO should be created in system and should be in  Ordered  state Send a invoice for OCR in Hopper Steps to Reproduce: Login through given user  Access the invoice document sent for OCR Click on create Invoice Button On Draft Invoice screen, click on Create Good Receipt Button Please see that user lands on Hopper page instead of Good Receipt Go to track Invoices->All->sort by created date Please see invoice is saved in draft  e.g Invoice # 9000031436 Actual Result: User not able to create good receipt directly from draft Invoice screen Expected Result: User should land on GR screen after clicking Create Good Receipt Button and should be able to create GR successfully",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-19T03:02:26.697-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108058",
+        "summary": "User Bulk Upload - System Logs SDM User Group Exception in Error Report When Uploading Only PMAN Role Users",
+        "description": "Issue:  User Bulk Upload - System Logs SDM User Group Exception in Error Report When Uploading Only PMAN Role Users Server: URL:  https://stage-go.vroozi.com/#/login Username:  notifyvroozi77+NonNBCU@gmail.com Password: @Welcome1 Pre-Condition: The Supplier Discovery feature toggle should be subscribed for the relevant  unit_Id . A User Bulk Upload file should be prepared containing only PMAN role users. Steps to Reproduce: Log in to PMAN as an Admin user. Navigate to  Master Data > Users  screen. Upload the prepared User Bulk Upload file. Verify the error report. Actual Result: The system displays the error  \"User Group is invalid:\"  in the error report. 2025-02-25 10:27:50,694 c.v.a.m.p.p.s.ValidateUserProcessStep [ValidateUserProcessStep.java:1114] - SDM User Group not found: \n-----------------------------------------------------------------------------------\njava.lang.NullPointerException: Cannot invoke \"com.vroozi.api.sdm.model.SDMUserGroup.getName()\" because \"sdmUserGroup\" is null\n        at com.vroozi.api.mapping.processing.process.steps.ValidateUserProcessStep.isValidSdmUserGroup(ValidateUserProcessStep.java:1122)\n        at com.vroozi.api.mapping.processing.process.steps.ValidateUserProcessStep.validateSdmUserGroupElement(ValidateUserProcessStep.java:1109)\n        at com.vroozi.api.mapping.processing.process.steps.ValidateUserProcessStep.processData(ValidateUserProcessStep.java:668)\n        at com.vroozi.api.mapping.processing.process.steps.AbstractUploadProcessStep.process(AbstractUploadProcessStep.java:77)\n        at com.vroozi.api.mapping.processing.processrunner.UploadProcessStepInstance.run(UploadProcessStepInstance.java:25)\n        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\n        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n        at java.base/java.lang.Thread.run(Thread.java:833) Expected Result: The system should not display any errors when uploading users with only the PMAN role.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-18T22:14:27.613-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-108055",
+        "summary": "Getting Module settings exception when we open user modal",
+        "description": "SDM is not enabled for blue origin client on SOCI but when we open the User modal we get the following exception kindly review the SS We are getting the following exceptions in logs : 2025-02-18 11:05:50,152 c.v.a.c.c.ModuleSettingsController [ExceptionHandlers.java:30] - ModuleSettings for unitId: 282 and moduleType: SUPPLIER_DISCOVERY does not exists.\n-----------------------------------------------------------------------------------\ncom.vroozi.api.exceptions.InternalServerException: ModuleSettings for unitId: 282 and moduleType: SUPPLIER_DISCOVERY does not exists.\n        at com.vroozi.api.company.services.impl.ModuleSettingsServiceImpl.findByUnitIdAndModuleTypeAndSdmUserGroupIdNull(ModuleSettingsServiceImpl.java:190)\n        at com.vroozi.api.company.services.impl.ModuleSettingsServiceImpl.findOrBuildByUnitIdAndTypeAndSdmUserGroupId(ModuleSettingsServiceImpl.java:166)\n        at com.vroozi.api.company.services.impl.ModuleSettingsServiceImpl.findByUserAndModuleTypeAndSdmUserGroupId(ModuleSettingsServiceImpl.java:154)\n        at com.vroozi.api.company.controller.ModuleSettingsController.getModuleSettings(ModuleSettingsController.java:102)\n        at jdk.internal.reflect.GeneratedMethodAccessor3359.invoke(Unknown Source)\n        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n        at java.base/java.lang.reflect.Method.invoke(Method.java:568)\n        at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n        at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n        at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n        at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n        at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)\n        at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\n        at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n        at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n        at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)\n        at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n        at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at com.vroozi.api.authentication.web.AuthenticationFilter.lambda$doFilterInternal$0(AuthenticationFilter.java:37)\n        at java.base/java.util.Optional.map(Optional.java:260)\n        at com.vroozi.api.authentication.web.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:33)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at com.vroozi.api.web.filter.UnhandledExceptionFilter.doFilterInternal(UnhandledExceptionFilter.java:23)\n        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n        at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)\n        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n        at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n        at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n        at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\n        at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n        at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n        at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n        at java.base/java.lang.Thread.run(Thread.java:833)",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-02-18T11:23:56.020-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107992",
+        "summary": "PROD - Accounts Payable - Create Invoice - AcVal Error has Cost Center label showing \"null\".",
+        "description": "Environment:  Stage URL:  https://stage-go.vroozi.com/ username:   asma.latif+APM@vroozi.com password:  Redangel1! / Redangel1@ Preconditions: APM User should have logged into the Application. \"ACCOUNTING_STRING_VALIDATION\" FT should be enabled in DB for the company unitid. Steps to Reproduce: Click to Create Invoice. Add a Line Item with Cost Center value not matching the AcVal String. Please see the AcVal Error. Cost Center label is being spelled \u201cnull\u201c. Actual result: null is showing. Expected result: Cost Center should be shown. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2025-02-15T05:22:07.131-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107869",
+        "summary": "Stage - SDM Admin - Create a New User - Project label kept in the Settings is not reflecting in the User Creation Modal.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   notifyvroozi@gmail.com password:  Welcome1@ Preconditions: PMAN Admin User should have logged into the Application. Steps to Reproduce: Access SDM Module  Access Settings. Select the Desired User Group. Scroll Down and Select Company Setting Section. Input a  Project Label Name  in the field. Save the Settings. Access the Master Data > Users Page. Click to Create a New User. Select the User Group against which  Project Label Name  has been set. Please see Project Section , has its label name not updated. Actual result: Project label kept in the Settings is not reflecting in the User Creation Modal. Expected Result: Label Name should be updated everywhere. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-13T00:55:35.326-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107865",
+        "summary": "Stage - PMAN/SDM Admin User - Access Control Settings - Setting Version is not updating and Module Setting Error shows on toggling ON or OFF a Setting in the Section.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+107604c@vroozi.com password:  Blueangel1@ username:   notifyvroozi@gmail.com password:  Welcome1@ Preconditions: PMAN/SDM Admin User should have logged into the Application. Steps to Reproduce: Access Settings>Access Control Settings Section. Toggle On or Off any of the toggles, in my case its Project. Do it a few times , On and OFF .. Settings Save. Now pick another toggle and set it ON or OFF along with project toggle, in my case it Locations. Please see after few hits module settings error starts showing. See the Network Call. Version for module settings Call  is not updating on each hit. Actual result: Version for module settings Call  is not updating on each hit. Error shows. Expected Result: No Error should show and Version updated each time successfully. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-13T00:36:57.005-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107782",
+        "summary": "Stage - SDM Admin - Suppliers - Supplier Modal - SDM Supplier being an SP User too can't view the SP User Record in its SP Tab.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+RC2503_SDM_Admin_User1@vroozi.com password:  Blueangel1@ Preconditions: SDM Supplier  (SUP2503-SDM2)   with SP Toggled ON  and SP User invited as well should also exist. Aforementioned SDM Supplier should have a User Group associated to it. SDM Admin User should have logged into the Application. Steps to Reproduce: Login as PMAN Admin  notifyvroozi@gmail.com  / Welcome1. Access Master Data > Suppliers > SDM Supplier Modal having a User Group associated to it. Access Supplier Portal tab, switch the toggle ON. Add/Invite an SP User to Join the SP. Supplier User record shows in the SP tab\u2019s grid at the bottom. Close the Supplier Modal. Logout and Login as the aforementioned SDM User. Access SDM>Master Data>Suppliers>Supplier Grid. SDM Supplier modal should be accessed. Access Supplier Portal Tab. Scroll down , please see SP User Invited is not available here. Actual result: SP User record Invited is not available when the SDM Supplier is being accessed via SDM Admin. Expected Result: All details/records should be shown intact. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-11T02:59:47.981-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107759",
+        "summary": "Stage - SDM Admin - Reports - SDM Download Report is generating Empty Excel file.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+RC2503_SDM_Admin_User1@vroozi.com password:  Blueangel1@ Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Access Reports. Select 'User Group Download' option. Locations should be ALL. Click to Excel Button. File generates. Click to Download. File Downloads. Open it. Please see its Empty. Actual result: Report is generating empty SDM Download file. Expected Result: Report should include data. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-11T00:50:53.407-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107743",
+        "summary": "PMAN/SDM Admin - Master Data - Suppliers - Grid Pagination controls are disappearing.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   notifyvroozi@gmail.com password:  Welcome1@ Preconditions: PMAN Admin User should have logged into the Application. Steps to Reproduce: Access PMAN/SDM > Master Data > Suppliers Page. Please Suppliers 1st page is displaying supplier records. Click 2 in the Pagination Controls. Please see Pagination Controls are disappearing. Actual result: Pagination is not working correctly. Expected Result: Pagination should work correctly. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "qasim.riaz",
+        "created": "2025-02-10T23:09:07.386-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107739",
+        "summary": "SDM- Application allows to save user without providing user group.",
+        "description": "Environment:  Stage URL:  https://stage-go.vroozi.com/ username:   misbahazeem08+SDMadmin@gmail.com password:  Welcome@1 Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Login with a given user. Navigate to the Master Data-> Users. Start creating a user. Left User group field empty. Save user. Application allows to save user without providing user group Actual result: Application allows to save user without providing user group Expected result: Application should not allow to save user without providing user group Screen-shot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-02-10T22:53:41.066-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107710",
+        "summary": "Stage - SDM Admin - Master Data - Users - Bulk Upload - SDM User with Incorrect User_Group are being uploaded.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+RC2503_SDM_Admin_User3@vroozi.com password:  Blueangel1@ Preconditions: SDM Admin User should have logged into the Application with User Group 'RC2503 -UG1' associated to it. SUP2503-SDM1 should exist with User Group 'RC2503 -UG1' associated to it , having SDMLocation set as SDMLoc1 SDM Admin User should have the following SDM>Settings>Access Control Settings: Test Data: As Attached: User Bulk Upload file containing 3 SDM Users with 3 roles and Invalid \u2018User_Group' like removing a space from the User Group Name in my case.  Correct : \u2018RC2503 -UG1\u2019 I ncorrect:   'RC2502-UG1' Steps to Reproduce: Access Master Data>Users. Click to Upload Users Icon. Select the File and click to Upload. Users created message shows , the users are however not showing in the User Group Admin Users Screen. Login as  notifyvroozi@gmail.com  / Welcome1@ in a separate browser. Access PMAN/SDM > Master Data > Users Page. Please see the faulty SDM User uploaded are showing here. Actual result: faulty SDM Users uploaded with incorrect User_Group Name are created and showing in the PMAN Admin Account. Expected Result: Error should generate stating Invalid User Group mentioned in the file. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-10T03:41:03.419-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107703",
+        "summary": "Stage - SDM Admin - Master Data - Users - Default Location being set against a User is not being saved.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   notifyvroozi@gmail.com password:  Welcome1@ Preconditions: SDM Admin User should have logged into the Application with User Group UG A associated to it. Steps to Reproduce: Access Master Data>User. Click to Create a New User. Select an SDM Role and a User Group. Please see the Default Location field is filtering Location based on the selected User Group. Select One other than 'ALL'. Save the User. Edit Open the same SDM User. Please see the selected Location is not showing in the \u2018Default Location\u2019 field. Actual result: Selected Location is not showing in the \u2018Default Location\u2019 field. Expected Result: Selected Default Location should be saved and updated successfully. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-10T01:39:59.786-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107698",
+        "summary": "PMan - Users are unable to login if SDM configurations are not available",
+        "description": "Server : Stage Pre-Req:  SDM feature never enabled on this Unit ID Credentials :  ayesha.waseem+89+emp@vroozi.com  / Welcome1@ Steps to Reproduce: Login with above user Actual: User is unable to login Expected :  User should be able to login",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-02-10T01:29:48.055-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107688",
+        "summary": "SDM Admin - Settings - Access Control Setting - Error is being thrown if user tries to set  Toggle ON or OFF if Training Video Settings Section contains nothing in its fields.",
+        "description": "url:   https://devqa26-go.vroozi.com/#/login username:   notifyvroozi@gmail.com password:  Blueangel1@ Preconditions: PMAN Admin User should have logged into the Application. Training Video Settings Feature Toggle  should be ON in DB>Vroozi>Feature Toggles Collection. Steps to Reproduce: Access SDM>Settings. Select a User Group which has Training Video Settings Fields containing no values.. Toggle ON/OFF , Productions or any of the toggles in the Access Control Settings. Please see red error noty shows. Network has the response showing 'Invalid_Patch'. Move away and back on to the Settings Page. Please observe Access Control Settings Section has the toggles settings not being saved. Actual result: Error is being thrown if user tries to set  one or more Toggle ON or OFF. Expected Result: No Error should be displayed and toggles config should save successfully. Screen-Shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-09T22:47:16.888-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107679",
+        "summary": "PMAN Admin - Master Data - Users - SDM User Creation - Default Location against the selected User Group is not filtering Locations based on the User Group Selected.",
+        "description": "url:   https://devqa26-go.vroozi.com/#/login username:   notifyvroozi@gmail.com password:  Blueangel1@ Preconditions: PMAN Admin User should have logged into the Application with User Group UG A associated to it. Steps to Reproduce: Access Master Data>User. Click to Create a New User. Select an SDM Role and a User Group. Please see the Default Location field is not filtering Location based on the selected User Group and showing all SDM locations. Actual result: Default Location field is not filtering Location based on the selected User Group and showing all SDM locations. Expected Result: Default Location field should filter Location based on the selected User Group. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-07T14:16:14.067-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107678",
+        "summary": "SDM Admin - Supplier Bulk Upload - Error Report belonging to User Group Admin 1 is showing to User Group Admin 2 who belong to different User Groups.",
+        "description": "url:   https://devqa26-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_User10@vroozi.com password:  Blueangel1@ Preconditions: SDM Admin User should have logged into the Application with User Group UG A associated to it. A Multi User Group Supplier record already exists with User Groups UG A and UG B associated to it. Steps to Reproduce: Access SDM>Master Data>Suppliers. Upload a File containing a Supplier record with User Group different than the User Group\u2019s Admin associated User Group. Error report generates. Logout and Login as  asma.latif+SDM_Admin_User9@vroozi.com  / Blueangel1@ Access Master Data>Suppliers. Please see Error report Icon is here too. Click it and open. Please see the same error is showing here which was generated for the Supplier Upload against  asma.latif+SDM_Admin_User10@vroozi.com  / Blueangel1@ Actual result: Error Report belonging to User Group Admin 1 is showing to User Group Admin 2 who belong to different User Groups. Expected Result: Error Report belonging to a User Group Admin should be restricted to it only and not shown to other User Group Admins. Screen-Cast: Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Ahmed Habib",
+        "created": "2025-02-07T13:37:30.082-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107677",
+        "summary": "SDM Admin - Supplier Bulk Upload - Non Clickable Supplier becomes clickable if a new one is tried to be uploaded with erroneous data.",
+        "description": "url:   https://devqa26-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_User9@vroozi.com password:  Blueangel1@ Preconditions: SDM Admin User should have logged into the Application with User Group UG A associated to it. A Multi User Group Supplier record already exists with User Groups UG A and UG B associated to it. Steps to Reproduce: Access SDM>Master Data>Suppliers. Upload a File containing a Supplier record with User Group different than the User Group\u2019s Admin associated User Group. Error report generates. Please observe the existing Non Clickable Supplier record is now clickable i.e editable. Actual result: Multi User Group Supplier becomes clickable if an erroneous Supplier Upload is tried. Expected Result: Non Clickable Supplier Record should stay disabled. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-07T13:10:06.043-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107666",
+        "summary": "PMAN/SDM Admin - Master Data -Users - Create/Edit User Modal - Project (Production) Labels are not setting based on the selected User Group's Setting.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: PMAN Admin User should have logged into the Application. A User Group should have Project toggled ON via SDM>Settings>Access Control Settings Section. Steps to Reproduce: Access PMAN/SDM>Master Data>Users. Click to Create User. Add Details. Select an SDM Role e.g. SDM Power User. Select a User Group which has its settings>Access Control Section  , Project toggled ON. Please see Projects Section appears. Please observe the Labels are not per the Selected User Group\u2019s Settings. Actual result: Project (Production) Labels are not setting based on the selected User Group's Setting. Expected Result: Project (Production) Labels should set based on the selected User Group\u2019s Settings. Screen-Shots: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-07T00:30:07.608-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107650",
+        "summary": "PMAN/SDM Admin - PMAN/SDM Emails are containing broken button Images.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Access Settings>Email Settings Section. Set Email Module and Type , any of these. Save the settings. Create a User via Master Data>Users. Email is sent to the Inbox. Please access it , see the Button Images are broken. Actual result: Button Images are broken in the emails. Expected Result: Button Images should be intact. Screen-Shot: Note:  This happening for all Email Types: Invitation Registration Welcome Reset Emails.. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "qasim.riaz",
+        "created": "2025-02-06T22:09:40.921-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107634",
+        "summary": "PMAN/SDM Admin - Settings - Training Video Settings Section is missing.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: PMAN/SDM Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Settings Page. Please scroll down and see Training Video Settings Section is missing. Actual result: Training Video Settings Section is missing. Expected Result: Training Video Settings Section should be available between Background and Company Settings Sections. Screen-Shot: Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Jimena Pose",
+        "created": "2025-02-06T14:26:25.544-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107631",
+        "summary": "SDM Admin - Dashboard - Supplier Search - Supplier Search is not working.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: SDM Admin User should have logged into the Application. SDM Admin User\u2019s associated User Group should be linked to an SDM Supplier having SDM Location set as well. Steps to Reproduce: Access SDM>Dashboard. Ensure SDM Location is available in the Location Field against Search Bar. Either select the location or search by the SDM Supplier Name. its not searchable and Errors show stating Error getting Supplier Suggestions and one more .. Actual result: Supplier is not searchable and Errors show stating Error getting Supplier Suggestions and one more .. Expected Result: Supplier Search should work correctly and return correct results. Screen-Shot: As attached.. Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Jimena Pose",
+        "created": "2025-02-06T12:19:56.093-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107616",
+        "summary": "PMAN Admin - SDM - Settings - Supplier Discovery Label set against User Group is not updating certain fields label.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: PMAN Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Settings Page. Select a User Group Other than the 'Default'. Ensure the Supplier Discovery Label has the value set: Check 'Access Control Settings' Section toggle fields (Location, Download data)and Settings Page Label itself. \u2018Default' User Group\u2019s Supplier Discovery Labels is showing appended with them. Actual result: Supplier Discovery Label set against User Group is not updating certain fields label. Expected Result: Selected User Group\u2019s Settings should take effect properly everywhere. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-06T02:42:59.032-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107605",
+        "summary": "SDM Admin - Settings - Access Control Settings Section - Error shows if two toggles state is changed at the same.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Access Settings>Access Control Settings Section. Toggle On or Off any of these: One at a time. Please see Page goes on refreshing on each toggle changing state. Toggle ON or OFF one toggle and immediately the other too. Please see the Error shows. Actual result: Page goes on Refreshing if a toggle is set to ON or OFF. Expected Result: System behavior on this Section should mimic the existing such Pages. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-05T23:36:13.252-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107604",
+        "summary": "PMAN - Admin - Master Data - Users - SDM User Creation - User Creation Modal has Project Missing to add one even if the User Group selected with the SDM Role based User has Project Toggled On in its Setting.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: PMAN Admin User should have logged into the Application. A User Group should have Project toggled ON via SDM>Settings>Access Control Settings Section. Steps to Reproduce: Access PMAN>Master Data>Users. Click to Create User. Add Details. Select an SDM Role e.g. SDM Power User. Select a User Group which has its settings>Access Control Section  , Project toggled ON. Please see Projects Section does not appear. Actual result: PMAN SDM User Creation, Modal does not have Projects Section showing even User Group selected has Project Toggled ON in its Settings>Access Control Settings Section. Expected Result: PMAN User Modal wrt SDM Role based user should have Projects section showing if the User Group selected has Project Toggled ON in its Settings>Access Control Settings Section. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-05T23:33:15.736-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107601",
+        "summary": "PMAN/SDM - SDM User  - SDM User Creation is taking considerable time and also shows 504 error but the user gets created.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Master Data>Users. Click to Create User. Add Details. Click to Save. Please see the system is taking considerable time and the 504 error shows at the end. User has to Cancel the Modal. Refresh the Users Page. Please see User has been created. Actual result: SDM User Creation is taking considerable time and also shows 504 error but the user gets created. Expected Result: User Creation should not take this much time and no error should show. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-05T22:58:36.136-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107594",
+        "summary": "SDM - SDM Admin - Dashboard - Download Icon is available even its toggled off in SDM Admin's User Group  Acess Control Settings Section via Settings.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Settings Page. Access 'Access Control Settings' Section. Toggle off ' Download \u201c Supplier Discovery Label \u201d Suppliers Data ' Settings get saved. Refresh and access Dashboard. Please see Download Icon is still available. Logout and Log back in. Access Dashboard. Please see Download Icon is still available. Actual result: Download Icon is available even the ' Download \u201c Supplier Discovery Label \u201d Suppliers Data ' toggle is off in Settings>Access Control Settings Section. Expected Result: Download Icon should not be available. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-05T21:52:01.604-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107593",
+        "summary": "SDM - SDM Admin - Settings - Access Control Settings - Project Toggle's Tooltip is not matching with its purpose.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: SDM Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Settings Page. Access 'Access Control Settings' Section. Hover over the tooltip icon against 'Project' Toggle. The tooltip text is not aligning with the toggle. Actual result: Project toggle\u2019s tooltip text is not aligning with the toggle. Expected Result: Correct Project toggle\u2019s tooltip text should be displayed. Screen-Shots: it should be Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-02-05T21:46:42.265-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107585",
+        "summary": "PMAN - SDM - Settings - SSO Button Link and SSO Login Button Link fields have their tooltips missing.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+107020-Redbook-User-A@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: PMAN Admin(with SDM Admin Role) User should have logged into the Application. SDM User Group/s other than Default User group should already exist. Steps to Reproduce: Access SDM>Settings Page. Ensure 'Default' User Group auto-populates in the User Group field. Add/Update the following: SSO Button Link   in  Email Settings  for  Module Type = Supplier Discovery  under  Email Type = Welcome Mail . Click to Save. SSO Login Button Link  under  Company Settings . Click to Save. Settings should save and Green Noty msg appears. Now Select any other Existing User Group in the Settings>User Group field. Select Module Type = Supplier Discovery in  Email Settings  Section. Please see  SSO Button Link   in  Email Settings  has its tooltip missing. Please see  SSO Login Button Link  under  Company Settings  has its tooltip missing. Actual result: Issue1: SSO Button Link  under Email Settings have its tooltip missing. Issue2: SSO Login Button Link  under Company Settings have its tooltip missing. Expected Result: Expected1:  SSO Button Link  under Email Settings should have its tooltip. Expected2: SSO Login Button Link  under Company Settings should have its tooltip. Screen-Shots: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Jaroslav Bellus",
+        "created": "2025-02-04T08:21:30.720-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107568",
+        "summary": "PMAN- SDM Admin - SSO Login Button Link being set in the Default User Group is not propagating to the User created User Groups Settings.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+107020-Redbook-User-A@vroozi.com password:  Blueangel1@ username:   notifyvroozi83@gmail.com password:  Payable001@ Preconditions: PMAN Admin(with SDM Admin Role) User should have logged into the Application. SDM User Group/s other than Default User group should already exist. Steps to Reproduce: Access SDM>Settings Page. Ensure 'Default' User Group auto-populates in the User Group field. Add/Update the following: SSO Button Link   in  Email Settings  for  Module Type = Supplier Discovery  under  Email Type = Welcome Mail . Click to Save. SSO Login Button Link  under  Company Settings . Click to Save. Settings should save and Green Noty msg appears. Now Select any other Existing User Group in the Settings>User Group field. Select Module Type = Supplier Discovery in  Email Settings  Section. Please see  SSO Button Link   in  Email Settings  has the value that has been set in Default User Group Settings. Please see  SSO Login Button Link  under  Company Settings  is empty. Actual result: SSO LOGIN BUTTON LINK  under Company Settings against a specific User group is not setting with the one given in the Default User Group settings. Expected Result: SSO LOGIN BUTTON LINK  under Company Settings should be setting with the one given in the Default User Group settings. Screen-Cast: Please see the Recording in Attachments for more details. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-03T23:26:50.385-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107567",
+        "summary": "PMAN - Misalignment of Actions button icons on Attention tab of PR status screen.",
+        "description": "Environment:  Devqa31 URL:     username:   misbah.azeem+devqa31+Emp@vroozi.com password:  Welcome@1 Preconditions: \u201cAllow PR processing to external systems\u201d toggle should be enabled. PR with FAILED status should be created PR with REJECTED status should be created Steps to Reproduce: Login with a given user. Navigate to the Purchase Requests. Navigate to the Attention tab. Observe the alignment of action button icons (Delete, Copy and Submit) in Action field. The icons appear visually misaligned in the row. Actual result: Alignment of Action button icons are misaligned. Screen-shot: Expected Result: Alignment of Action button icons should be Aligned properly. Screen-shot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Misbah Azeem",
+        "created": "2025-02-03T23:25:42.735-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107501",
+        "summary": "Catalog items are getting retained in EHCache and multiple copies are getting created in it.",
+        "description": "When we update the catalog in that case in each process step we create a EHCache instance and store all the items of the related catalog in that instance due to which multiple copies of same catalog along with items get created in heap memory also in EHCache we have property  eternal  as true which means retain the cache till catalog-api is running and if we want to remove the related cache then we need to explicitly remove it which we are not doing in few process steps we are storing those items in following steps/files :  CommonBatchJobConfig.java CatalogItemPublishingServiceImpl.java MergeCatalogProcessStep.java SaveCatalogProcessStep.java UnpublishCatalogProcessStep.java out of these suspicious ones is SaveCatalogProcessStep.java. this memory leak occupied the heap memory and never release due to which gradually or on each catalog update more memory get occupied until server get crashed right now to resolve this issue we restart the catalog nodes when ever certain threshold meets. Heap dump links from 29 Jan catalog node 1 :  https://vroozi-test-file-storage.s3.us-east-1.amazonaws.com/HeapDump_CatalogAPI_ProdCatalog1_2025-01-28_20-28-02.hprof.tar.gz catalog node 3 :  https://vroozi-test-file-storage.s3.us-east-1.amazonaws.com/HeapDump_CatalogAPI_ProdCatalog3_2025-01-29_03-24-43.hprof.gz related new relic stats are :  Heap dump SS :",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-30T10:40:16.047-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107369",
+        "summary": "PMAN - In the Apply to All - Manage Preset modal, the system does not recognise the Tax Code when it is auto-selected based on the Company Code from a saved preset.",
+        "description": "Server: URL:  https://go.vroozi.com/#/login Username:  javaid.sattar+employee@vroozi.com Password: @Welcome1 Pre-Conditions: Log in to PMAN as an Administrator Ensure that one or more Tax Codes have been created against a specific Company Code Preset is already saved  Steps to Reproduce: Log in to PMAN as an Employee user Open the above draft Purchase Request in 'Draft' status Select a line item and click the  Apply to All  button from Apply to all screen select already saved manage preset. The system automatically selects a value in the Tax Code field  Without changing the auto-selected value of the Tax Code, click the  Apply Changes  button Actual Result: The system does not store the value of the Tax Code and continues to show a missing data validation error Expected Result: The system should correctly apply the  Tax Code  when it is auto-selected from a saved preset based on the  Company Code .",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-28T23:52:12.108-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107197",
+        "summary": "DEVQA5.83 - Integration - SDM - User Group Field and Users Section are available even the Users Group Enhancement Feature Toggle is disabled for the Company Unit Id.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:  notifyvroozi83@gmail.com password:  Payable001@ username:  asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: \u201cSUPPLIER_DISCOVERY\u201d Feature Toggle should be Enabled for the Company Unit Id. \"SUPPLIER_DISCOVERY__USER_GROUP_ENHANCEMENTS\" Feature Toggle should be Disabled for the Company Unit Id. PMAN/SDM Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Master Data>Users Page. Click to Create a New User. Please see the User Modal has the 'User Group' field showing. Close the User Modal. Please see the \u2018User Groups' Section is also available under 'Users\u2019 Section. Actual result: User Group field and User Groups Section are available on Users Modal and Users Page respectively even the Users Group Enhancements Feature Toggle is OFF in DB for the Company Unit Id. Expected Result: If Users Group Enhancements Feature Toggle is OFF in DB for the Company Unit Id, User Group field and Users Section both shouldn\u2019t be available/showing in the SDM User Modal and Users Page respectively. Screen-Cast: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2025-01-23T21:17:31.628-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107058",
+        "summary": "PMAN: Improve Similarity Items Navigation UI/UX",
+        "description": "Goal Improve UI/UX related to similar items navigation Current Issues Partially Hidden Items:  Depending on screen size, the last item in the carousel was often partially or fully hidden. The layout has been adjusted so that all items are now fully visible. Inconsistent Scrolling:  The scrolling behavior of the carousel was inconsistent. Users had to click multiple times to reveal items, and sometimes the scrolling would only move a small amount. This has been resolved to provide smooth and predictable scrolling with a single click. Suggested Enhancements: Dynamic Card Display:  The number of item cards displayed in the carousel now dynamically adjusts based on screen size. This ensures optimal use of screen space and displays up to five items on larger screens. Hover-to-Show Navigation:  Navigation icons are hidden by default and only appear when the user hovers over the \"Similar Items\" area. When hovering near the edge, the icon changes to an arrow, and upon clicking, the carousel smoothly navigates to the next item with a single click. Mobile Device Improvements: Smaller navigation icons have been implemented for better usability on smaller screens. Touch-enabled scrolling (drag and drop) has been added for touch devices, as hovering is not applicable. Video Recording",
+        "status": "Release Candidate",
+        "assignee": "Mutahir Sohail",
+        "created": "2025-01-21T00:12:51.362-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106944",
+        "summary": "NBCU: On PO when 2nd time update came from external system externally synced flag become false automatically and on UI it displays as N/A.",
+        "description": "Test case Regression Reference:  https://vroozi.testrail.net/index.php?/tests/view/38262871 Pre Condition:  Test Case for Configuration's:  Stage 20 NBCU Complete Configurations including db. Credentials: URL:    Login:  waheed.nawaz+employee_stage83-20@vroozi.com Password: Welcome1! Steps to Reproduced: Create a Multi Line item PR from UI. Submit PR. Login from sourcing Approver. Login:  waheed.nawaz+sourcing_approver_stage83-20@vroozi.com Password: Welcome1! Approve the PR. PR submitted to external system. Approved from External system via status update endpoint. Create a PO against that PR from API in this case externally Synced flag in the PO is true. Create a full GR against that PO from UI. Update the PO again from API and make sure this time there is no Monetary change in the update and user is not passing the externally synced flag in the update call. PO Updated successfully. Actual Result: externally Synced flag is automatically false even though the changes came from external system. and On UI it displays like this. Expected Result: It should not change the externallySynced flag from true to false because this update came from the external system.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Masood Safi",
+        "created": "2025-01-16T23:46:30.264-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106762",
+        "summary": "PMAN - Purchase Request Stuck in Financial Review Status after Approval by the Approver",
+        "description": "Issue: PMAN - Purchase Request Stuck in Financial Review Status after Approval by the Approver Server: URL:  https://stage-go.vroozi.com/#/login Username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Conditions: Log in to PMAN as an Administrator. At least 2 users have been created: 2.1. One user with both  Financial Approver  and  Sourcing Approver  roles (e.g., ABC user). 2.2. Another user with only the  Sourcing Approver  role (e.g., XYZ user). Set the ABC user as the  Fallback Approver  as well as the  Alternate Approver  for the XYZ user. Enable the  Financial Workflow  and  Sourcing Workflow . Create and configure a  Sourcing Rule  with the XYZ user, with an amount limit of $50. Set the employee spend limit (e.g., $100). Create and submit a  Purchase Request  that exceeds the requester's spend limit and qualifies for  Sourcing Review . Ensure the system shows two approvers: one  Sourcing Approver  and one  Financial Approver . Steps to Reproduce: Log in to PMAN as the  Alternate Approver  user (ABC user). Load the above  Purchase Request  and approve it. Verify the  Purchase Request  status and  Approval Status History . Actual Result: The system shows the  Purchase Request  in  Financial Review  status, and the  Approval Status  indicates that it is approved by all users. Re-approve by (ABC user) in the role of Financial Approver. Actual Result: The system throws an error while re-approving the Purchase Request. Expected Result: The system should move the  Purchase Request  to  Approved  status once all eligible approvers have approved it. Note:   Actually, the client configured the Enhanced Workflow, but this issue exists in both cases, whether the Enhanced Financial Workflow is enabled or disabled.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-14T23:09:56.597-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106733",
+        "summary": "PMAN - In the 'Apply to All' modal, the system does not consider the Tax Code value when it is auto-selected based on the Company Code",
+        "description": "Issue: PMAN - In the 'Apply to All' modal, the system does not consider the Tax Code value when it is auto-selected based on the Company Code Server: URL:  https://go.vroozi.com/#/login Username:  zulkiful.bajwa+employee@vroozi.com Password: @Welcome1 Pre-Conditions: Log in to PMAN as an Administrator Ensure that one or more Tax Codes have been created against a specific Company Code A draft Purchase Request (PR) has been created, e.g., '1000027994' Steps to Reproduce: Log in to PMAN as an Employee user Open the above draft Purchase Request in 'Draft' status Select a line item and click the  Apply to All  button Enter data in the  Accounting  and  Company Info  sections Verify the Tax Code value Actual Result: The system automatically selects a value in the Tax Code field Without changing the auto-selected value of the Tax Code, click the  Apply Changes  button Actual Result: The system does not store the value of the Tax Code and continues to show a missing data validation error Expected Result: When the BE returns multiple values, the selection field on the Apply to All modal should remain empty, allowing the user to manually select the desired value. When a value is selected or updated, the system should remove the validation error and retain the selected value",
+        "status": "Awaiting Business Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-14T04:02:29.544-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106719",
+        "summary": "PMan - User cannot expand the changes section on CR document, if latest CR done on the same PO",
+        "description": "Server:  Production Credentials:   ayesha.waseem+prod+emp@vroozi.com  / Welcome 1@ Pre-Req: Sourcing workflow is ON PO has been created (2000016069) User has done a 2 POCRs by changing line items CRs should be approved by Sourcing approver Steps to Reproduce: Login with the given credentials Open the CR other than the last one Actual Result: Arrow next to the changes button is not visible, hence user cannot see the changes done in this CR Expected Result: Arrow next to the changes button should be not visible, and user should see the changes done in all CR documents on a PO",
+        "status": "Awaiting Business Validation",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-14T00:00:22.177-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106606",
+        "summary": "Smart Chat closing UI inconsistency",
+        "description": "env: devqa38 User:  mutahir.sohail+Demo38@vroozi.com  | Test@123 Steps: Login to the application Open smart chat Search for Laptop \u201cShow me some laptops\u201c Search for office chairs Search of Washing Machine Now click on cross button on smart chat A disturbed UI is observed when closing it",
+        "status": "Resolved",
+        "assignee": "Mutahir Sohail",
+        "created": "2025-01-09T03:01:36.751-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106407",
+        "summary": "Similarity slider not visible in items details and smart chat view",
+        "description": "Kindly go through he video",
+        "status": "Resolved",
+        "assignee": "Mutahir Sohail",
+        "created": "2025-01-02T02:39:10.286-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106315",
+        "summary": "[Vision Labs] Refactor LLM Logic: Migrate to New API/Repository",
+        "description": "",
+        "status": "Done",
+        "assignee": "Jaroslav Bellus",
+        "created": "2024-12-31T22:12:55.911-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106272",
+        "summary": "USJ - Purchase Request : The PR is eligible for Sourcing Review, but the system allows the user to submit the PR without selecting a Sourcing Approver",
+        "description": "Issue: Purchase Request : The PR is eligible for Sourcing Review, but the system allows the user to submit the PR without selecting a Sourcing Approver Server: URL:  https://stage-purchase.vroozi.com Username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Conditions: 1. Log in to PMAN as an Administrator 2. Ensure that the Sourcing Workflow is enabled 3. A Sourcing Rule has been created with any configuration, like: (Catalog Item: Catalog, Product Type: Product, Currency: JPY, Amount: Value - 5,000,000, \"Apply to All Suppliers\" flag enabled, Sourcing Approvers: (Multiple users with the Sourcing Approver role have been added) 4. The catalog is configured on SmartOCI, and the content view and content group are properly associated with each other, as well as with the catalog and user 5. Enable the \u2018Japanese - Romaji\u2019 keyboard on your machine Steps to Reproduce: 1. Log in to PMAN as an Employee user 2. Search for a catalog item in the shopper view and add it to the Cart 3. Move the catalog item from the Cart to a new Purchase Request (e.g., 1000001138) 4. Resolve any data validation issues at both the line item level and the header level 5. Update the item quantity directly in the items grid (instead of the line item modal) by typing a value like 100000000 (ensure the item total exceeds the Sourcing Rule amount) and select a value from the suggested browser menu 6. Verify the \u201cSourcing Approvers\u201d dropdown on the Purchase Request\u2019s header level Actual Result: The system does not display the \u201cSourcing Approvers\u201d dropdown, enables the Submit button, and allows the user to submit the Purchase Request without selecting a Sourcing Approver Expected Result: The system should display the \u201cSourcing Approvers\u201d dropdown and should not allow the user to submit the Purchase Request without selecting a Sourcing Approver",
+        "status": "Release Candidate",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-12-30T22:59:16.947-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106116",
+        "summary": "Record created from Async Endpoint of WBS elements: Budget Amount and Budget Frequency data is not display on UI.",
+        "description": "Server : Stage83 Pre Condition:  Purchase Budget feature toggle should be disabled from the db in Company Settings BudgetingEnabled should be true. Step to Reproduced: Create a WBS Element via Async Endpoint CURL is as attached. in this request use is passing Budget Amount and Budget Frequency data. curl --location 'https://staging-api.vroozi.com/v1/wbs-elements/bulk-upsert/async' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiI4OWY3Y2Y0Ni01NjBlLTQwYWYtYjQ3OC05MDA1OTI2ZjBhMjkiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiOGIwNDljZDktZGZiMi00MzU0LWIyNjgtOWQ4ZjJmZDhmZjNhIn0.293oLnPkuSNST11uzTWLT9cVnL28MCk9hXdz-yJkRJu9k5d83jL_2r9QFORNTSozsLSwooPDhdW-MqEGgC354Q' \\\n--header 'x-api-key: xpRZF0Sazu8i6ShvdCYnB7ZxBrLbkrU43CGMhhe1' \\\n--header 'Cookie: AWSALB=DsMD2Q5F+Ix5y8JeebahcNbmCi4hiUSubNZFvtiWpx1dvaLehATUe+Pt44IHFDMI0+SemWpCVtGNxUxF+bnweJ9A5+hbD/6ugnT8hMso/Jh2Kxa1/wgrIWIcncr1; AWSALBCORS=DsMD2Q5F+Ix5y8JeebahcNbmCi4hiUSubNZFvtiWpx1dvaLehATUe+Pt44IHFDMI0+SemWpCVtGNxUxF+bnweJ9A5+hbD/6ugnT8hMso/Jh2Kxa1/wgrIWIcncr1' \\\n--data '[\n    {\n        \"externalId\": \"WBS-Test-1\",\n        \"code\": \"WBS-Test-1\",\n        \"description\": \"D-WBS-Test-1\",\n        \"companyCodeRef\": {\n            \"docNo\": \"ABCD\"\n        },\n        \"budgetInfo\": {\n            \"amount\": 100,\n            \"timeFrequency\": \"WEEKLY\"\n        },\n        \"profitCenter\": \"PC-WBS-Test-1\",\n        \"specialFlag\": true,\n        \"project\": \"P-WBS-Test-1\",\n        \"projectDescription\": \"PD-WBS-Test-1\",\n        \"active\": true\n    }\n]' Send the Request: Response Payload. {\n    \"trackingId\": \"c1d27517-6a52-42d7-8547-b80f6fdd33e1\",\n    \"status\": \"PROCESSING\",\n    \"timestamp\": \"2024-12-23T07:21:43.403+0000\"\n} Get Id and pass into tracking endpoint. CURL curl --location 'https://staging-api.vroozi.com/v1/wbs-elements/bulk-upsert/c1d27517-6a52-42d7-8547-b80f6fdd33e1/status' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiI4OWY3Y2Y0Ni01NjBlLTQwYWYtYjQ3OC05MDA1OTI2ZjBhMjkiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiOGIwNDljZDktZGZiMi00MzU0LWIyNjgtOWQ4ZjJmZDhmZjNhIn0.293oLnPkuSNST11uzTWLT9cVnL28MCk9hXdz-yJkRJu9k5d83jL_2r9QFORNTSozsLSwooPDhdW-MqEGgC354Q' \\\n--header 'x-api-key: xpRZF0Sazu8i6ShvdCYnB7ZxBrLbkrU43CGMhhe1' \\\n--header 'Cookie: AWSALB=DsMD2Q5F+Ix5y8JeebahcNbmCi4hiUSubNZFvtiWpx1dvaLehATUe+Pt44IHFDMI0+SemWpCVtGNxUxF+bnweJ9A5+hbD/6ugnT8hMso/Jh2Kxa1/wgrIWIcncr1; AWSALBCORS=DsMD2Q5F+Ix5y8JeebahcNbmCi4hiUSubNZFvtiWpx1dvaLehATUe+Pt44IHFDMI0+SemWpCVtGNxUxF+bnweJ9A5+hbD/6ugnT8hMso/Jh2Kxa1/wgrIWIcncr1' Data properly visible in API response. Verification on UI URL:    Login:  waheed.nawaz+admin_stage83@vroozi.com Password: Welcome1! User successfully login. Go to Master Accounting and WBS Elements. Search the created WBS Element.  Open this WBS Element. Actual Result: Budget Amount and Budget Frequency data is not display on UI. i see this is not stored in db  Expected Result: It should be store in db and display in UI. Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action",
+        "status": "Awaiting Business Validation",
+        "assignee": "Masood Safi",
+        "created": "2024-12-22T23:35:30.957-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105734",
+        "summary": "Japanese Translation Update for the Line Item (Profit Center)",
+        "description": "USJ - 160 Support- Please update the Japanese translation for the line item Profit Center. The correct translation is \u201c \u30d7\u30ed\u30d5\u30a3\u30c3\u30c8\u30bb\u30f3\u30bf\u30fc \u201d. The current translation is for the cost center. Please update it. Client- Please modify below Japanese translation/ (Line item Accounting, GL account)  \u3007\u3000\u30d7\u30ed\u30d5\u30a3\u30c3\u30c8\u30bb\u30f3\u30bf\u30fc \u00d7\u3000 \u30b3\u30b9\u30c8\u30bb\u30f3\u30bf\u30fc Please see Zendesk Support tab for further comments and attachments. FYI -",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-12-08T22:34:39.626-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105140",
+        "summary": "Similarity items carousel slider is not working properly while sliding toward right and only showing 4 items in place of 5",
+        "description": "env: devqa15 browser: Chrome Machine: Macbook user:  mutahir.sohail+empdevqa15Catalog1@vroozi.com  | Test@123 Steps: Login tot he account and open any catalog Click on Alternative items link for any item Click the slider right and left Observe Expected: A total of 5 items are visible and slider is smooth Actual: A total of 4 items are visible and slider has jerk everytime it moves to the end  carousel items are 4 in place of 5, Kindly take a look",
+        "status": "Resolved",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-11-13T22:50:18.936-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-108309",
+      "released_in_current_rc": false,
+      "summary": "Integration: Gaps Identified during Implementation ",
+      "description": "",
+      "status": "Open",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2025-02-25T11:26:34.017-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-108310",
+        "summary": "Purchase Order externally synced flag is not getting updated when the PO is canceled from the UI",
+        "description": "Issue: Purchase Order - Externally Synced Flag Not Updating When PO is Canceled from the UI Server: URL:  https://stage-go.vroozi.com/#/login Username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Condition: On the  Documents > Settings > Purchase Orders  screen, the  'Allow for PO Cancel'  flag should be enabled A Purchase Order, such as  \u20182000009942\u2019 , has been successfully created, and its  'externallySynced'  flag is set to  true Steps to Reproduce: Log in to PMAN as an Employee user Load the Purchase Order  \u20182000009942\u2019  and cancel it Fetch the Purchase Order using the GET API and verify the  externallySynced  flag value Actual Result: The system retains the  externallySynced  flag as  true Expected Result: The system should update the  externallySynced  flag to  false Note: We can cancel all items of the Purchase Order through POCR. We need to fix and test this scenario as well.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2025-02-25T11:27:54.310-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-108309"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104938",
+      "released_in_current_rc": false,
+      "summary": "Sonar: Vulnerability Issue Fixes ",
+      "description": "This epic includes all the critical vulnerabilities fixes as suggested by sonar.",
+      "status": "In Design",
+      "assignee": "Muhammad Hamza",
+      "created": "2024-11-06T22:17:09.137-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-107509",
+        "summary": "Purchase-api - Sonar: Fix Maintainable Issues",
+        "description": "Fix Maintainable Sonar Issues   total Issues: 15441 Remaining Issues: 14781 Fixed Issues: 660",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2025-01-30T23:47:56.998-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105777",
+        "summary": "Shopper-api : Sonar fixes",
+        "description": "",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-12-10T01:18:14.697-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105615",
+        "summary": "User Data API  - Sonar: Regex issue fix for SDM / Production, Contract term, Contract Status",
+        "description": "Sanitise any query params/path variables that are used in searching within database using regex expressions",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-12-03T04:16:21.272-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105613",
+        "summary": "User Data API  - Sonar: Regex issue fix for invoices \u2192Create/Edit Invoice",
+        "description": "Sanitise any query params/path variables that are used in searching within database using regex expressions within this method MongoDaoImpl.createRegexCriteria(). This is a generic method called from other areas of application as well. A sample testing can be done with the following use-case. Invoice \u2192 track invoices \u2192 create/edit invoice Select Company Code  Search Supplier Supplier with related company code will appear on the top and remaining will be searched on the base of company name, display name, default vendor Id, contact name.",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-12-03T02:44:48.291-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105605",
+        "summary": "User Data API  - Sonar: Regex issue fix for DefaultLocationController/ get Supplier Location",
+        "description": "Sanitise default location search by name on the screen  Supplier Discovery \u2192 Master Data \u2192 Supplier Discovery Location",
+        "status": "Release Approved",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-12-03T00:57:30.112-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-104841",
+        "summary": "Add sonar analysis to all repositories",
+        "description": "We need to integration sonar analysis run on the Vroozi github repositories. Sonar Integration is missing for the following components: V2-setup  (This repository is not a source code but contains configurational changes only) ERP-Service  (Already available) vroozi-batch  (Already available)  Vroozi-connectors ocr-api esignature-api event-service product-search vroozi-partner-api PDFGenerator Stuck-po-notification-service Vroozi-intake-service Reporting-api Health-check-ui",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-11-03T23:36:59.970-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-107290",
+      "released_in_current_rc": false,
+      "summary": "Netsuite BFN - Quaterly Upgrade",
+      "description": "",
+      "status": "Open",
+      "assignee": "Sambhu Sai",
+      "created": "2025-01-27T11:25:11.964-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-107287",
+        "summary": "Action Required: 2025.1 BFN Questionnaire is Now Available - Vroozi Procurement for NetSuite by Vroozi, Inc",
+        "description": "NetSuite 2025.1 Release has started!\u00a0 A new 2025.1 BFN questionnaire is now created for your BFN badge renewal.\u00a0To process, login to NetSuite using your APC-SDN Partner Admin or APC-SDN Partner \u2013 Technical role  production  version. Prior to submitting your questionnaire, kindly test your solution using mainly your existing LEADING account, which will be upgraded on  January 14 ~ 24, 2025 . Test only if the account has been upgraded to 2025.1.\u00a0Your questionnaire will be returned back if you have not tested your SuiteApp to the correct version & account.\u00a0 Please submit the questionnaire on or before  March 7, 2025  to give us enough time to process the submission and to prevent badge removal. See below important BFN dates for this release. 2025.1 Important Dates Milestone Date Scheduled \u00a0Leading Accounts Upgrade Period \u00a0January 14 ~ 24, 2025 \u00a0BFN Questionnaire Submission Deadline \u00a0March 7, 2025 \u00a0BFN Debadging Date \u00a0March 28, 2025 \u00a0BFN Delisting Date \u00a0April 26, 2025 You may also use your Release Preview (RP) to test your SuiteApp. To obtain the RP of an existing account, please opt-in. The opt-in page is found on the account that you want to be copied into an RP: \u00a0Setup > Company > Release Preview. \u00a0It takes 3 to 5 business days for the requested RP. \u00a0 Only opt-in when the new version is available for testing. This feature is only applicable to trailing accounts. If you encounter issues with your RP, create an SDN Support Case. Remember that you are highly encouraged to set up, maintain and utilize your leading accounts for all new release testing.",
+        "status": "Done",
+        "assignee": "Iqtidar Arshad",
+        "created": "2025-01-27T11:22:05.186-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-107290"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-107115",
+      "released_in_current_rc": false,
+      "summary": "SDM: NBCU Supplier Discovery Module Enhancement (Phase 2)",
+      "description": "The goal of Phase 2 of the SDM Enhancement Project is to improve usability, accessibility, and control by incorporating User Group-based settings and access control mechanisms into the Supplier Discovery Module (SDM). These enhancements aim to streamline configuration management, ensure proper role-based access, and improve the user experience for PMAN Admins and associated stakeholders. Business Objectives: Enhance configurability and flexibility of SDM settings by introducing User Group-based management. Strengthen access control mechanisms to improve data security and role-based functionality. Align user experience and interface with the updated configuration and access control framework.",
+      "status": "Open",
+      "assignee": "Jimena Pose",
+      "created": "2025-01-21T08:51:08.154-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-107222",
+        "summary": "SDM: Enhance User Bulk Upload and Download Behavior Based on Admin Role and User Group Association",
+        "description": "Business Case: The previous implementation of the User Bulk upload and download functionality did not account for differing access controls between PMAN Admins and User Group Admins. With updated requirements, User Group Admins are restricted to managing users in their own User Group, while PMAN Admins retain full access. Acceptance Criteria: What is the change? PMAN Admins can download all users across all User Groups and upload or update users with any valid User Group without restrictions. User Group Admins can only download users linked to their User Group and are restricted to uploading or updating users within their assigned User Group, with errors thrown for unauthorized User Groups. If the Project (Production) setting is turned OFF for a User Group, Project (Production) data is excluded from the download file and not required or validated during upload. Locations must belong to the supplier and the User Group, with errors thrown for invalid locations. Additionally, if Enable EF Access is turned OFF for a User Group, assigning the SUPPLIER_DISCOVERY_EF_APPROVER role will result in an error. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users > User Bulk Upload, and Download. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? PMAN Admin Behavior User Download File: PMAN Admins can download all users, regardless of User Group association. The  User_Group  field in the download file will display the User Group linked to each user. User Upload File: PMAN Admins can create new users or update existing users with any valid User Group. No restrictions on assigning a User Group in the  User_Group  field. User Group Admin Behavior User Download File: User Group Admins (Redbook Admin / Directory Admin) can only download users linked to their own User Group. Users outside their User Group will not appear in the file. User Upload File: User Group Admins can only create or update users linked to their own User Group. Validation : If the  User_Group  field contains a User Group not associated with the User Group Admin, the system throws an error and prevents creation/update (use existing error messaging template). User Upload Behavior (PMAN and User Group Admins) Project (Production): If turned OFF for a User Group, Project (Production) data is not validated or required during upload for users in that group. Location Validation: For all User Groups, the Location must belong to the supplier and the User Group. If an invalid location is provided, the system throws an error (use existing error messaging template). SUPPLIER_DISCOVERY_EF_APPROVER Role Validation: If  Enable EF Access  is OFF for a User Group, assigning the  SUPPLIER_DISCOVERY_EF_APPROVER  role will result in an error (use existing error messaging template). Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Check what is the best or easier solution to implement for both Upload & download when it comes to Production, Location, EF Approvals and accordingly we can change the description of the ticket \u00a0 \u00a0   \u00a01/27/2025 \u00a0   \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-26T21:25:51.569-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107220",
+        "summary": "SDM: Enhance Supplier Bulk Upload and Download Functionality Based on Admin Role and User Group Association",
+        "description": "Business Case: Previously, the Supplier Bulk upload and download functionality was developed assuming uniform access for all Admins. However, with updated requirements,  PMAN Admins  have  full access  across all User Groups, while  User Group Admins  (e.g., Redbook, Directory) have  restricted access  to suppliers based on their User Group. These restrictions must be reflected in the Supplier Bulk upload and download functionality to maintain consistency and proper access control. Acceptance Criteria: What is the change? PMAN Admins: Can download all supplier data with User Groups displayed in the  User_Group  field (separated by a delimiter or blank if no User Groups are linked). No changes to their Supplier Bulk upload behavior; they can create or update suppliers with one or more valid User Groups. User Group Admins (Redbook/Directory): Can only download suppliers linked to their User Group. Can only create new suppliers linked to their User Group in the  User_Group  field. Cannot modify suppliers linked to multiple User Groups or suppliers outside their User Group. Errors are thrown for unauthorized User Group changes during upload. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Suppliers > Supplier Bulk Upload, and Download. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? PMAN Admin Behavior Supplier Download: PMAN Admins can download all suppliers, regardless of User Group association. The  User_Group  field shows all linked User Groups separated by a delimiter or blank if no User Groups are linked. Supplier Upload: PMAN Admins can create or update SDM Suppliers with one or more valid User Groups in the  User_Group  field. Behavior for Non-SDM Suppliers remains unchanged. User Group Admin Behavior Supplier Download: User Group Admins  can only download suppliers linked to their User Group. If a supplier belongs to  multiple  User Groups (e.g., Redbook and Directory): The supplier will appear in the file for both Redbook Admin and Directory Admin. The  User_Group  field will show all linked User Groups (e.g., Redbook, Directory). Suppliers  not linked  to the User Group Admin's User Group are excluded. Supplier Upload: User Group Admins can only create or update suppliers linked to their User Group. Validation: If the  User_Group  field contains a User Group the Admin is not associated with, the system should throw an error and prevent creation. Error Example: \"Unauthorized User Group [Directory] specified. You can only create suppliers for your assigned User Group [Redbook].\" Multi-User Group suppliers: User Group Admins cannot modify supplier records linked to multiple User Groups. Any changes made to this supplier by the User Group Admin during the upload process will be  ignored . The system will not throw an error or provide a warning; the supplier record will remain unchanged in the system. If no changes are made to such suppliers, the system should process the file without errors. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date # Question Recommendation Response Remarks \u00a0 \u00a0 The easier way to handle supplier with multi-group check for SDM Admins is that we simply ignore this supplier record during the upload process which means we will ignore any updates/changes done by the SDM Admin for this supplier. No errors required, simply we will not update this supplier during upload. \u00a0 \u00a0 Update notes in the Template to explain the above scenario to the Admins.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-26T20:54:27.259-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107179",
+        "summary": "PMAN: Update PMAN Side User Group Behavior for SDM User Profiles",
+        "description": "Business Case: To ensure consistency with the existing PMAN workflow, the system requires the PMAN Admin to select an SDM role first before linking a User Group. Once the User Group is selected, dynamic behavior must apply to reflect settings such as SDM Label, Project (Production), Enable EF Access, and SDM Locations for the selected User Group. This approach aligns with the logic implemented for the SDM User modal, with slight differences in workflow prioritization. Acceptance Criteria: What is the change? Maintain existing behavior on the PMAN user modal where the  User Group  field only appears after the PMAN Admin selects an SDM role in the  Access  section. Display the  Default Setting SDM Label  (e.g., \"Supplier Discovery Admin\") to the PMAN Admin by default, regardless of whether an SDM role is selected. After  SDM Role  and  User Group  have been selected, the system  dynamically  updates the  SDM Labels ,  Project (Production) ,  Enable EF Access  and  SDM Locations settings  for the selected User Group. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? PMAN > Master Data > Users. Which users should be impacted by the change? PMAN Admin How should this feature work? Default Setting Behavior: Before selecting an SDM role, display the  Default Setting SDM Label  (e.g., \"Supplier Discovery Admin\") to the PMAN Admin. The Default Setting SDM Label persists until the User Group is selected after choosing an SDM role. Existing Behavior (Current Implementation -    ) PMAN Admin must select an SDM role (e.g., SDM Admin, SDM Power User, etc.) first. After selecting the SDM role, the  User Group  field appears as a mandatory field in the  Access  section. Dynamic Updates After SDM Role and User Group Selection: Once the PMAN Admin selects an SDM role: The  User Group  field appears as a mandatory field. The PMAN Admin selects a User Group (e.g., Redbook, Directory). Based on the selected User Group, the following dynamic updates apply: SDM Label:  Updates to reflect the User Group's SDM Label (e.g., \"Redbook Admin,\" \"Directory Basic User\"). Project (Production): If turned OFF for the selected User Group, Project (Production) fields are hidden in the user modal. Enable EF Access: If turned OFF for the selected User Group, EF-related sub-roles (e.g., EF Approval) are hidden in the user modal. SDM Locations: Filtered to display only locations relevant to the selected User Group. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Based on the solution selected above, will there be an impact on how the User Bulk upload/download functionality for this field was developed? If yes, what changes would need to be made? \u00a0 \u00a0   \u00a01/23/2025 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-23T00:59:17.346-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107167",
+        "summary": "SDM: Control Supplier Visibility and Management in SDM > Master Data > Suppliers Based on Admin Role and User Group Association",
+        "description": "Business Case: The  PMAN Admin  should retain  full control  over all SDM suppliers, while  User Group Admins  (e.g., Redbook, Directory) should have  restricted access  to suppliers linked only to their specific User Group. To simplify and improve usability, the SDM Label should dynamically update based on User Group selection, and specific restrictions should be enforced for suppliers linked to multiple User Groups. Acceptance Criteria: What is the change? PMAN Admins  can view, create, edit, and delete all suppliers across all User Groups. SDM Label  dynamically updates based on User Group selection when creating or editing suppliers. User Group Admins  can view, create, and edit suppliers linked only to their User Group. Multi-User Group  suppliers: User Group Admins  can view but cannot delete or deactivate these suppliers. Tooltips  explain restricted actions for multi-User Group suppliers. PMAN Admins  retain full control over all supplier records. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Suppliers. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? PMAN Admin Behavior: PMAN Admins  can view, create, edit, and delete all suppliers in  Master Data > Suppliers , regardless of User Group associations. For new suppliers: Default Behavior:  The  Default Setting SDM Label  is displayed initially. If the PMAN Admin selects  User Group A (Redbook) , the system updates the SDM Label dynamically to the  User Group A SDM Label . If the PMAN Admin selects  User Group B (Directory) , the system updates the SDM Label dynamically to the  User Group B SDM Label . If multiple User Groups (e.g., Redbook and Directory) are selected, the system reverts to the  Default Setting SDM Label  for simplicity. Example Scenarios: Scenario 1:  SDM toggle OFF \u2192 SDM Label shows \"Default Label.\" Scenario 2:  SDM toggle ON but no User Group selected \u2192 SDM Label shows \"Default Label.\" Scenario 3:  Redbook selected \u2192 SDM Label updates to \"Redbook Label.\" Scenario 4:  Redbook + Directory selected \u2192 SDM Label reverts to \"Default Label.\" PMAN Admins can link one or multiple User Groups to a supplier. User Group Admin Behavior: User Group Admins  (e.g.,  Redbook Admin ,  Directory Admin ) can view, create, and edit suppliers linked only to their respective User Group. When a User Group Admin creates a new supplier: The system automatically links the supplier to their User Group (e.g., Redbook Admin links the supplier to Redbook). The SDM Label dynamically updates to the  User Group SDM Label  (e.g., Redbook Label). The  User Group field  is hidden from the User Group Admin's view. User Group Admins cannot view or edit suppliers linked to other User Groups. Multi-User Group Linked Supplier Behavior: If a supplier is linked to  multiple  User Groups (e.g.,  Redbook  and  Directory ): Both User Group Admins can view the supplier in  Master Data > Suppliers . The delete icon and activate/deactivate checkbox for such suppliers are disabled. Replace the  delete icon  with a tooltip: Tooltip:  \"This supplier cannot be deleted or deactivated as it is shared across multiple User Groups. Please contact your Vroozi Admin for changes.\" Disable the Supplier Name to prevent opening the Supplier Dialog Modal. All updates or changes to multi-User Group linked suppliers must be requested by User Group Admins to the PMAN Admin, who retains full control over these records. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Bulk upload for User or Supplier is not validating the user group for location field in the file. Should there be a new ticket to handle this scenario? \u00a0 \u00a0   \u00a01/23/2025 \u00a0   \u00a0 # Question Recommendation Response Remarks \u00a0 \u00a0 When searching supplier, whether you want to see all suppliers or only available to the user group. Those which are linked to multiple user groups including their own and/or suppliers that belong to other user groups but not theirs.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-22T17:02:04.718-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107029",
+        "summary": "SDM: Control user visibility in SDM > Master Data > Users based on Admin role and User Group association.",
+        "description": "Business Case: To maintain appropriate access levels, PMAN Admins should continue to see all users regardless of their User Group association. However, SDM Admins should only see users belonging to the User Group linked to their own profile. Acceptance Criteria: What is the change? Update user visibility in  SDM > Master Data > Users  to reflect role-based access: PMAN Admins see all users across all User Groups. SDM Admins see only users associated with the User Group tied to their profile. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? PMAN Admins  can view all users in  SDM > Master Data > Users , regardless of User Group association. SDM Admins  can view only users belonging to the User Group associated with their profile. The system correctly filters the user list for SDM Admins based on their assigned User Group. PMAN Admins' view remains unrestricted and displays users across all User Groups. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date What happens if the Admin has both PMAN and SDM Admin roles together? Also, when the user group is assigned in this user\u2019s user profile? If an Admin has both PMAN and SDM Admin roles, the privileges of the PMAN Admin role will take precedence. This means that all system behaviors associated with the PMAN Admin role will apply, regardless of the SDM Admin role. \u00a0  /  \u00a01/20/2025  /  \u00a01/21/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-20T19:30:35.712-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107028",
+        "summary": "SDM: Update Project (Production) requirements based on User Group settings.",
+        "description": "Business Case: If a User Group has the  Project (Production)  setting OFF, users in this group should no longer require an active Project (Production) to access the system. The functionality must adapt accordingly. Acceptance Criteria: What is the change? Allow users in User Groups with  Project (Production)  set to OFF to access the system without a linked Project (Production). Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) SDM Basic User SDM Power User How should this feature work? Users in User Groups with  Project (Production)  OFF can log into the system without a valid Project (Production). Users in User Groups with  Project (Production)  ON must still have an active, valid Project (Production) linked to their profile. ( Existing functionality ) The \"Production\" section in the SDM User Modal screen is hidden for User Groups with  Project (Production)  OFF. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date If EF Access = ON but Production settings = OFF, how would that impact the EF documents that requires Production to be selected? How should we handle this scenario? Also, the EF Workflow depends on it. We don't need to handle this scenario right now. NBCU isn\u2019t going to use the system this way, and it's not required for the MVP. The current assumption is that both EF Access and Production will be OFF for Directory. \u00a0   \u00a01/22/2025 \u00a0  /    \u00a01/22/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-20T15:56:26.791-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107027",
+        "summary": "SDM: Filter Default Locations in the SDM User Modal screen based on the selected User Group.",
+        "description": "Business Case: To ensure proper access control, the Default Locations available for selection should be filtered based on the User Group's settings. Acceptance Criteria: What is the change? Restrict Default Locations in the SDM User Modal screen to those permitted by the selected User Group. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? Default Locations in the SDM User Modal screen are filtered based on the selected User Group. The filtering logic should match the behavior implemented in the previous ticket for location filtering.   Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Bulk upload for User or Supplier is not validating the user group for location field in the file. Should there be a new ticket to handle this scenario? \u00a0 \u00a0   \u00a01/23/2025 \u00a0   \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-20T15:53:56.489-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107026",
+        "summary": "SDM: Hide the \"Allow EF Approvals\" sub-role in the SDM User Modal if the User Group has EF Access disabled.",
+        "description": "Business Case: If a User Group's  Enable EF Access  setting is OFF, users in that group should not require the  Allow EF Approvals  sub-role, as they lack access to EF-related documents and workflows. The sub-role should be hidden in the  SDM User Modal  screen to ensure clarity and relevance. Acceptance Criteria: What is the change? Hide the  Allow EF Approvals  sub-role in the  SDM User Modal  screen when  Enable EF Access  is OFF for the selected User Group. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? The  Allow EF Approvals  sub-role is hidden in the  SDM User Modal  screen if  Enable EF Access  is OFF for the selected User Group. If  Enable EF Access  is ON, the sub-role is visible and selectable in the  SDM User Modal  screen. The visibility of the  Allow EF Approvals  sub-role updates dynamically based on the selected User Group's settings. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-20T15:51:29.287-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107025",
+        "summary": "SDM: Update role prefixes dynamically based on the User Group's Supplier Discovery Label in SDM User Modal.",
+        "description": "Business Case: The system should dynamically update role prefixes (e.g.,  SDM  Power User) based on the Supplier Discovery Label configured in the selected User Group. This ensures that role names are meaningful and aligned with the User Group configuration. Acceptance Criteria: What is the change? Update the role prefixes displayed in the  SDM User Modal  based on the Supplier Discovery Label of the selected User Group. If no User Group is selected (for PMAN Admins), the prefix defaults to the Supplier Discovery Label configured in the Default User Group settings. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? Role prefixes (e.g.,  SDM  Power User,  SDM  Admin) dynamically update in the SDM User Modal based on the Supplier Discovery Label for the selected User Group. If no User Group is selected (applies to  PMAN Admins  only), the role prefix defaults to the Supplier Discovery Label from the Default User Group settings. Once a User Group is selected, the prefix dynamically updates to reflect the Supplier Discovery Label for the selected User Group. For  SDM Admins , the prefix updates based on their pre-filled, un-editable User Group. Example  - If the User Group is  Redbook , the roles are displayed as  Redbook Admin ,  Redbook Power User , etc. If the User Group is  Directory , the roles are displayed as  Directory Admin ,  Directory Power User , etc. If no User Group is selected, the roles default to  Supplier Discovery Label Prefix  configured in the Default User Group settings. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-20T15:49:35.070-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107024",
+        "summary": "SDM: Restrict and pre-fill User Group field based on Admin role.",
+        "description": "Business Case: PMAN Admins need access to all active, non-deleted User Groups when creating or updating SDM Users, while SDM Admins should only see the User Group to which they are associated. Acceptance Criteria: What is the change? PMAN Admins can select any active, non-deleted User Group from the dropdown in the User Group field. SDM Admins automatically see their associated User Group pre-filled in the field, with no ability to change it. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? The User Group field behavior applies when SDM Users are being created or updated. PMAN Admins  can select any active, non-deleted User Group from the dropdown during SDM User creation or update. Example -  PMAN Admin sees Redbook, Directory, etc. in the drop down. For  SDM Admins , the User Group field is pre-filled with their associated User Group and is un-editable during both SDM User creation and update. Example -  Directory Admin sees Directory pre-filled in the User Group field. Role Precedence: If an Admin holds  both  PMAN and SDM Admin roles, the system pre-fills the User Group field with the User Group assigned to their profile. The Admin can change the pre-filled User Group to any active, non-deleted User Group, as PMAN Admin privileges take precedence. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date What happens if the Admin has both PMAN and SDM Admin roles together? Also, when the user group is assigned in this user\u2019s user profile? If an Admin holds both PMAN and SDM Admin roles, the system pre-fills the User Group field with the User Group assigned to their profile. However, as the PMAN Admin role takes precedence, they can change the User Group to any active, non-deleted User Group during User creation or update. \u00a0  /    \u00a01/20/2025 \u00a0  /    \u00a01/21/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-20T15:46:49.121-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107023",
+        "summary": "SDM: Update the positioning of the User Group field in the SDM User creation dialog box.",
+        "description": "Business Case: To improve usability, the User Group field should be positioned beside the Single Sign-On ID field to ensure that Admins select the User Group first when creating or updating an SDM User. Acceptance Criteria: What is the change? Move the User Group field beside the Single Sign-On ID field in the SDM User creation dialog box. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 1 = Directory) How should this feature work? The User Group field is positioned beside the Single Sign-On ID field in the SDM User creation dialog box. No changes to functionality\u2014this is a layout adjustment. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-20T15:43:46.729-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107022",
+        "summary": "SDM: Restrict User Group Management to PMAN Admins",
+        "description": "Business Case: To streamline the interface and maintain control over User Group configurations, the User Group section should only be accessible to PMAN Admins. Since SDM Admins cannot create, update, or delete User Groups, it is unnecessary to display the User Group section to them. Acceptance Criteria: What is the change? Limit User Group management to PMAN Admins and hide the User Group section from SDM Admins. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users > User Groups. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? Only PMAN Admins can create, update, or delete User Groups in the system. SDM Admins cannot see the User Group section because they are not allowed to edit, create or delete user groups. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-20T15:19:12.294-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107021",
+        "summary": "SDM: Introduce Access Control settings in the SDM settings page.",
+        "description": "Business Case: Admins need fine-grained control over which features users can access based on User Group settings to improve usability and ensure alignment with business needs. Acceptance Criteria: What is the change? Introduce an  Access Control Settings  section at the top of the  SDM Settings  page, above the Email Settings section. Add toggle-based settings grouped under  General Settings  and  Master Data Settings  to control feature visibility for User Groups. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Settings page. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? Access Control Settings Section Add an  Access Control Settings  section at the top of the  SDM Settings  page, above the Email Settings section. Display the  subtext : \u201c Configure feature visibility and permissions for users based on their assigned User Group. \u201d Toggle Setup and Behavior Default Toggle Values for New User Groups: All toggles in the  Default settings  are ON by default. Newly created  User Groups  inherit  these toggle values upon creation. Changes made to Default settings after User Group creation  do not affect  the settings of existing User Groups. General Settings toggles Reports ON:  Users in this User Group will see the  Reports  page in the navigation panel based on their user roles. OFF:  Users in this User Group will no longer see the  Reports  page in the navigation panel. Tooltip:  \u201cEnable or disable access to the Reports page for users in this User Group.\u201c Enable EF Access ON:  Users, depending on their roles, will see  Create EF ,  EF Status ,  EF Approvals , and/or  EF Workflow Group  in the Master Data section. OFF:  All the above features will be removed from the user\u2019s view, regardless of their roles. Tooltip:  \u201cAllow users in this User Group to access EF features such as Create EF, EF Status, EF Approvals, and EF Workflow Groups.\u201c Download \u201c Supplier Discovery Label \u201d Suppliers Data ON:  Users will see the  Download  button in the top right corner of the screen, allowing them to download files. OFF:  Users will no longer see the  Download  button and will be unable to download files. Tooltip:  \u201cEnable or disable the option to download supplier data by location for users in this User Group.\u201c Master Data Settings toggles \u201c Supplier Discovery Label \u201d Locations ON:  The  Redbook/Directory Locations  page will appear in the navigation panel for User Group Admins, enabling them to view, edit, and create SDM Locations. OFF:  The  Redbook/Directory   Locations  page will no longer appear, preventing User Group Admins from viewing, editing, or creating SDM Locations. Tooltip:  \u201cAllow or restrict access to the SDM Locations page, enabling users to view, create, and edit location data.\u201c Project ( Production ) ON:  The  Project (Production)  page will appear in the navigation panel for User Group Admins, enabling them to view, edit, and create projects. OFF:  The  Project (Production)  page will no longer appear, preventing User Group Admins from viewing, editing, or creating projects. Tooltip:  \u201cEnable or disable the Project (Production) section for users in this User Group and adjust login requirements accordingly.\u201c Admin Permissions PMAN Admins: Can manage Access Control settings for both Default and User Group-specific configurations. Can toggle settings for Default and any User Group. User Group Admins: Can only manage Access Control settings for their assigned User Group. Cannot view or edit Default settings. Example: Redbook Admin  can only view/edit settings for the  Redbook User Group . Directory Admin  can only view/edit settings for the  Directory User Group . Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Can you please update the description so that its easier to understand how the toggle settings will need to be setup for newly created User Group settings? I've updated the description to clarify how the toggle settings will need to be set up for newly created User Group settings. \u00a0   \u00a01/21/2025 \u00a0   \u00a01/22/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-20T13:06:59.105-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-107020",
+        "summary": "SDM: SDM settings should be configurable based on User Groups.",
+        "description": "Business Case: Today, SDM settings are common for all users. To improve flexibility and control, the settings need to be configurable based on User Groups. PMAN Admin should have full access to manage Default settings and User Group settings, while User Group Admins (e.g., Redbook and Directory) can only manage settings related to their assigned User Group. Acceptance Criteria: What is the change? Implement a typeahead dropdown in the SDM settings to switch between Default and User Group-specific settings. Configure SDM settings to allow PMAN Admins to manage Default and User Group-specific settings, while User Group Admins manage only their assigned settings. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Settings page. Which users should be impacted by the change? PMAN Admin SDM Admin Example: Redbook Admin (User Group 1 = Redbook) Example: Directory Admin (User Group 2 = Directory) How should this feature work? Add User Group Dropdown Add a typeahead dropdown field \u201c User Group \u201d in the SDM Settings to select between  Default  and  User Group-specific  settings. Default User Group Functionality The  Default User Group  serves as the company-wide settings, preserving the current system view and functionality for PMAN Admins who are not tied to specific User Groups. The  Default User Group  is not a record in  Master Data > User Groups  but exists as a system-managed baseline for default settings. Settings Navigation When a  PMAN Admin  navigates to the Settings section, the  Default  option should be pre-selected in the User Group dropdown. PMAN Admins  can: Change the selection to view or manage other User Groups' settings. Select Default settings or a specific User Group to view and manage its settings. Customize settings for any User Group. User Group Admins  can only: Manage their assigned User Group settings. Customize settings for their assigned User Group. Example : User Group 1 = Redbook Redbook Admin can only view/edit Redbook settings. User Group 2 = Directory Directory Admin can only view/edit Directory settings. New User Group Creation When a new User Group is created in  Master Data > Users > User Group , the system automatically inherits all  Default settings  into the new User Group\u2019s settings. Changes made to  Default settings  after a User Group is created  do not impact  existing User Group settings. Customizable Fields All other fields in the settings, such as Email Body, Email Subject, Company Logo, Login Page Background, Sourcing Emails, etc., can be customized to suit each User Group's specific needs after the Default settings have been inherited. Exceptions SSO Button Link / SSO Login Button Link Behavior: PMAN Admins  can update these fields in any User Group settings, including the Default User Group. Changes made to these fields in any User Group settings (Default or specific) automatically  propagate  across all User Group settings. For  User Group Admins , these fields are  read-only  and  cannot  be edited. Notes : SSO Button Link  is available in  Email Settings  for both  Module Type = Purchasing Manager  and  Supplier Discovery  under  Email Type = Welcome Mail . SSO Login Button Link  is available under  Company Settings . Login Page URL Pattern:   Auto-populated with the  User Group name  (spaces replaced with hyphens \u201c-\u201d) upon User Group creation. This field can be customized for each User Group after creation. Default settings  will include a Login Page URL Pattern (\"Supplier-Discovery\") for new clients, editable by PMAN Admin. Note :  For  NBCU , the  Redbook User Group  may need to be created, and the  Default setting's Login Page URL Pattern  manually updated to distinguish between the Default and Redbook URLs. Login Process: The system should allow a user to log in using any valid  Login Page URL Pattern  as long as their credentials are correct. The  Login Page URL Pattern  itself should not restrict login for users associated with other User Groups. Example : A Redbook user logging in via the Directory URL should still be authenticated based on their credentials. Post-Login Behavior: Once logged in, users should see the views, settings, and data appropriate for their User Group based on their user profile. Example : A Redbook user will only see Redbook-specific views and settings, even if they logged in via a Directory URL. Supplier Discovery Label: Auto-filled with the User Group name upon User Group creation. This field can also be customized for each User Group after creation. Add new Tooltips : SSO Button Link: URL for the Single Sign-On button, updated across all User Groups when modified. SSO Login Button Link: URL for the Single Sign-On login button, updated across all User Groups when modified. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Can we make the login button editable on all user groups including the default user group for PMAN Admins so that they can make changes to this field from any screen possible? But we would need to add a tool tip for added context as well as keep the field read-only for SDM Admins for their user groups. Yes, PMAN Admins can edit the SSO Button Link and SSO Login Button Link fields from any User Group settings screen, including Default. Changes made on any screen will propagate across all User Groups. These fields will remain read-only for SDM Admins. The ticket description has been updated to include this clarification along with tooltips for context.   1/21/2025   1/21/2025 Can you please add in the ticket that the login process also needs to be handled in this ticket itself for login page URL? Also, do we need to validate the User Groups with the credentials at the time of login? I\u2019ve updated the description to include handling the login process using the Login Page URL Pattern. The system will validate credentials during login but will not restrict access based on the URL used. Once logged in, users will see views and settings based on their User Group association.   1/21/2025   1/22/2025 Should we add a new error message if the user is trying to log into SDM using the wrong User Group Link? No, an error message is not required since the system will validate credentials regardless of the User Group Link used, and users will see their appropriate views post-login.   1/21/2025   1/22/2025 Can you please clarify in the ticket on how the Default User Group is supposed to function or what its role is? I've updated the description of the ticket to clarify the role and functionality of the Default User Group, ensuring its purpose and behavior are clearly defined.   1/21/2025   1/22/2025 # Question Recommendation Response Remarks \u00a0 For now, the quick way to handle the login process would be that any SDM login URL can be used for now in order for the user to log in to the system. We would not do a URL + User Group check to see if the right person is logging into their profile. This can be done in the future but removing the requirement from the ticket itself will help expedite the solution for this project.  I have considered this solution and updated the Acceptance Criteria accordingly to reflect that any SDM login URL can be used for login without a URL + User Group check. Post-login behavior will align with the user's User Group settings.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-20T12:29:01.751-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      },
+      {
+        "key": "VZI-106426",
+        "summary": "SDM: Remove Feature Toggle (VZI-106425) After MVP Completion for SDM User Group Enhancement",
+        "description": "Business Case : After the MVP for the SDM User Group enhancements is completed and thoroughly tested, the feature toggle will be removed to seamlessly transition the system to the enhanced behavior. The updated system should continue to preserve existing functionality while incorporating the enhancements. Acceptance Criteria : Remove Feature Toggle : Fully remove the  SUPPLIER_DISCOVERY__USER_GROUP_ENHANCEMENTS  toggle. Enable Enhanced Functionality by Default : Ensure the system automatically transitions to the new SDM User Group enhancements: Preserve existing system behavior. Add enhancements seamlessly on top of current functionality. Preserve Current System Behavior : The system should continue to support all existing features and behaviors, now enhanced with the new SDM User Group updates. Example: Existing search and download functionality should work as before but now include User Group-based filtering. Testing Requirements : Validate that current system behavior remains intact with enhancements added on top. Verify there are no disruptions or regressions in the existing system functionality after toggle removal. Documentation Update : Update internal and external documentation to reflect the removal of the feature toggle and the integration of the new enhancements into the system.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-02T17:00:37.649-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-107115"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103542",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Additional New Development Work to support External API Call - 3",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-09-23T04:49:42.161-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-107030",
+        "summary": "Vroozi API: Analyze End to End PR workflow for NBCU",
+        "description": "Problem Statement: As part of NBCU\u2019s legacy interface retirement plan, the DEV and QA need to perform a comprehensive analysis to evaluate the PR APIs. The goal is to ensure that all functionalities currently performed via the legacy interface can be seamlessly executed using the PR APIs. Currently, the legacy interface converts the Vroozi PR into a DTS and middleware then generates an XML which NBCU\u2019s external system accepts.  Once NBCU is moved to the Public APIs, it should be ensured that all the fields in the XML generated by the middleware should be exposed in the PR data model. Detail Mapping (In Progress) Link:",
+        "status": "Investigation Done",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2025-01-20T20:09:21.206-0800",
+        "issue_type": "Spike",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-106680",
+        "summary": "Vroozi API: PR Modal Update: Expose the Profit Center field in the CostObjectRef object.",
+        "description": "Business Case: As an admin, I want to optionally provide the  Profit Center  in the  CostObjectRef  object in the PR modal so that the information can be used accordingly. Acceptance Criteria:   There should be a new field in the  CostObjectRef  object of the PR modal. The name of this new field should be  Profit Center. This should be a text-type field. This should be an optional field. The user should be able to provide a value or leave the field empty When getting the PR data, this field should be populated with the value given. This new field  Profit Center  should be visible to all the APIs using the PR model. Technical Details: Documentation: The  Profit Center  in the  CostObjectRef  object should be added to the Vroozi Docs.  All the API schemas using the PR modal should have a description of the  profit Center  field in the  CostObjectRef  object. Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2025-01-12T22:59:19.295-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-106679",
+        "summary": "Vroozi API: PR Modal Update: Expose the Channel field in the approvalGroupRef object.",
+        "description": "Business Case: As an admin, I want to optionally provide the  Channel  in the  approvalGroupRef  object in the PR modal so that the information can be used accordingly. Acceptance Criteria:   There should be a new field in the  approvalGroupRef  object of the PR modal. The name of this new field should be  Channel. This should be a text-type field. This should be an optional field. The user should be able to provide a value or leave the field empty When getting the PR data, this field should be populated with the value given. This new field  Channel  should be visible to all the APIs using the PR model. Technical Details: Documentation: The  Channel  in the  approvalGroupRef  object should be added to the Vroozi Docs.  All the API schemas using the PR modal should describe the  profit Center  field in the  CostObjectRef  object. Q&A:    Impacted APIs:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2025-01-12T22:58:18.620-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-106237",
+        "summary": "Notify Time out issue is not implemented as mentioned in ticket.",
+        "description": "Settings Should be: Precondition:  Feature toggles are enable of  Accounting Strings externalWorkflowEnabled  flag from company settings is true in this case. Accounting Validation Configurations:  CustomMessage set to  \u201cINACTIVE\u201c URL:    Login:  waheed.nawaz+employee_devqa14@vroozi.com Passowrd: Welcome1! Steps to Reproduced: Click on the Non Catalog Request. PR Open in Draft Status. Add Multiple line items. Add other necessary details and save the line item. Submit the PR. Validation Appears on PR UI. Actual result: Notify Time out issue is not implemented as mentioned in ticket. Expected Result: If the accounting validation from the external system is timed out, the system should display a red Noty message. The Noty message should be a slider. After 5 seconds, the Noty message should slide away. The message should be  The accounting validation process is timed out. Please try again after a few moments.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Masood Safi",
+        "created": "2024-12-30T04:00:16.581-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-103542"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-11810",
+      "released_in_current_rc": false,
+      "summary": "Platform Audit Log",
+      "description": "",
+      "status": "In Design",
+      "assignee": "Stefan Deusch",
+      "created": "2016-03-28T17:53:57.237-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106579",
+        "summary": "Audit logging UI Creation",
+        "description": "Business Case: As per this ticket    we are recording all the audit logging of whats getting changed in the db. The scope of this ticket includes building a UI for internal use in which user can have easy access to audit data. URL:  https://ServerName-healthcheck.vroozi.com/audit   Acceptance Criteria: Create a new page in the health-check-ui microservice which is already deployed on webnode. This page should have the following components Company Name (mandatory field fetched from company settings)  Collection Name (mandatory field fetch from properties of kafka-api) Duration (Optional Date range field) Operation type (Optional field describing CRUD operations) Search and Clear (button) Once the values are entered and user clicks on search button, a  paged data   sorted by created date   (latest first)  should be shown in a grid view. The values in the filter fields should persist. the grid should have the following columns available mongo ID This is the primary key of the audit log collection of a particular collection e.g. for company_settings we will have a company_settings_audit, and this field depicts the mongoId of the company_settings_audit. A copy icon should be visible next to the data, and clicking on this should should copy the query to clipboard which can be used to fetch the actual data from db. e.g. for  company_settings_audit  with mongo Id  677e36731c435ee9d3dc38e2  it should be  db.company_settings_audit.findOne({\"_id\" : ObjectId(\"677e36731c435ee9d3dc38e2\")}); Document ID This is the primary key of the actual document that is being audited. For company settings since this is always a one record against a single unitId we will hide the column for this collection. A copy icon should be visible next to the data, and clicking on this should copy the query to clipboard which can be used to fetch the actual data from db. e.g. for  company_settings_audit  with Document Id  677e36731c435ee9d3dc38e3  it should be  db.company_settings.findOne({\"_id\" : ObjectId(\"677e36731c435ee9d3dc38e3\")}); Updated By Updated On Changed fields Action The view icon in this column should open up a popup which should contain three columns  Field name, Old value  and  New value  of the fields that are changed. If the field is an object we need to add a diff checker tool where we can visualize the values that are  changed ,  added  or  removed . There will be a mandatory field lastUpdatedByName if lastUpdatedBy exists",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-08T20:40:22.673-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-11810"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106577",
+        "summary": "PMAN - Angular Upgrade: Upgrade Shopper -> Invoices",
+        "description": "Upgrade the whole page  Shopper -> Invoices:",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2025-01-08T18:51:51.047-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-102954",
+        "summary": "Angular Upgrade: Upgrade Shopper -> Purchase Requests",
+        "description": "Upgrade the whole page  Shopper \u2192 Purchase Requests  and use ng2  vzi-grid  /  vzi-grid-view : Bonus Feature : Introduce search bar and quick filters like in Shopper \u2192 Purchase Orders page if supported by BE.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-09-04T13:43:59.775-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105841",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Design and Develop Bulk Load API for Profit Centers",
+      "description": "",
+      "status": "Work Completed",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-12-11T23:42:55.837-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-106439",
+        "summary": "Vroozi API - Post Endpoint to re upsert the failed Profit Centers  ",
+        "description": "Business Case: Develop a new POST endpoint to reprocess and upsert Profit Centers that failed during the Bulk Upsert Profit Center API operation due to system errors. Acceptance Criteria: A new Post endpoint should be developed.  It should be asynchronous. This new POST endpoint should optionally accept the tracking id generated by Profit Center Bulk Upsert API. ( For Bulk Upsert Profit Center, please refer to   ) With the tracking id, this new Post endpoint should be able to find out which Proft Centers are in: PENDING  state FAILED  state The new POST endpoint should re-upsert only the Proft Centers with a status of  PENDING  or  FAILED  from the Bulk Upsert WBS API operation, based on the provided tracking ID. ( For Bulk Upsert Proft Centers, please refer to    ) If no tracking id is specified, this new Post endpoint should find all the Profit Center objects in  PENDING  or  FAILED  state irrespective of any specific bulk upsert call and re-process them. The system failure should cover the following potential types: Time out Network failure. The server is down. The status of this new Post endpoint operation should be tracked by the Get Status API(please refer to  ) if the tracking id was given. Technical Details: Documentation:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-02T22:52:41.155-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105841"
+      },
+      {
+        "key": "VZI-105842",
+        "summary": "Vroozi API: Bulk Upsert Profit Centers",
+        "description": "Business Case: As an External system user, I want to create/update the Profit Centers in bulk via the API. Acceptance Criteria: Profit Center Bulk Upsert POST API: A New upsert API should be built that allows the user to create/update the Profit Centers in bulk. The type of the API should be  POST . The user should be able to provide Profit Centers in bulk. The API should adhere to the API Payload size standards. This API should work asynchronously. The system should validate the Profit Centers' information in the background. The system should let the API user know the API request is accepted. The API should issue a tracking number once the user posts the API. Profit Center Bulk Upsert Status GET API: Another API should be built that allows the user to get the status of the  Profit Center Bulk Upsert POST API  by providing the tracking number. The type of the API should be  GET . If the API does not return the status of the  Profit Center Bulk Upsert POST API  does not return the status, the system should return the error with details. This  Profit Center Bulk Upsert Status GET API  should return the following statuses of the  Profit Center Bulk Upsert POST API: If all the Profit Centers are created/updated successfully, the header level response status should be  COMPLETED. Each Object status should be  SUCCESS. If some or all Profit Centers are still being created or updated, the header level status should be  IN PROGRESS. Each Object status should be  SUCCESS/IN PROGRESS/ERROR  accordingly. If all of the Profit Centers are processed and some or all of them have validation errors, the status should be  COMPLETED WITH ERRORS. Each Object status should be  SUCCESS/ERROR  accordingly. If all theProfit Centers are processing failed due to some technical error (e.g. time out) that can be fixed by retrying, the status should be  FAILURE. Each Object status should be  FAILED If some of the Profit Centers are processing failed due to some technical error (e.g. time out) that can be fixed by retrying and some are processed successfully without any error, the status should be  COMPLETED WITH FAILURE. Each Object status should be  SUCCESS/FAILED  accordingly. This  Profit Center Bulk Upsert Status GET API  should return the count of: Total items Items successfully uploaded Items failed(due to failure or validation error) The  Profit Center Bulk Upsert Status GET API  should return the state of each Profit Center in the API payload: The status should be  In Progress  if the Profit Center is still in Progress. The status should be  Success  if the Profit Center is created successfully. The status should be  Error  if the Profit Center is not created due to: Validation Error Duplication Failure (time out etc) The response should also contain the details of each error type according to the set pattern of showcasing the error details. Documentation: There should be two new entries in the API Documentation in the  Profit Center  sub-menu of the  Master Data  menu Those two entries should be for the following APIs: Profit Center Bulk Upsert POST API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Create or Update the Profit Centers   in bulk asynchronously\u2019 . The details should be ' Create or Update the Profit Centers in bulk asynchronously '. Profit Center Bulk Upsert Status GET API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Get progress status of the bulk upsert Profit Center by Tracking ID \u2019. The details should be ' Get progress status of the bulk upsert Profit Center by Tracking ID '. Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action",
+        "status": "Awaiting Business Validation",
+        "assignee": "Iqtidar Arshad",
+        "created": "2024-12-11T23:51:52.076-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105841"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-76095",
+      "released_in_current_rc": false,
+      "summary": "SOC1 Vulnerabilities PMAN & SmartOCI",
+      "description": "",
+      "status": "Open",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2022-04-14T01:47:35.953-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106094",
+        "summary": "Cross-site scripting (reflected) ( smartOCI )",
+        "description": "The value of the  userId  request parameter is copied into the HTML document as plain text between tags. The url  adminui/editUser?userId=12873ve6vn%22%3e%3cscript%3ealert(1)%3c%2fscript%3eviu86&userType=normal  was submitted in the  userId  parameter. This input was echoed as  <script>alert(1)</script>  in the application's response. The url  adminui/editUser?userId=1287363835'%3balert(1)%2f%2f909&userType=normal  was submitted in the  userId  parameter. Passed as a alert value to a function showAddProfiles()  The url  userId=1287389815%22%3balert(1)%2f%2f316&userType=normal  was submitted in the  userId  parameter. Passed as a alert value to a function checkUsernameExists() Similarly with the value of the  userType  request parameter is copied into the HTML document as plain text between tags. The url  adminui/editUser?userId=946&userType=normalztagm%22%3e%3cscript%3ealert(1)%3c%2fscript%3ere93k  was submitted in the  userId  parameter. This input was echoed as  <script>alert(1)</script>  in the application's response. The url  adminui/editUser?userId=946&userType=bqihu%22%3e%3cscript%3ealert(1)%3c%2fscript%3ecggnd  was submitted in the  userId  parameter. Passed as a alert on btn-cancel This proof-of-concept attack demonstrates that it is possible to inject arbitrary JavaScript into the application's response.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-12-20T02:09:05.105-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-76095"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105624",
+      "released_in_current_rc": false,
+      "summary": "Payables: Implement Invoice Dispute Process",
+      "description": "Develop the Invoice Dispute Process to enable clients to manage invoice discrepancies effectively with the Supplier.",
+      "status": "Implementation In Progress",
+      "assignee": "Jimena Pose",
+      "created": "2024-12-03T06:48:34.026-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-105626",
+        "summary": "PMAN: Supplier-Specific Dispute Invoice Toggle",
+        "description": "Business Case: Introduce a supplier-specific \" Allow   Dispute Invoice via Supplier Portal \" toggle for clients subscribed to Supplier Portal, enabling invoice dispute functionality at the supplier level. Acceptance Criteria: What is the change?  Introduce a supplier-level toggle to enable or disable the invoice dispute process for eligible suppliers with Supplier Portal access. Which customers should this change impact?  Customers who have  ACCOUNTS_PAYABLE_WORKFLOW  = true, Client  subscribed  to Supplier Portal and Supplier has  Supplier Portal toggle  = ON. What pages should this change impact?  Master Data > Suppliers. Which users should be impacted by the change? Admins. How should this feature work? Key Features : The \" Allow Dispute Invoice via Supplier Portal \" toggle appears only for suppliers with Supplier Portal access ( Allow Access to Supplier Portal  toggle = ON) and at least one user is set up & active. This toggle should be available in  Basic Info  Tab. The toggle is OFF by  default . Tooltip : \"Enable this to allow invoice disputes for this supplier via Supplier Portal.\" Turning the toggle ON allows AP users to dispute invoices with the supplier via the Supplier Portal. Turning this toggle ON or OFF should be tracked in the  Supplier   Change History . Adding this toggle to the Supplier Bulk upload is Out of Scope for this ticket. A new ticket will be created to handle this requirement. Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-03T07:40:51.996-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105624"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-100475",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Security Enhancements - Vroozi API documentation site needs to be protected from public access",
+      "description": "From Security Assessment Team, Here is the vulnerability assessment report.  We have some minor issues, but I strongly recommend protecting the exposed APIs and the methods of their integration.  As we move towards FedRAMP certification, we must adhere to stricter requirements.",
+      "status": "In Final Review",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-06-13T21:20:08.735-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104974",
+        "summary": "VROOZI API - Restrict Documentation behind the static username password",
+        "description": "Business Case: To ensure security and protect sensitive information, access to the Vroozi API Documentation should be restricted to users with valid credentials. Acceptance Criteria: The Vroozi API documentation should only be accessible by static username, and password authentication. A popup should appear on the screen when the user hits the  . (Please refer to the following image. Should be similar to this one):  The credentials should be specified in the web-configuration. The system should validate the user-entered credentials with configuration. In case of invalid credentials entered by the user, the system should show the error message on the popup. The message should be \u201c Invalid username or password. Please contact your administrator.\u201c (It si not required at this time because we have delivered it by using the native server functionality that does not support custom messages for invalid credentials    ) Note:  Use following Rundeck job for creating new credentials for accessing API-Docs: For Devqa Servers:   https://rundeck.vroozi.com/execution/show/309843 For Stage Server:  https://rundeck.vroozi.com/project/DEVQA-2024/job/show/37069610-e5a4-4ab8-a3d4-12f039c0014e QA Notes: Sign in modal pop up not accepting Username and Password fields with special Characters",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-11-07T08:48:18.418-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-100475"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103959",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Rate Limit - Introduce configuration to support rate limit per API endpoints - 4",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-04T09:46:59.170-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104962",
+        "summary": "Tech Debt - Vroozi API - Test company usage plan throttling per APIs",
+        "description": "We should be able to run the scripts and steps provided in the    The existing usage plan should be configured to apply the method level limits to restrict the user access to the API. Usage plans created per unitId can be used for testing these method level restrictions. QA Notes: Use single quotes between the methods on the rundeck job.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-11-07T01:54:45.194-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103959"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104032",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi Deltek Integration - POC to transmit document from Vroozi to CostPoint",
+      "description": "",
+      "status": "In Final Review",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-08T22:18:19.942-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104483",
+        "summary": "Deltek Integration - Build an interface to submit PR document from Vroozi to Costpoint",
+        "description": "User logs into Vroozi Purchase User searches for items in the Marketplace (both hosted and punch-out content) User creates and submits the purchase request for approval (1-step approval) Approver logs in and approves purchase request <INTEGRATION>  Upon approval, the Vroozi purchase request is interfaced into Deltek Costpoint Corresponding Costpoint PR is created \u00a0 Here is the flow",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-10-21T11:54:17.996-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-104032"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99320",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Upgrade - Major Documentation Upgrade Phase II",
+      "description": "Vroozi API Upgrade: Part 1 - Major version upgrade from Swagger v2 to OpenAPI v3 Vroozi API Upgrade: Part 2 - Master Data Documentation enhancement",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T21:17:05.210-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-99971",
+        "summary": "Vroozi API Upgrade: Part 11 - Update Profit Centers API Documentation and Examples",
+        "description": "Requirements: Update all API endpoints and model descriptions in the documentation with proper examples, defaults and required flags Add multiple different examples of the API usages to cover multiple usecases including minimal required payload, minimal recommended payload and all available fields example. All the payload should be properly formatted and should work using Try it from documentation itself. Add the read only fields in the default response to mention them as Read only fields, e.g id, dateCreated, lastUpdated etc. It is read only field. Mention the behaviour of the field in case the value is not provided in the payload for update flows. e.g Not providing a field at all in the payload vs providing empty or null value in that field during update. Update the 403 error message in the documentation Forbidden (The server understood the request but refuses to authorise it). Add the following Note in the API description During an update request, only the fields provided in the payload will be updated. Any field not included in the payload will retain its previous value. To reset a field's value, include that field in the payload with a value of null or an empty string. Technical Details: Minimum payload: {\n  \"code\": \"DPC01\",\n  \"name\": \"DPC01\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\" : true\n} Recommended payload: {\n  \"externalId\": \"30010\",\n  \"code\": \"DPC02\",\n  \"name\": \"DPC02\",\n  \"companyCodeRef\":{\n      \"docNo\": \"DCC01\"\n  },\n  \"active\" : true\n} Default payload: {\n  \"externalId\": \"30011\",\n  \"code\": \"DPC03\",\n  \"name\": \"DPC03\",\n  \"description\": \"Default Profit Center 03\",\n  \"companyCodeRef\": {\n      \"docNo\": \"DCC01\"\n  },\n  \"active\" : true,\n  \"validFrom\": \"2024-06-28\",\n  \"validTo\": \"2024-06-28\"\n} Read only fields. // read only fields\nid\ndateCreated\nlastUpdated All other fields // all fields with default converter\nexternalId\ndescription\ncode\nname\nactive\nvalidFrom\nvalidTo\ncompanyCodeRef",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-05-29T13:58:53.863-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-99320"
+      }
+    ]
+  }
+]

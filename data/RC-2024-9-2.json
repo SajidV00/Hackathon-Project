@@ -1,0 +1,613 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-105183",
+        "summary": "Post Production Sanity RC-2024-9 (RC-2024-9-1 and RC-2024-9-2)",
+        "description": "Integration Team Deliverables According to manage the time frame in the Post sanity when the Budget Toggles and Accounting validation toggles are enable Integration team will mange our time with team members. Rest are the Areas we will Cover All the APIs (Master and Transactional (Specially Transactional with (External Submission toggles and Initiate Po Toggle))) should be working. (POST,PUT,DELETE,GET) Connectors (AVALARA, Vertex, Netsuite(Complete E-E High Level) , Xero, CSV) Cxml Flows.(Acknowledgement, Confirmation, ASN, Invoice, Memo ) PO Ownership Flows. Catalog APIs + Transactional Catalog Flows. Webhooks Performance of Accounting Validation Tickets Passed in RC with high Level Flows Any Recent Hot fixes Estimated time frame for this testing is 6-7 hours but in case if found some issue it will take more time. Test Cases Milestone:  https://vroozi.testrail.net/index.php?/milestones/view/1028 Note: Vertex is not tested because of account is disabled from HEB side.    Purchase Team Deliverables: Modules covered by the Purchase Team during Post-Deployment Sanity: SmartOCI\u00a0 PMan ( Without Budget &Accounting Validation AND with Sourcing and Financial legacy WF )\u00a0 SDM\u00a0 RFQ\u00a0 Financial workflow (Enhanced)\u00a0 Sourcing rules enhancement\u00a0 Budget\u00a0 Accounting Strings\u00a0 PO output enhancement\u00a0 PR rejection flow via Buyer route\u00a0 Terms & Conditions enhancement High-Level Flows of recent work Recent Hotfixes The estimated time to cover these areas is approximately 11 hours. https://vroozi.testrail.net/index.php?/milestones/view/1030 Platform Team Deliverables Modules covered by the Platform Team during Post-Deployment Sanity: Angular Upgrade of complete Accounting Screen Usage of Accounting elements in the vroozi documents Zookeeper availability on multnode server I will do the post sanity. Estimated time frame for this activity is 5-6 hours. Payables Team Deliverables:  please your details here RC-2024-8 Hotfixes RC-2024-9 Functionalities Flows High level flows of Payables included: Invoice/Memo/PRQ - With Following Features OFF/ON: Request Approval WorkFlow (Email/Structured/Approval Document Submission Rules) Dynamic Workflow (Email/Structured/Approval Document Submission Rules) APM Company Code Restrictions AP Approval Chain (Spendlimit/StairCase) Accounting Validation Miscelleneous Scenarios: Exception Handling Coding Posting Post Approval Edit Apply to All Line Item grid SP PO/No PO Invoicing PO Items Confirmation/Dispute ASN Expense Approval till Posting Please visit for more details: https://vroozi.testrail.net/index.php?/milestones/view/1031 Thanks, Asma",
+        "status": "In Progress",
+        "assignee": "Muhammad Ijaz",
+        "created": "2024-11-15T03:19:53.797-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104737",
+        "summary": "Stage - Accounts Payable - Invoice/Memo/PRQ - Side Panel -  Icons highlight issue.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+APM@vroozi.com password:  Blueangel1! / Blueangel1@ Preconditions: APM User should have logged into the Application. Steps to Reproduce: Click to Create Invoice/Memo/PRQ.   9000031199 Please observe the history and Purchasing Parties icon are highlighting which is correct since it has the audit and company code auto selected. Issue1:  Please observe the other icons comments, attachments, related documents are highlighting when these don't contain any data. Issue2:  Add a Supplier, please see it does not highlight. Click it or some other icon on the side panel. Now it starts highlighting. Actual result: Side Panel Icons are highlighting even these don\u2019t contain any data. Expected Result: Side Panel Icons should only highlight when they contain data. Screen-Cast: Thanks, Asma",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-10-29T00:49:34.892-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104521",
+        "summary": "PO/POCR: If the Plant Code is hidden, the system displays a red toast error message while editing a line item during POCR or viewing the item on the PO",
+        "description": "Issue: PO/POCR: If the Plant Code is hidden, the system displays a red toast error message while editing a line item during POCR or viewing the item on the PO Server:   URL:  go.vroozi.com username:  zulkiful.bajwa+employee@vroozi.com password: @Welcome1 Pre-Condition: 1. Ensure the Requester does not have any user defaults 2. On the Documents > Settings > All Documents screen, the Plant Code is hidden in the Line Item Field Configuration section 3. A Purchase Request has been created, and a Purchase Order has been generated Steps to Reproduce: 1. Log in to PMAN as an Employee user 2. Load the above Purchase Order and viewing the item on the PO or perform POCR by editing the item  3. Verify the item modal Actual Result: The system shows a red toast error message while editing the item during POCR Expected Result: The system should not display any red toast message",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-10-22T02:01:30.003-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104501",
+        "summary": "PMAN-Mobile Browser: The user is unable to see all side panel icons after switching the screen from landscape to portrait and then back to landscape view.",
+        "description": "Server:  https://go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+employee24-5@vroozi.com  / Welcome1@ Pre- Requisite: \u00a0. Steps to Reproduce: User should be logged in Mobile Phone chrome Browser. Open any Purchase Order in landscape mode.  All side panel icons are visible.  Now switch to portrait view and then move back to landscape View.  Actual Result:  The user is unable to see all side panel icons after switching the screen from landscape to portrait and then back to landscape view. Expected Result: The user should be able to see all side panel icons after switching the screen from landscape to portrait and then back to landscape view.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-10-21T22:57:58.755-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104460",
+        "summary": "PR/PO/POCR: The system is unable to save the user-provided tax amount during PR/PO/POCR creation",
+        "description": "Issue: PR/PO/POCR: The system is unable to save the user-provided tax amount during PR/PO/POCR creation Server:   URL:  go.vroozi.com username:  zulkiful.bajwa+employee@vroozi.com password: @Welcome1 Pre-Condition: 1. A Tax Code (Bajwa-000001) has been created, and either the 'Taxable' checkbox or the 'Auto-calculate Tax' toggle is enabled or disabled Steps to Reproduce: 1. Log in to PMAN as an Employee user 2. Create a Purchase Request (1000027612) by adding at least one item, manually provide a tax value in the \u2018Tax Value\u2019 field, and save the item changes 3. Re-edit the item and verify the manually provided Tax Value Actual Result: The system does not retain the manually provided Tax Value Expected Result: The system should retain the Tax Value that the user manually provided",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-10-21T03:06:56.226-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104326",
+        "summary": "Stage - Accounts Payable - Track Invoices/Memo - Filter by Company Code is not working correctly when AP Manager Company Code Restriction is in place.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+APM@vroozi.com password:  Blueangel1! / Blueangel1@ Preconditions: ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS  should be ON in DB for the Company Unitid. APM User should have logged into the Application with Company Code Restriction against its user profile. Steps to Reproduce: Access Track Invoices/Memo>ALL and place a filter for the restricted Company Code. Please see the records are showing for the different company codes as well. Actual result: Company Code Filter is showing the invoices/memos of other company codes as well. Expected Result: Company Code Filter should only show the invoices/memos of that company code. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-10-16T11:45:41.074-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104018",
+        "summary": "Regression Testing purchase Team RC-2024-9-2",
+        "description": "RC Tickets:  Test Cases Status: https://vroozi.testrail.net/index.php?/milestones/view/1005",
+        "status": "Done",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-10-08T05:20:03.038-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103945",
+        "summary": "DEVQA5 - Accounts Payable - Create Invoice - Approval Chain Icon turns BOLD when it has no approval rule applied.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+APM83@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. Supplier should have Auto Approval threshold set as $60. Dynamic WF should be set ON with Approval Rules added. Steps to Reproduce: Create an Invoice with accounting info not matching any Approval Rule and price $50.  9000002796 Select the Supplier mentioned in the preconditions. Please see Approval Chain Icon. Its turned Black. Click it. Please see  NO Approval Chain Available  text shows. Actual result:  Approval Chain Icon gets highlighted even it has no approval chain applied. Expected Result: Approval Chain Icon should not turn Black. Screen-Cast: Thanks, Asma",
+        "status": "Abandoned",
+        "assignee": "Jimena Pose",
+        "created": "2024-10-03T23:46:38.847-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103901",
+        "summary": "DEVQA5 - Accounts Payable - Create Invoice - Approval Chain - Submission Date should be in correct format.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+APM83@vroozi.com password:  Blueangel1@ Preconditions: AP User should have logged into the Application. Dynamic WF should be set ON with Approval Rules added. Steps to Reproduce: Create an Invoice in US Region with the accounting objects per one of the Approval rule. Click to Submit for Approval to the 1st Approver in the Approval Chain. Click the Approval Chain Icon on the left side panel. Please see the Submission Date\u2019s format, its in UK format. Actual result: Invoice in US Region has its Submission Date\u2019s format in UK format against the Approval Chain. Expected Result: Correct Date format should be followed. Screen-shot: Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2024-10-02T04:10:14.333-0700",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103896",
+        "summary": "PROD - Accounts Payable - Invoice - GL Account is not showing on the PDF ",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:  aqsa.rani+processor@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login through given user Navigate to Track Invoices Click to open an invoice e.g Invoice # 9000031008 Click on the print button Please see the PDF, GL Account is not showing Actual Result: PDF doesn't show GL Account Expected Result: GL Account should be appearing on the PDF  Screenshot:",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-10-02T03:52:20.096-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103922",
+        "summary": "Upgrade NewRelic APM Agents to v8.15.0",
+        "description": "Upgrade NewRelic JAVA APM Agents to v8.15.0 ++ Java APM Agents in APIs on Git",
+        "status": "Done",
+        "assignee": "Ahmad Khan",
+        "created": "2024-10-02T03:13:50.357-0700",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103857",
+        "summary": "PMAN- Requester is not able to see his PO of other company code, once company code restrictions applied on that user.",
+        "description": "Server : Production Pre-Req: Credentials: javaid.sattar+employee@vroozi.com / Welcome1@ Steps to Reproduce: Login with above user  Access the purchase order screen Requester is able to see Purchase order of all company codes. Now apply company code restrictions.  Now requester is able to see PO of only those company code against which restriction is applied. Actual :  By default, the \"Owned by me\" filter is applied for the requester, allowing them to see their own POs. However, when company code restrictions are applied, the requester can only view POs associated with the restricted company codes. Expected: The requester should be able to view all the POs they own, regardless of any user restrictions applied.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-10-01T03:35:39.337-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103470",
+        "summary": "PMAN-Line item numbers are not correct in the Error message, when 2 line # were consecutive and 3rd one was not, when user try to change Accounting elements through Apply to All",
+        "description": "Description Server:  https://go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+employee24-5@vroozi.com  / Welcome1@ Pre- Requisite: \u00a0 Steps to Reproduce: Login into the above employee user Create PR by adding multiple line items select line Item 1 and 4.  click on apply to all model.  Now select any accounting elements that is not associated with selected company code on line item. Click on Apply to all button to apply changes Actual: Line item number is incorrect in error message. Error message  \u201c Items # 1,4 and 4 were not updated. The specified change conflicts with one or more of the company info or accounting elements that are already present on these items \u201c. Expected Result: Error message should be like \u201cItems # 1 and 4 were not updated. The specified change conflicts with one or more of the company info or accounting elements that are already present on these items\u201c.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-09-20T03:40:29.413-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103389",
+        "summary": "PMAN- When a Sourcing Approver edits a Purchase Request and deletes an attachment, the deleted attachments at the line item level are not reflected in the attachment section of related documents.",
+        "description": "Server : Hotfix Pre-Req: Sourcing and Financial approver workflow should be enabled on unitID. Credentials: javaid.sattar+HFemp@vroozi.com / Welcome1@ javaid.sattar+HFsapp@vroozi.com / Welcome1@ Steps to Reproduce: Access the purchase order select any PO, and proceed to the change request section. Add attachments both at the line item level and header level. Copy any item that contains attachments. submit POCR. Now login with sourcing approver  Click on edit button.  Add any line item level attachment Actual :  When a Sourcing Approver edits a Purchase Request and deletes an attachment, the deleted attachments at the line item level are not reflected in the attachment section of related documents. Expected: The attachment data on the line item grid and the side panel should ALWAYS be consistent.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-09-18T04:58:10.973-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103175",
+        "summary": "PMAN: PR line item modal - While clicking on the accounting fields data disappears as soon as I click up/down arrow key from keyboard.",
+        "description": "Environment:  DevQA14, unitId 2 User:   notifyvroozi@gmail.com  / Welcome1 Pre Conditions: Above mentioned user is logged into PMAN application in the shopper view. Steps to Reproduce: Navigate to Create \u2192 Non Catalog Request Click \u201cAdd Line Item\u201d button. Goto Accounting section and click in the field. Actual Result: Dropdown menu appears but as soon as user click up or down arrow key the field gets refreshed and focus is moved out of the field. Expected Results: Application should allow user to make selection from keyboard and focus should remain in the field. cc:",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-09-11T05:51:58.755-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102923",
+        "summary": "Vroozi API - Invoice API - Support externalId in status update API",
+        "description": "As an API, I should be able to send externalId in invoice status update API. Acceptance Criteria ExternalId should be accepted in the invoice status Update API This field should be stored in invoice collection. UI should display this externalId under the invoice number on the UI. The externalId should be unique across the unitId. If the client is providing the Id and externalId or docNo and externalId, than the lookup should happen based on id or docNo, and externalId should be updated on the invoice. if externalId is provided in the payload it should be persisted. if the externalId is not provided in the payload, the existing persisted value in DB should be kept. If the client is only providing the externalId, than the lookup should happen based on the externalId and if not found, we need to give not found error. Following feature should be enabled in the company settings All the financial connectors should be disabled in the application.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-09-04T01:52:05.291-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101867",
+        "summary": "Techdebt - Vroozi API - Accounting Combo performance need to be improved on remaining accounting elements",
+        "description": "Performance of the accounting elements (CompanyCode, CostCenter, GlAccount, Location) was done using a single call to retrieve the response for bulk api. For the remaining elements we still have 500 calls to user data service for those elements in bulk upsert API. We need to reduce the network calls and update the logic to perform the look up, similar to how we did it for above mentioned 4 elements. Objects to cover in this ticket are: CLASS, LOCATION_TYPE, PURCHASING_ORGANIZATION, CUSTOMER",
+        "status": "Awaiting Business Validation",
+        "assignee": "Hasnat.saleem",
+        "created": "2024-08-02T03:12:47.758-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101852",
+        "summary": "DEVQA5 - Integration - Create Invoice/Memo/PRQ - Column Preferences Grid - Field Options are showing even these are configured as Hidden.",
+        "description": "URL: https://devqa5-go.vroozi.com Username:  asma.latif+APM83@vroozi.com Password: Blueangel1! / Blueangel1@ PreCondition: ACCOUNTS_PAYABLE_WORKFLOW__DOCUMENT_SETTINGS_CONFIG should be ON in DB. Configure Project, Location , Customer and Class fields as Hidden via Admin>Documents>Settings>ALL Documents>LI Field Config Section. AP User (with Payment Requester Role) should be logged into the Application. Steps: Click to Create Invoice/Memo/PRQ. Click the Cog Wheel against LI grid. Please see Project, Location , Customer and Class are available even these are Hidden fields. Actual Results: Field Options are showing even these are configured as Hidden. Expected Results: Hidden Fields shouldn\u2019t show in the grid as options. Screenshot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-08-01T06:46:06.706-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101823",
+        "summary": "When you open the POST endpoint first and then the PUT endpoint, \"allOf\" appears on the PUT endpoints.",
+        "description": "Environment:  Devqa14 Vroozi Docs URL Steps to reproduce: Navigate to the Master Data APIs \u2192 Plant Codes \u2192POST  /plant-codes   Expand the POST  /plant-codes   endpoint by clicking on the endpoint Go to the PUT /plant-codes/{id} endpoint and opening it  Actual Result: \"allOf\" appears on the PUT endpoint. Expected Result: \"allOf\" should not appear on the PUT endpoints when the POST endpoint is opened first, followed by the PUT endpoint.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-08-01T00:43:12.714-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-101241",
+        "summary": "Purchase Request - When a Purchase Request auto-escalates to the Next Approver, the system also shows the Fallback Approver in the Approval History",
+        "description": "Issue : Purchase Request - When a Purchase Request auto-escalates to the Next Approver, the system also shows the Fallback Approver in the Approval History Credentials: Server: Stage username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com password: @Welcome1 unit_Id: 77 Pre-Conditions: 1. Relevant unit_Id should be subscribed for this feature toggle \u2018ACCOUNTS_PAYABLE_WORKFLOW__ENHANCED_WORKFLOW\u2019 2. Staircase config is enabled for financial workflow style 3. Approval Forwarding has been configured (Like, Number of attempts = 1 and Internal between attempts = 1) 4. Make sure you have 3 users with following roles combinations: User Roles Spend Limit Approval Limit Mr. A Employee 0 Mr. B Financial Approver 100 Mr. C Financial Approver 200 Mr. D Financial Approver 300   Steps To Replicate: 1. Login to PMAN as a Requester user 2. Create & submit Purchase Request (1000000762) and its amount lesser than first approver\u2019s Approval Limit  3. Verify the Approval Workflow history on the Purchase Request Actual Result: System shows only first Approver which is Mr. B 4. Verify the Approval Workflow history after running the Auto-Forwarding job Actual Result: System shows 2nd Approver Mr. C but also shows Fallback Approver 5.When 2nd Approver (Mr. C) approve the Purchase Request and verify the Purchase Request\u2019s Approval History Expected Result: System should not show Fallback Approver if PR is eligible for next approval",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-07-09T05:07:29.973-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-92988",
+        "summary": "Purchase Request: when open the PR from Smart phone chrome Browser then some items are missing like attachments when use the landscape mode ",
+        "description": "Purchase Request: when open the PR from Smart phone chrome Browser then some items are missing like attachments when use the landscape mode  Preconditions: 1-Pr should be created and in financial for the review 2-Login with the Requester with smart phone chrome Browser Steps To Replicate 1-Go to the relevant Pr 2-Enable landscape mode. Actual Result: Some sections are missing of side bars as attachments and user is not able to Tab but when we enable portrait mode it shows    Expected Result: User should able to see in both view and Tab able functionality must be working properly in every aspect",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2023-10-24T02:04:53.111-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-92850",
+        "summary": "Decimal point and zero is added in the Quantity field when paused for 2 seconds",
+        "description": "We are facing an issue with changing quantity on Vroozi Cart. Whenever, a user enters a quantity in the quantity field and pauses for 1 second the system auto adds a decimal and zero.  Issue: the cursor is moved forward instead of staying at the same place and the typed value goes beyond the decimal place. Before: After:  cursor is moved beyond .0",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2023-10-18T04:39:50.066-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-89608",
+        "summary": "Approval status button remains disable on CR document if it only contains Incoterm CF change and it goes to Sourcing workflow",
+        "description": "Prerequisites configuration: Sourcing Workflow  should be ON with  Editable PR  toggle ON Financial Approver Workflow should be On. Pre Conditions:  NBCU workflow should be OFF PURCHASE_CUSTOM_FIELDS_SOURCING_RULES   is enabled Environment: Stage Login:  ayesha.waseem+emp@vroozi.com  /Password: Welcome1@ Steps to Reproduced: Create a PR Approve the PR. Create a PO Do a POCR from UI Change the header level Incoterm Custom field Sourcing rule is applied and Sourcing Approvers field is visible Select Sourcing Approver Submit the CR Open the CR document Actual Result: Approval status button is disabled Expected Result: Approval status button should be enable",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2023-07-06T00:40:06.450-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-80110",
+        "summary": "PMan-Admin user is not able to search PO created from Buy route in Shopper View",
+        "description": "Shopper view \u2192 Purchase Orders. Search using the filter \u201cPO Creator/Requester\u201c and enter the user\u2019s name. The result would miss those POs which went through buy route.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2022-10-04T06:32:52.776-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-101001",
+      "released_in_current_rc": false,
+      "summary": "Payables: AP: System able to use Document Settings for accounting elements in AP Documents.",
+      "description": "This epic focuses on integrating the system settings from Documents -> Settings -> All Documents into the Accounts Payable (AP) documents. The objective is to ensure that AP documents can utilize these settings, enhancing their configurability and alignment with organizational requirements. The key components of this epic include: Utilize Document Settings in AP Documents. Location Field Configuration. Class Field Configuration. Project Field Configuration. Customer Field Configuration. Account Category (Cost Center, WBSE, Internal Order, Profit Center) Field Configuration. GL Account Field Configuration. Plant Field Configuration.",
+      "status": "Work Completed",
+      "assignee": "Sujoy Kar",
+      "created": "2024-07-02T10:13:25.581-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104085",
+        "summary": "Payables: Ensure the Customer Field is Required or Optional Based on Document Settings and Accounting Element Combinations (MAERSK)",
+        "description": "Business Requirement : As an AP user , I want the system to check whether the  Customer  field in an AP document is  required  or  optional  by checking the document settings when a combination of accounting elements is associated with a customer in the line item. This change applies only to clients using the new feature toggle ( ACCOUNTS_PAYABLE_WORKFLOW__DOCUMENT_SETTINGS_CONFIGURATION ) and the customer accounting element. By default, the Customer field should remain optional for clients using the feature toggle. The system will only trigger document settings for the Customer field (whether required or optional) when a  combination of accounting elements  (such as company code, accounting category, GL account, or project) is  associated  with one or more  customer  accounting elements. Acceptance Criteria : What is the change?  The change ensures that the Customer field in AP documents becomes required or remains optional based on document settings,  triggered only when  accounting elements linked to a customer are present, for clients using the new feature toggle and customer accounting element. Which customers should this change impact? All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true, and All customers who have ACCOUNTS_PAYABLE_WORKFLOW = true and ACCOUNTS_PAYABLE_WORKFLOW_MEMO = true All customers who have PAYMENT_REQUEST = true What pages should this change impact?  The invoice, memo and payment request pages. Which users should be impacted by the change?  Users who are able to edit an AP document. How should this feature work? Default Behavior : When the client is using the feature toggle ( ACCOUNTS_PAYABLE_WORKFLOW__DOCUMENT_SETTINGS_CONFIGURATION ) and the customer accounting element, the Customer field will be optional by default, regardless of the document settings. Triggering Document Settings : The system will check if the AP document line item contains accounting elements that are linked to a customer accounting element. If the accounting elements in the line item are associated with one or more customer accounting elements, the document settings will apply: If the document setting for the Customer field is set to \"Required,\" the field will become required.   If the document setting for the Customer field is set to \"Optional,\" the field will remain optional. The systems exhibits the current behavior. Document Settings Based on Accounting Elements : The system should evaluate combinations of accounting elements (e.g., company code, accounting category, GL account, or project) within the line item. If no valid combination of accounting elements linked to customer accounting elements exists, the Customer field will remain optional, regardless of the document settings. Apply to All : Apply to All implementation should work in a similar manner. Scope : This change applies only to clients using the new feature toggle and the customer accounting element feature. Next step (new ticket) - Fix the issue where customer value still remains in the field after removing one or more accounting elements from the line item that was associated with the customer. Make customer as a disabled / hidden field if the combination of accounting elements do no associate with any customer. If they associate with one or more customer, then the field will become active and allow the user to choose the customer value. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  All teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-10-10T01:38:59.450-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-101001"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102240",
+      "released_in_current_rc": false,
+      "summary": "Payables: Vroozi Dynamic Workflow \u2013 Approval Preview",
+      "description": "BRD -",
+      "status": "Open",
+      "assignee": "Sujoy Kar",
+      "created": "2024-08-13T12:20:22.665-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103691",
+        "summary": "PMAN: Track Document Submission Time for Invoice, Memo, and Payment Request Approval Chains",
+        "description": "User Story : As a  user,  I want  the system to track and display the submission date and time when an Invoice, Memo, or Payment Request document is submitted for approval,  So that  I can clearly see when a document was submitted for approval across both current and previous approval chains. Acceptance Criteria : What is the change?  The system will now track and display the submission date and time for Invoice, Memo, and Payment Request documents when they are submitted for approval. If a document has not yet been submitted for approval, a dash \"-\" will be displayed instead of a submission date. Previous approval chains will also show their respective submission dates and times inside collapsible tiles. Which customers should this change impact?  Clients using - Dynamic Workflow: Invoicing module. Memo module. Payment Request module. What pages should this change impact?  These pages the change would apply on - Invoice side panel page. PO based invoice approval is required. Non-PO based invoice approval is required. Memo side panel page. Memo approval is required. Payment request side panel page. Which users should be impacted by the change?  Users who are able to view an AP document. How should this feature work? Document submission Time Tracking : When an Invoice, Memo, or Payment Request document is submitted for approval, the system should automatically capture the submission date and time in the Approval chain. The submission date and time should be displayed in both the current approval chain and any previous approval chains that may be collapsed inside their respective tiles. The Time and Date values should be localized. Current Approval Chain: For the current approval chain: If the document  has been submitted  for approval, the submission date and time should be prominently displayed above the approval chain with a label, e.g.,  Submitted for Approval : [Date], [Time] If the document  has not been submitted  yet, the submission date should display a dash \"-\" indicating no submission date is available for this document, e.g., Submitted for Approval: - Previous Approval Chains: The submission date and time for each previous approval chain should be displayed inside the collapsible tile above the approval chain itself in a similar manner as shown above. Each approval chain should display its own submission date and time, reflecting the respective date and time of submission for that chain. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Yes. To which teams should this change be communicated to?  All Teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-09-25T09:25:33.760-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      },
+      {
+        "key": "VZI-103562",
+        "summary": "PMAN: Users should not see AP Approval Chain until the feature is completed.",
+        "description": "Business Case : As a  User , I don\u2019t want to see  AP Approval Chain  on the Invoice/Memo/Payment Request side panel until the feature is completely developed. Acceptance Criteria : Users should  not  be able to see AP Approval Chain on the Invoice/Memo/Payment Request side panel until the feature is completely developed. Once the AP Approval Chain enhancement is completely developed, then the AP Approval Chain feature should be visible to the users upon turning this feature toggle on. You can use something like this in the Company Settings for the feature toggle name - ACCOUNTS_PAYABLE_WORKFLOW__APPROVAL_CHAIN If its too big, please create your own feature toggle name that makes the most sense to you.",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-09-23T22:08:12.091-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      },
+      {
+        "key": "VZI-102814",
+        "summary": "PMAN: Visibility and Traceability Enhancement for AP Approval Chain on Payment Request document.",
+        "description": "User Story : As an  PRQ Requester or Approver,  I want  to have a comprehensive Approval Chain feature in the side panel for the Payment Request document,  so that  I can ensure the correct approval chain is triggered, reduce errors, and improve process accuracy. Acceptance Criteria : What is the change?  Introduce a way to track Approval chain based on the Approval rule that gets triggered for clients using the new Dynamic Workflow in the side panel of the Payment Request document. Which customers should this change impact?  Clients using - Dynamic Workflow: Payment Request module. What pages should this change impact?  These pages the change would apply on - Payment request side panel page. Which users should be impacted by the change?  Users who are able to view an AP document, namely: Admin Payment Requester, Payment Request Approver. How should this feature work? Approval Chain Icon Design : Icon Design: The system should display a new icon in the side panel for each PRQ document. Use one of these icon for accessing the approval chain in the side panel - List-check    Person-circle-check    Tool Tip:  The icon should display a tooltip reading \"Approval Chain\" when hovered over. Side Panel Functionality : Icon Click Action: When the user clicks on the icon, the side panel should open displaying the applicable Approval Chain for the document. Display Elements in the Side Panel: The title should be called -  APPROVAL CHAIN . Below it the system should display the  Approval Rule Name  that was triggered. Keep the text centered. If the text is too large to fit in the side panel window then use some clever way of displaying the full text maybe using tool tips. Below the Approval Rule name, the system should display the  Approval Rule Description . You can experiment using a smaller text size or italics for the description ( so that its easier to distinguish between the name and description ). If the text is too large to fit in the side panel window then use some clever way of displaying the full text maybe using tool tips. Next display the Approvers in order of approvals. Number of Approvers would depend on approval workflow style - Staircase. Spend Limit. Approval Status Indicators: Approval Action : Marked in  Green  with a  Checkmark  icon ( similar to how it works on the PR document ) System should display \u201cAPPROVED\u201d beside the checkmark icon. Rejection Action : Marked in  Red  with a  Cross  icon ( similar to how it works on the PR document ) System should display \u201cREJECTED\u201d beside the cross icon. Timestamps : Display timestamps ( Date & Time ) for Approval, Rejection and Forwarding ( additional information in a different ticket ) actions. Pending Action : Display a clock icon ( similar to how it works on the PR document ) System should display \u201c Approval Required \u201d beside the clock icon. If there are more than 1 approvers in the Approval chain then their status icons should be linked to each other with a line. ( similar to how it works on the PR document ) Display the initial / display photo, and name of the PRQ Approver in the chain. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Yes. To which teams should this change be communicated to?  All Teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-08-30T00:50:25.386-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      },
+      {
+        "key": "VZI-102813",
+        "summary": "PMAN: Visibility and Traceability Enhancement for AP Approval Chain on Memo document.",
+        "description": "User Story : As an  AP Processor or Manager,  I want  to have a comprehensive Approval Chain feature in the side panel for the Memo document,  so that  I can ensure the correct approval chain is triggered, reduce errors, and improve process accuracy. Acceptance Criteria : What is the change?  Introduce a way to track Approval chain based on the Approval rule that gets triggered for clients using the new Dynamic Workflow in the side panel of the Memo document. Which customers should this change impact?  Clients using - Dynamic Workflow: Memo module. What pages should this change impact?  These pages the change would apply on - Memo side panel page. Memo approval is required. Which users should be impacted by the change?  Users who are able to view an AP document, namely: The document owner (AP Processor/Manager), Admin, AP Approver, Any AP Manager. How should this feature work? Approval Chain Icon Design : Icon Design: The system should display a new icon in the side panel for each Memo document. Use one of these icon for accessing the approval chain in the side panel - List-check    Person-circle-check    Tool Tip:  The icon should display a tooltip reading \"Approval Chain\" when hovered over. Side Panel Functionality : Icon Click Action: When the user clicks on the icon, the side panel should open displaying the applicable Approval Chain for the document. Display Elements in the Side Panel: The title should be called -  APPROVAL CHAIN . Below it the system should display the  Approval Rule Name  that was triggered. Keep the text centered. If the text is too large to fit in the side panel window then use some clever way of displaying the full text maybe using tool tips. Below the Approval Rule name, the system should display the  Approval Rule Description . You can experiment using a smaller text size or italics for the description ( so that its easier to distinguish between the name and description ). If the text is too large to fit in the side panel window then use some clever way of displaying the full text maybe using tool tips. Next display the Approvers in order of approvals. Number of Approvers would depend on approval workflow style - Staircase. Spend Limit. Approval Status Indicators: Approval Action : Marked in  Green  with a  Checkmark  icon ( similar to how it works on the PR document ) System should display \u201cAPPROVED\u201d beside the checkmark icon. Rejection Action : Marked in  Red  with a  Cross  icon ( similar to how it works on the PR document ) System should display \u201cREJECTED\u201d beside the cross icon. Timestamps : Display timestamps ( Date & Time ) for Approval, Rejection and Forwarding ( additional information in a different ticket ) actions. Pending Action : Display a clock icon ( similar to how it works on the PR document ) System should display \u201c Approval Required \u201d beside the clock icon. If there are more than 1 approvers in the Approval chain then their status icons should be linked to each other with a line. ( similar to how it works on the PR document ) Display the initial / display photo, and name of the AP Approver in the chain. Collapsible Tiles: The current and old approval chains should be inside a collapsible tile. There should be a Collapse All / Expand All button above the current approval chain tile. For additional details please refer to this ticket -  Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Yes. To which teams should this change be communicated to?  All Teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-08-30T00:49:53.059-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      },
+      {
+        "key": "VZI-102636",
+        "summary": "PMAN: Collapsible Tiles for Tracking Re-Approvals on Invoice and Memo Documents",
+        "description": "User Story : As a  user, I need to track the history of approvals on an Invoice or Memo document when it has been moved back to Draft / Parked and re-approved, so that I can view the full approval history and understand any changes that have occurred over time. Acceptance Criteria : What is the change?  When an Invoice or Memo document requires re-approval, track each approval instance by storing the previous approval chain in a collapsible tile below the current approval chain. Which customers should this change impact?  Clients using - Dynamic Workflow: Invoicing module, Memo module. What pages should this change impact?  These pages the change would apply on - Invoice side panel page. PO based invoice approval is required. Non-PO based invoice approval is required. Memo side panel page. Memo approval is required. Which users should be impacted by the change?  Users who are able to view an AP document. How should this feature work? Current Approval Chain: When an Invoice or Memo document requires re-approval, the current approval chain should be displayed as usual at the top. The current approval chain must be displayed in a collapsible tile. The current approval tile should be open by default and can be closed by the user to hide the current approval chain. Collapsible Tiles for Older Approval Chains: Older approval chains must be displayed in collapsible tiles below the current approval chain. The tiles should be collapsed by default and can be expanded by the user to view the full old approval chain. There can be multiple collapsible tiles, depending on the number of times re-approval was required. Title for Collapsible Tiles: The title for each collapsible tile should indicate the sequence of the approval. Suggested format: \"Previous Approval Chain #3\" \"Previous Approval Chain #2\" \"Previous Approval Chain #1\" Display the number of approvals, greyed out beside the title, such as 2 Approvals, 4 Approvals, etc. Order of Display: The tiles should be displayed in reverse chronological order, with the most recent old approval chain appearing first, followed by older chains, down to the initial approval chain. Collapse All / Expand All: There should be a Collapse All / Expand All button that a user could click on to Collapse / Expand all tiles. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Yes. To which teams should this change be communicated to?  All Teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-08-26T17:49:58.003-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      },
+      {
+        "key": "VZI-102091",
+        "summary": "PMAN: Visibility and Traceability Enhancement for AP Approval Chain on Invoice document.",
+        "description": "User Story : As an  AP Processor or Manager,  I want  to have a comprehensive Approval Chain feature in the side panel for the Invoice document,  so that  I can ensure the correct approval chain is triggered, reduce errors, and improve process accuracy. Acceptance Criteria : What is the change?  Introduce a way to track Approval chain based on the Approval rule that gets triggered for clients using the new Dynamic Workflow in the side panel of the Invoice document. Which customers should this change impact?  Clients using - Dynamic Workflow: Invoicing module What pages should this change impact?  These pages the change would apply on - Invoice side panel page. PO based invoice approval is required. Non-PO based invoice approval is required. Which users should be impacted by the change?  Users who are able to view an AP document, namely: The document owner (AP Processor/Manager), Admin, AP Approver, Any AP Manager. How should this feature work? Approval Chain Icon Design : Icon Design: The system should display a new icon in the side panel for each Invoice document. Use one of these icon for accessing the approval chain in the side panel - List-check    Person-circle-check    Tool Tip:  The icon should display a tooltip reading \"Approval Chain\" when hovered over. Side Panel Functionality : Icon Click Action: When the user clicks on the icon, the side panel should open displaying the applicable Approval Chain for the document. Display Elements in the Side Panel: The title should be called -  APPROVAL CHAIN . Below it the system should display the  Approval Rule Name  that was triggered. Keep the text centered. If the text is too large to fit in the side panel window then use some clever way of displaying the full text maybe using tool tips. Below the Approval Rule name, the system should display the  Approval Rule Description . You can experiment using a smaller text size or italics for the description ( so that its easier to distinguish between the name and description ). If the text is too large to fit in the side panel window then use some clever way of displaying the full text maybe using tool tips. Next display the Approvers in order of approvals. Number of Approvers would depend on approval workflow style - Staircase. Spend Limit. Approval Status Indicators: Approval Action : Marked in  Green  with a  Checkmark  icon ( similar to how it works on the PR document ) System should display \u201cAPPROVED\u201d beside the checkmark icon. Rejection Action : Marked in  Red  with a  Cross  icon ( similar to how it works on the PR document ) System should display \u201cREJECTED\u201d beside the cross icon. Timestamps : Display timestamps ( Date & Time ) for Approval, Rejection and Forwarding ( additional information in a different ticket ) actions. Pending Action : Display a clock icon ( similar to how it works on the PR document ) System should display \u201c Approval Required \u201d beside the clock icon. If there are more than 1 approvers in the Approval chain then their status icons should be linked to each other with a line. ( similar to how it works on the PR document ) Display the initial / display photo, and name of the AP Approver in the chain. Collapsible Tiles: The current and old approval chains should be inside a collapsible tile. There should be a Collapse All / Expand All button above the current approval chain tile. For additional details please refer to this ticket -    Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Yes. To which teams should this change be communicated to?  All Teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-08-08T00:55:37.302-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99543",
+      "released_in_current_rc": false,
+      "summary": "Vulnerability assessment - SBOM generation and vulnerabilities fixes",
+      "description": "The scope of this epic includes but not limited to  Generating SBOM of our complete application. Evaluating SBOM generated files to identify any vulnerabilities within our project using tools e.g.  dependency track . Evaluate and fix any identified vulnerabilities wherever possible.",
+      "status": "In Design",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2024-05-16T09:30:40.706-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103302",
+        "summary": "SBOM: Verify if an SBOM json file can be converted into csv",
+        "description": "A sample sbom file is attached in this ticket which is generated via  install  goal of maven plugin in this git branch of budget-api  .  We need to identify if we can convert this sbom file to a csv or excel sheet with a maven plugin during the generation phase or  an external tool after the file is generated and is placed in the target folder.",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-09-15T22:10:12.712-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-99543"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103499",
+      "summary": "RC-2024-9-2 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Work Completed",
+      "assignee": "Jimena Pose",
+      "created": "2024-09-20T06:59:45.024-0700",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-103292",
+        "summary": "Execute Post Production Testing (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-09-13T07:05:46.977-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103499"
+      },
+      {
+        "key": "VZI-103291",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "Impacted Areas of Payables RC Functionalities Impacted Area 1 Impacted Area 2 Impacted Areas of Other Teams RC Functionalities Purchase Team Impacted Area 1 Impacted Area 2 Integration Team Impacted Area 1 Impacted Area 2 Budget Team Impacted Area 1 Impacted Area 2",
+        "status": "Abandoned",
+        "assignee": "Asma Latif",
+        "created": "2024-09-13T07:05:46.922-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103499"
+      },
+      {
+        "key": "VZI-103290",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Aqsa Rani",
+        "created": "2024-09-13T07:05:46.847-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103499"
+      },
+      {
+        "key": "VZI-103289",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "Done",
+        "assignee": "Jimena Pose",
+        "created": "2024-09-13T07:05:46.786-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103499"
+      },
+      {
+        "key": "VZI-103288",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-09-13T07:05:46.752-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103499"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102239",
+      "released_in_current_rc": false,
+      "summary": "Implementation of Enhanced Company Code Restrictions for AP Managers",
+      "description": "BRD -",
+      "status": "Open",
+      "assignee": "Sujoy Kar",
+      "created": "2024-08-13T12:09:20.889-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103133",
+        "summary": "Payables: Implement Company Code Restrictions for AP Managers on Memo Posting View section",
+        "description": "User Story : As an  AP Manager,  I want  to only see Posting Failed or Posting status Memo documents that belong to the company code(s) assigned to my user profile in the Memo Posting View section of the Post Memo page,  so that  I can focus on managing memos relevant to my responsibilities without accessing data from other company codes. Acceptance Criteria: What is the change?  The system is being updated to enforce company code restrictions for AP Managers, ensuring they can only view, filter and post memos based on the company codes assigned to their user profile. Which customers should this change impact?  ACCOUNTS_PAYABLE_WORKFLOW = true May need to introduce a new Feature toggle or use existing Feature toggle -  ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS What pages should this change impact?  Post Memo Pages - Memo Posting View Which users should be impacted by the change?  AP Managers. How should this feature work? The Memo Posting View page can dynamically change depending on the type of connector being used by a particular client. For clients ( such as  Maersk  in this case ) who are  not  using  connectors  under Company > Connectors, and instead have the ' Posting of AP documents without a connector ' toggle turned  ON  under Accounts Payable > Settings > Preferences > Posting of AP Documents, The system should only display memos in the Memo Posting View that belong to the AP Manager's restricted company code. This applies to both \u2018Posting Failed\u2019 and \u2018Posting\u2019 status memos. All other connectors (such as QuickBooks, NetSuite, CSV, and Xero) that influence the Memo Posting View section are out of scope for this project. In the future, we will consider extending this logic to other connectors on this page as well. Please check with the Integration team developers to ensure there is no impact on their end when making this change. A spike ticket needs to be created to investigate why Resend, Edit Memo or Mark as \u2018Posted\u2019 options do not show up in the Memo Posting view page. Do we need a data fix for existing customers?  No Would this change impact existing documents?  Yes To which teams should this change be communicated to?  Yes, Integration Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-09-10T12:20:40.304-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102239"
+      },
+      {
+        "key": "VZI-103132",
+        "summary": "Payables: Implement Company Code Restrictions for AP Managers on Invoice Posting View section",
+        "description": "User Story : As an  AP Manager,  I want  to only see Posting Failed or Posting status invoice documents that belong to the company code(s) assigned to my user profile in the Invoice Posting View section of the Post Invoice page,  so that  I can focus on managing invoices relevant to my responsibilities without accessing data from other company codes. Acceptance Criteria: What is the change?  The system is being updated to enforce company code restrictions for AP Managers, ensuring they can only view, filter and post invoices based on the company codes assigned to their user profile. Which customers should this change impact?  ACCOUNTS_PAYABLE_WORKFLOW = true May need to introduce a new Feature toggle or use existing Feature toggle -  ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS What pages should this change impact?  Post Invoice Pages - Invoice Posting View Which users should be impacted by the change?  AP Managers. How should this feature work? The Invoice Posting View page can dynamically change depending on the type of connector being used by a particular client. For clients ( such as  Maersk  in this case ) who are  not  using  connectors  under Company > Connectors, and instead have the ' Posting of AP documents without a connector ' toggle turned  ON  under Accounts Payable > Settings > Preferences > Posting of AP Documents, The system should only display invoices in the Invoice Posting View that belong to the AP Manager's restricted company code. This applies to both \u2018Posting Failed\u2019 and \u2018Posting\u2019 status invoices. The actions, such as Resend, Edit Invoice, and Mark Invoice as 'Posted,' remain the same in terms of functionality. All other connectors (such as QuickBooks, NetSuite, CSV, and Xero) that influence the Invoice Posting View section are out of scope for this project. In the future, we will consider extending this logic to other connectors on this page as well. Please check with the Integration team developers to ensure there is no impact on their end when making this change. Do we need a data fix for existing customers?  No Would this change impact existing documents?  Yes To which teams should this change be communicated to?  Yes, Integration Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-09-10T12:05:22.550-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102239"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99317",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Security Enhancements - API Access Control Phase I",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T17:33:45.988-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-102931",
+        "summary": "Vroozi API - Permission authorization to Public API keys",
+        "description": "Business Case: The system should authorize the action request in the API call while authenticating the API. Acceptance Criteria: While Authenticating the API, if the Access Token and, or API Credentials are invalid and missing, the system should throw the 401 error. The message should be  Unauthorized: the system does not recognize the credentials. If the authentication is successful, the system should check if the action request in the API call is permitted. (As defined in the  ). If yes, the system should perform that requested action. If not, the system should throw the 403 error. The message should be  Forbidden: The server understood the request but will not process it as it is not permitted, to access the resource .  The system should not perform the request action.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-09-04T02:00:13.043-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-99317"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-100663",
+      "released_in_current_rc": false,
+      "summary": "Angular Upgrade: Upgrade Master Data -> Accounting Page and it's components",
+      "description": "Upgrade the whole page Master Data \u2192 Accounting to Ng2:",
+      "status": "Open",
+      "assignee": "Hamza naseem",
+      "created": "2024-06-24T11:02:21.516-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-101147",
+        "summary": "Angular Upgrade: Utilize Locations Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-07-05T04:06:02.807-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-101146",
+        "summary": "Angular Upgrade: Utilize Location Types Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-07-05T04:02:30.174-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-101144",
+        "summary": "Angular Upgrade: Utilize Projects Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-07-05T04:01:03.882-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-101141",
+        "summary": "Angular Upgrade: Utilize Classes Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-07-05T03:57:11.530-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-101140",
+        "summary": "Angular Upgrade: Utilize Profit Centers Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-07-05T03:51:20.215-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-100610",
+        "summary": "Angular Upgrade: Utilize Internal Orders Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-06-24T00:04:26.471-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-100599",
+        "summary": "Angular Upgrade: Utilize WBS Elements Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-06-23T04:12:53.383-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-100597",
+        "summary": "Angular Upgrade: Utilize Cost Centers Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-06-23T01:54:46.205-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-100572",
+        "summary": "Angular Upgrade: Utilize Customer Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-06-21T03:05:18.421-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-99572",
+        "summary": "Angular Upgrade: Utilize Gl Account Component in accounting page",
+        "description": "",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-05-17T03:55:42.347-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100663"
+      },
+      {
+        "key": "VZI-98126",
+        "summary": "Angular Upgrade: Development: Upgrade Master Data -> Accounting Page and it's components",
+        "description": "",
+        "status": "Done",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-04-02T03:19:23.973-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-100663"
+      }
+    ]
+  }
+]

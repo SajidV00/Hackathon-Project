@@ -1,0 +1,1016 @@
+RC,Result_Text
+RC-2023-11,"January 5, 2024
+**[Image here]**
+                     Vroozi January 2024
+                            Release Notes
+Table of Contents:
+Vroozi Purchase (Administrator)                                             2
+   Create/Update Accounting Strings in the Admin Panel                      2
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)      4
+   Accounting Changes are Highlighted after Exception Handling or Coding.   4
+Resolutions                                                                 4
+# Vroozi Purchase (Administrator)
+## CREATE/UPDATE ACCOUNTING STRINGS IN THE ADMIN PANEL
+In the December 2023 Release, Vroozi launched Accounting Validation to significantly
+improve accounting accuracy on purchasing and invoice documents by adhering to
+defined valid accounting strings. In this release, Administrators can define the
+accounting strings in the Admin Panel User Interface (UI). Administrators will be able
+to create, read, update, and delete the accounting strings.
+Please note that the option to change accounting strings will need to be enabled by
+the Vroozi support team. Otherwise, the accounting strings will need to be created,
+updated, or deleted via APIs. Please contact our support team to enable this feature.
+When enabled, Administrators will have the option to Activate, Deactivate, or Create a
+new accounting string in the Accounting Validation screen.
+**[Image here]**
+### Create a New Accounting String
+When creating a valid accounting string, administrators will provide the company and
+accounting information to define the valid string with a validity period.
+**[Image here]**
+# Vroozi Invoice (AP Processor, AP Approvers,AP Coders and AP Managers)
+## ACCOUNTING CHANGES ARE HIGHLIGHTED AFTER EXCEPTION HANDLING OR CODING.
+If a user changes a documents accounting in the Exception or Coding processes,
+Vroozi will highlight the changes to the AP Processor after the document is submitted
+to AP. Vroozi will now show an informational message that accounting changes were
+performed and highlight the changes. This will give AP the opportunity to review the
+accounting prior to approval/posting.
+**[Image here]**
+# Resolutions
+- The PO Transmission Report will now be sent to the subscribed email.
+- cXML Credit Memos for POs in the Disputed status and flagged with the error
+       Re-invoicing is missing will no longer get stuck."
+RC-2024-1,"February 9, 2024
+**[Image here]**
+                   Vroozi February 2024
+                        Release Preview
+**[Image here]**
+Table of Contents:
+Vroozi Purchase (Administrator)                                          2
+   Additional Parameters for Buyer Groups                                2
+Vroozi Purchase (Requesters, Buyers, and Central Receivers)              4
+   Enhanced Apply to All (Vroozi Purchase)                             4
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)   6
+   Purchasing Organization now available on Invoices and Memos           6
+Resolutions                                                              7
+Vroozi Purchase (Administrator)
+# ADDITIONAL PARAMETERS FOR BUYER GROUPS
+Additional parameters can now be used to define a Buyer Group.
+- Company Codes
+- Cost Centers
+- GL Codes
+- Projects
+- Locations
+Buyer Groups define how Purchase Request line items in BuyRoute and Purchase
+Orders are assigned to Buyers. Prior to this release, Buyer Groups could only be defined
+based on supplier and category. New additional accounting and organizational
+parameters enable companies to distribute work items and orders to specific buyers to
+improve sourcing and PO maintenance process efficiency.
+Buyer Groups are defined in the Admin Panel under Master Data => Buyer Data =>
+Buyer Groups
+**[Image here]**
+
+# Vroozi Purchase (Requesters, Buyers, and Central Receivers)
+## ENHANCED APPLY TO ALL (VROOZI PURCHASE)
+Users will be able to change a single field in Apply to All. Prior to this release, users
+were always required to enter data in multiple fields during Apply All to maintain valid
+parent-child accounting relationships eg: GLs assigned to a Company Code.
+The Apply to All feature has been enhanced for the following Vroozi Purchase
+documents:
+- Purchase Request
+- Change Request
+- Purchase Order
+- POCR
+
+Now, when a user changes a field, Vroozi will evaluate if the change is valid. For
+instance, if a user changes the GL account for multiple lines using Apply All, the system
+will evaluate the proposed change against Company Code (parent object) for each
+selected line item. If the GL is valid for that Company Code, then the system will
+change the line item. If the GL is not assigned to the Company Code, the system will
+not modify the line item and display a message that the proposed change could not be
+applied.
+Similarly, if a user changes a parent object during Apply to All (eg: Company Code), we
+know that the change will impact child objects, such as GL Code, Cost Center, Project,
+etc. In that case, the system will prompt the user to provide values for affected child
+objects during Apply to All.
+**[Image here]**
+
+# Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)
+## PURCHASING ORGANIZATION NOW AVAILABLE ON INVOICES AND MEMOS
+When configured, the system will display Purchasing Organization on Invoices and
+Memos at the line item level under General Information.
+**[Image here]**
+With this enhancement, the Purchasing Organization code can now be transmitted
+from Vroozi to the companys external ERP system for both Invoices and Memos.
+Customers will need to contact Vroozi Support to activate this feature. Once this
+feature is enabled, Administrators can change the settings in the Admin panel. Under
+Documents => Settings => All Documents => Line item Field Configuration => Company
+Information, Admins can choose the appropriate Purchasing Organization field setting:
+Required, Optional, or Hidden.
+**[Image here]**
+                                                                  Release Notes 2/9/2024 6
+# Resolutions
+- When utilizing the 'Apply to All' functionality on Invoices & Memos, the system
+     will now accurately filter Cost Center, Plant, Location, and Class based on the
+     selected Company Code."
+RC-2024-2,"March 15, 2024
+**[Image here]**
+                          Vroozi March 2024
+                               Release Notes
+**[Image here]**
+Table of Contents:
+Vroozi Purchase (Administrator)                                                                    2
+   Accounting String Bulk Upload                                                                   2
+   Make Accounting Strings Active or Inactive in the Accounting Validation Configuration           3
+   Auto Invoice Date Calculation Toggle in the Supplier Records                                    4
+   Toggle for Admins to Configure Invoice Coding and Apply All during Invoice Exception Handling   4
+Vroozi Purchase (Budget Approver)                                                                  5
+   Accounting Validation in Budget Workflow                                                        5
+Resolutions                                                                                        5
+# Vroozi Purchase (Administrator)
+## ACCOUNTING STRING BULK UPLOAD
+Administrators will be able to upload accounting strings for Accounting Validation in
+the Admin Panel using files in XLSX or CSV formats. Like other Vroozi master data
+uploads, Administrators can download a template or export the existing data as a
+starting point to build/maintain an upload file. If there are any validation errors in the
+upload, an error report will be available for the Administrator to download.
+Note: For data exports, when the accounting string records exceed 1 million, the system
+will automatically switch to CSV format, as XLSX cannot accommodate over 1 million
+records.
+**[Image here]**
+Please contact support if you want the accounting string feature to be enabled.
+
+## MAKE ACCOUNTING STRINGS ACTIVE OR INACTIVE IN THE ACCOUNTING VALIDATION CONFIGURATION
+A new field Status is available when creating or editing an accounting string to
+designate a string as active or inactive for Accounting Validation. This will enable
+Admins to quickly adjust the validation as accounting strings become active/inactive.
+**[Image here]**
+## AUTO INVOICE DATE CALCULATION TOGGLE IN THE SUPPLIER RECORDS
+For companies where the delivery date determines the invoice start date,
+Administrators have the ability to enable the Auto Invoice Date Calculation setting
+within the Supplier record.   With the feature enabled, the delivery date specified
+during Goods Receipt (GR) creation will automatically populate as the Invoice Date on
+the suppliers invoices.
+**[Image here]**
+Note: Please contact the Vroozi support team to enable this toggle. This toggle setting
+will be saved and tracked on the Supplier change history page in future releases.
+
+## TOGGLE FOR ADMINS TO CONFIGURE INVOICE CODING AND APPLY ALL DURING INVOICE EXCEPTION HANDLING
+This release introduces a new toggle in Invoice Coding Access, to allow Admins to
+enable or disable Coding and ""Apply to All"" functionality for Employee, Buyers, and AP
+Coders, during Exception Handling. Previously, these features required contacting
+Vroozi Support for activation. With this update, Admins have direct control over these
+settings.
+This is available on Accounts Payable => Settings => Preferences screen
+
+**[Image here]**
+
+# Vroozi Purchase (Budget Approver)
+## ACCOUNTING VALIDATION IN BUDGET WORKFLOW
+The Accounting Validation process will now be triggered when the budget approver
+approves a Purchase Request (PR). This will be applicable when both budget workflow
+and accounting validation features are enabled.
+**[Image here]**
+# Resolutions
+- Improved processing time for large catalog files containing more than 900,000
+       items.
+- Payment Terms in the Purchase Order header now appear in ascending order.
+- Fixed an issue where the system populated the incorrect cost center when using
+    the Purchase Request line item bulk upload functionality.
+- The system will now trigger accounting validation when an invoice, in Pending
+    status, is loaded or refreshed.
+- When a user created a Goods Receipt (GR) for an invoice with GR exception, the
+    invoice was not routing to the right user/group for accounting validation errors.
+- The system now accurately detects and routes the invoice to the correct
+    user/group to resolve the accounting validation error.
+- Tax Calculations will now be automatically updated in the invoice when a user
+    modifies the item quantity or unit price via inline editing.
+- Previously, draft invoices generated from cXML could not be updated after
+    canceling the corresponding purchase orders. Users experienced a persistent
+    ""required fields"" error. Now, the draft invoices can be updated and saved
+    correctly for canceled POs."
+RC-2024-3,"April 19, 2024
+**[Image here]**
+                          Vroozi April 2024
+                              Release Notes
+**[Image here]**
+Table of Contents:
+Vroozi Admin (Administrator)                                                                  2
+   Expanded Approval Criteria for the New Dynamic Workflow                                    2
+   New Dynamic Workflow for Payment Requests                                                  5
+   Auto Invoice Date Calculation based on Receipts - Supplier Bulk Upload Configuration and
+   Track Changes in the Supplier History                                                      5
+       Configuring Auto Invoice Date Calculation using the Supplier Bulk Upload               6
+       Track Auto Invoice Date Calculation Changes in the Supplier History                    6
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders, and AP Managers)                       7
+   Connect to a Highlighted Message from an Email Notification                                7
+Vroozi APIs                                                                                   9
+   Catalog API to Create or Update Catalogs                                                   9
+Resolutions                                                                                   9
+# Vroozi Admin (Administrator)
+## EXPANDED APPROVAL CRITERIA FOR THE NEW DYNAMIC WORKFLOW
+Companies can configure more flexible approval rules for Purchase Requests, Purchase
+Order Change Requests, Invoices, Memos, and Payment Requests (new) with Vroozis
+new Dynamic Workflow. When creating conditions that trigger workflows, company
+Admins can create more granular conditions by adding more organizational and
+accounting objects that are not seen as Duplicate Approval Rule. Previously, admins
+faced restrictions when creating approval rules that belonged to the same accounting
+family (eg: approval for a cost center, and approval for the same cost center plus GL).
+Admins can create multiple conditions, but if the system identifies multiple approval
+rules that apply to a document, it will default to the Fallback AP Approver for approval.
+
+**[Image here]**
+
+Note: This applies to customers using Vroozis Dynamic Workflow. Customers who do
+not have the Dynamic Workflow feature enabled will need to contact the Support Team
+to activate it.
+
+## NEW DYNAMIC WORKFLOW FOR PAYMENT REQUESTS
+Customers using Payment Requests and the Dynamic Workflow will see the option to
+select Payment Requests when configuring the workflow rules.
+**[Image here]**
+To enable the Dynamic Workflow for Payment Requests, contact Vroozi Support or
+Customer Success.
+**[Image here]**
+## AUTO INVOICE DATE CALCULATION BASED ON RECEIPTS - SUPPLIER BULK UPLOAD CONFIGURATION AND TRACK CHANGES IN THE SUPPLIER HISTORY
+In the previous release (March release), Vroozi introduced a new toggle in the Supplier
+Master Record to enable Auto Invoice Date Calculation. With this enabled for a
+**[Image here]**
+                                                               April Release Notes 4/19/2024 5
+supplier, the Invoice date is calculated based on the Receipt date for that supplier. In
+this release, Vroozi enabled 2 new capabilities: the ability to configure the Auto Invoice
+Date Calculation using the supplier bulk upload file and the ability to track Auto Invoice
+Date Calculation changes in the supplier history.
+Note: Please contact the Vroozi Support team to enable Auto Invoice Date Calculation.
+
+### CONFIGURING AUTO INVOICE DATE CALCULATION USING   THE     SUPPLIER BULK UPLOAD
+Auto Invoice Date Calculation can now be activated for a supplier in the supplier bulk
+upload file. The column heading in the bulk upload file is:
+- AUTO_INVOICE_DATE_CALCULATION
+
+### TRACK AUTO INVOICE DATE CALCULATION CHANGES IN THE SUPPLIER HISTORY
+Vroozi now tracks changes made to the Allow Auto Invoice Date Calculation
+configuration in the supplier master data record under Change History.
+**[Image here]**
+
+# Vroozi Invoice (AP Processor, AP Approvers, AP Coders, and AP Managers)
+## CONNECT TO A HIGHLIGHTED MESSAGE FROM AN EMAIL NOTIFICATION
+When users navigate from an email notification to a message in the Vroozi Invoice, the
+relevant message is now highlighted in the invoice side panel. Users can now easily find
+the specific comment in which they were tagged.
+
+**[Image here]**
+
+# Vroozi APIs
+## CATALOG API TO CREATE OR UPDATE CATALOGS
+We are excited to announce catalog management capabilities through the Vroozi
+Platform open APIs.
+The new catalog APIs will allow companies, especially API-capable suppliers, to directly
+create a new catalog or update an existing catalog. The APIs will create a Working
+catalog that then can be reviewed, approved, and published by the Catalog
+Administrator and Catalog Approvers using Vroozis Catalog Content Management
+process.
+For further details please view the API documentation available at: Vroozi Catalog API
+
+# Resolutions
+- Vroozi is reducing the number of non-invoice files (eg: logos) that appear in the
+       invoice hopper by filtering gif files.
+- Vroozi improved the precision when rounding the calculated tax value to the
+       hundredths decimal in the Purchase Request and Purchase Order.
+- Users are no longer able to specify a negative value in the unit price field for line
+       items in the PR and PO.
+- The system now updates the line item tax when a user copies an existing PR and
+       then manually edits the line items.
+- PO document history would show the unit price for newly copied line items
+       added in a POCR as 0 even though the unit price was not zero.
+- When copying a Purchase Request, the system will now enforce inactive Buyer
+       Groups.
+- In a Purchase Request bulk upload, the system will assign the correct cost
+       centers (ie: cost center id) for a company code where there are cost centers
+       assigned to multiple company codes.
+- Suppliers who could not see the entire item description in a RFQ bid can now
+       use ellipsis to view the complete item description.
+- Addressed degrading performance with the Amazon Web Services (AWS) S3 file
+       storage service when submitting a document containing an attachment."
+RC-2024-4,"May 24, 2024
+**[Image here]**
+                       Vroozi May 2024
+                         Release Notes
+**[Image here]**
+Table of Contents:
+Vroozi Purchase (Administrator)                                                2
+   New Dynamic Workflow Trigger Based on Highest Value                         2
+   More Accounting and Organizational Elements are available for the Dynamic
+   Workflow Conditions                                                         2
+   Bulk Upload/Download to Create and Maintain the Dynamic Workflow Approval
+   Rules                                                                       4
+Vroozi Purchase & Invoice (Employee, Buyer, Approver, AP Processor, AP
+Approvers, AP Coders and AP Managers)                                          5
+   Introducing Drag-and-Drop Columns                                           5
+Resolutions                                                                    6
+# Vroozi Purchase (Administrator)
+## NEW DYNAMIC WORKFLOW TRIGGER BASED ON HIGHEST VALUE
+Administrators have a new option to trigger the dynamic workflow approvals based on
+the accounting combination with the highest total spend value across all the line
+items. This means that approver(s) responsible for the highest spend in a Purchase
+Requests, Purchase Order Change Requests, Payment Requests, Memos, and Invoices
+will make the approval decision for that document.
+The new option to trigger the approval is available in the Admin Panel under Company
+=> Workflow => Approval Matching Method. Admins will have the option to select the
+new approval trigger based on the accounting combination with the highest value, or
+based on the first line item (default).
+**[Image here]**
+Note: Customers will need to have the New Dynamic Workflow enabled in their Vroozi
+system. The new Dynamic Workflow provides greater flexibility and control in the
+approval process to adapt the approvals to better suit specific financial oversight
+requirements (eg: based on combinations of organizational and accounting elements).
+The new Dynamic Workflow delivers more of the financial approvals that reduce
+financial risks and improve compliance with internal controls.
+**[Image here]**
+## MORE ACCOUNTING AND ORGANIZATIONAL ELEMENTS ARE AVAILABLE FOR THE DYNAMIC WORKFLOW CONDITIONS
+The Dynamic Workflow introduces additional accounting and organizational elements
+to expand the approval workflow coverage and control more spend categories under
+management. The new accounting and organizational elements include:
+
+- WBS Elements
+- Internal Orders
+- Profit Centers
+- Classes
+- Customers
+- Purchasing Organizations
+- Location Types
+
+The additional elements allow for more precise and relevant workflow configurations
+that better align with the specific financial controls and organizational structures of the
+organization.
+The configuration is available in the Admin Panel under Company => Workflow =>
+Approval Rules. The accounting and organizational objects are selected in the workflow
+condition(s) to trigger the rule.
+**[Image here]**
+
+Note: Customers will need to have the New Dynamic Workflow enabled in their Vroozi
+system. The new Dynamic Workflow provides greater flexibility and control in the
+approval process to adapt the approvals to better suit specific financial oversight
+requirements (eg: based on combinations of organizational and accounting elements).
+The new Dynamic Workflow delivers more of the financial approvals that reduce
+financial risks and improve compliance with internal controls.
+**[Image here]**
+## BULK UPLOAD/DOWNLOAD TO CREATE AND MAINTAIN THE DYNAMIC WORKFLOW APPROVAL RULES
+Admins will have the ability to manage the Dynamic Workflow approval rules more
+efficiently through a bulk upload and download using a file in .XLSX file format.
+The bulk upload/download is available in the Approval Rules configuration in the Admin
+Panel under Company => Workflow => Approval Rules. A downloadable template is
+provided in the system to set up the correct format for the upload. Also, an error report
+can be downloaded to quickly correct any issues with the latest upload.
+**[Image here]**
+Note: Customers will need to have the New Dynamic Workflow enabled in their Vroozi
+system. The new Dynamic Workflow provides greater flexibility and control in the
+approval process to adapt the approvals to better suit specific financial oversight
+requirements (eg: based on combinations of organizational and accounting elements).
+The new Dynamic Workflow delivers more of the financial approvals that reduce
+financial risks and improve compliance with internal controls.
+**[Image here]**
+# Vroozi Purchase & Invoice (Employee, Buyer, Approver, AP Processor, AP Approvers, AP Coders and AP Managers)
+## INTRODUCING DRAG-AND-DROP COLUMNS
+This release introduces drag-and-drop functionality to the user experience. Users will
+now be able to rearrange columns according to their preference using a new green
+grip icon that appears when hovering over the column header. Drag-and-Drop
+Columns will be available on:
+
+- Track Invoices (all statuses)
+- Track Memos (all statuses)
+- Resolve Invoices
+- Code Invoices
+- Approve Invoices
+- Code Memos
+- Approve Memos
+- Payment Request
+- Approve Payment Request
+- Purchase Order
+
+The new drag-and-drop delivers enhanced customization and usability for users in
+those documents.
+**[Image here]**
+
+# Resolutions
+- When Purchase Requests were submitted and sent to external systems (eg: and
+     ERP system), the email notifications to Requesters indicated that the PR was
+     approved. The email notification will now more accurately state that the PR has
+     been submitted to the External System for further processing.
+- This release resolves an issue where the Apply to All modal would not close after
+     selecting the Tax Code field in the Invoice and Memo.
+    .msg files are no longer supported for upload to an invoice document. The file
+     type causes errors when posting the Invoice to NetSuite."
+RC-2024-5,"July 5, 2024
+**[Image here]**
+                Vroozi July 2024
+                          Release Notes
+Table of Contents:
+Vroozi Administration (Admin)                                                   2
+    Admin Control for Out of Office Settings                                    2
+    Assign Alternative Approvers and Buyers in the User Profile                 3
+    Type Ahead Search to Assign Approvers                                       3
+    Accounting Validation Enhancements                                          4
+        Accounting Validation Display on the Line Item View                     5
+        Provide missing Output Destination when the Accounting 
+        Validation is Successful                                                6
+        Add Approval Notes after the Accounting Validation is Successful        7
+Resolutions                                                                     8
+# Vroozi Administration (Admin)
+## Admin Control for Out of Office Settings
+Admins now have the ability to control and manage the Out of Office (OOO) settings for users in the Admin Panel under Master Data > Users.  
+To keep approvals moving when users forget to set up their own Out of Office configuration, the Out of Office settings can now be configured by the company’s Admin user.
+
+The user record now shows two tabs: “BASIC INFO” and “DELEGATION INFO”.
+
+- “BASIC INFO” contains all the existing user settings, such as Basic Information, Roles, Approval Settings, Document Defaults, etc.
+- “DELEGATION INFO” (new) contains the Out of Office (OOO) settings that allow Admins to efficiently manage OOO configurations based on the company's policies and user roles.  
+
+**[Image here]**
+
+
+- In the configuration, the Admin can:
+
+    - Define the validity period 
+    - Create a message 
+    - Set the Action and an Out of Office approver where applicable 
+      - Next Approver - skips the person’s approval step and goes to the next step 
+      - Specific Approver - select from an approver role in the system 
+      - Do Not Forward
+
+**[Image here]**
+
+The availability of the Delegation Tab is conditional upon the company's OOO settings and the user’s role.
+
+**[Image here]**
+
+With Out of Office configuration on the user record, Admins now have greater control over OOO settings, especially for roles critical
+to keep approval workflows moving, including Financial Approvers, Payment Request Approvers, Sourcing Approvers, and Accounts Payable Approvers.
+
+## Assign Alternative Approvers and Buyers in the User Profile
+Company Admins now have the ability to assign Alternate Approvers and Buyers  in the Admin Panel under Master Data > Users.  
+On the Basic Info tab, the Alternative Approver is located in the Approval Settings and the Alternative Buyer is located under the Buyer Settings.  
+
+## VROOZI BUDGETS CAN BE DEFINED AGAINST ANY ACCOUNTING/ORGANIZATION OBJECT
+Vroozi expanded Budget Management to include all the Organizational and
+Accounting Objects. Companies now have greater control to ensure budgets are
+enforced for all spend under management.
+
+**[Image here]**
+
+For the Alternate Approve, both approvers (approver and alternate) will get a notification to approve a document.  Either approver can take action on that document.  
+Similarly for the Alternate Buyer, the buyer and alternate will have the option to take action on the work item.
+
+Now Admins can assign alternate users to enhance the management of approval and purchasing workflows for faster and more flexible workflows.
+
+## Type Ahead Search to Assign Approvers
+to assign an approver (eg: alternate, out of office, next approver) Vroozi introduces a user-friendly search field to quickly find and select an approver.
+Instead of scrolling through dropdowns, Admins can now use type ahead search to assign a person.
+
+**[Image here]**
+
+## Accounting Validation Enhancements
+
+With Accounting Validation enabled, companies can make sure that valid accounting combinations are used in the purchasing documents.  In this release, the Vroozi team delivered new features to enhance the validation and user experience. 
+Please note that Accounting Validation needs to be enabled for your account.
+
+### Accounting Validation Display on the Line Item View
+The line item view now displays the results of the accounting validation so that users can take the specific actions to resolve the error(s). 
+As the user is working in the line item view, the system will inform users immediately regarding any invalid accounting strings.  
+**[Image here]**
+
+### Provide missing Output Destination when the Accounting Validation is Successful
+When the Output destination is missing from the Supplier record and the system needs to prompt the user for the next step, the system will only prompt the user when the accounting validation is successful.  
+
+### Add Approval Notes after the Accounting Validation is Successful
+Vroozi will run the accounting validation upon the approval of the Purchase Request and will only ask the approver to add approval notes if the accounting validation is successful. In case of an invalid accounting string, 
+the system will only display the error for the accounting validation error and will not show the Add Approval Notes prompt.
+
+# Resolutions
+- Resolved an issue where the catalog item details page would get stuck loading due to a missing supplier logo.
+- The system now properly searches documents based on Company Code.
+- Drag-and-drop file attachment functionality now works as expected, allowing users to attach files seamlessly.
+- The PO closing notification email has been re-translated into Japanese.
+- When invoices with 0 tax are created from PR/POs using OCR, the tax value on the invoice accurately reflects zero tax.
+- Tax amounts will now recalculate upon adding or updating tax codes in Apply to All.
+- For partial invoices, we adjusted the tolerance percentage calculation method to consider the entire invoiced quantity rather than just the remaining amount.
+- cXML, Supplier Portal, and Hopper invoices will only be displayed to relevant users in the Document Flow.
+- The system will no longer revert to a limited line item view after updating an invoice line item .  The system will continue to ""Show all"" if that’s where the user started.
+- ""Apply to All"" on non-PO Invoices will no longer trigger an error when there’s a missing company code.
+- AP users can search for invoice line items regardless of letter case.
+- OCR icons will now be displayed correctly for all relevant fields ie: where the system entered data.
+- Requesters with Admin roles will only see  Accept/Reject after exception resolution  on  system-generated invoices (e.g., cXML or OCR) based on structured document rules matches, or defaults to the AP Processor/Manager group if no matches are found.
+- The system will now release the budget amount upon PO cancellation.
+- The supplier acknowledgment button will now be visible in the POCR Confirmation email in all cases where this has been enabled for a supplier.
+- We fixed how categories are sorted on the PR/PO line item view. The list of categories will now follow the same sorting order as Category Management in the Admin panel.
+- We did a re-translation in Japanese for the labels used on the Save & Confirm action buttons during Goods Receipt (GR) creation.
+- Customers with a company code restriction in their user profile will now be able to use  the PR bulk upload without errors."
+RC-2024-7,"September 13, 2024
+**[Image here]**
+                Vroozi September 2024
+                          Release Notes
+Table of Contents:
+Vroozi Administration (Admin)                                                 2
+   Line Item Field Configuration for AP Documents                             2
+   Multiple Purchase Order Terms & Conditions                                 3
+   Vroozi Budgets can be Defined against any Accounting/Organization Object   3
+   Vroozi Budget Management Bulk Upload                                       5
+Vroozi Invoice (AP Processor, AP Coder, AP Manager)                           6
+   Enhanced Apply to All in the Vroozi Invoice                              6
+   Customizable Invoice and Memo Line Item Column Display                     7
+Vroozi Purchase (Buyers)                                                      8
+   Select or Change the Purchase Order Terms & Conditions                     8
+Resolutions                                                                   8
+# Vroozi Administration (Admin)
+## LINE ITEM FIELD CONFIGURATION FOR AP DOCUMENTS
+When Admins define fields such as Location, Customer, Class, Project as Required,
+Optional, or Hidden, the settings now apply to AP documents. This delivers more
+consistency to what line item information is captured and managed, and reduces the
+manual adjustments and potential inconsistencies between documents.
+
+Currently this applies to Location, Customer, Class and Project Line Item Field
+Configuration settings. Other accounting fields such as Cost Center, WBS Element,
+Internal Order, Profit Center, Plant, and GL Account will be supported in a future
+release.
+
+To enable this feature, please submit a Help Ticket to Vroozi Support to request this
+feature.
+**[Image here]**
+## MULTIPLE PURCHASE ORDER TERMS & CONDITIONS
+Customers now have the ability to maintain multiple Purchase Order Terms and
+Conditions, which can be applied based on company or supplier.
+
+Administrators can configure Vroozi to assign Terms and Conditions based on Supplier
+or Company Code, or Buyers can select the Terms and Conditions for a specific
+
+Purchase Order (PO). Users will be able to create, manage or update the Terms and
+Conditions on a draft PO prior to submission, or via a Purchase Order Change Request
+(POCR). All changes and updates made to the Terms and Conditions in the Purchase
+Order will be recorded in the PO Change History.
+
+This feature will be automatically enabled for all Vroozi customers. To manage, update,
+or change this feature navigate to Admin Panel -> Documents -> Settings -> Purchase
+Orders
+
+## VROOZI BUDGETS CAN BE DEFINED AGAINST ANY ACCOUNTING/ORGANIZATION OBJECT
+Vroozi expanded Budget Management to include all the Organizational and
+Accounting Objects. Companies now have greater control to ensure budgets are
+enforced for all spend under management.
+
+Companies that have Budget Management activated can add and edit budgets under
+Admin Panel => Master Data => Budgets.
+
+**[Image here]**
+
+In the Budget, the Admin or Budget Owner can add or edit the accounting string to
+include the accounting and organizational objects that can access the budget.
+
+**[Image here]**
+
+If your company is not using Budget Management today, please contact Customer
+Support (eg: support ticket) or Customer Success (success@vroozi.com).
+
+## VROOZI BUDGET MANAGEMENT BULK UPLOAD
+As an alternative to the Budget APIs, customers using Vroozi Budget Management can
+now upload budgets through a file upload/download process based on an upload
+template.
+
+**[Image here]**
+                                                                Release Notes 09/13/24 4
+Under Admin => Master Data => Budgets the Admin roles can download the template,
+download the current budget configuration, or upload a file.
+
+The Budget Bulk Upload template contains a sheet for the fields that define the
+budget as well as an Instructions sheet for how to enter the budget data into the fields.
+If your company is not using Budget Management today, please contact Customer
+Support (eg: support ticket) or Customer Success (success@vroozi.com).
+
+# Vroozi Invoice (AP Processor, AP Coder, AP Manager)
+## ENHANCED APPLY TO ALL IN THE VROOZI INVOICE
+All the recent enhancements to Apply to All in Vroozi Purchase are now available in
+Vroozi Invoice, which means Apply to All has a consistent experience across the Vroozi
+Procure-to-Pay documents.
+When using the Apply to All functionality, Vroozi now evaluates the users proposed
+changes in the Vroozi Invoice for data consistency (e.g. the change is valid for that
+company code) for the selected line items. If the changes are valid, the changes will be
+applied to all the selected line items. By contrast, if the proposed data changes are not
+valid, the line items will remain unmodified and the user will receive a message on the
+document UI. In the case where a user modifies a single field in which other fields are
+dependent, the corresponding child fields will be displayed for the user to fill out within
+the Apply to All module upon validation.
+**[Image here]**
+                                                                     Release Notes 09/13/24 5
+This feature will be automatically enabled in all customers.
+**[Image here]**
+## CUSTOMIZABLE INVOICE AND MEMO LINE ITEM COLUMN DISPLAY
+Users are now able to personalize the line item columns displayed on the Vroozi Invoice
+and Memo documents. Users will now be able to see pertinent data based on their
+specific needs at a glance to ensure accuracy and to streamline the process of
+managing and reviewing line item details.
+The column setting is available under a gear icon on the right side of the line field
+label area.
+**[Image here]**
+                                                                  Release Notes 09/13/24 6
+In the Column preferences, users can select and deselect the fields that are displayed
+at a glance in the Vroozi Invoice.
+**[Image here]**
+
+# Vroozi Purchase (Buyers)
+## SELECT OR CHANGE THE PURCHASE ORDER TERMS & CONDITIONS
+Customers now have the ability to maintain multiple Purchase Order Terms and
+Conditions. Buyers can select the Terms and Conditions for a specific Purchase Order
+(PO). In addition, Buyers will be able to create, manage or update the Terms and
+Conditions on a draft PO prior to submission, or via a Purchase Order Change Request
+(POCR). All changes and updates made to the Terms and Conditions in the Purchase
+Order will be recorded in the PO Change History.
+
+# Resolutions
+- Updated Japanese translation for PO Close notification email.
+- Also, under translation, user group names will now be translated and displayed
+     accurately within Vroozi.
+- Resolved an issue where the Location field was not updating correctly on the
+     Invoice document when using ""Apply to All"".
+- Invoices created and processed at the exact same time would create duplicate
+     Invoice numbers, which would cause errors when posting the invoices to
+     external systems. The system will no longer create duplicate invoice numbers.
+- This release fixes an issue in the Apply to All feature where Quantity, Value, and
+     Amount fields in the ""Changes to be Applied"" tab were not populated with
+     preset values.
+- Resolves an issue where users were able to approve their own PRs if they were
+     part of the defined approval chain in the new dynamic workflow. Now, if the
+     requester or the person that owns the PO in the case of a POCR is part of the
+     approval chain, the system will automatically skip that individual, and move onto
+     the next approver in the chain.
+- Updated the email Buyers receive for POs or PO Change Requests (POCR) for
+     visibility into the type of document they are receiving."
+RC-2024-8-2,"October 11, 2024
+**[Image here]**
+                   Vroozi October 2024
+                          Release Notes
+Table of Contents:
+Vroozi Administration (Admin)                                     2
+   Line Item Field Configuration for AP Documents (More Fields)   2
+   Option to Restrict Invoice Inbox Visibility for AP Managers    4
+Vroozi Purchase (Supplier)                                        6
+   More Prominent PO Cancellation status on the PO PDF            6
+Resolutions                                                       7
+# Vroozi Administration (Admin)
+## LINE ITEM FIELD CONFIGURATION FOR AP DOCUMENTS (MORE FIELDS)
+Admins can set fields such as Cost Center, WBS, Internal Order, Profit Center, GL Account
+and Plant as optional, required, or hidden for Invoices and Memos. The settings now apply
+to AP documents line items to ensure fields are handled consistently across all
+Procure-to-Pay documents.
+To enable this feature, please contact support@vroozi.zendesk.com. Once enabled, line
+item fields in AP documents will adhere to the configured settings.
+**[Image here]**
+
+
+## OPTION TO RESTRICT INVOICE INBOX VISIBILITY FOR AP MANAGERS
+If enabled, AP Managers will only see AP documents in the Hopper Inbox (Document
+Inbox) or Archive folder based on the Email Access or Structured Document Submission
+Access Rules. AP Managers will need to be explicitly assigned using the access rules to
+access AP documents in the inbox. Some companies allow AP Managers to access all
+documents, but if you want to restrict what the AP Managers can access, then this option
+will allow the restriction through the access rules.
+
+To enable this feature, please contact support@vroozi.zendesk.com. Once activated, AP
+Managers will see only the documents associated with their assigned Access Rules.
+
+The Access Rules can be defined in the Admin Panel under Accounts Payable => Settings
+=> Inbox under the sections Email Access Rules and Structured Document Submission
+Access Rules.
+**[Image here]**
+
+# Vroozi Purchase (Supplier)
+## MORE PROMINENT PO CANCELLATION STATUS ON THE PO PDF
+The canceled status will now be more prominent on a Purchase Order (PO) PDF so that
+suppliers clearly know that the order is canceled ie: not a new order.
+The PO pdf is generated and sent to the supplier after a user performs a Purchase Order
+Change Request (POCR). When items are canceled in an order, suppliers will now have
+better visibility into the status of the PO or PO Line items.
+**[Image here]**
+# Resolutions
+- In Vroozi Purchase and Marketplace, users can now add fractional quantities to the
+     shopping cart from Punchout Catalogs items.
+- If an item has an Item Model Number defined, the field will now be displayed in the
+     Purchase Request and Shopping Cart item details.
+- Users can now customize the line item column display in the Payment Request.
+- Vroozi Purchase
+  
+    - Removed the GL display restriction (formerly 10 GLs) in the User Profile GL
+               Access field.
+    - Fixed searching in the Receipts => Ready to Receive screen. Prior to this
+               release, when the system would reset the documents list to the default state,
+               it didnt recognize the user's new search query until the reset was complete.
+               Now the user can't enter a new value in the search field until the reset
+               operation on the screen is complete.
+    - PR and PO Line items will no longer be deleted after updating the supplier
+               master data.
+    - Resubmitting a Rejected Change Request after changing item data will
+               update the line item status to 'Change(s)' instead of 'New Addition'.
+    - Resolved a freezing issue in ""Apply to All"" caused by manually adding a %
+               sign in the Split by Percent value. The % value now defaults automatically,
+               eliminating the need for manual entry.
+- Catalog change report will capture additional fields after a user updates the item
+       price via Direct Item Update.
+- Fixed an issue where the configurable item checkbox functionality did not work
+       properly if existing items are updated via Merge & Update.
+- Vroozi Invoice
+
+    - Improved Inbox, Invoice, and Track Invoice user experience on mobile.
+    - Users can now successfully select and replace an existing exception
+               percentage.
+- Resolved an issue in the line item column selection (Invoice, Memo, and Purchase
+       Request) where the filtering options did not highlight relevant matches and caused
+       the Column Preferences list to reset upon selection."
+RC-2024-9-2,"November 15, 2024
+**[Image here]**
+                Vroozi November 2024
+                         Release Notes
+Table of Contents:
+Vroozi Administration (Admin)                              2
+   Company Code Restrictions for AP Managers               2
+Vroozi Purchase (Supplier)                                 3
+   Highlighting Canceled Line Items in an Updated PO PDF   3
+Resolutions                                                3
+# Vroozi Administration (Admin)
+## COMPANY CODE RESTRICTIONS FOR AP MANAGERS
+Administrators can restrict an Accounts Payable Managers visibility to Invoices and Memos
+by Company Code. This allows companies to create invoice processing strategies across
+multiple company codes and restrict invoices that need to be processed by the relevant
+company code.
+
+To enable this feature, please contact support@vroozi.zendesk.com. When enabled,
+Admins configure the restriction under Accounts Payable > Settings >Inbox > Structured
+Document Submission Access Rules.
+
+This feature is related to the Restricting Inbox Visibility for AP Managers feature that was
+released in October 2024, where companies could restrict AP Managers to specific invoices
+defined in the inbox access rules (as opposed to AP Managers seeing all invoices).
+
+Currently this feature is rolled out to AP Managers. In future releases, we plan to include AP
+Approvers, AP Coders, and AP Auditor roles.
+**[Image here]**
+# Vroozi Purchase (Supplier)
+## HIGHLIGHTING CANCELED LINE ITEMS IN AN UPDATED PO PDF
+Canceled line items on a Purchase Order Change Request will now be displayed more
+prominently on the PDF document that is sent to the supplier. This will provide better
+visibility into what line items were canceled on the new PO version.
+This feature will be available by default on all POCR documents that are sent to the supplier.
+**[Image here]**
+# Resolutions
+-PRs that were auto-forwarded during Approval incorrectly display the Fallback
+       Approver as part of the approval chain. The Fallback Approver will no longer
+       display when a PR is auto-forwarded.
+- The system will now account for deleted unreceived items in a PO Change
+       Request (POCR) to update the PO status to RECEIVED.
+- Notes will no longer be duplicated for rejected POCRs where the user updated
+       the Supplier Notes.
+- Users will be able to delete items on a rejected PO Change Request so they can
+    update and resubmit.
+- Users will be able to access the side panel on a mobile device when in landscape
+    mode.
+- The PO Search filter will now include POs created via Buy Route.
+- When an admin eliminates roles in user profile, the change will be reflected in
+    the user bulk upload.
+- Resolved an inconsistency in quantity displayed. An internal catalog would
+    appear as, 1, but when transferred to the cart the system would display 1.0.
+- Eliminated the duplicate attachment when a Sourcing Reviewer uploaded an
+    attachment on a POCR.
+- Track All Invoices sort by feature would display the correct results in the table.
+    However when a user entered the document view and navigated to the next
+    invoice using the arrow buttons, the search results and sorting was not
+    maintained. The next invoice in the document view will now follow the sort
+    display.
+- Resolved an issue where the GL Account was not displayed on the Invoice PDF.
+   Users can now view, create, and process invoices from the hopper without losing
+    their place in their work list eg: not be disrupted by new incoming invoices.
+- Clients using the line-item configuration settings for AP documents, along with
+    the Customer field, should see the document settings (Required, Optional, or
+    Hidden) applied when valid accounting objects are used in the invoice line item
+    that are associated with one or more valid customers in the system.
+- Fixed the issue where AP users with both AP Manager and AP Processor roles
+    were unable to see invoices in the Hopper.
+   Resolved the issue where AP Processors could view and take action on Supplier
+    Portal invoices from the Hopper that did not follow the Structured access rule.
+- Clients who were not using any accounting categories received a ""Cost Center
+    required"" error message on Non-PO OCR Invoice documents. This issue has
+    been corrected.
+- For non-catalog items without a Unit of Measure (UOM), the system assigns AU
+    if that exists in the company's UOM master data. Otherwise, UOM is left blank.
+    For catalog items, the UOM is taken from the catalog UOM.
+- Users can now update the delivery date or service period on line items during PO
+    Change Requests."
+RC-2024-10-2,"December 13, 2024
+**[Image here]**
+                  Vroozi December 2024
+                            Release Notes
+Table of Contents:
+Vroozi Analytics                                                           2
+   Invoice Exception Tracking in Reporting                                 2
+Vroozi Invoice                                                             2
+   Approval Preview and Tracing in Invoices, Memos, and Payment Requests   2
+       Previous approval chain                                             4
+       Approval Chain - approval tracing                                   5
+Resolutions                                                                9
+# Vroozi Analytics
+## INVOICE EXCEPTION TRACKING IN REPORTING
+Invoice exception types will now be stored in the analytics database. The system will
+now capture the exceptions as the invoice transitions through various statuses and
+eventual resolution. Users with reporting access will gain insights into why invoices go
+into exception handling and how the exceptions are eventually resolved. Ultimately the
+analysis will help to reduce exceptions or to resolve exceptions faster over time.
+This feature will be available by default and accessible by companies with Ad Hoc
+reporting. The Vroozi team will deliver standard exception reports for all customers in
+an upcoming release. Note that the exception types will be available on any newly
+created documents (ie: it will not be available for historical invoices created prior to this
+release).
+
+# Vroozi Invoice
+## APPROVAL PREVIEW AND TRACING IN INVOICES, MEMOS, AND PAYMENT REQUESTS
+For companies using the new dynamic workflow, Invoices, Memos, and Payment
+Requests will now display an approval preview in the right-hand document menu.
+Users in the AP documents can now confirm that the document will follow the proper
+workflow.
+
+In addition, for invoice approvals that are in process, have completed, or have restarted
+due to rejection, the approval chain view shows the approval status and history,
+including approvers who have stepped into the process due to fallback approval, out of
+office, delegate approver, or AP Manager approval. Also, if workflow is changed and a
+new approval chain is created, Vroozi will display the previous chain information under
+Previous Approval Chain with a version number. The new Approval Preview and
+Tracing enables more complete invoice approval tracing to show what changed, and
+who approved.
+
+This feature will be enabled automatically for all customers who have the Dynamic
+Workflow enabled. To enable the dynamic workflow, please contact Customer Support
+or email Customer Success at success@vroozi.com
+**[Image here]**
+
+## PREVIOUS APPROVAL CHAIN
+Where new approval chains are created as invoices are changed in the process, the
+system will maintain a view of the historical approval chains and version number.
+
+**[Image here]**
+                                                              
+# APPROVAL CHAIN - APPROVAL TRACING
+In the following screen shots, the approval chain shows where approvers have stepped
+into the approval chain because of fallback approval, out of office, delegate approver, or
+AP Manager approval.
+**[Image here]**
+                                                                   
+# Resolutions
+- For companies who have not created structured document access rules for
+     invoices, the system will now assign auto-created invoices to AP Managers and
+     AP Processors using the correct default group.
+
+- For companies with email and structured invoice document access rules, AP
+    Processors will no longer see invoices if they are not assigned to any Email or
+    Structured Workflow Rules.
+- cXML invoices with errors will now correctly appear for users configured in a
+    structured access rule.
+- Resolved a rounding issue with 50% distribution that prevented Payment
+    Requests from posting successfully into the ERP system.
+- Fixed an issue introduced into the line item modal in the last release that
+    allowed service line items to be created with a \$0.00 price. It is once again no
+    longer possible to have line items in the PR / PO with a \$0.00 price.
+- Delivered a more appropriate error response when a cXML order confirmation
+    was submitted for a Confirmed Order. The system previously returned a null
+    pointer exception."
+RC-2025-1,"January 10, 2025
+**[Image here]**
+                      Vroozi January 2025
+                             Release Notes
+Table of Contents:
+Vroozi Analytics                             2
+   Vroozi Analytics Platform Upgrade         2
+Resolutions                                  3
+# Vroozi Analytics
+## VROOZI ANALYTICS PLATFORM UPGRADE
+Vroozi upgraded the Google Looker platform for Vroozi Analytics. This marks the first
+step in our journey to provide faster and enhanced analytics and to deliver on our
+migration to more advanced analytics and intelligent analytics. In this first step, Vroozi
+upgraded to the latest Looker Version for the latest features, performance
+enhancements, and security updates.
+**[Image here]**
+The Analytics platform upgrade will unlock significant benefits:
+- Faster Insights:
+- Improved Performance and Scalability
+- Unlock Intelligent Analytics with AI (Future Development)
+
+In the next phase of our journey, Vroozi will be updating the data model, leveraging the
+platform speed and scalability, and addressing performance and usability.
+
+# Resolutions
+- Improved Hopper Inbox document processing performance.
+- Improved Terms & Conditions load time particularly where there were a
+     significant number of Company Codes or Suppliers.
+- Resolved an issue affecting Purchase Order status updates when receiving and
+     canceling an ASN. When a user cancels the ASN and the PO's amount is within
+     the 'Goods Receipt Threshold' limit, the system will correctly update the
+     Purchase Order status to 'Confirmed' on both the Supplier Portal and Purchase
+     Manager.)
+- Fixed Invoice status issue where ""Paid"" in Great Plains was incorrectly showing
+     ""Posted"" on the Vroozi invoice.
+- For certain accounting and organizations Master Data objects; e.g. Cost Centers,
+     GL Accounts etc. the system was displaying leading zeros despite the client
+     having configured the system to NOT display these leading zeroes. This issue has
+     been resolved."
+RC-2025-2,"February 14, 2025
+**[Image here]**
+                    Vroozi February 2025
+                        Release Notes
+Table of Contents:
+Vroozi Catalog Content Management (Catalog Admins)      2
+   Catalog Update Processing Performance Improvements   2
+Resolutions                                             2
+# Vroozi Catalog Content Management (Catalog Admins)
+## CATALOG UPDATE PROCESSING PERFORMANCE IMPROVEMENTS
+With this release, Vroozi improved catalog upload and processing. Previously, some
+users experienced slower processing times when updating catalogs particularly when
+there were a significant number of catalog versions. We overhauled our processing
+logic to ensure more efficient handling of catalog updates. With this change, our
+testing showed faster, more consistent, and more reliable performance no matter how
+many catalog versions were in the system.
+- Time Savings: Customers will get significantly reduced processing times, even for
+      heavily updated catalogs.
+- Consistency: The system will exhibit reliable performance regardless of how
+      many catalog versions.
+- Scalability: Customers will be able to handle frequent updates without worrying
+      about diminishing system efficiency.
+
+This enhancement will be available to all customers. No configuration change is
+required.
+# Resolutions
+- The unread notification count on the bell icon (bottom left corner of the left
+      navigation column) will now update automatically. The notification count will
+      now update dynamically as new notifications arrive, ensuring accurate and
+      real-time badge counts. No need to refresh the browser to update the count.
+- Resolved an issue on the shopping cart screen where the Move to Request
+      button remained enabled during processing, allowing multiple clicks and
+      causing duplicate purchase requests. The button is now disabled after the
+      request click until the operation is complete, preventing duplicates.
+- Fixed an issue where updating the shipping address at the Purchase Request
+      (PR) document level did not propagate the change to individual line items. The
+      system now correctly replicates the updated address across all line items in the
+      PR.
+- The system now consistently removes leading zeroes on the UI as per the
+   configuration to hide leading zeros, while retaining the leading zeros in the
+   database."
+RC-2025-3,"March 14, 2025
+**[Image here]**
+                     Vroozi March 2025
+                          Release Notes
+Table of Contents:
+Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory
+Power User, Supplier Directory Basic User)                                       2
+   User Groups for Supplier Record Access Control and Improved Maintenance in the
+   Supplier Directory                                                            2
+Resolutions                                                                      2
+# Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory Power User, Supplier Directory Basic User)
+## USER GROUPS FOR SUPPLIER RECORD ACCESS CONTROL AND IMPROVED
+# MAINTENANCE IN THE SUPPLIER DIRECTORY
+User Groups deliver structured, role-based access and settings to the Vroozi Supplier
+Directory.
+To control access, users are assigned to a user group. Supplier records are then linked to
+one or more user groups to control user visibility to the supplier record. The supplier bulk
+upload/download now supports a User Group field so it can be used to assign supplier
+records to user groups.
+For better supplier record maintenance, Supplier Directory Admins can filter and manage
+supplier records on the basis of User Groups.
+
+# Resolutions
+- Updated the Japanese translation for Profit Center.
+- Fixed an error that was triggered in the approval when the companys Fallback Approver was set as a Sourcing Reviewers alternate approver.
+- Resolved an issue with the Purchase Request Apply to All automatically populating the Tax Code field when a user selected a Company Code"
+RC-2025-4,"April 11, 2025
+**[Image here]**
+                         Vroozi April 2025
+                            Release Notes
+Table of Contents:
+Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory Power User,
+Supplier Directory Basic User)                                                          2
+   Supplier Directory User Experience Enhancements                                      2
+       Full display of all fields including custom fields                               2
+       Introduction of User Groups to the Guidelines                                    2
+       More Information in the Admins User Display                                      3
+Resolutions                                                                             3
+# Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory Power User, Supplier Directory Basic User)
+## SUPPLIER DIRECTORY USER EXPERIENCE ENHANCEMENTS
+Additional improvements have been made to the Supplier Directory making the
+experience more efficient and user-friendly. For one, user-generated reports can now be
+filtered by group (groups were introduced in the March release). This release also includes:
+
+## FULL DISPLAY OF ALL FIELDS INCLUDING CUSTOM FIELDS
+Users no longer need to expand the fields to display all the content in a section,
+including all the custom fields added to the supplier record. The new page display also
+reduces scrolling.
+**[Image here]**
+## INTRODUCTION OF USER GROUPS TO THE GUIDELINES
+**[Image here]**
+## MORE INFORMATION IN THE ADMINS USER DISPLAY
+Admins can easily identify user roles, group, and project details within the User display.
+**[Image here]**
+# Resolutions
+- The system will now correctly load the appropriate Tax Code value on the Apply
+      to All modal, for the situation when a company has all 4 accounting objects (Cost
+      Centres, WBS Elements, Internal Orders, Profit Centers) turned off in the Admin
+      settings UI."

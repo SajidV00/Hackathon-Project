@@ -1,0 +1,1181 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-107940",
+        "summary": "SOCI - PMAN/SDM Admin - User/Supplier Bulk Upload - User_Group needs to be ignored for Export, Download and Upload Templates.",
+        "description": "url:   https://soci-go.vroozi.com/#/login username:   notifyvroozi@gmail.com password:  Welcome1 Preconditions: PMAN Admin User should have logged into the Application. User_Group_Enhancements Toggle should be OFF in DB. SDM Toggle should be ON in DB. Steps to Reproduce: Access User/Supplier Page via Master Data. Export, Download or Upload a Template without User_Group Column. Error generates. Actual result: Error generates. Expected Result: User_Group should be ignored. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-02-13T09:19:52.367-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107345",
+        "summary": "Unable to create a PR for certain items",
+        "description": "env: devqa15 User:  mutahir.sohail+empdevqa15Catalog4@vroozi.com Test@123 Steps: Login to the application using given creds Add one of the following items into the cart: https://devqa15-purchase.vroozi.com/#/search//searchdetail/6791fb260c9414098cb5353a https://devqa15-purchase.vroozi.com/#/search//searchdetail/6791fb260c9414098cb53198 https://devqa15-purchase.vroozi.com/#/search//searchdetail/6791fb260c9414098cb53258 Go to the cart Create a new PR from the cart Expected: PR is created Actual: Error is displayed Reproducible also form Smart Chat: Loom:",
+        "status": "Release Candidate",
+        "assignee": "Mutahir Sohail",
+        "created": "2025-01-28T16:32:36.314-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107070",
+        "summary": "PR: If no line item is available in the PR and user add the header level shipping address it will keep loading the screen",
+        "description": "Environment:  Stage Unitid:  78 Employee username:   abdullah.iqbal+emp+78@vroozi.com password:   Welcome@1 Pre Conditions: Login with employee Employee Default shipping address is not selected  Steps to Reproduce: Login with employee Click on Non Catalog Request Go to header level shipping address Select Shipping address Screen stuck and keep loading  Screenshot Actual Result:  If no line item is available in the PR and user add the header level shipping address it will keep loading the screen Expected Results: If no line item is available in the PR and user add the header level shipping address it should select the address successfully .",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-21T02:05:56.774-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107068",
+        "summary": "NG2: CR: Checkboxes are not showing with item on the CR if sourcing and financial approver edit the CR",
+        "description": "Environment:  Stage Unitid:  78 Employee username:   abdullah.iqbal+emp+78@vroozi.com password:   Welcome@1 Sourcing Approver: Username:   abdullah.iqbal+sourcing1+78@vroozi.com Password:  Welcoem@1 Financial Approver: Username:   abdullah.iqbal+approver1+78@vroozi.com Password:  Welcoem@1 Pre Conditions: Login with employee Enable sourcing Approver toggle Enable financial approval workflow Enable POCR toggles  Steps to Reproduce: Create PR PR gets approved PO is created against the PR Select Sourcing Approver Submit the PR Open the PO Do POCR CR is created and it goes for Sourcing approver first and then Financial approver Login with the Sourcing approver Open the recently created CR Click on Edit button Select item checkboxes are not showing Apply ALL button is showing as inactive  Approve the CR from sourcing approver Login with Financial approver Open the recently created CR Click on Edit button Select item checkboxes are not showing Apply ALL button is showing as inactive  Screenshot Actual Result:  Checkboxes are not showing with item on CR if sourcing and financial approver edit the CR. Expected Results: Checkboxes should be displayed with item on CR if sourcing and financial approver edit the CR",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-21T01:54:37.595-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-107043",
+        "summary": "NG2: PR: If Financial approver and Sourcing approver edit and update the items from Apply ALL model then it is showing error in the console.",
+        "description": "Environment:  Stage Unitid:  78 Employee username:   abdullah.iqbal+emp+78@vroozi.com password:   Welcome@1 Sourcing Approver: Username:   abdullah.iqbal+sourcing1+78@vroozi.com Password:  Welcoem@1 Financial Approver: Username:   abdullah.iqbal+approver1+78@vroozi.com Password:  Welcoem@1 Pre Conditions: Login with employee Enable sourcing Approver toggle Steps to Reproduce: Click on Non-catalog Request under create Select Sourcing Approver Submit the PR Login with the Sourcing approver Open the recently created PR Click on Edit button Select items Click on Apply ALL button Go to Shipping address field Select another address Open the console from inspect element Click on Apply Changes button Error showing in the console Shipping Address is not get updated on the PR items Apply ALL model is not getting closed Note:  If financial approver update the item from Apply ALL then it is also showing error in the console.  For reference:     1000001317  (Open from Sourcing Approver) 1000001207  (Open PR from Financial Apporver) Screenshot Actual Result:  If Financial approver and Sourcing approver edit and update the items from Apply ALL model then it is showing error in the console. Expected Results: If Financial approver and Sourcing approver edit and update the items from Apply ALL model then it should not shows any error in the console and it should update the item and close the Apply ALL model.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-20T22:55:32.248-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106992",
+        "summary": "NG2 PR document upgrade- Financial approver is not able to approve PR from UI. ",
+        "description": "Server:  Stage Credentials:   javaid.sattar+emp1@vroozi.com  / Welcome1@ Credentials:   javaid.sattar+app1@vroozi.com  / Welcome1@ Pre-Req: Maersk Approval Workflow should be enabled. Steps to Reproduce: Login with the given credentials create PR that went for Financial review login with Financial approver user  Try to approve PR.  Actual Result:  approver click on approve button exception is logged in console. Financial approver is unable to approve PR document. Expected Result:  Financial Approver should be able to approve PR successfully.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-20T00:05:39.943-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106991",
+        "summary": "Stage - PMAN/SDM - Supplier Export -  User Group values are being fetched in the wrong column in the Exported File.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ username:   notifyvroozi@gmail.com password:  Welcome1@ Preconditions: SDM/PMAN Admin User should have logged into the Application. Steps to Reproduce: Access PMAN/SDM>Master Data>Suppliers Page. Click to Export Suppliers Icon. Export Processes and Icon becomes Green. Click again on the Green Export Suppliers Icon. Export File downloads on the machine. Access and Open it. Please see the User_Groups Column is empty for the SDM Suppliers having one or more associated to them. Search by the User Group Name. Please see the details are available in some other column. For me its BANK_Info_Custom_Fields and BANK_Control_KEY Actual result: User_Groups Column is empty for the SDM Suppliers having one or more associated to them in the Export File. Expected Result: User_Groups correctly contain the values selected for given SDM Suppliers. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-19T23:52:58.457-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106955",
+        "summary": "PR Ng2: In Ng2 \"meta-data?ids=\" calls are according to the line items in the network tab on PR-display screen. ",
+        "description": "Environment:  Stage username:   abdullah.iqbal+emp+78@vroozi.com password:   Welcome@1 CR: 11000000068   Pre Conditions: Enable Ng2 Feature Toggle  Login with employee Steps to Reproduce: Create PR with 500 items Bulk Upload file having 500 line item.     Upload above file Submit the PR Open the recently created PR Open the network logs \u201cmeta-data?ids= \u201c calls are showing for every individual line item Screenshot   Actual Result: In Ng2 \"meta-data?ids=\" calls are according to the line items in the network tab on PR-display screen.  Expected Results: In Ng2 \"meta-data?ids=\" call should be one in the network tab on PR-display screen.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-17T04:42:30.566-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106951",
+        "summary": "Stage - PMAN/SDM - Supplier Bulk Upload - Same User Group is being uploaded twice in the User Groups Field.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: SDM/PMAN Admin User should have logged into the Application. Steps to Reproduce: Access PMAN/SDM>Master Data>Users Page. Upload a Supplier with an Active User Group mentioned twice in the Bulk Upload sheet\u2019s 'User Groups' Column. Record creates successfully. Access the Same Supplier Record in the Application\u2019s Supplier Grid. In Basic Info Tab, Scroll Down and see 'User Groups' field. Please see the same value is showing twice. In my case, its   \u2018Edge\u2019s, Edge\u2019s' Actual result: In User Groups Field, same value when uploaded is showing twice. In my case, its   \u2018Edge\u2019s, Edge\u2019s' Expected Result: Same value uploaded should show one time in the 'User Groups' field. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-17T03:16:35.501-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106945",
+        "summary": "Stage - PMAN - Shopper View -  If the user navigates all other Screens in the Nav Pane and comes back on the Payment Request Screen it does not open..",
+        "description": "url:   https://stage-go.vroozi.com username:   asma.latif+EMP2502@vroozi.com password:  Blueangel1@ Pre requisites: PRQ User should have logged into the Application. Steps to Reproduce: Access Payment Request Screen by clicking Payment Request under Create in left Nav Pane. Do nothing and just save this Payment Request. Now start navigating from Purchase requests till Document Flow in the Left Nav Pane. Now again Click Payment Request under Create in the Left Nav Pane. Please see its not opening as nothing happens on the click. Actual Result: Payment Request Screen does not open. Expected Result: Payment Request screen should open successfully. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-17T00:51:07.656-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106943",
+        "summary": "Performance Issue: When a Purchase Request (PR) contains 500 line items, there is a noticeable loading delay, specifically when the NG2 implementation is enabled.",
+        "description": "Pre Condition: NG2 feature toggles should be enabled: Steps to Reproduced: env: Stage Unit id 83. URL:  https://stage-go.vroozi.com/#/login Login:  waheed.nawaz+employee_stage83@vroozi.com Password: Welcome1! Click on the Bulk Upload button and upload the below file. Bulk Upload file having 500 line item.    File Uploaded successfully Open the the PR. Actual Result: Loading a Purchase Request (PR) with 500 line items takes noticeable time, indicating a performance issue. After the load is complete, when the user scrolls through the line items, they display with delays, further impacting the user experience. Expected Result: There should be no delays experienced by the client, as the system is designed to support 500 line items on a Purchase Request seamlessly.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2025-01-16T23:04:17.169-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106928",
+        "summary": "NG2 Upgrade: Catalog PR: When the user updates the header-level shipping address, the system does not update the shipping address on the PR line items.",
+        "description": "Server:  https://stage-go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+emp1@vroozi.com  / Welcome1@ \u00a0 Pre- Requisite: No default shipping address is assigned against requester user. Create PR from catalog Items.  Steps to Reproduce: Login with above user. open Newly created catalog PR header level and line item level error message is displayed related to missing shipping address. Now select shipping address on PR header. Actual Result: The system only updates the shipping address on the PR header, but the shipping address is not updated for any line items. Expected Result: When the user selects a shipping address at the PR header level, it should automatically reflect on all line items as well.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-16T08:25:52.707-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106853",
+        "summary": "NG2 Upgrade: Shipping address Field keeps on spinning when the user adds a header-level shipping address to a PR, if no default shipping address is assigned in the user's profile.",
+        "description": "Server:  https://stage-go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+emp1@vroozi.com  / Welcome1@ \u00a0 Pre- Requisite: No default shipping address is assigned against requester user. No shipping address is provided in BOM file. BOM file is uploaded with more than 25 line items and PR is created in draft. Steps to Reproduce: Login with above user. open Newly created PR header level and line item level error message is displayed related to missing shipping address. Now select shipping address on PR header. Actual Result: Header level Shipping address field keeps on spinning once user adds a header-level shipping address to a PR Expected Result: When the user selects a shipping address at the PR header level, it should automatically reflect on all line items.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-16T02:27:45.869-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106841",
+        "summary": "VERTEX connector is not set up and enabled",
+        "description": "Steps to reproduce: Stage URL Username:  notifyvroozi83@gmail.com Password: Welcome1 Navigate to the Company \u2192 Connectors screen Expand the VERTEX Connector and enable the toggle Actual Result: Expected Result: Vertex Connector should be enabled and connected Note:  Vertex Connector also not working with disabled",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-16T00:30:11.531-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106838",
+        "summary": "Stage - PMAN/SDM - User Group field is available even the relevant feature toggle is off in DB which is not letting create User and Suppliers.",
+        "description": "URL:     username:  misbahazeem08+SDMadmin@gmail.com password:  Welcome@1 Preconditions: SUPPLIER_DISCOVERY__USER_GROUP_ENHANCEMENTS FT should be disabled or should not exist for the Company UnitId. SDM should be enabled in DB PMAN/SDM Admin User should have logged into the Application. Steps to Reproduce: Login with a given user. Navigate to the Master Data-> Users. Start creating a user. User Group field is shown as mandatory field. Navigate to the Master Data-> Suppliers. Start creating a supplier. When supplier discovery toggle is ON it should not allow user  to create a Supplier. Actual result:  User is not be able to create a User + Supplier. Expected Result: User should be able to create a User + Supplier. Screen-shot:",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-16T00:09:14.849-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106836",
+        "summary": "NG2 Upgrade - Sourcing approver cannot provide output method as it is blocked by **Add approval Notes** window",
+        "description": "Server:  Stage Credentials:   ayesha.waseem+10+emp@vroozi.com  / Welcome1@ Sourcing User:   ayesha.waseem+10+sourcing1@vroozi.com  / Welcome1@ Pre-Req:  Sourcing approver Workflow should be on PO output enhancement for supplier should be enable in document settings Steps to Reproduce: Login with the given credentials Open the draft PR Add a line item   Add a supplier which has Output method configure Submit the PR (PR should go to sourcing approver) Login with sourcing approver and access the PR Edit the PR and change the supplier (this supplier should not have any PO out put method assign) Click  Done  button Now click on Submit button Actual: Application will open the Approver comments popup over the the window to provide out put method, hence blocking the user to give output method Expected: Application should show the modal window to provide output method first",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-15T23:31:22.810-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106822",
+        "summary": "NG2 PR document upgrade - warning messages aren't shown on the Line Item modal when users try to update accounting objects with incorrect combinations from apply to all model.",
+        "description": "Server:  Stage Credentials:   javaid.sattar+emp1@vroozi.com  / Welcome1@ Pre-Req: Steps to Reproduce: Login with the given credentials create PR from bulk upload with valid accounting combinations Company code [RC-2025-2] and accounting combination selected on all  line item  Now select line item and click on apply to all model.  now try to update accounting object from other company code [RC-2025-1] . now click on apply changes button. Actual Result:  No validation information message displayed on PR header when user tries to update invalid accounting objects.  Expected Result:  When user tries to update accounting objects of other company code  then system should display proper validation information message \u201c The specified change conflicts with one or more of the company info or accounting elements that are already present on this item \u201d.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-15T22:06:10.232-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106797",
+        "summary": "PMAN: System throws an error when the tax_value column in the BOM file is left blank or contains a '0' value",
+        "description": "Issue:  PMAN: System throws an error when the tax_value column in the BOM file is left blank or contains a '0' value Server: URL:  https://stage-go.vroozi.com/#/login Username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com Password: @Welcome1 Pre-Conditions: Log in to PMAN as an Administrator. Prepare a BOM file with data in all required fields, but leave the  tax_value  column blank or provides a '0' value   Steps to Reproduce: Log in to PMAN as an Employee user. Create a Purchase Request using the Bulk Upload feature. Verify the Purchase Request. Actual Result: The system creates the Purchase Request but also generates an error report stating: \u201cLine item (x) Tax Value can only be specified as a positive value.\u201d Expected Result: If the user does not provide any value in the  tax_value  column (and no negative value is specified), the system should not display any error related to the Tax Value.",
+        "status": "Release Candidate",
+        "assignee": "Javaid Sattar",
+        "created": "2025-01-15T06:20:30.742-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106786",
+        "summary": "Stage - Payment Request - Category column showing value as N/A only when Category was already selected in the grid from column preferences",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   aqsa.rani+admin@vroozi.com password:  Qwerty@1 Preconditions: Category should already selected in the grid from column preferences Steps to Reproduce: Click to Create PRQ via Shopper View > payment request Add an Item with all details for both General Info and Accounting Info. Please see Category Column is showing N/A in the Item grid. Actual result: Category Column is showing N/A in the Item grid. Expected Result: Category Column should show the value in the Item grid. Screen-shot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-01-15T02:53:11.836-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106771",
+        "summary": "Stage - SDM - Master Data - Users - User Groups - User Group Name Text containing Apostrophe is throwing error.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: SUPPLIER_DISCOVERY__USER_GROUP_ENHANCEMENTS FT should be enabled for the Company UnitId. PMAN/SDM Admin User should have logged into the Application. Certain User groups should exist in the 'User Groups' Grid. Steps to Reproduce: Access SDM>Master Data>Users Page. Edit Open the User Group. Paste the following text in Description field: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's  standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Save. User Group Saves successfully. Again Edit Open the same User Group. Paste the same text in the Name Field. Save. Error shows and User Group not saved this time. Actual result: Text when contains  Apostrophe  is not being saved and throwing error for the User Group  Name . Expected Result: Error should not show with text saved correctly. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-15T00:17:32.528-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106766",
+        "summary": "CatalogRef is not accepted and validation message appeared on the screen when passing reference with docNo and externalId in the request payload",
+        "description": "Precondition: Catalog  \u201c TestHS \u201d  with  NEW_ITEM-EXT_PRODUCT_ID:   5b6033563dcba03bf144e2e3  already exists in the smart OCI Steps to reproduce: Create a PR using POST endpoint with passing the CatalogRef as \u201c TestHS \u201d  with  NEW_ITEM-EXT_PRODUCT_ID:   5b6033563dcba03bf144e2e3  in the request payload CURL: curl --location 'https://staging-api.vroozi.com/v1/purchase-requests' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJjYjNiOGNiNC1jNDQ5LTQ0N2YtYWQ5OS1iMjI1NzljNmY2MjEiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiZGMxMGFjYmYtZmZmNi00NmFiLWI5ZjMtNmI5MDk0YTc3ZWYxIn0.Ln_5-MyhXH5k7kc5kodjGavbb1xyPHA5Bk7eSt0whNQtHU0-BeJAELjcXarYLkQD04a93qpNKugtjfCtHxSnqA' \\\n--header 'x-api-key: 9vPCZmeKIY3pUXVNBEUD59wHp4r6pKsr87voQj0c' \\\n--header 'useExternalId: true' \\\n--data-raw '{\n    \"id\": \"67877161e2478b1f2d9c83ed\",\n    \"externalId\": null,\n    \"dateCreated\": \"2025-01-15T08:27:13.942+0000\",\n    \"lastUpdated\": \"2025-01-15T08:27:53.720+0000\",\n    \"requestNumber\": \"1000007321\",\n    \"name\": \"Hasnat Employee 1000007321\",\n    \"status\": \"DRAFT\",\n    \"requesterRef\": {\n        \"id\": \"71820\",\n        \"externalId\": \"\",\n        \"docNo\": \"hasnat.saleem+employee_stage83@vroozi.com\",\n        \"label\": \"Hasnat Employee\",\n        \"type\": \"UserModel\",\n        \"archived\": false\n    },\n    \"powerUserRef\": null,\n    \"purchaseOrderRef\": null,\n    \"shippingAddress\": {\n        \"id\": \"66b093919b772d369118cab4\",\n        \"externalId\": \"RA TEST Reggression\",\n        \"dateCreated\": \"2024-08-05T08:55:45.699+0000\",\n        \"lastUpdated\": \"2024-08-13T12:05:36.320+0000\",\n        \"addressId\": \"0000000160\",\n        \"name\": \" RA TEST Reggression\",\n        \"attentionTo\": \"John Smith\",\n        \"addressType\": [\n            \"billing\",\n            \"shipping\"\n        ],\n        \"street1\": \"15000 Ventura Blvd\",\n        \"street2\": \"Suite# 201\",\n        \"city\": \"Sherman Oak Raveeha\",\n        \"postalCode\": \"91403\",\n        \"state\": {\n            \"name\": \"California\",\n            \"code\": \"CA\"\n        },\n        \"country\": {\n            \"name\": \"United States of America\",\n            \"code\": \"US\"\n        },\n        \"phone\": \"+1 (201) 555-5555\",\n        \"buildingCode\": \"VZI Building\",\n        \"roomNo\": \"201\",\n        \"floor\": \"2nd\",\n        \"email\": \"raveeha.amjad+address@vroozi.com\",\n        \"active\": true\n    },\n    \"reasonForRequest\": null,\n    \"notesToSupplier\": null,\n    \"rejectionCode\": null,\n    \"approvalCode\": null,\n    \"reasonForReject\": null,\n    \"approvedDate\": null,\n    \"rejectedDate\": null,\n    \"submittedDate\": null,\n    \"currency\": \"USD\",\n    \"subTotal\": 39.06,\n    \"taxAmount\": 0.0,\n    \"shippingCharges\": 0.0,\n    \"totalAmount\": 39.06,\n    \"items\": [\n        {\n            \"id\": \"18527\",\n            \"accountDistributionList\": [\n                {\n                    \"glAccountRef\": {\n                        \"id\": \"6553830e3e1b0d0d4ff25640\",\n                        \"externalId\": null,\n                        \"docNo\": \"hgl100\",\n                        \"label\": \"hgl100 - Hasnat GL Code\",\n                        \"type\": \"GlAccountModel\",\n                        \"archived\": false\n                    },\n                    \"charge\": null,\n                    \"costObjectRef\": {\n                        \"id\": \"655460143e1b0d421551f8c2\",\n                        \"externalId\": \"Hasnat Cost Center Stage 83\",\n                        \"docNo\": \"hc100\",\n                        \"label\": \"hc100 - Hasnat Cost Center Stage 83\",\n                        \"type\": \"CostCenterModel\",\n                        \"archived\": false\n                    },\n                    \"customerRef\": null,\n                    \"companyCodeRef\": {\n                        \"id\": \"43215\",\n                        \"externalId\": null,\n                        \"docNo\": \"hcc100\",\n                        \"label\": \"hcc100 - Hasnat Company Code Description\",\n                        \"type\": \"CompanyCodeModel\",\n                        \"archived\": false\n                    },\n                    \"classRef\": null,\n                    \"projectRef\": null,\n                    \"locationRef\": {\n                        \"id\": \"67874f1ab79d1176340422f0\",\n                        \"externalId\": null,\n                        \"docNo\": \"Hasnat Location\",\n                        \"label\": \"Hasnat Location - Hasnat Location\",\n                        \"type\": \"LocationModel\",\n                        \"archived\": false\n                    },\n                    \"locationTypeRef\": {\n                        \"id\": \"67874ef2b79d1176340422e5\",\n                        \"externalId\": null,\n                        \"docNo\": \"Hasnat Location Type\",\n                        \"label\": \"Hasnat Location Type - Hasnat Location Type\",\n                        \"type\": \"LocationTypeModel\",\n                        \"archived\": false\n                    },\n                    \"budgetRef\": {\n                        \"id\": \"65b9ec71a4568739e186e1be\",\n                        \"externalId\": null,\n                        \"docNo\": \"HS Budget WA\",\n                        \"label\": \"HS Budget WA - Hasnat Budget Without Approval\",\n                        \"type\": \"BudgetModel\",\n                        \"archived\": false\n                    },\n                    \"profitCenter\": \"\",\n                    \"splitPercent\": null,\n                    \"distributedAmount\": null,\n                    \"distributedTax\": null,\n                    \"distributedShippingCharges\": null,\n                    \"distributedTotalAmount\": null,\n                    \"distributedUseTax\": null,\n                    \"distributedDiscountAmount\": null\n                }\n            ],\n            \"taxAmount\": 0.00,\n            \"dateCreated\": null,\n            \"lastUpdated\": null,\n            \"buyerGroupRef\": {\n                \"id\": \"64eeebe08a0db82a1a140534\",\n                \"externalId\": null,\n                \"docNo\": \"HS Buyer Group\",\n                \"label\": \"HS Buyer Group\",\n                \"type\": \"BuyerGroupModel\",\n                \"archived\": false\n            },\n            \"category\": \"1214-07\",\n            \"companyCodeRef\": {\n                \"id\": \"43215\",\n                \"externalId\": null,\n                \"docNo\": \"hcc100\",\n                \"label\": \"hcc100 - Hasnat Company Code Description\",\n                \"type\": \"CompanyCodeModel\",\n                \"archived\": false\n            },\n            \"currency\": \"USD\",\n            \"description\": \"1-PLY, White, wrapped\",\n            \"notes\": null,\n            \"purchasingOrgRef\": null,\n            \"plantCodeRef\": {\n                \"id\": \"64eeed188a0db82a1a4a2e67\",\n                \"externalId\": null,\n                \"docNo\": \"HS Plant\",\n                \"label\": \"HS Plant - Hasnat Plant\",\n                \"type\": \"PlantCodeModel\",\n                \"archived\": false\n            },\n            \"itemDetailUrl\": null,\n            \"taxCodeRef\": {\n                \"id\": \"64eeed9a8a0db82a1a140552\",\n                \"externalId\": null,\n                \"docNo\": \"HS tax Code\",\n                \"label\": \"HS tax Code - Hasnat Tax Code\",\n                \"type\": \"TaxCodeModel\",\n                \"archived\": false\n            },\n            \"taxPercentage\": 0.00,\n            \"uom\": \"CS\",\n            \"type\": \"PRODUCT\",\n            \"accountDistributionType\": \"none\",\n            \"agreement\": \"HS01\",\n            \"agreementItemNumber\": \"HS01\",\n            \"externalRequestItemNumber\": \"00001\",\n            \"longDescription\": \"\",\n            \"quantity\": 1,\n            \"dynamicFields\": [],\n            \"quote\": null,\n            \"validFrom\": null,\n            \"validTo\": null,\n            \"unitPrice\": 39.06000,\n            \"priceUnit\": 1,\n            \"serviceStartDate\": null,\n            \"serviceEndDate\": null,\n            \"partNo\": \"451673\",\n            \"expectedValue\": null,\n            \"freeItem\": null,\n            \"shippingCharges\": 0.00,\n            \"deliveryDate\": \"2025-01-25T00:00:00.000+0000\",\n            \"manufacturerName\": \"\",\n            \"manufacturerPartNo\": \"Von Drehle 5501\",\n            \"brandName\": \"Blue Mist\",\n            \"invoicePlanAmount\": null,\n            \"externalItemNumber\": null,\n            \"supplierAdditionalData\": null,\n            \"attachments\": null,\n            \"catalogItem\": true,\n            \"catalogItemId\": \"2\",\n            \"externalCatalogItemId\": \"5b6033563dcba03bf144e2e3\",\n            \"listPrice\": 39.06,\n            \"subTotal\": 39.0600000000,\n            \"totalPrice\": 39.0600000000,\n            \"changeActionStatus\": \"NONE\",\n            \"supplierRef\": {\n                \"name\": \"Hasnat Supplier stage83\",\n                \"vendorId\": \"333\",\n                \"address\": {\n                    \"street1\": \"123\",\n                    \"street2\": \"\",\n                    \"city\": \"New York\",\n                    \"postalCode\": \"10001\",\n                    \"state\": {\n                        \"name\": \"New York\",\n                        \"code\": \"NY\"\n                    },\n                    \"country\": {\n                        \"name\": \"United States of America\",\n                        \"code\": \"US\"\n                    },\n                    \"buildingCode\": null,\n                    \"roomNo\": null,\n                    \"floor\": null,\n                    \"email\": \"hasnat.saleem+Supplier_Stage83@vroozi.com\",\n                    \"phone\": \"+1 (201) 555-5555\"\n                },\n                \"id\": \"360131\",\n                \"externalId\": \"\",\n                \"docNo\": \"483578594\",\n                \"label\": \"333 - Hasnat Supplier stage83\",\n                \"type\": \"SupplierModel\",\n                \"archived\": false\n            },\n            \"catalogRef\": {\n                \"clientCatalogId\": \"\",\n                \"id\":\"\",\n                \"docNo\": \"TestHS\",\n                \"type\": \"CatalogModel\",\n                \"archived\": false\n            },\n            \"shippingAddress\": {\n                \"id\": \"66b093919b772d369118cab4\",\n                \"externalId\": \"RA TEST Reggression\",\n                \"dateCreated\": \"2024-08-05T08:55:45.699+0000\",\n                \"lastUpdated\": \"2024-08-13T12:05:36.320+0000\",\n                \"addressId\": \"0000000160\",\n                \"name\": \" RA TEST Reggression\",\n                \"attentionTo\": \"John Smith\",\n                \"addressType\": [\n                    \"billing\",\n                    \"shipping\"\n                ],\n                \"street1\": \"15000 Ventura Blvd\",\n                \"street2\": \"Suite# 201\",\n                \"city\": \"Sherman Oak Raveeha\",\n                \"postalCode\": \"91403\",\n                \"state\": {\n                    \"name\": \"California\",\n                    \"code\": \"CA\"\n                },\n                \"country\": {\n                    \"name\": \"United States of America\",\n                    \"code\": \"US\"\n                },\n                \"phone\": \"+1 (201) 555-5555\",\n                \"buildingCode\": \"VZI Building\",\n                \"roomNo\": \"201\",\n                \"floor\": \"2nd\",\n                \"email\": \"raveeha.amjad+address@vroozi.com\",\n                \"active\": true\n            },\n            \"approvedDate\": null,\n            \"lineNumber\": \"0\"\n        }\n    ],\n    \"approvalGroupRef\": {\n        \"id\": \"672b650cc9a45b2429539035\",\n        \"externalId\": null,\n        \"docNo\": \"HS Approval Group\",\n        \"label\": \"hcc100 - Hasnat Approval Group\",\n        \"type\": \"ApprovalGroupModel\",\n        \"archived\": false\n    },\n    \"copiedFrom\": null,\n    \"forwardedOn\": null,\n    \"metadata\": {\n        \"errors\": null\n    },\n    \"approverComments\": null,\n    \"attachments\": null,\n    \"approverRefs\": null,\n    \"souringReviewerRefs\": null,\n    \"changeRequest\": false,\n    \"docType\": \"MATERIAL\"\n}' Actual Result: {\n    \"id\": \"a0e4b548-66da-495a-acf6-be725150cd1e\",\n    \"status\": \"404\",\n    \"title\": \"Not Found\",\n    \"errors\": [\n        {\n            \"code\": \"404\",\n            \"element\": \"catalogRef\",\n            \"message\": \"Catalog not found. Provided value: [ReferenceModel( id=, externalId=null, docNo=TestHS, label=null, type=CatalogModel, clientCatalogId=, archived =false)]\",\n            \"detail\": \"Catalog not found. Provided value: [ReferenceModel( id=, externalId=null, docNo=TestHS, label=null, type=CatalogModel, clientCatalogId=, archived =false)]\",\n            \"level\": \"Data Error\"\n        }\n    ],\n    \"timestamp\": \"2025-01-15T11:01:51.213+0000\"\n} Expected Result: Catalog \u201c TestHS \" should be referenced to the PR with docNo and externalId",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-14T23:27:09.882-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106755",
+        "summary": "Stage  - SDM - Master Data - Users - User Groups  - Grid Style for the alternating rows is not correct in terms of color.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: SUPPLIER_DISCOVERY__USER_GROUP_ENHANCEMENTS FT should be enabled for the Company UnitId. PMAN/SDM Admin User should have logged into the Application. Certain User groups should exist in the 'User Groups' Grid. Steps to Reproduce: Access SDM>Master Data>Users Page. Please Observe the \u2018User Groups grid below the 'Users\u2019 Grid. Alternating Rows style in terms of colour is not being followed as does for other grid rows in the Application. Actual result: User Groups  Section\u2019s Grid Style for the alternating rows is not being followed in terms of Colour. Expected Result: Alternating rows should be grey and white in Colour. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-14T22:46:00.070-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106730",
+        "summary": "Stage - Supplier Portal - PO Dispute/Confirm pop up not showing",
+        "description": "url:   https://stage-go.vroozi.com/#/login?org=880852895&view=supplier username:   aqsa.rani+supplier_comp@vroozi.com password:  Qwerty@1 Steps to Reproduce: Login through given user  Click to open any PO that is in  Ready  status Select the line item by clicking the check boxes Click on Dispute/Confirm button OR Click on the Ellipses button at the bottom in right side to Dispute/Confirm line item Please see that Dispute/Confirm pop up is not showing Actual Result: Screen turns dark and Dispute/Confirm pop up is not showing Expected Result: Dispute/Confirm pop up should open and user should be able to Dispute/Confirm PO Screenshot:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2025-01-14T03:34:00.243-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106723",
+        "summary": "Costpoint connector is not working when selecting the Environment as Config",
+        "description": "Steps to reproduce: Navigate to Company \u2192 Connectors On Connector Settings screen, scroll bottom to Costpoint connector.  Select the  Environment as \u201cConfig\u201d Enter the mandatory data and click connect button. Actual Result: Error Logs: 2025-01-14 08:12:01.205 ERROR 12743 --- [nio-9595-exec-6] c.v.c.c.a.RequestValidationHandlerAdvice : JSON parse error: Cannot deserialize value of type `com.vroozi.connectors.core.enums.Environment` from String \"CONFIG\": not one of the values accepted for Enum class: [PRODUCTION, TEST, DEV, SANDBOX]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.vroozi.connectors.core.enums.Environment` from String \"CONFIG\": not one of the values accepted for Enum class: [PRODUCTION, TEST, DEV, SANDBOX]\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 16] (through reference chain: com.vroozi.connectors.core.models.Connection[\"environment\"])\n\norg.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.vroozi.connectors.core.enums.Environment` from String \"CONFIG\": not one of the values accepted for Enum class: [PRODUCTION, TEST, DEV, SANDBOX]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.vroozi.connectors.core.enums.Environment` from String \"CONFIG\": not one of the values accepted for Enum class: [PRODUCTION, TEST, DEV, SANDBOX]\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 16] (through reference chain: com.vroozi.connectors.core.models.Connection[\"environment\"])\n        at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.19.jar!/:5.3.19]\n        at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.19.jar!/:5.3.19]\n        at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.19.jar!/:5.3.19] Expected Result: Connector should be connected successfully",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2025-01-14T00:10:27.879-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106716",
+        "summary": "Purchase Orders: If user remove the filter \"In Progress POs\" and then remove the In Progress POs text then PO search place holder become truncate.",
+        "description": "Environment:  Stage username:   abdullah.iqbal+emp+78@vroozi.com password:   Welcome@1 Pre Conditions: Login with employee Steps to Reproduce: Go to purchase orders screen Click onSearch bar Select Filter \u201cIn Progress POs\u201c Click on cross ( x) button Remove \u201cIn Progress POs\u201c text from search field Search filed placeholder become truncate Screenshot   Actual Result: If user remove the filter \"In Progress POs\" and then remove the In Progress POs text then PO search place holder become truncate. Expected Results: If user remove the filter \"In Progress POs\" and then remove the In Progress POs text then PO search place holder should not be truncate.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-13T23:39:02.102-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106693",
+        "summary": "NG2 PR document upgrade - Validation messages are not being shown on the Line item modal, also Save button remains enable with wrong Accounting string combo",
+        "description": "Server:  Stage Credentials:   ayesha.waseem+10+emp@vroozi.com  / Welcome1@ Pre-Req:  Accounting String validations Feature toggles should be enable Valid Accounting Strings are created PR is in draft mode  1000012015 Steps to Reproduce: Login with the given credentials Open the draft PR Add a line item   Add the accounting combo (Valid Or Invalid) (No validation messages are being displayed on the litem) Click on Save button Actual: Validation messages are shown in case of invalid output.  Also, Save button on line item modal should not become enable in case of invalid Accounting string Combo Expected: Validation messages Should be shown in case of valid /invalid output on Line item modal Save button should become enable only in case of Valid Accounting string combo",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-13T03:12:56.574-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106687",
+        "summary": "Purchase Request:  If user clicks multiple time on the Add item button then multiple item models become opened with black background ",
+        "description": "Environment:  Stage username:  abdullah.iqbal+emp+78@vroozi.com password:   Welcome@1 Pre Conditions: Login with employee Steps to Reproduce: Click on Non Catalog Request Click 10 times on Add Line item button  Multiple item model opened with black background  Screenshot   Actual Result: User can click multiple time on the Add item button and due to this multiple item models open on screen Expected Results:  User should be able to click one time on the Add Item button and only one model should be opened.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2025-01-13T03:06:40.348-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106620",
+        "summary": "DEVQA5.83 - PMAN/SDM - Master Data - Supplier - Bulk Upload - N/A Icon is being saved in the User Groups Field If user tries to upload an Inactive User Group.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: SDM/PMAN Admin User should have logged into the Application. Steps to Reproduce: Access PMAN/SDM>Master Data>Users Page. Upload a Supplier with single Active User Group. Record creates successfully. Upload the same Supplier Record but this time having Inactive User Group in the User Groups Column. Please see the successnoty shows. Access the Supplier Modal. Please see User Groups Field has N/A added for Inactive User Group and change history is also logging of  User Groups field has been modified. Actual result: Supplier Modal\u2019s User Groups Field has N/A added for Inactive User Group and change history is also logging of  User Groups field has been modified. Expected Result: Upload should not process and fail. Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Jimena Pose",
+        "created": "2025-01-09T12:24:00.281-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106608",
+        "summary": "DEVQA5 - SDM - User Profile - User Group field should show all the time on User Modal.",
+        "description": "url:   https://devqa5-go.vroozi.com/#/login username:   asma.latif+SDM_Admin_1@vroozi.com password:  Blueangel1@ Preconditions: SDM/PMAN Admin User should have logged into the Application. Steps to Reproduce: Access SDM>Master Data>Users Page. Click to Create a New User. Please see User Group field is not showing. Select an SDM Role/s (Admin/Power User/Basic User) Please see now the field starts showing. Un Select the selected SDM Role/s. User Group field disappears. Actual result: User Group field only shows when SDM role is selected on the User Modal. Expected Result: User Group field should always be showing like all other fields on the User Modal via SDM. Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2025-01-09T03:37:37.683-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106517",
+        "summary": "Devqa19 - PMAN/SDM - Change History showing wrong field name in Supplier's history",
+        "description": "url:  https://devqa19-go.vroozi.com/#/login username:  notifyvroozi@gmail.com password: Welcome1 Steps to Reproduce: Login through PMAN/SDM user  Click the supplier to open detail of the supplier  Turn on the Supplier Discovery toggle in Basic Info tab Add some value from drop down in User Group field Save the supplier Reopen the Supplier Details Navigate to Change History tab Click on the first history tile Please see that history shows: The field  sdmUserGroupIds  has been modified Actual Result: History shows: The field  sdmUserGroupIds  has been modified Expected Result: History should show: The field  User Groups  has been modified Screenshot:",
+        "status": "Resolved",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-07T03:21:23.739-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106516",
+        "summary": "Devqa19 - PMAN/SDM - Deactivated User Groups are showing in drop down and being associated in the Supplier",
+        "description": "url:  https://devqa19-go.vroozi.com/#/login username:  notifyvroozi@gmail.com password: Welcome1 Pre Condition: User Group should be created and Deactivated Steps to Reproduce: Login through PMAN/SDM user Search for a supplier in  Master data \u2192 Supplier Click on the supplier name to open  Basic Info  tab Ensure Supplier Discovery toggle is  ON Scroll down to the  User Group  Field Click to open the scroll bar Please see that deactivated User Groups are also showing and being associated to the supplier Actual Result: Deactivated User Groups are showing in the drop down and being associated to the supplier Expected Result: Deactivated User Groups should not show in the drop down and should not associate to the supplier",
+        "status": "Resolved",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-07T03:20:24.880-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106487",
+        "summary": "CR: Attachment change summary is not showing on the CR ",
+        "description": "Environment:  Devqa31 Unitid:  2 username:   abdullah.iqbal+emp+31@vroozi.com password:   Welcome@1 Approver: username:   abdullah.iqbal+sourceappblk07@vroozi.com password:   Welcome@1 Pre Conditions: Login with employee Enable POCR toggles Enable Sourcing workflow Enable Edit Line item toggle under sourcing approver  Steps to Reproduce: Create Purchase Request with approved status PO is created Open the PO Click on Change Order button Update the line item and add attachment with the item Select the sourcing approver Submit the POCR Login with Sourcing Approver open the recently created CR Click on Edit button Add attachment with the line item Approve the CR open the CR Click on Show summary button against CR Attachment change summary is not showing Screenshot   Actual Result:  Attachment change summary is not showing on the CR  Expected Results: Attachment change summary should be displayed on the CR if sourcing approver update the attachment.",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2025-01-06T22:12:39.383-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106456",
+        "summary": "DEVQA5 - PMAN - Master Data - Suppliers - Supplier' Basic Info Tab keeps showing \"Allow Dispute Invoice via Supplier Portal\" toggle even the FT is OFF in DB.",
+        "description": "URL: https://devqa5-go.vroozi.com Username:  notifyvroozi83@gmail.com Password: Payable001@ PreCondition: Following Feature Toggles should be enabled for the Company\u2019s UnitId       - ACCOUNTS_PAYABLE_WORKFLOW      - SUPPLIER_PORTAL ADMIN User should have logged into the PMAN Application and access an existing Supplier which has  Allow Access to Supplier Portal  toggle = ON on its Supplier Portal Tab. Steps: Access Basic Info Tab, Scroll down at the bottom and Enable \" Allow Dispute Invoice via Supplier Portal \" toggle. Save the Supplier. Access Mongo DB>Vroozi>Feature Toggles Collection. Disable  SUPPLIER_PORTAL  FT for the company\u2019s Unit id. Clear Cache. Access Basic Info Tab, Scroll down at the bottom and Ensure \" Allow Dispute Invoice via Supplier Portal \" toggle. Its showing. Actual Result:  \" Allow Dispute Invoice via Supplier Portal \" toggle in the Supplier Modal's Basic Info Tab is showing even the Supplier_Portal FT is OFF in DB for the Company\u2019s UnitId. Expected Result:  \" Allow Dispute Invoice via Supplier Portal \" toggle in the Supplier Modal's Basic Info Tab should not show when the Supplier_Portal FT is OFF in DB for the Company\u2019s UnitId. Thanks, Asma",
+        "status": "Resolved",
+        "assignee": "Asma Latif",
+        "created": "2025-01-05T22:35:33.667-0800",
+        "issue_type": "Defect",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106323",
+        "summary": "header parameter \"association-update-strategy: MERGE & REPLACE\" is not displayed on the Upsert Budget endpoint",
+        "description": "Steps to reproduce: Navigate to the Master Data APIs \u2192 Budgets \u2192 POST  /budgets/upsert Actual Result: Expected Result: header parameter \"association-update-strategy: MERGE & REPLACE\" should be displayed on the Upsert Budget endpoint Note: header parameter \"association-update-strategy: MERGE & REPLACE\" implemented on the ticket",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-31T23:00:33.075-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106226",
+        "summary": "Amount is not display properly with all decimals on UI in Accounting validation.",
+        "description": "Settings Should be: Precondition:  Feature toggles are enable of  Accounting Strings externalWorkflowEnabled  flag from company settings is true in this case. Set the validation message from the  vroozi_webhooks \u2192 external_api_configuration  as \u201cINACTIVE\u201d. Accounting Validation Configurations:  URL:    Login:  waheed.nawaz+employee_devqa14@vroozi.com Passowrd: Welcome1! Steps to Reproduced: Click on the Non Catalog Request. PR Open in Draft Status. Add single line item with amount 23.50 Add other necessary details and save the line item. Submit the PR. Validation Appears on PR UI. Actual result: UI displays amount 23.5 Logs also display 23.5 Expected Result: It should display the 23.50 as it is display in edit line item and sub total and total on UI.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-29T23:49:58.754-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106211",
+        "summary": "Hotfix failing Unit Tests in Esignature and UserData ",
+        "description": "Unit tests are failing in the following apis Esignature   Userdata cxml-api logs are attached. We upgraded build server to a new dist which amazon linux 2023, its running on a separate server. As part of this upgrade activity we noticed these unit test failures.  cc:",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-27T03:44:17.196-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106128",
+        "summary": "Smart chat and similarity search not clickable after first opening of chat bot",
+        "description": "env: Stage User:  mutahir.sohail+empdevqa15Catalog2@vroozi.com Test@123 Steps: Login to the application using given creds Open the smart chat Ask any question Close the smart chat Now try to re-open smart chat or click similarity search Expected: User is able to interact with both Actual: Smart chat and similarity not clickable any more Loom:",
+        "status": "Release Candidate",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-12-23T01:31:13.253-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106098",
+        "summary": "PMAN: API Create Budget - Associated companies check is missing for GL and additional fields are being displayed in the payload.",
+        "description": "Issue 1: User is able to add GL of unassociated combination with the Budget while creating it from Budget API  https://staging-api.vroozi.com/v1/budgets Expected Results: Unassociated GL accounts should not get associated to the Budgets which they are not part of. Issue 2: In the response the following additional fields are being displayed ( RED Highlighted ) in \u201ccustomerRef\u201d, \"classRef\", \"projectRef\", \"locationRef\" and \"locationTypeRef\": {     \"externalId\": \"MIA_RC-2025-1_Merge2-ext\",     \"name\": \"MIA_RC-2025-1_Merge2\",     \"description\": \"MIA_RC-2025-1_Merge2_Desc\",     \"totalAmount\": 2000,     \"budgetAssociations\": [         {             \"companyCodeRef\": {                 \"id\": \"42770\",                 \"externalId\": null,                 \"docNo\": \"007\",                 \"label\": \"007 - Iqtidar Company 7\",                 \"type\": \"CompanyCodeModel\",                 \"archived\": false             },             \"plantCodeRef\": {                 \"id\": \"60af5d158a0db849962016c7\",                 \"externalId\": null,                 \"docNo\": \"007_Plant_MIA\",                 \"label\": \"007_Plant_MIA - Iqtidar Plant 007\",                 \"type\": \"PlantCodeModel\",                 \"archived\": false             },             \"purchasingOrgRef\": {                 \"id\": \"60af5cce3e1b0d4fa08c3c5b\",                 \"externalId\": null,                 \"docNo\": \"007_PO_MIA\",                 \"label\": \"007_PO_MIA - Iqtidar Purchase Org Code 007\",                 \"type\": \"PurchasingOrganizationModel\",                 \"archived\": false             },             \"costObjectRef\": {                 \"id\": \"60af58ce8a0db8499620100b\",                 \"externalId\": null,                 \"docNo\": \"CC_007\",                 \"label\": \"CC_007 - CC Iqtidar Company 7\",                 \"type\": \"CostCenterModel\",                 \"archived\": false             },             \"glAccountRef\": {                 \"id\": \"60ae341b8a0db849961f9dd3\",                 \"externalId\": null,                 \"docNo\": \"007_GL_MIA\",                 \"label\": \"007_GL_MIA - GL_Iqtidar 7\",                 \"type\": \"GlAccountModel\",                 \"archived\": false             },             \"customerRef\": {                 \"companyCodeId\": \"42770\",                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false,                 \"id\": \"60af63a93e1b0d4fa08c4752\",                 \"externalId\": null,                 \"docNo\": \"Cust_007_MIA\",                 \"label\": \"Cust_007_MIA - Iqtidar Customer 007\",                 \"type\": \"CustomerModel\",                 \"archived\": false             },             \"classRef\": {                 \"companyCodeId\": null,                 \"companyCodeRefIds\": [                     \"42770\"                 ],                 \"active\": true,                 \"enableForAllCompanyCodes\": false,                 \"id\": \"60af59493e1b0d4fa08c3636\",                 \"externalId\": null,                 \"docNo\": \"007\",                 \"label\": \"007\",                 \"type\": \"ClassModel\",                 \"archived\": false             },             \"projectRef\": {                 \"companyCodeId\": \"42770\",                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false,                 \"id\": \"60af596f3e1b0d4fa08c364b\",                 \"externalId\": null,                 \"docNo\": \"007 Project\",                 \"label\": \"007 Project\",                 \"type\": \"ProjectModel\",                 \"archived\": false             },             \"locationRef\": {                 \"companyCodeId\": \"42770\",                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false,                 \"id\": \"60af59c58a0db84996201190\",                 \"externalId\": null,                 \"docNo\": \"007 Loc\",                 \"label\": \"Iqtidar Location 007\",                 \"type\": \"LocationModel\",                 \"archived\": false             },             \"locationTypeRef\": {                 \"companyCodeId\": null,                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false,                 \"id\": \"63fdab3f3e1b0d4829d4290c\",                 \"externalId\": null,                 \"docNo\": \"007 Loc_Typ\",                 \"label\": \"Iqtidar Location Type 007\",                 \"type\": \"LocationTypeModel\",                 \"archived\": false             }         }     ],     \"durationType\": \"MONTHLY\",     \"fromDate\": \"2024-12-19\",     \"overBudgetAction\": \"ALLOW_WITHOUT_APPROVAL\",     \"budgetApproverRefs\": [],     \"currency\": \"USD\",     \"toDate\": \"2025-01-18\",     \"active\": true } Expected Results Issue # 2: Following red highlighted additional fields should not be displayed in the budgetAssociations:  \"customerRef\":  {                 \"companyCodeId\": \"42770\",                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false   }, \"classRef\":  {                 \"companyCodeId\": null,                 \"companyCodeRefIds\": [                     \"42770\"                 ],                 \"active\": true,                 \"enableForAllCompanyCodes\": false, }, \"projectRef\":  {                 \"companyCodeId\": \"42770\",                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false, }, \"locationRef\":  {                 \"companyCodeId\": \"42770\",                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false, },  \"locationTypeRef\":  {                 \"companyCodeId\": null,                 \"companyCodeRefIds\": null,                 \"active\": true,                 \"enableForAllCompanyCodes\": false }",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-12-20T06:13:24.837-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-106055",
+        "summary": "Names of the objects in the logs seems inconsistent in the response recieved from external system..",
+        "description": "Settings Should be: Precondition:  Feature toggles are enable of  Accounting Strings externalWorkflowEnabled  flag from company settings is true in this case. Accounting Validation Configurations:  URL:    Login:  waheed.nawaz+employee_stage83@vroozi.com Passowrd: Welcome1! Steps to Reproduced: Click on the Non Catalog Request. PR Open in Draft Status. Add single line item with split accounting with all the (WBS, Internal Order, Cost Center, Profit Center) Add other necessary details. Submit the Request. Validation Triggers. Actual result: Item, CompanyCode, PlantCode and PurchasingOrganization displaying the word Reference. Expected Result: It should display Item, CompanyCode, PlantCode and PurchasingOrganization displaying the word Ref after these words.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-18T23:04:01.930-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105894",
+        "summary": "PMan - Translation for Supplier is missing in Italian Language on Purchase Order listing frame",
+        "description": "Pre-Req: User language should be Italian Steps to Reproduce: Login as a PMan user (Employee) Navigate to Purchase order listing screen Actual: Supplier  column translation is missing Expected:  Translations should not be missing",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-12-15T23:44:06.243-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105806",
+        "summary": "Upgrade NewRelic APM Agent to v8.15.0 for Webhooks API",
+        "description": "Upgrade NewRelic APM Agent to v8.15.0 for Webhooks API",
+        "status": "Done",
+        "assignee": "Ahmad Khan",
+        "created": "2024-12-11T00:12:13.615-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105767",
+        "summary": "Update Append Redirection Operator for Vroozi Projects",
+        "description": "We need to update Append Redirection Operator for Vroozi Projects which is used in the startup.sh file for output redirection. Currently, the log files on an app restart reset the log files so we need to fix the startup file for projects to retain the log files which might be needed for checking older or previous logs for a project. > needs to be changed to >>",
+        "status": "Done",
+        "assignee": "Ahmad Khan",
+        "created": "2024-12-09T23:01:58.634-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105686",
+        "summary": "PMAN- InCorrect unread notification count is displayed on notification screen icon. ",
+        "description": "Server:  https://devqa6-go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+PMemployee@vroozi.com  / Welcome1@ \u00a0 Pre- Requisite: Steps to Reproduce: Login with above user. on bottom of screen notification icon no unread massage count is displayed.    Actual Result: InCorrect unread notification count is displayed on notification screen icon. Expected Result: system should displayed correct unread notification count.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-12-04T23:48:06.175-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105685",
+        "summary": "PMAN- catalog PR: The system creates multiple PR documents if the user clicks the \"Move to Request\" button multiple times.",
+        "description": "Server:  https://devqa6-go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+PMemployee@vroozi.com  / Welcome1@ \u00a0 Pre- Requisite: Steps to Reproduce: Login with above user. Go to Supplier Cart. add multiple items in cart.  Now try to click multiple times on move to request button.  Actual Result: The system creates multiple PR documents if the user clicks the \"Move to Request\" button multiple times. Expected Result: The system should restrict users from clicking the \"Move to Request\" button multiple times.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-12-04T23:47:12.649-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105684",
+        "summary": "PMAN- The system occasionally fails to update the shipping address on line items when the user adds a header-level shipping address to a PR, if no default shipping address is assigned in the user's profile.",
+        "description": "Server:  https://devqa6-go.vroozi.com/#/login Credentials: Employee:  javaid.sattar+PMemployee@vroozi.com  / Welcome1@ \u00a0 Pre- Requisite: No default shipping address is assigned against requester user.  No shipping address is provided in BOM file. Bom file is uploaded with more than 100 line items and PR is created in draft.  Steps to Reproduce: Login with above user. open Newly created PR header level and line item level error message is displayed related to missing shipping address.  Now select shipping address on PR header. Actual Result: The system occasionally fails to update the shipping address on line items when the user adds a header-level shipping address to a PR Expected Result: When the user selects a shipping address at the PR header level, it should automatically reflect on all line items.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-12-04T23:46:19.002-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105457",
+        "summary": "Apply to all  Leading zero: When leading zero toggle is disabled from accounting section then 0' s are showing on Cost Account,  Profit center and Project field drop down",
+        "description": "Leading zero : When leading zero toggle is disabled from accounting section then 0' s are showing on Cost Account, GL account, Profit center and Project field drop down Preconditions: 1-Leading Zero toggle should be disabled with in accounting section. 2-Rest of the Toggles related to accounting should be enabled. 3-All the mentioned section have leading 000 in the Code section and association is leading with the same company code 4-Login with admin Steps to Replicate:  Go To shopper view 2-Go to NON catalog screen 3-Fill all the info in the relevant fields and save line items. 4- select all items and click on Apply to all button.  Actual Result: 0' s are showing on Cost Account, GL account, Profit center and Project field drop down on apply to all screen and apply to all manage preset tab. Expected Result: Since Leading Zeros Toggle are disabled then No Zero must be visible to the relevant fields.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-11-26T00:04:12.598-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105405",
+        "summary": "Vroozi API - Move the external configuration to webhook API.",
+        "description": "This is a technical Debt ticket, we have implemented the external url in purchase API, that will not be able to communicate on the internet on our production servers, since purchase api is deployed on the service nodes. We need to move the code from purchase API to webhook API, so that the purchase API will send request to webhookAPI and webhook API will communicate with the external system to send the request for validation to external system. From QA perspective, we need to test that the external validation is working fine as it is originally implemented and there is no broken functionality. Moreover we can verify from the logs that purchase API is communicating to webhook APi and it is sending the request to external client system.",
+        "status": "Release Approved",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-22T01:17:08.225-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104581",
+        "summary": "OCR Invoices: Cost center is auto selected even if it's disabled",
+        "description": "[TODO] When creating a non-PO OCR invoice, the items are hardcoded to have cost object type \u201ccost center\u201d even if it\u2019s not enabled for that company. This caused issues with the last release: See: SingleStepOCRInvoiceServiceImpl  ->  updateAccountCategory(invoiceItemToSet, AccountCategoryType.COSTCENTER, userCostCenter);",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-10-23T11:56:35.106-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104208",
+        "summary": "PROD - Payment Request - Category Column value does not show in the Item grid.",
+        "description": "url:   https://go.vroozi.com/#/login username:   asma.latif+PRQ2408@vroozi.com password:  Redangel1@ Preconditions: PRQ User should have logged into the Application. Steps to Reproduce: Click to Create PRQ via Shopper View > Create Accordion.  7500000429 Add an Item with all details for both General Info and Accounting Info. Ensure the Category Column is made visible via Column preferences option grid. Please see Category Column is showing N/A in the Item grid. Actual result: Category Column is showing N/A in the Item grid. Expected Result: Category Column should show the value in the Item grid. Screen-shot: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-10-14T23:31:46.892-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102955",
+        "summary": "Angular Upgrade: Upgrade Shopper -> Purchase Orders",
+        "description": "Upgrade the whole page  Shopper \u2192 Purchase Orders  to Ng2: Dev Notes:  take an inspiration from AP \u2192 Track Invoices pages QA- Scope of Testing: The test run attached to this story contains existing test cases related to Purchase Order Listing  which needs to be executed  https://vroozi.testrail.net/index.php?/runs/view/17103&group_by=cases:section_id&group_order=asc Compare the user interfaces in NG and NG2 for consistency, especially PROD vs DEVQA servers. Ensure that new UI elements in NG2 are intuitive and align with user expectations. Test compatibility across supported devices, and browsers. Test multi-lingual for Organization component ( JA,SV,NO) Feature toggles and company settings. The number of defects identified during branch testing. Perform DB verification Feature Toggle:( OFF and ON) PURCHASE__PO_ADDITIONAL_FILTERS   Component Name Changed in NG2 ng2-vzi-purchase-order-grid for supplier portal => ng2-vzi-purchase-order-screen",
+        "status": "Awaiting Business Validation",
+        "assignee": "Masood Safi",
+        "created": "2024-09-04T13:47:41.626-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102627",
+        "summary": "Notification: The system doesn't display the unread notification count",
+        "description": "Issue: Notification: The system doesn't display the unread notification count Server:   URL:  stage-go.vroozi.com username:  zulkiful.bajwa+StageEmployeeUnitId77@vroozi.com password: @Welcome1 Pre-Condition: 1. Ensure that a transactional document has been created. Steps to Reproduce: 1. Log in to PMAN as a Requester user 2. Load the document and add a comment by tagging a specific user (tag the user who is currently logged in) 3. Verify the notification count before and after reloading the screen. Actual Result:   The system shows the notification count initially, but after the screen reloads, the count disappears Expected Result:   The system should consistently display the notification count if there are unread notifications",
+        "status": "Release Approved",
+        "assignee": "Naufil Aziz",
+        "created": "2024-08-26T06:58:15.081-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-102065",
+        "summary": "Catalog - When the user is not updating any catalog item, the system is still adding that item ID to the associated Custom Field",
+        "description": "Issue: Catalog - When the user is not updating any catalog item, the system is still adding that item ID to the associated Custom Field Credentials: Server URL:  stage-signin.vroozi.com Username:  notifyvroozi77+NonNBCU@gmail.com Password: @Welcome1 Unit_Id: 77 Pre-Conditions: 1. Catalog file has been prepared with multiple items (e.g., 5) and also contains custom field(s). Steps To Replicate: 1. Login to SMartOCI as an Admin user. 2. Create a Catalog, then approve and publish it. 3. Verify the catalog-associated custom fields in the \u2018catalog_custom_field\u2019 collection. Actual Result:    The system shows the empty \u2018itemIds\u2019 array against the catalog-associated custom field. {\n  \"customFieldId\": \"3936\",\n  \"deleted\": false,\n  \"itemIds\": [],\n  \"fieldName\": \"Buyer Code\",\n  \"fieldType\": \"fixed\"\n} 4. Edit the above Catalog file and just update any single item (e.g., change data in the NEW_ITEM-PRICE column of the first item). 5. Merge & update the above catalog by uploading the edited catalog file, then approve and publish the catalog. 6. Verify the catalog-associated custom fields in the \u2018catalog_custom_field\u2019 collection. Actual Result:    The system shows the data of those catalog item IDs in the \u2018itemIds\u2019 array which are not updated (i.e., it shows the item IDs of 4 catalog items which the user didn\u2019t update). {\n  \"_id\": \"99012\",\n  \"catalogId\": \"66b3ac01bf7b624424d02f80\",\n  \"lastUpdated\": {\n    \"$date\": \"2024-08-07T17:23:21.483Z\"\n  },\n  \"createdDate\": {\n    \"$date\": \"2024-08-07T17:22:56.927Z\"\n  },\n  \"customFieldId\": \"3936\",\n  \"deleted\": false,\n  \"itemIds\": [\n    \"66b3ad710d524d76a24f2f8c\",\n    \"66b3ad710d524d76a24f2f8d\",\n    \"66b3ad710d524d76a24f2f8e\",\n    \"66b3ad710d524d76a24f2f8f\"\n  ],\n  \"fieldName\": \"Buyer Code\",\n  \"fieldType\": \"fixed\"\n} 7. Edit the above Catalog file and just update any single item (e.g., change data in the NEW_ITEM-LEADTIME column of the first item). 8. Merge & update the above catalog by uploading the edited catalog file, then approve and publish the catalog. 9. Verify the catalog-associated custom fields in the \u2018catalog_custom_field\u2019 collection. Actual Result:    The system shows the data of those catalog item IDs in the \u2018itemIds\u2019 array which are not updated (i.e., it shows the item IDs of 4 catalog items which the user didn\u2019t update) as well as keeps the item IDs which were updated in the catalog the first time. {\n  \"_id\": \"99066\",\n  \"catalogId\": \"66b3ac01bf7b624424d02f80\",\n  \"lastUpdated\": {\n    \"$date\": \"2024-08-07T17:27:22.088Z\"\n  },\n  \"createdDate\": {\n    \"$date\": \"2024-08-07T17:27:12.035Z\"\n  },\n  \"customFieldId\": \"3936\",\n  \"deleted\": false,\n  \"itemIds\": [\n    \"66b3ad710d524d76a24f2f8c\",\n    \"66b3ad710d524d76a24f2f8d\",\n    \"66b3ad710d524d76a24f2f8e\",\n    \"66b3ad710d524d76a24f2f8f\",\n    \"66b3ae700d524d76a24f2fa6\",\n    \"66b3ae700d524d76a24f2fa7\",\n    \"66b3ae700d524d76a24f2fa8\",\n    \"66b3ae700d524d76a24f2fa9\"\n  ],\n  \"fieldName\": \"Buyer Code\",\n  \"fieldType\": \"fixed\"\n} 10.Edit the above Catalog file and just update any single item (e.g., change data in the ITEM-GL_ACCOUNT column of the first item). 11. Merge & update the above catalog by uploading the edited catalog file, then approve and publish the catalog. 12. Verify the catalog-associated custom fields in the \u2018catalog_custom_field\u2019 collection. {\n  \"_id\": \"99120\",\n  \"catalogId\": \"66b3ac01bf7b624424d02f80\",\n  \"postFilterable\": false,\n  \"displayOrder\": 1,\n  \"required\": false,\n  \"defaultValue\": \"\",\n  \"searchable\": false,\n  \"includeInPO\": false,\n  \"lastUpdated\": {\n    \"$date\": \"2024-08-07T17:39:01.205Z\"\n  },\n  \"createdDate\": {\n    \"$date\": \"2024-08-07T17:31:16.575Z\"\n  },\n  \"customFieldId\": \"3936\",\n  \"deleted\": false,\n  \"itemIds\": [\n    \"66b3ad710d524d76a24f2f8c\",\n    \"66b3ad710d524d76a24f2f8d\",\n    \"66b3ad710d524d76a24f2f8e\",\n    \"66b3ad710d524d76a24f2f8f\",\n    \"66b3ae700d524d76a24f2fa6\",\n    \"66b3ae700d524d76a24f2fa7\",\n    \"66b3ae700d524d76a24f2fa8\",\n    \"66b3ae700d524d76a24f2fa9\",\n    \"66b3af640d524d76a24f2fc0\",\n    \"66b3af640d524d76a24f2fc1\",\n    \"66b3af640d524d76a24f2fc2\",\n    \"66b3af640d524d76a24f2fc3\"\n  ],\n  \"fieldName\": \"Buyer Code\",\n  \"fieldType\": \"fixed\",\n  \"fieldNameCaps\": \"BUYER CODE\",\n  \"_class\": \"com.vroozi.api.catalog.processing.model.CatalogCustomField\",\n  \"mappingId\": null\n} Expected Result: The system should not store invalid reference. Note: When we edit a catalog, the child version of that catalog is added to the Working column. In this case, the system generates a new record in the catalog collection of database with a reference to the parent catalog. During this process, the system also creates data in the  catalog_item  collection against the child catalog reference. When the child version of the catalog is approved and then published, the system marks that child catalog version as soft deleted but hard deletes the child catalog associated catalog items. If the user doesn\u2019t edit any catalog item that has associated Custom Fields, the system keeps references of these child associated items in those Custom Fields. It keeps adding and not removing invalid references.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-08-07T11:34:00.826-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-83359",
+        "summary": "Advance Shipping Notices: Supplier drop down list is not displayed under Track Shipping Notices page when a user tries to filter by supplier.",
+        "description": "Environment: https://go.vroozi.com Username :  asma.latif+EMP2403@vroozi.com Password:  Redangel1@ Precondition: 1. Advance shipping Notices should be created from Supplier Portal and assigned to an Employee user role. Replicating Steps: 1. Login as the assigned Employee user 2. Navigate to Shipping Notices and try to filter by Supplier 3. Observe the drop down list  Current Behavior:  Supplier drop down list is not displayed under Track Shipping Notices page when a user tries to filter by supplier. The issue is replicating on production environment as well. Expected Behavior:  Supplier drop down list should be displayed under Track Shipping Notices page when a user tries to filter by supplier. Search by supplier should be functionable too.  Screen-Cast:   Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2023-01-04T03:00:02.627-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-106102",
+      "released_in_current_rc": false,
+      "summary": "SDM: NBCU Supplier Discovery Module Enhancement (2024-2025)",
+      "description": "Objective: Deliver core enhancements to the SDM module by March 2025 (RC-2025-3) to introduce a new construct called \"User Groups,\" enabling enhanced configuration for existing Redbook users and the new general directory users NBCU plans to onboard. This enhancement will also refine control over supplier record visibility for SDM users. Core Enhancement: A new construct that we're calling \"User Groups\" in SDM.\u00a0 Each SDM user will be associated with a single user group.\u00a0 Each SDM supplier record will be associated with 1, or more user groups.\u00a0 Update User Bulk upload and download. Update Supplier Bulk upload and download. Update SDM supplier search bar on the Home Page based on the user group filters. Update Download based on Location with user group filters. SDM Company Settings and access based on each SDM user group.",
+      "status": "In Final Review",
+      "assignee": "Sujoy Kar",
+      "created": "2024-12-20T21:11:19.967-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-106478",
+        "summary": "SDM: Restrict Special Characters in User Group Names",
+        "description": "Business Case : As an  Admin , I want the system to prevent special characters (pipe  | , comma  , , and semicolon  ; ) in User Group names to avoid issues during User and Supplier bulk upload processes. Acceptance Criteria : What is the change?  To ensure the integrity of the User and Supplier bulk upload process, the system should restrict Admins from creating User Group names that include special characters such as pipe ( | ), comma ( , ), and semicolon ( ; ). This restriction will prevent potential parsing errors during bulk upload operations and ensure seamless data handling. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact?  SDM > Master Data > Users page > User Groups. Which users should be impacted by the change?  Vroozi Admin and SDM Admin. How should this feature work? Restriction on Special Characters : The system should restrict the following special characters from being used in the  User Group Name  field: Pipe ( | ) Comma ( , ) Semicolon ( ; ) Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-06T17:37:03.726-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106425",
+        "summary": "SDM: Introduce Feature Toggle to Hide SDM User Group Enhancements",
+        "description": "Business Case : A feature toggle will be introduced to control the visibility and functionality of the SDM User Group enhancements. This toggle ensures that ongoing development does not disrupt current system behavior until the MVP is fully completed. Acceptance Criteria : Feature Toggle Implementation : Introduce a new feature toggle (e.g.,  SUPPLIER_DISCOVERY__USER_GROUP_ENHANCEMENTS ) to manage the visibility and functionality of the SDM User Group enhancements. The toggle should: Default to  OFF , maintaining current system behavior. Be configurable by system admins to allow testing of enhancements when turned  ON . Preserve Current System Behavior : When the toggle is  OFF : The current system behavior should remain intact. All new SDM User Group enhancement functionality (UI, back-end logic, etc.) should be suppressed. When the toggle is  ON : The new functionality for SDM User Group enhancements should be enabled for internal testing but not visible to end users in production environments. Back-End and Front-End Logic : Ensure that the toggle affects: UI components: Hide or show new elements depending on the toggle state. Data processing: Suppress or enable logic tied to SDM User Group enhancements. Testing Requirements : Validate that the toggle does not impact the current system behavior when OFF. Confirm that toggling ON activates the new enhancements without affecting unrelated system functionality.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-02T16:57:46.730-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106420",
+        "summary": "SDM: Filter Download by Location functionality based on User Group and Supplier Association.",
+        "description": "Business Case : As an  SDM user , I want the  Download by Location  dropdown to be filtered based on my User Group and associated suppliers, ensuring I only see and download relevant data. Acceptance Criteria : What is the change?  Building on the functionality defined in the ticket  - , the  Download by Location  dropdown will now also be filtered based on the logged-in user's assigned User Group and its associated suppliers. When the user selects a location, the system retrieves all suppliers associated with the selected location and the user's User Group. All other existing functionality for downloading supplier data remains unchanged. The added feature ensures the  User Group check  is incorporated into the location filtering logic to refine the supplier data retrieval process. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact?  SDM > Home Page > Download by Location. Which users should be impacted by the change? Vroozi Admin. SDM Admin. SDM Basic User. SDM Power User. How should this feature work? Filter Locations by User Group : The  Download by Location  dropdown displays only locations: Associated with the User Group assigned to the logged-in user. Linked to suppliers that belong to this User Group. Retrieve Suppliers Based on Location and User Group : When the user selects a location: The system retrieves all suppliers associated with the selected location  and  the user's User Group. If  \"All SDM Locations\"  is selected: The system retrieves all suppliers associated with the user's User Group, across all locations. Existing Functionality : All existing functionality for downloading supplier data remains the same: Suppliers are retrieved and exported in alphabetical order. Downloaded file contains supplier details. File format (CSV or Excel) remains unchanged. I found this old ticket where Download by Location was originally implemented -    Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2025-01-02T08:45:05.648-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106419",
+        "summary": "SDM: Filter SDM Locations in Search Dropdown Based on User Group and Supplier Association.",
+        "description": "Business Case : As an  SDM user , I want the  location dropdowns  in both basic and advanced search to display only SDM locations associated with my User Group and its linked suppliers, ensuring relevant and accurate results. Acceptance Criteria : What is the change?  The SDM location dropdowns in both the basic and advanced search functionalities will be filtered to show only those locations that belong to the User Group assigned to the logged-in user and are linked to suppliers associated with that User Group. This ensures that users can only search for locations that are relevant to their access permissions. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact?  SDM > Home Page > Search > Location dropdown. Which users should be impacted by the change? SDM Admin. SDM Basic User. SDM Power User. How should this feature work? Basic Search - Location Dropdown : When the user opens the  SDM Location  dropdown in the basic search bar: The dropdown should display only locations: Associated with the User Group assigned to the user\u2019s profile. Linked to suppliers belonging to the same User Group. The dropdown will still show  ALL  as the default selected option. If Location belongs to no Supplier, then this location will not show up in the dropdown menu (existing functionality) Advanced Search - Location Dropdown : When the user opens the  Search by Location  dropdown in the advanced search section: The dropdown should display only locations: Associated with the User Group assigned to the user\u2019s profile. Linked to suppliers belonging to the same User Group. The dropdown will still show  ALL  as the default selected option. If Location belongs to no Supplier, then this location will not show up in the dropdown menu (existing functionality) Dynamic Filtering : The system should dynamically filter the location dropdown as the User Group and supplier associations change. Updates to supplier records (e.g., new locations added to User Group-linked suppliers) should reflect in the dropdowns immediately or upon the next search. Example Scenario : User's Assigned User Group :  User Group A . Suppliers in the System : Supplier A ( User Group A , Locations: New York, Chicago). Supplier B (User Group B, Locations: Los Angeles, Houston). Supplier C ( User Group A , User Group C, Locations: Boston, Miami). Expected Location Dropdown Results : Basic Search - SDM Location and Advanced Search - Search by Location  dropdown shows: All, New York, Chicago, Boston, Miami. Locations like Los Angeles and Houston (associated with User Group B) do not appear. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0 \u00a0 \u00a0 \u00a0 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2025-01-02T07:49:04.246-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106295",
+        "summary": "SDM: Filter SDM Search Results by Assigned User Group",
+        "description": "Business Case : As an  SDM user , I want the search results in SDM to only display suppliers associated with the User Group assigned to my profile, ensuring I see relevant results. Acceptance Criteria : What is the change?  The SDM search functionality will be enhanced to filter supplier results based on the User Group assigned to the logged-in user. This ensures that users only see supplier records that they have access to via their assigned User Group. Additionally, the existing  Locations  filter will continue to apply after the User Group check, further refining the search results. This filtering applies to both simple and advanced search functionalities. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact?  SDM > Home Page > Search. Which users should be impacted by the change? SDM Admin. SDM Power User. SDM Basic User. How should this feature work? Basic Search with \"All SDM Locations\" Selected : When the user starts typing a supplier's name or other attributes in the search bar: The system filters dropdown (suggestion) results to display only suppliers: Associated with the User Group assigned to the user\u2019s profile. Linked to any SDM location under  All SDM Locations . If no suppliers match, the dropdown (suggestion) shows no results. Upon clicking the  Submit Search  button: The final search results display only suppliers that match the user group and the \"All SDM Locations\" criteria. If no suppliers match, display the message: \"No Current Supplier(s) Found for 'search-text'.\" Example : User's Assigned User Group :  User Group A Suppliers in the System : Supplier A : Associated with  User Group A ; SDM Locations: New York, Chicago. Supplier B : Associated with User Group B; SDM Locations: Los Angeles, Houston. Supplier C : Associated with  User Group A  and User Group C; SDM Locations: Boston, Miami. The user types  \"Supplier\"  in the search bar: The dropdown displays: Supplier A Supplier C Suppliers from User Group B (e.g., Supplier B) do not appear, as they are not linked to User Group A. The user clicks the  Submit Search  button: Final search results display: Supplier A Supplier C The system filters out Supplier B, as it does not belong to User Group A. If no suppliers match the search term, the dropdown remains empty, and clicking  Submit Search  displays: \"No Current Supplier(s) Found for 'search-text'.\" Basic Search with Specific SDM Location Selected : When the user selects a specific SDM location from the dropdown: The system filters dropdown (suggestion) results to display only suppliers: Associated with the User Group assigned to the user\u2019s profile. Linked to the selected SDM location. If no suppliers match, the dropdown (suggestion) shows no results. Upon clicking the  Submit Search  button: The final search results display only suppliers that match the user group and the selected location. If no suppliers match, display the message: \"No Current Supplier(s) Found for 'search-text'.\" Example : User's Assigned User Group :  User Group A Suppliers in the System : Supplier A : Associated with  User Group A ; SDM Locations: New York, Chicago. Supplier B : Associated with User Group B; SDM Locations: Los Angeles, Houston. Supplier C : Associated with  User Group A  and User Group C; SDM Locations: Boston, Miami. The user selects  New York  from the location dropdown and types  \"Supplier\"  in the search bar: The dropdown displays: Supplier A (linked to User Group A and New York). Supplier C does not appear, as it is not linked to New York. The user clicks the  Submit Search  button: Final search results display: Supplier A Supplier C and Supplier B are excluded as they are not associated with New York. If no suppliers match the selected location and search term, clicking  Submit Search  displays: \"No Current Supplier(s) Found for 'search-text'.\" Advanced Search Functionality : In the Advanced Search section, the user can input additional filters such as supplier name, location, category, etc. The final search results returned should still be limited to: Suppliers associated with the user's User Group. If no suppliers match all criteria: Display the same message: \"No Current Supplier(s) Found for 'search-text'.\" UI and Search Experience : The dropdown search results should dynamically update based on the User Group and Location filters as the user types. Advanced Search should display results that honor all selected filters while adhering to the User Group restriction. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Vroozi Admin should see everything un-restricted because he would not have any user groups assigned. Need to update the description so that testing can be done for this scenario. If we do not assign a User group to a Vroozi Admin, will it break the system today? Based on that answer we need to decide this field should be available for this user and also mandatory or not. \u00a0   \u00a012/31/2024 \u00a0   \u00a01/2/2025 Need to check how SOLR data-fix would be required for old suppliers that would require data-script to add a User Group. We cannot do a data-fix. Bulk upload or manual update required on the supplier side for User Groups in order for the results to show up in SOLR.   12/31/2024   1/2/2025 Should we filter the list of available Locations based on the user\u2019s group definitions? Currently, the user only sees Locations associated with at least one Supplier they can search for, so it would be ideal to retain the existing functionality. Yes, we should filter the locations based on the user group that the user is associated to and which suppliers are linked to this location. No reason why other locations for suppliers that belong to a different user group shows up in the dropdown.   12/31/2024 1/2/2025 Do we need to filter the Categories, Attributes, Custom Fields based on the User Groups as well in the Advanced Search section?  Can you please check in with   on this in the office so that we can get some clarity on how this is implemented on the BE and accordingly decide how to tackle Advanced search. I\u2019ll create a new ticket based on that discussion. (Answer = NO)   1/2/2025   1/2/2025 # Question Recommendation Response Remarks \u00a0 \u00a0 \u00a0Datafix should be part of this ticket as well for SOLR.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-12-31T03:39:05.277-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106216",
+        "summary": "PMAN | SDM: Incorporate User Groups Field in Supplier Bulk Upload and Download Templates",
+        "description": "Business Case : As an  Admin , I want to manage the  User Groups  field in  Supplier  Bulk Upload and Download templates to link User Group(s) with Supplier records efficiently. Acceptance Criteria : What is the change?  The  User Groups  field will be integrated into the Supplier Bulk Upload and Download templates for both PMAN and SDM. This field allows Admins to assign one or more active and non-deleted User Group(s) to supplier records. For SDM suppliers, the  User Group  field will be mandatory, ensuring proper linkage and access control. The system will validate the field during uploads and populate it during downloads. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? PMAN > Master Data > Users > Supplier Bulk Upload, Download, & Template. SDM > Master Data > Users > Supplier Bulk Upload, Download, & Template. Which users should be impacted by the change? Vroozi Admin. SDM Admin. How should this feature work? Header in Templates : The column header for the User Group field in both PMAN and SDM templates should be named  User_Groups  (case-sensitive). Multi-Select Functionality : The  User_Groups  column should allow multiple User Group names for a supplier record. User Group names must be active and non-deleted. Behavior for SDM Suppliers : If the supplier record is an SDM supplier, the  User_Groups  field is mandatory. Admins must provide at least one valid User Group name in the  User_Groups  column. If the field is empty or contains invalid User Group names, the system should: Throw an error during the upload process. Include a detailed error message in the error report (Use existing error message format). Behavior for Non-SDM Suppliers : If the supplier record is not an SDM supplier, the  User_Groups  field is optional. Leaving the field blank or including User Group names will not result in errors. User Group data will not be saved for Non-SDM suppliers. Bulk Download : When Admins download the supplier bulk file: The  User_Groups  field should display all User Group names linked to each supplier record, separated by a delimiter (e.g., a comma). If no User Groups are linked to a supplier, the field should remain blank. Validation Rules : The system must validate the  User_Groups  field during the bulk upload process to ensure: All User Groups exist in the system. All User Groups are active and non-deleted. The field is populated for SDM suppliers when required. Consistency Between Templates : Ensure both PMAN and SDM templates include the  User_Groups  field with identical functionality and validation rules. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date What happens when a User Group name has \u201ccomma\u201d in it and there are multiple User Groups associated with the supplier? Need to confirm with BE if these 3 symbols are used in Bulk upload\u00a0| ; , so that we can restrict them in the User group name itself. Based on   \u2018s feedback I\u2019ll create a new ticket to restrict these symbols in the Group name field.   12/31/2024 \u00a0   \u00a01/2/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-27T18:20:15.438-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106113",
+        "summary": "PMAN | SDM: Incorporate User Group Field in User Bulk Upload and Download Templates",
+        "description": "Business Case : As an  Admin , I want to manage the  User Group  field in  User Bulk Upload  and  Download  templates to efficiently link a User Group with User records based on their roles. Acceptance Criteria : What is the change?  The  User Group  field will be integrated into the User Bulk Upload and Download templates for both PMAN and SDM. The field will follow specific validation rules and behavior depending on the user\u2019s roles and the side (PMAN or SDM) from which the bulk upload is performed. The field will allow Admins to assign a single active and non-deleted User Group to a user when the user has an SDM role. The system will validate and process this field during uploads and populate it during downloads. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact?   PMAN > Master Data > Users > User Bulk Upload, Download, & Template. SDM > Master Data > Users > User Bulk Upload, Download, & Template. Which users should be impacted by the change? Header in Templates : The column header for the User Group field in both PMAN and SDM templates should be named  User_Group  (case-sensitive). Single User Group : The  User_Group  column will allow only one User Group name per user record. The value must be the name of an active, non-deleted User Group. Behavior on PMAN Side : Mandatory Field : The  User_Group  field becomes mandatory if any of the following SDM roles are selected for a user: SDM Admin SDM Power User SDM Basic User Admin must provide an active, non-deleted User Group name in the  User_Group  column for these users. Optional Field : If no SDM roles are selected for a user, the  User_Group  field becomes optional: Leaving it empty will not generate errors. Adding a value will not save the User Group to the user record since Non-SDM users do not require User Groups. Behavior on SDM Side : Always Mandatory : On the SDM side, users are expected to have SDM roles by default. The  User_Group  field is always mandatory in the bulk upload template. Admins must provide an active, non-deleted User Group name in the  User_Group  column. Error Handling in Bulk Upload : If the  User_Group  field is empty or contains an invalid value (non-existent, deleted, or inactive User Group), the system should: Use the existing error messaging style in the generated error report. Bulk Download : When Admins download the user bulk file: The  User_Group  field should display the name of the User Group linked to each SDM user\u2019s record. For Non-SDM users, the  User_Group  field should remain blank. Validation Rules : The system must validate the  User_Group  field during the bulk upload process to ensure: The User Group exists. The User Group is active and not deleted. The field is populated for SDM users when required. UI and Experience : Ensure consistency between PMAN and SDM templates for field naming and behavior. Display clear error messages in the error report for missing or invalid  User_Group  data. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date \u00a0Is the User Group supposed to be a mandatory field in the Bulk upload file and as well as on the Master Data > Users section? \u00a0Yes \u00a0  /    \u00a012/26/2024 \u00a0   \u00a01/2/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-22T22:27:46.706-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106110",
+        "summary": "SDM: Link User Groups to SDM Supplier Records",
+        "description": "Business Case : As an  Admin , I want to link User Groups to SDM supplier records so that I can control access to these suppliers based on User Group associations. Acceptance Criteria : What is the change?  The  User Group  field will allow Admins to associate one or more User Groups with supplier records flagged as SDM-specific suppliers (i.e., suppliers with the  SDM Toggle  turned ON). Which customers should this change impact?  Customers using the SDM module (ex: NBCU) with Supplier\u2019s SDM Toggle = ON. What pages should this change impact?  SDM > Master Data > Suppliers > Supplier Record page. Which users should be impacted by the change? Vroozi Admin. SDM Admin. How should this feature work? User Group Field Visibility : The  User Group  field should appear only if the  SDM Toggle  is ON for a supplier record. The field should be located beside or under the  SDM Toggle  in the  Basic Info section . Multi-Select Functionality : The  User Group  field should allow multi-select functionality. Admins can select one or more User Groups from the list. Required Field Validation : If the  SDM Toggle  is ON, the  User Group  field should be a  required  field. Admins should not be able to save the supplier record until at least one User Group is selected. Editable on PMAN and SDM Sides : The  User Group  field should be editable on both the PMAN and SDM sides. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date Should there be a default user group or should it function in such a way that if there are no user groups selected, then the Supplier will be visible to all User groups? \u00a0TBD, we\u2019ll figure this out. \u00a0   \u00a012/26/2024 \u00a0   \u00a01/2/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-12-22T20:25:25.681-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106104",
+        "summary": "SDM: Link User Group to SDM User Profiles",
+        "description": "Business Case : As an  Admin , I want to  link  User Group to SDM user profiles so that I can control and configure the system access and functionalities for SDM users. Acceptance Criteria : What is the change?  This functionality allows Admins to associate a User Group with specific SDM users, ensuring proper configuration and access control. The  User Group  field will be mandatory for all SDM users and will enable streamlined management of user permissions. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact? SDM > Master Data > Users > User Record page. PMAN > Master Data > Users > User Record page. Which users should be impacted by the change? SDM Admin. SDM Power User. SDM Basic User. How should this feature work? User Group Field in User Profile : Add a  User Group  field to the user profile: PMAN Side : Display in the  Basic Info  >  Access section . SDM Side : Always visible by default for SDM users. This field will allow only one User Group to be selected at a time. Dropdown Behavior : The  User Group  field will function as a  searchable text input with dropdown results , similar to the  Content Group  field. Admins can start typing a User Group name, and the dropdown will display matching results in real-time. If no matches are found, the dropdown will show no results. Behavior Based on Role (PMAN Side) : The  User Group  field should be visible and mandatory when one of the following SDM roles is selected: SDM Admin SDM Power User SDM Basic User If none of these roles are selected, the  User Group  field should not appear in the profile. Behavior Based on Role (SDM Side) : The  User Group  field should always be visible and mandatory in the SDM module because these users are expected to have one of the SDM roles mentioned above. Mandatory Validation : The  User Group  field is a required field for all SDM users. Admins cannot save the user profile until a User Group is selected. If left empty, the system should not allow the Admin to save the user profile. Mock screenshot for reference : Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date What happens to existing SDM users who do not have any User group assigned to their user profile? Need a data-fix assuming only 2 user groups will be created for NBCU in production and then accordingly assign those to users. \u00a0   \u00a012/20/2024 \u00a0   \u00a01/2/2025 Would we need to create default User group, and then link that to all existing SDM users using a script? Yes \u00a0   \u00a012/20/2024 \u00a0   1/2/2025 How would that default User group work in terms of access and settings?  and   to talk about this next week on which features to become configurable. \u00a0   \u00a012/20/2024 \u00a0   1/2/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-20T23:18:43.272-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      },
+      {
+        "key": "VZI-106103",
+        "summary": "SDM: Create and Manage User Groups in SDM Module",
+        "description": "Business Case : As an  Admin , I want to create and manage  User Groups  in the  SDM  module so that I can control system access and functionalities for SDM users in the future. Acceptance Criteria : What is the change?  The \"User Groups\" construct will serve as the foundational building block for future enhancements that link user records and supplier records. This functionality will allow Admins to configure and control the system access and functionalities available to different SDM users. Which customers should this change impact?  Customers using the SDM module (ex: NBCU). What pages should this change impact?  SDM > Master Data > Users page. Which users should be impacted by the change?  Vroozi Admin and SDM Admin. How should this feature work? User Groups Grid : The grid displays the following columns: Checkbox  (select for activation/deactivation). Group Name . Description . Created On  (date the group was created). Status  (Active/Inactive). Action  (delete option). The grid showcases up to 10 User Groups per pagination page, with additional groups displayed in subsequent pages. Create a New User Group : Admin should see a  \"Create a New User Group\"  button on the  User Groups  page. Clicking the button opens a dialog modal containing: Group Name : Text field (mandatory). Description : Text field (mandatory). Cancel  and  Save User Group  buttons. The  Save User Group  button should be  disabled by default . The button should only be  enabled  when both mandatory fields ( Group Name  and  Description ) are filled out. Clicking  Save User Group  creates a new User Group and displays a  green NOTY message : User Group added. View and Update Existing User Groups : Admin can click on an existing User Group's name in the grid. Clicking the name opens the  same dialog modal  populated with the group's current  Group Name  and  Description . The  Save User Group  button should only be enabled if both mandatory fields are filled out. Admin can edit one or both fields and click the  Save User Group  button to update the User Group. If no changes are made, clicking  Save User Group  should leave the User Group unchanged. Clicking  Save User Group  after changes displays a  green NOTY message : User Group updated. Validation Check : Group Name  needs to be  Unique . If not unique, at the time of saving the User Group, the system should throw an error message - Group Name should be unique. Search Functionality : Admins can search for User Groups using a search bar similar to the user search bar. Activate/Deactivate User Groups : Admins can select one or more User Groups using checkboxes and use  Activate  or  Deactivate  buttons to update their status. Delete User Groups : Admins can delete a User Group using the  Delete Action  in the grid. Pagination : The grid supports pagination, showing a maximum of 10 User Groups per page. Mock Screenshot for reference : Do we need a data fix for existing customers?  No. Would this change impact existing documents?  No. To which teams should this change be communicated to?  Purchase Team. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date I think User Groups is quite generic and can be interpreted in many different ways and hence do you think we should rename it? If yes, I had few suggestions - Access Tiers Control Groups Access Groups Permission Groups Access Profiles Redbook (SDM) User Groups \u00a0 \u00a0   \u00a012/22/2024 \u00a0   \u00a0 Do we need to link users from the create User Groups page itself similar to Production/Project page? Something we can explore but not necessary for the MVP. Lets keep this in mind for user experience.   12/23/2024   1/2/2025 # Question Recommendation Response Remarks",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-12-20T22:10:04.221-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-106102"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104938",
+      "released_in_current_rc": false,
+      "summary": "Sonar: Vulnerability Issue Fixes ",
+      "description": "This epic includes all the critical vulnerabilities fixes as suggested by sonar.",
+      "status": "In Design",
+      "assignee": "Muhammad Hamza",
+      "created": "2024-11-06T22:17:09.137-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-106366",
+        "summary": "Gateway  - Sonar: Remove unused jquery issue",
+        "description": "Gateway  - Sonar: Removed unused jquery removal sonar issue. NOTE: On the error page image was not showing which is also fixed along with sonar fix. Steps to reproduce: Create an external catalog Go to EXTERNAL CATALOG DEFINITION Click Validate PunchOut (via cxml and oci both) In case of wrong information provided an error page is shown, the scope of this ticket not to change any functionality but rather  fix css and smartOCI logo on the screen along with the error message which is already working fine.  As part of the sonar issue the unused jquery imports have been removed so the existing functionality should not break.",
+        "status": "Release Approved",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2025-01-01T20:31:57.568-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-106318",
+        "summary": "purchase-api - Sonar: Fix Test Case Issues",
+        "description": "Current total issues = 16914 Remaining issues after merging = 15433 Fixed issues = 1,481",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-31T22:23:41.761-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-106223",
+        "summary": "User-data-api - Sonar: Fix Test Case Issues",
+        "description": "Current total issues = 8582 Remaining issues after merging = 7345 Fixed issues =  1237",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-29T22:34:21.898-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-106193",
+        "summary": "Catalog-api - Sonar: Fix Test Case Issues",
+        "description": "Current total issues = 2946 Remaining issues after merging = 2263 Fixed issues = 683",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-26T01:49:57.762-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-106011",
+        "summary": "Purchase-Api  - Sonar: Fix unit tests",
+        "description": "Total current issues = 18145 Remaining issues = 16921 Fixes issues = 1,224",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-17T22:59:50.955-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105840",
+        "summary": "Shopper-api - Sonar: Fix Test Case Issues",
+        "description": "Current total issues = 1,617 Remaining issues after merging = 1,388 Fixed issues = 229",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-12-11T23:40:18.272-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105780",
+        "summary": "authentication-api - Sonar: Fix issues in unit tests",
+        "description": "The scope of this ticket includes fixation of the sonar issues in authentication-api unit tests mentioned in the following link https://sonarcloud.io/project/issues?issueStatuses=OPEN%2CCONFIRMED&id=vroozi_authentication-api",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-12-10T02:00:02.137-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105702",
+        "summary": "ERP-SERVICE  - Sonar: Fix unit tests ",
+        "description": "Total current issues = 935 Remaining issues = 672 Fixes issues = 263",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-12-05T03:29:05.241-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105548",
+        "summary": "User Data API  - Sonar: Fix sonar cloud issues in unit tests",
+        "description": "The scope of this ticket includes fixation of the issues in unit tests as suggested by sonar cloud in the link mentioned below. https://sonarcloud.io/project/issues?issueStatuses=OPEN%2CCONFIRMED&id=vroozi_userdata-api Total current issues = 9664 Remaining issues = 8582 Fixes issues = 1,082",
+        "status": "Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-11-28T22:27:59.399-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104938"
+      },
+      {
+        "key": "VZI-105491",
+        "summary": "User Data API  - Sonar: Regex Vulnerability Issue Fix For USER GROUP CONTROLLER",
+        "description": "Sanitise  search user group by name  on the screen invoice \u2192 track all. During the regex search on Exception Group by name on the above mentioned screen we need to sanitise any unwanted characters.",
+        "status": "Release Approved",
+        "assignee": "Zulkifal Bajwa",
+        "created": "2024-11-27T02:15:06.907-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104938"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106258",
+        "summary": "[ng2] Feature Toggle Support for Upgraded Purchase Request Page",
+        "description": "Goal: Introduce new feature toggle to control the functionality switch between ng1 and ng2 versions of the Purchase Request Page within the Shopper module, ensuring clients can revert to ng1 functionality if any bugs are discovered in the ng2 implementation. Description: Implement support for the new  PURCHASE__NG2_PURCHASE_REQUEST  feature toggle to enable switching between ng1 and ng2 functionality for the Purchase Request Page in the Shopper module. Ensure that the existing ng1 functionality remains unchanged and fully operational, providing clients with the flexibility to revert to ng1 if necessary due to issues with the ng2 implementation:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-12-30T17:02:52.574-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-105383",
+        "summary": "Angular Upgrade: Upgrade Shopper -> Payment Requests",
+        "description": "Upgrade the whole page  Shopper -> Payment Requests: Prerequisite: Upgrade ng1  DocumentStatusGridController , along with  document-status-grid.htm  and  document-status-grid.less",
+        "status": "Done",
+        "assignee": "Ahmer Ijaz",
+        "created": "2024-11-21T22:16:13.128-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-105013",
+        "summary": "Angular Upgrade: Finish full upgrade of ng2 vzi-typeahead to call ng2 services instead of ng1 services",
+        "description": "Current State: The ng2  vzi-typeahead  component is currently calling  ng1  services instead of  ng2  services. Goal: Upgrade the ng2  vzi-typeahead  component to fully utilize  ng2  code. Impact Please investigate the current usage of ng2  vzi-typeahead  components and provide a summary detailing which typeahead components on which screens need to be tested by QA. For now, the idea is to introduce a new flag in the component that will enable the new functionality. By default, it will be set to  false  so that existing pages are not impacted\u2014except, perhaps, one for QA.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-11-08T12:18:49.936-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      },
+      {
+        "key": "VZI-98266",
+        "summary": "[ng2] Upgrade Purchase Request Page",
+        "description": "Goal Fully upgrade  PRCreateController  and  pr-create.html  /  PRDisplayController  and  pr-display.html  into a single component  vzi-purchase-request  together with its all child components and services. Component Name: For Create PR:   ng2-vzi-purchase-request For Display PR:    ng2-vzi-purchase-request-display Page can be in editable mode: Page can be in display mode: Impacted Areas: Header / Total Fields - incl. Shipping Address Field Budget functionality Errors / Warnings Custom Fields Approval Status Submissions Item grid Upload Items Add Attachments Side Panel etc. The page can be accessed via: Shopper \u2192 Create \u2192 Purchase Request  (login as Employee or as Admin) Shopper  \u2192  Purchase Requests  Document Flow Also, accessible from other Document Page or Side Panel (e.g. from Purchase Order) Notification Center Emails etc. Note: we will keep using existing route  pr-create  and  pr-display  so links urls are not changed. Out of Scope Apply to All upgrade done by Sajid Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests and add if some are missing Make sure we are not using promises anymore but rather RxJS (including the component) If applicable, move all styles related to this component into local styles file Dev test the changes to make sure component works as before, all the functionality works as before and network calls are the same as before",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-04-08T23:10:47.718-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104332",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Design and Develop Bulk Load API for WBS Elements - 0",
+      "description": "",
+      "status": "Work Completed",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-16T15:39:48.571-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-106221",
+        "summary": "Vroozi API - Post Endpoint to re upsert the failed WBS  ",
+        "description": "Business Case: Develop a new POST endpoint to reprocess and upsert WBS elements that failed during the Bulk Upsert WBS API operation due to system errors. Acceptance Criteria: A new Post endpoint should be developed.  It should be asynchronous. This new POST endpoint should optionally accept the tracking id generated by WBS Bulk Upsert API. (For Bulk Upser WBS, please refer to  ) With the tracking id, this new Post endpoint should be able to find out which WBS elements are in: PENDING  state FAILED  state The new POST endpoint should re-upsert only the WBS elements with a status of  PENDING  or  FAILED  from the Bulk Upsert WBS API operation, based on the provided tracking ID. (For Bulk Upser WBS, please refer to  ) If no tracking id is specified, this new Post endpoint should find all the WBS object in  PENDING  or  FAILED  state irrespective of any specific bulk upsert call and re process them. The system failure should cover the following potential types: Time out Network failure. The server is down. The status of this new Post endpoint operation should be tracked by the Get Status API(please refer to  ) if the tracking id was given. Technical Details: Documentation:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-29T22:27:22.919-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104332"
+      },
+      {
+        "key": "VZI-106025",
+        "summary": "Vroozi API - Performance bench marking of the wbs elements bulk upsert async API",
+        "description": "We need to write Jmeter script to bench mark the 10 MB payload with wbs elements in the bulk async api. We need to see difference size payloads and also determined the max no. of entries that can be uploaded in a max of 10 MB payload. Request Payload  size Request Body Response Body  Get Tracking Response. 5000 File Size : 2.1 MB Successfully Processed with in 15.42s Successfully Return with 5000 Records and display on UI. 10000 File Size : 4.3 MB Successfully Processed with in 19.58s Successfully Return with 10000 Records and display on UI. 13000 File size: 6.5 MB Successfully Processed with in 23.57s Successfully Return with 13000 Records and display on UI. UI 15000 File size: 7.5 MB Successfully Processed with in 27.90s Successfully Return with 13000 Records and display on UI. 17000 File size: 8.6 MB Request response getting 504 gateway timeout  Not getting any tracking Id in this case. UI data: 20000 File Size : 8.7 MB Request response getting 504 gateway timeout  But when i check the logs and UI 20000 records are processed and created on UI. Not getting any tracking Id in this case. UI data: 25000 File Size : 10.9 MB Request response getting 504 gateway timeout  But when i check the logs and UI 25000 records are processed and created on UI. Not getting any tracking Id in this case. 50000 File Size : 21.8 MB Response payload getting an error this request is above 10 MB.",
+        "status": "Done",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-12-18T03:51:14.865-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104332"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-106368",
+      "released_in_current_rc": false,
+      "summary": "Angular Upgrade: Upgrade Master Data -> Budgets",
+      "description": "Upgrade the whole page  Master Data \u2192 Budgets  to Ng2:",
+      "status": "Implementation In Progress",
+      "assignee": "Hamza naseem",
+      "created": "2025-01-01T22:42:25.504-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-106099",
+        "summary": "PMAN: API - Unable to create Budget combinations without selecting Company Reference for class, customer, project, location type and location. ",
+        "description": "Issue: Using API, the user is unable to create Budget combinations without adding \"companyCodeRef\" in it for class, customer, project, location type and location.  500 error is displayed. CURL: curl -X 'POST' \\\n  'https://staging-api.vroozi.com/v1/budgets' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiJmN2Q2ZDMwZi1lODRlLTRlZDktODNiMC1iOTcwOGZhZmVmODEiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiIxM2VhYWE2Ny1iNzU3LTQ0YTgtODcyNi1mZTg4NDY4ZGZlYWUifQ.P9627ehbxkSZpUUxhHkZhSkQTC5XKGv0rnpo9ilzkjw7YBh-tQrLQ-n-TXgYQ3bQSonBPAURiRsM42Nhu0Cp5w' \\\n  -H 'x-api-key: xZR4nVbxA1ArHD9RLbNg7CKaa3fyWlW1KUX71C04' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"externalId\": \"MIA_RC-2025-1_class-only-ext\",\n    \"name\": \"MIA_RC-2025-1_class-only-name\",\n    \"description\": \"MIA_RC-2025-1_class-only_Desc\",\n    \"totalAmount\": 2000,\n    \"budgetAssociations\": [\n         {\n           \"classRef\": {\n            \"companyCodeId\": null,\n            \"companyCodeRefIds\": [\n              \"42786\"\n            ],\n            \"active\": true,\n            \"enableForAllCompanyCodes\": false,\n            \"id\": \"63c2b04c3e1b0d5f083a14c7\",\n            \"externalId\": null,\n            \"docNo\": \"002_1\",\n            \"label\": \"002_1\",\n            \"type\": \"ClassModel\",\n            \"archived\": false\n         }\n          }  \n ],\n    \"durationType\": \"MONTHLY\",\n    \"fromDate\": \"2024-12-19\",\n    \"overBudgetAction\": \"ALLOW_WITHOUT_APPROVAL\",\n    \"budgetApproverRefs\": [],\n    \"currency\": \"USD\",\n    \"toDate\": \"2025-01-18\",\n    \"active\": true\n}' Expected Results: User should be able to create \"budgetAssociations\" when  class, customer, project, location type and location  is selected individually without selecting any other accounting element.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-12-20T06:25:25.893-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-106368"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-106803",
+      "summary": "RC-2025-2 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Open",
+      "assignee": "Jimena Pose",
+      "created": "2025-01-15T09:08:37.060-0800",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-105927",
+        "summary": "Execute Post Production Testing (Asma)",
+        "description": "",
+        "status": "To Do",
+        "assignee": "Asma Latif",
+        "created": "2024-12-16T10:11:26.192-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-106803"
+      },
+      {
+        "key": "VZI-105926",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "In Progress",
+        "assignee": "Aqsa Rani",
+        "created": "2024-12-16T10:11:26.012-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-106803"
+      },
+      {
+        "key": "VZI-105925",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "To Do",
+        "assignee": "Jimena Pose",
+        "created": "2024-12-16T10:11:25.895-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-106803"
+      },
+      {
+        "key": "VZI-105924",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-12-16T10:11:25.787-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-106803"
+      },
+      {
+        "key": "VZI-105923",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "Impacted Areas of Payables RC Functionalities Impacted Area 1 Impacted Area 2 Impacted Areas of Other Teams RC Functionalities Purchase Team Impacted Area 1 Impacted Area 2 Integration Team Impacted Area 1 Impacted Area 2 Budget Team Impacted Area 1 Impacted Area 2",
+        "status": "To Do",
+        "assignee": "Asma Latif",
+        "created": "2024-12-16T10:11:25.727-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-106803"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102176",
+      "released_in_current_rc": false,
+      "summary": "Thomas Supply & Distribution - Netsuite Integration",
+      "description": "Thomas Supply & Distribution - Netsuite Integration Phase 2 PROD & SOCI unitIds: 276 Admin user email:  admin.tos2@vroozi.com The Scope of work includes the following items. Bring new master data from Netsuite Read re-order quantities from Netsuite create Purchase Request / or Purchase Order in Vroozi for the re-order items. Create the Purchase order in Netsuite. Create Item Receipt in Netsuite. Post Invoices to Netsuite. Post Credit memo to Netsuite. Bring Payment information from Netsuite In review by Project team. Bring Inventory items into Netsuite and create catalogs",
+      "status": "Implementation In Progress",
+      "assignee": "Talqeen Ahmad",
+      "created": "2024-08-11T12:36:25.631-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-105890",
+        "summary": "Vroozi API: Make the Catalog reference editable in Create PR API",
+        "description": "Business Case: Make the catalog reference in the Create PR API editable, allowing external systems or middleware to provide catalog references for catalog items during purchase requisition creation. Acceptance Criteria: The catalog reference in the Create PR API should be editable. This editing should be optional. The Create PR API should accept if the external system or middleware provides that information. If the external system or middleware does not provide that information, the Create PR API should work as it is currently. Technical Details: Documentation: The documentation should be updated for the  Items \u2192 catalogRef. The text should be: Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-15T22:41:50.797-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-102176"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103542",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Additional New Development Work to support External API Call - 3",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-09-23T04:49:42.161-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-105828",
+        "summary": "Vroozi API: External Workflow: Feature flag",
+        "description": "Business Case: Need to introduce a feature flag to turn ON the External Workflow Timeline Augmentation with the Internal Workflow timeline. Acceptance Criteria: A new feature flag should be introduced. ( INTEGRATION__EXTERNAL_TIMELINE ) It will be OFF by default. Turning this flag ON should turn on the External Workflow Timeline Augmentation with the Internal Workflow Timeline. The existing external workflow timeline( for NBCU ) should not be visible if this new feature flag is ON. Technical Requirements: Documentation: Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-11T20:37:11.727-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-105483",
+        "summary": "Vroozi API: External Accounting Validation: The Line Item Subtotal can be specified as part of accounting definition reference in the External Accounting Validation Configuration service",
+        "description": "Business Case: The system should allow to specify the  Line Item Subtotal  as part of the accounting definition reference in the  External Accounting Validation Configuration  service. Acceptance Criteria: After introducing the aggregate toggle( ) in the  External Accounting Validation Configuration  service, it accepts the following inputs now: Accounting String Definition reference ( for deciding what data needs to be sent in payload and for error message generation ) External System Endpoint Documents and Events ( Events of the documents on which a call should be sent to the external system ) Line Item Subtotal  ( Consolidation of the identical accounting combination as a single entry and aggregation of the Line Item Subtotal if it is part of the accounting combination ) Currently, the system accepts all the accounting and organization info fields in the  Accounting String Definition reference  input of the  External Accounting Validation Configuration  service. The system should also accept the  Line Item Subtotal  field in the  Accounting String Definition reference  input of the  External Accounting Validation Configuration  service. If the  Line Item Subtotal  is specified: It should allow the system to send the  Line Item Subtotal  in the payload to the external system for validation. It should be a part of the accounting validation error message if an error is returned. If the  Line Item Subtotal  is not specified: It should not allow the system to send the  Line Item Subtotal  in the payload to the external system for validation. It should not be a part of the accounting validation error message if an error is returned. For line items with splits, the system should apply the defined  Min. Decimal Places  and  Max. Decimal Places  values to ensure accurate calculation of the subtotal for each split. Line Item Subtotal as part of accounting definition reference and its Aggregation: Now,  Line Item Subtotal  is part of the accounting definition reference in the  External Accounting Validation Configuration  service, and the  aggregate  toggle is also introduced( refer to   ), the following use cases should be handled accordingly. Line Item Subtotal in Accounting Definition Reference Aggregate Toggle  Expected Result Specified TRUE The  Line Item Subtotal  of line items having identical accounting strings should sum up.  Group the line items with identical accounting string values into a single entry in the payload sent to the external system for validation, including references to the individual items. Specified False Each line item with an accounting combination(accounting strings +  Line Item Subtotals ) value should have a separate entry in the payload sent to the external system for validation. Not Specified True Group the line items with identical accounting string values into a single entry in the payload sent to the external system for validation, including references to the individual items. Not specified False Each line item with an accounting strings value should have a separate entry in the payload sent to the external system for validation. Documentation: Technical Details: Need to add following field in the accounting configuration collection in accounting db. AMOUNT  in  ValidationField Need to create an int-webhooks-event-notification-queue queue which should be created for all the environments. Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-26T23:43:40.596-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-105478",
+        "summary": "Vroozi API: External Accounting Validation: Introduce Aggregation toggle in External Accounting Validation Configuration service",
+        "description": "Business Case: The system should aggregate identical accounting combinations of multiple line items into a single entry before sending them to the external system for validation. Acceptance Criteria: As implemented in  , the sub-feature toggle  externalWorkflow = true. Based on the selected value of the sub-feature toggle, the  External Accounting Validation Configuration Service  should be defined. Currently, it accepts the following inputs: ( refer to  ) Accounting String Definition reference ( for deciding what data needs to be sent in payload and for error message generation ) External System Endpoint Documents and Events ( Events of the documents on which a call should be sent to the external system ) Another input  aggregate ( Dev should decide the proper enum )   should be added to the  External Accounting Validation Configuration Service. This should be a boolean type input. The default value should be  FALSE. In case of  FALSE , the system should send the accounting string of each line item separately in the payload to the external system for validation. Setting it to  TRUE  should consolidate the identical accounting string values for multiple line items as a single entry in the payload to the external system for validation. ( with all line items referenced. Implemented in  )  and Team,  Please note that this new toggle  aggregate  in the  External Accounting Validation Configuration Service  should serve two purposes: Consolidation of the identical accounting string as a single entry aggregation of the amount if it is part of the accounting validating combination(accounting string + line item subtotal) In the future, there may be a use case where a customer requires consolidation of identical accounting strings without aggregating the amounts and we may require to introduce further settings under the  aggregate  toggle.  Therefore, please design it in a way that allows the future implementation of this use case with minimal effort if required. Documentation: A separate ticket should be created to introduce a static information section in the Vroozi API Docs. Tech ni cal Details: Q&A:",
+        "status": "Release Approved",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-26T22:48:53.502-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-104143",
+        "summary": "Vrozi API: External Accounting Validation: The user can see the accounting validation errors sent by the external system on the document",
+        "description": "Business Case: As a user, I want to see the accounting validation errors sent by the external system on the document. Acceptance Criteria: For functionality reference, please review the ticket    For Aggregate toggle, please review the ticket  If the accounting validation from the external system is timed out, the system should display a red Noty message. The Noty message should be a slider. After 5 seconds, the Noty message should slide away. The message should be  The accounting validation process is timed out. Please try again after a few moments. Accounting Validation Error Message When the Aggregate toggle is set to TRUE: If the accounting validation from the external system is completed successfully and returns errors, the system should display the accounting validation error message above the line item grid. ( The following requirements are subject to the findings of the spike   that what information the external system returns in case of errors. Therefore, only mockups are attached for the time being ) An error message from the external system should be expected for every error against the consolidated and aggregated accounting string or accounting combination( accounting string + amount ). That message should be displayed instead of the predefined messages for the internal accounting validation. There should be a fixed statement ' The following Accounting String is invalid because ' followed by the message sent by the external system. If only one accounting string is found invalid against one line item If only one accounting string is found invalid against multiple line item If multiple accounting string is found invalid against multiple line item If the external system does not send any error message in the error response, the error message on the UI should be  The following Accounting String is invalid. If a line item with no splits has an accounting validation error: If multiple splits of a line item have an accounting validation error: Accounting Validation Error Message When the Aggregate toggle is set to FALSE: The external system should send the validation response separately for each line item and its splits. For every line item containing the erroneous accounting string or accounting combination, an error message from the external system should be expected( accounting string + amount ). That message should be displayed instead of the predefined messages for the internal accounting validation. There should be a fixed statement ' The following Accounting String is invalid because ' followed by the message sent by the external system. Scrollable Accounting Validation Error Message Box: In case, the aggregate is set to  FALSE  and every line item response should be received individually, there is a possibility of having a large number of error responses.   The height of the current Accounting Validation Error message box can handle a limited number of errors, after which it starts expanding downwards. A scroll bar should be introduced in the Accounting Validation Error Message box to accommodate the large of accounting validation error messages. Documentation: Technical Details:    Q&A:   Integration Team  (                         )",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-10-11T04:25:05.875-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      },
+      {
+        "key": "VZI-104038",
+        "summary": "Vroozi API: External Accounting Validation: The system should allow the external system, to validate accounting info on transactional documents non aggregate for amount fields approach",
+        "description": "Business Case: The system should ensure that the accounting information for transactional documents is validated through an external system. Acceptance Criteria: A new sub-feature flag should be introduced. ( The dev team should decide the enum for that ) This sub-feature flag should be dependent on the main Accounting Validation  ACCOUNTING_STRING_VALIDATION  flag. If the main Accounting Validation  ACCOUNTING_STRING_VALIDATION  flag is ON: The default value for this new flag should be  Internal. The other value for this flag should be  External. If the main Accounting Validation  ACCOUNTING_STRING_VALIDATION  flag is OFF: This new sub-feature flag should become irrelevant. This sub-feature flag should be switched between  Internal  and  External  based on the need. If the sub-feature flag is set to  Internal : The system should display the  Accounting Strings  menu in the admin\u2019s left accordion menu. In the Accounting Validation Configuration Service, the system should ask for the following inputs: ( existing implementation ) Accounting and Organization objects which will: Determine what objects should be used to define the accounting strings. ( existing implementation ) Tell the system the objects that should be validated during the accounting validation process.    Documents and their events where the system should run the accounting validation. ( existing implementation )  If the sub-feature flag is set to  External : The system should not display the  Accounting Strings  menu in the admin\u2019s left accordion menu as the validation rule and accounting validation should be managed and run by the external system. In the Accounting Validation Configuration Service, the system should ask for the following inputs: The external system\u2019s endpoint Vroozi should hit to get the accounting info validated by the external system. Documents and their events where the system should send the call to the external system for accounting validation. At this point, only  PR Submission  is the event in the case of External Accounting Validation where the accounting validation should be executed. The  PR Submission  should be supported only in the PR document object of the Accounting Validation Configuration service when the sub-feature flag is set to  External . PR Submission: When the user hits the PR  Submit  button, the system should: An In Progress icon should appear on the  Submit  button. ( existing implementation ) Send the request to the external system ( as defined in the Accounting Validation Configuration Service ) The system should submit the document only when the accounting validation is completed successfully with no errors. If the accounting validation is completed successfully, and find errors, the system should keep the document in its current state.  The  Submit  button label should be updated from Submit to Validation Error(s). ( existing implementation ) Clicking on that should navigate the user to the Accounting Validation Error message visible above the line item grid. ( Please refer to the next section ) The system should keep the document in its current state if the accounting validation call is timed out for any reason. The system should have a red Noty message. ( Please refer to the next section ) The Noty message should be a slider. After 5 seconds, the Noty message should slide away. The message should be  Accounting Validation Error Message: The system should use the existing error message on the document. Documentation: Technical Details:    Q&A:   Integration Team  (                         )",
+        "status": "Release Approved",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-10-08T23:45:48.142-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-103542"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104032",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi Deltek Integration - POC to transmit document from Vroozi to CostPoint",
+      "description": "",
+      "status": "In Final Review",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-08T22:18:19.942-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-105676",
+        "summary": "Deltek Integration - Add a connector page for Costpoint Integration in Admin panel",
+        "description": "Business Case: As an admin, I can specify the Costpoint credentials on the  Company \u2192 Connectors  screen. So Vroozi can be connected to Costpoint ERP. Acceptance Criteria: There should be a new tile in the  Connectors  section of the  Company \u2192 Connectors  screen. The tile should contain the Costpoint icon. The default message in the Costpoint tile should be \u201c Sync your master data and transactional documents automatically with Costpoint \u201c. If the connection is set up but disabled, the message should be \u201c Costpoiint connection is set up but currently disabled. \u201c If the connection is setup and enabled, the message should be \u201c Costpoiint connection is set up but and enabled. \u201c It should be collapsed by default. Admin should be able to expand/collapse it by clicking the icon in the right corner of the tile.( as appears for the other connectors ) Expanding the Costpoint Connector tile should display the following fields:( Need FE\u2019s help to design the mockup.  ) URL (required) Username (required) Password (required) Connect button Enable connector The label should be \u201c Enable or disable this Vroozi Connector \u201c It should be disabled by default. Upon successful connection, the system should save these credentials in the DB. In addition, the system should save the unitID information in the DB. In case of invalid credentials, the system should show the error message from the Costpoint in the overlay. ( This image is for reference. Actual message from the Costpoint may vary ) All the information stored in the DB should be encrypted. Technical Requirements: We need to create a connector page for CostPoint application to allow client to provide Costpoint specific connection details for authentication and authorization via our admin UI. The connection details provided should be stored securely for our middleware to consume and connect to Costpoint API for subsequent integration. Documentation: Q&A:  Feature toggle:  INTEGRATION__COSTPOINT_CONNECTOR",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-12-04T19:48:12.082-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-104032"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105512",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Budgets Phase V : Add support for all the Accounting Objects in Budget APIs and add Budget Bulk Upload API",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-11-27T22:07:33.488-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-105540",
+        "summary": "Vroozi API: Update the Budget validation logic to the line item of the PR",
+        "description": "Business Case: As an external system user, I want the API to ensure budget validation is performed based on the chosen accounting and organizational object values during PR creation or updates. Acceptance Criteria: Currently, the budget fetching query on the  PR API  modal is: find \n(     (costCenter = enteredValue OR costCenter is Empty)\n  AND (GL = enteredValue OR GL is Empty)\n  AND (companyCode = enteredValue OR companyCode is Empty)\n  AND (purchasingOrganization = enteredValue OR purchasingOrganization is Empty)\n  AND (plant = enteredValue OR plant is Empty)\n) The above query only considers the objects that are ON for the unitID The above budget query should now handle all the Organization and Accounting objects: find \n(     (companyCode = enteredValue OR companyCode is Empty)\n  AND (purchasingOrganization = enteredValue OR purchasingOrganization is Empty)\n  AND (plant = enteredValue OR plant is Empty)\n  AND (selectedCostObject = enteredValue OR selectedCostObject is Empty)\n  AND (GL = enteredValue OR GL is Empty)\n  AND (Customer = enteredValue OR Customer is Empty)\n  AND (Class = enteredValue OR Class is Empty)\n  AND (Project = enteredValue OR Project is Empty)\n  AND (locationType = enteredValue OR locationType is Empty)\n  AND (location = enteredValue OR location is Empty)\n)\n This updated query should only consider the objects that are ON for the unitID This change should impact the following PR APIs: Create new purchase request. Update Purchase Request by ID. Update Purchase Request by request number. The system should validate the budget if the specified budget is present in the list of budgets fetched based on the update logic mentioned above. The system should throw the validation error if the specified budget is not in the list of budgets fetched based on the update logic mentioned above. Please note that we will update the budget query soon as it is intricate and very cumbersome to understand.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-11-28T20:36:56.479-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105512"
+      },
+      {
+        "key": "VZI-105517",
+        "summary": "Vroozi API: Add all the cost objects in the Budget GET APIs result response",
+        "description": "Business Case: As an external system user, I want to fetch budgets and all associated accounting strings containing any cost objects. Acceptance Criteria: The following Budget GET APIs should be updated in this implementation: Get the list of budgets Get Budget by ID Get Budget by name Currently, only the  Cost Center  is present in the above API responses: The following Cost objects should be added to Budget GET APIs responses: WBS Internal Order Profit Center Documentation: API documentation for the following Budget POST APIs should be updated: Get the list of budgets Get Budget by ID Get Budget by name The documentation for all the newly added accounting objects should be given in the sample responses of the APIs mentioned above. The existing explanations for other accounting objects should be used for the newly introduced accounting objects in the responses. Technical Details:    Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-11-27T22:47:26.006-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105512"
+      },
+      {
+        "key": "VZI-105516",
+        "summary": "Vroozi API: Add all the cost objects in the Budget POST APIs",
+        "description": "Business Case: As an external system user, I want to create and update budgets using accounting strings that include any cost object. Acceptance Criteria: The following Budget POST APIs should be updated in this implementation: Create a new Budget. Create/Update Budget Update budget by ID. (Merge and Update.) Currently, the above APIs accept  Only  Cost Center   as a  Cost Object  input: The following cost objects should be added to Budget POST APIs as input parameters: WBS Internal Order Profit Center The existing validation rule should be extended to these new cost object input parameters. If the accounting string object is defined in the  budgetAssociations  array, at least one accounting or organization object should be specified. The system should return the validation error( use the existing one ) if at least one accounting or organization object is not specified in the Accounting String object. The system should also validate if the accounting(including cost objects) and organization objects specified in the Accounting String object do not exist in the Vroozi master data. Documentation: API documentation for the following Budget POST APIs should be updated: Create new Budget. Create/Update Budget Update budget by ID. (Merge and Update.) The documentation for all the newly added accounting objects should be given in both the Edit and Schema views of the APIs mentioned above. The existing explanations for other accounting objects should be used for the newly introduced accounting objects in the schema view. Technical Details:    Q&A:",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-11-27T22:46:43.531-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-105512"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103959",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Rate Limit - Introduce configuration to support rate limit per API endpoints - 4",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-04T09:46:59.170-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104961",
+        "summary": "Vroozi API - Test company usage plan and rate limits",
+        "description": "We should be able to run the s and steps provided in the    The existing API Keys should be moved to the newly created usage plan.  The integration app should be updated in DB to store the new usage plan. User should be able to hit the APIs. Quota and burst limit should be defined in the RunDeck Job for testing. Lower value like (100, 10) can be used for testing.  Quota limit will be used as 100000 and burst will be used as 500, in actual limits. (Can be modified in RunDeck Job) Creating the new keys from the UI should use the newly created usage plan from the RunDeck Job. Properties should be updated to handle per unitId usage plan settings. Testing should be done with different unitId and applying different limits to different unitIds.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-11-07T01:53:27.299-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-103959"
+      },
+      {
+        "key": "VZI-103960",
+        "summary": "Spike - R&D on AWS API Gateway Rate Limit per usage plan / api key / endpoints",
+        "description": "",
+        "status": "Investigation Done",
+        "assignee": "Sharjeel Tariq",
+        "created": "2024-10-04T09:48:18.757-0700",
+        "issue_type": "Spike",
+        "parent_id": "VZI-103959"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99320",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Upgrade - Major Documentation Upgrade Phase II",
+      "description": "Vroozi API Upgrade: Part 1 - Major version upgrade from Swagger v2 to OpenAPI v3 Vroozi API Upgrade: Part 2 - Master Data Documentation enhancement",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T21:17:05.210-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-99972",
+        "summary": "Vroozi API Upgrade: Part 12 - Update GL Accounts API Documentation and Examples",
+        "description": "Requirements: Update all API endpoints and model descriptions in the documentation with proper examples, defaults and required flags Add multiple different examples of the API usages to cover multiple use cases including minimal required payload, minimal recommended payload and all available fields example. All the payload should be properly formatted and should work using Try it from documentation itself. Add the read only fields in the default response to mention them as Read only fields, e.g id, dateCreated, lastUpdated etc. It is read only field. Mention the behaviour of the field in case the value is not provided in the payload for update flows. e.g Not providing a field at all in the payload vs providing empty or null value in that field during update. Update the 403 error message in the documentation Forbidden (The server understood the request but refuses to authorise it). Technical Details: Minimal Payload: {\n  \"code\": \"GL01\",\n  \"description\": \"GL Account GL01\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true\n} Recommended Payload: {\n  \"externalId\": \"1001\",\n  \"code\": \"GL01\",\n  \"description\": \"GL Account GL01\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true\n} Default Payload: {\n  \"externalId\": \"1001\",\n  \"code\": \"GL01\",\n  \"description\": \"GL Account GL01\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true,\n  \"budgetInfo\": {\n    \"amount\": 20.3,\n    \"timeFrequency\": \"MONTHLY\"\n  }\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Sajid",
+        "created": "2024-05-29T13:59:15.057-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-99320"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-94874",
+      "released_in_current_rc": false,
+      "summary": "Purchase-Api : Identify the areas that require refactoring brain methods, and methods having high cognitive complexity, highlighted by Sonar and fix them",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Muhammad Ijaz",
+      "created": "2024-01-07T23:11:39.073-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-97314",
+        "summary": "Refactor [getValidationErrors] method to reduce its Cognitive Complexity from 35 to the 15 allowed.",
+        "description": "Refactor method to reduce its Cognitive Complexity from 35 to the 15 allowed. PurchaseOrderServiceImpl.java  ->  getValidationErrors",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-03-07T02:29:25.263-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94874"
+      },
+      {
+        "key": "VZI-97009",
+        "summary": "Refactor [convertPurchaseOrderToGoodsReceiptReturn] method to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+        "description": "Refactor the below method to reduce its Cognitive Complexity from 22 to the 15 allowed. GoodsReceiptReturnServiceImpl.java  ->  convertPurchaseOrderToGoodsReceiptReturn",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-02-28T23:40:20.238-0800",
+        "issue_type": "Bug",
+        "parent_id": "VZI-94874"
+      }
+    ]
+  }
+]

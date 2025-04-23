@@ -1,0 +1,664 @@
+[
+  {
+    "epic": {
+      "key": "No Epic",
+      "released_in_current_rc": false
+    },
+    "issues": [
+      {
+        "key": "VZI-105858",
+        "summary": "PMAN: Demo Feedback - Newly added Async API endpoints are inconsistent for WBS, GL_Account and Approval_Groups.",
+        "description": "Please update the following GET API endpoints:  /wbs-elements/async-requests/{trackingId} /gl-accounts/async-requests/{trackingId} /approval-groups/async-requests/{trackingId} Change to: /wbs-elements/bulk-upsert/{trackingId}/status /gl-accounts/bulk-upsert/{trackingId}/status /approval-groups/bulk-upsert/{trackingId}/status",
+        "status": "Awaiting Business Validation",
+        "assignee": "Iqtidar Arshad",
+        "created": "2024-12-12T23:24:01.055-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105857",
+        "summary": "PMAN: VROOZI API - 500 error being displayed in the WBS Async API when company code is incorrect in more than one payload.",
+        "description": "Environment:  Devqa21, unitId 2 Pre Conditions: Postman endpoint  https://{{domain}}/v1/wbs-elements/bulk-upsert/async  is accessible. Postman endpoint https://{{domain}}/v1/wbs-elements/async_requests/ is accessible. Steps to Reproduce: Send below request on endpoint  https://{{domain}}/v1/wbs-elements/bulk-upsert/async . [\n    {\n        \"id\": \"\",\n        \"externalId\": \"MIA_WBS_804\",\n        \"code\": \"MIA_WBS_804\",\n        \"description\": \"MIA_WBS_804-{{env}} - WBS Element\",\n        \"companyCodeRef\": {\n            \"id\": \"\",\n            \"externalId\": \"\",\n            \"docNo\": \"MIA_001-{{env}}\",\n            \"type\": \"CompanyCodeModel\",\n            \"label\": \"\",\n            \"archived\": false\n        },\n        \"budgetInfo\": {\n            \"amount\": 20.3,\n            \"timeFrequency\": \"MONTHLY\"\n        },\n        \"active\": true,\n        \"profitCenter\": \"MIA_001-{{env}}\",\n        \"project\": \"MIA_001-{{env}} Code\",\n        \"projectDescription\": \"MIA_001-{{env}} - Project Description\",\n        \"specialFlag\": true,\n        \"dateCreated\": \"2024-12-12T13:56:04.037+0000\",\n        \"lastUpdated\": \"2024-12-12T13:56:04.037+0000\"\n    },\n        {\n        \"id\": \"\",\n        \"externalId\": \"MIA_WBS_805\",\n        \"code\": \"MIA_WBS_805\",\n        \"description\": \"MIA_WBS_805-{{env}} - WBS Element\",\n        \"companyCodeRef\": {\n            \"id\": \"\",\n            \"externalId\": \"\",\n            \"docNo\": \"001aaa\",\n            \"type\": \"CompanyCodeModel\",\n            \"label\": \"\",\n            \"archived\": false\n        },\n        \"budgetInfo\": {\n            \"amount\": 20.3,\n            \"timeFrequency\": \"MONTHLY\"\n        },\n        \"active\": true,\n        \"profitCenter\": \"MIA_001-{{env}}\",\n        \"project\": \"MIA_001-{{env}} Code\",\n        \"projectDescription\": \"MIA_001-{{env}} - Project Description\",\n        \"specialFlag\": true,\n        \"dateCreated\": \"2024-12-12T13:56:04.037+0000\",\n        \"lastUpdated\": \"2024-12-12T13:56:04.037+0000\"\n    }\n] Copy the trackingId from response and post it on below endpoint: https://{{domain}}/v1/wbs-elements/async_requests/{{tracking-ID}} Verify the response. Actual Results: 500 error is being displayed. {\n    \"id\": \"675bd4a5b3708e0c39770535\",\n    \"trackingId\": \"7a4c195c-7014-4813-b7dc-a9d197b65ef9\",\n    \"requestPath\": \"/api/wbs-elements/bulk-upsert/async\",\n    \"unitId\": \"2\",\n    \"requestMethod\": \"POST\",\n    \"documentType\": \"WBS_ELEMENT\",\n    \"payload\": [\n        {\n            \"requestBody\": {\n                \"id\": \"\",\n                \"externalId\": \"MIA_WBS_804\",\n                \"dateCreated\": \"2024-12-12T13:56:04.037+0000\",\n                \"lastUpdated\": \"2024-12-12T13:56:04.037+0000\",\n                \"code\": \"MIA_WBS_804\",\n                \"description\": \"MIA_WBS_804-Stage - WBS Element\",\n                \"companyCodeRef\": {\n                    \"id\": \"\",\n                    \"externalId\": \"\",\n                    \"docNo\": \"001\",\n                    \"label\": \"\",\n                    \"type\": \"CompanyCodeModel\",\n                    \"archived\": false\n                },\n                \"budgetInfo\": {\n                    \"amount\": 20.3,\n                    \"timeFrequency\": \"MONTHLY\"\n                },\n                \"profitCenter\": \"MIA_001-Stage\",\n                \"specialFlag\": true,\n                \"project\": \"MIA_001-Stage Code\",\n                \"projectDescription\": \"MIA_001-Stage - Project Description\",\n                \"active\": true\n            },\n            \"status\": \"SUCCESS\",\n            \"errors\": []\n        },\n        {\n            \"requestBody\": {\n                \"id\": \"\",\n                \"externalId\": \"MIA_WBS_805\",\n                \"dateCreated\": \"2024-12-12T13:56:04.037+0000\",\n                \"lastUpdated\": \"2024-12-12T13:56:04.037+0000\",\n                \"code\": \"MIA_WBS_805\",\n                \"description\": \"MIA_WBS_805-Stage - WBS Element\",\n                \"companyCodeRef\": {\n                    \"id\": \"\",\n                    \"externalId\": \"\",\n                    \"docNo\": \"001aaa\",\n                    \"label\": \"\",\n                    \"type\": \"CompanyCodeModel\",\n                    \"archived\": false\n                },\n                \"budgetInfo\": {\n                    \"amount\": 20.3,\n                    \"timeFrequency\": \"MONTHLY\"\n                },\n                \"profitCenter\": \"MIA_001-Stage\",\n                \"specialFlag\": true,\n                \"project\": \"MIA_001-Stage Code\",\n                \"projectDescription\": \"MIA_001-Stage - Project Description\",\n                \"active\": true\n            },\n            \"status\": \"FAILED\",\n            \"errors\": [\n                {\n                    \"code\": \"500\",\n                    \"element\": \"WBS Element\",\n                    \"message\": \"Something went wrong. Please contact administrator\",\n                    \"detail\": \"Something went wrong. It looks like there is some error in processing your request at this time. Please contact administrator\",\n                    \"level\": \"WBS Element\"\n                }\n            ]\n        }\n    ],\n    \"status\": \"COMPLETED_WITH_FAILURE\",\n    \"stats\": {\n        \"total\": 2,\n        \"success\": 1,\n        \"failed\": 1,\n        \"errors\": 0,\n        \"pending\": 0\n    },\n    \"dateCreated\": \"2024-12-13T06:31:01.431+0000\",\n    \"lastUpdated\": \"2024-12-13T06:31:01.455+0000\"\n} CURL: POST curl --location 'https://devqa21-api.vroozi.com/v1/wbs-elements/bulk-upsert/async' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiIzYTQ2YjU5ZS1lYTdlLTRhMTktODc5My04YzM2NTE2YWQyYzYiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiJkZDI3YTkyNi1jZTEwLTRlNGItOTRiYi0yYzNiNTJkOTUyMTYifQ.mCzuKt8IKmYxjg9M8N0s1uAcayUH_rpyds2gqOZW1gZ9Z1cUQxCYHUrYxqHSAeDXgtzF9xTrafv7rz2_mGYCDQ' \\\n--header 'x-api-key: emzJqXWzOu5UHgTWYgXFH7Hhtf6s042R95cq2NwN' \\\n--data '[\n    {\n        \"id\": \"\",\n        \"externalId\": \"MIA_WBS_804\",\n        \"code\": \"MIA_WBS_804\",\n        \"description\": \"MIA_WBS_804-devqa21 - WBS Element\",\n        \"companyCodeRef\": {\n            \"id\": \"\",\n            \"externalId\": \"\",\n            \"docNo\": \"MIA_001-devqa21\",\n            \"type\": \"CompanyCodeModel\",\n            \"label\": \"\",\n            \"archived\": false\n        },\n        \"budgetInfo\": {\n            \"amount\": 20.3,\n            \"timeFrequency\": \"MONTHLY\"\n        },\n        \"active\": true,\n        \"profitCenter\": \"MIA_001-devqa21\",\n        \"project\": \"MIA_001-devqa21 Code\",\n        \"projectDescription\": \"MIA_001-devqa21 - Project Description\",\n        \"specialFlag\": true,\n        \"dateCreated\": \"2024-12-12T13:56:04.037+0000\",\n        \"lastUpdated\": \"2024-12-12T13:56:04.037+0000\"\n    },\n        {\n        \"id\": \"\",\n        \"externalId\": \"MIA_WBS_805\",\n        \"code\": \"MIA_WBS_805\",\n        \"description\": \"MIA_WBS_805-devqa21 - WBS Element\",\n        \"companyCodeRef\": {\n            \"id\": \"\",\n            \"externalId\": \"\",\n            \"docNo\": \"001aaa\",\n            \"type\": \"CompanyCodeModel\",\n            \"label\": \"\",\n            \"archived\": false\n        },\n        \"budgetInfo\": {\n            \"amount\": 20.3,\n            \"timeFrequency\": \"MONTHLY\"\n        },\n        \"active\": true,\n        \"profitCenter\": \"MIA_001-devqa21\",\n        \"project\": \"MIA_001-devqa21 Code\",\n        \"projectDescription\": \"MIA_001-devqa21 - Project Description\",\n        \"specialFlag\": true,\n        \"dateCreated\": \"2024-12-12T13:56:04.037+0000\",\n        \"lastUpdated\": \"2024-12-12T13:56:04.037+0000\"\n    }\n]' GET: curl --location 'https://devqa21-api.vroozi.com/v1/wbs-elements/async_requests/7a4c195c-7014-4813-b7dc-a9d197b65ef9' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiIzYTQ2YjU5ZS1lYTdlLTRhMTktODc5My04YzM2NTE2YWQyYzYiLCJVTklUX0lEIjoiMiIsIlJBTkRPTV9OVU1CRVIiOiJkZDI3YTkyNi1jZTEwLTRlNGItOTRiYi0yYzNiNTJkOTUyMTYifQ.mCzuKt8IKmYxjg9M8N0s1uAcayUH_rpyds2gqOZW1gZ9Z1cUQxCYHUrYxqHSAeDXgtzF9xTrafv7rz2_mGYCDQ' \\\n--header 'x-api-key: emzJqXWzOu5UHgTWYgXFH7Hhtf6s042R95cq2NwN'",
+        "status": "Awaiting Business Validation",
+        "assignee": "Iqtidar Arshad",
+        "created": "2024-12-12T22:45:38.056-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105279",
+        "summary": "PROD - Accounts Payable - Hopper visibility issue based on the structured access rule",
+        "description": "url:  https://stage-go.vroozi.com/#/login username:  aqsa.rani+manager@vroozi.com password:  Qwerty@1 Pre Conditions: A structured rule should be configured with processors users in it Steps to Reproduce: Create a PO matching accounting information as of the structured rule  e.g PO# 2000030279 Associate the PO in the Invoice Line item in the invoice should not have any accounting information in the cxml request Submit the invoice through cxml request  Login through APM user Please see the invoice is visible to the manager  Login through users in the configured structured rule Please see that document is not visible to the users in structured rule Actual Result: Document is not visible to the users in the structured rule Expected Result: Document should be visible to the users in the configured structured rule",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-11-19T03:02:19.126-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105141",
+        "summary": "When user Failed the PO from API the date displays N/A in this case and it is not appeared in the search list.",
+        "description": "Pre-Condition: Supplier don`t have any output method. These settings should be enable in Documents \u2192 All Documents. Steps to Reproduced: URL:    Login:  waheed.nawaz+employee_stage83@vroozi.com Password: Welcome1! Create a PR from UI. Submit the PR. User will get the options Select \u201cCreate PO in Ordered State\u201d PO Automatically created in Ordered Status. Go to Postman Execute this Failed status from API status update endpoint. CURL is as attached. (add your PO number in docNo) curl --location 'https://staging-api.vroozi.com/v1/purchase-orders/status-update' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiI4OWY3Y2Y0Ni01NjBlLTQwYWYtYjQ3OC05MDA1OTI2ZjBhMjkiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiOGIwNDljZDktZGZiMi00MzU0LWIyNjgtOWQ4ZjJmZDhmZjNhIn0.293oLnPkuSNST11uzTWLT9cVnL28MCk9hXdz-yJkRJu9k5d83jL_2r9QFORNTSozsLSwooPDhdW-MqEGgC354Q' \\\n--header 'x-api-key: xpRZF0Sazu8i6ShvdCYnB7ZxBrLbkrU43CGMhhe1' \\\n--data '{\n  \"docNo\": \"2000007383\",\n  \"status\": \"FAILED\",\n  \"comments\": \"Updating the Purchase Order Status to ORDERED\",\n  \"userRef\": {\n    \"id\": \"\",\n    \"externalId\": \"\",\n    \"dcoNo\": \"\"\n  }\n}' Execute this curl. PO will be in Failed Status. go to UI by login Admin. URL:    Login:  waheed.nawaz+admin_stage83@vroozi.com Password: Welcome1! Go to the Buyer Route \u2192 PO Processing Status Find you your Failed PO from search bar option. Actual Result: When user Failed the PO from API the date displays N/A in this case and it is not appeared in the search list. Expected Result: Date should be displayed in this case.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-11-13T23:05:19.531-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105049",
+        "summary": "Create index for createdDate for document_validation_persistence",
+        "description": "To be able to do an incremental loading into the reporting server we need to create an index on createdDate field, for the document_validation_persistence collection",
+        "status": "Awaiting Business Validation",
+        "assignee": "Jimena Pose",
+        "created": "2024-11-11T03:43:42.005-0800",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105029",
+        "summary": "When PO is in Processing status user is sending Failed status again from PO status Update API then response message is incorrect.",
+        "description": "Pre-Condition: Supplier don`t have any output method. These settings should be enable in Documents \u2192 All Documents. Steps to Reproduced: URL:    Login:  waheed.nawaz+employee_stage83@vroozi.com Password: Welcome1! Create a PR from UI. Submit the PR. User will get the options Select \u201cCreate PO in Ordered State\u201d PO Automatically created in Ordered Status. Go to Postman Execute this Failed status from API status update endpoint. CURL is as attached. (add your PO number in docNo) curl --location 'https://staging-api.vroozi.com/v1/purchase-orders/status-update' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiI4OWY3Y2Y0Ni01NjBlLTQwYWYtYjQ3OC05MDA1OTI2ZjBhMjkiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiOGIwNDljZDktZGZiMi00MzU0LWIyNjgtOWQ4ZjJmZDhmZjNhIn0.293oLnPkuSNST11uzTWLT9cVnL28MCk9hXdz-yJkRJu9k5d83jL_2r9QFORNTSozsLSwooPDhdW-MqEGgC354Q' \\\n--header 'x-api-key: xpRZF0Sazu8i6ShvdCYnB7ZxBrLbkrU43CGMhhe1' \\\n--data '{\n  \"docNo\": \"2000007383\",\n  \"status\": \"FAILED\",\n  \"comments\": \"Updating the Purchase Order Status to ORDERED\",\n  \"userRef\": {\n    \"id\": \"\",\n    \"externalId\": \"\",\n    \"dcoNo\": \"\"\n  }\n}' Execute this curl. PO will be in Failed Status. go to UI by login Admin. URL:    Login:  waheed.nawaz+admin_stage83@vroozi.com Password: Welcome1! Go to the Buyer Route \u2192 PO Processing Status Find you your Failed PO from search bar option. Failed PO listed on screen  on the grid resubmit the PO from right side options. PO will go in Processing Status and it stuck there. Go to Postman and send the request again from API  Actual Result: User is getting incorrect error message in response. {\n    \"id\": \"a7db023f-e909-43ae-bb29-8fc2ac2a00f6\",\n    \"status\": \"400\",\n    \"title\": \"Bad Request\",\n    \"errors\": [\n        {\n            \"code\": \"400\",\n            \"element\": \"POStatusUpdateModel\",\n            \"message\": \"Purchase Order is not available for cancellation. Please check again.\",\n            \"detail\": \"Purchase Order [2000007383] is not eligible for cancellation because it contains [PROCESSING] items.\",\n            \"level\": \"Request Error\"\n        }\n    ],\n    \"timestamp\": \"2024-11-11T09:37:35.150+0000\"\n} Expected Result: the PO should be submitted without Cancellation error, Cancellation error is only expected when we send the Cancel status and PO is not eligible for cancelation.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-11-11T01:38:46.543-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-105028",
+        "summary": "When reSubmit the failed PO from Admin it gets stuck in Processing.",
+        "description": "Pre-Condition: Supplier don`t have any output method. These settings should be enable in Documents \u2192 All Documents. Steps to Reproduced: URL:    Login:  waheed.nawaz+employee_stage83@vroozi.com Password: Welcome1! Create a PR from UI. Submit the PR. User will get the options Select \u201cCreate PO in Ordered State\u201d PO Automatically created in Ordered Status. Go to Postman Execute this Failed status from API status update endpoint. CURL is as attached. (add your PO number in docNo) curl --location 'https://staging-api.vroozi.com/v1/purchase-orders/status-update' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJBUFBfSUQiOiI4OWY3Y2Y0Ni01NjBlLTQwYWYtYjQ3OC05MDA1OTI2ZjBhMjkiLCJVTklUX0lEIjoiODMiLCJSQU5ET01fTlVNQkVSIjoiOGIwNDljZDktZGZiMi00MzU0LWIyNjgtOWQ4ZjJmZDhmZjNhIn0.293oLnPkuSNST11uzTWLT9cVnL28MCk9hXdz-yJkRJu9k5d83jL_2r9QFORNTSozsLSwooPDhdW-MqEGgC354Q' \\\n--header 'x-api-key: xpRZF0Sazu8i6ShvdCYnB7ZxBrLbkrU43CGMhhe1' \\\n--data '{\n  \"docNo\": \"2000007383\",\n  \"status\": \"FAILED\",\n  \"comments\": \"Updating the Purchase Order Status to ORDERED\",\n  \"userRef\": {\n    \"id\": \"\",\n    \"externalId\": \"\",\n    \"dcoNo\": \"\"\n  }\n}' Execute this curl. PO will be in Failed Status. go to UI by login Admin. URL:    Login:  waheed.nawaz+admin_stage83@vroozi.com Password: Welcome1! Go to the Buyer Route \u2192 PO Processing Status Find you your Failed PO from search bar option. Failed PO listed on screen  on the grid resubmit the PO from right side options. Actual Result: PO will go in Processing Status and it stuck there. Expected Result: PO should move into the Ordered status again when admin re-submits the PO",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-11-11T01:36:49.893-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104911",
+        "summary": "API response not collecting user and unit id for feedback",
+        "description": "env: Stage user: Employee Steps: Login to the staging Open chatbot do some conversation Hit like/dislike a comment Go to the network tab and open the API call Observe the response Expected: Response contains User and Unit ID of each call Actual: Unit and User IDs are null Note: run_ids for each message are unique, how can we fetch complete chat in langsmith to see the context if we have no unique id?",
+        "status": "Awaiting Business Validation",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-11-06T00:42:43.158-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104890",
+        "summary": "Regression Testing purchase Team RC-2024-10-2",
+        "description": "RC Tickets:  Test Cases Status: https://vroozi.testrail.net/index.php?/milestones/view/1022",
+        "status": "Done",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-11-05T02:34:32.848-0800",
+        "issue_type": "Task",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104843",
+        "summary": "SmartCoding suggestions are not working for Accounting elements",
+        "description": "env: Stage/devqa15 user:  mutahir.sohail+apProcessor@vroozi.com  | Test@123 Steps: Login to the application  stage-go.vroozi.com/ Send any invoice to the inbox Create an invoice Edit any line item and change company code, gl account, plant etc Expected: Vroozi intelligence suggestions appears for each value change Actual: Vroozi intelligence suggestions does not appear for account elements Loom:",
+        "status": "Abandoned",
+        "assignee": "Muhammad Asad Saleem",
+        "created": "2024-11-04T00:03:36.974-0800",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104714",
+        "summary": "PROD - Accounts Payable - Non PO OCR Invoice - ML Predictions are populating Null string against Items Accounting fields.",
+        "description": "url:   https://go.vroozi.com/#/login username:   asma.latif+APM@vroozi.com password:  Redangel1@ / Redangel1! Preconditions: ML Predictions should be ON via Admin>Accounts Payable>Settings>Preferences: A Non PO OCR Invoice document should have been sent at the hopper address. Accounting fields like GL Account, Cost Center should. have been made Required via Admin>Documents>Settings>All Documents. AP User should have logged into the Application. Steps to Reproduce: Access Inbox>Document Inbox. Open DEV tools> Network Tab>and filter by Context. Select document and click to Create Invoice. Please check the ML Predictions against an item for e.g GL Account. Also Check Context call. Please see Null string is being passed/set in Accounting fields like GL, CoCe, Plant and other applicable accounting fields. This is causing GL(or other Required accounting fields) missing error to be suppressed. Actual result: Null string is being passed/set in Accounting fields like GL, CoCe, Plant and other applicable accounting fields. Expected Result: Null string shouldn\u2019t be passed. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sambhu Sai",
+        "created": "2024-10-28T13:21:48.386-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104607",
+        "summary": "PROD - Accounts Payable - Hopper  - AP Processor can see Structured documents when Not assigned to any of the Email and Structured Rules defined in the System.",
+        "description": "url:   https://stage-go.vroozi.com/#/login username:   asma.latif+102696APP@vroozi.com password:  Blueangel1@ / Blueangel1! Preconditions: \"ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS\" FT should be ON/OFF in DB for the Company Unit Id. An APP User should Not be assigned to Any of the Structured Rule and Email Access Rule. And Have/Not Have the Company Code restricted via its User Profile. SP and CXML Invoices falling under a Structured Rule should already be submitted. Steps to Reproduce: Access Inbox>Document Inbox of the APP User. Please see CXML/SP documents are showing in the Inbox and Archive too. Actual result: APP sees CXML/SP documents in the Inbox and Archive too. Expected Result: APP should see nothing since Not assigned to any defined WF rules in the system. Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-10-24T04:59:16.669-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104572",
+        "summary": "Auto-Created Invoices: If there are no customized Structured Rules, the system does not display system-created invoices to the AP Processor due to the presence of duplicate default rules",
+        "description": "Issue: Auto-Created Invoices: If there are no customized Structured Rules, the system does not display system-created invoices to the AP Processor due to the presence of duplicate default rules Server:   URL:  stage-go.vroozi.com Accounts Payable Manager username:  zulkiful.bajwa+StageAPManagerUnitId77@vroozi.com password: @Welcome1 Accounts Payable Processor username:  zulkiful.bajwa+StageAPProcessorUnitId77@vroozi.com password: @Welcome1 unitId: 77 Pre-Condition: 1. A supplier has been created with the \u2018Allow cXML Invoice' toggle enabled 2. On the Accounts Payables > Settings > Preferences screen, the \"Automatic Creation and Submission of AP Documents\" setting is enabled for cXML AP documents 3. Ensure that no customized Structured Document Submission Access rule exists, and the system only has the default system-defined rule in the database {\n  \"_id\": {\n    \"$oid\": \"63d2568e8a0db842fe01b734\"\n  },\n  \"_class\": \"com.vroozi.api.admin.controller.rest.model.UserGroup\",\n  \"creationDate\": {\n    \"$date\": \"2023-01-26T10:31:42.802Z\"\n  },\n  \"unitId\": \"77\",\n  \"usersId\": [],\n  \"assignmentType\": \"EITHER_GROUP_OR_SPECIFIC_MEMBERS\",\n  \"defaultGroup\": false,\n  \"deleted\": false,\n  \"enabled\": true,\n  \"userRoles\": [\n    \"AP_PROCESSOR\",\n    \"AP_MANAGER\"\n  ],\n  \"type\": \"ROLE_DEFINED\",\n  \"systemDefined\": true\n} Steps to Reproduce: 1. Send a cXML invoice request Endpoint: https://stage-signin.vroozi.com/gateway/api/cxml/invoices/58f8798bcb6e8c8ce2404604?verifyCode=0200042017&uniqueSupplierId=286134564 Request Data: <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE cXML SYSTEM \"http://xml.cXML.org/schemas/cXML/1.2.025/InvoiceDetail.dtd\">\n<cXML version=\"1.0\" payloadID=\"Bajwa-000009@supplier.com\"\n  timestamp=\"2024-05-10T02:50:33-05:00\">\n    <Header>\n        <From>\n            <Credential domain=\"NetworkId\">\n                <Identity>Bajwa</Identity>\n            </Credential>\n        </From>\n        <To>\n            <Credential domain=\"NetworkId\">\n                <Identity>NotifyTest3</Identity>\n            </Credential>\n        </To>\n        <Sender>\n            <Credential domain=\"NetworkId\">\n                <Identity>286134564</Identity>\n                <SharedSecret>3DWzoz7Q90UyslJKmiPQNw==</SharedSecret>\n            </Credential>\n            <UserAgent>Supplier User Agent</UserAgent>\n        </Sender>\n    </Header>\n    <Request deploymentMode=\"production\">\n        <InvoiceDetailRequest>\n            <InvoiceDetailRequestHeader invoiceID=\"Bajwa-00000148\" invoiceOrigin=\"supplier\"\n       purpose=\"standard\" operation=\"new\"\n       invoiceDate=\"2023-01-27T00:00:00-07:00\">\n                <InvoiceDetailHeaderIndicator/>\n                <InvoiceDetailLineIndicator\n           isTaxInLine=\"yes\"\n          isShippingInLine=\"yes\"\n          isAccountingInLine=\"yes\"\n          isDiscountInLine=\"yes\"   />\n                <InvoicePartner>\n                    <Contact role=\"issuerOfInvoice\">\n                        <Name xml:lang=\"\">Bajwa-000009</Name>\n                        <PostalAddress name=\"supplierAddressName\">\n                            <Street>17600 Yonge St</Street>\n                            <City>Newmarket</City>\n                            <State>Ontario</State>\n                            <PostalCode>ON L3Y 4Z1</PostalCode>\n                            <Country isoCountryCode=\"CA\">Canada</Country>\n                        </PostalAddress>\n                        <Email>zulkiful.bajwa+cXML@vroozi.com</Email>\n                        <Phone>\n                            <TelephoneNumber>\n                                <CountryCode isoCountryCode=\"CA\">1</CountryCode>\n                                <AreaOrCityCode>905</AreaOrCityCode>\n                                <Number>8951961</Number>\n                            </TelephoneNumber>\n                        </Phone>\n                    </Contact>\n                    <IdReference identifier=\"123\" domain=\"accountNumber\"/>\n                </InvoicePartner>\n                <InvoicePartner>\n                    <Contact role=\"shipTo\">\n                        <Name xml:lang=\"\">ShippingPartnerHeader</Name>\n                        <PostalAddress name=\"\">\n                            <Street>10116 NE 8TH ST</Street>\n                            <City>BELLEVUE</City>\n                            <State>WA</State>\n                            <PostalCode>98004-4148</PostalCode>\n                            <Country isoCountryCode=\"US\">United States of America</Country>\n                        </PostalAddress>\n                        <Email>zulkiful.bajwa+shippingAdd@vroozi.com</Email>\n                        <Phone>\n                            <TelephoneNumber>\n                                <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                <AreaOrCityCode>201</AreaOrCityCode>\n                                <Number>3789456</Number>\n                            </TelephoneNumber>\n                        </Phone>\n                    </Contact>\n                    <IdReference identifier=\"Bajwa-12345\" domain=\"accountNumber\"/>\n                </InvoicePartner>\n                <InvoicePartner>\n                    <Contact role=\"billTo\">\n                        <Name xml:lang=\"\">stage_Billing</Name>\n                        <PostalAddress name=\"\">\n                            <Street>3527 INDIANOLA AVE</Street>\n                            <City>DES MOINES</City>\n                            <State>lowa</State>\n                            <PostalCode>50320-1351</PostalCode>\n                            <Country isoCountryCode=\"US\">United States of America</Country>\n                        </PostalAddress>\n                        <Email>zulkiful.bajwa+billingAdd@vroozi.com</Email>\n                        <Phone>\n                            <TelephoneNumber>\n                                <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                <AreaOrCityCode>201</AreaOrCityCode>\n                                <Number>9876548</Number>\n                            </TelephoneNumber>\n                        </Phone>\n                    </Contact>\n                    <IdReference identifier=\"123\" domain=\"accountNumber\"/>\n                </InvoicePartner>\n                <DocumentReference payloadID=\"12347123.payload\"></DocumentReference>\n                <InvoiceDetailShipping>\n                    <Contact role=\"shipTo\">\n                        <Name xml:lang=\"\">stage_HeaderShippingTo</Name>\n                        <PostalAddress name=\"\">\n                            <Street>3000 18TH AVE</Street>\n                            <City>ROCK ISLAND</City>\n                            <State>Illinois</State>\n                            <PostalCode>61201-4708</PostalCode>\n                            <Country isoCountryCode=\"US\">United States of America</Country>\n                        </PostalAddress>\n                        <Email>zulkiful.bajwa+shippingToAdd@vroozi.com</Email>\n                        <Phone>\n                            <TelephoneNumber>\n                                <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                <AreaOrCityCode>208</AreaOrCityCode>\n                                <Number>9875698</Number>\n                            </TelephoneNumber>\n                        </Phone>\n                    </Contact>\n                    <Contact role=\"shipFrom\">\n                        <Name xml:lang=\"\">stage_HeaderShippingFrom</Name>\n                        <PostalAddress name=\"\">\n                            <Street>614 1ST AVE</Street>\n                            <City>LAUREL</City>\n                            <State>Montana</State>\n                            <PostalCode>59044-7008</PostalCode>\n                            <Country isoCountryCode=\"US\">United States of America</Country>\n                        </PostalAddress>\n                        <Email>zulkiful.bajwa+shippingFromAdd@vroozi.com</Email>\n                        <Phone>\n                            <TelephoneNumber>\n                                <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                <AreaOrCityCode>208</AreaOrCityCode>\n                                <Number>9875698</Number>\n                            </TelephoneNumber>\n                        </Phone>\n                    </Contact>\n                </InvoiceDetailShipping>\n                <PaymentTerm payInNumberOfDays=\"15\">\n\n        </PaymentTerm>\n                <Comments>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Comments>\n                <Extrinsic name=\"companyCode\">CompanyCode-120035</Extrinsic>\n            </InvoiceDetailRequestHeader>\n            <InvoiceDetailOrder>\n                <InvoiceDetailOrderInfo>\n                    <OrderReference orderID=\"\" orderDate=\"2018-12-20T00:00:00\">\n                        <DocumentReference payloadID=\"\"/>\n                    </OrderReference>\n                </InvoiceDetailOrderInfo>\n                <InvoiceDetailItem invoiceLineNumber=\"1\" quantity=\"5\"\n          inspectionDate=\"2017-12-04T23:59:45-07:00\"\n          parentInvoiceLineNumber=\"1\"\n          referenceDate=\"2017-12-01T23:59:45-07:00\" itemType=\"item\">\n                    <UnitOfMeasure>EA</UnitOfMeasure>\n                    <UnitPrice>\n                        <Money currency=\"USD\">10</Money>\n                    </UnitPrice>\n                    <InvoiceDetailItemReference lineNumber=\"1\">\n                        <ItemID>\n                            <SupplierPartID>TEX08134</SupplierPartID>\n                            <SupplierPartAuxiliaryID>E000028901</SupplierPartAuxiliaryID>\n                            <BuyerPartID>partId</BuyerPartID>\n                        </ItemID>\n                        <Description xml:lang=\"en\">Lorem Ipsum is simply dummy text</Description>\n                        <Classification domain=\"UNSPSC\">11000000</Classification>\n                        <ManufacturerPartID>ManufacererId</ManufacturerPartID>\n                        <ManufacturerName>ManufacererName</ManufacturerName>\n                    </InvoiceDetailItemReference>\n                    <Tax>\n                        <Money currency=\"USD\">10</Money>\n                        <Description xml:lang=\"\"></Description>\n                    </Tax>\n                    <InvoiceDetailLineShipping>\n                        <InvoiceDetailShipping>\n                            <Contact role=\"shipTo\">\n                                <Name xml:lang=\"\">stage_LineShippingTo</Name>\n                                <PostalAddress name=\"\">\n                                    <Street>4000 18TH AVE</Street>\n                                    <City>ROCK ISLAND</City>\n                                    <State>Illinois</State>\n                                    <PostalCode>61201-4708</PostalCode>\n                                    <Country isoCountryCode=\"US\">United States of America</Country>\n                                </PostalAddress>\n                                <Email>zulkiful.bajwa+shippingToAdd@vroozi.com</Email>\n                                <Phone>\n                                    <TelephoneNumber>\n                                        <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                        <AreaOrCityCode>208</AreaOrCityCode>\n                                        <Number>9875698</Number>\n                                    </TelephoneNumber>\n                                </Phone>\n                            </Contact>\n                            <Contact role=\"shipFrom\">\n                                <Name xml:lang=\"\">stage_LineShippingFrom</Name>\n                                <PostalAddress name=\"\">\n                                    <Street>614 1ST AVE</Street>\n                                    <City>LAUREL</City>\n                                    <State>Montana</State>\n                                    <PostalCode>59044-7008</PostalCode>\n                                    <Country isoCountryCode=\"US\">United States of America</Country>\n                                </PostalAddress>\n                                <Email>zulkiful.bajwa+shippingFromAdd@vroozi.com</Email>\n                                <Phone>\n                                    <TelephoneNumber>\n                                        <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                        <AreaOrCityCode>208</AreaOrCityCode>\n                                        <Number>9875698</Number>\n                                    </TelephoneNumber>\n                                </Phone>\n                            </Contact>\n                        </InvoiceDetailShipping>\n                        <Money currency=\"USD\">20</Money>\n                    </InvoiceDetailLineShipping>\n                    <InvoiceDetailDiscount percentageRate=\"10\">\n                        <Money currency=\"USD\">0</Money>\n                    </InvoiceDetailDiscount>\n                    <Distribution>\n                        <Accounting name=\"\">\n                            <AccountingSegment id=\"CC-120035\">\n                                <Name xml:lang=\"\">CostCenter</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                            <AccountingSegment id=\"GL-120035\">\n                                <Name xml:lang=\"\">GLAccount</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                        </Accounting>\n                        <Charge>\n                            <Money currency=\"USD\">30</Money>\n                        </Charge>\n                    </Distribution>\n                    <Distribution>\n                        <Accounting name=\"\">\n                            <AccountingSegment id=\"Bajwa\">\n                                <Name xml:lang=\"\">CostCenter</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                            <AccountingSegment id=\"Bajwa\">\n                                <Name xml:lang=\"\">GLAccount</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                        </Accounting>\n                        <Charge>\n                            <Money currency=\"USD\">20</Money>\n                        </Charge>\n                    </Distribution>\n                    <Comments>Item comments</Comments>\n                    <Extrinsic name=\"taxCode\">TaxCode-120035</Extrinsic>\n                    <Extrinsic name=\"plantCode\">Bajwa</Extrinsic>\n                    <Extrinsic name=\"DistributionType\">value</Extrinsic>\n                </InvoiceDetailItem>\n                <InvoiceDetailItem invoiceLineNumber=\"2\" quantity=\"10\"\n          inspectionDate=\"2017-12-04T23:59:45-07:00\"\n          parentInvoiceLineNumber=\"2\"\n          referenceDate=\"2017-12-01T23:59:45-07:00\" itemType=\"item\">\n                    <UnitOfMeasure>EA</UnitOfMeasure>\n                    <UnitPrice>\n                        <Money currency=\"USD\">20</Money>\n                    </UnitPrice>\n                    <InvoiceDetailItemReference lineNumber=\"2\">\n                        <ItemID>\n                            <SupplierPartID>TEX08134</SupplierPartID>\n                            <SupplierPartAuxiliaryID>E000028901</SupplierPartAuxiliaryID>\n                            <BuyerPartID>partId</BuyerPartID>\n                        </ItemID>\n                        <Description xml:lang=\"en\">Lorem Ipsum is simply dummy text</Description>\n                        <Classification domain=\"UNSPSC\">11000000</Classification>\n                        <ManufacturerPartID>ManufacererId</ManufacturerPartID>\n                        <ManufacturerName>ManufacererName</ManufacturerName>\n                    </InvoiceDetailItemReference>\n                    <Tax>\n                        <Money currency=\"USD\">20</Money>\n                        <Description xml:lang=\"\"></Description>\n                    </Tax>\n                    <InvoiceDetailLineShipping>\n                        <InvoiceDetailShipping>\n                            <Contact role=\"shipTo\">\n                                <Name xml:lang=\"\">stage_LineShippingTo</Name>\n                                <PostalAddress name=\"\">\n                                    <Street>4000 18TH AVE</Street>\n                                    <City>ROCK ISLAND</City>\n                                    <State>Illinois</State>\n                                    <PostalCode>61201-4708</PostalCode>\n                                    <Country isoCountryCode=\"US\">United States of America</Country>\n                                </PostalAddress>\n                                <Email>zulkiful.bajwa+shippingToAdd@vroozi.com</Email>\n                                <Phone>\n                                    <TelephoneNumber>\n                                        <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                        <AreaOrCityCode>208</AreaOrCityCode>\n                                        <Number>9875698</Number>\n                                    </TelephoneNumber>\n                                </Phone>\n                            </Contact>\n                            <Contact role=\"shipFrom\">\n                                <Name xml:lang=\"\">stage_LineShippingFrom</Name>\n                                <PostalAddress name=\"\">\n                                    <Street>614 1ST AVE</Street>\n                                    <City>LAUREL</City>\n                                    <State>Montana</State>\n                                    <PostalCode>59044-7008</PostalCode>\n                                    <Country isoCountryCode=\"US\">United States of America</Country>\n                                </PostalAddress>\n                                <Email>zulkiful.bajwa+shippingFromAdd@vroozi.com</Email>\n                                <Phone>\n                                    <TelephoneNumber>\n                                        <CountryCode isoCountryCode=\"US\">1</CountryCode>\n                                        <AreaOrCityCode>208</AreaOrCityCode>\n                                        <Number>9875698</Number>\n                                    </TelephoneNumber>\n                                </Phone>\n                            </Contact>\n                        </InvoiceDetailShipping>\n                        <Money currency=\"USD\">30</Money>\n                    </InvoiceDetailLineShipping>\n                    <InvoiceDetailDiscount percentageRate=\"10\">\n                        <Money currency=\"USD\">0</Money>\n                    </InvoiceDetailDiscount>\n                    <Distribution>\n                        <Accounting name=\"\">\n                            <AccountingSegment id=\"Bajwa\">\n                                <Name xml:lang=\"\">CostCenter</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                            <AccountingSegment id=\"Bajwa\">\n                                <Name xml:lang=\"\">GLAccount</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                        </Accounting>\n                        <Charge>\n                            <Money currency=\"USD\">2</Money>\n                        </Charge>\n                    </Distribution>\n                    <Distribution>\n                        <Accounting name=\"\">\n                            <AccountingSegment id=\"Bajwa\">\n                                <Name xml:lang=\"\">CostCenter</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                            <AccountingSegment id=\"Bajwa\">\n                                <Name xml:lang=\"\">GLAccount</Name>\n                                <Description xml:lang=\"\"></Description>\n                            </AccountingSegment>\n                        </Accounting>\n                        <Charge>\n                            <Money currency=\"USD\">8</Money>\n                        </Charge>\n                    </Distribution>\n                    <Comments>Item comments</Comments>\n                    <Extrinsic name=\"taxCode\">Bajwa</Extrinsic>\n                    <Extrinsic name=\"plantCode\">Bajwa</Extrinsic>\n                    <Extrinsic name=\"DistributionType\">quantity</Extrinsic>\n                </InvoiceDetailItem>\n            </InvoiceDetailOrder>\n            <InvoiceDetailSummary>\n                <SubtotalAmount>\n                    <Money currency=\"USD\">250</Money>\n                </SubtotalAmount>\n                <Tax>\n                    <Money currency=\"USD\">30</Money>\n                    <Description xml:lang=\"en\">total tax</Description>\n                </Tax>\n                <ShippingAmount>\n                    <Money currency=\"USD\">50</Money>\n                </ShippingAmount>\n                <InvoiceDetailDiscount percentageRate=\"10\">\n                    <Money currency=\"USD\">0</Money>\n                </InvoiceDetailDiscount>\n                <NetAmount>\n                    <Money currency=\"USD\">330</Money>\n                </NetAmount>\n            </InvoiceDetailSummary>\n        </InvoiceDetailRequest>\n    </Request>\n</cXML> 2. Log in to PMAN as an AP Processor user 3. Navigate to the Track Invoices > All screen and search for the Invoice by 'Supplier Invoice #' Actual Result: The system doesn\u2019t display the system-created document to the AP Processor user Expected Result: The system should display the system-created document to the AP Processor user",
+        "status": "Awaiting Business Validation",
+        "assignee": "Asma Latif",
+        "created": "2024-10-23T05:05:51.657-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104518",
+        "summary": "POCR- PO PDF - When User resubmit a rejected CR, after reverting changes in a line item even then generated PO PDF is showing it",
+        "description": "Issue: POCR - If the last POCR is rejected and the requester attempts to resubmit after deleting the rejected items / Reducing the quantity of the rejected items such that it doesn\u2019t requires approval then system is showing the reverted changes in PO PDF.  Server: URL:  https://stage.vroozi.com/#/login Username: ayesha.waseem+emp@vroozi.com Password: Welcome1@ Pre-Condition: Financial Workflow is enabled Purchase Request created above the spend limit and is approved by approvers Purchase Order is generated Step to Reproduce: Login to PMAN as an Employee user Do POCR on the above Purchase Order and update quantity of first 2 items such that it requires approval Submit the POCR Sourcing OR Financial Approver rejected the CR document Re-login with employee user and Re-open the PO document Do POCR by selecting  Continue with existing  option on the pop up Now, either delete the reject line items OR reduce the quantity below the original PO quantity Submit the POCR CR document is auto approved Now, open the PO PDF from the email sent to supplier Actual Result: System still shows the changes that has been reverted in changes section Expected Result: System should only show the changes that has been approved",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-10-22T01:13:21.224-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104464",
+        "summary": "PROD - Accounts Payable - Dynamic WF Rule -  Documents falling under Structured Custom WF Rule are not routing to the AP Users of that Rule.",
+        "description": "url:  https://devqa19-go.vroozi.com/#/login username:  asma.latif+EJ@vroozi.com password:  Blueangel1@ Pre requisite: AP User should have logged into the PMAN Application.  Dynamic WF should be Enabled in DB \"ACCOUNTS_PAYABLE_WORKFLOW__ENHANCED_WORKFLOW\" Company Code APM Restrictions should be OFF in DB \"ACCOUNTS_PAYABLE_WORKFLOW__MANAGER_RESTRICTIONS\" Structured Document Access Rule should be configured via Admin>Accounts Payable>Settings>Inbox. and  asma.latif+EJ@vroozi.com  should be added in it. 9000019438  PO Based SP Invoice(falling under configured Custom Rule) should be submitted via SP. Steps to Reproduce: Login as  asma.latif+EJ@vroozi.com Please see the document is not available in the user\u2019s Document Inbox. Actual Result: When the Dynamic workflow is enabled, the system does not set the matched structure workflow ID in the document properly. Expected Result: AP User should see the document in its Inbox which are falling under the configured Structured document rule. Test Data: https://devqa19-purchase.vroozi.com/admin#/invoices/6715f79bc273d7537d7fe538?sourceUiState=invoices.grid.all&documentIndex=2  Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Aqsa Rani",
+        "created": "2024-10-21T04:17:42.874-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104388",
+        "summary": "PMAN - Purchase Order Confirmation email should not be sent to all the buyers who are part of the buyer group and are Active",
+        "description": "server  : Production Pre-Condition:   Supplier Provides PO acknowledgment toggle should be enabled  Buyer route is ON Buyer group is created in Master data (should have more than 1 buyers added) Steps to reproduce: Create a PR and send it to buyer in Ready for Sourcing Now, login with the buyer user  Create PO from ready for sourcing check the emails PO created successfully.  AS Po acknowledgment toggle is On so PO is in submitted state. Now from email click on Confirm order button to provide acknowledgment. Actual : Purchase Order Confirmation email is being sent to all buyer users who are part of the buyer group Expected : Purchase Order Confirmation email should only be sent to the buyer who created the PO Note: We Need to fix and test this case for Supplier having output email configured as CXML & Supplier portal.",
+        "status": "Release Approved",
+        "assignee": "Javaid Sattar",
+        "created": "2024-10-17T22:10:23.817-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104256",
+        "summary": "Release Notes of vroozi API Docs is incorrect.",
+        "description": "URL:     Steps to Reproduced: Check  Release Notes and Archive Notes version is same we need to update the realease notes version. Expected Result:  please add the expected Release Note Version. New Features: Async bulk upsert APIs: We are excited to announce the availability of master data bulk upsert functionalities through our open APIs. For further information, please refer to the \"Master Data APIs\" section within our documentation. Move the existing UI enhancement to the archived logs section.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-10-15T22:20:41.907-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-104151",
+        "summary": "PMAN: Buyer Route - Application shows that CR on PO (created by requester / requested by requester) will go to Fallback approver when it is either auto approved OR should go the the default approver",
+        "description": "Environment:  Production https://go.vroozi.com/#/login User credentials: ayesha.waseem+buyer1@vroozi.com  / Welcome1@ Steps to reproduce: 1. Login to PMAN as a Buyer user 2. Search for a PO created by requester  3. Now do POCR and add new line item 3. Click on  Change request Approval  button 4. It will show your CR will go to fallback approver 5. Now Submit the change request 6. Open the CR and click on  Change request Approval  button. CR will go to the requester default approver Actual Result: Application is displaying wrong information on pop up window of Approval status Expected Result: Application should show that correct Approval status",
+        "status": "Release Approved",
+        "assignee": "Ayesha Waseem",
+        "created": "2024-10-12T06:44:26.565-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103987",
+        "summary": "Payables: Store and Track Exception Messages for Invoice Documents During Status Transitions",
+        "description": "User Story : As an AP user, I want the system to store exception messages in the backend (BE) database whenever discrepancies (such as Goods Receipt, tax, price, line item exceptions) occur on an invoice document, so that these exceptions can be tracked and reported for better reconciliation management. Description : Currently, exception messages are displayed on invoice documents when discrepancies or missing goods receipts occur, but the exception data is not stored in the backend database. This limits the client's ability to track and report on why an invoice moves into reconciliation and how exceptions are resolved. To address this, the system should store these exception messages when an invoice transitions between statuses, specifically from Draft/Parked/Rejected/Posting Failed to Reconciliation and when the exceptions are resolved (such as when the invoice moves from Reconciliation back to Draft status). This functionality applies to Email-based (OCR/Non-OCR), cXML, and Supplier Portal invoices. Acceptance Criteria: What is the change?  The change involves storing exception messages for invoice discrepancies (such as Goods Receipt, tax, price, or line item exceptions) in the backend database when invoices transition between statuses, specifically from Draft/Parked to Reconciliation, and when exceptions are resolved as the invoice moves back to Draft or Pending or Approved. Which customers should this change impact?  ACCOUNTS_PAYABLE_WORKFLOW = true What pages should this change impact?  Invoices:  Previous  status (Draft / Parked / Rejected / Posting Failed) \u2192  Exception  \u2192  Next  status (Draft). Which users should be impacted by the change?  Users who will have access to reporting (Administrator / AP Manager dashboard) How should this feature work? When an invoice moves from  Previous  (Draft / Parked / Rejected / Posting Failed) status to  Reconciliation  status, the system stores the exception message in the backend database. Once the exception is resolved and the status changes from  Reconciliation  to  Next  status (Draft), the system records the resolution of the exception in the backend. Ensure exception tracking applies to  Email-based  ( OCR  /  Non-OCR ),  cXML , and  Supplier Portal  invoices. Ensure exception tracking applies to  Manually  created, and  Auto-processed  invoices. The backend system should store all relevant data, including what triggered the exception, the resolution, and  timestamps  for tracking purposes. The data should be accessible for reporting purposes to allow clients to track how exceptions were handled and resolved. System should be able to save these Exception messages - Missing GR exceptions . Additional exceptions . Line Item Price exception. Subtotal exception. Line Item Quantity exception. Total Quantity exception. Line Item Tax Exception. Total Tax exception. Line Item Shipping Exception. Total Shipping exception. Additional Line Item Exception. Additional Line Item Total exception. Accounting String Errors . System should be able to track resolutions for the exceptions - Resolutions submitted by the exception handler, such as Pay PO Price or Pay Invoice Price, etc. Note to REPORTING TEAM: These fields will never be updated, so we should base the updates on the createdDate field. Questions: Should we add true/false flags for exceptions to help with reporting? For example, did this invoice go through GR exceptions \u2192 True/False, or did this invoice have a tax exception \u2192 True/False? This might be redundant, as we are already saving the exceptions in the history, which I assume could be easily used to create a True/False query on the reporting side. Are there any other types of exception messages I\u2019m missing here? For example, with Vertex tax, do we get exception messages for discrepancies? If so, are they considered under Line Item Tax exceptions or Total Tax exceptions? Do we need a data fix for existing customers?  Maybe. Would this change impact existing documents?  Maybe. To which teams should this change be communicated to?  Yes. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Asma Latif",
+        "created": "2024-10-07T14:38:26.386-0700",
+        "issue_type": "Story",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103628",
+        "summary": "Stage - Accounts Payable - Create Invoice - Suggest Resolutions button when clicked is throwing something went wrong error.",
+        "description": "URL:  https://stage-go.vroozi.com Username: stage:  asma.latif+APM@vroozi.com   Password: Blueangel1@/Blueangel1! Pre-Condition: SMART Coding FT should be ON in Admin>Accounts Payable>Settings>Preferences Page>VI Section. AP User should have logged into the Application. Step to Reproduce: Click to Create Invoice.  9000031012 Reference a PO and add couple of non po items too. Exceptions start showing. Suggest Resolutions button shows on the item grid. Click it. Something went wrong error shows. Actual Result: Something went wrong error shows. Expected Result: No Error should show. Screen-Cast: Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-09-24T05:58:31.142-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      },
+      {
+        "key": "VZI-103077",
+        "summary": "PROD - PMAN - Admin - Accounts Payable - Settings - Preferences - Clicking somewhere near the checkbox can check/uncheck it.",
+        "description": "URL: https://stage-purchase.vroozi.com Username:  asma.latif+APM83@vroozi.com Password: Blueangel1@ PreCondition: User should be logged into Application as AP User. A Draft Invoice should already exist with Vertex Tax Code Error. Steps: Access Accounts Payable>Settings>Preferences Page. Access any of the sections: Auto Population of footer totals Memo Re Invoicing Settings:               - Auto Population of footer totals               - Memo Re Invoicing Settings               - Editing of AP documents after initial approval, posting, and/or payment Click against a check box at a certain distance from it. Please see it is being checked or unchecked. Actual Results: Clicking somewhere near the checkbox can check/uncheck the Checkbox. Expected Results: Checkbox should be checked/unchecked only when user clicks on it. Screen-Cast:   Thanks, Asma",
+        "status": "Awaiting Business Validation",
+        "assignee": "Sujoy Kar",
+        "created": "2024-09-09T05:02:53.019-0700",
+        "issue_type": "Bug",
+        "parent_id": null
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-105284",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Support - TIBCO to BPT Migration Activities",
+      "description": "",
+      "status": "Work Completed",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-11-19T10:21:37.334-0800"
+    },
+    "issues": [
+      {
+        "key": "VZI-105285",
+        "summary": "CHG0320691 Go-Live I6000 Vroozi - TIBCO to BTP migration (Account Validation URL and Key update in Integration-API)",
+        "description": "Requirements: Change the integration-api properties for production to update the accounting validation url and keys to below: New API Details from NBCU URL :  https://nbcu.prod.apimanagement.us10.hana.ondemand.com:443/fin/account_masterdata/validation/V1 Api-Key : DvbfmuGyDE5kV2AcHGmmMjnFPafkP3Dc Properties to be changed for integration-api ( v2-setup/conf/integration.properties-prod ) # SAP API Properties\nsap.api.key=88uqw4dprt335hp8jrsk6ngs\nsap.accounting-validation.endpoint=https://api.nbcuniversal.com/v1/corpsystems/sap/any/financial/accounts/validation New properties after change # SAP API Properties\nsap.api.key=DvbfmuGyDE5kV2AcHGmmMjnFPafkP3Dc\nsap.accounting-validation.endpoint=https://nbcu.prod.apimanagement.us10.hana.ondemand.com:443/fin/account_masterdata/validation/V1",
+        "status": "Done",
+        "assignee": "Sambhu Sai",
+        "created": "2024-11-19T10:23:29.635-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-105284"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104858",
+      "summary": "RC-2024-10-2 - Payables: Release Management Activities",
+      "description": "Goal Execute all activities, tasks related to the given release",
+      "status": "Work Completed",
+      "assignee": "Jimena Pose",
+      "created": "2024-11-04T08:39:39.373-0800",
+      "issue_type": "Epic",
+      "parent_id": null,
+      "released_in_current_rc": true
+    },
+    "issues": [
+      {
+        "key": "VZI-104863",
+        "summary": "Execute Post Production Testing (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-11-04T08:43:49.711-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104858"
+      },
+      {
+        "key": "VZI-104862",
+        "summary": "Analyze and Strategize RC / Regression Testing Strategy",
+        "description": "",
+        "status": "Abandoned",
+        "assignee": "Asma Latif",
+        "created": "2024-11-04T08:43:21.427-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104858"
+      },
+      {
+        "key": "VZI-104861",
+        "summary": "Update Release Execution Workbook",
+        "description": "",
+        "status": "Done",
+        "assignee": "Ahmed Habib",
+        "created": "2024-11-04T08:42:47.408-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104858"
+      },
+      {
+        "key": "VZI-104860",
+        "summary": "Execute RC Regression (Aqsa)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Aqsa Rani",
+        "created": "2024-11-04T08:42:09.613-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104858"
+      },
+      {
+        "key": "VZI-104859",
+        "summary": "Execute RC Regression (Asma)",
+        "description": "",
+        "status": "Done",
+        "assignee": "Asma Latif",
+        "created": "2024-11-04T08:41:33.829-0800",
+        "issue_type": "Task",
+        "parent_id": "VZI-104858"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99543",
+      "released_in_current_rc": false,
+      "summary": "Vulnerability assessment - SBOM generation and vulnerabilities fixes",
+      "description": "The scope of this epic includes but not limited to  Generating SBOM of our complete application. Evaluating SBOM generated files to identify any vulnerabilities within our project using tools e.g.  dependency track . Evaluate and fix any identified vulnerabilities wherever possible.",
+      "status": "In Design",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2024-05-16T09:30:40.706-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104770",
+        "summary": "Vroozi application details: Combine an excel sheet containing all vroozi Components in details",
+        "description": "Fill in the following sheet and add/update all the components of our Vroozi application in details.",
+        "status": "Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-10-30T03:47:26.821-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-99543"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104333",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Design and Develop Bulk Load API for GL Accounts - 1",
+      "description": "",
+      "status": "Work Completed",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-16T15:40:15.437-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104638",
+        "summary": "Vroozi API - Bulk upsert GL Accounts",
+        "description": "Business Case: As an External system user, I want to create/update the GL Accounts in bulk via the API. Acceptance Criteria: GL Account Bulk Upsert POST API: A New upsert API should be built that allows the user to create/update the GL Accounts in bulk. The type of the API should be  POST . The user should be able to provide GL Accounts in bulk. The API should adhere to the API Payload size standards. This API should work asynchronously. The system should validate the GL Accounts information in the background. The system should let the API user know the API request is accepted. The API should issue a tracking number once the user posts the API. GL Account Bulk Upsert Status GET API: Another API should be built that allows the user to get the status of the  GL Account Bulk Upsert POST API  by providing the tracking number. The type of the API should be  GET . If the API does not return the status of the  GL Account Bulk Upsert POST API  does not return the status, the system should return the error with details. This  GL Account Bulk Upsert Status GET API  should return the following statuses of the  GL Account Bulk Upsert POST API: If all the GL Accounts are created/updated successfully, the status should be  COMPLETED/SUCCESS. If some or all GL Accounts are still being created or updated, the stats should be  IN PROGRESS. If all of the GL Accounts are processed and some or all of them have validation errors, the status should be  COMPLETED WITH ERRORS. If all of the GL Accounts processing failed due to some technical error (e.g. time out) that can be fixed by retrying, the status should be  FAILURE. If some of the GL Accounts processing failed due to some technical error (e.g. time out) that can be fixed by retrying and some are processed successfully without any error, the status should be  PARTIAL   FAILURE/ COMPLETED WITH FAILURE. This  GL Account Bulk Upsert Status GET API  should return the count of: Total items Items successfully uploaded Items failed(due to failure or validation error) The  GL Account Bulk Upsert Status GET API  should return the state of each GL Account in the API payload: The status should be  In Progress  if the GL Account is still in Progress. The status should be  Success  if the GL Account is created successfully. The status should be  Error  if the GL Account is not created due to: Validation Error Duplication Failure (time out etc) The response should also contain the details of each error type according to the set pattern of showcasing the error details. Documentation: There should be two new entries in the API Documentation in the  GL Account  sub-menu of the  Master Data  menu Those two entries should be for the following APIs: GL Account Bulk Upsert POST API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Create or Update the GL Accounts   in bulk asynchronously\u2019 . The details should be ' Create or Update the GL Accounts in bulk asynchronously '. GL Accounts Bulk Upsert Status GET API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Get progress status of the bulk upsert GL Account by Tracking ID \u2019. The details should be ' Get progress status of the bulk upsert GL Account by Tracking ID '. Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-10-24T23:51:40.879-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-104333"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-26686",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Health Check",
+      "description": "Health Check Architecture Diagram",
+      "status": "In Final Review",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2017-08-24T23:18:52.826-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104519",
+        "summary": "Change the health check end points accessible via uri that includes signin to internal for file service",
+        "description": "Since the file-storage is available on web node, we have restrict /health-check end points using nginx settings. The scope of this ticket includes changing the publicity available endpoints (which are no longer working due to nginx changes) to private end-points which is only accessible via VPN. This effects the following projects. Esignature-api vroozi-batch catalog-api notification-api user-data-api admin-ui communication-api cxml-api purchase-api categorytree-api Accounting service reporting-api ocr budget-api erp-api",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-10-22T01:38:29.334-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      },
+      {
+        "key": "VZI-103918",
+        "summary": "Health Check - convert all info level logs to trace level",
+        "description": "Convert info/debug level logs to trace level whenever health check endpoints are called to avoid cluttering our production logs For tracking we will use the following sheet",
+        "status": "Release Approved",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-10-03T00:13:08.429-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-26686"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-100418",
+      "released_in_current_rc": false,
+      "summary": "Vroozi Smart Chat: Fast Track to a Production Ready Version",
+      "description": "As a shopper, I would want to be able to interact with Vroozi Smart Chat for:  searching items and, an alternative/shortcut to intake process. We will build on top of the functionality we introduced in    This new feature will only be exposed or enabled if the company/user has Vroozi INTELLIGENCE feature enabled. FEATURE TOGGLE to be implemented: INTELLIGENCE__AI_CHATBOT",
+      "status": "Open",
+      "assignee": "Taimur Ahmed Qureshi",
+      "created": "2024-06-13T02:13:43.900-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-104063",
+        "summary": "Vroozi Smart Chat: Implement User Feedback Functionality",
+        "description": "Background We aim to enhance the user experience and efficiency of Vroozi's Smart Chat. To continuously improve its performance and ensure alignment with user needs, we must establish a feedback mechanism for chatbot interactions. Objective Implement a comprehensive feedback system for Vroozi Smart Chat, enabling users to provide ratings and comments on their chatbot experiences. This feature will allow us to gather valuable insights, identify areas for improvement, and enhance the overall quality of our AI-powered support. Requirements Develop a new API endpoint ( /intake-engine/chat/runs/{run_id}/feedback ) to accept user feedback. Create a user interface element (e.g., buttons and/or form) within the Smart Chat widget to collect feedback. Suggestion: Display thumbs-up and thumbs-down icons on row hover where is the AI message. After clicking the thumbs-down icon, prompt the user to select a reason and leave a comment Reason Selection: User must select one of the following reasons: Search results are not correct Cart was not updated correctly Purchase Request was not created Other Comment Field: The comment field is disabled by default with the placeholder text: \u201cPlease select the reason first.\u201d Once a reason is selected, the comment field becomes enabled. If the reason \u201cOther\u201d is selected: The comment field is required. The placeholder text changes to: \u201cPlease provide the comment.\u201d If a reason other than \u201cOther\u201d is selected: The comment field is optional. The placeholder text changes to: \u201c(Optional) Add specific details.\u201d Submit Button: The submit button is disabled by default. The submit button remains disabled until: A reason other than \u201cOther\u201d is selected, or The reason \u201cOther\u201d is selected and a comment is provided. Implement backend logic to store feedback data. Technical Details Store feedback data in LangSmith Sample Request: POST /intake-engine/chat/runs/030492d4-da72-4f8b-b808-f25084f2b7e6/feedback HTTP/1.1\nHost: localhost:7700\nX-Unit-ID: 2\nX-User-ID: 2116\nContent-Type: application/json\nContent-Length: 105\n\n{\n    \"score\": 0, // Feedback score: 1 = positive, 0 = negative\n    \"value\": \"Unhelpful\", // Feedback category. Only applicable for negative feedback\n    \"comment\": \"This message didn't solve the problem.\" // User comment. Only applicable for negative feedback\n} Sample Response: HTTP Status: 201 Created\n\n{\n    \"id\": \"e15f5c89-a32e-4dc5-bc88-d894b8accbad\",\n    \"created_at\": \"2024-10-10T23:21:12.139739+00:00\",\n    \"modified_at\": \"2024-10-10T23:21:12.139739+00:00\",\n    \"run_id\": \"030492d4-da72-4f8b-b808-f25084f2b7e6\",\n    \"key\": \"user-feedback\",\n    \"score\": 0,\n    \"value\": \"Unhelpful\",\n    \"comment\": \"This message didn't solve the problem.\",\n    \"correction\": null,\n    \"feedback_source\": {\n        \"type\": \"api\",\n        \"metadata\": {\n            \"unitId\": \"2\",\n            \"userId\": \"2116\"\n        }\n    },\n    \"session_id\": null,\n    \"comparative_experiment_id\": null,\n    \"feedback_group_id\": null\n} Acceptance Criteria Users can submit feedback (rating and comment) for any returned message from the chatbot Feedback is correctly stored in LangSmith Administrators can view and filter feedback in LangSmith Feedback submission process doesn't significantly impact chat performance",
+        "status": "Awaiting Business Validation",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-10-09T22:21:35.714-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100418"
+      },
+      {
+        "key": "VZI-100498",
+        "summary": "Vroozi Smart Chat: Implement Chat Bot Prototype v2",
+        "description": "Goal Add support to process function call to: search items update cart get cart information create PR retrieve information from RAG Add highlight items logic in the smart chat when adding items from other browser tab or from the cart Refactor chat items management and extract it into a service",
+        "status": "Awaiting Business Validation",
+        "assignee": "Mutahir Sohail",
+        "created": "2024-06-17T16:20:17.081-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-100418"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102240",
+      "released_in_current_rc": false,
+      "summary": "Payables: Vroozi Dynamic Workflow \u2013 Approval Preview",
+      "description": "BRD -",
+      "status": "Open",
+      "assignee": "Sujoy Kar",
+      "created": "2024-08-13T12:20:22.665-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103882",
+        "summary": "PMAN: Approval Chain Handling After Rejection and Resubmission.",
+        "description": "User Story : As a  User,  I want  the system to handle the approval chain display correctly when an Invoice/Memo/PRQ document is rejected and then edited or resubmitted,  So that  the system reflects the appropriate status of the approval process, whether it is recalculated or continued after the rejection event. Acceptance Criteria : What is the change?  When an Invoice/Memo/PRQ is rejected, the system will no longer display pending approvers after the rejection event. If the invoice is edited or resubmitted, the approval chain will either continue from the rejection point or, if accounting elements are updated, a new approval chain might be generated and displayed in separate collapsible tiles. Which customers should this change impact?  Clients using - Dynamic Workflow: Invoicing module. Memo module. Payment Request module. What pages should this change impact?  These pages the change would apply on - Invoice side panel page. PO based invoice approval is required. Non-PO based invoice approval is required. Memo side panel page. Memo approval is required. Payment Request side panel page. Which users should be impacted by the change?  Users who are able to view an AP document. How should this feature work? Current Approval Chain Post-Rejection in View Mode : When an Invoice/Memo/PRQ document has been Rejected by an approver, and it is in  View Mode , then the system should display only the actions taken up to the rejection event. Example : There are 3 approvers - AP1, AP2, AP3. If AP1 approves and AP2 rejects the document, the approval chain will display AP1 as \"Approved\" and AP2 as \"Rejected.\" AP3 will not appear in the chain since the document did not proceed to that stage. This remains the final view if no changes or resubmissions are made. Recalculated Approval Chain Post-Rejection in Edit Mode : When the user switches the Rejected Invoice/Memo/PRQ document to  Edit Mode , the system will display the recalculated approval chain based on the document's current state. If  no changes  are made to the  accounting elements , the approval chain will continue after the rejection event - if the document is in Edit mode with no changes made, if the document was in Edit mode with no changes made and then resubmitted for re-approval, if the document is in Edit mode with non-accounting changes made, if the document was in Edit mode with non-accounting changes made and then resubmitted for re-approval. Example : If AP1 approved and AP2 rejected, upon resubmission, the chain would show: AP1 Approved > AP2 Rejected > AP1  Approval Required  > AP2  Approval Required  > AP3  Approval Required . If the accounting elements are updated, and if a new approval rule applies, the system will: Create two collapsible tiles: Previous Approval Chain : Display the old approval chain up to the rejection (e.g., \"AP1 Approved > AP2 Rejected\"). Current Approval Chain : Display the new approval chain based on the new set of approvers (e.g., \"AP5  Approval Required  > AP6  Approval Required  > AP7  Approval Required \"). This will show the complete history of the invoice's approval process in separate collapsible tiles. Do we need a data fix for existing customers?  No. Would this change impact existing documents?  Yes. To which teams should this change be communicated to?  All Teams. Questions: Question # AC # Raised By Inquiry Date Assignee Response Date",
+        "status": "Release Approved",
+        "assignee": "Sujoy Kar",
+        "created": "2024-10-01T21:03:17.909-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      },
+      {
+        "key": "VZI-103563",
+        "summary": "PMAN: Revert the changes made in VZI-103562.",
+        "description": "Business Case : As a  User , I want to see  AP Approval Chain  on the Invoice/Memo/Payment Request side panel since the feature is completely developed. Acceptance Criteria : Users should be able to see  AP Approval Chain  on the Invoice/Memo/Payment Request side panel since the feature is completely developed. The feature toggle that was used to hide the AP Approval Chain is - ACCOUNTS_PAYABLE_WORKFLOW__APPROVAL_CHAIN",
+        "status": "Release Approved",
+        "assignee": "Aqsa Rani",
+        "created": "2024-09-23T22:10:40.932-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-102240"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-102949",
+      "released_in_current_rc": false,
+      "summary": "Angular Upgrade: Upgrade Master Data -> Organization",
+      "description": "Upgrade the whole page  Master Data \u2192 Organization  to Ng2:",
+      "status": "Work Completed",
+      "assignee": "majid.akram",
+      "created": "2024-09-04T13:06:54.236-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103861",
+        "summary": "Upgrade CompanyCodeGrid and its dependencies",
+        "description": "",
+        "status": "Done",
+        "assignee": "majid.akram",
+        "created": "2024-10-01T04:02:20.537-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-102949"
+      },
+      {
+        "key": "VZI-103564",
+        "summary": "Upgrade ApprovalGroupGrid and its dependencies",
+        "description": "",
+        "status": "Done",
+        "assignee": "majid.akram",
+        "created": "2024-09-23T22:12:54.944-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-102949"
+      },
+      {
+        "key": "VZI-103329",
+        "summary": "Upgrade PlantsGrid and its dependencies",
+        "description": "",
+        "status": "Done",
+        "assignee": "majid.akram",
+        "created": "2024-09-17T23:09:13.459-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-102949"
+      },
+      {
+        "key": "VZI-103146",
+        "summary": "Angular Upgrade: Upgrade Purchasing Organization Grid and its dependencies",
+        "description": "",
+        "status": "Done",
+        "assignee": "majid.akram",
+        "created": "2024-09-10T23:44:46.543-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-102949"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-69349",
+      "released_in_current_rc": false,
+      "summary": "Configuration management using config server",
+      "description": "Setup a config server which will serve the property files to different micro services.",
+      "status": "In Design",
+      "assignee": "Qazi Asad Ullah",
+      "created": "2021-08-01T07:51:25.580-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103831",
+        "summary": "Test spring cloud with health-check-ui, budget-api and Userdata-api for property management",
+        "description": "For complete details of this ticket, please go through this wiki   Design diagram https://app.diagrams.net/#G1s8zFCjk2zFWQmm1NKWYfA7obrEpXi9pT#{\"pageId\"%3A\"WI9T0HZ2pTsCkuznbFz-\"}",
+        "status": "Investigation Done",
+        "assignee": "Muhammad Hamza",
+        "created": "2024-09-30T23:54:06.019-0700",
+        "issue_type": "Spike",
+        "parent_id": "VZI-69349"
+      },
+      {
+        "key": "VZI-103653",
+        "summary": "Deploy health check UI with the help of Spring Cloud Eureka",
+        "description": "Create a service registry ( Eureka Server ) Register  esignature-api & product-search-api   REST  services using ( Eureka Client ) with our service registry. Add capability in  health-check-ui   so that it can consume the  REST  services   esignature-api & product-search-api  using a registry-aware client ( Spring Cloud Netflix   Feign Client ) Based on the RnD done in this spike here are our findings. Why Eureka Eureka is really beneficial when we need dynamic load balancing where multiple nodes can be added/removed without any manual intervention because each service in Eureka umbrella knows how many instance of each service is running dynamically. Step by step configuration is provided below. Register all client services to Eureka server using spring provided tools. If successfully registered the Eureka dashboard starts showing all the services that are registered with it. Once services are registered with Eureka, we can call them using the service discovery mechanism. There are couple of ways to achieve this. Using existing Rest Client with some modifications of how the restClient bean is constructed. Using Feign client by modifying all there existing legacy http calls(Recommended) Note:  Blockers we need to change each service and find out fall back method for rest template. Follow the branches associated with this ticket for technical details.",
+        "status": "Investigation Done",
+        "assignee": "Qazi Asad Ullah",
+        "created": "2024-09-25T00:10:56.719-0700",
+        "issue_type": "Spike",
+        "parent_id": "VZI-69349"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-103728",
+      "released_in_current_rc": false,
+      "summary": "Angular Upgrade: Upgrade Invoice / Memo / Payment Request Document Form",
+      "description": "Goal Upgrade components  vzi-document-form  together with its all child components and services (like  DocumentUiWorkflowFactory ).  Components are represented as document form in edit and display mode in Invoice / Memo and PRQ page. Scope Side panel (the components were already upgraded but the data is provided from the newly upgraded component) Out of Scope Document grid & warnings (already upgraded) but should be tested to verify they work as-is Document page container (document hopper - i.e. DocumentHopperController) - this will be done after this epic is finished Example Invoice in Edit Mode Invoice in Display Mode Tasks: Upgrade all components, services that are used by the component, with all functions (even those functions which are not used in the component) Upgrade related Unit tests (optional if there are no Ng1 tests)  Make sure we are not using promises anymore but rather RxJS (including the component) If applicable, move all styles related to this component into local styles file Please dev test the changes to ensure the component works as it did before. Compare the new and existing functionality side by side Unregister unused components, services and styles Dev Notes Important:  Try to break the work into multiple PRs so that there are at least one or two PRs each week. The final PR should make the new components to be used in the page, so we don't break anything while continually merging the previous PRs",
+      "status": "Awaiting Implementation",
+      "assignee": "Jaroslav Bellus",
+      "created": "2024-09-26T14:28:13.144-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103733",
+        "summary": "Angular Upgrade: Upgrade AP Document Form - Service InvoiceErrorResolutionService + Unit Tests",
+        "description": "",
+        "status": "Done",
+        "assignee": "Jaroslav Bellus",
+        "created": "2024-09-26T14:59:33.793-0700",
+        "issue_type": "Task",
+        "parent_id": "VZI-103728"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-104332",
+      "released_in_current_rc": false,
+      "summary": "Integration: NBCU Interface Migration - Design and Develop Bulk Load API for WBS Elements - 0",
+      "description": "",
+      "status": "Work Completed",
+      "assignee": "Muhammad Imran Sarwar",
+      "created": "2024-10-16T15:39:48.571-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-103244",
+        "summary": "Vroozi API - Bulk upsert WBS Elements",
+        "description": "Business Case: As an External system user, I want to create/update the WBS Elements in bulk via the API. Acceptance Criteria: WBS Element Bulk Upsert POST API: A New upsert API should be built that allows the user to create/update the WBS Elements in bulk. The type of the API should be  POST . The user should be able to provide WBS Elements in bulk. The API should adhere to the API Payload size standards. This API should work asynchronously. The system should validate the WBS Elements information in the background. The system should let the API user know the API request is accepted. The API should issue a tracking number once the user posts the API. WBS Element Bulk Upsert Status GET API: Another API should be built that allows the user to get the status of the  WBS Element Bulk Upsert POST API  by providing the tracking number. The type of the API should be  GET . If the API does not return the status of the  WBS Element Bulk Upsert POST API , the system should return the error with details. This  WBS Element Bulk Upsert Status GET API  should return the following statuses of the  WBS Element Bulk Upsert POST API: If all the WBS Elements are created/updated successfully, the status should be  COMPLETED/SUCCESS. If some or all of the WBS Elements are still being created or updated, the stats should be  IN PROGRESS. If all of the WBS Elements are processed and some or all of them have validation errors, the status should be  COMPLETED WITH ERRORS. If all of the WBS Elements processing failed due to some technical error (e.g. time out) which can be fixed by retrying, the status should be  FAILURE. If some of the WBS Elements processing failed due to some technical error (e.g. time out) which can be fixed by retrying and some are processed successfully without any error, the status should be  PARTIAL   FAILURE/ COMPLETED WITH FAILURE. This  WBS Element Bulk Upsert Status GET API  should return the count of: Total items Items successfully uploaded Items failed(due to failure or validation error) The  WBS Element Bulk Upsert Status GET API  should return the state of each WBS Element in the API payload: The status should be  In Progress  if the WBS element is still in Progress. The status should be  Success  if the WBS element is created successfully. The status should be  Error  if the WBS element is not created due to: Validation Error Duplication Failure (time out etc) The response should also contain the details of each error type according to the set pattern of showcasing the error details. Documentation: There should be two new entries in the API Documentation in the  WBS Element  sub-menu of the  Master Data  menu Those two entries should be for the following APIs: WBS Element Bulk Upsert POST API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Create or Update the WBS Element in bulk asynchronously\u2019 . The details should be ' Create or Update the WBS Element in bulk asynchronously '. WBS Element Bulk Upsert Status GET API ( please use the naming convention as per standards ) The API summary( appears next to the API endpoint ) should be \u2018 Get progress status of the bulk upsert WBS Element by Tracking ID \u2019. The details should be ' Get progress status of the bulk upsert WBS Element by Tracking ID '. Technical Details:    Q&A:  Integration Team  (                           ) Question Response Action",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-09-12T23:07:50.340-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-104332"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-11810",
+      "released_in_current_rc": false,
+      "summary": "Platform Audit Log",
+      "description": "",
+      "status": "In Design",
+      "assignee": "Stefan Deusch",
+      "created": "2016-03-28T17:53:57.237-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-101453",
+        "summary": "Add createdBy, lastUpdatedBy fields in company settings",
+        "description": "We have createdDate, updatedDate fields available in company settings. We also need to add createdBy, lastUpdatedBy fields in company setting in order to audit who and when the changes were made in company settings. The createdBy and createdDate fields are only added at the time of a new company/unitId creation. The values in these fields should be \u201cSystem_UNIT-ID\u201c e.g. \u201cSystem_2\u201c & current date respectively. The system must retain this information in the database. Multiple admins can change the company settings and system must audit who and when the admins are making these changes. In order to achieve this the application must populate these two fields lastUpdatedBy which should contains the userId of the loggedIn admin and updatedDate (current date - already working) The testing should be done across multiple companies updating the company settings. The testing should be done with creating a new company/unitId as well.",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-07-18T05:19:44.647-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-11810"
+      },
+      {
+        "key": "VZI-97367",
+        "summary": "As a Vroozi user, I want to be able to audit change events in any collection ",
+        "description": "The scope of this ticket includes a complete POC using company settings collection in which we will record all the changes happening in the collections. Once this collection is audited our the design should be flexible enough to support any collection of any database to be audited with only configuration changes required and should not require code changes (unless there is a customised solution required). There are three things that must be logged as part of the audit log entry Pre state pf the document New state of the document Root level change log between two states. a sample of the audit log entry should look like  unitId if applicable. {\n\t\"_id\" : mongoId,\n\t\"unitId\" : \"UNIT_ID\",\n\t\"operationType\" : type of the mongo operation,\n\t\"documentMongoId\" : the mongoId of the document being audited,\n\t\"createdDate\" : timestamp of the triggered event,\n\t\"fullDocument\" : {\n\t\tA complete json of the updated state of the document.\n\t},\n\t\"fullDocumentBeforeChange\" : {\n\t\tA complete json of the old state of the document.\n\t},\n\t\"changeLog\" : {\n\t\t\"updatedFields\" : {\n\t\t\t\"field1\" : {\n\t\t\t\t\"left\" : old value,\n\t\t\t\t\"right\" : new value\n\t\t\t},\n\t\t\t\"field2\" : {\n\t\t\t\t\"left\" : old value,\n\t\t\t\t\"right\" : new value\n\t\t}\n\t}\n} The following wiki explains the design of this POC",
+        "status": "Awaiting Business Validation",
+        "assignee": "Abdullah iqbal",
+        "created": "2024-03-08T04:56:08.729-0800",
+        "issue_type": "Story",
+        "parent_id": "VZI-11810"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-99320",
+      "released_in_current_rc": false,
+      "summary": "Integration: Vroozi API Upgrade - Major Documentation Upgrade Phase II",
+      "description": "Vroozi API Upgrade: Part 1 - Major version upgrade from Swagger v2 to OpenAPI v3 Vroozi API Upgrade: Part 2 - Master Data Documentation enhancement",
+      "status": "Implementation In Progress",
+      "assignee": "Sambhu Sai",
+      "created": "2024-05-09T21:17:05.210-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-99969",
+        "summary": "Vroozi API Upgrade: Part 9 - Update Internal Orders API Documentation and Examples",
+        "description": "Requirements: Update all API endpoints and model descriptions in the documentation with proper examples, defaults and required flags Add multiple different examples of the API usages to cover multiple use cases including minimal required payload, minimal recommended payload and all available fields example. All the payload should be properly formatted and should work using Try it from documentation itself. Add the read only fields in the default response to mention them as Read only fields, e.g id, dateCreated, lastUpdated etc. It is read only field. Mention the behaviour of the field in case the value is not provided in the payload for update flows. e.g Not providing a field at all in the payload vs providing empty or null value in that field during update. Update the 403 error message in the documentation Forbidden (The server understood the request but refuses to authorise it). Add the following Note in the API description During an update request, only the fields provided in the payload will be updated. Any field not included in the payload will retain its previous value. To reset a field's value, include that field in the payload with a value of null or an empty string. Technical Details: Minimal Payload: {\n  \"orderNumber\": \"1234\",\n  \"description\": \"sample description\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  }\n} Recommended Payload: {\n  \"externalId\": \"10201\",\n  \"orderNumber\": \"1234\",\n  \"description\": \"sample description\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"active\": true\n} Default Payload: {\n  \"externalId\": \"10201\",\n  \"orderNumber\": \"1234\",\n  \"description\": \"sample description\",\n  \"companyCodeRef\": {\n    \"docNo\": \"DCC01\"\n  },\n  \"budgetInfo\": {\n    \"amount\": 20.3,\n    \"timeFrequency\": \"MONTHLY\"\n  },\n  \"profitCenter\": \"sample profit center\",\n  \"active\": true\n}",
+        "status": "Awaiting Business Validation",
+        "assignee": "Muhammad Imran Sarwar",
+        "created": "2024-05-29T13:58:11.320-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-99320"
+      }
+    ]
+  },
+  {
+    "epic": {
+      "key": "VZI-54074",
+      "released_in_current_rc": false,
+      "summary": "angular-upgrade: All the work related to Angular Upgrade ",
+      "description": "",
+      "status": "Implementation In Progress",
+      "assignee": "Jaroslav Bellus",
+      "created": "2019-10-08T00:36:09.692-0700"
+    },
+    "issues": [
+      {
+        "key": "VZI-91432",
+        "summary": "angular-upgrade: VziChangesetDetail Component",
+        "description": "",
+        "status": "In Biz Validation",
+        "assignee": "Javaid Sattar",
+        "created": "2023-08-31T03:11:12.118-0700",
+        "issue_type": "Story",
+        "parent_id": "VZI-54074"
+      }
+    ]
+  }
+]
