@@ -1,101 +1,74 @@
-April 22, 2025
-**[Image here]**
-                   Vroozi April 2025
-                        Release Notes
-**[Image here]**
-Table of Contents:
-Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)                2
-   Invoice Dispute Process                                                            2
-   Voided Invoice Enhancements                                                        3
-   Document Flow Improvements                                                         4
-Vroozi Purchase (Administrator)                                                       5
-   Multi-Unit ID Management                                                           5
-   Tax Management Enhancements                                                        6
-Vroozi APIs                                                                          7
-   API Documentation Improvements                                                     7
-Resolutions                                                                          8
+# Release Notes - RC-2025-5
 
-# Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)
+## New Features & Enhancements
 
-## INVOICE DISPUTE PROCESS
-Vroozi has introduced a comprehensive invoice dispute management process to streamline 
-communication between AP teams and suppliers. This new functionality enables efficient 
-handling of invoice discrepancies and faster dispute resolution.
+### Payables: Invoice Dispute Process Improvements
+- **Enhanced Supplier Portal Actions**: Implemented intuitive action options (View/Edit) for disputed invoices in Supplier Portal, enabling suppliers to efficiently manage invoice disputes through a streamlined interface. This enhancement improves supplier satisfaction and operational efficiency.
 
-Key features include:
-- Dispute initiation with multiple selectable reasons and comments
-- Email notifications for all dispute-related actions 
-- Clear dispute status tracking and history
-- Supplier ability to void, amend or reject disputed invoices
-- Prominent display of dispute reasons and resolutions
-- Streamlined supplier actions through 3-dot menu options
+- **Document Flow Search Capabilities**: Added ability to search and view Disputed and Voided invoices in Document Flow, with enhanced visibility of high-level invoice details and linked documents. Access is intelligently controlled based on user roles and historical interactions.
 
-**[Image here]**
+- **Dispute UI Enhancements**: 
+  - Improved the Dispute Destination Dialog Box with better field alignment and readability
+  - Enhanced multi-selection display for dispute reasons
+  - Optimized layout and spacing for improved user experience
+  - Reorganized field positioning for better workflow
 
-## VOIDED INVOICE ENHANCEMENTS
-Several improvements have been made to the voided invoice handling process:
+- **Email Notification System**: Implemented comprehensive email notifications for dispute-related actions:
+  - Automated notifications for dispute submissions
+  - Resolution notifications for void, amend, or reject actions
+  - Customized email templates with direct document access
+  - Role-based notification routing
 
-- Voided invoices are now automatically excluded from final invoice calculations
-- POs referenced in voided invoices remain available for new invoice creation
-- Voided invoices no longer trigger overdue email notifications
-- Improved visibility of voided invoice status in document flow
+### Taxes Module Modernization
+- **Tax Management Interface**: Completely redesigned the tax management interface with modern Angular components, providing a more responsive and user-friendly experience.
 
-These enhancements provide better clarity around voided invoices and ensure smoother 
-processing workflows.
+- **Tax Code Administration**: Enhanced tax code management capabilities with improved validation and data consistency checks.
 
-## DOCUMENT FLOW IMPROVEMENTS
-The document flow functionality has been enhanced to provide better visibility and 
-searchability:
+- **Withholding Tax Management**: Modernized withholding tax functionality with streamlined workflows and better data visualization.
 
-- Added ability to search and view disputed and voided invoices
-- Enhanced high-level invoice details display
-- Improved linked document visibility
-- Role-based access controls for document viewing
-- Streamlined document navigation
+### Multi-Unit ID Management
+- **Business Unit Configuration**: Implemented sophisticated business unit management capabilities allowing administrators to:
+  - Configure multiple business units from a central interface
+  - Manage user access across different business units
+  - Control role-based permissions at unit level
 
-# Vroozi Purchase (Administrator)
+- **User Management Enhancements**: 
+  - Improved user profile management across multiple business units
+  - Enhanced access control mechanisms
+  - Streamlined user authentication workflows
 
-## MULTI-UNIT ID MANAGEMENT
-A new multi-unit ID management capability has been introduced to support organizations 
-with multiple business units:
+### System Health & Configuration
+- **Health Check Improvements**: 
+  - Added comprehensive health monitoring for Kafka UI
+  - Enhanced system status reporting
+  - Improved diagnostic capabilities
 
-- Centralized user management across multiple business units
-- Ability to assign and revoke access to specific business units
-- Unified SSO configuration management
-- Streamlined navigation between business units
-- Aggregated reporting dashboard for master administrators
+- **Configuration Management**: 
+  - Implemented centralized configuration management
+  - Enhanced property handling for accounting and budget APIs
+  - Improved system reliability and maintainability
 
-This enhancement enables more efficient management of users and configurations across 
-multiple business units while maintaining appropriate access controls.
+## RESOLUTION
+1. Optimized query performance by improving sorting logic in paginated queries, reducing database load and improving response times.
 
-## TAX MANAGEMENT ENHANCEMENTS
-The tax management interface has been upgraded to provide a more intuitive experience:
+2. Enhanced user experience by implementing proper validation for tax code updates and synchronization across the system.
 
-- Modernized tax code management interface
-- Enhanced withholding tax configuration
-- Improved tax code association workflows
-- Streamlined tax rate management
-- Better visibility of tax relationships
+3. Improved system stability by resolving authentication edge cases in multi-unit ID scenarios.
 
-# Vroozi APIs
+4. Enhanced data consistency by implementing proper handling of voided invoices in various system workflows.
 
-## API DOCUMENTATION IMPROVEMENTS
-Significant enhancements have been made to API documentation:
+5. Improved system reliability by implementing proper error handling and validation in the invoice dispute process.
 
-- Updated OpenAPI specifications
-- Enhanced example payloads and responses
-- Improved error message documentation
-- Better field descriptions and validation rules
-- Clearer endpoint organization and grouping
+6. Enhanced user interface responsiveness by optimizing component loading and data synchronization.
 
-# Resolutions
-- Enhanced the precision of catalog item pagination and search functionality
-- Improved handling of user access revocation across multiple business units
-- Optimized query performance for paginated searches
-- Enhanced validation of accounting string combinations
-- Improved handling of supplier custom field associations
-- Streamlined user management workflows in multi-unit scenarios
-- Enhanced SDM user creation and management capabilities
-- Improved handling of location validation during document creation
-- Optimized budget consumption tracking for PO submissions
-- Enhanced handling of company code associations in class creation
+7. Improved system security by implementing proper access control validation in multi-unit ID scenarios.
+
+8. Enhanced data integrity by implementing proper validation for accounting and budget-related operations.
+
+## Technical Updates
+- Upgraded various Angular components to improve system performance and maintainability
+- Enhanced API documentation with improved examples and usage guidelines
+- Implemented new health check endpoints for better system monitoring
+- Updated configuration management system for improved reliability
+
+For detailed technical documentation and implementation guides, please refer to the system documentation.

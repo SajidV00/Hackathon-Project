@@ -23,7 +23,7 @@ load_css("frontend/CSS/style.css")
 
 
 def release_notes_page():
-    st.markdown("<h1 class='st-title'>📝 Release Notes Analysis</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='st-title'>📝 Release Mate</h1>", unsafe_allow_html=True)
 
     release_name = st.text_input("🏷️ Enter Release Name:")
     prompt = st.text_area("📌 Enter Prompt:", height=150)
@@ -43,7 +43,7 @@ def release_notes_page():
 
 
 def chatbot_page():
-    st.markdown("<h1 class='st-title'>💬 VROOZI ChatBot</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='st-title'>💬 VROOZI Help Desk</h1>", unsafe_allow_html=True)
     if "messages" not in st.session_state:
         st.session_state["messages"] = [{"role": "assistant", "content": "👋 Hello! Ask me anything about VROOZI."}]
     for message in st.session_state["messages"]:
@@ -61,7 +61,7 @@ def chatbot_page():
 
 
 st.sidebar.title("✨ Navigation")
-page = st.sidebar.radio("Navigate to:", ["Release Notes Input", "Chatbot"])
+page = st.sidebar.radio("Navigate to:", ["Release Mate", "Vroozi Help Desk"])
 
 if page == "Release Notes Input":
     release_notes_page()
