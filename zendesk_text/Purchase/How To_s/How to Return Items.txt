@@ -1,0 +1,32 @@
+Return Items
+Document a return for goods purchased through Vroozi.
+
+FIRST STEPS
+   1. Confirm the ​Receipt of Goods​ for items being returned.
+   2. Reach out to the Supplier directly to communicate the return. The Vroozi Return
+      process or document does not communicate back to the Supplier.
+
+DOCUMENT RETURN
+   1. Access the Goods Receipt associated to the item(s) in the ‘Receipt Status’ category.
+   2. Access the completed goods receipt in the ‘Received’ tab.
+   3. Find the applicable Goods Receipt or PO
+      number. In the right-most column click
+      the action arrow. (shown right)
+   4. This will generate the Goods Receipt
+      Return draft. There are ​2​ required fields
+      on this draft.
+         ● ‘Quantity Returned’ and ‘Reason for Return’. (shown below)
+
+
+
+
+   5. The RMA or Packing Slip information, and comments fields are optional.
+   6. Complete the Return form by selecting ‘Confirm Goods
+       Returned’.
+          ● A pop up will ask you to reconfirm the return of
+             goods. Select ‘Yes Create’. (shown right)
+Success! ​You have completed the documentation of your goods
+return. The goods return document can now be accessed under
+the ‘Returned’ tab with its own unique number. The new status of
+this document will be ‘Confirmed’.
+

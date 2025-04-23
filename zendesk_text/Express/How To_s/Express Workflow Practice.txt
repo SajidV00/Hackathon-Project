@@ -1,0 +1,66 @@
+Purchase Express - P
+                   ​ ractice Workflow
+Follow the outlined steps to gain better knowledge of the Purchase Express
+workflow.
+
+
+
+
+  1. Create a Power Shopper​ L ​ ogin to V
+                                         ​ roozi Purchase​ and navigate to the 'Users'
+     subcategory. Create a Power Shopper.
+        ● You will use your email for practice user accounts. To create multiple user
+           logins, use your email with “+shopper” or “+powershopper” inserted after
+           your email name but before @. For example:
+           Spiderman+powershopper@vroozi.com
+        ● For ease of use elect to ‘Use email (address) as Username’.
+
+
+
+
+        ●   If you get stuck, reference the Purchase Express Administrator Guide.
+
+  2. Create a Shopper​ Follow the process defined in the Administrator guide to create
+     a Power Shopper.
+        ● Add the shopper to the same Content Group as the one selected for your
+           Power Shopper.
+
+
+
+
+  3. Test your new user logins:​ Creation of each user will trigger a registration
+     notification to your email account. One at a time, access each email and follow the
+     prompts to create your user account.
+        ● SS0 will not be applicable for testing.
+        ● If you did not receive the email notifications for either user, go back to the
+            user record to confirm the +shopper or +powershopper was inserted
+            between your regular email and the @url. See the administrator guide for
+            additional information.
+
+  4. Create a Mapping Rule​ Navigate to the Company category where the Power
+     Shoppers subcategory is housed. Create a Mapping Rule titled “Testing” that will
+     trigger assignment.
+      ●   Assign this Mapping rule to the Power Shopper you created in step 1.
+
+
+
+
+      ●   Select a category or supplier that applies to catalogs your users created in
+          Steps 1 and 2 will have access to in their Content Group.
+
+4. Shop! ​ Login using your S
+                            ​ hopper​ credentials and select at least 2 items to add to
+   your List. Complete your list and assign to the Power Shopper created in Step 2.
+      ● If you get stuck, reference the Shopper Guide
+      ● If the Power Shopper you created in step 1 does not appear in the drop
+          down, go back to the Administrator login and review your Mapping Rule.
+
+5. Convert List to Cart​ L
+                         ​ ogin using your ​Power Shopper​ credentials. (Created in Step
+   1) Reject one item from the Shopper’s list and accept the remaining items. Convert
+   the accepted items to a Cart and select Checkout Now.
+
+      ●   Since SOCI is not connected to your external system, once ‘Checkout now’ is
+          selected the testing of this workflow will be complete.
+      ●   If you get stuck, reference the Power Shopper Guide.
+

@@ -1,0 +1,39 @@
+RFQs 3 ways
+There are ​three (​ 3)​ Requests for Quote (RFQ) Workflows based on how Requesters and
+Buyers are configured.
+
+
+
+RFQ WORKFLOW #1
+Requester has permission to ‘Submit Request Forms’. Buyer brings expertise to submit
+the request to Suppliers, approve bids and release back to the Requester.
+
+ ●   Requester initiates RFQ process and assigns a Buyer. The assigned Buyer reviews the
+     quote, adds additional details and submits to suppliers. Once supplier bids are
+     received, the Buyer will accept a bid and send the Request draft back to the
+     Requester with the accepted supplier and line item details. The Requester will then
+     complete the Requisition, triggering the next phase in the procurement workflow;
+     financial review if applicable or conversion to PO.
+
+
+
+
+                                                                                         1
+RFQ WORKFLOW #2
+Requester is able to ‘Submit RFQ to Suppliers’ and will incur all responsibilities associated
+with the Buyer in Workflow #1.
+
+
+
+
+                                                                                            2
+RFQ WORKFLOW #3
+Ability to create RFQs is limited to only users with the Buyer or Administrator role. The
+Buyer initiates the RFQ process, submits to Supplies, approves/rejects bids and converts
+the bid to submitted requisition is done by the Buyer.
+
+
+
+
+                                                                                            3
+

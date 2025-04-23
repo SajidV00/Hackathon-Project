@@ -1,0 +1,131 @@
+       Outstanding PO
+     Quantities and Values
+     Using AP Analytics to report Outstanding PO Quantities and Values
+
+
+
+
+Table of Contents:
+Using Reporting for Outstanding PO Quantities and Values​                            2
+   Using Filters​                                                                    2
+      Purchase Orders Received Status​                                               3
+      Invoiced Status​                                                               4
+      Order Type​                                                                    4
+   Fields that Report Outstanding Quantities and Values for PO lines​                5
+      Examples​                                                                      5
+
+
+
+
+                                                                         AP Analytics 1
+
+                                                                 Last Update 03/07/2023
+USING REPORTING FOR OUTSTANDING PO QUANTITIES AND
+VALUES
+PO lines that have outstanding quantities and values (ie: yet to be received or
+invoiced) can be filtered from the report PO Received Not Invoiced (RNI).
+
+
+
+
+There are 24 available filters to assist finding a PO located on the right of the screen
+or by clicking on the ‘filters’ logo (    ) in the top right hand corner.
+
+
+Users can also select the ‘Information’ icon (  ) in the top right corner for further
+information/explanations (ie. Received Status and Invoice Status).
+
+
+
+
+                                                                             AP Analytics 2
+
+                                                                     Last Update 03/07/2023
+USING FILTERS
+Purchase Orders Received Status
+
+
+
+
+   ●​ Confirmed_Full indicates the POs that have been fully received and there is
+      no outstanding left.
+
+   ●​ Confirmed_Partial indicates the POs that have an outstanding quantity to be
+      received. Similarly if there are Service POs, this will indicate all those POs that
+      have an outstanding service.
+
+   ●​ Unconfirmed indicates the POs that have no receipt.
+
+Users will filter the report using these Purchase Orders received statuses
+
+
+
+
+                                                                             AP Analytics 3
+
+                                                                     Last Update 03/07/2023
+Invoiced Status
+Users can add more filters to show outstanding values and quantities.
+
+
+
+
+   ●​ Invoiced_Full indicates that the PO item(s) have been fully invoiced for all
+      quantities.
+
+   ●​ Invoiced_Partial indicates that POs have an outstanding quantity to be
+      invoiced.
+
+   ●​ No_Invoice indicates that no items in the PO have been invoiced.
+
+Order Type
+
+
+
+
+   ●​ InvoicePlan is used for POs where invoicing has been scheduled overtime
+      rather than upon receiving goods/services.
+
+   ●​ Blanket is used for POs with repeated purchasing of goods/services over a
+      period of time before knowing quantity or dates.
+
+                                                                          AP Analytics 4
+
+                                                                   Last Update 03/07/2023
+   ●​ Standard is used for POs with known quantities/services upfront.
+
+   ●​ Stock is used for POs ordering goods for inventory (stock/storage).
+
+FIELDS THAT REPORT OUTSTANDING QUANTITIES AND VALUES
+FOR PO LINES
+
+This Dashboard has two fields that will provide the outstanding quantities and values
+for POs:
+
+     ●​ Outstanding Qty (to be received)
+          ○​ The formula for a PO Item   Qty Ordered - (Qty Received - Qty
+             Returned)
+     ●​ Remaining Amount (to be invoiced).
+           ○​ The formula for a PO Item      Outstanding Qty x UnitPrice
+
+Examples
+
+   ●​ PO: 2000000025 has 6 items, 1st item was fully received and fully invoiced,
+      other 5 items are not received yet.
+
+
+
+
+                                                                            AP Analytics 5
+
+                                                                  Last Update 03/07/2023
+●​ PO: 2000000113 has 1 item, 1st item was fully received then partially returned
+   and invoiced. The remaining state of PO items:
+
+
+
+
+                                                                      AP Analytics 6
+
+                                                               Last Update 03/07/2023
+

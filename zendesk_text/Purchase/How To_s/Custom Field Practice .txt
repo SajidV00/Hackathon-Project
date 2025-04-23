@@ -1,0 +1,28 @@
+Custom Field - P
+               ​ ractice Workflow
+Referencing the Custom Field ​Grab & Go​. Create a Custom Field as an administrator then
+test the experience as a Requester.
+
+
+Note: Access to your SOCI Administrator login will be required.
+
+
+Create a Custom Field
+
+   1. Navigate to the Custom FIeld subcategory in the Navigation Panel.
+   2. Create a new Create a Custom Field, title it “Color - Practice’
+   3. Select ‘List’ as the Type. This will prompt entry of list options. Enter 3 different
+      colors, selecting a price modifier. Select one newly added color as the ‘Default
+      Value’. (This is the value that will automatically populate the custom field.)
+
+
+
+
+   4. Set the Custom Field Requirement for a supplier associated to a cataog that you
+      can test from your Shopper view.
+
+
+
+
+   5. Save your “Color - Practice” custom field.
+

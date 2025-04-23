@@ -1,0 +1,112 @@
+Sourcing Review Roles
+Overview of each employee’s role in the Sourcing Review Workflow.
+
+
+
+
+Requester
+Once a Sourcing rule is configured, requisitions that trigger that sourcing rule will be
+flagged for review. Before submitting
+the requisition, Requesters will receive
+a notification on the Requisition draft
+letting them know the requisition will
+go through Sourcing Review. ​(shown
+on right)
+
+
+
+
+While awaiting review, the PR’s status
+will be displayed as ‘Sourcing Review’.
+
+
+
+
+Sourcing Approver
+Sourcing Approvers will receive email notification when a requisition is ready for
+review.
+
+SOURCING APPROVER DASHBOARD
+Any employees with the Sourcing Approver role will be directed to the ‘Approve
+Requests’ view
+upon login.
+
+There are three
+tabs within this
+view ’Pending’,
+‘Approved’ and
+
+
+
+                                                                                       1
+‘Rejected’. The view will default to ‘Pending’.
+
+TAKE ACTION
+Click the Request # to view details. Once the requisition is opened, Sourcing
+Approvers will have several options. (​ shown on next page)
+
+   ●   Reject
+   ●   Edit​ (if the global editing option is enabled as shown above)
+   ●   Forward​: Assign to another approver.
+   ●   Approve
+
+
+
+
+EDIT A REQUISITION
+Click on the line item to view the General, company,
+accounting and tax information. Make changes as
+needed
+
+Select ‘Edit’ to make changes. Then click the description
+for the line item you wish to edit. (​ line item details shown
+on right)
+
+   ●   Note: ​Permission to edit a requisition is a global
+       setting defined by the Purchase Administrator. If
+       disabled by the administrator, the Edit button will
+       not appear for Sourcing Approvers.
+
+‘Save Item’.
+
+
+
+
+                                                                                2
+Once changes have been made a new message will appear below the navigation
+option. If changes are incorrect, select ‘Revert all Changes’ to return to the originally
+submitted requisition.
+
+
+
+
+FORWARD REQUISITION
+After review is complete and/or edits have been
+made, before selecting ‘Approve’ Select ‘Forward’
+to enable review by another Sourcing Approver.
+
+
+
+
+REJECT/APPROVE
+Select ‘Reject’ or ‘Approve’ and enter a Note for the Requester.
+
+   ●   Completion of a note is optional
+         ○ Any notes will be viewable from the rejection/approval email
+            notification the Requester will receive.
+
+
+
+
+If decision codes are used, Approvers will be asked to select from a predefined list of
+decision codes.
+
+
+
+
+NEXT STEPS
+The requisition will then either convert to Purchase Order or if Approval Workflow is
+enabled will be directed to the first Financial Approver.
+
+                                                                                            3
+

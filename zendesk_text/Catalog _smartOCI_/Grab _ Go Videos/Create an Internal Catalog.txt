@@ -1,0 +1,136 @@
+Create an Internal Catalog
+
+STEP 1: CREATE OR UPDATE THE SUPPLIER RECORD
+   ●   See S
+           ​ upplier​ materials for details on this step
+
+
+
+STEP 2: BUILD THE CATALOG FILE
+For new Internal catalogs, download the ​Catalog Template
+
+
+
+
+Any existing catalogs can be downloaded, updated and re-uploaded from the
+catalog record.
+
+Required Fields​:
+Vroozi Catalog supports catalogs formatted with .XLSX (Excel) and .CSV files. The
+existing functionality in the column declarations in the load file remain intact,
+including:
+   ● #Item Number
+   ● NEW_ITEM-DESCRIPTION o        ​ r​ NEW_ITEM-MATNR
+   ● NEW_ITEM-VENDORMATE
+   ● NEW_ITEM-PRICE
+   ● NEW_ITEM-CURRENCY
+   ● NEW_ITEM-UOM
+   ● NEW_ITEM-MATGROUP
+
+Dynamic Part Number Format​: Required when using the L               ​ ist Type​ custom field.
+These fields allow the S     ​ hopper​ to select defined options from a drop-down menu.
+Sequencing Fields​: ​Custom Fields​ are able to be reordered in the system.
+Sequencing Fields allow fields to be displayed in a preferred order to Shoppers. This
+requires a certain syntax when declaring these ​Custom Fields​ in the catalog file.
+Data Type Declaration​: V       ​ roozi Catalog ​supports four different types of Custom
+Fields—​Fixed​, L
+                ​ ist​, I​ nput​, and ​Flag​. When creating a Custom Field, one of these must
+be identified or “declared.”
+
+
+
+
+                                                                                             1
+Internal Catalog Images
+There are t​ wo​ ways to attach catalog item images.
+
+   1. By entering URLs in the image column of the Internal Catalog Template.
+   2. By entering the name of the image in the image column and uploading a .zip
+      folder of images along with the sheet. The image names must match the
+      names listed in the Image Column. The system then automatically picks the
+      image from the zipped folder which is mapped against the item. Please see
+      the screenshots below for better understanding.
+
+
+
+STEP 3: CATALOG CONFIGURATIONS
+In Content Manager select to Create Catalog
+
+
+
+
+Enter the Catalog Name and load the completed Catalog file & if applicable image
+file from S
+          ​ tep 2.
+
+
+
+
+Supplier Company: ​ Type in the S
+                                ​ upplier Company​ (vendor) name in the text field.
+
+
+Note: D
+      ​ o not check the ​External Catalog (Punchout Catalog)​ box. This field is for
+punchout catalogs only.
+
+
+Fixed Order Quantity: ​Catalog items include fixed quantity
+Direct Item Update:​ Check to allow direct changes at the item level. If unchecked
+changes will require re-uploading of the catalog file with the appropriate changes.
+
+Additional Fields:
+Catalog ID: C
+            ​ ​omplete ​only​ if your organization has ERP ​Catalog ID​ requirements.
+Contract Number​: Use this field to track contract compliance.
+
+
+
+
+                                                                                        2
+Catalog Start & End Dates: ​Specify dates and times S ​ hoppers​ will be able to access
+the catalog (as long as it has been approved). Setting a start date will hold the
+catalog in the ​Approved​ column until date
+specified at which time it will move to the
+Live​ column.
+   ● Administrators​ can override this S  ​ tart
+        Date​ at any time by manually
+        publishing (dragging) the catalog into
+        the L​ ive​ column.
+   ● Leaving End Date field blank means
+        that there will be no end date for this
+        catalog to be available for S
+                                    ​ hoppers​,
+        as long as it is L
+                         ​ ive​.
+
+
+Note: ​ ​External Catalog Definition does not apply to Internal catalogs - This section
+can therefore be skipped.
+
+
+Content Views:
+Select all the relevant C
+                        ​ ontent Views​ to be associated with this catalog by checking
+the box next to the N​ ame​.
+
+
+Approvers:
+Select the individuals who
+will have approval rights for this catalog. Approval scenarios are based on Approval
+Settings configured in Company -> Settings. before it can be published Live to
+Shoppers.
+   ●   Only one selected ​Approver​ needs to A
+                                             ​ pprove ​the catalog before it goes ‘Live’
+
+Click the C
+          ​ reate​ button at the very bottom right of the page to create the new
+catalog in the system. No changes will
+be saved until the ​Create​ button is
+clicked​.
+
+
+
+
+                                                                                           3
+

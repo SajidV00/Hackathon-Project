@@ -1,0 +1,35 @@
+Split Account Assignment
+Grab & Go​ on how to spread the cost of an item across multiple accounting groups.
+
+
+Split account assignment can be performed by Requesters, Buyers and Approvers at the
+Requisition level or at the Invoice level by Accounts Payable team members. Some roles
+may require the coding permission to be added.
+
+
+In the Line Item Overview, click the Description for the line item you wish to split.
+
+
+
+
+   1. Select ​Split Account Assignment
+      Distribution. S
+                    ​ ​elect how you
+      would like to split the Assignment.
+
+          ●     By Quantity
+          ●     By Value
+          ●     By Percent
+
+   2. Select the distribution amount.
+
+   3. Select the appropriate accounting segments for each assignment. Accounting
+      segments will vary by buying organization.
+
+   4. Click the + sign to add the additional split assignment
+
+
+
+
+   5. ‘Save’.
+

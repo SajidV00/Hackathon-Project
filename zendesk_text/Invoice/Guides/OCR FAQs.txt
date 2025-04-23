@@ -1,0 +1,87 @@
+OCR FAQs
+This ​Grab & Go​ covers the basic details of the Optical Character Recognition (OCR)
+functionality.
+
+
+W​HAT​ I​ S​ OCR?
+OCR technology permits the reading and extraction of content contained on an
+electronic document. OCR is able to scrape content off of an image and/or from
+scanned and electronic PDF documents. Vroozi supports the capability to apply OCR
+only​ to your PO based invoices.
+
+
+W​HAT​ I​ S​ T​ HE​ ​BENEFIT​ ​OF​ A
+                                   ​ PPLYING​ OCR ​TO​ ​YOUR​ PO ​BASED​ I​ NVOICES​?
+A significant reduction in the time and effort (between 40% and 70%) required for
+your AP processors to manually index invoices within Vroozi.
+
+
+W​HAT​ V
+       ​ ALUES​ W
+                ​ ILL​ OCR R
+                           ​ ETRIEVE​ ​FROM​ A
+                                             ​ N​ I​ NVOICE​?
+Vroozi’s OCR feature is able to retrieve the following values from your invoice:
+
+   ●   Invoice #
+   ●   Invoice Date
+   ●   Payment Due Date
+   ●   Total Tax
+   ●   Total Shipping
+   ●   Invoice Total
+
+W​HAT​ A
+       ​ BOUT​ T​ HE​ R
+                      ​ EMAINING​ V
+                                  ​ ALUES​/F​ IELDS​ P
+                                                     ​ RESENT​ ​ON​ ​AN​ I​ NVOICE​?
+The values corresponding to the remaining fields (on a Vroozi invoice) are
+downloaded from the PO that the invoice corresponds to.
+
+   ●   Company Code
+   ●   Supplier
+   ●   Payment Terms
+   ●   All line-item information
+
+W​HAT​ V
+       ​ ALUES​ W
+                ​ ILL​ OCR N
+                           ​ OT​ ​RETRIEVE​ ​FROM​ A
+                                                   ​ N​ ​INVOICE​?
+Vroozi’s OCR feature ​does not s​ upport the extraction of line item information from
+an invoice.
+
+H​OW​ D
+      ​ O​ ​PARTIAL​ I​NVOICES​ W​ORK​?
+For Invoices that contain a subset of items listed in a PO, AP Processors will need to
+manually modify (edit and/or delete) the line-item information.
+
+
+
+                                                                                         1
+W​HAT​ T​ YPE​ O
+               ​ F​ I​ NVOICES​ W
+                                ​ OULD​ OCR ​BE​ A
+                                                 ​ PPLICABLE​ F​ OR​?
+Vroozi’s OCR feature will only be applicable for PO based invoices received via email.
+On the contrary, OCR will not be applied to non-PO based invoices.
+
+
+W​HAT​ A
+       ​ RE​ T​ HE​ ​REQUIREMENTS​ F​ OR​ OCR A
+                                              ​ PPLICATION​ ​ON​ ​AN​ ​INVOICE​?
+The following requirements must be satisfied before OCR can be applied:
+   ● The PO # must be present on the invoice and must not be handwritten.
+   ● Invoice must be less than or equal to 30 pages.
+   ● Invoice must be less than or equal to 20 MB.
+
+H​OW​ A
+      ​ CCURATE​ W
+                 ​ OULD​ OCR ​BE​?
+Greater than 95%.
+
+
+
+
+                                                                                         2
+

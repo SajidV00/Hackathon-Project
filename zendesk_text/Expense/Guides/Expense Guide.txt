@@ -1,0 +1,85 @@
+              Vroozi Expense Guide
+
+Table of Contents:
+
+Expense Report Creation                               2
+
+Inclusion of Mileage                                  3
+
+Attach Receipts                                       4
+
+‘My Wallet’                                           4
+
+
+
+
+                                Expense Report Guide ​ 1
+                                      Updated 7/18/2019
+Expense Report Creation
+1.   Select Expenses
+2.   Select ‘New Expense Report’
+3.   Repository of expenses that have not yet been assigned to a
+     report or submitted.
+4.   View expense reports by status
+       ●    Drafted:​ Saved but not submitted for approval
+       ●    Pending: ​ Awaiting approval
+       ●    Approved: ​Approved for reimbursement
+       ●    Paid: ​ Reimbursement complete
+       ●    Rejected: ​ Further review required.
+5.   Search by expense report number, name, vendor name.
+       ●    Use ellipses to filter
+
+
+
+
+                                                                   Expense Report Guide ​ 2
+                                                                         Updated 7/18/2019
+Inclusion of Mileage
+Mileage rate
+The Mileage Rate is set by your Vroozi Purchase Administrator (Company ->Settings
+->Expenses)
+
+
+
+
+Selection of the ‘Mileage’ category adds additional
+fields:
+  •   From Address
+  •   To Address
+  •   Miles
+
+
+Mileage Auto-calculation
+The reimbursement amount is automatically
+calculated based on mileage entered and the
+prepopulated mileage rate.
+      Note: Check ‘Round Trip’ to avoid creating 2
+      separate expenses for the same trip.
+
+
+
+
+                                                                Expense Report Guide ​ 3
+                                                                      Updated 7/18/2019
+Attach Receipts
+Click the paper clip to attach a saved receipt
+
+
+
+
+Once a receipt is attached a number icon appears and the receipt is listed below.
+
+
+
+
+‘My Wallet’
+Store expenses you are not yet
+ready to assign to a report or
+submit.
+
+
+
+
+                                                                  Expense Report Guide ​ 4
+                                                                        Updated 7/18/2019
+

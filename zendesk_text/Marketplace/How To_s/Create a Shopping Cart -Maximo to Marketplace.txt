@@ -1,0 +1,55 @@
+Create a Shopping Cart
+Maximo to Vroozi
+
+Vroozi Marketplace is an Amazon-like shopping experience but better because it is
+specifically tailored to your buying needs. You can search and shop for items among
+multiple supplier catalogs, compare prices, add items to your cart, create shopping lists &
+save your search results.
+
+
+Create a Catalog Request
+ 1.   Create Purchase Request in​ IBM​ ​Maximo and launch to Marketplace.
+
+
+
+
+Begin Shopping in Vroozi Marketplace
+
+ 2.   Perform a search or select a Catalog from the Marketplace homepage.
+ 3.   Select the items to view or add to cart.
+      Update quantity as needed.
+ 4.   Checkout from catalog to theVroozi
+      Shopping Cart. (Icon as shown below
+      will vary according to supplier’s
+      interface)
+
+
+
+
+ 5.   Return to Vroozi Marketplace and complete PR by selecting ‘Checkout Now’
+
+
+
+
+                                                                                          ​1
+Return to Maximo
+ 6.   Confirm line item details & submit PR.
+
+
+
+
+Create a Discreet Request
+Also referred to as a Free Text Request
+ 1.   Launch from ​Maximo as you would
+      for a catalog request.
+ 2.   Select ‘Not in Catalog’ in the top right corner of the
+      Dashboard.
+ 3.   Complete all required fields.
+ 4.   Complete your request and complete transaction in
+      your external ERP.
+
+
+
+
+                                                               ​2
+

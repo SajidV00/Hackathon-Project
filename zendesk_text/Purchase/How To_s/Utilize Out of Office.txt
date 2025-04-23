@@ -1,0 +1,68 @@
+Utilize ​Out of Office F
+                       ​ unctionality
+Design an ​Out of Office​ workflow that makes sense for your organization's process’.
+
+
+
+Enable Out of Office
+Allow your Sourcing and Financial Approvers to manage their ​Out of Office​ messaging
+and if desired designate an approver to act on their behalf for a specified period of time.
+   1. Found in the Master Administrator panel
+         ➢ Documents >Workflows >
+             Request Approval
+             Workflow​ (toggle on)
+   2. Toggle on E
+                ​ nable Out of Office
+      for Approvers
+
+      Approver’s profile with ‘Out of Office’ toggle:
+      Once enabled, each individual approver can design how to forward their approvals
+      during an absence:
+
+
+
+
+Select ‘​ Next Approver’
+If selected the document will be sent to the individual identified as ‘Next Approver’ in the
+original Approver’s user record.
+
+
+
+
+      Approver’s User Record:
+
+
+
+                                                                                               1
+Select ‘​ Specific Approver’
+If selected and your organization is using a Staircase approval, you can manually select
+another approver.
+
+
+
+
+Select ‘​ Do Not Forward’
+Unless ‘Approval Forwarding’ is enabled as a global setting, an approver can select to hold
+approvals until he/she returns to approve.
+
+
+
+Approval Forwarding
+Specify the rules for how approval requests should be forwarded.
+Administrators can specify the number of days a Requisition* should be allowed to sit
+dormant with an approver before the system automatically forwards it to the next
+approver in the chain.
+   ●   The ‘Approval Forwarding’
+       toggle only applies to
+       Requisitions. All other approval
+       types will not be affected.
+Alternatively, Administrators can specify how many times an Approver should be
+reminded about a pending request before it is forwarded to the next approver.
+   ●   Select ‘Number of contact attempts’
+          ➢ Enter number of days and intervals between days.
+
+
+
+
+                                                                                           2
+

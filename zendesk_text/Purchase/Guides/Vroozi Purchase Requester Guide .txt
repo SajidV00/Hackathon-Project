@@ -1,0 +1,1846 @@
+           Vroozi Purchase
+            Requester Guide
+An employee with the Requester role will have the ability to initiate the procurement
+process through the creation of a requisition. That requisition once it passes any
+applicable approval processes will convert into a Purchase Order, a formal document
+sent to the supplier(s) requesting the listed goods and/or services.
+
+As part of their role, Requesters may also be required to complete a Goods Receipt,
+resolve exceptions related to their Purchase Orders and document the details of a
+return.
+Table of Contents:
+Procurement Documents 101                                                           4
+
+Homepage Anatomy                                                                    5
+  Navigation Panel                                                                  6
+
+Catalog Shopping                                                                    8
+   Types of Requisitions                                                            8
+   Cart vs. Requisition                                                             8
+
+Internal Catalogs                                                                   9
+   Internal Catalog Search Options                                                  9
+      Search by specific details or keywords                                        9
+      Search by Category                                                            9
+   Create a Requisition from an Internal Catalog(s)                                10
+
+Punchout Catalogs                                                                  12
+  Create a Punchout Catalog Requisition                                            13
+  Shipping Charges Carry over for cXML Punchout Catalogs                           13
+
+Product or Service Free Text Requisitions                                          14
+   Create a Free Text Requisition                                                  14
+   Create a Blanket (Limit) Request                                                17
+   Create an Invoice Plan Request (Only applicable for SAP users)                  18
+
+Modify Request Details                                                             19
+  Line Item Functions & Anatomy                                                    19
+
+Create a Bulk Item Upload Requisition                                              21
+   Track Bulk Upload Progress                                                      22
+      View Errors                                                                  22
+
+Catalog Lists                                                                      22
+   Create a List                                                                   23
+   Add Line Items to a Request using Lists                                         23
+   List Item Updates                                                               24
+
+Requisition Creation Tips & Features                                              24
+  Schedule Submission of a PR                                                     24
+  Duplicate (Copy) A Line Item                                                    25
+  Delete a Line Item                                                              25
+  Add Shopping Cart Items to an Existing Draft                                    26
+
+
+
+                                                                    Requester Guide 1
+                                                                     Updated 5/20/2021
+   Add a Free Text Line Item                                             26
+   Edit Shipping Address                                                 27
+   Apply To All Function                                                 27
+   Split Account Assignment                                              28
+
+Purchase Requests                                                        29
+   Duplicate (Copy) a Request                                            30
+   Resubmit a Rejected Request                                            31
+
+Approval Status                                                          32
+
+Purchase Orders                                                          35
+   Purchase Order Navigation                                             36
+   Document Navigation                                                   36
+      Add Comments to a PO                                               36
+      Purchase Order History                                             37
+      Purchasing Parties                                                 37
+      Supplier                                                           37
+      View Payment History                                               38
+      Notes                                                              38
+      Related Documents                                                  38
+   Responding to a Disputed or Confirmed Purchase Order                  38
+      What if an item is confirmed?                                      38
+      What if an item is confirmed?                                      38
+
+Goods Receipt                                                            39
+  Create a Goods Receipt                                                 39
+  Create a Goods Receipt for Partial Delivery (1/2)                      41
+  Create a Subsequent Partial Goods Receipt (2/2)                        42
+  Service Receipts with 1-click Confirmation                             42
+  Goods Receipt created from an ASN                                      42
+  Create a Goods Return Against an ‘Invoiced’ PO                         43
+
+Goods Return                                                            44
+
+Purchase Order Change Request (POCR)                                    46
+
+Invoices                                                                46
+   Notification                                                         46
+   Submit a Resolution                                                  47
+   Closed PO after a Final Invoice                                      48
+
+
+
+
+                                                          Requester Guide 2
+                                                           Updated 5/20/2021
+      Final Invoice on a PO without a complete Goods Receipt                 48
+      Final Invoice on a PO with a completed Goods Receipt                   49
+
+Document Flow                                                                50
+
+Central Receivers                                                             51
+
+
+
+
+                                                               Requester Guide 3
+                                                                Updated 5/20/2021
+PROCUREMENT DOCUMENTS 101
+Purchase Requisition (PR):
+
+  ●   Often referred to as a Request
+  ●   Initiates the Purchase Process
+  ●   Document generated by a user to notify internal stakeholders of items or
+      services needed.
+
+Purchase Order (PO):
+
+  ●   Notifies a supplier of a procurement request
+  ●   Document generated against a Purchase Requisition after an approval
+      process.
+
+Goods Receipt (GR):
+
+  ●   Document issued to acknowledge the receipt of the items listed in a Purchase
+      Order
+         ○ Service receipts can be created to confirm the completion of requested
+            services.
+
+Advanced Shipment Notice (ASN):
+
+  ●   Document initiated by suppliers via the Vroozi Supplier portal notifying
+      Requesters of the shipment details for items contained in their PO. (only
+      applicable for buying organizations using the Supplier Portal)
+
+Invoice:
+
+  ●   Initiates payment for goods/services received against a PO.
+
+
+
+
+                                                                     Requester Guide 4
+                                                                       Updated 5/20/2021
+HOMEPAGE ANATOMY
+
+
+
+
+1. Your Logo: Essentially your “Home” button. From any screen in Vroozi
+   Purchase, , clicking your logo returns you to the homepage.
+
+2. Recently Viewed: A history of recently viewed Internal Catalog items, click to
+   view the item detail.
+
+3. Search Bar with Categories Menu: Where to search for internal catalog items
+   by keyword(s) or other product identifiers such as SKU, Manufacturing
+   Number, Part Number etc.
+
+       ●   Allows you to narrow your search to specific categories when searching
+           for Internal Catalog items. Used in combination with the Search Bar.
+
+4. Recent Requests: The 5 most recent requisitions you have submitted. Status’
+   shown to the right of each document number.
+
+5. Lists: Create personalized lists of frequently requested items from Internal
+   Catalogs. Lists can be saved and applied to future requests.
+
+6. Shopping Cart: A “holding area” for catalog items that can be placed into an
+   existing
+   requisition draft
+   or converted
+   into a new
+   request.
+
+
+
+
+                                                                   Requester Guide 5
+                                                                     Updated 5/20/2021
+  7. Catalog Suppliers: A list of all approved catalogs for your organizational group
+     based on regional availability. This may include both Internal and Punchout
+     suppliers. (shown on previous page)
+
+   8. Purchase Document Stats: Statistics reflecting the shopper’s personal
+      purchasing date.
+
+   9. Notifications (Bell Icon): View Administrator messages.
+
+   10. Help (Book Icon): Access to ‘The Vroozi Success Forum’ which includes the
+       self-help knowledge base and the ability to submit a request to the Vroozi
+       Helpdesk.
+
+
+
+
+See Setup Requirements Guide for further navigation details.
+
+NAVIGATION PANEL
+
+                    Your First Name and Initials: The drop-down menu here reveals
+                    your Profile, My Data, as well as the Logout icon.
+
+                    Create: Click Free Text to create a non-catalog requisition.
+
+                    Purchase Requests: Where to check the status of your request;
+                    a history of your requests.
+
+                    Purchase Orders:: Where to check the status of your PO; a
+                    history of Approved Requests that have associated PO
+                    Document Numbers.
+
+                    Shipping Notices: View Supplier Shipment Notifications
+
+                    *Only applicable for Supplier Portal customers
+
+
+
+
+                                                                      Requester Guide 6
+                                                                        Updated 5/20/2021
+Receipts: Where to create Goods Receipts and returns.
+
+Invoices: Number badge next to this category indicates your Action is
+Required to resolve Invoices sent back for completion of a missing Goods
+Receipt.
+
+Document Flow: Where to look up and view the status and associated records
+for any type of document. This feature also provides a visual diagram
+representation of how Related Documents are interconnected with each other.
+
+
+
+
+                                                              Requester Guide 7
+                                                                Updated 5/20/2021
+CATALOG SHOPPING
+In Vroozi Purchase, requesters are able to create both Catalog and Non-Catalog
+requisitions.
+
+TYPES OF REQUISITIONS
+   1. Catalog Requests: include both searchable Internal Catalogs and Punchout
+      Catalogs. Your organization has granted you catalog access based on
+      organizational function and in some cases region.
+   2. Non-Catalog Requests: pertain to Free Text line items for vendor products or
+      services that are not available in the catalogs.
+
+A single requisition may contain line items from multiple suppliers. In this case,
+multiple POs will be created from a single request. Any combination of goods and
+services, as well as Catalog and Non-Catalog line items can also share the same
+Request Name and Request Number.
+
+CART VS. REQUISITION
+The Cart and Request creation functionalities are two separate but related functions
+of Vroozi Purchase. The following section describes the differences between the two
+processes.
+
+Cart: The first document created in the purchasing process for Catalog purchases.
+Just like a physical shopping cart, this is a document that holds all of the items you
+would like to order until you are ready to check out.
+
+   1. You can add, remove, or edit the quantities of the items you have selected.
+
+   2. Once you are ready to check out, or submit your request, just click on ‘Move to
+      Request’ or select an existing request, where you can review it and submit for
+      approval.
+
+Request: Contains all of the information necessary for an order to be submitted and
+fulfilled by the supplier(s). Prior to submission, you can add, remove, or edit the items
+you have created or selected. Once the submitted request is approved, it becomes
+the final document that will be sent for approval and will ultimately be what the
+Purchase Order is based on.
+
+
+
+
+                                                                        Requester Guide 8
+                                                                          Updated 5/20/2021
+INTERNAL CATALOGS
+Internal Catalogs are those that are uploaded by your organization into Vroozi
+Purchase. The search bar allows you to search across multiple vendors. It does not
+allow you to specifically search across items in one catalog, but you may use the
+vendor filtering function after you have executed the search.
+
+INTERNAL CATALOG SEARCH OPTIONS
+There are several ways to search for
+items or services. (This searching
+does not include Punchout
+catalog inventory.)
+
+Search by specific details or
+keywords
+   1. Submit basic search
+   2. Select quick reference options
+   3. Select ‘Advanced Search’
+
+
+
+
+Search by Category
+   4. Select from preloaded list of categories
+   5. View results for suppliers with products or services
+      mapped to that category. You may refine search
+      results from here by selecting specific suppliers,
+      company attributes or searching by keyword.
+      (shown on next page)
+
+
+
+
+                                                                     Requester Guide 9
+                                                                       Updated 5/20/2021
+Note: The search can be a specific item ID (NON026330) or a keyword, like “gloves”
+or “Swingline Stapler.” This will search across all Internal Catalog vendors for
+available items.
+
+
+
+CREATE A REQUISITION FROM AN INTERNAL CATALOG(S)
+  1. Click ‘Add to
+     Cart’. The item
+     will be added to
+     Cart.
+
+  2. Repeat the
+     search process
+     (steps 1-3) until all
+     desired items are
+     added.
+
+  3. Once you have
+     added all of your
+     items, click the
+     Cart icon at the
+     top right of the
+
+
+
+
+                                                                  Requester Guide 10
+                                                                     Updated 5/20/2021
+   screen. The cart view will display all items in your Cart, organized by the
+   vendor.
+
+4. At the cart, you will see all items divided by supplier. From the cart you may
+   still delete items or edit the quantity. Items will remain in your cart for the
+   remainder of your shopping session. Logging out will remove cart items.
+        ● Your organization may not allow for multiple suppliers in a Requisition
+           or have specific suppliers that cannot be combined in a Requisition.
+
+5. Once you are ready to convert your cart to a requisition you have 2 options;
+   items can either be added to an existing requisition in ‘Draft’ status (shown
+   above) or created in a new requisition by selecting ‘Move to Request’. (also
+   shown above)
+      ● To add cart items to an existing draft: use the drop-down menu to
+         select from requisitions in draft status.
+
+6. Click ‘Move to Request’. You will be redirected to the Create Purchase Request
+   screen.
+
+7. The Request Name is defaulted to your name plus the Request Number—it is
+   optional, but recommended, to rename this request to something more
+   recognizable.
+
+
+
+
+8. Request Name: Defaults to the shopper’s name and the Request Number—it
+   is optional, but recommended, to input more specific information about the
+   request, i.e. “monthly office supply order,” a project reference, or vendor
+   name(s).
+
+
+
+
+                                                                    Requester Guide 11
+                                                                      Updated 5/20/2021
+   9. Requester: Defaults to the shopper’s name. If buying on behalf of someone
+      else, the actual requester’s name should be entered. Approvers will be able to
+      see that you have placed the Request on that person’s behalf.
+
+   10. Shipping Address: Verify details. See the Change Shipping Address section for
+      more information on how to change the address.
+
+   11. Supplier(s): Name listed. Field is not editable.
+
+   12. Reason for Request: Optional Field
+
+   13. Approval Group: Select (if applicable)
+
+   14. Custom Fields: Custom data fields may be set up by the Purchase
+      Administrator(s) and set at either optional or required.
+
+   15. Missing Information: Customized message identifying any required
+      information that is missing either in the line item description or the purchase
+      request fields above.
+
+   16. Line Item Overview: Review the contents of the request. Catalog-only
+      requests usually have all of the required information defaulted, so typically no
+      additional data needs to be entered by line item.
+
+   17. Approval or Supplier Notes: Input any notes for the approver or supplier. This
+      is optional.
+
+   18. Delete, Save or Submit the requisition.
+
+   19. You will receive a “request submitted” notification at the top of the screen (not
+      pictured). Once approved, you will receive a confirmation email.
+
+
+
+
+PUNCHOUT CATALOGS
+Punchout Catalogs, like Internal Catalogs can be used to add items to the cart or
+request. When using Punchouts, you are redirected away from Vroozi Purchase to
+the vendor website to search and select items. The instructions below show how to
+recognize a Punchout catalog, as well as how to use it to add items to the cart and
+proceed to request submission. Keep in mind that a supplier can be both a
+Punchout as well as an Internal Catalog within Vroozi Purchase.
+
+
+
+
+                                                                       Requester Guide 12
+                                                                         Updated 5/20/2021
+CREATE A PUNCHOUT CATALOG REQUISITION
+
+  1.   From the Homepage, locate the Punchout
+       Catalog under the Catalog Supplier area.
+
+  2.   Look at the supplier to reveal an arrow icon,
+       indicating the catalog is a Punchout catalog. If
+       the supplier only displays a book icon, then it is
+       an Internal Catalog.
+
+  3.   Click on the arrow icon of the Punchout catalog supplier. A new window will
+       pop up.
+
+   Note: You may need to disable pop-up blockers depending on your browser
+   settings.
+
+
+  4. Search for items in the vendor website and add them to the cart. Each
+       supplier environment is different and will have varying features and
+       functionalities. (not pictured)
+
+  5.   Checkout of the vendor website by clicking the “submit” or “transfer your
+       order”-type button. The exact wording of the function varies by vendor. (not
+       pictured) Your items from the Punchout will be pulled into your Cart in Vroozi
+       Purchase.
+
+  6. Once you have returned the items to your Vroozi cart the process to convert
+       the cart to a Requisition will be the same as the steps outlined in the previous
+       section covering internal catalogs.
+
+          ●   Items returning to your Vroozi cart from a punchout catalog will not
+              include the product/service image.
+
+SHIPPING CHARGES CARRY OVER FOR CXML PUNCHOUT CATALOGS
+Shipping charges can be captured from a punchout supplier’s catalog allowing
+shoppers to capture actual spend on Punchout Catalog items.
+The shipping charges will be added to the Vroozi shopping cart and then transferred
+to the Purchase Request and all subsequent related documents thereafter.
+
+
+
+
+                                                                      Requester Guide 13
+                                                                         Updated 5/20/2021
+Note: This only applies to all cXML punchout catalogs and the shipping charges
+must be included from the supplier.
+
+
+
+
+PRODUCT OR SERVICE FREE TEXT
+REQUISITIONS
+Create a requisition for items or services that are not available in the Vroozi Purchase
+catalogs. Requesters wishing to create a free text requisition should confirm with
+their supervisor/administrator that the supplier they wish to use has been added to
+the Vroozi system, as this will be required before the requisition can be completed.
+
+CREATE A FREE TEXT REQUISITION
+   1. From the Homepage, click ‘Free Text under the ‘Create’; category in the
+      navigation panel.
+
+   2. At the requisition draft, the Request Name is defaulted to your name plus the
+      Request Number—it is optional, but recommended to rename this request to
+      something more recognizable.
+
+   3. The Requester area defaults to your own name. If you are buying on behalf of
+      someone else, enter their name.
+
+
+
+
+                                                                       Requester Guide 14
+                                                                         Updated 5/20/2021
+4. Verify the defaulted Shipping Address. See the Change Shipping Address
+   section for more information on how to change the address.
+
+5. Enter the Reason for Request. This is optional.
+
+6. Scroll down to reveal the Line Item Overview.
+
+7. Click 'Add Line Item'. The line items details screen will pop up to be completed.
+
+      ●   Information is divided into 2 tabs; ‘General Information’ and ‘Custom
+          Fields’
+
+               ➢     Custom Fields will contain any custom fields required or
+                optional at the requisition level.
+
+8. The Show Optional Fields box can be left unchecked. You have the ability to
+   check this box to reveal
+   additional data such as the line
+   item Long Text and Product ID
+   fields.
+
+9. Input the required ‘General
+   Information’. The exact options
+   may vary based on your
+   organization’s protocols and
+   administrative configurations.
+
+      Type: The Line Item Type is either a Product, Service, Blanket or Invoice
+      Plan. You may create mixed service and product requests, but Blanket and
+      Invoice Plan line items may not be mixed with any other Type.
+
+      Category: This lists all the preset options for your organization. Start typing
+      in the first digit of the Category or Category description and make the
+      selection using the drop-down menu. Choose the Category that best fits
+      what you are ordering.
+
+      Description: Type in the description of the product or service being
+      requested.
+
+      Unit/Service Price: Input the value of the product or service, leaving off
+      special characters like “$” and commas. Decimal points are OK.
+
+      Currency: This area is defaulted but can be updated if your organization’s
+      Administrator has configured other Currency options for use.
+
+
+
+
+                                                                   Requester Guide 15
+                                                                      Updated 5/20/2021
+     Quantity: The amount of the product or service to be used.
+
+     UoM: The unit of measure is defaulted to each (EA) for products, and
+     Activity Unit (AU) for Services, Blanket, and Invoice Plans. This drop down
+     can be changed manually if needed.
+
+     Recommended Supplier: The supplier you recommend being used—start
+     typing either the Vendor ID number or Vendor Name. You must make a
+     selection from the drop-down menu, as this area does not accept free text.
+     If you cannot find the supplier you are looking for, contact your company’s
+     internal Vroozi Purchase Administrator for assistance.
+
+     Delivery Date/Service Period: For products, this is defaulted by your
+     organization’s Administrator for 30 days in the future, which does not need
+     to be changed. For services or Blanket Requests, select a Service Period
+     using the calendar function. It is OK for the Date Range to be an educated
+     guess of when a project or service will be taking place and doesn’t have to
+     be perfect.
+
+10. Accounting
+
+     Split Account Assignment: Splitting the Account Assignment is optional
+     to use when required for the Request. Choose how to split your Account
+     Assignment—choices include None, by Quantity, by Value, and by Percent.
+     If split, the fields will update and require more information based on your
+     selection. See Split Accounting section for further details.
+
+     Account Category: This will default to the Cost Object designated by your
+     company’s Administrator. Your selection will update the following
+     drop-down menu to reflect your choice.
+
+     Cost Object: This selection automatically populates to your default Cost
+     Object but will vary based on your selection of the Account Category. The
+     Cost Object drop down can be updated by choosing the options on the
+     drop-down menu.
+
+     G/L Account: If this is required by your organization, start typing the first
+     few characters of the General Ledger Account number or description to
+     reveal a drop-down list provided by your organization. Make the
+     appropriate selection using the drop-down menu. If you don’t know what
+     GL Account to choose, contact your finance team.
+
+     All of your Company Info is defaulted for you but can be updated if needed.
+
+
+
+
+                                                                  Requester Guide 16
+                                                                     Updated 5/20/2021
+   11. Select delivery address. (Requester addresses set by administrator)
+
+   12. Update the following required tax information (if needed):
+          ●   Tax Code: The Tax Code will automatically default, but you are able to
+              make changes when necessary.
+
+          ●   Tax Value: No value needs to be entered in this area. If your instance of
+              Vroozi Purchase is integrated with an external ERP system like SAP, the
+              Tax Value will be calculated there.
+
+   13. Click 'Save Item'. Your line item will be saved and reflected in the line item
+      overview.
+
+   14. Repeat steps 7-13 until you have all the Free Text Line Items you need in the
+      request or use the duplicate function. See the Duplicate Line Item section for
+      more information.
+
+   15. There may or may not be a notification prompting you to add an attachment
+      at the line item or header level. Click ‘Add Attachment’ and select a saved file
+      off of your computer as supporting documentation. The system accepts most
+      major file formats up to 100MB each.
+
+   16. Input any notes for the Approver or Supplier. This is optional.
+
+   17. ‘Submit ’.
+
+   18. A blue “request submitted” notification appearing in the bottom left corner of
+      the screen will notify of a successfully submitted request. You will receive an
+      email notification of the Requisition status of approval or rejection.
+
+CREATE A BLANKET (LIMIT) REQUEST
+A Blanket or “Limit” Request is a type of Non-Catalog Free Text request that consists
+of items of services that will be delivered over a period of time. Multiple invoices will
+be submitted by the supplier against the PO. The PO will remain open until the
+Order Value has been reached. Blanket POs do not require goods receipt.
+    1. From the Homepage, click ‘Create’ on the blue navigation bar to create a
+       Requsition draft.
+
+   2. Fill out request details as you would for other requests; Updating defaulted
+      information and fill out incomplete fields. Click 'Add Line Item'. The line item
+      details screen will pop up to be completed.
+
+
+
+
+                                                                         Requester Guide 17
+                                                                           Updated 5/20/2021
+   3. Input the required General Information: Additional details are required for the
+      completion of the Blanket item:
+        ● Order Value (see image next page)
+        ● Expected Value: must be
+           equal or less than Order
+           Value.
+        ● Validity Period
+
+   4. Click 'Save Item'. Your line item
+      will be saved and reflected in the
+      line item overview.
+
+   5. There may or may not be a
+      notification prompting you to
+      add an attachment at the line
+      item or header level. Click ‘Add
+      Attachment’ and select a saved
+      file off of your computer as
+      supporting documentation. The
+      system accepts most major file formats up to 100MB each.
+
+   6. Input any notes for the Approver or Supplier. This is optional.
+
+   7. Click ‘Submit Request’.
+
+ Note: Like Invoice Plans, you may only enter a single Blanket Line item per request,
+ so don’t try to add more than one!
+
+CREATE AN INVOICE PLAN REQUEST (ONLY APPLICABLE FOR SAP USERS)
+An Invoice Plan is an automatic scheduled payment of the same amounts where an
+invoice is then not required. Payment is automatically sent to the supplier.
+           ● Only compatible with SAP integration.
+           ● Only 1 invoice plan can be added to the requisition..
+   1. From the Homepage, click the ‘Create’ category on the blue navigation bar.
+       The Create a Request page will appear.
+
+   2. Fill out request details as you would for other requests; Updating defaulted
+      information and fill out incomplete fields. Click 'Add Line Item'. The line items
+      details screen will pop up to be completed.
+
+
+
+
+                                                                        Requester Guide 18
+                                                                          Updated 5/20/2021
+  3. Input the required General Information:
+
+  4. Click 'Save Item'. Your line item will be saved and reflected in the line item
+
+  5. There may or may not be a notification prompting you to add an attachment
+     at the line item or header level. Click 'Add Attachment' and select a saved file
+     off of your computer as supporting documentation. The system accepts most
+     major file formats up to 100MB each.
+
+  6. Input any notes for the Approver or Supplier. This is optional.
+
+  7. Click 'Submit Request'.
+
+  8. You will receive a “request submitted” notification at the top of the screen (not
+     pictured). Once approved, you will receive a confirmation email.
+
+
+
+
+MODIFY REQUEST DETAILS
+LINE ITEM FUNCTIONS & ANATOMY
+  1. Line Item Checkboxes: Used in correspondence with the Apply to All
+     Function. (see #10 for full description)
+
+  2. Part Number: Where the Part Number appears for Catalog Items. The
+     Requester is able to manually input the Part Number for Non-Catalog Free
+     Text Request Line Items by clicking into the Line Item Details and updating
+     this information. Part Numbers are required for any Line Item that will be
+     electronically transmitted from Vroozi Purchase to the vendor.
+
+
+
+
+  3. Quantity: Where the Requester can review and update the Line Item Quantity
+     before Request submission.
+
+  4. Trash Can Icon: Click the Trash Can to delete a specific Line Item.
+
+  5. Paper Icon: This is the Duplicate Line Item function.
+
+
+
+                                                                       Requester Guide 19
+                                                                         Updated 5/20/2021
+   6. Paperclip Icon: Use this to add an attachment to a specific Line Item. If
+      adding an attachment for the entire Request, it is recommended to add
+      attachments at the header level. (see #9 for Header Level Attachments)
+
+   7. Add Line Item: See section on how to add line item.
+
+   8. Upload Line Items: Requesters can bulk line items by using this function. An
+      item template can be completed instead of searching or creating items
+      manually. See the Item Upload section for more information.
+
+   9. Add Attachment (at the Header Level): The 'Add Attachment' button allows
+      users to attach supporting documentation at the Header Level. This is in
+      contrast to the Paperclip Icon, which uploads attachments by individual line
+      item.
+
+          ●   Purchase Orders will inherit the attachments associated with the
+              approved Requisition and individual line items within the document.
+              Administrators can control if they want these attachments sent with
+              the PO to the applicable Supplier(s).
+
+
+
+
+   10. Apply to All: Requesters have the ability to apply Line Item Details from one
+      item to other items within the same Request. This includes Accounting and
+      Tax information. See ‘Apply to All’ section for further details.
+
+
+
+
+CREATE A BULK ITEM UPLOAD
+REQUISITION
+Vroozi Purchase allows Requesters to create requisitions using the Bulk Item Upload
+feature directly from the ‘Create’ category. This is particularly useful when there is a
+
+
+
+
+                                                                       Requester Guide 20
+                                                                          Updated 5/20/2021
+Request with several dozens of Line Items, as it is an alternative to creating or
+searching for Line Items one at a time.
+   1. Start the process by downloading the Excel Bulk Item Upload Template in the
+      Vroozi HelpDesk.
+
+          ●   Examples of Line Items are available on the template, however, make
+              sure to delete these out when preparing your template.
+
+
+
+
+   2. Fill out the template information into the spreadsheet and save it to your
+      computer.
+
+   3. Once completed, log into Vroozi Purchase.
+
+   4. Click ‘Create’ from the blue navigation bar. (not pictured)
+
+   5. Review and update the Purchase Request information at the top, like Request
+      Name and Shipping Address if needed.
+
+   6. Click ‘Upload Line Item(s)’.
+
+   7. Follow your computer’s prompts to select the Line Item template that you
+      completed beforehand. Your Line Items will automatically be uploaded.
+
+   8. If there is any required information that is missing, the system will provide
+      notifications in red of what needs attention. These messages vary. Once the
+      items listed are addressed, continue to step #10.
+
+   9. Review your uploaded line items for accuracy.
+
+   10. Add any Approver or Supplier Notes. This is optional.
+
+   11. Click ‘Submit’.
+
+TRACK BULK UPLOAD PROGRESS
+Line item bulk upload files can be uploaded to a PR via the Bulk Upload function or
+via the standard Create/Edit Purchase Request screen. In either case, the file is
+
+
+
+                                                                      Requester Guide 21
+                                                                         Updated 5/20/2021
+processed synchronously, in the background.
+Allowing the user to continue utilizing the
+application regardless of the size of the file
+being uploaded.
+Users will see a new file progress tracker that
+remains visible to the user no matter which
+screen they are on, allowing them to monitor the progress of any number of files
+processing.
+The newly updated PR can also be uploaded PR from the tracker. Users will be able
+to access the newly created or updated PRs
+from this tracker, as well as any PDF error
+reports generated by any of their uploaded files.
+
+View Errors
+If errors occur in the upload, users can click the
+error message in the tracker to view the PDF
+error report generated by the system.
+
+
+
+
+CATALOG LISTS
+Catalog Lists are an optional function in Vroozi Purchase that help make it fast and
+easy to add frequently ordered Internal Catalog items to a request. If you add the
+same items to the request on a regular basis, you may want to take the time to
+create your List and utilize this feature. This chapter describes how to create an
+Internal Catalog List, and how to use them to create requisitions.
+
+CREATE A LIST
+   1. From the Homepage, click ‘Lists’ to reveal a
+      drop down of previously created lists.
+      (Example below shows a ‘Favorites’ list) or
+      ‘new list’ options.
+
+   2. Click ‘new list’. The new list that you created has a default name of My List.
+
+   3. You can change the name of your list by simply clicking My List text area and
+      typing in the name of your new List. (i.e. Office Supplies, Weekly Snack Order,
+      Phone Accessories)
+
+   4. Click the blue ‘Get started here!’ link to add items to your list.
+
+
+
+                                                                           Requester Guide 22
+                                                                              Updated 5/20/2021
+   5. Search for the item you would like to add to the list using the Search Bar.
+
+   6. Click the yellow star icon next to the item description to reveal a drop-down
+       menu.
+
+
+
+
+   7. Select the name of the List you would like to add it to. The item will be added
+       to your List.
+
+   8. Repeat steps 6-8 to add more items to the List.
+
+ADD LINE ITEMS TO A REQUEST USING LISTS
+If you have not created your list yet, refer to the Create a Catalog List section first.
+    1. From the Homepage, click ‘Lists’ to reveal a drop down of options.
+
+   2. Click on the Name of the List you would like to select items or services from.
+
+   3. Your List will be displayed. Here, you have the opportunity to remove or
+      change the item quantities before moving them into a Request.
+
+   4. After making the necessary amendments, review your subtotal and select
+      whether you would like to Create a New Request, or add the items to an
+      existing Draft Request using the drop-down menu.
+
+   5. Click 'Move to Request'.
+
+LIST ITEM UPDATES
+If an item in a Requester's List is updated
+(via administrator or supplier user update)
+that item will be highlighted in the
+favorites list with a message notifying of
+the update. If the item still exists in the
+catalog, then the requester must go to the
+item listing and re-add.
+
+
+
+
+                                                                         Requester Guide 23
+                                                                            Updated 5/20/2021
+REQUISITION CREATION TIPS &
+FEATURES
+SCHEDULE SUBMISSION OF A PR
+If enabled at the administrative level, employees will have the
+ability to schedule the automatic submission of their Purchase
+Requests at a date & time in the future. This schedule can be
+defined for a PR from either bulk upload creation screen or the
+standard Create/Edit Purchase Request screen.
+   1. Set Date, Time and Time Zone.
+          ●   Date: Schedule 24 hours to 1 year in advance.
+          ●   Time: Set specific hour and minutes
+          ●   Time Zone: All time zones available
+   2. Select ‘Confirm Schedule’
+   3. A notification will appear confirming the PR has been successfully scheduled.
+
+
+
+   4. Based on a defined schedule of a PR, the system will automatically process
+      and submit the PR in the background at the correct time. The requester will
+      receive an email confirmation that the PR has been created & submitted.
+
+
+Note: If a user does not wish to schedule PR submission they can simply select
+‘Submit’ at the PR creation page to immediately submit.
+
+DUPLICATE (COPY) A LINE ITEM
+This section describes how to use the duplicate function as an alternative to ‘Add
+Line Item’ when adding line items to a request. The copy functionality is applicable
+for both Free Text, Non-Catalog and Catalog Line Items. If you would like to start
+from the request process from the Homepage, refer to additional sections of the
+Create a Request chapter.
+    1. From the Create a Request screen, find the line item you would like to
+       duplicate, and click the copy (paper) icon on the right. Your line item will be
+       duplicated.
+
+
+
+
+                                                                      Requester Guide 24
+                                                                          Updated 5/20/2021
+   2. To update the information like Description, Accounting, and Quantity, click on
+      the linked Description of the line item.
+   3. The Line Item Detail screen will open up. Make the necessary changes to the
+      Line Item. (not pictured)
+   4. Click 'Save Item'. (not pictured) Your updates will reflect in the Line Item
+      Overview like the example below.
+
+DELETE A LINE ITEM
+In the Line Item Overview area, you have the ability to remove items from the
+purchase request. This section addresses how to delete a line item from the Create
+Purchase Request screen, after line items have already been selected or created. If
+you would like to start the request process from the
+Homepage, refer to prior sections of the Create a
+Request chapter.
+    1. Identify the item that you would like to delete.
+    2. Click the trash can icon. The item will be
+       removed from your Request.
+    3. A pop up will appear asking if you are sure you
+       would like to delete the item. Click the ‘Yes,
+       Remove Line Item!’ to accept. The item will be
+       removed.
+
+ADD SHOPPING CART ITEMS TO AN EXISTING DRAFT
+From your shopping cart you have the ability to add line items to the Purchase
+Request after other line items have already been selected. If you would like to start a
+new Request from the Homepage, refer to other Create a Request sections
+available.
+   1. From the Create Purchase Request screen, enter your search term, and click
+       the magnifying glass icon to execute the search.
+   2. Locate the item and amend the Quantity if needed.
+   3. Click 'Add to Cart'.
+   4. Continue searching for and adding items to the Cart until you have everything
+       you need from the Internal Catalogs. (not pictured)
+   5. Click the Cart icon.
+   6. Review the contents of your Cart.
+   7. Use the drop-down menu to find the request you would like to add the items
+       to.
+
+
+
+
+                                                                     Requester Guide 25
+                                                                        Updated 5/20/2021
+   8. Click ‘Move to Request’. The line items will be added to your request.
+   9. Continue with the submission of your request (not pictured). For more
+      detailed instructions of how to do this, refer to additional Create a Request
+      sections.
+
+ADD A FREE TEXT LINE ITEM
+While in the Create Purchase Request screen, you have the ability to add Line Items
+to an existing Purchase Request. If you would like to start a new Free Text Request
+from the Homepage, refer to the various Create a Free Text Request sections
+available.
+    1. From the Purchase Requisition
+       draft, select ‘Add Line Item'. The Line
+       Item Details screen will pop up to be
+       completed. See the Free Text
+       Requisition section for further
+       details on completion of each field.
+    2. The ‘Show Optional Fields’ box can be left unchecked. You have the ability to
+       check this box to reveal additional data such as the line item Long Text and
+       Product ID fields depending on your organization’s specific Vroozi Purchase
+       configurations.
+
+EDIT SHIPPING ADDRESS
+Global permission allowing Requesters to edit ‘Shipping Address’ is set by your Vroozi
+Administrator. The features defined in this section only apply to organizations with
+address editing enabled.
+
+The Shipping Address for all Requests is defaulted based on your set Profile
+Information. However, this information can be updated on a request by request
+basis.
+
+
+
+
+                                                                     Requester Guide 26
+                                                                        Updated 5/20/2021
+   1. From the Create Purchase Request screen, click the ‘Pencil Edit’ icon next to
+      the shipping address. The Edit Address window will pop up prompting you to
+      fill out new address information.
+   2. Fill out all required fields.
+   3. Once the address has been updated, slide the Update Address function from
+      “off” to “on”.
+   4. Click ‘Save Address’.
+   5. You will be returned to the Create Purchase Request screen with your new
+      address information populated on the Request. (not pictured)
+
+APPLY TO ALL FUNCTION
+Edit accounting information for more than one line item at a time by following the
+steps outlined below.
+   1. Select the Line Items you would like to update with the same information by
+       checking the boxes next to them.
+   2. Click the box in the line item description header or once one item is selected
+       click 'Apply to All' to apply any changes to all items.
+
+
+
+
+   3. Fill out the appropriate information. Not all of the options need to be selected
+      in order to proceed to the next step.
+
+
+
+
+   4. Click 'Apply Changes'. You will be returned to the Line Item Overview and your
+      Line Items will be updated.
+
+
+ Note: Depending on the vendor and item, you may need to enter additional
+ required information for each Line Item before you are able to submit your
+ Request above and beyond what was selected while using Apply All. Vroozi
+
+
+
+
+                                                                     Requester Guide 27
+                                                                        Updated 5/20/2021
+ Purchase will provide a message if any minimum information requirements have
+ not been met.
+
+SPLIT ACCOUNT ASSIGNMENT
+Use split accounting to share the cost of an item among multiple accounting groups.
+For Requesters with the permission to edit line items (assigned by your
+administrator), the ability to split the accounting will be available.
+   1. From the Purchase Request draft, locate the item you would like to update
+      and click on the linked item Description.
+   2. Scroll down to the Accounting section.
+   3. Choose how to split the Account Assignment—by Quantity, by Value or by
+      Percent.
+
+
+
+
+   4. Choose an Account Category (i.e. Cost Center) from the drop-down menu. The
+      Cost Object options will automatically update based on your selection. (Image
+      below shows the Split Account
+      assignment by Quantity.)
+   5. Choose the corresponding Cost
+      Object.
+   6. Enter your Quantity, Value or
+      Percent for the first part of your
+      Accounting Split.
+   7. Input the split information for
+      the second Account Category.
+   8. If more than two splits are
+      needed, click the + button and
+      continue filling out the relevant
+      information for each until
+      completed.
+   9. Scroll down and click the Save button to update the Line Item. (not pictured)
+
+
+
+
+                                                                  Requester Guide 28
+                                                                     Updated 5/20/2021
+PURCHASE REQUESTS
+A Requester is able to view any Request they have created by navigating to the
+Purchase Requests category in the Navigation Panel. Here Requests are organized
+into 4 categories; Drafts, Pending, Approved and Attention (rejected) Requests.
+
+Click on the desired status column to display a historical list of Requisitions. (The
+Pending tab has been selected in the image below.)
+
+
+
+
+To view the details or initiate an action on a PO, click the linked ‘Request Number’
+DUPLICATE (COPY) A REQUEST
+Once a Request has been approved, you have the ability to duplicate, or “copy” this
+request and submit it as a new Request for approval. This function is time-saving for
+large recurring orders because you do not have to search for the line items again.
+Once copied, you are able to add or delete Line Items to tailor the request to your
+needs at that time.
+
+Pending and approved Requests with line items from internal catalogs may be
+copied, and the system will validate the pricing before submission. However,
+Punchout catalog line items cannot be copied because the price checking function
+is not available for external websites.
+
+For more detailed information about how to complete purchase requests after the
+duplication process, see previous Create’ sections.
+
+   1. First, you must locate the approved request to duplicate. From the
+      Homepage, select ‘Purchase Requests’ from the navigation panel.
+
+   2. From this page, you are able to view your requests by status. Click on
+      ‘Approved’ or ‘Pending’ requests.
+
+   3. Locate
+      the
+      request
+
+
+
+
+                                                                        Requester Guide 29
+                                                                           Updated 5/20/2021
+      you would like to copy and click the ‘Duplicate Request’ icon (stacked papers
+      on the right side) to begin the process. You may preview this request
+      beforehand by clicking into the linked ‘Request Number’.
+
+   4. Alternatively you may copy a requisition from the requisition view by clicking
+      Copy. (shown below)
+
+
+
+
+   5. A new requisition with a new unique document number will be created with
+      the same items and Accounting and Tax information as defined in the original
+      request. (not pictured)
+
+   6. Verify the correctness of the new Purchase Request and update the
+      information if needed.
+
+   7. You are able to customize your newly copied Request using the available
+      functions within the request like adding or removing line items, updating
+      quantities, adding attachments, and updating the accounting sections. See
+      the Create a Request sections for more details.
+
+   8. Once the data and notes for the copied request are updated and verified,
+      save’ the request or ‘Submit’ for approval. (not pictured)
+
+RESUBMIT A REJECTED REQUEST
+At the administrative level, your organization may configure the Vroozi system to
+allow Requesters the ability to directly edit and resubmit a Requisition that has been
+rejected. If your organization does not allow for resubmittance of requisitions, see the
+Copy (Duplicate)
+Request section as an
+alternative method of
+
+
+
+
+                                                                      Requester Guide 30
+                                                                         Updated 5/20/2021
+re-submitting a Request for approval.
+
+When a Request is rejected, you will be notified via email. The Request will be in the
+Attention status tab for you to review and take action to edit and submit it again to
+your approver(s).
+
+   1. Click the Attention (rejected) Requests.
+
+   2. To drill down into Request Details, click the linked Request Number.
+
+   3. Review the Notes from Approver to see why the Request was rejected and if it
+      needs to be amended and re-submitted for approval.
+
+      Note: If there aren’t any new notes or attachments from the approver, it is
+      recommended that you email or call the approver who rejected your Request
+      to find out the reason for rejection.
+
+
+
+   4. Make any necessary changes to the Request. This could be a Quantity change,
+      adding or removing Line Items, or attaching relevant documents for example.
+
+   5. Add any Notes for the Approver if needed by clicking ‘Add Note’. Enter any
+      comments and click the green ‘Save Note’. (not pictured)
+
+   6. Scroll down to the bottom and click 'Submit Request'. (not pictured) The
+      Request will now be classified as Pending if it is above the auto-approval
+      threshold. You will receive an email notification once it has been approved (or
+      rejected again).
+
+
+
+
+APPROVAL STATUS
+Based on configurations defined by your administrator. Based on each individual’s
+spend threshold, requisitions after submission may go through a series of approvals.
+
+Before or after
+submitting a requisition
+you can view the
+approval workflow by
+clicking ‘Approval Status’
+
+
+
+                                                                      Requester Guide 31
+                                                                         Updated 5/20/2021
+(shown on right) on the Requisition.
+
+Once clicked all approvers will be revealed. (shown below) If approval review has
+been completed by any listed approvers, the date and time
+of their response will be notated.
+Once your Requisition has completed any applicable
+approval workflow, an email notification will confirm
+approval.
+
+
+
+
+`
+Similarly rejected Requisitions will trigger an email notification. The email
+notification will include who rejected the requisition and if available will include the
+rejection notes provided by the Approver.
+
+
+
+
+                                                                       Requester Guide 32
+                                                                           Updated 5/20/2021
+Requester Guide 33
+   Updated 5/20/2021
+PURCHASE ORDERS
+A Requester is able to view all their Purchase Order by navigating to the Purchase
+Orders category. Here, POs are able to be searched, filtered and viewed.
+
+   1. Select ‘Purchase Orders’ in the navigation panel.
+
+   2. From here you will be able to view the repository of all your POs. Use the
+      Search bar to search by Accounting elements, Request Name, Status, Supplier,
+      etc. (shown on right)
+
+   3. Click any of the arrows to
+      organize by PO Number, PO
+      Creation Date, Supplier,
+      Request Number or
+      ‘Purchase Orders’ by
+      ascending or descending
+      order. POs are automatically
+      organized from oldest to
+      newest.
+
+   4. To drill down into PO Details, click the linked PO Number for more
+      information.
+
+   5. The corresponding Purchasing Parties, Supplier, Payment, Communications,
+      and Related Document data can be viewed by clicking the icons on the right
+      side of the page.
+
+   6. There is also an option to Print or save it as a print-friendly document.
+
+   7. If the PO has been Ordered, a Goods Receipt can be created directly from this
+      page by clicking on the circular blue icon docked on the bottom right of the
+      page.
+
+
+
+
+                                                                      Requester Guide 34
+                                                                         Updated 5/20/2021
+PURCHASE ORDER NAVIGATION
+   1. Click the print icon to print the PO or save as a PDF
+
+   2. Basic Buyer and Supplier details shown.
+
+   3. Quick reference
+      status icon.
+
+   4. Navigation
+      icons to add
+      comments, view
+      PO history,
+      supplier and
+      payment
+      details, record
+      notes and view
+      related
+      documents.
+      (more on
+      comments in next section)
+
+   5. Line Items. Click the description to view specific details.
+
+   6. Create a PO Change Request (as defined by your administrator)
+
+DOCUMENT NAVIGATION
+The Document Navigation bar is available
+within any submitted Requisition through to
+Invoice.
+
+Here you can access the history of the
+document. Which includes various
+communication channels and history
+through different looks.
+
+Add Comments to a PO
+An optional ‘Comment’ icon can be accessed at the top of the navigation icons on
+the right side of a PO or Invoice, allowing any user with access to the document to
+communicate internally with other users in the application.
+   ● Comments field expands to view or ‘Add comments
+
+
+
+
+                                                                     Requester Guide 35
+                                                                        Updated 5/20/2021
+●   Comments will be viewable by all users with access to the document. To
+    specifically notify a user(s), type @ to retrieve a list of users to tag in the
+    comment.
+
+
+
+
+●   Any user(s) tagged will receive an email notification of a ‘Comment’ (See
+    below)
+
+
+
+
+Purchase Order History
+   View the history of the document including user
+   names, action taken with date & time stamps.
+
+Purchasing Parties
+   View Requester, Buyer, Company Code and
+   Supplier details.
+
+Supplier
+  Access Supplier contact information
+
+
+
+
+                                                                       Requester Guide 36
+                                                                          Updated 5/20/2021
+   View Payment History
+      View invoice history (if it exists)
+
+   Notes
+     View history of Notes that have been added to each transactional document
+     in the flow. This may include notes from requester, buyer, (approvers), AP team
+     members & the supplier.
+
+   Related Documents
+      View Purchase Requests, Shipment notice, Invoices, Receipts & Returns. Click
+      the hyperlinked document number to access the referenced document
+      directly. (shown on right)
+
+
+Note: Any fields without data can be selected but will appear in a light gray color.
+Example on previous page shows a PO that has not yet been paid therefore the
+Payment Icon appears in a lighter color. (shown below)
+
+
+
+RESPONDING TO A DISPUTED OR CONFIRMED PURCHASE ORDER
+Based on the communication standards set by each supplier, you may receive PO
+status updates from a supplier that includes confirmation or dispute of each line
+item.
+
+What if an item is confirmed?
+This means that the supplier has accepted the quantity, price and delivery date of
+the item as listed in the PO.
+
+What if an item is confirmed?
+Based on the type of PO Change Request permissions available, you may choose to
+remove the Disputed PO
+item(s) and add a
+replacement item.
+
+If the item has been
+disputed based on the
+delay in shipment, you may choose to leave the PO as is and wait to receive the
+items. If the item has been disputed based on a price change, you (if POCR is
+enabled) may change the price.
+
+Changes made to the PO may send that document back through financial and/or
+sourcing approval reviews following your organizations workflow configuration. Once
+
+
+
+
+                                                                     Requester Guide 37
+                                                                        Updated 5/20/2021
+approved, all of the PO changes will result in the transmission of an updated PO to
+the supplier, which will again be confirmed or disputed by the supplier.
+
+Outside of POCR actions, Requesters could choose to create a new PO with
+alternative items or services.
+
+
+
+
+GOODS RECEIPT
+A Goods Receipt is a document that is issued to acknowledge the receipt of items
+received from external vendors.
+
+CREATE A GOODS RECEIPT
+After catalog products or products & services are delivered to you, verify the
+completeness of your order and create a Goods Receipt. This section describes how
+to create a Goods Receipt when all products and mixed requests are delivered as
+expected, without issue.
+
+From the Homepage, click ‘Receipts’ from your Requester panel. Your view will
+default to the ‘Ready to Receive’ tab listing all POs awaiting the completion of a
+goods receipt. Any POs that do require a goods receipt will not be listed in this tab.
+Please see your administrator for specific information of the Goods receipt
+requirements for your organization.
+
+   1. Locate the PO Number you would like to receive. Next to it, click the truck
+      icon. Once selected, the Create Goods Receipt view will open.
+
+
+
+
+   2. From the Goods Receipt draft, review the line item quantities and compare to
+      what has been received. If all items have been received click ‘Receive all’.
+      (shown on next page)
+
+   3. If some items have been received, enter the specific number of received items
+      in the Quantity Received field. Once submitted, this action will create a
+      parietal goods receipt and the PO will remain in the ‘Ready to Receive tab
+
+
+
+
+                                                                       Requester Guide 38
+                                                                          Updated 5/20/2021
+   until all items have been received. POs in this status will be indicated with a
+   pie icon as shown in the next section.
+
+4. If the item(s) were received prior to receipt creation click into the ‘Actual Del.
+   Date’ of the line item to select the appropriate date in the delivery calendar.
+   Unless updated the delivery date will default to the date the receipt draft was
+   originally created.
+
+5. Enter the Bill of Lading and/or Packing Slip information. If needed, add any
+   Comments to the Goods Receipt. These fields are optional.
+
+
+
+
+6. Click ‘Confirm Receipt’. Once completed, the Goods Receipt will be relocated
+   to the ‘Ready to Receive’ tab within ‘Receipt Status.
+
+
+
+
+                                                                     Requester Guide 39
+                                                                        Updated 5/20/2021
+CREATE A GOODS RECEIPT FOR PARTIAL DELIVERY (1/2)
+As outlined in the previous section, a partial receipt of goods can be completed. For
+many organizations it is a best practice to receive items as they come in rather than
+waiting until all have arrived, making the partial receipt process a frequent
+occurrence.
+
+To get started follow steps 1 and 2 outlined in the previous section. At Step 3 enter
+the specific quantities received. Once you have completed any packing slip
+information, added comments or updated actual date of delivery, complete the
+partial receipt by selecting ‘Confirm Receipt.’
+
+A pop up window will prompt confirmation that you would in fact like to submit the
+partial Goods Receipt. Click ‘Yes, Create!’.
+
+
+
+
+Note: If the non-received items will never be received due to discontinuation or
+reasons. Select ‘Close PO for Receiving’. This will remove any further receipt
+requirements for items related to the particular PO.
+
+The Goods Receipt document will be recorded in the Received status tab historical
+data. The dollar amount for this Goods receipt will only display the value of the
+received items.
+
+
+
+
+The PO will also remain in the ’Ready to Receive’ tab with a Pie icon next to the
+delivery truck icon. (shown below) This indicates that some but not all items have
+been received.
+
+
+
+
+                                                                      Requester Guide 40
+                                                                          Updated 5/20/2021
+CREATE A SUBSEQUENT PARTIAL GOODS RECEIPT (2/2)
+After a partial Goods Receipt is executed, the document remains in the Ready to
+Receive status. When the remaining products are delivered, a Subsequent Partial
+Goods Receipt will need to be entered in the system. This may need to happen more
+than once until fulfillment.
+
+Repeat all steps as defined in Part 1. Once all items are fulfilled the PO will
+completely move to the ‘Received tab.’
+
+SERVICE RECEIPTS WITH 1-CLICK CONFIRMATION
+If enabled by your administrator any
+recipients of a Missing Service Receipt
+email notification can generate a ‘Service
+Receipt’ with ‘1 click’ directly from that
+email.
+
+   ●   The Service Receipt specification will
+       appear at the top of the email. To
+       take action recipients can simply
+       click ‘Confirm Invoice’. (image on
+       next page)
+
+
+
+
+GOODS RECEIPT CREATED FROM AN
+ASN
+(Only applicable for buying organizations using the Supplier Portal.)
+
+Advanced Shipment Notices can be submitted through the Supplier portal by the
+supplier user who creates it against a Purchase Order.
+
+Upon Shipment Notice submission, the PO Requester receives email notification of
+
+
+
+
+                                                                         Requester Guide 41
+                                                                            Updated 5/20/2021
+the ASN containing details of the Purchase Order shipment.
+
+PO Requester can create a Goods Receipt directly from Shipment Notices
+
+
+
+CREATE A GOODS RETURN AGAINST AN ‘INVOICED’ PO
+Vroozi supports the complexity of reinvoicing (rebilling) processes with your
+suppliers. If enabled at the administrative level, Requesters will have the ability to
+create a Goods Return for an item which has already been ‘Invoiced’ in the system in
+order to initiate the re invoicing process. Previously the option to return items was
+removed from the Goods Receipt view once the associated PO was in ‘Invoiced’
+status.
+
+Workflow
+When a PO is allowed to be
+reopened post invoicing by
+Requesters/Buyers the Goods
+Receipt status will either be,
+‘Confirmed’, ‘Shipped’ or ‘Ordered’.
+The change of status from
+‘Invoiced’ back to one of these
+statuses opens the PO for returns
+and then if necessary
+receiving.When a Goods Return is
+created for the item(s), the PO and Goods Receipt statuses will change back to the
+status they retained prior to the Goods Return creation; ‘Confirmed’, ‘Shipped’ or
+‘Ordered’.
+
+In the example on the next page, the PO and Goods Receipt status changed back to
+‘Confirmed’ once the return was documented in the system.
+
+
+
+
+                                                                     Requester Guide 42
+                                                                        Updated 5/20/2021
+The change in PO status allows your Accounts Payable team to create an Invoice
+against the PO in the event the supplier sends an updated invoice per their
+return/exchange process.
+
+When or if the returned/replaced, PO items are again received, the Requester/Buyer
+has the ability to again confirm receipt of goods for the items in ‘Ordered’ status. As
+shown on the previous page,
+the PO view will again display
+the options to ‘Create
+Receipt’ or ‘Close for
+Receiving’. Requesters
+should select ‘Close for
+receiving’ if the items
+returned post invoice will
+never be replaced by the supplier.
+
+
+
+
+GOODS RETURN
+If you need to return a product that was delivered for any reason, you must first
+create a Goods Receipt for those items. Only after the products have been received,
+can a return be documented in Vroozi Purchase. Any return documentation
+recorded in Vroozi does not trigger communication to the supplier. With this in
+mind, you should reach out to the supplier directly following any supplier or
+organization specific processes for initiating the return.
+
+The steps for
+documenting a
+Good Return
+are as follows:
+
+   1. From the
+      ‘Receipts’ category, select the ‘Received’ tab. This is the repository of all POs
+      with completely or partially received items.
+
+   2. Access the completed goods receipt in the ‘Received’ tab.
+
+   3. Find the applicable Goods Receipt or PO number. In the right column click
+      the action arrow. (shown below)
+
+
+
+
+                                                                        Requester Guide 43
+                                                                           Updated 5/20/2021
+   4. This will generate the Goods Receipt Return draft. There are 2 required fields
+      on this draft.
+
+         ●   ‘Quantity Returned’ and ‘Reason for Return’. (shown below)
+
+
+
+
+   5. The RMA or Packing Slip information, and comments fields are optional.
+
+   6. Complete the Return form by selecting ‘Confirm Goods Returned’.
+         ●   A pop up will ask you to reconfirm the return of goods. Select ‘Yes
+             Create’. (shown below)
+
+
+
+
+   `
+Success! You have completed the documentation of your goods return. The goods
+return document may be accessed under the ‘Returned’ tab with it’s own unique
+number. The new status of this document will be ‘Confirmed’.
+
+
+
+
+A return can also be viewed in the Related Documents section of the navigation bar
+found in the related PO, Goods Receipt or Invoice.
+
+
+
+
+                                                                     Requester Guide 44
+                                                                        Updated 5/20/2021
+PURCHASE ORDER CHANGE REQUEST
+(POCR)
+The POCR functionality allows a range of modifications to be made to a Purchase
+Order. Change order permissions are based on global settings designated by your
+organization’s Administrators, identify which changes or combinations of changes
+can be made.
+
+See POCR Guide in the Vroozi HelpDesk for specific details.
+
+
+
+
+INVOICES
+Based on the workflows defined by your
+organization’s administrators you may be
+asked to resolve exceptions related to a PO
+created based on a Requisition you
+submitted. This will require immediate action
+by you.
+
+NOTIFICATION
+When an exception occurs that requires your
+attention you will be notified 2 ways.
+
+   1. You will receive an email notification.
+      Like other Vroozi emails, the notification will include the PO details and type
+      of action required. Click ‘View Invoice’ to navigate directly to the invoice in
+      Vroozi Purchase. (shown on previous page)
+
+   2. A badge indicating the number of invoices awaiting your response will appear
+      next to the ‘Resolve Invoices’ category in your navigation panel.
+
+
+
+
+                                                                     Requester Guide 45
+                                                                         Updated 5/20/2021
+An exception indicates one or both of the following:
+   1. The PO is missing a Goods Receipt
+   2. There is a discrepancy between the PO submitted by your organization to the
+      supplier and the Supplier Invoice.
+
+SUBMIT A RESOLUTION
+   1. Open ‘Invoices’ and select the Invoice number to view the Exception
+      message(s) and take action.
+
+
+
+
+   2. Click ‘Assign to me’.
+
+
+
+
+   3. View Exception Handling Messages
+
+   4. Select the Green Exception Actions
+
+      In the example below, the first exception requires the Requester to Create a
+      Goods Receipt. The process will be the same as for any other PO.
+
+
+
+
+                                                                   Requester Guide 46
+                                                                       Updated 5/20/2021
+   5. Resolve Exception will require you to select a resolution. Check the box for the
+      desired action and include a message (optional)
+
+
+
+
+   6. Once you select an action the save button will become enabled.
+
+   7. ‘Submit Resolution’ to return back to the AP Processor
+
+
+
+
+CLOSED PO AFTER A FINAL INVOICE
+A Final Invoice indicates that some but not all of the items contained in the
+referenced PO will be invoiced. This could be the case in the event that a supplier is
+short on their ability to fulfill an order, an item is returned before an invoice is
+created, etc.
+
+Based on the status of the Goods Receipt at the time this happens, you may be
+required to take action. In this event email communication will walk you through
+what to do.
+
+Final Invoice on a PO without a complete Goods Receipt
+In this event, a buying organizations AP team closes the PO for receiving by creating
+a Final Invoice and a Goods Receipt has not yet been completed against the PO, the
+PO will automatically close for receiving, a Goods Receipt will not be required and
+the status of the PO will change to ‘Invoiced’.
+
+
+
+
+                                                                      Requester Guide 47
+                                                                         Updated 5/20/2021
+Final Invoice on a PO with a completed Goods Receipt
+In the event a Receipt is completed/confirmed for the full amount before the AP
+Processor determines that the invoice is Final, the Requester/Buyer will receive an
+email with instructions on how to proceed. (below)
+
+
+
+
+                                                                    Requester Guide 48
+                                                                        Updated 5/20/2021
+DOCUMENT FLOW
+The Document Flow function allows requesters to view details of their transactions
+by document type. Related Document type. It also can display a diagram of where
+the Request is in the purchasing process lifecycle.
+   1. From the Homepage, click ‘Document Flow’ on
+      the blue navigation bar. The Document Type
+      drop down menu defaults to All. It is optional to
+      update the type to further narrow the search
+      results.
+
+   2. Select ‘Search’.
+
+   3. The Related Documents will appear and
+      display the current Status.
+
+   4. Click the Eye icon in order to view Document Detail information. (details not
+      pictured)
+
+   5. Click ‘Document Flow’ to see every Related Document and how they are
+      interconnected. See the example below.
+
+
+
+
+                                                                    Requester Guide 49
+                                                                       Updated 5/20/2021
+CENTRAL RECEIVERS
+Central Receivers can confirm receipt of goods or services, return Goods and resolve
+invoices for any Purchase Order on behalf of anyone in the organization.
+
+As a Requester with the Central Receiver role, Select Admin View in the navigation
+panel to open the Central Receiver functions. (see below)
+
+Here you can search for the PO Number and create Goods Receipts or returns as
+described in the corresponding Goods Receipt and Ordered Goods Return sections.
+Depending on your organization, the Central Receiver role may or may not be
+available.
+
+View of a Requester and Central Receiver dual role.
+
+
+
+
+When logging in as a central receiver without any combined roles, you are
+immediately directed to the Goods Receipts page. Please see the Goods Receipt
+portion of this guide for further instruction.
+
+
+
+
+                                                                    Requester Guide 50
+                                                                       Updated 5/20/2021
+Requester Guide 51
+  Updated 5/20/2021
+

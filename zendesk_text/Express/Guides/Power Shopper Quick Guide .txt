@@ -1,0 +1,115 @@
+Power Shopper Quick Guide
+Responsible for converting shopping lists to carts that will then be sent to an external
+system outside of Vroozi.
+
+
+
+A​CCESS
+   1. Power shoppers should access Vroozi each time you receive email notification that
+      a new Shopper list requires their review. Access to Vroozi will occur through
+      external ERP.
+   2. Upon connecting to Vroozi Catalog, you
+      may access the lists shared via ​2​ locations
+      on your homepage.
+
+          ●   ‘Information’ bar -​ Located in the
+              center of the login page this will
+              indicate the number of lists shared.
+
+          ●   Lists’ icon​ - Located next to the
+              shopping cart icon, the number of
+              shared lists awaiting review will
+              also populate.
+
+Once selected, you can view the repository of
+lists. Click the arrow to the right of each list to
+view specific item details. (shown next page)
+
+
+
+
+Note:​ Lists items cannot be edited from this page but can be edited once added to a
+cart.
+Use the ‘Filter Lists By’ options to search for lists by specific employee, date, line item
+quantity or amount.
+C​ONVERT​ L​IST​ ​TO​ C​ART
+Once read to convert a list to cart, select ‘Add to Cart’.
+
+You can add as many lists as you choose to a
+cart before selecting to “Checkout Now’.
+Example below shows 1 list already in the cart
+with another to be added.
+
+Note: ​ T
+        ​ he quantity displayed on the cart icon
+indicates the total number of line items across
+all carts. The example below shows a cart with
+4 total line items created from 3 lists.
+
+
+
+
+Once a list(s) has been converted to a cart, you may edit the list items and quantities
+(shown next page) before sending that cart to your external system. However, you may
+not add items to the list. If wishing to do this, you should either reject the cart and advise
+the user to add the appropriate items or create a new cart yourself and confirm this in the
+cart rejection note back to the Shopper Express employee.
+
+
+
+
+                                                                               Power Shopper​ ​1
+                                                                               Updated 4/25/2020
+Multiple lists can be added to one cart. At which point, they will be grouped by supplier
+and not by individual list. The Shopper
+Express user is NOT notified of any of the
+described changes at this stage.
+Checkout Cart: Select ‘Checkout Now’ to
+send the cart to your SRM or ERP. (shown
+below)
+
+S​HARED​ L​IST​ R​EJECTION
+W​ORKFLOW
+If a list is incorrect and requires further review, you may choose to​ return a shared list
+back to the Shopper Express u    ​ ser.
+Rejection selection on the Shared List view:
+
+
+
+
+When rejecting a list, it is best to provide notes detailing why the list has been rejected
+and the appropriate steps required for approval.
+Rejection Note field:
+
+
+
+
+Rejection will trigger an email notification to the Shopper Express u
+                                                                    ​ ser ​including any
+notes submitted during rejection.
+
+A​DD​ I​ TEMS​ ​TO​ C​ART​ O
+                           ​ R​ L​IST
+Use the search bar or search directly within the supplier catalog listed under ‘Suppliers’ to
+add items to the new cart created by you.
+From the cart view, add items to a cart converted from an employee list by clicking
+‘Continue Shopping’. (shown on next page)
+                                                                                Power Shopper​ ​2
+                                                                                 Updated 4/25/2020
+C​OMPARE​ I​TEMS
+Like items appearing in a search result can be compared.
+   1. Check the box next to each item.
+   2. When ready select ‘Compare’
+
+
+
+
+   3. At the Comparison view, add selected items to cart or select ‘Back to Search
+      Results’. (shown on next page)
+
+
+
+
+                                                                           Power Shopper​ ​3
+                                                                           Updated 4/25/2020
+

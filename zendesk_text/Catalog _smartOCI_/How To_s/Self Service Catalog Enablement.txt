@@ -1,0 +1,42 @@
+Self Service Catalog Enablement
+Grab & Go covering how to enable Supplier access to update their catalogs.
+
+
+From the Supplier’s record in Vroozi Catalog;
+add a ‘Supplier User’.
+Complete the following fields:
+   1. First and Last name of the employee
+      you are granting access to.
+   2. Email address for employee
+   3. Create the password you’d like the employee to use for their initial login.
+          ● Passwords must be alphanumeric and 8 characters long.
+   4. Leave box ‘Send Invitation Email’ unchecked.
+          ● Instead, send the Supplier user their credentials via your company
+             email. Providing both the username and password.
+          ● Include the url: signin.vroozi.com
+   5. Save the supplier user’s record and the Supplier record
+          ● The supplier user will then receive their registration email and may
+             begin making updates.
+
+
+
+Best Practice:
+Before inviting supplier users to Vroozi Catalog we encourage you to review your
+internal catalog approval process.
+   1. Define approvers for each catalog. All existing and new catalogs should be
+      assigned approvers. Creation of Approvers would be completed in the
+      Company Users field.
+         → Once created, Approvers can be selected from
+            a drop down menu.
+         → If multiple approvers are assigned, approval is
+            complete after one (1) approver has reviewed
+            the changes.
+   2. Review your Catalog Approval Thresholds. Found
+      under Settings -> Company Settings -> Approval Workflow. Here you can
+      determine what changes trigger Catalog Approvers review before they go live.
+
+
+
+
+                                                                                    1
+

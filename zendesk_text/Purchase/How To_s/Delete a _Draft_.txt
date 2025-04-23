@@ -1,0 +1,22 @@
+Delete a Requisition ‘Draft’
+Unused drafts can make it hard to find previously saved drafts and continue
+Request​ submission at a later time. To delete any drafts you no longer need,
+follow the steps below.
+
+   1. Click on R
+               ​ equest Status​ in the blue navigation bar.
+
+   2. Vroozi​ P
+              ​ urchase will direct you to your ​Drafts​ screen where all
+      unsubmitted requests can be found.
+
+
+
+
+   3. To delete a PR ​Draft ​click on the T
+                                          ​ rash​ icon located under ‘​Actions’. B
+                                                                                 ​ e
+      sure you are selecting the correct row.
+   4. A pop up appears asking if you are sure. Click Yes. You have deleted the
+      Request​.
+

@@ -1,0 +1,2111 @@
+ Purchase Administrator
+                               Guide
+Comprehensive Guide to the Master Administrator role In Vroozi Purchase.
+
+
+
+
+Table of Contents:
+Homepage Anatomy                                                                    6
+   Navigation Panel                                                                 6
+   Dashboard Analytics                                                              7
+
+Shopper view                                                                        7
+
+Company                                                                             8
+   Profile                                                                          8
+   Settings                                                                         8
+      Subscription settings                                                         8
+      User Timeout settings                                                         9
+      Help                                                                          9
+      SKU Number                                                                    9
+   Messages                                                                         9
+      Welcome Message                                                              10
+   Workflow                                                                        10
+      Request Approval Workflow                                                    10
+      Out of Office                                                                10
+      Sourcing Workflow                                                             11
+
+
+                                                                      Admin Guide 1
+                                                                     Updated 5/21/2021
+      Sourcing Rules                                        11
+      Exempt Suppliers                                     12
+      Decision Codes                                       12
+   Connectors                                              13
+      Avalara                                              13
+      QuickBooks                                           13
+      Vertex                                               13
+      CSV Connector                                        15
+      Xero                                                 16
+
+ERP Adapter                                                18
+   SSO                                                     18
+   Replication                                             18
+   Settings - Workflow Activation                          19
+
+API Integration                                            19
+
+Master Data                                               20
+   Users                                                  20
+      User Search and Filter                              20
+      Edit/Deactivate/Activate Users                      20
+      Create a User                                        21
+   Requester Role Permissions                              23
+      Line Item Bulk Upload                                23
+      Restrict coding of PR/PO                             23
+      Submit Request Forms                                24
+      Submit RFQs to Suppliers                            24
+   Addresses                                              24
+      Address Types                                       24
+      Allow User Created Addresses                         25
+   Organization                                           26
+      Organization Search                                 26
+      Create Organization Codes & segments                26
+      Company Code                                        26
+      Purchasing Organization                              27
+      Plant                                                27
+
+                                             Admin Guide 2
+                                             Updated 5/21/2021
+Accounting Segments                                     27
+   Enable Types                                         27
+   Accounting Search                                   28
+   Create Accounting Segments                          28
+   Activate & Deactivate Records                       28
+   GL Accounts                                         28
+   Customers                                           28
+        Customer Code Creation                         29
+   Cost Center                                         29
+        Cost Center Creation                           29
+   WBS Elements                                        30
+        WBS Element Creation                           30
+   Internal Orders                                     30
+   Classes                                             30
+        Class Creation                                 30
+   Location                                             31
+        Location Creation                               31
+   Location Type                                        31
+   Project                                              32
+   Profit Centers                                       32
+Taxes                                                   33
+   Create Tax Codes                                    34
+Payment Terms                                          36
+Categories                                             36
+Units of Measure                                       36
+Currencies                                              37
+   Add Currency                                         37
+   Currency Exchange Rate Functionality                38
+   Decimal Place Logic                                 38
+Suppliers                                              38
+   Create New Supplier                                 39
+        Configurations                                 40
+   Output Method                                        41
+
+
+
+                                          Admin Guide 3
+                                          Updated 5/21/2021
+     Activate/ Deactivate Supplier                                               42
+     Supplier Bulk Upload Utility                                                42
+  Buyer Data                                                                     43
+     Create Buyer Group                                                          43
+        Buyer Group Outcomes                                                     44
+
+Documents                                                                        45
+  Types and Numbers                                                              45
+  Settings                                                                       46
+     Purchase Requests                                                           46
+        Item Long Descriptions for Catalog Items                                 46
+        Allow Attachments                                                        46
+        Require Attachments for non catalog items                                46
+        Allow PR Processing to external system                                   46
+        Allow automatic PR submissions to be scheduled for a future date         46
+  Purchase Orders                                                                47
+     Terms & Conditions                                                          47
+     Allow for PO cancel                                                         47
+     Allow Purchase Orders to be generated by Company Code                       48
+     Disable PO Functionality                                                    48
+  Purchase Order Change Request (POCR)                                           49
+     Custom Field Permission                                                      51
+     Line Item Quantity Changes                                                   51
+     Edit Price                                                                   52
+     Approval Workflows                                                           52
+     Supplier Portal Workflows                                                    53
+  Line Item Configuration                                                        54
+        Supplier Line Item Configuration                                         54
+     Goods Receipt Configuration                                                  55
+     Budget                                                                       55
+  cXML Setup                                                                     56
+     Enable cXML Suppliers                                                       56
+     Incoming cXML Documents                                                     56
+     Outgoing cXML Documents                                                     58
+
+
+                                                                    Admin Guide 4
+                                                                    Updated 5/21/2021
+      Downloadable cXML Templates                59
+   Custom Fields                                 59
+      Custom Field List Default                  60
+      Bulk Upload                                 61
+      Ownership change                            61
+      PR Rejection Configuration                 62
+   Custom Labels                                 62
+
+Accounts Payable                                 63
+   Settings                                      63
+      Email Set Up                               63
+   Dashboard                                     64
+   Exception Handling                            65
+   Preferences                                   65
+
+Supplier Portal                                  65
+
+Troubleshooting                                  65
+   PO Failures                                   65
+      Track Failed POs                           66
+
+
+
+
+                                    Admin Guide 5
+                                    Updated 5/21/2021
+HOMEPAGE ANATOMY
+The homepage of the Administration page is easy to navigate. Select the Categories
+listed in the left sidebar to utilize the various Vroozi Purchase functions. (From top to
+bottom)
+
+NAVIGATION PANEL
+
+                        1. Profile: The top left corner typically displays a user’s First
+                        Name or Initials. The drop-down menu here reveals Profile,
+                        My Data (address), as well as the Logout icon.
+                        2. Shopper View: View the Shopper’s(Requester’s)
+                        experience when using the Vroozi Purchase.
+                        3. Dashboard: Your home screen upon login. Create
+                        customized reporting based on your specific date.
+                        4. Company: Through the company settings tab the Admin
+                        can change assorted settings, messages and workflow.
+                        5. ERP Adapter: Customize your ERP applications enhance
+                        the automated services available through Vroozi.
+                        6. Master Data: Where all the master data is held: Users,
+                        Addressees, Organization, Accounting, Taxes, UOM (Unit of
+                        Measure), Currencies, Suppliers, Buyer Data and Catalog
+                        Content.
+                        7. Documents: Types and Numbers, Settings and Custom
+                        Fields.
+                        8. Accounts Payable: Create, Track, Post Invoices. Create
+                        Workflows, Approval groups and other accounting
+                        preferences.
+                        9. Supplier Portal: Customers utilizing the Portal Module
+                        can access configurations, preferences and comprehensive
+                        list of all supplier portal users.
+                        10. Reports: Create reports using data from the previous 60
+                        days.
+                        11. Document Flow: Review the history of a specific
+                        transaction.
+                        12. Approve Requests: View and access requests at all
+    stages of the approval process.
+13. Receipts: View and access Purchase Orders at all stages of the buying process.
+
+
+                                                                            Admin Guide 6
+                                                                            Updated 5/21/2021
+14. Quotes: Request quotes from multiple suppliers to leverage the best price and
+    delivery date.
+15. Shipping Notes: Customers utilizing the Portal module can view shipping
+    notices sent through the Supplier Portal. This category is applicable for all
+    Requesters, Central Receivers, Buyers and Administrators. See Customer’s Guide
+    to the Supplier Portal for further details.
+16. Buy Route: Allows your approved purchase requisitions to go through
+    professional buyers for sourcing with your approved vendor list.
+
+DASHBOARD ANALYTICS
+Please see the Vroozi Administrator Analytics Guide for specific details.
+
+
+
+
+SHOPPER VIEW
+To view what your Requesters will experience, select on the ‘Shopper View’ button on
+the sidebar. See Requester Guide for specific details.
+
+
+
+
+                                                                            Admin Guide 7
+                                                                            Updated 5/21/2021
+COMPANY
+PROFILE
+After logging into the admin page, you will automatically see the Company’s Profile.
+The Company’s Profile will auto populate through the Admin Page. Your Vroozi
+profile will tell you the following: Company Name, Company Username, Company
+Code and Company Password.
+Before starting any work, Admins should verify that all the information is correct on
+the Company’s your Profile page. All the fields should automatically populate. This
+is informational and for view purposes only.
+
+SETTINGS
+   1. Default Lead Time The default lead- time will allow you to set a default date
+      for the delivery date. In the following example the Default Lead Time is 30, this
+      means 30 days from when you submit your purchase request the item will be
+      delivered. The
+      Default Lead
+      time for can
+      be set to 30
+      days.
+   2. DocuSign - To
+      enable
+      DocuSign, check the box adjacent to 'Enable DocuSign'.
+   3. Modify Application Title - We recommend you leave as it is to streamline
+      communication with Vroozi Support.
+   4. Shopper Dashboard Statistics - Select which data users see on their
+      Dashboard.
+   5. Show All Suppliers - Check the box to enable
+
+
+
+Subscription settings
+This section describes subscription settings, budget, help, user timeout settings and
+PO change requests.
+   ●   To enable subscription settings, check the box marked in red.
+
+
+
+
+                                                                          Admin Guide 8
+                                                                         Updated 5/21/2021
+User Timeout settings
+To auto log out the user, set the first drop-down box to the appropriate time frame.
+To allow a logout warning before auto logging the user off set the second drop down
+to the appropriate time.
+
+
+
+Help
+When the Standard Page option is selected, users are directed to Vroozi Helpdesk for
+support. When Custom Page is enabled you are given options to configure help
+information specific to your company and users.
+
+
+
+SKU Number
+SKU number can now be displayed in product search
+results if SKU flag is turned on in the purchase manager
+supplier record.
+The next page displays search results with the “Internal
+SKU Number” included.
+
+
+
+
+MESSAGES
+The message feature allows the Admin to send messages that will appear on the
+screen of any employee at any time. These messages will appear when the shopper
+logs into the Vroozi Purchase Shopper View and are stored in the bottom left hand
+
+                                                                       Admin Guide 9
+                                                                       Updated 5/21/2021
+corner if they need to be stored. They are available here in the Admin side to edit and
+customize. Error messages are also available to customize in this chapter.
+
+
+
+Welcome Message
+A Welcome Message may be provided at the entrance to the software, it would be
+seen at the bottom of the screen. These messages can be sent to all employees in
+general or can be sent to specific employees depending on the preference of the
+Admin. The welcome message is to be updated by the Vroozi Purchase Admin based
+on direction from Sourcing O&I.
+
+WORKFLOW
+Request Approval Workflow
+Create a general requisition approval process. select if the approval process will be
+based on Spend Limit or irregardless of limit. Based on approval thresholds set for
+each Approver, requisitions will go through approval review by a specific number of
+approvers.
+Here you will also designate a ‘Fallback Approver’ from the list of users with Approver
+credentials.
+
+Out of Office
+Specify the rules for how approval requests should be forwarded. For example,
+Administrators can specify the number of days a Purchase Request should be
+allowed to sit dormant with an approver before the system automatically forwards it
+to the next approver in the chain. Alternatively, Administrators can specify how many
+times an Approver should be reminded should be reminded about a pending
+request before it is forwarded to the next approver. Administrators can also choose to
+enable “Out of Office” functionality for both Financial and Sourcing approvers in their
+organization.
+
+
+
+
+   1. Select ‘Enable Out of Office for Approvers’
+
+
+                                                                         Admin Guide 10
+                                                                         Updated 5/21/2021
+   2. Select ‘Yes’ to forward the Purchase Request to the next Approver
+   3. Select criteria for approval forwarding.
+         ○ If ‘Number of Days’ was selected, use the fields below to type the
+             desired number.
+
+
+
+Sourcing Workflow
+A Sourcing Review is the process of having a Purchase Request go through a special
+workflow (reviewed by the Sourcing Approver) to ensure the company is receiving
+the best price on any item being purchased.
+Since not all orders need to go through this kind of review;
+the company's Admin can set rules that would trigger the
+review of a purchase request or change request. The
+company's Admin will set these tables depending upon
+the direction of the Company's Sourcing team. Once the
+sourcing workflow is activated, all PR's will be checked
+against the rules set on the tables explained below.
+   ●   The rules that determine if a change request is
+       subject to sourcing review or not, are the same as
+       the rules applied to purchase requests. The PO audit
+       trail will capture the details of a change request
+       going through sourcing review. The audit trail can capture when a sourcing
+       reviewer approves, rejects or edits a change request.
+Sourcing Approvers can be given permission to edit Purchase Requisition details
+including pricing, quantity, Supplier and Approver Notes. Permission to allow these
+changes is a global setting (shown below)
+
+
+
+
+Sourcing Rules
+A Logic Rules Table sets the rules at which the PR is flagged for sourcing review and
+determines when the special workflow is activated. Through this feature Admins can
+activate/ deactivate items, search and filter or add a new Sourcing Rule.
+
+
+
+                                                                        Admin Guide 11
+                                                                        Updated 5/21/2021
+See Sourcing Guide for specific details.
+Example Below:
+
+
+
+
+Exempt Suppliers
+   ●   A supplier exemption table sets the list of suppliers that are exempt from the
+       rules on the first table. Any purchase request created for these suppliers does
+       not need to go through a sourcing review, even if the purchase request meets
+       the rules set on the first table. Other features to this page include search/
+       filter, activate/ deactivate or add exempt suppliers.
+   ●   To add an exempt supplier, select the 'Add Exempt Supplier' button, and the
+       following screen will appear. Fill out all the required fields and click the 'Save
+       Exempt Supplier' button. Sourcing O&I will provide direction when a supplier
+       needs to be added or removed.
+
+
+
+Decision Codes
+   ●   A Decision Codes Table sets a list of 'approval' and 'rejection' codes that the
+       Sourcing Approver chooses prior either approving or rejecting the purchase
+
+
+
+                                                                           Admin Guide 12
+                                                                            Updated 5/21/2021
+       request. These codes will appear on the sourcing approval screen when they
+       review the purchase request.
+   ●   To add a new decision code, select the Add Decision Code button and fill out
+       the required fields. Sourcing O&I will provide direction when a decision code
+       needs to be added or removed.
+
+CONNECTORS
+Connectors provide you with direct integration access to Vroozi partners.
+
+Avalara
+Cloud based tax resource that covers Sales, Use, VAT and GST taxes.
+
+
+
+QuickBooks
+Quickbooks enables invoice to be connected to the purchase manager system and
+CSV allows the user to upload
+and send CSV files via a SFTP
+server.
+   ●   To enable the
+       Quickbooks connector
+       move the button in red
+       below to 'On'.
+
+
+
+Vertex
+
+Tax Integration and Calculation with Vertex ( PR, PO, POCR and Invoice)
+
+Using Vertex buying organizations can calculate Tax from PR to POCR. Line item tax
+calculation is based on line item category (once added to category template) which
+is mapped to the Vertex tax codes, plus the ship to zip code and the line item dollar
+amount
+
+   ●   Streamlines knowledge of requested resources at PuRCHASE Request,
+       Resources Committed at PO and actual expense at Invoice.
+
+
+
+
+                                                                          Admin Guide 13
+                                                                          Updated 5/21/2021
+There are 3 Steps required for integration set up.
+
+Step 1: Enable Vertex tax integration through Company → Connectors
+
+Step 2: Map the purchasing categories with the product tax codes.
+
+
+
+
+The tax code mapping will be done through your Product Category Mapping table. A
+new column for Vertex tax code is now available in the Product Category template.
+The template can be found at https://vroozi.zendesk.com.
+
+   ●   Calculated amount is based on the unit price, address and tax code.
+
+Upload your completed template in Master Data → Categories, selecting ‘Upload
+New Categories’ in the bottom left corner of the screen.
+
+Step 3: Select the Fallback Category Tax Code.
+
+Note: Product Tax Code and Product Tax Descriptions can be seen in the mapping
+columns.
+
+
+
+
+                                                                       Admin Guide 14
+                                                                       Updated 5/21/2021
+The image below demonstrates a Requester’s view at the line item description level.
+
+   1. Based on the line item category, a Vertex Tax Code has been associated
+   2. The tax for the line item has been calculated.
+
+
+
+
+Tax calculations displayed on the purchase request.
+
+
+
+
+CSV Connector
+If an external connector is not going to be used, aN sFTP/CSV should be set up as
+your connector.
+
+
+
+                                                                       Admin Guide 15
+                                                                       Updated 5/21/2021
+To enable the CSV connector fill out the information on the left and then move the
+button marked in red below to 'On'.
+
+
+
+Xero
+One way invoice to bill connection.
+All master data is manually entered and replicated to match what already exists in
+Xero.
+
+
+
+
+Process:
+   1. Vroozi will pass Vroozi created invoices to Xero Billing.
+   2. Enablement of the following Xero integration string: Agents, Projects and
+       Branches
+   3. Enablement of Vroozi defined accounting segment: GL accounts
+
+                                                                       Admin Guide 16
+                                                                       Updated 5/21/2021
+4. The configuration of each accounting string in Vroozi must match the Master
+   data that exists within your Xero account.
+5. New accounting objects taken for Xero integration may include Business
+   Units split into seperate accounts
+6. Once the set is successfully created, each business unit will have a seperate
+   connection.
+
+
+
+
+                                                                     Admin Guide 17
+                                                                      Updated 5/21/2021
+ERP ADAPTER
+This chapter explains the interaction between a buying organization’ERP (Enterprise
+resource planning) and Vroozi Purchase, as well as how to edit the different settings
+related to the ERP. An ERP is a set of applications that automate human resources,
+finance, supply chain, etc.
+
+SSO
+Allow your users to access Vroozi from another system.
+Complete all form fields.
+   ●   Error Message: A user who doesn’t have access to Vroozi Purchase will receive
+       an error message if they try to log into the system. Admins can amend the
+       content of this message in Vroozi Purchase.
+
+
+
+
+REPLICATION
+The Document Replication Table is a section where the Admin will determine which
+documents will be shared between the ERP system and the Vroozi system. You can
+
+
+                                                                        Admin Guide 18
+                                                                        Updated 5/21/2021
+determine where the master document is always and if it is active or not. This
+section is for informational purposes only.
+
+SETTINGS - WORKFLOW ACTIVATION
+   ●   Through this feature you can answer the following question: Do you want the
+       ERP system to determine workflow or do you want Vroozi Admin to determine
+       workflow?
+   ●   This is just for reference; no changes should be made. Active would invoke the
+       internal Vroozi Purchase workflow. Inactive would then utilize the external
+       CAM financial workflow
+
+
+
+
+API INTEGRATION
+Mechanism which allows buying organizations to transmit master data and
+transactional data between Vroozi and any external system, using structured
+electronic data. A new integration will involve resources from the Vroozi Integration
+team. Please reach out to the Customer Success team to review options and pricing.
+Connection to an API allows buying companies' IT departments to authenticate into
+the Vroozi API.
+
+
+
+
+                                                                        Admin Guide 19
+                                                                        Updated 5/21/2021
+MASTER DATA
+USERS
+User Search and Filter
+Through the User tab you can search for a specific user and see their first name, last
+name, username, roles, last login, created date, status and see if they are currently
+active.
+   1. Search by
+      username
+      or role. As
+      you type
+      the list will
+      narrow,
+      eventually
+      yielding
+      one result,
+      for fastest
+      results be
+      as specific as possible.
+   User Detail
+   User details include: Email, Username, First Name, Last Name, Default Approver,
+   Spend Limit, and Role. To access these records, do the following-
+
+
+
+Edit/Deactivate/Activate Users
+   1. Choose a user from the list provided in the User tab. For easy access first
+      search using the search bar to find said person faster.
+   2. Select a user. The following screen will appear.
+           ● To Edit: Click on the user’s first name to edit.
+           ● To Activate or Deactivate: Check the box the left of user name then
+click Activate or Deactivate
+   3. Click the Save User button after editing any information.
+See Vroozi Roles Directory to view role details and permissions.
+
+
+
+                                                                         Admin Guide 20
+                                                                         Updated 5/21/2021
+Create a User
+To create a new user, select the ‘Create a New User' button.
+   1. Fill out all Basic Information.
+   2. Select User Role
+
+
+
+
+   3. For each Role Category, click the downward arrow to view the specific options
+      within that category.
+
+     Note: Many roles can be combined. Those which cannot be combined
+     with a specific role will be grayed out once an incompatible role is
+     selected.
+
+
+
+
+                                                                      Admin Guide 21
+                                                                      Updated 5/21/2021
+4. Select Default language. All transactional documents within Vroozi will display
+   based on the language selected. For example, when the ‘Default Language’
+   selected on a user’s profile is ‘English (US)',
+   then all amounts will have ‘,’ as thousand
+   separator and ‘.’ as the decimal separator –
+   EUR 1000 will be displayed as 1,000.00
+   although the EUR standard is 1.000,00.
+
+5. Complete the remaining fields, indicating the
+   Accounting classifications for the user.
+   Classifications listed are based on the
+   accounting string and addresses configured in your Master Data; ‘Addresses’,
+   ‘Organization’ & ‘Accounting’ set up.
+
+      ○   As you begin typing in each field, the relevant accounting strings will
+          populate.
+
+
+
+
+                                                                     Admin Guide 22
+                                                                      Updated 5/21/2021
+   6. Once all fields are complete, click the blue ‘Save User’ button.
+
+REQUESTER ROLE PERMISSIONS
+Through user permissions, Administrators can enable or
+disable an ‘Employee’ user’s ability to complete specific
+functions.
+
+Line Item Bulk Upload
+Bulk Upload is set up as a permission in the individual’s user record.
+   ● Check ‘Allow Bulk Line Item Upload’ if you wish for the employee to perform
+      bulk uploads using the auto create functionality.
+   ● If left unchecked, the user will not have permission to perform the action.
+
+
+
+
+Restrict coding of PR/PO
+   ●   Check ‘Restrict Coding or PR/PO’ if you do not want to grant an employee the
+       ability to edit shipping addresses or Accounting coding on a PR/PO.
+   ●   If left unchecked, the user will have permission to perform the action.
+
+
+
+
+                                                                         Admin Guide 23
+                                                                         Updated 5/21/2021
+Submit Request Forms
+  ●   Check ‘Submit Request Forms’ to grant an employee the ability to create
+      RFQS. This addition will add “Create RFQs’ to the Requester’s navigation panel.
+  ●   If left unchecked, the user will not have permission to perform the action.
+
+
+Submit RFQs to Suppliers
+  ●   Check ‘Submit RFQs to Suppliers’’ to grant an employee the ability to create
+      RFQS.
+  ●   If left unchecked, the user will not have permission to perform the action.
+
+
+ADDRESSES
+Address Types
+
+
+
+
+  1. Delivery: The same as a ‘Shipping Addresses’ these addresses are assigned to
+     each user at the record level.
+  2. Company: A physical entity.
+  3. Billing: Location where payment is directed.
+
+
+Address Rules
+  1. Multiple addresses may have the same location as long as their names are
+     different.
+
+
+
+
+                                                                      Admin Guide 24
+                                                                       Updated 5/21/2021
+   2. One address can be set as any combination of Delivery, Company and Billing.
+
+
+Allow User Created Addresses
+Enablement allows users with requisition editing rights (see user permissions) to
+create new delivery addresses.
+
+
+
+
+If enabled, the user can create new addresses under My Data.
+
+
+
+
+New addresses can also be created from the Requisition draft.
+   ●   Users cannot set a self created address as their default address but they can
+       remove the default address and select another addresses at the requisition
+       level.
+
+
+
+
+Address Search and Filter
+   ●   To search for any address, use the search field located here in red. Through
+       this feature the Admin
+       can filter and search for
+       addresses quickly and
+       effectively. The results will
+
+                                                                         Admin Guide 25
+                                                                         Updated 5/21/2021
+       filter based on Name, Country, State/Region, City, Street and Zip Code.
+Address Details
+   ●   To see address details, select one of the addresses listed (marked in red
+       below), either through the search/ filter feature or through a manual search.
+   ●   After an address is selected the following screen will appear giving you the
+       option to review or edit the following information: Types, Address Names,
+       Attention To, Country, Street, City Zip, State, Phone or Tax ID. To save your
+       results click on the Save Address button.
+Activate/ Deactivate Addresses
+   ●   Addresses cannot be activated or deactivated in Vroozi Purchase.
+
+ORGANIZATION
+Organization Search
+‘Organization’ segments using keywords or terms as shown below.
+
+
+
+
+Create Organization Codes & segments
+   1. For each Organization code/segment select the green ‘Add’ button
+   2. Complete the required fields.
+         ○ The required fields will vary based on code/segment type.
+
+
+
+Company Code
+A company code is a 3-4 letter/ number code that defines a business entity. This is a
+setting in their profile that the shopper should check first since it will default
+throughout all the documents and forms through the Vroozi Purchase Requester
+View. For example: CTL = TRAINING CO CODE.
+   ●   Company Codes are assigned a ‘Billing’ and ‘Company Address’
+
+
+
+
+                                                                         Admin Guide 26
+                                                                          Updated 5/21/2021
+Purchasing Organization
+The purchasing organization represents the procuring unit in a legal sense. The way
+in which you assign purchasing organizations to company codes and plants
+determines the procurement method.
+   ●   An example of a Purchasing Organization is A001- is for Corporate Offices. As
+       of June 2015, A001 is the only Purchasing Organization valid for Vroozi
+       Purchase.
+   ●   The purpose of this section is to be able to search and filter, see user details,
+       activate/ deactivate users, and manage the user bulk activity.
+   Default Purchasing Organization Settings
+   ●   To set a default Purchase Organization use the drop-down list marked in red
+       below.
+
+
+
+Plant
+A plant is a building capable of manufacturing goods of all sizes in large quantities to
+be sold by a business. Through this feature the Admin can see the different plants
+and the corresponding number code to the plant.
+       An example of a Plant Code is VZI.
+   ●   Plant is for view purposes only. The plant is derived from the Company Code,
+       which is derived from the account codes used in the PR.
+   Plant Bulk Upload Utility
+   ●   Through the plant bulk upload feature the Admin will have the option to
+       upload Plants in bulk.
+
+ACCOUNTING SEGMENTS
+Your account structure helps you categorize your accounting information as you
+record it. You create an account structure by enabling various accounting segments,
+creating an accounting string.
+A Company Code is used for all Accounting segments listed below.
+
+Enable Types
+Click each Accounting classification to activate financial distribution specifications
+required for a request/purchase. Once activated, classifications are added as part of
+
+
+                                                                           Admin Guide 27
+                                                                           Updated 5/21/2021
+the Purchase Request, Purchase Order, Goods Receipt, Goods Return and Invoice
+flows.
+A company code must first be created before the Accounting segments below can
+be set up. Each accounting segment can be set individually as Active or Inactive.
+
+
+
+
+Accounting Search
+   For all sections within the Accounting Category, use the search bar that begins
+   each section to search for specific classification.
+
+Create Accounting Segments
+   1. For each category, select the green Add button
+   2. Complete the required fields.
+
+Activate & Deactivate Records
+   For all sections within the Accounting Category, check the box on the left of the
+   item you are editing. Click either ‘Activate’ and ‘Deactivate’.
+
+
+
+GL Accounts
+A General Ledger (GL) Account is a unique record summarizing each type of an
+asset, liability, equity, revenue and expense.
+This information is needed to prepare
+financial statements.
+
+
+
+Customers
+The Customer classification allows you to
+associate projects to a customer.
+
+
+                                                                        Admin Guide 28
+                                                                        Updated 5/21/2021
+Customer Code Creation
+   When creating or editing a Customer Reference, in addition to your ‘Cost Center,’
+   ‘WBSE,’ and ‘Internal Orders,’ you can also associate ‘Projects’ to these customer
+   references. The ‘Project’ field will reference any combination of a Customer and
+   Project together.
+
+
+
+Cost Center
+A cost center is part of an organization that does not produce direct profit and adds
+to the cost of running a company. Assigning a cost center designates which area of
+the business or event incurred the cost.
+An example of a Cost Center is “Marketing, Accounting”
+
+Cost Center Creation
+Cost centers may be set for use during a specific period of time.
+
+
+
+
+Sub cost centers may also be set for costs incurred as a sub-division of a larger cost
+center.
+   ●   Example: Transportation as the ‘Parent Cost Center’, Parking is the Sub Cost
+       Center.
+
+
+
+
+                                                                         Admin Guide 29
+                                                                          Updated 5/21/2021
+WBS Elements
+A WBS Element is a hierarchical and incremental
+decomposition of a project into phases, deliverables
+and work packages. It is a tree structure, which shows
+a subdivision of effort required to achieve an objective;
+for example, a program, project, or contract.
+There are several different types of WBS elements,
+and if changed will automatically flow.
+
+WBS Element Creation
+   ●   A Profit Center or Project Center may be optionally applied to each WBS
+       element.
+
+
+
+Internal Orders
+Internal orders are used to monitor overhead costs incurred for a specific event,
+project or activity.
+
+
+Classes
+Cost Reporting for a specific division, department
+or other organizational unit.
+
+Class Creation
+   ●   If activated ‘Sub Class’, allows you to house a
+       class within a ‘Parent Class’.
+
+
+                                                                        Admin Guide 30
+                                                                         Updated 5/21/2021
+   ●   Classes may be activated for a specific period of time.
+
+
+Location
+Enabling this field from the admin panel, will allow your users to select it at the line
+item level while creating any document.
+Location Creation
+A Location may be assigned to ‘All Company Codes.’ If selected a ‘Location Type’
+must be selected.
+
+
+
+
+If a ‘Location’ is assigned to a user, this location will default at the document line
+item level, but can also be overwritten at the PR/PO/Invoice level, including split
+accounting per line item. ‘
+
+   ●   Can be added per line item distribution or using the Apply All Function
+
+
+
+Location Type
+Location Type will be visible on a PR/PO/POCR if it is set as active at the company
+code. Location Modal will associate with company code for which the location type
+has been marked as ‘Yes’ with company code and Location type
+If a company code is selected on a PR for which Location type is marked as ‘Yes’.
+Then the Location type will appear on the PR line item. (shown below)
+‘Location Type’ in the Invoice line item.
+
+
+
+
+                                                                            Admin Guide 31
+                                                                             Updated 5/21/2021
+Project
+A system or cost centre to track and report project specific transactions, with project
+revenues, costs, assets and liabilities identified and allocated to the project.
+Create Project
+   1. Select the 'Add Project' and the following screen will appear.
+   2. Fill out the required fields.
+           ○ If desired, you can select a specific time frame when the Project will be
+              valid.
+*Sub projects can be created and tied to a parent project.
+
+
+
+Profit Centers
+Profit Centers will be associated with a defined company code. Profit Center creation
+screen below:
+
+
+
+
+                                                                         Admin Guide 32
+                                                                          Updated 5/21/2021
+TAXES
+For customers that want to calculate the tax amount for individual line items within
+Vroozi documents, without having to rely on using an external tax calculation service
+provider.
+
+Vroozi supports the assignment of fixed tax percentage
+values, to the individual tax codes defined within your
+organization’s Vroozi tax table. Use the tax table to
+create unique Tax codes based on Company Code & Tax
+Percentage.
+
+Two new attributes have been added to the Tax Code
+record, ‘Taxable’ and ‘Auto-Calculate Tax’. If the ‘Taxable’
+checkbox is checked (shown on right) it implies that the Tax Code is taxable.
+
+Checking ‘Taxable’ will prompt the Administrator to determine if the taxes should be
+Auto-calculated when the tax code is referenced. By default this toggle is set to Off.
+
+
+
+
+                                                                        Admin Guide 33
+                                                                         Updated 5/21/2021
+If the ‘Auto-calculate Tax’ toggle is turned On, Administrators are required to enter a
+tax percentage to be applied. Administrators can also elect to apply tax to shipping
+charges. (shown on next page)
+
+With ‘Auto-calculate tax’, once the code is saved, any new Requisitions linked to the
+referenced Tax Code will display taxes according to the code configuration.
+
+      Tax Calculation for Code with Auto-calculate enabled:
+
+
+
+
+      Auto-Calculate Tax Calculation with Shipping Charges included:
+
+
+
+
+The auto-calculate tax is intended for buying organizations without a current tax
+connector. Buying organizations with a tax connector (ex: Avalara) will continue to
+use the tax calculations defined by the outside connector.
+
+
+
+Create Tax Codes
+Select Code using the arrows to find the appropriate selection
+
+
+                                                                         Admin Guide 34
+                                                                          Updated 5/21/2021
+Steps:
+   1. To create a new Tax Code first select 'Create New Tax Code' at the bottom of
+      your screen.
+   2. Enter the required fields; Tax Code Name and Description.
+   3. Select one or multiple Company Codes to connect the Tax Code too.
+   4. Company Codes are assigned to each Requester and most accounting
+      segments. GL is assigned a tax code in their user record.
+   5. 2 additional attributes determine how the tax code is applied.
+          ● ‘Taxable’: If the ‘Taxable’ checkbox is checked (shown below) it implies
+              that the Tax Code is taxable.
+          ● Auto-calculate Tax: Checking ‘Taxable’ will
+              prompt the Administrator to determine if the
+              taxes should be Auto-calculated when the tax
+              code is referenced. By default this toggle is
+              set to Off.
+                  ○ If turned On, Administrators are
+                     required to enter a tax percentage to
+                     be applied. Administrators can also
+                     elect to apply tax to shipping charges.
+   6. Click 'Save Tax Code'.
+With ‘Auto-calculate tax’, once the code is saved, any new Requisitions linked to the
+referenced Tax Code will display taxes according to the code configuration.
+
+         Tax Calculation for Code with Auto-calculate enabled:
+
+
+
+
+         Auto-Calculate Tax Calculation with Shipping Charges included:
+
+
+
+
+                                                                        Admin Guide 35
+                                                                          Updated 5/21/2021
+The auto-calculate tax is intended for buying organizations without a current tax
+connector. Buying organizations with a tax connector (ex: Avalara) will continue to
+use the tax calculations defined by the outside connector.
+
+PAYMENT TERMS
+Create a payment term indicating specific number of days or calendar date,
+discounts and tax calculations (percentages). Each term can then be selected and
+applied with a PO.
+
+CATEGORIES
+Categories classify products and services in a way that makes sense for each
+organization.
+Category files can only be uploaded into the Vroozi Purchase module . To download
+the current Category file, users will need to access Vroozi Catalog.
+Using Category Mapping, Vroozi Catalog dynamically maps the supplier-provided
+category codes, to the categories that your organization uses.
+
+
+
+
+UNITS OF MEASURE
+A Unit of Measure or (UoM) is a designation such as EACH that specifies the unit or
+volume in which the product may be purchased. A Unit of Measure is pre-set for
+items in the Catalogs.
+Buying organizations adding new supplier catalogs will need to review their UOM
+files to confirm all UOMs are represented.
+
+
+
+
+                                                                        Admin Guide 36
+                                                                        Updated 5/21/2021
+If a new UOM needs to be added, the template containing the file containing current
+UOMs should be downloaded from the Vroozi Catalog module and updated. (shown
+below). UOM files can only be uploaded from the Vroozi Purchase module.
+
+
+
+
+Within the Vroozi Catalog module, UOM files can be uploaded and downloaded.
+(shown below)
+
+
+
+
+CURRENCIES
+Add Currency
+   ●   To create a new currency, select the create new currency button, a screen will
+       appear, fill out the required fields and click Save New Currency.
+
+
+
+
+                                                                        Admin Guide 37
+                                                                         Updated 5/21/2021
+Currency Exchange Rate Functionality
+The Master Data Currency management table allows Administrators to define an
+exchange rate against all company defined currencies. The exchange rates will be
+used to determine the correct Sourcing and Financial workflows routing rules. An
+exchange rate will not be used to make
+currency conversions visible on your
+transactional document, and is only used by
+the underlying routing workflow functions.
+   ● The exchange rate will require manual
+      updates by the Purchase Administrator.
+   ● Configuration can be found under
+      Master Data>Currency>Add Currency
+
+
+See the Sourcing Workflow section for details on currency conversion.
+
+
+
+Decimal Place Logic
+Within the Currency record
+"Min. Decimal Places" and
+"Max. Decimal Places"
+dictate the decimal place
+precision displayed on
+amount fields pertaining to
+a specific currency.
+
+This allows customers to
+define the decimal place
+set up based on each
+currency. For example, a
+customer could configure 0
+decimal places for JPY and
+2 decimal places for USD.
+
+SUPPLIERS
+A supplier is the party in the supply chain that makes goods and services available to
+companies.
+
+
+                                                                        Admin Guide 38
+                                                                         Updated 5/21/2021
+Create New Supplier
+While suppliers can be created in Vroozi Purchase, if you are going to use the
+supplier to create a
+catalog we recommend
+creating the Supplier in
+Vroozi Catalog as this is
+where the catalog can
+also be created and
+linked to that supplier.
+Some supplier
+information including
+permissions, output
+method will then be
+enriched in the Vroozi
+Purchase.
+Creating a Supplier in
+Vroozi Catalog
+essentially establishes
+the “Where” your goods or services are coming from. The increased Supplier details
+found in a Supplier’s Vroozi Purchase record establishes the “How”, as includes
+specifications regarding the use of Goods Receipts, PO acknowledgements, output
+and input methods.
+To create a new Supplier, select the ‘Create a New Supplier' button. Fill out all
+required fields.
+
+ *Note: There are 5 tabs within the ‘Create New Supplier’ view. Only the ‘Basic Info’
+ tab has required information fields
+ **Note: If your organization utilizes the Supplier Portal Module the ‘Supplier
+ Portal’ tab will also be present.
+
+
+
+
+                                                                          Admin Guide 39
+                                                                           Updated 5/21/2021
+Configurations
+  ●   Include in Supplier Card: If enabled, Requesters will see a card for the
+      supplier, on their Shopper view
+      dashboard allowing them to recall
+      hosted catalog products associated
+      with the supplier.
+  ●   Disable Browse: If toggle is on for the
+      supplier Requesters will not be able to
+      use the Supplier’s card in their Shopper
+      dashboard to access the supplier’s
+      hosted catalog items. They will however
+      continue to have access to these
+      catalog items via category, keyword and
+      product searches.
+  ●   Catalog Supplier: If the ‘Catalog Supplier’ flag is turned ‘On’ for a supplier, the
+      system will only allow Purchase Orders, and Purchase Requests documents to
+      be created from catalog line items. This supplier name will not appear on the
+      ‘Recommended Supplier’ field when creating a ‘Free- Text’ line item.
+
+  ●   Non-Catalog Supplier: If the ‘Non-Catalog Supplier flag is turned ‘On’ for a
+      supplier, the system will allow the Purchase Orders, and Purchase Request
+      documents to be created from free-text line items. This supplier will not be
+      available to create a catalog against.
+
+  ●   Catalog & Non-Catalog Supplier: If both flags are turned ‘On’, the supplier
+      will be available for both Catalog & Non-Catalog Purchase Request line items.
+
+  ●   Approval Threshold: Maximum PO amount for items requested within
+      supplier.
+
+  ●   Supplier Lead Time: Set by number of weeks, days or by a specific date. This
+      information is typically set by the supplier.
+
+  ●   Minimum Order Value Amount: Set by each supplier.
+
+  ●   Goods Receipt Thresholds: Designate Threshold for items.
+
+
+
+                                                                          Admin Guide 40
+                                                                           Updated 5/21/2021
+   ●   ERS: (Functionality currently not operational)
+
+   ●   PO Change Requests: Allows users to modify POs for this supplier, creating a
+       new version with the same PO number. The agreement to allow changes
+       should be confirmed by each supplier.
+
+   ●   Supplier Provides PO Acknowledgement: If toggled on, a non-Supplier
+       Portal Supplier will have the ability to Confirm PO directly from the PO email
+       notification. Once the Supplier does this, the PO status will change from
+       Ordered to Submitted.
+
+
+
+
+Output Method
+Designate how the Supplier will receive the purchase order.
+Select Output Method asEmail, Supplier Portal, EDI or cXML. Based on selection,
+additional information may be required.
+
+   1. Email: Enter the supplier’s output email
+
+   2. Supplier Portal: Only applicable if your buying organization is utilizing the
+      Vroozi Supplier Portal.
+
+   3. EDI: no additional information required.
+
+   4. CXML: If cXML is selected, the following information should be entered:
+        ● Send alert of PO creation to:
+        ● Domains and Identity should be entered.
+
+
+
+
+                                                                         Admin Guide 41
+                                                                         Updated 5/21/2021
+Activate/ Deactivate Supplier
+To activate or deactivate a supplier, select one or more suppliers through the
+checkbox on the left side. Then choose either Activate or Deactivate, the status will
+reflect the change in the 'Status' Column.
+
+
+
+Supplier Bulk Upload Utility
+Save time by uploading several or all of your suppliers at one time.
+
+
+
+            Bulk Upload Template: If desired you can download a Vroozi template
+            which includes fields for all required supplier data.
+
+
+
+
+                      Export List: Click the Export Icon to view currently uploaded
+      suppliers.
+
+
+
+
+           Import List: Once you have a Supplier List created and saved, click the
+      Import Icon to populate in Vroozi.
+
+
+
+
+                                                                         Admin Guide 42
+                                                                          Updated 5/21/2021
+BUYER DATA
+Through the assignment of Buyer Groups, buyers can be assigned at PR creation
+based on the product categories and vendors.
+
+
+
+
+Create Buyer Group
+To create a Buyer group, select the green 'Add Buyer Group' icon. Fill out the
+information needed, and press Save.
+          1. Complete Group Name & Description - required
+          2. Associate to Category, Suppliers and/or Vendors
+
+
+
+
+                                                                        Admin Guide 43
+                                                                         Updated 5/21/2021
+Buyer Group Outcomes
+
+Buyers: Can track created PO's, act
+on PO's that are stuck in Process, and
+also create POCR's.
+
+Requesters: Buyer visibility at line
+item level.
+
+
+
+
+In the example below the Requisition category is selected as Electronics which then
+automatically assigns the document to the technology Group of Buyers.
+
+Buyer information can also be found on the transactional record via ‘Related
+Documents. (below)
+
+Suppliers: Buyer contact information is added to the PO’s received by Supplier,
+enabling suppliers to see all organizational contacts:
+
+   ●   Buyer name and email
+   ●   Shipping address & contact
+   ●   Billing address & contact information
+
+
+
+
+                                                                      Admin Guide 44
+                                                                       Updated 5/21/2021
+DOCUMENTS
+TYPES AND NUMBERS
+Denotes what the document numbering scheme will be for all document types
+including Purchase Requests, Purchase Orders, Goods Receipts, Goods Returns,
+Quick RFQ’s, Quick Quotes and Invoices.
+Document Number Scheme
+   ●   Create new document types and see the status of said documents.
+
+
+
+
+                                                                   Admin Guide 45
+                                                                    Updated 5/21/2021
+SETTINGS
+Purchase Requests
+
+Item Long Descriptions for Catalog Items
+Enable catalog ‘Long Item Descriptions’ to transfer
+from the catalog to the PR. This company level
+configuration applies to all catalog items.
+
+Allow Attachments
+If enabled, attachments included in a Purchase Request will carry over to the
+Purchase Order.
+
+Require Attachments for non catalog items
+If enabled, all Requisition line items with non catalog items will require an
+attachment. Requisitions without supporting attachments will display an error
+message noting the requirement and submission of the requisition will be disabled
+until an attachment is included for each non catalog line item.
+
+Allow PR Processing to external system
+Enablement of this toggle supports the use of an external system for Requisition
+processing. Requisition creation will occur
+within Vroozi, then once submitted by the
+creator, the Requisition will be sent to a
+designated external system for review and
+conversion to a Purchase Order.
+Enablement will require the connection of
+backend API c configurations by the Vroozi
+team.
+
+
+Allow automatic PR submissions to be scheduled for a future date
+Employees can be given the ability to schedule
+the automatic submission of a Purchase Request.
+This functionality can be enabled by Admins, via
+the new ‘Allow automatic PR submissions to be
+scheduled for a future date’ setting, under
+
+                                                                       Admin Guide 46
+                                                                        Updated 5/21/2021
+‘Purchase requests’ Admin Panel -> Documents -> Settings
+
+➢ Submission dates can be set from 24 hours in advance up to several years.
+
+
+
+PURCHASE ORDERS
+Terms & Conditions
+   ●   From the Terms & Conditions field, you can select to omit Terms & Conditions,
+       use Vroozi’s Terms & Conditions or select ‘Custom Terms & Conditions’ to copy
+       and paste or type your own.
+
+
+
+
+Allow for PO cancel
+Enablement will allow Administrators, Buyers and Requesters to cancel a PO.
+
+
+
+
+       Cancel PO option as shown from PO Details screen:
+
+
+
+
+Enablement will only apply to POs with the following status’: Ordered, Confirmed,
+Partially Confirmed
+
+
+
+                                                                       Admin Guide 47
+                                                                        Updated 5/21/2021
+Allow Purchase Orders to be generated by Company Code
+Enablement will create a new PO for each Requisition line item featuring a different
+Company Code.
+
+
+
+Disable PO Functionality
+   ●   Through the use of two configurations, Administrators may choose to alter
+       Purchase Order functionality within the Vroozi platform.
+
+
+
+
+   ●   The first configuration if toggled off, will turn Purchase Order functionality
+       completely off. Requisitions can still be created but will not convert to POs
+       within the Vroozi system. (Toggle #1 shown below) With the disablement of
+       PO functionality. ‘PO Status’, ‘Buy Route’ and ‘Document Flow’ access will be
+       removed from all user’s navigation panels.
+
+       Requester Panel with PO functionality disabled:
+
+
+
+
+       The Document History will not include PO status:
+
+
+
+
+                                                                        Admin Guide 48
+                                                                         Updated 5/21/2021
+   ●   If Toggle #1 is enabled, the buying organization can choose to turn off PO
+       functionality within Vroozi and instead create POs in an external system by
+       enabling ‘Initiate PO in External System’. (next page) Requisitions created
+       within the Vroozi System will feed into the external system for PO conversion
+       and submission to supplier.
+
+       Configurations as seen in the Administrator Panel: Documents > Settings >
+       Purchase Orders:
+
+       Enablement of POs through an external system will disable the ‘Ready for
+       Sourcing’ and ‘Create PO’ capabilities for Buyers, Sourcing Approvers and
+       Administrators. (shown on previous page)
+
+
+
+
+In order to retain PO visibility within the Vroozi system, a buying organization using
+an external system for PO creation will need to access the connector through an
+open Vroozi API. If PO visibility is not required, no connector is needed.
+
+PURCHASE ORDER CHANGE REQUEST (POCR)
+The POCR functionality allows a range of modifications to be made to an existing
+Purchase Order after it has been sent to a supplier. POCRs if enabled through this
+global setting can still be individually disabled at the supplier level via the Supplier
+Record in the Master Data category.
+
+
+
+
+                                                                           Admin Guide 49
+                                                                            Updated 5/21/2021
+Once the POCR toggle is enabled, Administrators may identify which particular
+changes or combinations of changes can be made. POCR permissions can be
+defined by:
+
+   1. Product type (Service, Material, Blanket, Invoice) & Catalog type (Catalog,
+      Non-Catalog, Mixed)
+
+   2. PO Header level permissions:
+
+         ✓ Change Shipping Info
+         ✓ Edit Custom Fields
+
+   3. ‘On the PO Catalog line items, allow users to:’
+
+         ✓ Remove Items
+         ✓ Edit Items
+         ✓ Change Item Price
+         ✓ Change Delivery Date / Service Period
+         ✓ Change Accounting Info
+         ✓ Change Shipping Info
+         ✓ Edit Custom Fields
+         ✓ Cancel Line Item
+              ○ This replaces the delete line item feature, keeping the cancelled
+                   item in the line item view under the “Cancelled” status.
+
+                                                                       Admin Guide 50
+                                                                        Updated 5/21/2021
+   4. ‘On the PO Non-Catalog line items, allow users to:’
+
+          ✓ Remove Items
+          ✓ Add Items
+          ✓ Edit Items
+          ✓ Change Item Price
+          ✓ Change Delivery Date / Service Period
+          ✓ Change Accounting Info
+          ✓ Change Shipping Info
+          ✓ Edit Custom Fields
+          ✓ Cancel line item
+               ○ This replaces the delete line item feature, keeping the cancelled
+                    item in the line item view under the “Cancelled” status.
+
+When a Requester or Buyer initiates a POCR, the system will check which field level
+changes are allowed. Any POs open for POCR inherit those permissions.
+
+
+
+Custom Field Permission
+Custom Field configurations are split by Catalog and Non Catalog views.
+
+If enabled, the ‘Edit Custom Field’ permission for Catalog and Non Catalog line items
+give Requester/Buyers the ability to make changes to any line item level custom field
+specifically defined in the POCR set up.
+
+
+
+Line Item Quantity Changes
+If a Requester increases the order quantity on a PO item (‘Edit Items’ permission
+allows this) that has already been partially, or fully received, the PO will remain open
+for further receipts until fully received.
+
+If a Requester increases the order quantity on a
+PO item that has already been partially or fully
+invoiced, the system will keep the item open for
+further invoicing until fully invoiced.
+
+If the user reduces the order quantity or removes
+a line item (‘Remove Items’ permission allows
+this) on a PO, the system will generate a return
+for any items received up to that point. In this
+event, before the POCR is submitted the system
+
+                                                                          Admin Guide 51
+                                                                           Updated 5/21/2021
+will display a notice confirming with the Requester that a return will be generated as
+a result of their actions.
+
+If the user is intrinsically changing the nature of the item by reducing order quantity
+or value (via price edit) beyond what has already been invoiced but not yet posted,
+the system will change that item from a PO item to a non-PO item in the associated
+invoice.
+
+Edit Price
+Changes to the price of an item that result in an increase to the line item value or
+subtotal will re-enter any organizationally defined sourcing/financial approval.
+
+Approval Workflows
+Updates submitted via POCR at the header or line item level will re-enter any
+organizationally defined sourcing/financial approvals. As shown, changes will be
+identified at the
+document level.
+
+Within the PO audit
+trail, the ‘Purchase
+Order History’ will
+display a comparison of the old data vs the new data. (below)
+
+
+
+
+The Supplier PO View (PO PDF) will also highlight the ‘General Changes’ (header
+level) and ‘Line Item Changes’, including the values before and after POCR. (next
+page)
+
+
+
+
+                                                                         Admin Guide 52
+                                                                          Updated 5/21/2021
+Supplier Portal Workflows
+Suppliers accessing the Supplier Portal, will have a similar experience as shown
+above on the buying organization side.
+
+   ●   On the PO View
+   ●   Purchase Order History
+
+PO View:
+
+
+
+
+Items changed that had previously been ‘Confirmed’ or ‘Disputed’ will again go
+through a Confirm/Dispute review by the supplier.
+
+
+
+
+                                                                        Admin Guide 53
+                                                                        Updated 5/21/2021
+LINE ITEM CONFIGURATION
+To configure custom line items, select either ‘required, optional or hidden’.
+Selecting line item detail as ‘Required’
+means that the detail must be filled out
+for each line item before the transactional
+document can be submitted. The field will
+be selected if the color changes from
+white to a dark gray.
+Selecting a line item detail as ‘Optional’
+means that the detail will be visible for
+each line item but it is not required.
+Selecting a line item detail as ‘Hidden’
+means that the detail will not be visible on
+any line item.
+Supplier Line Item Configuration
+
+By setting the Supplier field to “Optional”
+or “Hidden”, the responsibility of selecting
+a supplier can be removed from the
+Requester and instead directed to the post
+Requisition submission workflow via
+Sourcing Approval or Buy Route. See
+Sourcing Guides for further details on the
+strategy behind the removal of the
+‘Supplier’ requirement.
+
+Requisition view with missing error
+message for an item with the Supplier
+information set to ‘Required’.
+
+
+
+
+                                                                         Admin Guide 54
+                                                                          Updated 5/21/2021
+Goods Receipt Configuration
+To configure a goods receipt requirement for either a product, service, blanket or
+invoice plan request move the button from 'off' to 'on'
+
+
+
+
+   ●   Also included in the Goods Receipts field is ‘1 Click Receipts’ If enabled,
+       recipients of a missing Service receipt email notification will have the ability to
+       generate a ‘Service Receipt’ with 1 click directly from the exception handling
+       email.
+
+
+
+
+Budget
+To enable
+budgeting,
+select the
+'Enable
+Budgeting'
+button here.
+Select from the drop downs which type of Notifications your users will receive.
+
+
+
+
+                                                                           Admin Guide 55
+                                                                            Updated 5/21/2021
+CXML SETUP
+
+The Vroozi system can recognize and define multiple inbound and outbound cXML
+transmissions from a single supplier. This functionality enables the Vroozi Supplier
+team or experienced
+customers or to set up a
+supplier’s cXML
+transmissions.
+
+Communication Types
+supported:
+
+Experienced Content
+Managers may update
+or add new credentials
+for a supplier. Click
+‘View’ (shown on previous page) to edit or view credentials for the supplier listed in
+that row.
+
+Upon opening existing or new cXML credentials (via ‘add cXML Settings’) the
+configurations are organized into 2 tabs; ‘Incoming cXML Document’ and Outgoing
+‘cXML Document’. The next 2 sections explain the data contained in these
+configurations.
+
+
+
+Enable cXML Suppliers
+If creating credentials for a new supplier you
+must select the ‘Output Method’ on the supplier
+record as ‘cXML’. (shown below)
+
+Master Data -> Suppliers
+
+
+
+
+Incoming cXML Documents
+Types of Incoming cXML Documents Vroozi supports:
+
+   1. Purchase Order Acknowledgement
+
+   2. Purchose Order Confirmation (including disputes)
+
+   3. Advanced Shipment Notice
+
+
+                                                                          Admin Guide 56
+                                                                           Updated 5/21/2021
+   4. Invoice/Memo
+
+Select Document Type: Incoming Documents can be selected as either
+‘Invoice/Memo’ or ‘Purchase Order Acknowledgement’.
+
+NOTE: In order to effectively configure ASN receipt, they must also be enabled on
+the supplier record.
+
+
+Complete the following fields:
+
+   1. Supplier: Confirmation of supplier record selected.
+
+   2. Document Type: Select type of document being edited or added.
+
+   3. Submission URL: This field will auto-populate once the user selects the
+      Output method as cXML or turns on the Invoice Receipt toggle.
+
+   4. Select Credentials: Existing Records will list previously created credentials
+      whereas a new record at point of creation will only have the option to select
+      ‘New’.
+
+   5. From Domain: This information should be
+      requested from and provided by the Supplier
+
+   6. From Identity: Supplier Provided
+
+   7. To Domain: This information should be requested
+      from and provided by the Supplier
+
+   8. To Identity: Vroozi,Inc
+
+   9. Sender Domain: Auto created for default
+      credentials and can also be user provided or
+      updated
+
+   10. Sender Identity: Auto created for default credentials can also be user
+       provided
+
+   11. Shared Secret: Auto created for default credentials can also be user provided
+
+   12. Save
+
+   13. Any cXML credentials already associated with the Supplier will be viewable
+       below Cancel/Save.
+
+
+
+
+                                                                        Admin Guide 57
+                                                                        Updated 5/21/2021
+Outgoing cXML Documents
+Types of Incoming cXML Documents Vroozi supports:
+
+   ●   Purchase Orders
+Complete the following fields:
+
+   1. Supplier: The supplier will not be editable for an existing record. New records
+      can select a Supplier from your repository of existing suppliers.
+
+   2. Document Type: Currently only ‘Purchase Order’ can be selected for this
+      field.
+
+   3. Submission Url: This information should be requested from and provided by
+      the Supplier.
+
+   4. Select Credentials: Supplier Provided
+
+   5. From Domain: Supplier Provided
+
+   6. From Identity: Supplier Provided
+
+   7. To Domain: This information should be
+      requested from and provided by the Supplier
+
+   8. To Identity: Supplier Provided
+
+   9. Sender Domain: Supplier Provided
+
+   10. Sender Identity: Supplier Provided
+
+   11. Shared Secret: Supplier Provided
+
+   12. Add Extrinsic Field: Information not included in
+       standard cXML transmission. Ex: Custom Fields
+       that are required by the supplier.
+
+
+
+
+Like the ‘Outgoing cXML Documents’ tab any pre-existing transmission
+configurations for the selected supplier will be listed below the Cancel/Save buttons.
+
+
+
+
+                                                                        Admin Guide 58
+                                                                         Updated 5/21/2021
+Downloadable cXML Templates
+Sample cXML transmissions are available for download from the cXML Setup
+sub-category.
+
+Here, you can download sample Invoice, Memo and PO Acknowledgements. Click
+any of the templates to open the template in a new window or tab. From this view,
+save the file and share with suppliers as needed.
+
+
+
+
+Partial view of the cXML Memo (credit) Template:
+
+
+
+
+CUSTOM FIELDS
+Global Custom Fields can be
+created and added to Vroozi
+transactional documents (PR, PO,
+Invoice, Goods Receipt, Goods
+Return).
+
+To set up a Custom field the
+following steps will require review
+or completion.
+
+   1. Complete the name & type of custom field
+   2. Select ‘Type’
+
+
+
+                                                                     Admin Guide 59
+                                                                      Updated 5/21/2021
+   3. Decide when and how the Custom View is seen.
+          ● ‘Required’: Set a Requirement for the Custom field based on Supplier
+              or Category(s). Once toggled on, select from existing master data.
+              (shown on next page)
+                 ○ A custom field defined
+                    as ‘Required’ for specific
+                    categories and/or
+                    suppliers, will be visible
+                    but not required for all
+                    other suppliers and/or
+                    categories based on the
+                    configurations defined
+                    in steps 4 and 5.
+                 ○ Ex: A document level custom field that is required for all
+                    Grainger POs will be visible but not
+                    required on all other supplier POs..
+   4. ‘Associate Custom Field to Documents’: Select
+      which documents you want to apply the custom
+      field requirements/settings to.
+   5. ‘Associate Custom Field to Line Items’: Make the
+      custom field visible on ALL line items of a specific
+      document type.
+
+
+
+Note: You may also select to associate a custom field to all line items or
+documents enabling ‘All Line Items’ or ‘All Document Types’.
+
+
+
+
+Custom Field List Default
+If List is selected as a Custom Field Type,
+Administrators may elect to designate a default
+List type for that particular custom field.
+
+
+
+
+                                                                        Admin Guide 60
+                                                                         Updated 5/21/2021
+Click the arrow displayed to the right of the Custom Field ‘List’ Type selection.
+
+Enter List Values. Once completed select the Default Value at the top of the screen.
+Once selection has been entered. Click ‘Submit’.
+
+
+
+Bulk Upload
+Bulk Custom Field upload/download options are located in the top right corner of
+the ‘Custom Fields’ view.
+
+
+
+
+To get started using Custom Fields click the cloud icon and download the Custom
+Field Template. (shown on right)
+
+Buying Organizations already using custom fields can click the
+middle downward facing arrow (shown below)to Export their
+current list of custom fields.
+
+
+
+
+To upload your populated template, select the upward facing
+arrow (shown on right)
+
+Tip! An uploaded file will overwrite any existing Custom Field
+information.
+
+
+
+Ownership change
+   ●   To initiate an Ownership change put the original owner in the 'From' line and
+       put the person you want to transfer the documents to in the 'To' line. Then
+       select the 'Submit Document Transfer' button.
+
+
+
+
+                                                                           Admin Guide 61
+                                                                           Updated 5/21/2021
+      In order to retain PO visibility within the Vroozi system, a buying organization
+      using an external system for PO creation will need to access the connector
+      through an open Vroozi API. If PO visibility is not required, no connector is
+      needed.
+
+
+
+PR Rejection Configuration
+To configure a PR Rejection, check the boxes or move the buttons from 'off' to 'on'.
+
+
+
+
+CUSTOM LABELS
+Documents -> Custom Labels -> Accounting Object Labels.
+Administrators can rename four accounting objects
+   1. Location Type
+   2. Location
+   3. Class.
+   4. Customer
+
+
+
+
+                                                                         Admin Guide 62
+                                                                          Updated 5/21/2021
+Once renamed, these 4 fields will populate throughout the entire Vroozi application.
+
+
+
+
+ACCOUNTS PAYABLE
+See the ‘Vroozi Invoice Configuration Guide’ for Invoice specific tasks and processes.
+
+SETTINGS
+Applicable for clients using the Vroozi Invoice module. Administrators should work
+with their internal Accounts Payable leadership to set up the invoicing parameters.
+
+Email Set Up
+   The Principle email account (AKA: The Hopper) will become the central
+   notification receiver for all Accounts Payable transactions.
+   1. Enter email address in the field indicated below. Select ‘Submit’
+         ● Submit - Approves via Vroozi that the email is available. 24 hours notice.
+         ● Authorize - Confirms Principle email account setup.
+
+Note: Typically set during onboarding. See Support for assistance resetting.
+
+
+
+
+                                                                         Admin Guide 63
+                                                                         Updated 5/21/2021
+   2. Click ‘Add an Alias’ to add additional notification channels.
+
+DASHBOARD
+Administrators have access to view holistic Accounts Payable data on the invoices
+being processed. Data will be organized into graphs, reports and KPIs.
+
+
+
+
+As represented in the Administrator Analytics tool, click the gear icon to schedule,
+send and export reports.
+
+
+
+
+                                                                         Admin Guide 64
+                                                                          Updated 5/21/2021
+All Please see Vroozi Purchase Analytics Guide for further details of reporting
+functionality.
+
+EXCEPTION HANDLING
+See Invoice Configuration Guide for specific details.
+
+PREFERENCES
+See Invoice Configuration Guide for specific details.
+
+
+
+
+SUPPLIER PORTAL
+Not applicable for all clients.
+
+Please reference ‘Client Guide to the Supplier Portal’ for details.
+
+
+
+
+TROUBLESHOOTING
+PO FAILURES
+Each time a PO fails the Vroozi system automatically creates a support ticket. Our
+support team will review the error message and escalate. The escalation will vary
+based on error type. Requisition originators and Administrators can view ‘Failed’ POs
+from the ‘PO Status’ view.
+
+
+
+                                                                         Admin Guide 65
+                                                                          Updated 5/21/2021
+If the PO fails based on a connection error:
+
+
+
+
+The Vroozi team will fix the connection and resend the PO to the supplier. No action
+is required by either the PO Originator or the Vroozi Administrator.
+
+If the PO fails due to missing information in Master data, the supplier record or
+the PO line items:
+
+
+
+
+The type of error will indicate whether you need to make any changes to your Master
+Data settings or the supplier’s details. Once complete, Administrators should advise
+the PO Requester to access the original Requisition, create a copy, fix any missing
+information (if applicable) and then resubmit the new Requisition. Once the
+Requisition completes any required approvals, it will now successfully convert to a
+PO.
+
+
+
+
+Track Failed POs
+
+Through ‘PO Processing Status’ in the Buy Route category of the Administrator
+panel, administrators can elect to receive PO Status reports on either a Daily, Twice
+Daily, Weekly or Monthly basis.
+
+
+
+
+                                                                        Admin Guide 66
+                                                                         Updated 5/21/2021
+The email recipient for the ‘Subscribe to the PO Transmission Report’ will default to
+the admin logged in unless edited. (shown below) Only one email can be entered to
+receive this report.
+
+
+
+
+                                                                        Admin Guide 67
+                                                                        Updated 5/21/2021
+

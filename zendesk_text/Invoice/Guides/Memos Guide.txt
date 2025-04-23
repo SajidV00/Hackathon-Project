@@ -1,0 +1,286 @@
+                 Memos Guide
+Comprehensive guide to Credit and Debit Memo functionality.
+
+
+
+Table of Contents
+
+Credit Memos                                                                 2
+   Credit Workflow                                                           2
+   Create a Credit Memo                                                      3
+
+Debit Memos                                                                  5
+  Debit Workflow                                                             5
+   Create a Debit Memo                                                       6
+
+Track Memos                                                                  8
+
+Post a Memo                                                                  9
+
+Memo Configurations                                                         10
+
+
+
+
+                                                                    Memos ​ 1
+                                                              Updated 1/13/2019
+Credit Memos
+Supplier​ issued statement of credit to a buying organization. Typically issued against
+an invoice or PO.
+
+
+
+
+C​REDIT​ W​ORKFLOW
+Example:
+Requester ​places an order for 5 laptops -> S​ upplier s​ hips the 5 laptops -> R
+                                                                                ​ equester
+submits goods receipt for 5 laptops -> A​ P Team​ pays invoice -> R   ​ equester​ returns 1
+laptop because it is no longer needed -> S ​ upplier​ issues a credit statement ​-> ​AP
+Processor ​picks up the statement of credit from the hopper and creates a credit
+memo against the Supplier document -> Credit Memo posts to external ERP -> ERP
+applies the credit to future Supplier Invoices.
+
+
+Scenarios that would require a user to create a debit memo. ‘Reasons’ as shown
+below are listed on the Debit Memo draft page.
+   ●   Returned Items
+   ●   Rebates
+   ●   Billing Error
+
+
+
+
+                                                                                    Memos ​ 2
+                                                                              Updated 1/13/2019
+  ●   Not Specified
+  ●   Other
+
+C​REATE​ ​A​ C​REDIT​ M​EMO
+
+  1. Select the Supplier issued memo from the Hopper.
+         ●   Sent via PDF email or cXML (Portal not
+             currently supported)
+
+  2. Select to ‘Create Memo’
+
+  3. To reference other transactional documents, enter
+      the Original Invoice number or Original PO number.
+
+  4. Select ‘Link to Memo’
+
+         ●   Once the appropriate document is referenced, the data will populate,
+             allowing users to add required information and item(s) included in the
+             memo.
+
+         ●   Click the Garbage can icon to remove a referenced document.
+
+
+
+
+  5. Supplier Memo #
+
+  6. Memo Date (of supplier memo)
+
+  7. Select R
+            ​ eason
+
+
+
+
+                                                                             Memos ​ 3
+                                                                       Updated 1/13/2019
+         ●   If ‘Other’ is selected an additional field will populate requiring you to
+             provide a description.
+
+   8. Add relevant note ​(optional)
+
+   9. Remove PO/Invoice items not included in the memo.
+
+   10. Enter Shipping, Tax and memo total ​(as applicable)
+
+   11. Submit
+
+         ●   Once selected users will be prompted to confirm ​Memo Destination.
+
+
+
+
+All memos are listed under Track Memos with status indicated in the right column.
+
+
+
+
+                                                                                  Memos ​ 4
+                                                                            Updated 1/13/2019
+Debit Memos
+In addition to credit memos, AP Processors can also create ​‘Debit Memos’​ within
+Vroozi. A Debit memo is a statement of a ‘credit’, that the buying organization
+creates typically against a supplier provided document. The amount in the Debit
+Memo indicates what the buying organization expects to receive back from the
+supplier.
+
+The same actions that can be applied to a Credit Memo can also be applied to a
+Debit Memo.
+
+Once ‘Create Memo’ has been selected from the navigation panel or Document
+preview screen , the memo draft can be renamed as a Debit Memo. (shown below)
+
+
+
+
+Changing the document type to Debit Memo will not change any fields on the
+memo draft. The only difference appears at the selecting of ‘Reason’. When Debit
+Memo is selected ‘Not Specified’ is no longer listed as an option as it is with a Credit
+Memo. Not Specified was removed based on the logic that a supplier would provide
+a Reason for issuing the Debit Memo. (See step 6 of ​Create a Memo.​)
+
+
+D​EBIT​ W​ORKFLOW
+Example:
+Requester ​places an order for 5 laptops -> S
+                                            ​ upplier s​ hips the 5 laptops -> R
+                                                                               ​ equester
+submits goods receipt for 5 laptops -> A
+                                       ​ P Team​ pays invoice -> R   ​ equester​ returns 1
+laptop because it is no longer needed -> A​ P Processor s   ​ elects to Create Memo and
+links debit memo draft to the Invoice or PO ​-> Credit Memo posts to external ERP
+-> ERP applies the credit to future Supplier Invoices.
+
+
+Scenarios that would require a user to create a debit memo. ‘Reasons’ as shown
+below are listed on the Debit Memo draft page.
+
+
+
+                                                                                  Memos ​ 5
+                                                                            Updated 1/13/2019
+  ●   Returned Items
+  ●   Rebates
+  ●   Billing Error
+  ●   Other
+
+
+
+
+C​REATE​ ​A​ D​EBIT​ M​EMO
+
+  1. Select ‘Memo’ under ‘Create’ within the navigation panel.
+
+         ●   This step is what differentiates a Debit Memo from the
+             Credit Memo - The debit memo will in most cases not be
+             generated from a supplier document, instead the buying
+             organization is initiating the memo.
+
+  2. Like that of the Credit Memo workflow, to reference other transactional
+      documents, enter the Original Invoice number or Original PO number.
+
+  3. Select ‘Link to Memo’
+
+         ●   Once the appropriate document is referenced, the data will populate,
+             allowing users to add required information and item(s) included in the
+             memo.
+
+
+
+
+                                                                             Memos ​ 6
+                                                                       Updated 1/13/2019
+      ●   Click the Garbage can icon to remove a referenced document.
+
+4. Supplier Memo #. Enter Memo number at the top of the form
+
+
+
+
+5. Memo Date (of supplier memo)
+
+6. Select​ Reason
+
+
+
+
+      ●   If ‘Other’ is selected an additional field will populate requiring you to
+          provide a description.
+
+7. Add relevant note (optional)
+
+8. Click the pen icon to edit/remove PO/Invoice items not included in the memo.
+
+9. Enter Shipping, Tax and memo total (as applicable)
+
+
+
+
+                                                                               Memos ​ 7
+                                                                         Updated 1/13/2019
+   10. Submit
+
+          ●   Once selected users will be prompted to confirm ​Memo Destination.
+
+
+
+
+Track Memos
+Similar to ‘Track Invoices’, within ‘Track Memos’ Memos are organized based on
+current status.
+
+
+The view under ‘All’ Memos will default to those ‘Assigned to me’, which will only
+display memos created by the individual user. Remove this field from the search bar
+to view all Memos.
+
+
+
+
+To search by type of Memo, use the ‘Type ‘filter and select either ‘Credit’ or ‘Debit’.
+
+       Selection of ‘Type’:
+
+
+
+
+                                                                                   Memos ​ 8
+                                                                             Updated 1/13/2019
+      Filtered Type View:
+
+
+
+
+Assign a Memo destination from within the ‘Track Memos’ category.
+         ○   ‘Park’ memo
+         ○   ‘Assign’ memo to another AP user
+         ○   ‘Approve’ memo
+
+
+
+
+Post a Memo
+If auto-posting has been disabled, manual posting will be required. Memos awaiting
+posting can be found under ‘Post’ -> ‘Memos’ .
+    1. Select ‘Post’ -> ‘Memos’
+
+   2. Check the box next to each memo you’d like to post or select the box at
+      header level to post all Memos.
+
+
+
+
+                                                                            Memos ​ 9
+                                                                      Updated 1/13/2019
+Memo Configurations
+The credit/debit Memo life cycle is very similar to that of an invoice.
+   1. All custom workflows created will apply to both invoices and memos.
+
+   2. Auto-posting configurations are currently not differentiated between invoices
+      and memos.
+
+Ability to post memo’s is a separate toggle within the Preferences field of the Master
+Administrator panel. (shown below)
+
+
+
+
+                                                                               Memos ​ 10
+                                                                          Updated 1/13/2019
+

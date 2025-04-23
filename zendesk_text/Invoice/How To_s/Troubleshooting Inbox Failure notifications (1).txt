@@ -1,0 +1,35 @@
+Inbox Failure Notifications
+Find out why an inbox failure has occurred and what you can do. This
+documentation only pertains to invoices and credit memos submitted via email to a
+your AP Inbox.
+
+F​AILURE​ C​AUSES​ ​AND​ W​HAT​ T​ O​ D
+                                      ​ O​ N​EXT
+Failures will occur when one or more of the following requirements have failed to be
+met. Every document submitted via email ​must​ fulfill all of the following criteria in
+order for Vroozi to accept it.
+
+   1. The document(s) must be one of the following formats: pdf, docx, doc,
+      xlsx, xls, jpeg, jpg, tif , tiff, png, or bmp
+
+          ○   Contact the document sender (supplier) and confirm that the
+              requirements must be met. Ask them to resend an updated copy that
+              meets the requirements.
+
+   2. The Document must be 25 MB or less.
+
+          ○   Reach out to the Supplier to confirm document size must be 25 MB or
+              less. Ask them to follow these requirements and resend.
+                      OR
+          ○   Split the document into smaller groups of sub documents yourself. (if
+              accessible)
+
+   3. Transactional documents must be attached as standard attachments.
+
+          ○   Suppliers must send documents as readable, downloadable
+              attachments. The Inbox does not support transactional documents
+              shared as hyperlinks to a repository such as ​Google Drive​, ​OneDrive​ etc.
+
+Please contact Vroozi Support if the recommended course of action does not yield a
+positive outcome or if you have any questions.
+

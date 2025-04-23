@@ -1,0 +1,38 @@
+Requester Document Statuses
+
+REQUEST STATUS
+Repository of the user’s Requests at various stages
+
+      Draft:              Not yet submitted for approval
+      Pending:            Awaiting Approval
+      Approved:           Auto or manually approved and converted into PO
+      Attention:          Returned back to Requester by approver(s) for changes.
+                          Must be re-submitted for approval.
+
+
+PO STATUS
+Repository of the user’s Purchase Requests that have been approved and converted
+to Purchase Orders.
+
+      Ordered:            PO created - receipt of goods has not been confirmed
+
+      Received:           A Goods Receipt has been created for the PO
+
+
+
+
+RECEIPT STATUS
+Repository of the user’s Goods Receipts. Location where Goods Receipts and Returns
+can be created.
+
+      Ready to Receive: Awaiting Goods Receipt confirmation
+
+      In Progress:        A Goods Receipt has been initiated but is not yet complete
+
+      Received:           Receipt of goods has been confirmed via the completion
+                          of a goods receipt
+
+      Returned:           Receipt of goods has been confirmed a
+                                                              ​ nd​ a Goods Return
+                          has been initiated by the Requester
+

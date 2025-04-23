@@ -1,0 +1,63 @@
+Invite Suppliers to Your Portal
+Grab & Go covering how to invite supplier representatives to your Supplier Portal.
+
+
+
+
+‘Supplier User’ Roles
+Administrator: Create users, edit the company profile, add comments to and create all
+transactional documents.
+
+Order Processor: Reject and confirm POs, create invoices and
+ASNs and add comments to transactional documents.
+
+Content Manager: Manage their Vroozi Catalog content with a
+single sign on via the Portal. Content Managers can create and
+update catalogs on the buying organization’s behalf. Buying
+organization approval will still be required before changes go live.
+
+   ●   Like and administrator and order processor, they can also
+       complete all portal transactional flows
+
+   ●   Tip!! We recommend rolling out this permission after initial
+       adoption of the platform and workflows has been executed by the supplier.
+
+
+
+Steps:
+   1. Navigate to the Supplier Users view within Supplier Portal → Users
+   2. Select ‘Invite a new user’
+   3. Link to the employee’s Supplier
+
+
+
+
+   4. Complete all details & select the user role
+   5. Customize the Invitation email message and select
+      ‘Send Invite(s)’
+   6. Supplier user’s record will now be listed in the
+      Supplier Tab of their supplier record and under
+      Supplier Portal → Users.Once a supplier user is
+      invited, their user record is not editable. If edits are
+      required, you must remove the user and create a new account.
+*Supplier invitation and supplier user creation can also be managed from the existing
+Supplier record.
+
+
+Additional step for ‘Content Manager’ Users
+Note: There are 2 steps required to set up the Content Manager role.
+The Supplier contact must be created as a Supplier Portal user in Vroozi
+Purchase and as a supplier user within the Supplier’s record in Vroozi
+Catalog.
+
+Steps:
+   1. In Vroozi Purchase via Supplier Portal User creation.
+
+   2. In Vroozi Catalog via the Supplier’s record. Enter the supplier
+      user’s email and name.
+
+
+
+
+                                                                                        2
+

@@ -1,0 +1,40 @@
+Setup AP Inbox Notifications
+Grab & Go o
+          ​ n the configuration and next steps for AP document failures.
+
+
+C​ONFIGURATION
+Configure who should be notified in the event a document fails to reach your AP
+Inbox.
+
+Located in ​Accounts
+Payable->Preferences​, select
+one or multiple users with any
+of the following roles to
+receive these notifications.
+
+   ● Administrators (including the current user)
+   ● AP Managers
+   ● AP Processors
+
+W​ORKFLOW
+When an invoice failure
+occurs, the AP Inbox
+(Hopper) view will
+display an error
+message.
+
+Recipients defined above will receive two (2) types of notifications every 24 hours
+until the failure(s) is resolved.
+
+   1. Inbox Failure Notification: ​ Sent immediately upon system recognition of the
+       failure.
+   2. Hopper Error Report:​ Sent daily until no failures occur within a 24 hour
+       period.
+
+
+
+
+See T
+    ​ roubleshooting​ document for failures causes and resolution steps.
+

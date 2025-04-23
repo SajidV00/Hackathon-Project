@@ -1,0 +1,794 @@
+        Vroozi Supplier Discovery
+                                     Guide
+Vroozi Supplier Discovery ​empowers maximum customization according to your
+organization’s unique business needs, branding and workflow. The app’s
+geo-location capabilities allow employees to locate valid suppliers within a certain
+distance of remote projects or disparate locations, and its mobile-readiness brings a
+new level of efficiency, ease and accessibility to business tasks anywhere. The secure
+Cloud directory can intelligently promote suppliers within a given geography in a
+visual, paper-free and enticing way.
+
+Discovery​ can be used as a standalone tool to identify suppliers and contract status
+or as a companion to the ​Vroozi Purchase ​module.
+
+
+
+
+Table of Contents:
+Discovery Configuration                                                                    3
+   Settings                                                                                3
+      Email Settings                                                                       3
+      Background Image                                                                     4
+      Company Settings                                                                     4
+      License Agreement                                                                    5
+
+Master Data                                                                                5
+  Users                                                                                    5
+      Discovery User Types                                                                 6
+   Suppliers                                                                               6
+      Create a Supplier                                                                    7
+          Basic Info                                                                       7
+          Business Info                                                                    8
+
+
+
+                                                                   Vroozi Discovery Guide ​ 1
+        Contract Terms                                           9
+        Insurance Info                                          10
+  Supplier Attributes                                           10
+  Supplier Categories                                            11
+  Payment Terms                                                 13
+  Contract Terms                                                13
+  Contract Status                                               14
+  Supplier Discovery Locations                                  14
+  Guidelines                                                    15
+  Project                                                       16
+  Announcements                                                 17
+  EF Workflow Group                                             18
+
+Exception Forms                                                 19
+   EF Approvals                                                 19
+     Approving an Exception Form                                19
+
+Workflows                                                      20
+  Registration                                                 20
+  Logging in                                                    21
+  View Sourcing Guidelines                                      21
+  Supplier Search                                               21
+  Create & Access Bookmarked Suppliers                         23
+  Create EF                                                    24
+     Supplier Relations                                        24
+     Competitive Bids                                          25
+  EF Status                                                    25
+  EF Status Changes                                            26
+  Run Reports                                                  26
+  Accessing Announcements                                      28
+
+
+
+
+                                         Vroozi Discovery Guide ​ 2
+Discovery Configuration
+S​ETTINGS
+The Settings allows you to brand your user’s Discovery experience.
+
+Email Settings
+Create, customize and save your Welcome and Support email responses.
+
+
+
+
+   1.   Module Type: B ​ egin by selecting the module. Customizations here can be
+        applied to both ​Vroozi Purchase​ and ​Discovery​.
+
+
+
+
+   2. Email Type: ​Select the type of email to customize. Types listed in this drop
+      down will be unique to each customer based on your use case.
+
+
+
+
+   3. Subject: C ​ ustomize the email subject line
+   4. Email Title: ​Enter a name to save the email template under
+   5. SSO Button Label:​ If using Single Sign-On enter the button label users will
+      click to access.
+
+
+
+                                                                     Vroozi Discovery Guide ​ 3
+   6. SSO Button Link: ​ Enter the SSO link that will connect your users to Vroozi.
+   7. Email Message: ​Create a customized message for new users accessing Vroozi
+   8. Customer Support Message: C   ​ reate a customized support message for your
+      non-Administrator users. This message is independent of the fields defined
+      above.
+
+
+
+
+Background Image
+Customize your URL
+and user homepage.
+   1. Enter the word(s)
+      you’d like to
+      appear at the end
+      of the Discovery
+      URL.
+   2. Select your own
+      brand image for
+      the user login
+      page.
+   3. Select your own brand image for the user dashboard.
+
+Tip! B
+     ​ efore moving on, be sure to click ‘Save’ found below this field. Log out and log
+back in to see your dashboard and url updates.
+
+
+
+
+Company Settings
+Settings -> Company Settings
+
+Select the global settings for Supplier Discovery.
+
+
+
+                                                                    Vroozi Discovery Guide ​ 4
+   1. Supplier Discovery: N  ​ ame your instance of Vroozi Discovery.
+   2. Project Label Name: R    ​ ename Projects to fit your business case.
+   3. SSO Login Button Label: C    ​ ustomize the button label that a user will click
+      when accessing Vroozi
+      Discovery from the
+      landing page.
+   4. SSO Login Button
+      Link: ​Enter the unique
+      URL. This would be
+      provided by the vroozi
+      implementation team.
+   5. Sourcing Email:
+      Determine where questions regarding sourcing and suppliers should be
+      directed to once a user selects ‘Contact Sourcing.’ You may select multiple
+      user emails. In this case each user would receive a user’s email. This field is not
+      visible to Discovery Administrators.
+
+
+
+
+License Agreement
+Enter any licensing information you would like your users to be aware of.
+
+
+
+
+Master Data
+U​SERS
+Create and manage users from this subcategory.
+
+
+
+                                                                     Vroozi Discovery Guide ​ 5
+Discovery User Types
+   1. Administrator
+         ● Vroozi Discovery administrator will have access to Master Data
+             configurations specific to Vroozi Discovery. This administrator role may
+             also be defined as a Vroozi Purchase Administrator
+   2. Power User: ​May view suppliers in a  ​ ll​ locations defined at the administrative
+      level.
+   3. Basic User: ​May view suppliers o​ nly​ in the location that user has been
+      assigned to at their user record.
+
+Permission available to both Power and Basic Users:
+         ● Allow EF approvals: This allows the user to create an ​Exception
+            Request.​)
+
+S​UPPLIERS
+Create and manage your supplier records from this subcategory.
+
+
+
+
+                                                                      Vroozi Discovery Guide ​ 6
+Create a Supplier
+   1. Select to ‘Create a New Supplier’
+
+
+
+   2. Populate Supplier tabs with applicable information. The Business, Contract
+      and Insurance Info entered will be visible on the Supplier record.
+
+
+
+
+Basic Info
+Buying organizations using only Vroozi Discovery: The following fields must be
+completed:
+         ● Name
+         ● Vendor ID
+         ● Address
+         ● Phone Number
+         ● Language
+         ● ‘Supplier Discovery’ Toggle - must be turned on. (shown on right)
+
+
+Note: ​Buying organizations using ​Vroozi Discovery w
+                                                    ​ ith other Vroozi modules will
+need to update additional toggles on this tab. Toggles will vary based on your
+Master Data configurations and business workflow needs. Please see the ​Vroozi
+Purchase Administrator Guide ​for further details.
+
+
+
+
+                                                                 Vroozi Discovery Guide ​ 7
+Business Info
+None of the details listed in this tab are required. They do however enrich the
+information your users will have access to when selecting a supplier.
+
+
+
+
+Payment Terms
+  ● Associated Payment Terms to each supplier. Payment Terms are created with
+    the Master Data category.
+
+Categories
+   ● Associate each Supplier to a specific category(s). When a user searches by
+     category all associated Suppliers will appear. (shown below)
+
+
+
+
+Description
+
+
+
+                                                                   Vroozi Discovery Guide ​ 8
+   ●   Content entered here is often provided by the Supplier but can of course be
+       customized for your specific business needs. The descriptions will then be
+       listed with the other Supplier information during a Supplier search.
+
+
+
+
+Search Keywords
+   ● Associate keywords to each supplier. Keywords can be used by your end users
+      during a Supplier Discovery Search.
+
+
+
+
+   ●   User view of a keyword search for “chair”:
+
+
+
+
+Contract Terms
+Like ‘Business Info’, none of the information listed in this tab is required. It is a best
+practice to update ‘Contract Status’, ‘Effective Date of Agreement’, ‘​ Contract Terms’​.
+
+
+
+                                                                       Vroozi Discovery Guide ​ 9
+The specific contract or other contractual documents can be attached for easy
+reference.
+
+
+ Note:​ Any information entered here, will be viewable by your users.
+
+
+
+
+Insurance Info
+Like ‘Contract Info’, none of the information listed in this tab is required. It does
+however, enrich the information your Basic and Power Users have access to.
+
+
+
+S​UPPLIER​ A​TTRIBUTES
+Direct spend to specific types of providers or social causes by creating attributes that
+can then be assigned to suppliers.
+
+
+
+
+                                                                      Vroozi Discovery Guide ​ 10
+   1. Select the ‘Name’ users will
+      see when selecting to
+      search by that attribute.
+   2. ‘Status’ will default to Active
+      but may be set as Inactive at
+      any time during creation or
+      post creation.
+   3. Write a brief attribute
+      ‘Description’.
+   4. Select a pre-populated icon
+      or upload your own.
+
+
+Note:​ ​ As shown below if the
+supplier(s) that you would like to associate to the attribute have already been
+created you can assign them to the attribute at the creation screen.
+
+
+
+
+S​UPPLIER​ C​ATEGORIES
+Allow for Supplier searching by Category! Once created, categories can be
+associated with Supplier r​ ecords​.
+
+Any Supplier created in Vroozi Purchase Master Data table with Supplier Discovery
+toggle turned on will display.
+Create and manage supplier categories.
+
+
+
+
+                                                                  Vroozi Discovery Guide ​ 11
+Create Categories
+   1. Select Type; Level 1, 2 or 3.
+
+          ✓ A ​Level 2​ category is a subcategory associated with a Level 1 category.
+
+                 ●   Example: Level 1 (parent) category is “Marketing” and the Level 2
+                     (child) category could be “Materials”.
+
+          ✓ Level 3​ category is a subcategory associated with a Level 2 and Level 1
+            category.
+
+                 ●   Example: Level 1 (parent)
+                     category is “Marketing” and
+                     the Level 2 (child) category
+                     could be “Materials” and the
+                     Level 3 category is
+                     “Brochures.”
+
+          ✓ Note: ​ A Level 1 category with
+            “subcategories” cannot be deleted
+            until the level 2 or 3 categories are
+            deleted or assigned to a different
+            category.
+
+   2. Enter ‘Company Label’. This will be a
+      category assignment displayed on any supplier record associated with it.
+
+   3. Enter ‘Category Code’.
+
+   4. Enter ‘Company Category Code’.
+
+   5. Enter a brief description.
+
+Saved Categories can then be associated with a particular supplier on the supplier
+record. (shown on right)
+Suppliers may be associated
+with multiple categories.
+
+
+
+
+                                                                   Vroozi Discovery Guide ​ 12
+Your users can then search for suppliers associated to a specific category. (next
+page)
+
+
+
+
+P​AYMENT​ T​ERMS
+Create and manage Payment Terms.
+
+
+
+
+Active Payment Terms can be associated with a particular supplier on the supplier
+record. (shown below)
+
+
+
+
+C​ONTRACT​ T​ERMS
+Create and manage Contract Terms from this view.
+
+
+
+                                                                   Vroozi Discovery Guide ​ 13
+Once created, contract terms can be selected and applied to Supplier records on the
+Contract Terms tab.
+
+
+
+
+C​ONTRACT​ S​TATUS
+Create and manage Contract Statuses from this subcategory. Once created,
+Contract Status can be
+selected and applied to
+Supplier records on the
+‘Contract Info’ tab.
+
+   ●   Only statuses listed as
+       ‘Active’ can be selected
+       on the supplier record.
+
+
+
+
+S​UPPLIER​ D​ISCOVERY​ L​OCATIONS
+Allow your users to search by location!
+
+Create and manage ‘Locations’ from this subcategory. Once created, Locations can
+be selected and applied to Supplier records on the ‘Basic Info’ tab. Once created,
+
+
+
+                                                                Vroozi Discovery Guide ​ 14
+locations can be associated with your suppliers. Only locations listed as ‘Active’ can
+be selected on the supplier record.
+
+
+
+
+G​UIDELINES
+Customize the terms and guidelines to be applied for sourcing and use of supplier
+information.
+
+
+
+
+Indicate if you would like your end users to view Sourcing Guidelines. If desired, edit
+the Sourcing Guidelines they will see.
+
+
+
+
+                                                                    Vroozi Discovery Guide ​ 15
+Guidelines created in this setting, are viewed and accessed by users at any time
+under the Sourcing Guidelines category of their navigation panel. See ​View Sourcing
+Guidelines​ for further details.
+
+P​ROJECT
+Create specific projects your team members will be working on. Existing users can
+be assigned at project creation.
+
+
+
+
+   Alternatively, users can be assigned to projects from their user record. (shown
+   below
+
+
+
+
+                                                                  Vroozi Discovery Guide ​ 16
+   The ‘Start and End Date’ indicates when users will have access to Supplier
+   Discovery. If access is open ended, administrators may leave the dates blank.
+
+
+
+
+A​NNOUNCEMENTS
+The ability to create announcements is only available at the Administrative level.
+Through the announcement
+tool administrators create
+communication for
+particular areas or types of
+users.
+
+   1. Enter the
+      announcement
+      name.
+   2. Select Type from
+      dropdown list of;
+      ‘Info’, ‘Warning’ and
+      ‘Alert’.
+   3. Assign to specific role
+      types; Basic, Power or
+      Admin.
+          ● Or check the
+               box (as shown
+               below )to send
+               communication to all roles.
+   4. Select from your unique list of Locations. You may select one or multiple
+      locations.
+          ● Or Select ‘All Locations’ box to select all previously configured locations.
+
+
+
+                                                                    Vroozi Discovery Guide ​ 17
+  5. Select Status as ‘Active’ or ‘Inactive’.
+  6. Enter announcement message
+  7. Save.
+Once created, Announcements can be updated, deactivated or removed from the
+Announcements table.
+
+
+
+
+See A
+    ​ ccessing Announcements​ for details on the recipients Announcement
+experience.
+
+
+
+EF W​ORKFLOW​ G​ROUP
+The creation of Workflow Groups
+allows administrators to create a
+specific staircase approval flow for
+EFs pertaining to particular projects.
+
+Once you enter your EF group ‘Name’,
+click into the ‘Project’ and ‘Approvers’
+field to select from pre-populated
+values.
+
+Once created, Workflow groups can
+be updated, deactivated or removed
+from the Exception Workflow Group
+table.
+
+
+
+
+                                                                   .
+
+
+
+
+                                                              Vroozi Discovery Guide ​ 18
+User Fields
+Exception Forms
+Exception Forms allow users to request a new supplier that they’d like to use for a
+specific project be added to their directory. Submitted Exception forms will be
+routed to internal employees for approval BEFORE approving and adding the
+Supplier or new Supplier service to the system.
+
+See the Worklows section for details on ​Creating​ and checking the s​ tatus​ of an EF.
+
+EF A​PPROVALS
+All Discovery users have the ‘EF Approvals’ category in their navigation, however only
+administrators will have Exception Forms populated in their views. Unless EF
+Approval Workflows are utilized, all Discovery Administrators will receive all EF forms.
+
+
+ Note:​ Customers also leveraging V​ roozi Purchase​ will still need to create
+ Administrators in V
+                   ​ roozi Discovery​.
+
+
+The Approvals view defaults to ‘Pending Approvals’; Exception Forms awaiting
+approval. Additional tabs track ‘Approved’ and ‘Rejected’ Exception Forms.
+
+Approving an
+Exception Form
+After reviewing all
+details of the EF,
+select Approve or
+Reject at the bottom
+of the view.
+
+Once the
+appropriate action is selected Administrators will be prompted to ‘Submit’ and if
+desired add ‘Comments.’
+
+
+
+
+                                                                     Vroozi Discovery Guide ​ 19
+Workflows
+R​EGISTRATION
+New users created outside of SSO will
+receive an email notification, with a
+subject line “Registration Confirmation
+with Vroozi Inc.”
+
+Follow the ‘Activate Account’ Link:
+Create your unique password and check
+box to accept terms of use. Select ‘Set
+Password’ to complete. (shown below)
+
+
+
+
+                                          Vroozi Discovery Guide ​ 20
+L​OGGING​ ​IN
+
+
+
+
+Please reference the ​Getting Started Guide​ in the Vroozi Helpdesk for details on
+updating your profile details and resetting your password.
+
+V​IEW​ S​OURCING​ G​UIDELINES
+Sourcing guidelines as defined at the administrative and executive level level can be
+accessed at any time under the ‘Sourcing Guidelines’ category.
+
+
+
+
+S​UPPLIER​ S​EARCH
+Use the Search Bar to search by keyword, location, category or specific supplier
+name.
+
+
+
+
+                                                                   Vroozi Discovery Guide ​ 21
+Example below shows a keyword search that revealed the first 3 suppliers matching
+this keyword. The location of each supplier is listed next to each Supplier Name.
+
+
+
+
+Select ‘Show all matching results’ to view the entire list of results.
+
+   1. Use ‘Refine By’ to narrow down the search by Category, Location, Attributes.
+      (next page)
+
+   2. Click the Supplier Name or ‘View Details’ to view Supplier information.
+
+   3. Click the Downward arrow to Download search results. Once clicked users will
+      see a drop down allowing them to narrow the results by location.
+
+
+
+
+Select a Supplier to view their details, including Business, Contract and Insurance
+Information.
+
+
+
+
+                                                                         Vroozi Discovery Guide ​ 22
+C​REATE​ & A​CCESS​ B​OOKMARKED​ S​UPPLIERS
+During your supplier searches, bookmark suppliers you want to easily access by
+clicking the bookmark icon next to the Supplier name.
+
+
+
+
+Bookmarked suppliers can then be accessed by the user in their ‘Bookmark’
+category.
+
+
+
+
+                                                                Vroozi Discovery Guide ​ 23
+C​REATE​ EF
+This category is always visible for Discovery Administrators but otherwise will only be
+visible for Basic or Power Users if they have the ‘EF approvals’ permission.
+
+Complete all Required Fields:
+
+   1. Requester Name:​ Only field on form that defaults based on user profile.
+
+   2. Phone: ​Reachable number for users submitting the form.
+
+   3. Requested
+      Supplier
+      Name
+
+   4. Requested
+      Supplier
+      Phone
+
+   5. Project:
+      This field
+      may be
+      renamed
+      based on Administrator configurations. Select from pre-populated options.
+      More than 1 may be selected.
+
+   6. Category:​ Select from pre-populated options.
+
+   7. Department: ​Free text field.
+
+
+
+
+Supplier Relations
+For this section the use of “Crew Member” refers to an “employee”.
+
+
+
+
+                                                                   Vroozi Discovery Guide ​ 24
+As shown below, indicate if the request is for an additional service provided by a
+supplier a
+         ​ lready l​ isted in the directory or if the request is for a net-new supplier.
+
+
+
+
+Competitive Bids
+Enter bids provided by competitive suppliers.
+
+
+
+
+EF S​TATUS
+Here users can access and view submitted EFs. Users may also access and edit EFs in
+‘Draft status’ (first tab shown below). ‘Pending’, ‘Submitted’ and Rejected EFs are not
+editable.
+
+Click through the tabs at the top of the screen to view EFs in each status; ‘Draft’,
+‘Pending’, ‘Approved’ and ‘Rejected’.
+
+
+
+
+                                                                        Vroozi Discovery Guide ​ 25
+EF S​TATUS​ C​HANGES
+Any status changes (Approval or Rejection) will trigger an email notification to the
+user who
+submitted the
+request. The email
+(as shown below)
+will include the
+unique EF
+number, details of
+the approved
+supplier and a link
+‘View Exception
+Form’ to access
+the full EF in
+Vroozi Discovery.
+
+R​UN​ R​EPORTS
+The next section focuses on the categories and workflows most often utilized by
+discovery users (basic and power).
+Download supplier reports by region or specific information.
+
+
+
+
+   1. Perform a quick download of supplier information. Isolate reporting by any
+      specific location or again by all locations.
+
+
+
+
+                                                                  Vroozi Discovery Guide ​ 26
+      ●   Basic Users can only access the Quick Contact List report type while
+          Power Users and Administrators have the ability to select from the list
+          of all Report Types. (as shown below)
+
+
+
+
+      ●   Selection of the Suppliers or Exception Form’ Report type will reveal
+          additional reporting fields that can be selected or deselected.
+
+
+
+
+2. Uncheck the various information to remove them from your custom report.
+   By default all fields are included.
+
+
+
+
+4. Complete the process by selecting the output format for your report. You will
+   receive a success message (typically within seconds) once the report is ready
+   to download. The output button for the selected report will change to include
+   ‘Download…’ The example below shows the change from ‘Excel’ to ‘Download
+   Excel’. Click to download and view your report.
+
+
+
+
+                                                               Vroozi Discovery Guide ​ 27
+A​CCESSING​ A​NNOUNCEMENTS
+Users should check for Administrative announcements each time they log into the
+system. Any new announcements will be indicated with a badge icon next to the
+Announcement bell (shown below) found at the bottom of the navigation panel.
+Simply click the bell to view the announcement.
+
+
+
+
+Announcement example:
+
+
+
+
+                                                              Vroozi Discovery Guide ​ 28
+

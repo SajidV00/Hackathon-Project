@@ -1,0 +1,31 @@
+Schedule Your Request
+If enabled by your administrator, you can schedule the submission of your for a
+future date and time.
+
+   1. On the Requisition Draft select the clock icon before selecting ‘Submit’
+
+
+
+
+   2. Set Date, Time and Time Zone.
+         ●   Date: Schedule 24 hours to 1 year in advance
+                ○   Must be at least 24 hours in advance.
+         ●   Time: Set specific hour and minutes
+         ●   Time Zone: All time zones available
+   3. Select ‘Confirm Schedule’
+   4. A notification will appear confirming the PR has
+      been successfully scheduled.
+   5. Submit the PR by selecting ‘Submit’ An additional prompt will appear asking
+      employees to verify the PR scheduling details are correct.
+
+
+
+Retrieve & View Scheduled PRs
+
+Employee can retrieve and view a scheduled Requisition in the Request Status
+category as they would other PRs.
+Notifications
+As with traditional PRs, Employees will receive email notification when a scheduled
+PR is successfully submitted for approval or to the next steps in the procurement
+workflow.
+

@@ -1,0 +1,588 @@
+          The Supplier Portal
+The Supplier Portal is a Cloud-based portal solution with ​self-service capabilities
+and point and click interface, ​creating fluent process flows and communication
+between buying organizations and their suppliers.
+Buying organization users can submit POs, send specific PO communication, submit
+change requests, receive advanced shipping notices and invoices.
+Supplier users can confirm, reject, dispute, ship and invoice purchase orders for their
+Vroozi clients. Includes a repository for POs and invoices.
+Users should also see the ​Supplier’s Guide to the Supplier Portal​ for more specific
+details on workflows within the Portal
+
+
+
+Table of Contents:
+
+The Supplier’s Portal Homepage                                                          2
+
+Supplier Portal Configuration                                                           3
+  Branding & Logo                                                                       3
+   Supplier Invitation Message                                                          4
+   Set Global ‘Supplier Portal Rules’                                                    5
+
+Invite a Supplier to the Portal                                                         7
+   From the Portal Configurations                                                       7
+   From the Supplier Record                                                             8
+   ‘Supplier User’ Roles                                                                8
+      Adding a Content Manager                                                          9
+
+User Management                                                                         10
+      All Portal Users                                                                  10
+      Manage Users from Individual Supplier                                             10
+
+Supplier’s Portal Configuration                                                         11
+  Supplier’s Business, Contract and Insurance Info                                      11
+      Output Method                                                                     11
+      Advanced Shipping Notification (ASN)                                              12
+   Auto-processing of incoming Supplier Portal Invoices                                 12
+Supplier Portal End to End Workflow                                         13
+  Confirmed PO                                                              14
+  Disputed PO                                                               15
+  Advanced Shipping Notice (ASN)                                            16
+  Invoice                                                                   17
+     Invoice Notifications                                                  19
+  Purchase Order Change Requests (POCR) in the Portal                       19
+  Push Notifications                                                       20
+
+
+
+
+                                                             Supplier Portal
+
+                                                        Updated 4/22/2020 ​ ​ 1
+The ​Supplier’s​ Portal Homepage
+
+
+
+
+ 1. Navigation Panel - N
+                       ​ avigation categories allow users to quickly access
+    documents by type. Profile may be updated via downward arrow next to
+    username.
+
+ 2. Universal Search Bar​ –​ Once selected, portal users can search across all
+    transactional documents entering their own key words or select by preset
+    search categories including but not limited to, ‘Buyer, Shipping Carrier and
+    Created Date’. If a preset search category is selected, further search criteria
+    tailored to that field will populate.
+
+ 3. Document Count​ –​ Organized by category (Pending Invoices, Payments &
+    Returns) a count of documents that have come in over the trailing 24 hours.
+    Click the document card to view.
+
+ 4. Tasks​ ​– Easy access to view or take action on all incoming documents (RFQ’s,
+    PO’s, Invoices).
+
+ 5. Activity ​– Allows a user to see the latest activity (status changes, notes and
+    messages) on all open RFQ/PO/Invoice.
+
+
+
+
+                                                                           Supplier Portal
+
+                                                                      Updated 4/22/2020 ​ ​ 2
+   6. Sales Trends –​ View trends by a specific time frame.
+
+
+
+
+Supplier Portal Configuration
+Customize the look and feel of your Supplier Portal through the creation of your own
+vanity URL, branding, customized Terms & Conditions and specific supplier
+requirements and communication.
+
+From the Master Administrator navigation panel select Supplier
+Portal → Settings.
+
+B​RANDING​ & L​OGO
+   1. Customize your login page URL.
+   2. Select the ‘Image Settings’ for your supplier invitation
+         ●   Login Page​ - background image
+                ➢ Optimal resolution 300x250 (Format supported jpg, png, jpeg)
+
+         ●   Favicon​ - image displayed on browser tab
+                ➢ Optimal resolution 225x225 (Format supported jpg, png, jpeg)
+
+         ●   Company Logo
+                ➢ Optimal resolution 1920x1064 (Format supported jpg, png, jpeg)
+
+
+
+
+                                                                          Supplier Portal
+
+                                                                     Updated 4/22/2020 ​ ​ 3
+      Finished result:
+
+
+
+
+S​UPPLIER​ I​NVITATION​ M​ESSAGE
+  ●   Customize your supplier invitation by editing or removing the provided
+      template.
+
+
+
+
+                                                                         Supplier Portal
+
+                                                                    Updated 4/22/2020 ​ ​ 4
+Sample email invitation:
+
+
+
+
+S​ET​ G​LOBAL​ ‘S​UPPLIER​ P​ORTAL​ R​ULES​’
+   ●   Select supplier communication requirements. Toggling on requires the
+       supplier team member to provide a reason before
+       rejection or dispute can be sent.
+
+
+Supplier Registration Screen Content update
+   ●   Set logo background color
+   ●   Click the eye icon to preview logo changes & supplier contact updates
+
+
+
+
+   Preview screen:
+
+
+
+
+                                                                          Supplier Portal
+
+                                                                     Updated 4/22/2020 ​ ​ 5
+1. Create or update Terms & Conditions
+
+
+
+
+2. Supplier Contact (optional)
+     ●   Include your internal support contact information. This will appear on
+         the invitation login page. This information will not replace the Vroozi
+         Support team information that appears at the bottom of the Supplier
+         Portal screen.
+
+
+
+
+                                                                       Supplier Portal
+
+                                                                  Updated 4/22/2020 ​ ​ 6
+Invite a Supplier to the Portal
+F​ROM​ ​THE​ P​ORTAL​ C​ONFIGURATIONS
+  1.   Navigate to the Supplier Users view within S
+                                                  ​ upplier Portal → Users.
+  2. Select ‘Invite a new user’
+  3. Select the supplier
+
+
+
+
+  4. Complete all details & select the user role (defined below)
+  5. Customize the Invitation email and select ‘Send Invite(s)’
+
+
+
+
+  6. Supplier user’s record will now be listed in the Supplier Tab of their supplier
+     record and under Supplier Portal → Users.
+          ●   Once a supplier user is invited, their user record is not editable. If edits
+              are required, you must remove the user and create a new account.
+
+
+
+
+                                                                                Supplier Portal
+
+                                                                           Updated 4/22/2020 ​ ​ 7
+F​ROM​ ​THE​ S​UPPLIER​ R​ECORD
+Supplier Portal user creation and invitations can also be managed from the
+Supplier’s existing record in Master Data.
+
+
+
+
+Click ‘Send Invite to’ and enter the user’s contact information. Select the Role.
+(Shown on next page)
+
+‘S​UPPLIER​ U​SER​’ R​OLES
+Assign a specific role to each ‘Supplier User’
+
+Administrator:​ T
+                ​ he Administrator can create users, edit the company profile, add
+comments to and create all transactional documents.
+
+
+                                                                              Supplier Portal
+
+                                                                         Updated 4/22/2020 ​ ​ 8
+Order Processor:​ T
+                  ​ he Order Processor can reject and confirm POs, create invoices
+and ASNs and add comments to transactional
+documents.
+
+Content Manager:​ T    ​ he Content Manager Role
+now allows the supplier user to manage their
+Vroozi Catalog content with a single sign on
+via the Portal. Content Managers can create
+and update catalogs on the buying
+organization’s behalf. Buying organization
+approval will still be required before changes
+go live.
+
+   ●   The Content Manager Portal Navigation
+       Panel will include a link to Vroozi
+       Catalog opening an additional window
+       or tab.
+
+Note: ​ At Portal Go-Live Vroozi does not recommend using the Content Manager
+role
+
+
+Adding a Content Manager
+Note: There are ​2​ steps required to set up the Content Manager role. The Supplier
+contact must be created as a Supplier Portal user in Vroozi Purchase a ​ nd​ as a
+supplier user within the Supplier’s record in Vroozi Catalog.
+Steps:
+   1. In V
+         ​ roozi Purchase​ via Supplier Portal User creation.
+
+
+
+
+   2. In ​Vroozi Catalog v
+                         ​ ia the Supplier’s record
+
+
+
+
+                                                                            Supplier Portal
+
+                                                                       Updated 4/22/2020 ​ ​ 9
+User Management
+
+All Portal Users
+Here you can manage access and permissions for ALL Portal
+Users across ALL Supplier Organizations. You can activate, deactivate and invite your
+supplier users from the ‘Supplier Users’ table.
+Supplier User Table
+
+
+
+
+   1.   Search invitees
+   2. View invite details of existing invites
+   3. Remove a user
+   4. Activate, deactivate a selected user or ‘Invite a New User’
+
+Manage Users from Individual Supplier
+
+Within the ‘Supplier Portal’ tab of each supplier’s record, any existing portal users for
+that supplier are listed. Here they can be deleted, deactivated or activated.
+
+
+
+
+                                                                              Supplier Portal
+
+                                                                        Updated 4/22/2020 ​ ​ 10
+Supplier’s Portal Configuration
+S​UPPLIER​’​S​ B​USINESS​, C​ONTRACT​ ​AND​ I​NSURANCE​ I​NFO
+The Purchasing organizations Admin can update all Business, Contract and
+Insurance information for each supplier record. This is done through M
+                                                                     ​ aster Data
+-->Suppliers​.
+Within the Supplier Portal, the Portal Admin can only update ​The Business Info. The
+Contract and Insurance Info appear read only for the Supplier Portal admin.
+
+
+
+
+   1.   Output Method
+        Once an invitation has been sent to the Supplier, Supplier Portal will appear as
+        an Output Method option. The buying organization’s administrator must still
+        select Supplier Portal as their preferred method.
+
+
+
+
+                                                                             Supplier Portal
+
+                                                                       Updated 4/22/2020 ​ ​ 11
+        Once Supplier Portal is selected as the output method, 2 additional fields
+        populate.
+           ●   Output Email: ​ The email address
+               should be confirmed with the
+               Supplier.
+
+                  ○   Note: The domain listed for
+                      this email address is very
+                      important. All users added to
+                      the Portal must have a
+                      matching URL.
+
+           ●   Send Alert of PO creation to:​ T
+                                              ​ his
+               is different from the output email.
+               The email address could be for
+               specific user email addresses or a
+               department etc. Use a comma after
+               each address to add an additional
+               one.
+
+
+
+   2.   Advanced Shipping Notification (ASN)
+        This feature is enabled once a Supplier is invited to the Portal. (shown above)
+        Enablement allows the supplier to send an Advanced Shipping Notice
+        through the Portal. Once sent from Supplier, the ASN is emailed to the
+        original employee or designated account. The buying organization can use
+        the ASN to create a goods receipt if one is required
+
+A​UTO​-​PROCESSING​ ​OF​ ​INCOMING​ S​UPPLIER​ P​ORTAL​ I​NVOICES
+Based on Administrator configurations, Auto processing can be applied to Supplier
+submitted invoices via the Vroozi Supplier Portal. Creation of Invoices will be auto
+created and processed by the system instantly after the invoice is received in Vroozi.
+
+There are three (3) settings available to the user (shown on next page)
+
+   1. Create and Approve Invoices from Supplier Portal without exceptions.
+
+           ●   Applies to invoices that do not contain exceptions or errors
+
+   2. ‘That only contain one or more Goods Receipt related exceptions’
+
+   3. ‘That contain additional exceptions’
+
+
+
+
+                                                                              Supplier Portal
+
+                                                                        Updated 4/22/2020 ​ ​ 12
+          ●   Applies to invoices that contain any other Tolerance related exceptions
+              as defined by each organization. (Line Item Price, Line, Item Quantity,
+              Subtotal, etc.).
+
+
+
+
+   ●   Processing configurations are enabled in A
+                                                ​ ccounts Payable >Settings
+       >Preferences >Automatic Creation and Processing of Invoices
+
+
+
+
+Supplier Portal End to End Workflow
+Buying Organization​ -> Submits Purchase Order to Supplier for fulfillment.
+Supplier​ -> Receives email notification of the PO.
+
+
+
+
+The Repository of all POs including those in ‘Ready’ status retrieved under ‘Track
+Purchase Orders’
+
+
+
+
+                                                                            Supplier Portal
+
+                                                                      Updated 4/22/2020 ​ ​ 13
+In the Portal, the Supplier user can take 3 actions against a PO:
+          1. Confirm PO
+                 ➢ Supplier Users may C   ​ onfirm​ all or individual line items in a PO.
+                   POs with ‘Partially Confirmed’ status will convert to ‘Confirmed’
+                   once a
+                        ​ ll​ line items in a PO have been confirmed. (shown in next
+                   workflow)
+          2. Dispute the PO
+                 ➢ Like confirmations, Supplier Users may ​Dispute​ all or individual
+                   line items in a PO. A PO with 1 or more dispute items will have a
+                   ‘Partially Disputed’ status until another action has been taken.
+          3. Create an ASN against the PO
+
+C​ONFIRMED​ PO
+Buying Organization​ -> Employee receives
+email notification that their PO has been
+confirmed. Click ‘View Purchase Order’ to view
+acceptance details.
+
+
+The Employee may view the status of all POs
+from the PO Status view. As shown below
+actions taken by suppliers will result in status
+changes; ‘Confirmed’, ‘Partially Confirmed’,
+‘Disputed’, ‘Partially Disputed’ and ‘Shipped’.
+
+
+
+
+                                                                               Supplier Portal
+
+                                                                         Updated 4/22/2020 ​ ​ 14
+D​ISPUTED​ PO
+Buying Organization​ -> The Requester/Buyer who submitted the PO will receive an
+email notification that their PO has been ‘Partially Disputed’ or ‘Disputed’ by a
+Supplier user.
+
+
+
+
+From the email, click ‘View Purchase Order’ to view disputed items and details in the
+PO.
+
+
+
+
+Selecting options from the blue horizontal ellipses, theRequester/Buyer may choose
+to cancel the PO or create a Purchase Order Change Request. Per POCR settings
+defined by the buying organization administrator POCR actions such as deleting the
+item or adding a replacement item may be enabled.
+
+
+                                                                           Supplier Portal
+
+                                                                     Updated 4/22/2020 ​ ​ 15
+If ‘Cancel Purchase Order’ is selected​, users will be prompted to confirm
+cancellation.
+
+
+
+
+If ‘Change Order’ is selected​, the employee will have the ability to change the
+quantity or line item details. See ​POCR​ portion of the guide.
+
+A​DVANCED​ S​HIPPING​ N​OTICE​ (ASN)
+Supplier​ -> From the PO the Supplier user generates a Shipping Notice against a
+Purchase Order. The shipping notice may include all or a portion of the PO.
+
+Buying Organization​ ->Upon Shipping Notice submission, the Requester/Buyer
+receives email notification of the ASN.
+
+   1.   The email notification will include the
+   2. Date of Shipment
+   3. Quantity of items
+        shipped
+   4. Anticipated
+        delivery date,
+   5. PO number
+   6. Carrier details
+
+Requester/Buyer may
+
+
+                                                                             Supplier Portal
+
+                                                                       Updated 4/22/2020 ​ ​ 16
+create a Goods Receipt for the Purchase Order through the ASN by selecting the
+ellipsis button. (shown next page) Goods Receipt may also be created from the PO
+details or PO Status views.
+
+
+
+
+I​NVOICE
+The Supplier Portal allows the supplier user to generate Invoices.
+Supplier​ -> Supplier generates an Invoice directly through a Confirmed Purchase
+Order ​or​ the associated Advance Shipping Notices. (Flip to Invoice)
+
+
+
+
+The line item details and payment terms will carry over from the PO. The following
+Invoice fields must be completed by the supplier:
+
+   ●   Invoice #
+   ●   Invoice Date
+
+*Payment Due date will calculate based on Payment terms.
+
+
+
+
+                                                                           Supplier Portal
+
+                                                                     Updated 4/22/2020 ​ ​ 17
+   ●   Invoices status classifications are D
+                                           ​ raft​, ​Pending​, P
+                                                               ​ aid​, ​Partially Paid​, or
+       Rejected.
+
+   ●   Non-PO based invoices can also be created via the ‘Create Invoice’ category in
+       the user’s navigation panel. The invoice appearance will be the same as a PO
+       based invoice generated from the Supplier Portal.
+
+Buying Organization​ -> Invoice is sent to the designated Vroozi Hopper where it can
+be accessed by applicable AP employees.
+
+   ●   The ​Subject ​will identify ​Supplier Portal​ as the Invoice Source. (​ shown below)
+
+
+
+
+Based on ​auto-approval rules​ configured at the administrative level Portal Invoices
+within defined tolerances may bypass the inbox and automatically post.
+
+
+
+
+                                                                                      Supplier Portal
+
+                                                                                Updated 4/22/2020 ​ ​ 18
+Invoice Notifications
+Accounts Payable Managers will receive notifications for invoices submitted via the
+Supplier Portal by a Supplier user. The notification will appear in blue in the bottom
+left corner of the platform screen.
+
+
+
+
+P​URCHASE​ O​RDER​ C​HANGE​ R​EQUESTS​ (POCR) ​IN​ ​THE​ P​ORTAL
+Changes made to Purchase Orders at the PO level are received by Suppliers in the
+Portal.
+
+Supplier​ -> P
+             ​ urchase Orders with changes will be sent to the ‘Tasks’ field of the
+Supplier Portal dashboard. Their status will change back to ‘Ready’.. Once opened,
+the Purchase Order will display the version number, change message with affected
+line items highlighted.
+
+
+
+
+(See ​Supplier’s Guide​ for specifics)
+
+
+
+
+                                                                             Supplier Portal
+
+                                                                       Updated 4/22/2020 ​ ​ 19
+Suppliers will be asked to confirm/dispute the changes and complete the relevant
+workflow details.
+
+Buying Organization​ -> ​Requesters/Buyers will receive an email notification when a
+submitted POCR has been a  ​ pproved​ (Confirmed) or if the updated items have been
+disputed​ by the supplier,
+
+
+
+
+P​USH​ N​OTIFICATIONS
+Vroozi Purchase users who are logged in at the time a change is made to a
+document they are linked to will receive push notifications with the document
+number and change. Notifications will appear in the bottom left corner of the screen.
+(as shown below) Users may click the notification to open the affected document.
+
+
+
+
+                                                                           Supplier Portal
+
+                                                                     Updated 4/22/2020 ​ ​ 20
+

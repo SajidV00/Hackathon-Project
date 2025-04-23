@@ -1,0 +1,78 @@
+Add cXML Communication
+Grab & Go covering how to add cXML document transmissions for your suppliers.
+
+
+The Vroozi system can recognize and define multiple inbound and outbound cXML
+transmissions from a
+single supplier,
+enabling the editing or
+adding of supplier
+communication types
+in the supplier’s cXML
+transmission records.
+
+Inbound (from the
+supplier)
+   1. Invoice/Memo
+   2. PO
+      Acknowledgement
+   3. PO Confirmation/Dispute
+   4. Advanced Shipping Notice
+
+Outbound (to the Supplier)
+  ● POs
+
+
+
+PART 1: ADD OR EDIT A CXML
+TRANSMISSION TYPE
+Click ‘View’ to edit or view credentials for the listed
+supplier.
+
+   1. Supplier: Non-editable field
+
+   2. Document Type: Select type of document
+      being edited or added.
+
+All other required details should be obtained and
+confirmed from the supplier. Sample cXML
+transmissions templates may be requested by the supplier. Downloadable copies are
+available from the cXML Setup view.
+
+
+
+
+                                                                                1
+PART 2: ENABLE TRANSMISSIONS ON THE SUPPLIER RECORD
+Navigate to the ‘Basic Info’ tab in the Supplier’s record.
+PO Enablement:
+
+The ‘Output Method’ must be set to ‘cXML’.
+
+While it is not required, we recommend entering an email address in the ‘Send PO
+Alerts’ field. This ensures a supplier contact/alias receives an email notification each
+time a cXML transmission is sent from
+the Vroozi system.
+
+Additional Transmissions:
+
+   1. PO Acknowledgement
+
+   2. PO Confirmation/Dispute
+
+   3. Advanced Shipping Notice
+
+   4. Invoice/Memo
+
+Depending on the transmission type
+added, select the appropriate
+corresponding toggle .
+For example, if you entered the transmission credentials for cXML Confirm/Dispute in
+Part 1, toggle on ‘Allow cXML PO Confirmation’. By default this and all transmission
+toggles will be set to Off.
+
+
+
+
+                                                                                           2
+

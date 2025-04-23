@@ -1,0 +1,48 @@
+Invoice and Memo Statuses
+Overview of AP statuses
+
+
+Approve Invoices/Memos
+Repository for each AP Processor to access their assigned invoices.
+
+      Pending:            Document indexing has been completed by AP Processor
+                          and is now awaiting approval before P
+                                                              ​ osting​ can be
+                          completed.
+
+      Approved:           Document has been auto approved or approved by
+                          designated AP Approvers through a defined workflow.
+
+      Rejected:           Document was rejected and sent back to AP Processor for
+                          review.
+
+
+
+Track Invoices/Memos
+Repository of Purchase Orders from all requesters at various stages of processing.
+
+      All                 Repository for documents processed by all AP users
+      Overdue:            Payment is past due
+      Exception:          Undergoing AP Exception Handling
+      Draft:              AP has begun processing but not yet assigned a
+                          destination for the document
+      Parked:             Held for processing
+      Pending:            Awaiting approval
+      Approved:           Document processed
+      Rejected:           Rejected and sent back to invoice creator for
+                          reconciliation
+      Posted:             Vroozi AP Processing is complete and sent to external
+                          service to facilitate posting.
+Approve Requests
+Repository of Purchase Requests forwarded to an AP Approver via the Approval
+workflow designed by an organization’s Vroozi Administrator.
+
+      Pending:           Awaiting approval
+      Approved:          Via auto approval or a workflow approval process
+      Rejected:          Returned back to requester for changes
+
+
+
+
+                                                                       AP Statuses​ ​2
+

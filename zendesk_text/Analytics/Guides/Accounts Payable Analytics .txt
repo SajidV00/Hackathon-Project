@@ -1,0 +1,188 @@
+   Accounts Payable
+       Analytics
+    Guide for users with access to the Accounts Payable Dashboard
+
+
+The Accounts Payabledashboard is featured in all Administrator navigation panels
+and may also be added as a user permission at each user’s record or via the user
+builk upload tool. See the administrator guide for more information.
+
+
+
+
+Table of Contents:
+Accounts Payable Dashboard                                                           2
+   Invoice Data                                                                      3
+   PO Data                                                                           4
+   Invoice Creation Data                                                             4
+   Open Po Data                                                                      6
+Schedule & Share Reports                                                             8
+
+   Report Filters                                                                    8
+
+   Export Reports                                                                    9
+
+   Download Reports                                                                 10
+
+   Send Reports                                                                     10
+
+
+
+
+                                                                        AP Analytics ​1
+
+                                                                Last Update 10/14/2020
+A​CCOUNTS​ P​AYABLE​ D​ASHBOARD
+Accounts Payable Dashboard access can be assigned to any user at their user record
+or if added to the user’s credentials in an uploaded bulk user file.
+
+Users with access can retrieve the AP Dashboard from the ‘Dashboard’ category of
+their navigation panel.
+
+Upon login users will be navigated to the Dashboard page where they can view
+holistic data on the invoices being processed. Data is organized into graphs, reports
+and KPIs.
+
+
+
+
+                                                                          AP Analytics ​2
+
+                                                                   Last Update 10/14/2020
+I​NVOICE​ D​ATA
+Displays complete list of all Invoices. Upon login data is organized newest to oldest.
+
+
+
+
+Select the downward arrow in each column to sort by column data.
+
+
+
+
+                                                                           AP Analytics ​3
+
+                                                                    Last Update 10/14/2020
+PO D​ATA
+All Purchase Orders currently in the system. Data is organized newest to oldest. Each
+PO line displays PO creation, Submitted dates, Supplier Id and Buyer. Data does not
+include original PR number or Split Type Value.
+
+
+
+
+I​NVOICE​ C​REATION​ D​ATA
+This dashboard contains the following metrics:
+
+   1. Created By: ​ Displays total document count by status per AP user.
+   2. Initiator Invoice Count: ​Graph of total Invoices created over the trailing 3
+      months.
+   3. Missing PO #:​ Organized by AP user over the trailing 3 months
+   4. Suppliers Missing PO#: ​Supplier invoice count over the trailing 3 months.
+
+
+
+
+                                                                          AP Analytics ​4
+
+                                                                   Last Update 10/14/2020
+       AP Analytics ​5
+
+Last Update 10/14/2020
+O​PEN​ P​O​ D​ATA
+Graphics and reports displaying data for POs that have not yet been invoiced.
+
+   1. Overall count of documents of ‘Not Received' Invoices
+   2. Overall count of documents in ‘PO Received’ by not Invoiced
+   3. Table of orders without received invoices
+   4. Table of POs received that have not been invoiced.
+
+
+
+
+Visual Displays for dashboard looks 1 & 2 (shown above)
+
+   ●   Click on the number to view a geographic visual
+       representation of Open POs origin. (shown on next
+       page)
+
+
+
+
+                                                                        AP Analytics ​6
+
+                                                                 Last Update 10/14/2020
+●   Select ‘Table’ to View the data as a Table.
+
+
+
+
+                                                         AP Analytics ​7
+
+                                                  Last Update 10/14/2020
+S​CHEDULE​ & S​HARE​ R​EPORTS
+Schedule a report to be sent out at regular intervals via email or sftp.
+Reports can be sent to any user role within your organization.
+   1. Select the gear icon in the right corner of the screen.
+   2. Select ‘Save & Schedule’
+
+
+
+
+   3. Define the format of the report to be sent, the delivery schedule, etc.
+
+
+
+
+R​EPORT​ F​ILTERS
+Filtering allows the user to filter data into something more meaningful. To use the
+filter apply the following:
+
+   1. Select a report Category and navigate to the Filter (top left corner)
+
+
+                                                                            AP Analytics ​8
+
+                                                                     Last Update 10/14/2020
+   2. In the drop-down menu select filtering parameters (will vary slightly
+      depending on the category.
+   3. Select Run.
+
+
+
+
+E​XPORT​ R​EPORTS
+You can select to export data through the Vroozi Analytics module. Select the gear
+icon to reveal download options.
+
+   1. Use the menu navigation to select download data
+
+
+
+
+   2. Select desired action.
+
+
+
+
+                                                                         AP Analytics ​9
+
+                                                                  Last Update 10/14/2020
+D​OWNLOAD​ R​EPORTS
+Name & Select formatting preferences (below)
+
+
+
+
+S​END​ R​EPORTS
+Customize and select a recipient(s) to send the exported data to. Recipients may
+include individuals with or without a Vroozi account. Sharing a report will not
+provide access to Vroozi, simply a file that can be opened via the email notification.
+
+
+
+
+                                                                          AP Analytics ​10
+
+                                                                    Last Update 10/14/2020
+

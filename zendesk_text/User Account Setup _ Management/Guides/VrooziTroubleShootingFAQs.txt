@@ -1,0 +1,96 @@
+      Vroozi Troubleshooting FAQs
+
+Table of Contents:
+
+General Knowledge                                                                            1
+  Compatible Browsers and versions                                                           1
+
+Troubleshooting                                                                          2
+  Help Network                                                                           2
+  Help Desk "Triage" Questions                                                           2
+  FAQs                                                                                   3
+
+
+
+
+General Knowledge
+Compatible Browsers and versions
+  ●   Internet Explorer: 10*,11* (All versions of IE less than IE 10 are not supported for
+      PMAN)
+  ●   Chrome: (Version 85.0.4183.83),
+  ●   Chromium: (Version 81.0.4044.0),
+  ●   Firefox: (Version 80.0.1)
+  ●   Microsoft Edge: [Version 85.0.564.51 (64-bit)]
+
+
+
+
+                                                                                             1
+Troubleshooting
+Instructions
+Please review these FAQs with troubleshooting tips before placing a Helpdesk ticket
+with the Vroozi Support team.
+
+Tickets to Vroozi Support team should include your answers to the Triage Questions
+below.
+
+Don’t forget you can often find answers to your questions in our Vroozi Library
+https://vroozi.zendesk.com​.
+
+
+
+Help Network
+Vroozi Support Ticket Form:
+
+https://vroozi.zendesk.com/hc/en-us/requests/new
+
+Training Services &Questions:                         T​raining@vroozi.com
+
+Customer Success:                                     Success@vroozi.com
+
+
+
+
+Help Desk "Triage" Questions
+To aid in a successful and timely resolution, answers to the questions below and any
+troubleshooting already attempted should be provided in escalation to the Vroozi
+Support Team
+
+   1. What type of device are you using? (Windows, Mac, tablet, etc)
+   2. What browser & version are you using (Chrome, FIrefox, IE 10, etc)
+   3. What is your login/connection type (username, email, SSO)
+   4. What product are you using (PMan, SmartOCI, etc
+   5. What roles/permissions do you have?
+   6. What document/process type are you doing (PR, PO, GR, Inv, approval, etc)?
+   7. Is the product not functioning or functioning incorrectly?
+         ●   Example of ​Not Functioning "​ I can't enter a PR"
+         ●   Example of ​Functioning Incorrectly​ "the quantity doesn't match"
+
+                                                                       Troubleshooting ​2
+ 8. Did you use any KB or Help tools that caused problems/confusion?
+ 9. What is the severity of the problem (in accord with published guidelines)?
+
+
+
+FAQs
+ ✓ I’ve been locked out/My Password isn’t working.
+
+    Please reach out to your administrator who can trigger a password reset for
+    you.
+
+ ✓ My requisitions aren’t going to the correct person for approval.
+
+    Please reach out to your administrator who can update the approver listed in
+    your account.
+
+ ✓ I need to have an item added to a catalog.
+
+    Please see your catalog administrator or content team regarding the item you
+    would like to have added. Alternatively, you may choose to create a
+    Non-Catalog​ order for the item.
+
+
+
+
+                                                                   Troubleshooting ​3
+

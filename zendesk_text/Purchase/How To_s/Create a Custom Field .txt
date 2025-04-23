@@ -1,0 +1,74 @@
+Create a Custom Field
+Create a custom field at the line item or document level. Configurations can be found in
+the Administrator panel under D ​ ocuments -> Custom Fields. ​All existing custom fields can
+be updated, deleted or inactivated from this view.
+
+
+P​ROCESS​:
+To get started ‘Create a Custom Field’. The following steps will require review or
+completion. Global
+Custom Fields can be
+created and added to
+Vroozi transactional
+documents
+(Requisition, Purchase
+Order, Invoice, Goods
+Receipt, Goods Return).
+
+To set up a Custom
+field the following steps
+will require review or
+completion.
+
+   1. Complete the name & type of custom field.
+   2. Select ‘Type’. ​See last page for details on ‘List’ type.
+
+
+
+
+   3. Decide when and how the Custom View is seen.
+        ● ‘Required’: S ​ et a Requirement for the
+            Custom field based on Supplier or
+            Category(s). Once toggled on, select from
+            existing master data.
+
+
+
+
+                                                                                           1
+   4. ‘Associate Custom Field to Line Items’​: Make the custom field visible on ​ALL​ line
+      items.
+
+
+
+
+   5. ‘Associate Custom Field to Documents’​: Select which documents you want to
+      apply the custom field requirements/settings to.
+
+      Alternatively, custom fields not associated at configuration can be associated with a
+      particular document type by selecting ‘Associate Custom Field’ within that
+      document’s listed custom fields.
+
+
+
+
+Custom Field ​List​ Default
+If List is selected as a Custom Field Type, Administrators may elect to designate a default
+List type for that particular custom field.
+
+Click the arrow displayed to the right of the Custom
+Field ‘List’ Type selection.
+
+Enter List Values. Once completed select the Default
+Value at the top of the screen. Once selection has
+been entered. Click ‘Submit’.
+
+Any Custom fields associated with a document type
+will also then display within that document types
+sub-classification.
+
+
+
+
+                                                                                              2
+

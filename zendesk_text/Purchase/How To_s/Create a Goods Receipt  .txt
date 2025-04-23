@@ -1,0 +1,72 @@
+Create a Goods Receipt
+Verify the receipt of PO items.
+
+GOODS RECEIPT
+   1. Select ‘Receipts’ in the blue navigation bar.
+   2. Here you will find a repository of all Purchase orders. The view will default to the
+      ‘Ready to Receive’ Tab, listing all POs awaiting completion of a goods receipt. If
+      desired, use the search bar to narrow down your results further.
+   3. Click the Delivery Truck icon in the left most column next to the PO you would like
+      to confirm receipt of. (below)
+
+
+
+   4. From the Goods Receipt ‘Draft, Review the Line Item details and enter the Quantity
+      Received*
+          ●   If you received everything as expected, click ‘Receive All’. This auto-populates
+              the Qty to Receive column and updates the Total Price and Total Amount
+              areas to display the received dollar amounts. Otherwise, comeb
+
+
+
+
+   5. Optional fields: Bill of Lading, Packing Slip or Comments to
+      the Goods Receipt.
+   6. Click ‘Confirm Receipt’. This document will be relocated from
+      the Ready to Receive to the Received status area as historical
+      data. (not pictured)
+
+
+Note: You can open the Goods Receipt draft from the PO view by clicking the horizontal
+ellipsis at the bottom right hand corner. (right)
+*Partial Goods Receipt on next page.
+
+
+
+GOODS RECEIPTS FOR PARTIAL DELIVERY (1/2)
+If the delivery of ordered products is incomplete, contact the vendor outside of the
+system to create a Partial Goods Receipt for the items that have been received.
+The process for confirming partial goods receipt will be the same as for a Complete Goods
+Receipt except at step 6 (above) you will enter only the number received.
+   ➔ After selecting ‘Confirm Receipt’, you will be prompted to confirm the Partial Goods
+     Receipt.
+
+
+Note: If the non-received items will never be received due to
+discontinuation or reasons. Select ‘Close PO for Receiving’. (right)
+This will remove any further receipt requirements for items related to
+the particular PO.
+
+
+
+COMPLETE A PARTIAL GOODS RECEIPT (2/2)
+Partially received POs will remain in the ‘Ready to Receive’ tab until they are completed.
+
+
+
+
+To complete the Goods receipt, return to ‘Ready to Receive’ and again select the delivery
+truck icon and complete steps 4-8 above.
+
+MISSING GOODS RECEIPTS
+POs with Missing Goods receipts may be sent back to you to confirm receipt before the
+Supplier Invoice can be paid. Goods Receipt requirements are set by your Administrators.
+POs escalated to you for receipt confirmation are housed under ‘Resolve Invoices’ in your
+navigation panel.
+See Exception Handling materials for further details.
+
+
+
+
+                                                                                             2
+

@@ -1,0 +1,123 @@
+Express Shopper Quick Guide
+The Express Shopper creates shopping lists within ​Vroozi Purchase​ that are then sent
+over to Power Shopper for review in ​Vroozi Catalog​. As a final step, any Shopper lists that
+convert to a cart by the Power Shopper will be sent to your system’s external system for
+PO conversion.
+
+
+
+H​OMEPAGE
+
+
+
+
+   1. Displays the most recently reviewed catalog items.
+   2. Displays a Shopper’s ​5​ most recent carts. Each row displays one cart detailing the
+      cart number, the amount and status. (see statuses’ below) Click view more to view
+      the repository of all carts you have submitted.
+   3. View your saved lists and/or create a ‘new list.’
+   4. View catalogs and begin adding them to a list.
+          ● Click the star in the top left corner of each supplier card to
+            pin it to the top of your Catalog list.
+   5. View the entire repository of shared lists. Use the search bar to
+      search for a specific list. You can search by number, supplier or keyword.
+
+
+
+
+B​UILD​ A
+        ​ ​ L​IST
+
+You may build a shopping list from pre-configured products and services or forms from
+contracted and approved suppliers. The products are organized and defined by the
+catalogs displayed on the shopper’s homepage. Once a catalogis selected users can begin
+viewing and adding items to their list.
+
+Select a catalog card to open and view a specific catalog.
+
+
+
+
+From the catalog view, you can do the following:
+   1. Click an item name to view product specifications
+   2. Refine the search criteria
+   3. Add the item to their cart
+   4. Add the item to a new or existing list template​.
+
+
+Once you have added items to your list, click the Cart icon in the top corner of your screen
+to display your cart items. Here you can update quantity and delete items from your list.
+
+
+S​END​ L​ISTS​ ​TO​ P​OWER​ S​HOPPERS
+Once the list is ready for review, you are just a few clicks away from sending to a specified
+Power Shopper.
+   1. Complete all required details and update line items if needed.
+   2. Select ‘Submit’.
+
+
+
+
+   3. After clicking ‘Submit’ and the Requisition is ​finalized​, Shoppers are prompted to
+      select from the applicable list of Power Shoppers.
+
+
+
+
+                                                                                     Shopper​ 1​
+                                                                               Updated 7/22/2020
+Once a list has been Sent to a Power Shopper it remains in Pending status until either of
+the following:
+   ●   Pending​ =
+                ​ The list has n
+                               ​ ot​ yet been added to a cart
+   ●   Approved:​ L ​ ist has been added to the Power Shopper’s cart
+   ●   Rejected: ​ L
+                   ​ ist has been deleted by the Power Shopper
+
+S​AVE​ ​A​ L​IST
+Lists for products frequently requested
+together can be prepared and saved to use
+as often as needed. You may create as many
+lists as you like.
+Click the star next to any item to add that
+item to the default ‘Favorites’ list or create a
+‘new list’.
+If ‘new list’ is selected, you can customize the list name and/or add the list item to your
+cart.
+
+
+
+
+R​EJECTED​ L​IST
+Power Shoppers may reject a list that has been shared by you. In this case the list will be
+sent back to you for review. List rejection will trigger an email notification to you. The
+email will include any notes submitted explaining the reason for rejection. Click ‘View
+Rejected Cart’ to navigate directly to the rejected list.
+
+
+
+
+                                                                                      Shopper​ 2
+                                                                                               ​
+                                                                                Updated 7/22/2020
+Once accessed within V​ roozi Purchase​ you can view the rejection message within List
+view. Here you can also change quantities, remove items and then Resubmit List’.
+If additional items need to be added to the current ‘Rejected’ List, click the horizontal
+ellipsis (shown on right) next to ‘Resubmit List’ to add the items to a new list.
+
+
+
+
+The updated list can then be resubmitted back to the Power Shopper that originally
+rejected it or a new Power Shopper as available in the Power Shopping selection
+mapping.
+.
+
+
+
+
+                                                                                     Shopper​ 3
+                                                                                              ​
+                                                                               Updated 7/22/2020
+

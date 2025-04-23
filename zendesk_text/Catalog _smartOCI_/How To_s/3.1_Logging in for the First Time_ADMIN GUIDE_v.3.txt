@@ -1,0 +1,29 @@
+LOGGING IN FOR THE FIRST TIME (ADMIN ONLY)
+
+To log in to smartOCI, you must first receive a welcome email. Follow the steps below to
+access the system for the first time.
+
+1. Locate the “Welcome to smartOCI” email. This will be sent from
+   notifications@vroozi.com. If you are not able to find it, we recommend checking your
+   spam box.
+2. Click on the personalized link or paste it into the URL field of your browser. You will be
+   redirected to the smartOCI portal.
+
+
+
+
+3. Type in your user name and temporary password provided in the welcome email and
+   login. You may copy and paste the password into the field.
+4. After logging in, you want to update your User information and password. To do this,
+   start by click on the Account area below your name.
+5. Select the Preferences option.
+
+
+
+
+6. Before you are able to update your password, you must first fill out all of the mandatory
+   User Information marked with a red asterisk*.
+7. Expand the Password Change area by clicking on the carrot.
+8. Type or paste in the temporary password in the Old Password field.
+9. Type in a New Password and Confirm the same password.
+

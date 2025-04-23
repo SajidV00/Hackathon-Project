@@ -1,0 +1,325 @@
+          Purchase Approver
+               Guide
+The following guide covers all aspects of the Vroozi Financial Approver role in Vroozi
+Purchase. Based on your organization's requisition workflow there may be many
+approvers in the approval chain.
+
+
+
+
+Table of Contents:
+Profile                                                                                  1
+   Personal Details                                                                      1
+   Pin Code                                                                              1
+Approver Settings                                                                        1
+   Alternate Approver                                                                    1
+        When to Use                                                                      2
+        Need to Know                                                                     2
+   Out of Office                                                                         2
+        Need to Know Info:                                                               2
+        Next Steps                                                                       2
+   Enable Out of Office                                                                  2
+Navigation Panel                                                                         3
+   Filters                                                                               4
+Requisition Types                                                                        4
+   Approve by logging into Vroozi                                                        5
+   Approve from your Mobile Device                                                       6
+   Approval Notes                                                                        6
+Edit a Requisition                                                                       7
+   Apply To All Editing                                                                  8
+   Split Account Assignment                                                              8
+PROFILE
+PERSONAL DETAILS
+Upon logging in for the first time, all users should update their personal details. See
+your Getting Started Guide for further details.
+
+
+
+PIN CODE
+For approvers the Pin Code field is particularly important. See the Approve on the Go!
+section for further details.
+
+
+
+
+APPROVER SETTINGS
+ALTERNATE APPROVER
+
+Essentially acts a “clone” of the original approver
+
+  ●   Receives the same email notifications and can perform the same
+      actions as the original approver
+
+  ●   “Inherits” the same attributes as the original, including approval levels
+      and next approver
+
+  ●   Requisition and approval status show up in both user’s approval queues
+                                                                        Approver Guide 1
+                                                                          Updated 5/16/2023
+When to Use
+  ● A long-term “back-up” or “second contact” for approvals
+
+  ● Coverage for unplanned availability
+
+  ● Minimizes maintenance activity
+
+Need to Know
+  ● This creates a scenario where both users can attempt the same action.
+
+  ● Requisitions show up in both user’s queues.
+
+  ● Changes affect only newly created documents, not previously existing
+    ones.
+
+  ● The settings are performed and visible only within the approver’s
+    profile.
+
+OUT OF OFFICE
+A temporary process that forwards emails/actions to another user
+
+  ● Retains same roles/privileges as initially set for a limited time period
+
+  ● Easy to set and control; automatically expires
+
+
+
+Need to Know Info:
+
+  ✓ Changes affect only newly created documents, not previously existing
+    ones
+  ✓ The settings are performed and visible only within your own profile
+
+
+
+Next Steps
+
+  ✓ Review your current approver levels/flow
+      ○ next approver; fallback approver; auto-forward time
+
+  ✓ Inform your Alternate or Out of Office (OOO) approver of the setting
+       ○ Alternate and OOO together are not compatible
+
+ENABLE OUT OF OFFICE
+                                                                 Approver Guide 2
+                                                                   Updated 5/16/2023
+*OOO is only available if activated by your Vroozi Administrator.
+
+To get started, open your User Profile and turn on the Vacation
+Responder “On”. (shown on right) Once the Vacation Responder
+is activated, complete the following steps:
+
+   1. Enter the Starting Date
+
+   2. Enter the Ending Date
+
+   3. Complete Out of Office Message.
+
+   4. Select if you want your approvals
+       forwarded. If a Specific Approver is
+       selected, you will be prompted to
+       select that person.
+
+         ●   *Note: Selection of ‘Do Not
+             Forward’ could be
+             overwritten by any global
+             approval queue settings
+             defined by your
+             administrator.
+
+   5. Select an Approver from the list of Approvers defined for your organization.
+
+   6. ‘Save Out Of Office Settings’ to confirm vacation changes
+
+
+
+
+NAVIGATION PANEL
+When logging in, Approvers immediately access the Approve Requests screen with
+the filter “Status: Financial Review”. The search results display all the pending
+Purchase Requests that require a Financial approval by that approver. There are
+three “Status” filters that the user can select:
+
+   ●   Financial Review: Requests that are pending approval based on the value of
+       the Purchase Request and the approver’s approval limit.
+
+   ●   Approved: Purchase Requests that the approver has reviewed and approved.
+
+   ●   Rejected: Purchase Requests that the approver has reviewed and rejected.
+
+
+
+
+                                                                     Approver Guide 3
+                                                                        Updated 5/16/2023
+FILTERS
+   Additionally, the following Filters can be applied:
+
+   ●   Approved By Me: All Purchase Requests approved by the approver.
+
+   ●   Supplier Name: Purchase Requests that contain a selected supplier.
+
+   ●   Status: Purchase Requests based on the selected status: Financial Review,
+       Approved, or Rejected
+
+   ●   Requester: Purchase Requests from a specific Requester.
+
+   ●   Delivery Date: Purchase Requests with a delivery date on, after, or before a
+       given date.
+
+
+REQUISITION TYPES
+Within Vroozi, requesters may submit several types of requisitions.
+
+   ●   Catalog: Includes both searchable Internal Catalogs and Punchout Catalog
+       items and services.
+
+   ●   Non-Catalog: Free Text line items for vendor products or services that are not
+       available in the catalogs.
+                                                                      Approver Guide 4
+                                                                        Updated 5/16/2023
+      *Requisitions submitted may include both free text and catalog items.
+
+  ●   Blanket or “Limit”: A type of Non-Catalog Free Text request that consists of a
+      requirement that will be delivered over a period of time.
+
+  ●   Invoice Plan: An automatic scheduled payment plan, like scheduled monthly
+      lease payments or interval payments. This section outlines how to create an
+      Invoice Plan by using the Non-Catalog Free Text Request functionality.
+
+APPROVE BY LOGGING INTO VROOZI
+
+
+  1. At login you are directed to the Approve Requests screen with the filter
+     “Status: Financial Review” applied by default:
+
+
+
+
+  2. Select the request where you would like to take action
+
+  3. In the Purchase Request, select ‘Approve’, ‘Reject’, or ‘Edit’
+
+         a. Note: Edit is only available where configured.
+
+         b. Financial approvers are limited on what they can edit. See the section
+            ”Edit a Requisition”. .
+
+
+
+
+                                                                      Approver Guide 5
+                                                                        Updated 5/16/2023
+APPROVE FROM YOUR MOBILE DEVICE
+Once your 4 digit Pin Code has been saved in your user Profile, you
+are ready to approve on the go!
+
+Approve or Reject: Tap/Click the “APPROVE” option. You will be
+directed to the Vroozi Authentication screen where you’ll enter
+your PIN code and reason.
+
+Once Rejection or Approval is complete a confirmation screen will
+appear.
+
+
+
+
+APPROVAL NOTES
+Whether approving from your computer or on
+the go, approval or rejection of a requisition will
+prompt Approvers to provide a note. This is an
+optional field.
+
+
+                                                                      Approver Guide 6
+                                                                        Updated 5/16/2023
+EDIT A REQUISITION
+Depending on individual permissions set up at user creation, approvers may have
+the ability to edit the accounting segments on a Requisition.
+
+
+
+
+To edit the details of a request:
+
+   1. Click ‘Edit’ at the bottom of the Requisition view.
+
+   2. The information at the top of the request form includes the Request name,
+       Supplier, Submitted date and Requester.
+
+   3. The price and any items related to the specific line items, services or goods
+       cannot be edited.
+       Only the line item
+       accounting string
+       is editable with
+       the Approver
+       editing
+       permission. (See
+       next page)
+
+   3. Select to Save
+       Item.
+
+
+                                                                      Approver Guide 7
+                                                                         Updated 5/16/2023
+      Changes to these fields will not require the review of the Requester but may
+   again be changed by another approver if part of a workflow. Or they could be
+   adjusted at the AP level when approving the Purchase order that by that point
+   has converted to an invoice.
+
+      If your organization does not allow changes at the approver level, adjustments
+   are left to the AP team who again can make changes once the PR becomes
+   converted to an Invoice.
+
+      Once all details are reviewed, select ‘Done’ to pass the Requisition forward to
+   the next stage of the procurement process.
+
+APPLY TO ALL EDITING
+   1. Select the line items you would like to update with the same accounting
+      information by checking the boxes to the left of each.
+
+   2. Click 'Apply to All'.
+
+
+
+
+   3. Make appropriate changes and select ‘Apply Changes'. You will be returned to
+      the Line Item Overview and your Line Items will be updated.
+
+SPLIT ACCOUNT ASSIGNMENT
+While in the Edit a Request screen, you have the choice to amend the Line Item
+Details of the items or services you have selected.
+
+   1. From the Purchase Request screen, locate the item you would like to split and
+      click on the linked item Description.
+
+   2. Scroll down to the Accounting section.
+
+   3. Choose how to split the Account Assignment—by Quantity, by Value or by
+      Percent.
+
+   4. Choose an Account Category (i.e. Cost Center) from the drop down menu. The
+      Cost Object options will automatically update based on your selection.
+
+
+
+
+                                                                      Approver Guide 8
+                                                                         Updated 5/16/2023
+5. Choose the corresponding Cost Object.
+
+6. Enter your Quantity, Value or Percent for the first part of your Accounting Split.
+
+7. Input the split information for the second Account Category.
+
+8. If more than two splits are needed, click the + button and continue filling out
+   the relevant information for each until completed.
+
+9. Scroll down and click the Save button to update the Line Item. (not pictured)
+
+
+
+
+                                                                    Approver Guide 9
+                                                                       Updated 5/16/2023
+

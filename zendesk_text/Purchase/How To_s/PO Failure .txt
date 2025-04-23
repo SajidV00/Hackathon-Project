@@ -1,0 +1,68 @@
+PO Failure
+Grab & Go covering why POs fail and what next steps are required when they do.
+
+
+
+
+How will I know a PO has failed?
+
+Each time a PO fails the Vroozi system automatically creates a support ticket. Our
+support team will review the error message and escalate. The escalation will vary
+based on error type. Requisition originators and Administrators can view ‘Failed’ POs
+from the ‘PO Status’ view.
+
+If the PO fails based on a connection error:
+
+The Vroozi team will fix the connection and resend the PO to the supplier. No action
+is required by either the PO Originator or the Vroozi Administrator.
+
+
+
+
+If the PO fails due to missing information in Master data, the supplier record or
+the PO line items:
+
+Your Vroozi Administrator may need to make applicable changes to the Master Data
+setup based on the specific error messages. Once complete, the PO Requester will
+need to access the original Requisition, create a copy, fix any missing information (if
+applicable) and then submit the new Requisition. Once the Requisition completes
+any required approvals, it will now successfully convert to a PO.
+
+
+
+
+                                                                                       1
+How can I track failed POs?
+
+Through ‘PO Processing Status’ in the Buy Route category of the Administrator
+panel, administrators can elect to receive PO Status reports on either a ​Daily, Twice
+Daily, Weekly​ or ​Monthly​ basis.
+
+
+
+
+The email recipient for the ‘Subscribe to the PO Transmission Report’ will default to
+the admin logged in unless edited. (shown below) Only one email can be entered to
+receive this report.
+
+
+
+
+Can I resend a Failed PO?
+
+No, customers are unable to resend failed POs. In the event of a connection failure,
+Vroozi will resend the failed PO. All other failed POs will remain in ‘Failed’ Status. If
+
+
+
+
+                                                                                            2
+How do C
+       ​ opy​ a Requisition?
+From the Requisition, select ‘Copy’ at the bottom of the Approved document.
+
+
+
+
+                                                                              3
+

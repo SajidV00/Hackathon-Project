@@ -1,0 +1,225 @@
+          Getting Started with Vroozi
+
+Table of Contents
+User Login                                                              1
+   Browser Compatibility                                                1
+   Accessing Vroozi SpendTech (Registration Email)                      1
+   Password Reset                                                      2
+
+User Profile                                                           3
+   Set Profile Information                                             3
+
+Navigation Tools                                                       5
+   Logo                                                                5
+   Announcements                                                       5
+   Vroozi Helpdesk                                                     5
+
+Navigation Basics                                                      7
+   Hyperlinks                                                          7
+   Expand field                                                        7
+
+
+
+
+                                                     ​Getting Started ​ 0
+USER LOGIN
+This guide outlines the steps you will need to take as a new user, including any
+technology requirements, login, and verification processes that need to take place
+before creating requests.
+
+BROWSER COMPATIBILITY
+Vroozi Purchase runs on the latest two versions of I​ nternet Explorer​, F
+                                                                         ​ irefox​, C
+                                                                                    ​ hrome​,
+and S
+    ​ afari​. Please check that your computer and/or mobile device browser is up to
+date
+
+
+
+ACCESSING VROOZI (REGISTRATION EMAIL)
+To get started, you will receive a welcome email notifying you that your account has
+been created. The look of the email may vary based on whether your organization
+uses Single Sign On Authentication or requires individual sign on to Vroozi.
+Follow the prompts in your Welcome email to begin accessing Vroozi.
+
+
+Registration for Non-SSO users:
+   1. Look for the V
+                   ​ roozi Purchase Registration​ in your email inbox from
+      notifications@Vroozi.com​. If you do not see it, check your s​ pam box.
+   2. Click the green Activate Account button. You will be redirected to the Create
+      Password window.
+          ○   If the pictures do not load, copy and paste the link below the green
+              button into your browser instead to set your password for the first time.
+
+
+
+
+                                                                             ​Getting Started ​ 1
+●   Click ‘Set Password’
+●   Your password must contain the following:
+        ○ At least 1 number
+        ○ An uppercase letter
+        ○ Minimum of 8 letters
+        ○ At least 1 non-alphanumeric number
+
+
+
+
+Note: ​ If your passwords do not match or do not meet the character
+requirements, the Set Password button will not be clickable until corrections
+are made.
+
+
+
+
+                                                                  ​Getting Started ​ 2
+   PASSWORD RESET
+   Password reset is available if you have forgotten your password, deleted or used
+   your initial ​Registration Email​.
+   1. Start by navigating to the Vroozi Vroozi Purchase login page—if you aren’t
+      already there, go to ​https://go.Vroozi.com​.
+   2. Type in your email address.
+   3. Click ‘Reset Password’. An email will be sent to you from
+      notifications@Vroozi.com​.
+   4. Create your N
+                  ​ ew Password​ following the password requirements listed above.
+      It must be different than your previous password(s).
+   5. Confirm the same password again directly below.
+   6. Click ‘​Set Password’​.
+   7. Select the ‘Click here to Log In’ link in order to take you to the V
+                                                                         ​ roozi Purchase
+      login page.
+          ○   If the pictures do not load, copy and paste the link below the green
+              button into your browser instead to set your password for the first time.
+          ○   If you click on the link and it says that it “has already been used, you
+              may have accidentally double clicked it. Try resetting your password
+              again from step #1 of this section.
+
+
+
+
+USER PROFILE
+Applies to all Vroozi Purchase roles including Sourcing, Expense
+& Analytics.
+
+SET PROFILE INFORMATION
+Before executing any task in Vroozi, verify or update your Profile Information.
+Depending on your organization.
+   1. From the Homepage, click your name to reveal a drop down menu on the top
+      left of the screen.
+   2. Enter the Personal Details including Contact Title and Telephone Number.
+      Adding your personalized avatar or Profile Picture is optional.
+
+
+
+                                                                          ​Getting Started ​ 3
+3. If you are an Approver, you will want to create a 4 digit numeric PIN Code. This
+   will enable you to approve or reject Pending Requests directly from email or
+   smartphone. (indicated below)
+4. Here you can also reset your password.
+      ○   There is a separate ‘Save New Password’ button.
+5. Once the required details are complete, ‘Save’ will become enabled.
+
+
+
+
+6. Scroll down to the bottom of the page and verify the ​Document Defaults​; C
+                                                                             ​ ost
+   Center​, C
+            ​ urrency a
+                      ​ nd​ Company Code​. Depending on your organization’s
+   protocols, the ​Document Default​ drop down options may vary from what is
+   pictured.
+
+ Note: l​ l users have the ability to edit the document default settings ​unless a
+                                                                                 ​
+ restriction has been added at user role creation. This restriction would inhibit
+ the user’s ability to edit the defaults of a PR or PO which affects the user’s
+ ability to change the document default coding set in their profile.
+
+
+
+7. If it has not already been populated, click ‘Create Address’ to setup your
+   Default Address​ for the first time​.
+8. Enter in all of the required A
+                                ​ ddress​ information.
+9. Click ‘Save Address’. Y
+                         ​ our Default Shipping Address​ has been set.
+
+
+
+
+                                                                      ​Getting Started ​ 4
+NAVIGATION TOOLS
+LOGO
+Your Logo acts as your ‘Home’ button. Clicking it will redirect you back to your login
+screen.
+
+
+
+
+ANNOUNCEMENTS
+Click the bell icon to view administrator announcements. If messages are awaiting
+your review, a notification will appear next to the bell identifying the number of
+messages.
+
+
+
+
+VROOZI HELPDESK
+   1. From the H
+               ​ omepage​, click on the H
+                                        ​ elp​ icon near the bottom left of the
+      screen. (shown below) This will open a new browser tab directing shoppers to
+      the H
+          ​ elp​ page.
+
+
+
+
+                                                                        ​Getting Started ​ 5
+2. It is recommended that you search for any articles that may answer your
+   question. If the ​Knowledge Base​ does not address what you need, click the
+   Submit a Request​ link at the top right of the page.
+3. Fill out all of the mandatory fields and dropdowns marked with a r​ ed​ a
+                                                                           ​ sterisk*​.
+
+
+ Note:​ ​ When filling out the Description area, the more specific, the better the
+ helpdesk agent will be able to assist you. Attached screenshots are optional but
+ recommended.
+
+
+4. Click ‘Submit’. You will receive a notification at the top of your screen and a
+   confirmation email immediately after submission. Any updates will be
+   communicated to you via email from the ​Vroozi Helpdesk.
+5. If you need to add more information to your ticket, or respond to a helpdesk
+   agent, simply reply to the email. You may cc other people, and they will be
+   included on ​all​ future ticket correspondences. When the ticket is solved, or is
+   pending your response, you will also be notified via email.
+
+
+
+
+                                                                       ​Getting Started ​ 6
+NAVIGATION BASICS
+HYPERLINKS
+Anytime font or document numbers are displayed in blue, this indicates a hyperlink
+to view more specific details regarding that item or document.
+Purchase Requester example:                 Accounts Payable example::
+
+
+
+
+EXPAND FIELD
+Downward arrows as shown below indicate you can expand the
+field to reveal additional options.
+Expanded Field revealed
+
+
+
+
+                                                                    ​Getting Started ​ 7
+

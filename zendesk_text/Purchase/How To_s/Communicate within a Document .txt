@@ -1,0 +1,47 @@
+Communicate within a Document
+
+The ‘Comments’ tool allows teams to centralize their
+communication. Comments are available on any procurement
+document from ​Submitted R ​ equisitions through to Invoices and
+Memos.
+
+
+Simply T
+       ​ ag, Message​ a
+                      ​ nd S
+                           ​ end!
+
+
+A​DD​ C​OMMENTS
+  From within a document, the ‘Comment’ icon can be accessed at the top of the
+  Right Action Icons. Here all users within the customer environment (and suppliers if
+  using the supplier portal) can communicate with one another. When a new
+  comment is added, those comments will live within the document throughout it’s
+  history. Any users tagged in the communication will receive
+  email notification of the comment.
+
+     1. After selecting the conversation bubble, the
+        ‘Comments’ view will expand, allowing users to ‘Add
+        comment’.
+
+     2. Comments will be viewable by all users with access
+        to the document. To specifically notify a user(s), type
+        @ to retrieve a list of users to tag in the comment.
+
+            ✓ Once the comment is saved, a the
+              communication will remain in the document
+                             history.
+
+                                        3. Any user(s) tagged
+                                    will receive an email notification of a ‘Comment’.
+
+                                       4. A user can also respond or take action against
+                                    the document by clicking on the “Respond in Vroozi”
+                                    button from the email.
+
+                                      5. Once
+         sent, all comments remain within the
+         document; creating a virtual file
+         cabinet for any issues, questions or
+         comments that may arise.
+

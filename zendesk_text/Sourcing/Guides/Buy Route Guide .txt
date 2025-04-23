@@ -1,0 +1,270 @@
+                   Buy Route
+Where buyers can create purchase orders, convert Requisition line items into PO’s,
+view PO statuses, resubmit failed PO’s, and schedule the Purchase Order Activity
+report.
+
+
+
+
+Table of Contents:
+Buy Route Configuration                                                               1
+   Enablement                                                                         1
+   Buying Groups                                                                     2
+
+Buy Route Workflow                                                                   3
+   Create Order                                                                      3
+   Buy Route (PO Status)                                                             7
+   PO Processing Status                                                              8
+   Buy Route Notifications                                                           8
+
+
+
+
+Buy Route Configuration
+Buy Route workflow should be enabled through the creation of Buying Groups.
+
+Buy Route settings can be configured for Catalog and Non-catalog items. Client
+default is automatically set to route only non-Catalog Requisitions.
+
+Vroozi Purchase Administrators can configure the behavior of the BuyRoute feature
+for their organization.
+
+
+
+
+                                                                          Buy Route ​1
+                                                                      Updated 7/13/2020
+E​NABLEMENT
+If the Buy Route toggle is enabled, all administrators can enable Buy Route for all
+non- catalog items.
+Buy Route -> Settings
+
+To apply Buy Route to Catalog items, select the additional ‘Catalog Items’
+
+
+
+
+Once this toggle is enabled, all items included in PRs, whether they are catalog
+items, or free text items; will be sent into BuyRoute. Where a Buyer with access to
+the appropriate Buyer Group, will be able to see the items on their “Ready for
+Sourcing” screen upon logging into the system. From here, Buyers can review the
+items and add them to a PO.
+
+B​UYING​ G​ROUPS
+A Buying Group identifies categories that require buyer assistance and specific
+buyers to provide that oversight.
+
+You can use buying groups
+regardless of whether your
+organization is using BuyRoute.
+
+Buyer Groups are configured and
+Managed from M  ​ aster Data -> Buyer
+Data​. (shown on right) For further
+details regarding Buyer Groups, see
+the ​Administrator Guide.
+
+Buyer Group Creation:
+
+
+
+
+                                                                             Buy Route ​2
+                                                                        Updated 7/13/2020
+Buy Route Workflow
+C​REATE​ O​RDER
+Buyers can bypass PR workflow and create a rush PO via Buy Route.
+
+Note: ​Only users assigned to the ‘Buyer’ role will be able to create these types of
+direct purchase orders.
+
+Step 1:
+Login to Vroozi using your buyer role credentials.
+
+Step 2:
+From the navigation panel on the left side of the screen, select the ‘Create Order’
+option.
+
+Step 3:
+The ‘Create Purchase Order’ window will appear.
+
+
+
+
+                                                                              Buy Route ​3
+                                                                          Updated 7/13/2020
+●   Fill in the required information fields:
+         ○ Supplier Name                       ○   FOB Terms (Optional)
+         ○ Order Type                          ○   Company Code
+         ○ Payment Terms                       ○   Currency
+         ○ Order Name
+
+
+
+
+                                                                  Buy Route ​4
+                                                              Updated 7/13/2020
+Step 4:
+Click the green ‘Continue’ button to proceed with the order.
+
+
+
+
+Step 5:
+Click the blue ‘Add Item’ button to add line items to the order.
+
+
+
+
+Step 6:
+Fill in the required line item fields, same as you would to submit a free text or
+non-catalog purchase request.
+
+          1. Type: ​Select product or service)
+          2. Category: C​ hoose from pre-existing categories. Use the drop down
+             menu or search to select the category which best classifies the line
+             item)
+                                                                               Buy Route ​5
+                                                                           Updated 7/13/2020
+          3. Description: P ​ rovide details that will help your Buyer understand the
+             need.
+          4. Unit price: ​ Cost per
+             item or service
+          5. Currency: ​Select from
+             currencies configured
+             for your organization.
+                 ● Currency will
+                    default to USD
+          6. Quantity:​ Enter desired
+             amount.
+          7. UoM​: Unit of measure
+          8. Supplier:​ Choose from
+             pre-existing suppliers.
+                 ● This field may not
+                    be required. In some cases it may be hidden. In these instances,
+                    complete as needed.
+          9. Service Period or Delivery Date:​ Selection depends on what ‘Type’ of
+             item was identified in #1.
+
+Step 7:
+Enter the appropriate accounting information for the line item.
+
+Step 8:
+Enter the company information for the Purchasing Organization and Plant fields.
+Select the correct tax option from the drop down menu (i.e. taxable, tax exempt, etc.)
+
+Note:​ ​Requirements will vary based on your organization’s configurations.
+
+
+
+
+   ●   Click the green ‘Save Item’ button to save the line item to the purchase order.
+
+
+
+
+                                                                              Buy Route ​6
+                                                                         Updated 7/13/2020
+Step 9:
+Repeat steps 5-8 as needed until all line items have been added to the purchase
+order. Click the green ‘Continue’ button to proceed once all line items have been
+added.
+
+
+
+
+Step 10:
+Click the shipping address field and select the appropriate address from the
+dropdown menu. Add any internal comments regarding the purchase order and any
+notes or instructions for the supplier into the appropriate fields.
+
+Step 11​:
+Click the green ‘Finish’ button to create a draft of your purchase order. Review and
+verify all information entered into the purchase order is accurate. Add any shipping
+instructions if necessary.
+
+
+
+
+Step 12:
+Click the green ‘Submit’ button to send the Purchase Order to the supplier.
+
+
+
+
+                                                                            Buy Route ​7
+                                                                        Updated 7/13/2020
+Step 13:
+The Order can then be found in ‘PO Status’ under ‘In Progress’. This status will
+remain until the Supplier confirms shipment of the item(s).
+
+
+
+
+B​UY​ R​OUTE​ (PO S​TATUS​)
+Use the Tabs at the top of the Buy Route screen to view POs in various statuses of
+the procurement process. (shown on next page)
+
+   ●   Drafts:​ Not yet
+       submitted to supplier
+
+   ●   In Progress:​ PO Data
+       enroute to supplier
+
+   ●   Ordered: ​ Supplier has
+       PO and is process
+
+   ●   Cancelled: ​ PO
+       cancelled by internal
+       user
+
+   ●   Received: ​ Supplier has shipped the items and receipt has been verified via
+       creation of a Goods Receipt. A PO will not move into this status until ALL items
+       have been received via the Goods Receipt completion. POs not requiring a
+       Goods Receipt will automatically move here.
+
+   ●   Invoiced: ​ Invoice processed.
+
+
+
+
+                                                                             Buy Route ​8
+                                                                         Updated 7/13/2020
+PO P​ROCESSING​ S​TATUS
+Repository for any Purchase Orders that have failed in the order process. You can
+click the number to view and review what changes need to be made. The Vroozi
+support team is notified if a PO fails and will reach out with details.
+
+
+
+
+B​UY​ R​OUTE​ N​OTIFICATIONS
+Buyers:
+
+Will receive email notification when a PR requires Buy Route review. Selecting ‘View
+Purchase Request’ will navigate the Buyer to the specific PR within Vroozi.
+
+
+
+
+Requesters:
+
+Will receive email notification as the PR progresses through the Buy Route flow:
+
+   1. The Requisition review is complete
+   2. The PR has converted to a Purchase Order. (shown below)
+         ● Select View Purchase Order to see if any changes have been made.
+
+
+
+
+                                                                           Buy Route ​9
+                                                                       Updated 7/13/2020
+3. The P0 has been submitted to the Supplier.
+
+
+
+
+                                                   Buy Route ​10
+                                                Updated 7/13/2020
+

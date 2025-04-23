@@ -1,0 +1,375 @@
+Vroozi Invoice User Roles
+
+Table of Contents:
+Accounts Payable (AP) Approver                                            2
+  Function                                                                2
+  *Permissions                                                            2
+  Navigation Panel & Home screen                                          2
+  Navigation Panel Explained                                              2
+     Approve                                                              2
+     Code                                                                 3
+     Document Flow                                                        3
+
+Accounts Payable (AP) Auditor                                             4
+  Functions                                                               4
+  Permissions                                                             4
+  Navigation Panel & Home screen                                          4
+  Navigation Panel Explained                                              5
+     Track Invoices                                                       5
+     Document Flow                                                        5
+
+Accounts Payable (AP) Processor                                           6
+  Functions                                                               6
+  Permissions                                                             6
+  Additional Details                                                      6
+  Navigation Panel & Home screen                                          7
+  Navigation Panel Explained                                              7
+     Inbox                                                                7
+     Create                                                               7
+     Resolve Invoices                                                     7
+     Track Invoices                                                       7
+     Track Memos (If Memo functionality is enabled by the organization)   8
+     Post Invoices                                                        8
+     Document Flow                                                        8
+
+Accounts Payable (AP) Manager                                             9
+   Functions                                                              9
+
+
+
+
+                                                                          0
+Navigation Panel & Home screen                                          9
+Navigation Panel Explained                                              9
+   Inbox                                                                9
+   Create                                                               9
+   Resolve Invoices                                                     9
+   Track Invoices                                                       10
+   Track Memos (If Memo functionality is enabled by the organization)   10
+   Post Invoices                                                        11
+   Document Flow                                                        11
+
+
+
+
+                                                                         1
+Accounts Payable (AP) Approver
+FUNCTION
+Review Invoices submitted for approval, and ‘approve’ or ‘reject’ them.
+
+*​PERMISSIONS
+   1. Code AP Documents:​ ​If ‘coding’ permission is assigned to AP Approvers, they
+      can enter or modify Invoice accounting information.
+   2. Edit Invoices Upon Approval:​ If ‘editing’ permission is assigned to AP
+      Approvers, they can modify the information on an Invoice when it is
+      submitted to them for approval.
+
+NAVIGATION PANEL & HOME SCREEN
+
+
+
+
+With Coding Permission:
+
+
+
+
+NAVIGATION PANEL EXPLAINED
+
+Approve
+Repository for each AP Approver to access their assigned invoices.
+
+
+Status          Explanation
+
+
+
+
+                                                                                  2
+Pending       Awaiting approval
+
+Approved      Invoices that have been ​approved​ by the individual approver.
+
+              Invoices that have been ​rejected​ by the individual approver.
+Rejected
+
+
+
+Code
+Repository of invoices awaiting each AP Coder before they can be approved for
+payment.
+
+
+Document Flow
+The ​Document Flow​ function allows managers to view details for any document and
+its R
+    ​ elated Documents​. It can also display a diagram of where a document is in the
+purchasing process lifecycle. Search by document type or number.
+
+
+
+
+                                                                                   3
+Accounts Payable (AP) Auditor
+FUNCTIONS
+Retrieve, view and run reports on specific invoices in the following statuses
+       ● Posted
+       ● Paid *
+       ● Partially Paid*
+              *Paid and Partially Paid is only enabled if Payments is enabled by Vroozi
+              at the request of an organization’s administrators.
+
+If Credit Memo Functionality is enabled - Tracking of Posted Memos will also be a
+function. ‘Track Memos’ will be an additional category in an Auditor’s Navigation
+panel.
+
+
+PERMISSIONS
+AP auditors can only view invoices from the specific business units or locations
+assigned to them. Similarly, auditors can only access invoices that have been
+processed.
+
+
+
+NAVIGATION PANEL & HOME SCREEN
+
+
+
+
+                                                                                     4
+NAVIGATION PANEL EXPLAINED
+
+
+Track Invoices
+Repository of invoices at various stages of processing. All Processors see only their
+own invoices.
+
+
+Category         Explanation
+                 Some but not all of the items contained in the invoices have been
+Partially Paid
+                 paid
+Paid             All items contained in the invoice have been paid.
+                 Vroozi AP Processing is complete and sent to external system to
+                 facilitate payment.
+Posted
+
+
+
+
+Document Flow
+The ​Document Flow​ function allows users to view details for any document and its
+Related Documents​. It can also display a diagram of where a document is in the
+purchasing process lifecycle. Search by document type or number.
+
+
+
+
+                                                                                        5
+Accounts Payable (AP) Processor
+FUNCTIONS
+   ●   Create and submit Invoices including:
+          ○ Submit Invoices for approval
+          ○ Submit Invoices for coding
+   ●   Assign Invoices to other AP Processors or Managers
+   ●   Park Invoices
+   ●   Submit Invoices for Exception Handling.
+   ●   Track all Invoices assigned to them that have been submitted for exception
+   ●   Post AP documents (invoices and/or memos) -​ If Automatic posting has been
+       turned on at the Administrator level.
+
+
+
+PERMISSIONS
+If ‘Coding’ role is assigned to AP Processors, they can enter or modify Invoice
+accounting information when it is submitted to them for Coding.
+
+
+
+ADDITIONAL DETAILS
+Unless multiple hoppers are used all AP Processors will see All incoming
+invoices. The differentiation or division of work must then be done using the
+search bar filters: Date, Supplier or Sender
+
+
+
+
+                                                                                  6
+NAVIGATION PANEL & HOME SCREEN
+Screen includes Code Invoices indicating the Coding permission has been added for
+this user.
+
+
+
+
+NAVIGATION PANEL EXPLAINED
+
+Inbox
+Repository of all invoices
+Create
+Create Invoices or Memos using documents outside of the hopper.
+
+
+Resolve Invoices
+Repository of all Invoices awaiting exception resolution by the AP Processor.
+
+
+ Note: ​ *This section will only be displayed if the AP Processor is designated as an
+ Exception Handler
+
+
+Track Invoices
+Repository of invoices at various stages of processing. (AP Processors
+can only see their own invoices.)
+
+
+Category        Explanation
+All             Repository for Invoices created by all users
+
+Overdue         Payment is past due
+
+Exception       Undergoing AP Exception Handling
+
+
+
+
+                                                                                        7
+Draft            AP has begun processing
+
+Parked           Held for processing
+
+Pending          Awaiting approval
+
+Approved         Approved for payment
+
+Rejected         Rejected and sent back to invoice creator for reconciliation
+Coding           Submitted for Coding
+                 AP Processing is complete and sent to external service to facilitate
+Posted
+                 payment
+                 Some but not all of the items contained in the invoices have been
+Partially Paid
+                 paid
+Paid             All items in each invoice have been paid.
+
+
+Track Memos ​(If Memo functionality is enabled by the organization)
+
+Category         Explanation
+All              All inclusive repository of memos created by all users
+
+Draft            AP has begun processing
+
+Parked           Held for processing
+
+Approved         Approved for credit submission
+
+                 Vroozi AP Processing is complete and sent to external service to
+Posted
+                 facilitate payment
+
+
+Post Invoices
+Includes repositories for all Posted Invoices and Memos.
+
+
+Document Flow
+The ​Document Flow​ function allows users to view details for any document and its
+Related Documents​. It can also display a diagram of where a document is in the
+purchasing process lifecycle. Search by document type or number.
+
+
+
+
+                                                                                        8
+Accounts Payable (AP) Manager
+All encompassing role with access to All Invoices submitted to the Hopper and all AP
+(invoices & memos) documents created in the system
+
+FUNCTIONS
+   ●   Post Invoices to external system for payment
+   ●   Perform all the tasks that an AP Processor and Coder can do.
+   ●   Intercept, code and approve an Invoice that is pending approval from any AP
+       Approver. Once an AP Manager intercepts and approves an Invoice it goes to
+       ‘approved’ status and does not require approval from subsequent approvers, if
+       any.
+
+NAVIGATION PANEL & HOME SCREEN
+
+
+
+
+NAVIGATION PANEL EXPLAINED
+
+Inbox
+Repository of all invoices
+Create
+Create Invoices or Memos using documents outside of the hopper.
+Resolve Invoices
+Repository of all Invoices awaiting exception resolution.
+
+
+
+
+                                                                                   9
+Track Invoices
+Repository of invoices at various stages of processing.
+
+
+Category         Explanation
+All              Repository for Invoices created by all users
+
+Overdue          Payment is past due
+
+Exception        Undergoing AP Exception Handling
+
+Draft            AP has begun processing
+
+Parked           Held for processing
+
+Pending          Awaiting approval
+
+Approved         Approved for payment
+
+Rejected         Rejected and sent back to invoice creator for reconciliation
+Coding           Submitted for Coding
+                 AP Processing is complete and sent to external service to facilitate
+Posted
+                 payment
+                 Some but not all of the items contained in the invoices have been
+Partially Paid
+                 paid
+Paid             All items in each invoice have been paid.
+
+
+Track Memos ​(If Memo functionality is enabled by the organization)
+
+Category         Explanation
+All              All inclusive repository of memos created by all users
+
+Draft            AP has begun processing
+
+Parked           Held for processing
+
+Approved         Approved for credit submission
+
+                 Vroozi AP Processing is complete and sent to external service to
+Posted
+                 facilitate payment
+
+
+
+
+                                                                                        10
+Post Invoices
+Includes repositories for all Posted Invoices and Memos.
+Document Flow
+The ​Document Flow​ function allows users to view details for any document and its
+Related Documents​. It can also display a diagram of where a document is in the
+purchasing process lifecycle. Search by document type or number.
+
+
+
+
+                                                                                     11
+

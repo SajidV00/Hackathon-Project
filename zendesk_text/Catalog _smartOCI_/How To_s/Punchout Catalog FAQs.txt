@@ -1,0 +1,47 @@
+Punchout Catalog FAQs
+
+
+What​ can I expect from a Punchout Catalog?
+​ shopping experience that mirrors the supplier’s e-commerce site.
+A
+  ●       To access, users select the catalog from their Vroozi Homepage and are
+          immediately directed to the supplier’s shopper page. Once shopping is complete,
+          the supplier’s page closes and items are transferred to their Vroozi cart.
+          (Marketplace or Purchase)
+  ●       Many Punchout Catalogs allow for the electronic transfer of POs, PO
+          acknowledgement, advanced shipment notices and Invoice. (​ if applicable)
+
+
+
+
+Why w
+    ​ ould I want a Punchout Catalog?
+  ●       Content is maintained by the supplier.
+
+  ●       Suppliers can provide real time visibility into price or inventory updates.
+
+  ●       Customized to your unique organization with the content and contract pricing.
+
+  ●       Supplier hosted sites may offer “Related items” which can help users understand
+          what accessories or companion items are offered.
+
+
+
+
+How ​do I set up a Punchout Catalog?
+Customers​ are responsible for finalizing the contract and determining what content will
+go in. ​Vroozi​ is responsible for managing the project and integration aspects.
+
+ To Get Things Started
+      ●   Confirm the supplier’s punchout capabilities.
+
+      ●   Supplier Onboarding process may be required.
+
+ Vroozi Can Help!
+      ●   If you don’t have a supplier contact we can step in and connect you with one.
+
+      ●   The ​Supplier Solutions​ team works with the supplier to obtain cXML or OCI
+          punchout requirements, PO and Invoice credentials (if applicable). Our team
+          handles integration connectivity testing, authentication requirements, QA
+          scenarios, cXML error review, codes, etc.
+

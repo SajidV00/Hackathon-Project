@@ -1,0 +1,62 @@
+Create a Shopping List
+List to Requisition in 3 clicks
+Catalog Lists are an optional function in Vroozi Purchase that help make it fast and easy
+to add frequently ordered Internal Catalog items to a request.
+
+CREATE A LIST
+   1. From the Homepage, click ‘Lists’ to reveal a drop down.
+
+       ✓ Select the default ‘Favorites’ list. This list will initially be empty.
+         Proceed to step 3 to begin adding items to this list.
+
+       ✓ Select ‘new list’ to create and name a new list.
+
+   2. Name your ‘new list’ by clicking into the ‘My List’ field.
+
+          ●   Example: Office Supplies, Weekly Snack Order, Phone Accessories)
+
+
+
+
+   3. To begin adding items to your list by clicking the blue ‘Get started here!’ link.
+
+
+
+
+   4. Once an item has been identified, update the quantity of the item.
+
+
+
+
+   5. Click on the yellow star icon next to the item description to reveal a drop-down
+       menu of your lists. Select the name of the List you would like to add the item or
+       service to.
+
+          ●   Once the item is added to a List the start icon will change to a checklist.
+
+   6. Repeat steps 3-5 to add more items to the List.
+CONVERT A LIST TO A REQUEST
+
+  1. Click on the list icon and select your List.
+
+  2. Select which items from the list you would like to convert to your requisition.
+
+         ●   ‘Select All’ or click individual boxes next to each item.
+
+
+
+
+  3. Update the quantity. (if needed)
+
+  4. At the bottom of your list select ‘Move to Request’.
+
+
+
+
+  5. Complete your requisition and submit.
+
+
+
+
+                                                                                       2
+

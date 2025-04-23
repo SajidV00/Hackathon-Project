@@ -1,0 +1,75 @@
+Configure Catalog Approvals
+Grab & Go covering configuration of an approval workflow for changes to your
+internal catalogs.
+
+
+DEFINE CATALOG APPROVERS
+   1. From the ‘Company Users’ tab, select to
+      create or edit an existing user.
+   2. Enter the basic user information and select
+      the Approver role or any combination of roles
+      that include ‘Approver’.
+          ● Only Master Admins can create other
+              Master Admins and Administrators.
+   3. If the approver is also a Marketplace shopper
+      you must assign a ‘Content View’. Otherwise
+      this is optional.
+
+DEFINE APPROVERS FOR EACH
+APPLICABLE CATALOG
+
+   1. From each Catalog’s settings,
+      assign an Approver(s).
+   2. Click ‘Approvers’ to select and
+      assign approvers from the list of
+      predefined users.
+          ● You may assign multiple
+              approvers to a single
+              catalog. In this case, the
+              first approver to review and
+              approve changes, removes
+              the requirement for other
+              approvers.
+   3. Save your changes.
+
+DEFINE APPROVAL RULES
+Configure when the system should generate email
+notifications for content Approvers to review and approve
+or reject catalogs that they have been assigned as
+approvers for. This approval applies to new catalogs or
+
+
+                                                                               1
+updates to existing catalogs awaiting approval before being pushed ‘LIVE’.
+
+   1. Select Company Settings off the drop-down menu by clicking on it.
+   2. Scroll down to the Approval Workflow of the Company Settings area.
+   3. Expand the Approval Workflow area by clicking on the carrot.
+   4. “For any change to
+      required field in catalogs
+      and/or quotes” If there is a
+      change to the mandatory
+      fields of an item that
+      already exists in the
+      previous version of the
+      catalog, then an email notification will be sent to the assigned Approver to
+      approve or reject this type of change if this box is checked.
+   5. “For any new item added to catalog and/or quotes” If there is a new item
+      being added to the catalog or quote, then an email notification will be sent to
+      the assigned Approver to approve or reject if this box is checked.
+   6. “If price changes more than X percent in catalogs and/or quotes” Master
+      Administrators can specify a percentage (%) value if the price of an existing
+      item changes by more than the specified percentage value. An email
+      notification will be sent to the assigned Approver to approve or reject if this
+      box is checked.
+   7. If you check the last box, you may choose to update the percentage value.
+   8. Save.
+
+
+See Catalog Administrator guide for how to approve or reject catalog content.
+
+
+
+
+                                                                                    2
+

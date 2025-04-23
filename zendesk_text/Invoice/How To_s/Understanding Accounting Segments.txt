@@ -1,0 +1,113 @@
+Understanding A
+              ​ ccounting Segments
+Overview of Accounting Segments and how each is connected.
+
+
+
+Organizational Segments
+Found in M
+         ​ aster Data >Organization
+
+
+COMPANY CODE
+A company code is a 3-4 letter/ number code that defines a business entity or location.
+   ●   Company Codes are associated with a Company and/or Billing address.
+   ●   At least one Company Code must be created.
+
+
+PURCHASING ORGANIZATION
+
+Represents the procuring unit in a legal sense. The way in which you assign purchasing
+organizations to company codes and plants determines the procurement method.
+
+   ●   Purchasing Organizations are associated with a Company Code.
+
+PLANT
+
+A subdivision of a Company Code. Often a location, office or building capable of
+manufacturing goods of all sizes in large quantities to be sold by a business. Through this
+feature the Admin can see the different plants and the corresponding number code to
+the plant.
+   ●   Plant Codes are associated with a Company Code.
+
+
+
+
+Accounting Segments
+Found in​ Master Data >Accounting
+At least one Company Code must be created before the accounting segments listed
+below can be set up. Each accounting segment can be set individually as Active or
+Inactive.
+
+Segments listed in Alphabetical Order:
+CLASS
+Cost Reporting for a specific division, department or other organizational unit.
+   ●   Classes can be associated to a specific Company Code or All Company Codes.
+   ●   Start and end dates can be set for each Class.
+   ●   Sub classes may be created. If a parent class associated to a subclass is deleted,
+       both classes will be removed from the system.
+
+COST CENTER
+A cost center is part of an organization that d
+                                              ​ oes not​ produce direct profit and adds to the
+cost of running a company.
+Example: Accounting, Marketing, Shipping etc.
+   ●   Sub-Cost Centers can be created. If a parent cost center associated to a sub-cost
+       center is deleted, both classes will be removed from the system.
+   ●   Start and end dates can be set for each Cost Center
+
+CUSTOMERS
+
+The Customer classification allows you to associate projects to a customer.
+   ●   Customer Code can be associated to a Cost Center, GL Account WBS Element or
+       Project.
+
+GL ACCOUNTS
+A General Ledger (GL) Account is a unique record summarizing each type of an asset,
+liability, equity, revenue and expense. This information is needed to prepare financial
+statements.
+Example: Cash, Accounts Receivable, Inventory, Investments, Land, and Equipment.
+
+
+INTERNAL ORDERS
+Internal orders are used to monitor overhead costs incurred for a specific event, project or
+activity.
+   ●   Internal Orders may also be associated to a Profit Center.
+
+LOCATION
+Locations where financial transactions occur. Locations can be defaulted to each user.
+   ●   Locations can be applied to a specific Company Code or All Company Codes. If All
+       is selected, Location type will become a required field.
+
+
+                                                                                            2
+   ●   Plants & Classes association to a specific location is optional.
+
+LOCATION TYPE
+A specific space whether it be Physical, Partner or Virtual.
+   ●   Associated to a Company Code a
+                                    ​ nd​ Location.
+
+PROFIT CENTERS
+A business unit or that generates revenue and may also incurs costs.
+Example: Sales department, Online sales
+   ●   Start and end dates can be set.
+
+PROJECT
+Indicates projects such as work orders, contracts, grants, or other entities to track specific
+transactions.
+   ●   Sub Projects can be created.
+   ●   Start and end dates can be set for each Project.
+   ●   Association to a Class is optional.
+
+WBS ELEMENTS
+A WBS Element is a hierarchical and incremental decomposition of a project into phases,
+deliverables and work packages. It is a tree structure, which shows a subdivision of effort
+required to achieve an objective
+Example: a program, project, or contract.
+
+
+
+
+                                                                                             3
+

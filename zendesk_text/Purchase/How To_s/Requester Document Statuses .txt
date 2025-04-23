@@ -1,0 +1,108 @@
+Requester/Buyer Document Statuses
+
+REQUEST STATUS
+
+Draft:        The Requisition has been opened and saved but not yet submitted.
+
+
+Pending:      Awaiting review by one or several financial Approvers.
+
+
+Approved:     Auto or manually approved (via approval workflow) and successfully
+              converted into a PO.
+
+Attention:    Requisition did not convert to PO. It has been rejected at the Requisition
+              level and returned back to Requester by approver(s) for changes. The
+              Requester may either edit and resubmit (if allowed) or copy the
+              requisition, make changes to the new version and resubmit.
+
+Sourcing      Requisition has been sent to Sourcing Approver(s) for review. Once
+Approval      approved, the requisition will move on to financial approval (if defined) or
+              convert to a PO.
+
+
+
+PO STATUS
+Processing:   PO is in the process of being sent to the Supplier.
+
+
+Processing    PO failed to reach the supplier(s). Review PO receipt settings in the
+Failed:       supplier record.
+
+
+Canceled:     The PO has been c ​ ancelled​ by the supplier. Contact the supplier directly
+              with specific questions regarding the cancellation.
+
+
+Confirmed:    The PO has been c
+                              ​ onfirmed​ by the supplier.
+
+
+Partially     This indicates the supplier has confirmed one or more but not all PO items.
+Confirmed     See Confirmed PO for specific details.
+
+
+Disputed:     The PO has been d ​ isputed​ by the supplier. ‘Partially Disputed’ indicates
+              the supplier has disputed one or more but not all PO items. An Item
+              ‘Dispute’ may not indicate that items will never be received but rather that
+              a detail regarding the line item needs to be changed; delivery date, price,
+              quantity etc. See disputed PO for specific details. Contact suppliers directly
+              with specific dispute questions.
+Partially      The supplier has disputed one or more but not all PO items. See ‘Disputed’
+Disputed       field for further details.
+
+
+*Rejected:     The PO has been rejected by the Supplier. See Supplier for additional
+               details regarding the rejection.
+
+
+Submitted:     The Supplier has confirmed the PO by selecting Confirm PO from the PO
+               email notification email. This status is only visible if ‘Supplier Provides PO
+               Acknowledgement is enabled at the Supplier Record. This status does not
+               apply to Supplier Portal customers.
+
+
+Ordered:       Requisition has been approved and been successfully submitted to supplier(s).
+               Receipt of Goods has not been confirmed.
+
+Order          The PO failed to reach the supplier(s). Contact your system administrator
+Failed:        to review transmission setup.
+
+Received:      All items in the PO have been confirmed via a Goods Receipt. Partially
+               received POs will remain as O
+                                           ​ rdered​ until the PO is closed or Goods receipt
+               is complete.
+
+
+Invoiced:      Invoice processed and P
+                                     ​ osted i​ n Vroozi Invoice.
+
+
+Paid:          Invoices posted and paid.
+
+
+*Statuses that apply exclusively to customers using the Vroozi Supplier Portal.
+
+
+RECEIPT STATUS
+Ready to       The receipt of PO goods/services has not been confirmed.
+Receive:
+
+
+In Progress:   A Goods Receipt has been drafted but is not yet completed.
+
+
+Received:      The receipt of goods has been confirmed via the completion of a goods
+               receipt
+
+
+Returned:      The receipt of goods has been confirmed a
+                                                       ​ nd​ a Goods Return has been
+               created against that receipt.
+
+
+
+
+                                                                                      Status Guide 2
+                                                                                                   ​
+

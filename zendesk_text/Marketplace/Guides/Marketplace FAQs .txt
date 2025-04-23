@@ -1,0 +1,105 @@
+              Marketplace User FAQs
+
+Table of Contents:
+
+What is the difference between a Dialog and System User?                          2
+
+Where can I find communication from my administrator?                             2
+
+How do I search for an item among all my suppliers?                               3
+
+How do I perform an advanced search?                                              3
+
+How can I tell the difference between a punchout supplier and a hosted supplier
+catalog?                                                                          3
+
+Can I add items from different suppliers to my cart?                              4
+What is the difference between a Dialog and System User?
+Marketplace User Roles have two classifications:
+
+
+Dialog Users​: ​ direct login access with a username and password to log in to use or
+manage Marketplace. Dialog Users include the following roles:
+          ●   Master Administrator
+          ●   Administrator
+          ●   Buyer
+          ●   Approver (catalog)
+
+
+System Users​: U
+               ​ sers that have access to an external ERP system, and do not log in
+to Marketplace directly. Instead, Shoppers are authenticated through the external
+system to search and shop from the Marketplace. System Users only include the role
+          ●   System Shoppers
+
+
+Where can I find communication from my administrator?
+There are 3 ways your administrator can communicate with you:
+
+   ●   Announcements: ​ ​Found on your homepage. Announcements are color
+       coded ​red​, y
+                    ​ ellow​ and g
+                                 ​ reen ​based on urgency. Red is the highest priority.
+       Announcements can be dismissed once read.
+
+   ●   Welcome Message: ​ ​System-wide message for all users.
+
+   ●   Information: ​Pinned to the Welcome bar and cannot be dismissed.
+
+
+
+
+                                                                 Marketplace User FAQs ​ 2
+How do I search for an item among all my suppliers?
+   1. Use the top search by on the
+      homescreen and type in a
+      specific item or key word.
+   2. Search for suppliers by the
+      categories listed on the left
+      panel of your homescreen.
+
+
+        Note: C
+              ​ ategories and search results will only display items in hosted/internal
+        catalogs.
+
+How do I perform an advanced search?
+Select the downward facing arrow arrow to the right of the search bar to select more
+specific search parameters.
+
+
+
+
+How can I tell the difference between a punchout supplier and
+a hosted supplier catalog?
+First let’s start with an explanation of H
+                                         ​ osted​ and P
+                                                      ​ unchout​ supplier catalogs.
+
+
+ Hosted Supplier            Specific catalog items loaded into the Vroozi platform.
+ Catalog
+
+ Punchout Supplier          Items are hosted in the Supplier’s site. Shoppers return to
+ Catalog                    Vroozi Marketplace once ready to check out their cart.
+
+
+
+When you click on a supplier that has both a hosted and punchout
+catalog option, you will be directed to choose which one you would
+
+
+                                                                 Marketplace User FAQs ​ 3
+like to use. ‘Browse’ indicates a hosted catalog. The Supplier’s listed name will take
+you to their punchout catalog.
+
+
+Can I add items from different suppliers to my cart?
+Yes, items will be divided and subtotaled by supplier in the cart, this data will transfer
+to your external ERP system.
+
+
+
+
+                                                                Marketplace User FAQs ​ 4
+

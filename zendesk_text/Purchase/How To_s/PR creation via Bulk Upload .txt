@@ -1,0 +1,231 @@
+PR Creation via Bulk Upload (Bill of Materials) File
+
+Table of Contents:
+Bulk File Creation                                                                     1
+
+File Specifications                                                                    2
+
+Bulk Upload Process                                                                    3
+   Upload Progress                                                                     3
+   View the Downloaded PR                                                             4
+   Successful Bulk file Upload                                                        4
+   Failed Bulk file upload                                                             4
+   Documentation of Split Accounting at the Line Item                                  5
+       Split Accounting Process                                                        5
+
+
+
+
+Bulk Files
+A comprehensive list of parts, items and other materials required to create a product
+or fulfill large order requirements. This list once uploaded will auto create a Purchase
+Requisition. Items contained in a Bulk Upload may include internal catalog and free
+text supplier items or services.
+
+
+
+Bulk File Creation
+Using the B
+          ​ ulk Upload Template​, add data indicated as a required field (marked in
+peach)
+   ● Use the ‘Bulk Upload
+      Instructions’ tab within this
+      document to help guide
+      completion.
+
+   ●   For Catalog line items only 3
+                                   ​
+       fields are required;
+
+          ✓ Item_number
+
+
+
+
+                                                                                       1
+          ✓ item_id
+
+          ✓ quantity
+
+   ● For non-catalog line items, an employee must provide as much of the
+       material/service information as possible, as this will help build out the line
+       item information the supplier requires to fulfill the order.
+
+   ● The Upload file must be saved as a .csv or a .xlsx for the system to accept it.
+
+*Line item limit is 1,000.
+
+ Note:​ Employees can manipulate (remove) any columns that are not required.
+ The columns can also be reordered.
+
+
+
+
+File Specifications
+   ●   Requester Name​ ​only needs to be entered once for Item #1. Unless it changes
+       the remaining rows can be left blank. They will inherit the same Name.
+   ●   Shipping address i​ f left blank will default to the Requester’s default shipping
+       address.
+          ○ Will inherit all other contact details set in employee defaults. (attn,
+               email, phone, number)
+          ○ Each address can have its own ‘attn’
+          ○ Each ​ship to address​ ​requires its own row even if the line item is the
+               same.
+   ●   Price​ cannot be changed in the Bulk Upload for catalog items.
+          ○ Should only be entered for free text items included in the upload.
+   ●   Per Quote​ - Specify Price cannot be done in the bulk file, must be manually
+       edited.
+   ●   Tax codes and Tax Values w     ​ ill be auto-calculated for organizations using a
+       tax connector.
+   ●   Shipping Charges​ may be added if known. Shipping charges will not be
+       auto-calculated post upload.
+   ●   Validity Period (to-from) ​designates the specific period the services are
+       approved for. If left blank at the file, employee will be prompted to enter the
+       service date.
+   ●   Delivery Date ​unless entered will default to Supplier lead team configured in
+       the Supplier Record
+
+
+
+
+                                                                                        2
+If changes are required to an item(s) in the bulk file, they can be manually edited at
+the Requisition draft. Alternatively, employees can change the bulk file and
+re-upload.
+
+Bulk Upload Process
+   1. Select ‘Bulk Upload’
+
+
+
+
+   2. Upload using drag and drop or selecting ‘Line Item Bulk Upload’ to open the
+       standard file selection utility. (shown below)
+          ○ Compatible files will end in ​.xlsx​, .​ xls​, or ​.csv​.
+          ○ Only 1 file can be uploaded at a time
+
+
+
+
+   3. Once the document is successfully uploaded the file name will appear and the
+      ‘Create Purchase Request’ button will become enabled. (shown below)
+   4. Tracking widget pictured below will be visible in the bottom right corner of
+      your screen, displaying the number of files being processed with status
+      messages.
+   5. Users can browse the application during upload and will be notified upon
+      completion or if there are any errors.
+
+UPLOAD PROGRESS
+   ●   The tracker will also have a minimized state, where the employee will only see
+       the blue header, with a count of the files being worked on.
+   ●   The employee will only be able to dismiss
+
+
+                                                                                         3
+       the tracker from the screen, once all files in the queue have finished
+       processing. And have either been converted into a PR successfully or have
+       failed processing. The tracker will also indicate if the PR upload was successful,
+       partially successful or failed to load.
+   ●   The tracker will provide the employee with a direct link to the newly created
+       PR, and if applicable, it will also provide a link to the error report.
+
+
+Note: ​ ​Multiple files can be uploaded in succession Each of which will result in a
+new PR being created. The tracker will display progress for each file currently
+being updated.
+
+
+
+
+VIEW THE DOWNLOADED PR
+Once processing is complete, employees will be able to open the newly created PR
+by clicking on the success notification.
+
+
+SUCCESSFUL BULK FILE UPLOAD
+Selecting a file that has been successfully
+converted to a PR, will take the employee
+to the relevant PR.
+
+For successful PR creation, the employee
+that uploaded the file will receive an email letting them know that the PR was
+created. The employee will be able to access the PR from this email. If the employee
+is not currently logged into the application, in the same browser, they will be asked
+to authenticate themselves.
+
+
+FAILED BULK FILE UPLOAD
+Click on D​ ownload Error Report​, to
+download and view the error report.
+(shown on the next page) Employees will
+also receive an email notifying them their
+file did not pass validation.
+
+They will be able to access the PDF error report from this email. The employee will
+not be asked to reauthenticate, in order to see the error report.
+
+
+                                                                                       4
+The system will create a partial PR with the line items that were successfully loaded.
+
+The Requester has the option to fix the errors encountered within the partially
+created PR or by making the changes directly to the Bulk template and reloading
+the template.
+
+
+Note:​ Re-uploading the Bulk template will create a new PR document.
+
+
+
+DOCUMENTATION OF SPLIT ACCOUNTING AT THE LINE ITEM
+Account Assignment Distribution can be split 1 of 3 ways:
+   1. Select Split Account Assignment Distribution
+          ●   By Quantity (Column U)
+          ●   By Value (Column V)
+          ●   By Percent (Column W)
+
+
+
+
+Split Accounting Process
+   1. Enter the line item number and complete all r​ equired fields​ for that line item
+
+
+
+                                                                                          5
+      ●   Leave Columns T-W and all accounting segments blank as these will be
+          completed in the following rows.
+2. In the rows directly below the line item, leave all columns blank except for the
+   Split Accounting details.
+       ● A new line item number should not be entered. To link the split item
+          specifications, do not enter a line item number for these rows. Instead
+          scroll over the split item columns. In the original template these are
+          columns U-X.
+       ● Regardless of which split type (quantity, percentage or value) is
+          assigned, at least 2 rows will be designated for the split details.
+             ○ A line item being split 3 ways will use the preceding 3 lines to
+                  enter the value and accounting segments.
+
+
+
+
+3. In column “T” enter the item number the split account will correspond to.
+       ● Example below demonstrates the split accounting for line item 1 and a
+          split quantity of 2 .
+
+
+
+
+4. Once the values for the split type are entered, the applicable accounting
+   segments for each split must be completed.
+
+
+
+
+5. Enter all other bulk upload items.
+
+
+
+
+                                                                                  6
+

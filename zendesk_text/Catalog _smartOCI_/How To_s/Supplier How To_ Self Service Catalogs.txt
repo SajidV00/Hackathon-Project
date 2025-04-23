@@ -1,0 +1,118 @@
+Self Service Catalog Workflows
+Grab & Go for Supplier updates to catalog content. This document is intended for
+Supplier users who have been invited to edit their own catalogs within Vroozi
+Catalog.
+
+Depending on the type of changes required, there are two paths to service your
+catalog(s).
+
+   1. Direct Item Update
+         ○ Best for editing a handful of items.
+
+   2. File Upload (CSV)
+          ○ Only option for adding new items.
+          ○ Best for the upload of a larger quantity of changes including the
+            addition or removal of items.
+
+
+Helpful Hints
+   ✓ The ‘Live’ Column of the Content Management view lists catalogs currently
+     accessible to shoppers based on their content assignment.
+   ✓ Editing a ‘Live Catalog will create a
+     new version of the catalog found in the
+     ‘Working’ column.
+   ✓ Editing will not disrupt shopping in the
+     current ‘Live’ Catalog.
+   ✓ Edits will only go live once approved
+     and pushed to the ‘Live’ column by the
+     customer organization.
+   ✓ Shoppers with cart items affected by
+     catalog changes will not be able to purchase the outdated items. They will
+     instead be notified of the update and directed to remove the item(s) &
+     re-added to their cart.
+
+EDIT A CATALOG (DIRECT ITEM UPDATE)
+
+Update item details; pricing, approvers, groups, etc.
+
+*See your customer procurement team for
+login, password and url.
+   1. Locate the catalog in the ‘LIVE’
+      column and select the gear icon.
+      (shown above)
+   2. Check the box for ‘Direct Item
+
+
+
+                                                                                   1
+      Update.’ (shown on right)
+   3. Editing a ‘Live Catalog will create a new version which will be relocated to the
+      ‘Working’ column.
+   4. Updates will not disrupt shopping in current ‘Live’ Catalog.
+   5. Locate the ‘Working’ catalog and click the catalog name.
+   6. Click on a line item to open and view details.
+
+
+
+
+   7. Make the appropriate change(s)
+        ● Changes will be validated and saved immediately.
+
+
+
+
+EDIT A CATALOG (FILE UPLOAD)
+
+Begin with the Catalog Template
+
+If you do not already have a copy of the current live
+catalog, the editing process should begin by
+downloading the current file and format. Depending on
+whether you want to overwrite or merge data (see step 4
+for further details on this) the downloaded file will serve
+both purposes but the content will vary.
+   ●   From the live Catalog, select to ‘Export’.
+   ●   The Export
+
+
+
+                                                                                         2
+Upload File(s)
+
+   1. The process for a file upload begins like that of a direct item update; by
+      locating the catalog in the ‘Live’ column and selecting the gear icon. (shown
+      on page 1)
+         ● Editing a ‘Live Catalog will
+             create a new version in
+             ‘Working’.
+         ● Updates will not disrupt
+             shopping in current ‘Live’
+             Catalog.
+   2. Select ‘Edit.’
+   3. Upload the saved file under ‘Catalog File.’
+         ● Select ‘Browse’ to upload the saved file from your device.
+         ● If the Images are not embedded in the image column for the template,
+             you’ll need to attach a separate image file and upload to that specific
+             field.
+   4. Under ‘Additional’ section, select:
+         ● Merge & Update: *Default Setting. Select if the file only includes new
+             or updated items. These items
+             would then be merged with the
+             current “Master List” of items for
+             that catalog.
+         ● Overwrite All: Uploads the new of
+             your new file, replaces ALL previous content, becoming your new
+             “Master List”.
+
+APPROVAL
+Changes to your catalog(s) will require approval by the customer organization. With
+this in mind, once changes have
+been saved in our ‘Working’ catalog,
+the customer approvers will be
+notified.
+
+
+
+
+                                                                                      3
+

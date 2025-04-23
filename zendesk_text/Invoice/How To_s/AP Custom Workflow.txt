@@ -1,0 +1,144 @@
+Create an ​AP Custom Workflow
+Define an invoice cycle based on user role and allocation of spend.
+
+
+There are 3
+          ​ ​ outcomes which can be accomplished through the creation of an AP Custom
+Workflow.
+   1. Approval Workflow: ​Define the individuals
+      responsible for approving applicable invoices
+      before they are submitted for posting.
+
+   2. Coding Workflow​: Define the individuals
+      responsible for invoice coding review.
+
+   3. Invoice Routing: ​Assign routing of invoices to
+      specific AP Processor(s) based on the defined
+      hopper, company code, Plant Code(s) and Cost
+      Center(s).
+         ○ Use of Plant Codes is not required for the
+             creation of an AP Workflow.
+         ○ Only applies to cXML and Supplier Portal
+             Invoices
+         ○ AP Managers will still see all invoices
+
+WORKFLOW REQUIREMENTS
+   ✓ Each Workflow must be assigned to a specific approval group, requiring the
+     creation of an approval group before the workflow can be saved.
+   ✓ Each Workflow must be assigned to a specific company code, one or more Plant
+     codes and one or more cost centers.
+
+
+
+CREATE AN APPROVAL GROUP
+One or more Approvers may be selected from the
+drop-down list of users with the AP Approver
+assignment. (shown below)
+   ●   Approval order follows the order as names are
+       entered in the Approvers field (shown above)
+          ○   Example: First C​ arol Tester a​ pproves, then
+              invoice will be sent to J
+                                      ​ effrey Approver. ​After
+
+
+
+                                                                                        1
+          which time the invoice approval process is complete.
+
+1. APPROVAL WORKFLOW
+Utilize Workflow functionality w
+                               ​ ith​ A
+                                      ​ pprovals
+    Setup Requirements:
+       ➢ In A
+            ​ ccounts Payable >Settings >Preferences​ toggle o
+                                                             ​ ff​ AP Document
+         Approval settings. (​ shown above)
+       ➢ Assign users with the role AP Approver and permission.
+
+
+
+
+       ➢ Complete all Approval Workflow details and select a pre existing Approval
+         Group to plug into the workflow.
+
+
+
+
+Utilize other aspects of Workflow functionality w
+                                                ​ ithout​ ​triggering an Approval
+Workflow.
+    Setup Requirements:
+       ➢ In A
+            ​ ccounts Payable >Settings >Preferences​ toggle o
+                                                             ​ n​ ‘AP Document
+         Approvals’ This will bypass any approval groups created in Custom Workflow.
+       ➢ If applicable, toggle on non-PO based and memos settings.​ (shown below)
+
+
+
+
+2. CODING WORKFLOW OPTIONS
+●   Utilize Workflow functionality w
+                                   ​ ith​ specific users assigned as
+    AP Coders.
+    Setup Requirements:
+       ➢ Assign specific Accounts Payable users with ‘Code AP
+         documents’ permission.
+
+
+                                                                                     2
+       ➢ In the ‘AP Coder’ field select one or more users with the AP coding
+         permission. (​ shown on right)
+
+●   Utilize Workflow functionality w
+                                   ​ ithout​ ​assigning coding responsibilities to team
+    members outside of AP Processors:
+    Setup Requirements:
+       ➢ Add ‘Code AP Documents’ permission to each applicable AP Processor role.
+
+
+
+
+       ➢ Enter AP Processors as AP Coders in the Workflow template. (shown below)
+
+
+
+
+       ➢ Train your AP Processors not to use C
+                                             ​ oding​ as an Invoice destination.
+
+
+
+3. INVOICE ROUTING
+    Setup Requirements:
+➢ Review use of ​Accounting Segments.
+
+➢ The segregation of invoices does not require more than 1 hopper, instead through
+  workflow routing, invoices are sent to the designated AP Processor(s) based on the
+  plant code, company code and cost center coded to the line items.
+
+➢ Routing will require the creation of multiple workflows, with different accounting
+  segments and AP Processors. The Coders and Approvers can be specified for each
+  as needed.
+
+➢ In Master Data >Users, ensure each Requester’s default Requisition settings reflect
+  the correct Company Code, Plant Code(s) and Cost Center(s).
+
+
+                                                                                          3
+Example below:
+
+
+
+
+Note:​ If items in an invoice have accounting segments that route to more than one AP
+Processor, the invoice will be sent to each AP Processor, whoever opens it first will
+process the invoice. The first AP Processor can still choose to complete their review
+and assign to another if needed.
+
+
+
+
+                                                                                    4
+

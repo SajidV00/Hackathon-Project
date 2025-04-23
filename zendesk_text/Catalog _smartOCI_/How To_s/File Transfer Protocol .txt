@@ -1,0 +1,62 @@
+Downloading Files from an FTP
+account
+The ​File Transfer Protocol (FTP) is a standard network protocol used for the transfer
+of computer files between a client and server on a computer network. It facilitates
+the parties to transfer heavy files with much convenience and in a secured
+environment.
+
+In VROOZI, we use FileZilla Client as our FTP solution. FTP users may authenticate
+themselves using a username and password scheme for granting access.
+
+If the supplier already has their FTP account, they share the credential details with
+us. Otherwise, our technical team creates a new designated account for that
+particular supplier and we share the credential information with them so that they
+can upload their catalogs.
+
+The content team receives an email every time a new catalog is loaded by the
+supplier on the server. The team then, logs in and extracts that catalog and uploads
+it on the client’s account.
+
+
+
+
+1. Download and open the FTP
+   tool via F
+            ​ ilezilla​.
+
+   Right side of the account is
+   the remote server site
+   (external supplier) whereas,
+   the left side shows the local
+   site (personal system).
+2. Go to the File drop-down option
+   and click “Site Manager”
+
+
+
+
+3. Please use the provided credentials to login to the supplier’s account.
+4. Once connected, there will be two folders – production and test.
+
+   Supplier sends the test files to the
+   test folder, and the files which are
+   meant to go live on production are
+   given in the production folder.
+
+
+
+
+5. The file will start to download
+   in your system either by
+   double clicking or by right
+   clicking and selecting the
+   “Download” option.
+
+   The user can navigate and
+   choose the desired folder
+   (from the left local site) where
+   he/she wants the file to be
+   downloaded on his/her own
+   system.
+6. The file transfer status can be seen at the bottom queue of FileZilla.
+

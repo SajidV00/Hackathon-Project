@@ -1,0 +1,17 @@
+Punchout Catalog Error Resolutions
+
+
+
+
+Row Number                 Errors                         Explanation                                              Instructions
+
+    1        Invalid Credentials    Missing Credentials                               Reach out to the supplier
+
+
+    2        Invalid Credentials    Incorrect credentials                             Reach out to the supplier
+
+
+    3        Validation Failed      Not following the standards of xml - e.g. dtd.    Reach out to the supplier
+                                    Some required fields are missing from the xml - e.
+    4        Validation Failed      g. classification code (UNSPSC)                    Reach out to the supplier
+

@@ -1,0 +1,34 @@
+Approve​ on the Go
+Grab & Go​ on the enablement and use of the Approver Pin Code.
+
+
+
+Enable Pin Code:​ Found in the ‘Profile Details’, your
+Pin Code is a ​4​ digit code that once entered and saved
+allows Approvers to access, reject and approve
+requests from their mobile device.
+
+The pin code can be any 4 number combination. No
+symbols or letters can be used. Once your pin has been
+successfully entered, select ‘Save’.
+
+
+Approve or Reject​: R​ equest for Approval ​notifications
+will be sent via email.
+
+Open the notification from your mobile device and simply tap/click the green ‘APPROVE’
+or red ‘Reject’ options on the email.
+
+
+
+
+Enter Pin Code:​ Once approval or rejection is selected, the
+authentication screen will require entry of your 4 digit PIN
+code.
+
+Rejections will prompt Approvers to complete a note. This
+may include the reason for the rejection and possible next
+steps.
+
+Once Rejection or Approval is complete a confirmation screen will appear.
+

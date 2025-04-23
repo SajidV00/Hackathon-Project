@@ -1,0 +1,916 @@
+       Vroozi Sourcing
+Comprehensive guide to the various ​Vroozi Sourcing w
+                                                    ​ orkflows including
+enablement, roles and examples.
+
+
+
+
+Table of Contents
+Sourcing 3 Ways                                                                        2
+
+Sourcing Review                                                                        3
+   Key Roles                                                                           3
+      Sourcing Approver                                                                3
+      Employee                                                                         3
+
+Sourcing Workflow Enablement                                                           4
+   Sourcing Rules                                                                      4
+      Catalog Type                                                                     4
+      Currency                                                                         4
+      Categories                                                                       5
+   Sourcing Workflow                                                                   5
+   Sourcing Approver                                                                   6
+      Edit a Requisition                                                               6
+      Forward                                                                          7
+      Reject/Approve                                                                   8
+   Notifications                                                                       8
+
+Buying Groups                                                                          9
+
+Request for Quote                                                                     10
+   Key Roles                                                                          10
+      Buyer                                                                           10
+
+
+                                                                      Vroozi Sourcing​ 1​
+                                                                   Last Updated 2/7/2020
+       (Buy Route & Request for Quote Role)                                          10
+          Alternate Buyer Setting                                                    10
+   RFQ Workflow                                                                       11
+   Workflow - Step by Step                                                           12
+   Create an RFQ from ‘Ready for Sourcing’                                           18
+   Compare Bids                                                                      19
+   RFQ List                                                                         20
+       Copy RFQs                                                                    24
+
+Buy Route                                                                           26
+   Buy Route Configuration                                                          26
+   Create Order                                                                      27
+   Ready for Sourcing                                                                32
+   Converting a PR Into a PO:                                                        32
+   PO Status                                                                         33
+   PO Processing Status                                                              34
+   Buy Route Notifications                                                           35
+
+
+
+
+Sourcing 3 Ways
+Within Vroozi there are 3 ways buying organizations can review the materials and
+services requested by shoppers.
+
+   ●   Sourcing Review​: ​Workflow enabled to require review of PRs based on
+       sourcing rules created by a buying organization.
+   ●   Buy Route​: ​Workflow enabled through the use of ‘buyers.’ who can determine
+       the best price for requested goods and services.
+   ●   Quotes​: ​Requests for services or goods are submitted to multiple suppliers
+       who can then submit a quote which is either accepted or denied by the
+       buying organization.
+
+
+                                                                      Vroozi Sourcing​ 2
+                                                                                       ​
+                                                                   Last Updated 2/7/2020
+Sourcing Review
+                   A Sourcing Review is the process of having a Purchase Requisition
+                   go through a special workflow (reviewed by the Sourcing
+                   Approver) to ensure the company is receiving the best price on
+                   any item being purchased.
+                   Since not all orders need to go through this kind of review; the
+                   company's Admin can set rules that would trigger the review of a
+                   purchase request or change request. The company's Admin will
+                   set these tables dependent upon the direction of the Company’s
+                   Sourcing team. Once the sourcing workflow is activated, all PR's
+                   will be checked against the rules set on the tables explained
+                   below.
+                  The rules that determine if a change request is subject to
+                  sourcing review or not, are the same as the rules applied to
+                  purchase requests. The PO audit trail will capture the details of a
+change request going through sourcing review. The audit trail can capture when a
+sourcing reviewer approves, rejects or edits a change request.
+Sourcing rules including workflow, exempt suppliers and product types are set in
+Vroozi Purchase by a buying organization’s Vroozi Administrator. Please see the
+Vroozi Purchase Administrator Guide for configuration details.
+
+K​EY​ R​OLES
+Sourcing Approver
+Review PR documentation b ​ efore​ financial approval.
+   ● Applies to Sourcing outside of Buy Route
+
+Employee
+ The traditional requester/employee role can have 2 sourcing
+specific permissions added to their user role.
+
+ Additional Permissions:
+  ● Submit Request Forms: Ability to submit requests for products or services to a
+     buyer within the organization for bidding.
+  ● Submit RFQs to Suppliers: Ability to submit requests for Quote directly to
+     suppliers. If an employee doesn’t have RFQ enabled, the Request Forms turns
+     into an RFQ that is sent to the supplier from the Buyer.
+
+
+
+                                                                         Vroozi Sourcing​ 3
+                                                                                          ​
+                                                                      Last Updated 2/7/2020
+Sourcing Workflow Enablement
+   1.   Toggle on “Editable PR” to allow all Sourcing Approvers access to Edit
+        Purchase Requests.
+
+
+
+
+S​OURCING​ R​ULES
+A Logic Rule Table sets the rules at which the PR is flagged for sourcing review and
+determines when the special workflow is activated. Through this feature Admins can
+activate/ deactivate items, search and filter or add a new Sourcing Rule.
+When editing this page, fill out all the required fields and click 'Save Sourcing Rule'
+button.
+
+
+Catalog Type
+Can be set for Catalog or Non-Catalog Items.
+
+
+Currency
+Sourcing Workflows can be defined based on
+the currency being used. The system will convert
+the Requester spend threshold, the approval
+limit and/or the PR total value to the default
+currency based on the exchange rate configured
+for currency type in the master data table.
+
+Rules can be applied to All Currencies or a
+specific currency. (‘Apply to All Currencies’
+shown on right) If the latter setting is chosen,
+only Requisitions with items containing the currency specified will be applied to the
+workflow.
+
+                                                                          Vroozi Sourcing​ 4​
+                                                                        Last Updated 2/7/2020
+If ‘Apply to All Currencies’ is selected, the currency symbol will be removed from the
+‘Amount’ field. All previous Sourcing Rule configurations remain.
+
+
+
+Categories
+Select from existing Category(s) to apply the Sourcing Rule to.
+
+
+
+S​OURCING​ W​ORKFLOW
+Once a Sourcing rule is configured, requisitions with items identified in that sourcing
+rule will be flagged. Requesters will be notified that the requisition will go through
+Sourcing Review while the Requisition is still in draft.
+
+
+
+
+While awaiting review, the PR’s status will be displayed as ‘Sourcing Review’.
+
+
+
+
+                                                                         Vroozi Sourcing​ 5
+                                                                                          ​
+                                                                      Last Updated 2/7/2020
+S​OURCING​ A​PPROVER
+
+
+
+
+Upon login Sourcing Approvers will be immediately directed to any ‘Pending’
+requests.
+
+Once the requisition is opened, Sourcing Approvers will have several options.
+
+   ●   Reject
+   ●   Edit (if the global editing option is enabled as shown above)
+   ●   Forward: Assign to another approver.
+   ●   Approve
+
+
+
+
+Edit a Requisition
+
+
+                                                                          Vroozi Sourcing​ 6
+                                                                                           ​
+                                                                       Last Updated 2/7/2020
+Click on the line item to view the General, company, accounting and tax information.
+Make changes as needed
+
+
+
+
+       ‘Save Item’.
+
+
+
+
+Once changes have been made a new message will appear below the navigation
+option. If changes are incorrect, select ‘Revert all Changes’ to return to the originally
+submitted requisition.
+
+
+
+
+Forward
+Select another Approver to review the requisition.
+
+   ●   Note: ​This step can also be done after Editing has been completed.
+
+
+
+
+                                                                           Vroozi Sourcing​ 7
+                                                                                            ​
+                                                                        Last Updated 2/7/2020
+Reject/Approve
+Select ‘Reject’ or ‘Approve’ and enter a Note for the Requester.
+
+   ●   Complete of a note is optional
+   ●   Any notes will be viewable from the rejection/approval email notification the
+       Requester will receive.
+
+
+
+
+N​OTIFICATIONS
+Sourcing Approvers will receive email notification when a requisition is ready for
+review.
+
+
+
+
+                                                                         Vroozi Sourcing​ 8
+                                                                                          ​
+                                                                      Last Updated 2/7/2020
+Buying Groups
+A Buying Group identifies categories that
+require buyer assistance and specific buyers
+to provide that oversight.
+
+You can use buying groups regardless of
+whether your organization is using
+BuyRoute.
+
+For further details regarding Buyer Groups,
+see the Administrator Guide.
+
+
+
+
+                                                  Vroozi Sourcing​ 9
+                                                                   ​
+                                               Last Updated 2/7/2020
+Request for Quote
+Requests for Quote enables Purchase Requesters with the assistance of ‘Buyers’ to
+obtain quotes for their desired services/products. Once submitted by the Requester,
+a Sourcing Approver(s) verifies the details of the request including suggested
+suppliers. Details and suppliers may be updated by the Sourcing Approver who
+submits a ‘Request for Quote’ (RFQ) to the selected suppliers. The suppliers can then
+reply to the request with a bid that is either accepted or rejected. Once the best
+price and/or terms are obtained, the Sourcing Approver will return the request to the
+original Requester to complete their workflow.
+
+K​EY​ R​OLES
+Buyer
+(Buy Route & Request for Quote Role)
+
+Has access to both Vroozi Catalog and Vroozi Purchase. Allowed to create POs, add
+non-catalog items, add line items from approved PRs and release POs associated
+with their assigned buyer group.
+   ● Access to Catalog content in smartOCI, is based on
+       assigned Content Views
+   ● Unable to administer, create, update or delete any
+       catalogs in the Content Manager
+
+  Additional Permissions:
+   ● Ability to code/edit a PR/PO may be restricted at user
+     creation.
+   ● Manage Suppliers
+
+Alternate Buyer Setting
+
+Similar to the ‘Out of Office’ functionality for Financial Approvers, Buyers may set an
+Alternate Buyer​ to act on their behalf. When configured, in the Buyer’s Profile the
+Alternate Buyer​ can be selected from a pre-populated list of all users with the B​ uyer
+role. (shown below)
+
+
+
+
+                                                                         Vroozi Sourcing​ 1​ 0
+                                                                       Last Updated 2/7/2020
+In this scenario, when an RFQ form is submitted by a Requester, both the original
+Buyer and designated Alternate Buyer will receive email notification of the form.
+Both Buyers can take the appropriate actions against it. Once one Buyer opens the
+form, the RFQ is then assigned to them and will be removed from the other Buyer’s
+‘Submitted Requests’ view.
+
+RFQ W​ORKFLOW
+The following workflow shows an RFQ process initiated by an employee who has
+permission to create RFQs. The buyer role in this case is also being used to review
+the request before it is sent to Supplier.
+
+Note: ​ RFQ process can be initiated by the Buyer. The workflow below would then
+omit the Employee role.
+
+
+
+
+                                                                       Vroozi Sourcing​ 1​ 1
+                                                                     Last Updated 2/7/2020
+W​ORKFLOW​ - S​TEP​ B
+                    ​ Y​ S​TEP
+Employee:​ ​ Creates Request Form
+
+
+
+
+   1. Name your request.
+   2. For each line item added, select Product or Service.
+   3. Provide a Description.
+
+
+
+
+                                                               Vroozi Sourcing​ 1​ 2
+                                                             Last Updated 2/7/2020
+    Tip:​ Be as specific as possible. Any additional requests about price, etc can be
+    added in the comments field at the bottom of the RFQ.
+
+
+   4. Enter needed Quantify
+   5. Select UOM
+   6. Desired Delivery
+   7. Choose suppliers to recommend.
+         ●   This can be left empty if Employee does not have any.
+
+
+
+
+   8. If needed, add new recommended supplier (shown below)
+
+
+
+
+   9. Assign a Buyer
+   10. Add additional message (optional)
+   11. Submit
+
+Buyer:​ ​ Receives email notification of the Employee’s Request. The email will
+include the Request Form Number the subject line and all pertinent details in the
+body of the email.
+
+
+
+
+                                                                        Vroozi Sourcing​ 1​ 3
+                                                                      Last Updated 2/7/2020
+       The request can be accessed via email by clicking ‘Review Request Form’ This
+       will take the Buyer to the RFQ which will be housed under ‘RFQ List’ →
+       ‘Submitted Request’
+
+          ●   Submitted: Employee has submitted the Request to Buyer
+          ●   Converted: Buyer has converted the Request to an RFQ
+
+
+
+
+Buyer:​ ​ ​ Views all details of the Request. If ready to move forward, selects ‘Convert to
+RFQ.’ (shown below)
+
+
+
+
+                                                                           Vroozi Sourcing​ 1​ 4
+                                                                         Last Updated 2/7/2020
+      Completes required details for RFQ and edit all other details as needed.
+
+          1. End due dates for Supplier Bids
+          2. Select a category for each requested line item.
+          3. Add notes to the Supplier. (While this field is optional, this is a good
+             location to include any pricing specifications)
+          4. Submit for bidding.
+
+
+
+
+Buyer:​ Once submitted the RFQ will be vieweable in the ‘Submitted RFQs’ tab
+within the ‘RFQ List’ category.
+
+
+
+
+Employee:​ ​ Receives email notification that the request has been submitted to
+Supplier(s). The email notification will include the Sourcing Approver’s name and
+RFQ number.
+
+
+
+
+                                                                          Vroozi Sourcing​ 1​ 5
+                                                                        Last Updated 2/7/2020
+Supplier: ​ Views request for quote & submits a bid. RFQ status changes from
+‘Submitted’ to ‘Accepted’ Buyer:
+
+
+
+
+After selecting ‘Create Bid’ the supplier will be directed to the Quote draft where
+they can complete the required details. (​ shown below)
+
+
+
+                                                                        Vroozi Sourcing​ 1​ 6
+                                                                      Last Updated 2/7/2020
+Buyer:​ Views bids by clicking on the bid number. If appropriate awards or rejects
+the bids.
+
+   ●   Awarded bid​ = Award status
+   ●   Rejected bid​ = Rejected status
+   ●   Acknowledged = Supplier has received and opened the supplier webform but
+       not submitted it
+
+
+
+
+   ●   See Compare Bids section.
+
+
+
+
+   ●   Status of bid converts from ‘Submitted’ to ‘Awarded’
+
+                                                                      Vroozi Sourcing​ 1​ 7
+                                                                    Last Updated 2/7/2020
+   ●   RFQs with Awarded bids can be retrieved in the Awarded Bids tab of the ‘RFQ
+       List’ category.
+
+
+
+
+Buyer: ​ The awarded bid is assigned back to the Requester to complete the PR.
+
+
+
+
+   ●   This action creates the Purchase Request draft and is reflected in the status.
+
+Employee:​ Retrieves the PR in ‘draft’ status
+
+
+
+
+   ●   Completes all required details and submits PR for approval.
+   ●   The completed Purchase Request will go through an approval workflow per
+       the buying organization’s configuration.
+
+C​REATE​ ​AN​ RFQ ​FROM​ ‘R​EADY​ F​ OR​ S​OURCING​’
+From ‘Ready for Sourcing, Buyers can create an RFQ from the Ready for Sourcing
+screen.
+
+
+                                                                        Vroozi Sourcing​ 1​ 8
+                                                                      Last Updated 2/7/2020
+   ●   Once the PO(s) are selected for Sourcing. Click the ellipses to select ‘Prepare
+       RFQ’
+
+
+
+
+C​OMPARE​ B​IDS
+Once bids have been submitted by suppliers, use the ‘Compare’ feature to view bids
+side by side before awarding one.
+
+From the ‘Bid Overview’ portion of the RFQ Draft, check the box next to each Bid.
+
+
+
+
+Select ‘Compare.’
+
+
+
+
+                                                                         Vroozi Sourcing​ 1​ 9
+                                                                       Last Updated 2/7/2020
+Before acceptance, bids can be compared side by side. Once comparison is
+complete, close the ‘Bid Comparison’ screen and select your bid.
+
+
+
+
+RFQ L​IST
+As seen by​ Employees ​with Permission to Submit Request Forms
+Provides visibility to your company’s Request for Quote (RFQ) process. Within the
+RFQ List, the system will sort all RFQs based on their Status. Select each Status in the
+top tabs to review the RFQs in various stages.
+   Requests in Draft
+   This section shows all the requests that are currently open and in draft by users.
+   These forms have not yet been submitted to the buyers for processing.
+          1. Request #: ​ Unique number associated with each draft.
+
+                                                                        Vroozi Sourcing​ 2​ 0
+                                                                       Last Updated 2/7/2020
+      2. Request Name:​ Naming convention given at time of creation
+      3. Requester Name:​ User who created the drafted Request.
+      4. Created Date:​ Date Request draft was initiated.
+
+
+
+
+Submitted Requests
+This section shows all requests submitted from users to buyers to convert into
+Request for Quotes which are then submitted to specific suppliers.
+      1. Request Name: ​Name Requester has attached to the RFQ
+      2. Status:
+                 ○ Converted
+                 ○ Submitted
+
+
+
+
+   Note:​ ‘Submitted Requests’ and ‘Submitted RFQs’ will include a Status
+   update.
+
+
+
+RFQs in Draft
+This section shows all Request for Quotes (RFQs) that buyers are currently
+working and have not yet been submitted to any suppliers.
+      1. RFQ #: ​ Unique number associated with each RFQ.
+      2. RFQ Name:​ Naming convention entered at the time of creation
+      3. Requester Name:​ User who submitted the RFQ.
+      4. Created Date:​ Date request was initiated.
+                                                                   Vroozi Sourcing​ 2
+                                                                                    ​ 1
+                                                                 Last Updated 2/7/2020
+Submitted RFQs
+This section shows all Request for quotes (RFQs) that buyers have submitted to
+suppliers for bidding. In this section the Bids will have multiple statuses
+(Submitted, A​ ccepted​, Cancelled, Closed), depending on the action taken by
+both the buyer and supplier.
+      1. Bid Overview: ​ A unique Bid number is created for each Supplier Bid.
+      2. Due Date: D​ eadline set by the Requestor for Supplier(s) to submit bids.
+      3. Status:
+            ○ Closed - Bidding has ceased
+            ○ Submitted - RFQ has been submitted and is now awaiting
+                Supplier(s) bid.
+            ○ Expired - Bid due date has passed
+      4. Submitted Date: D  ​ ate the RFQ was submitted for quotes. Does not
+         indicate when RFQ was viewed by Supplier.
+
+
+
+
+                                                                   Vroozi Sourcing​ 2
+                                                                                    ​ 2
+                                                                 Last Updated 2/7/2020
+  Vroozi Sourcing​ 2
+                   ​ 3
+Last Updated 2/7/2020
+   Awarded Bids
+   This section shows all RFQs that have been ‘Awarded’ to a supplier or ‘Converted’
+   into requisitions for approval and PO creation.
+
+         1. Bid #: A unique Bid number is created for each Supplier Bid.
+
+         2. RFQ #: The original RFQ from which the Bid is produced. In many cases
+            there will be multiple Bids from the same RFQ number.
+
+         3. Requester Name: User who submitted the RFQ.
+
+         4. Supplier: Name of Supplier included in bid.
+
+         5. Status: Indicates whether the Bid has been Awarded or a PR has been
+            created
+
+         6. Awarded Date: Date bid was converted into a PO.
+
+
+
+
+Copy RFQs
+Copy RFQ document functionality: U   ​ sers can copy the RFQ document either from
+the display RFQ page or the RFQ list page by clicking on the ellipsis and selecting
+“Copy RFQ.”
+
+
+
+
+                                                                     Vroozi Sourcing​ 2​ 4
+                                                                    Last Updated 2/7/2020
+Extend Bid due Date and Time: ​Users have the ability to extend the bid due
+date/time on an RFQ after an RFQ has been submitted to suppliers. This gives users
+the flexibility to allow for ample time for the bidding process to complete, ensuring
+they get the best value with each Quote they receive.
+
+
+
+
+When you click on the Pencil (edit) icon, the user will receive the following modal
+which will allow him/her to change the bid Due Date for the selected RFQ.
+
+
+
+
+                                                                        Vroozi Sourcing​ 2
+                                                                                         ​ 5
+                                                                      Last Updated 2/7/2020
+Buy Route
+Where buyers can create purchase orders, convert PR line items into PO’s, view PO
+statuses, resubmit failed PO’s, and schedule the Purchase Order Activity report.
+
+Buy Route workflow should be enabled through the creation of Buying Groups.
+
+Buy Route settings can be configured for Catalog and Non-catalog items. Client
+default is automatically set to route only non-Catalog Requisitions.
+
+
+
+
+B​UY​ R​OUTE​ C​ONFIGURATION
+Vroozi Purchase Administrators can configure the behavior of the BuyRoute feature
+for their organization. They can determine which types of items are sent to
+BuyRoute, Catalog and/or non-Catalog. By enabling the toggle below, any items
+being requested by an employee can be reviewed and sourced appropriately by a
+Buyer.
+
+This can be set up in the Administrator navigation panel B
+                                                         ​ uyRoute -> Settings ​then
+enabling the “Catalog Items” toggle.
+
+
+
+
+Once this toggle is enabled, all items included in PRs, whether they are catalog
+items, or free text items; will be sent into BuyRoute. Where a Buyer with access to
+the appropriate Buyer Group, will be able to see the items on their “Ready for
+Sourcing” screen upon logging into the system. From here, Buyers can review the
+items and add them to a PO.
+
+
+
+
+                                                                       Vroozi Sourcing​ 2
+                                                                                        ​ 6
+                                                                     Last Updated 2/7/2020
+C​REATE​ O​RDER
+Buyers can bypass PR workflow and create a rush PO via Buy Route.
+
+NOTE: Only users assigned to the ‘Buyer’ role will be able to create these types
+of direct purchase orders.
+
+Step 1:
+
+   ●   Login to Vroozi using your buyer role credentials.
+
+Step 2:
+
+   ●   From the navigation panel on the left side of the screen, select the ‘Create
+       Order’ option.
+
+Step 3:
+
+   ●   The ‘Create Purchase Order’ window will appear.
+
+
+
+
+   ●   Fill in the required information fields:
+            ○ Supplier Name
+            ○ Order Type
+            ○ Payment Terms
+            ○ Order Name
+            ○ FOB Terms (Optional)
+            ○ Company Code
+            ○ Currency
+
+
+
+                                                                        Vroozi Sourcing​ 2
+                                                                                         ​ 7
+                                                                      Last Updated 2/7/2020
+Step 4:
+
+   ●   Click the green ‘Continue’ button to proceed with the order.
+
+
+
+
+Step 5:
+
+   ●   Click the blue ‘Add Item’ button to add line items to the order.
+
+
+
+
+Step 6:
+
+
+
+                                                                        Vroozi Sourcing​ 2
+                                                                                         ​ 8
+                                                                      Last Updated 2/7/2020
+   ●   Fill in the required line item fields, same as you would to submit a free text or
+       non-catalog purchase request.
+            1. Type (select product or service)
+            2. Category (use the drop down menu or search to select the category
+                which best classifies the line item)
+            3. Description
+            4. Unit price (cost)
+            5. Currency (defaults to USD)
+            6. Quantity
+            7. UoM (unit of measure)
+            8. Supplier
+            9. Service Period or Delivery Date depending on ‘Type’ selected.
+
+
+
+
+Step 7:
+
+   ●   Enter the appropriate accounting information for the line item.
+
+Step 8:
+
+   ●   Enter the company information for the Purchasing Organization and Plant
+       fields. Select the correct tax option from the drop down menu (i.e. taxable, tax
+       exempt, etc.)
+
+NOTE: Requirements will vary based on your organization’s configurations.
+
+
+
+
+                                                                          Vroozi Sourcing​ 2
+                                                                                           ​ 9
+                                                                        Last Updated 2/7/2020
+  ●   Click the green ‘Save Item’ button to save the line item to the purchase order.
+
+
+
+Step 9:
+
+  ●   Repeat steps 5-8 as needed until all line items have been added to the
+      purchase order. Click the green ‘Continue’ button to proceed once all line
+      items have been added.
+
+
+
+
+Step 10:
+
+  ●   Click the shipping address field and select the appropriate address from the
+      dropdown menu. Add any internal comments regarding the purchase order
+      and any notes or instructions for the supplier into the appropriate fields.
+
+
+                                                                      Vroozi Sourcing​ 3​ 0
+                                                                     Last Updated 2/7/2020
+Step 11​:
+
+   ●   Click the green ‘Finish’ button to create a draft of your purchase order. Review
+       and verify all information entered into the purchase order is accurate. Add any
+       shipping instructions if necessary.
+
+
+
+
+Step 12:
+
+   ●   Click the green ‘Submit’ button to send the Purchase Order to the supplier.
+
+
+
+
+Step 13:
+
+   ●   The Order can then be found in ‘PO Status’ under ‘In Progress’. This status will
+       remain until the Supplier confirms shipment of the item(s).
+
+
+
+
+                                                                        Vroozi Sourcing​ 3
+                                                                                         ​ 1
+                                                                      Last Updated 2/7/2020
+R​EADY​ F​ OR​ S​OURCING
+Displays all Requests which have been financially approved and are awaiting to be
+converted into a PO which is then submitted to a supplier.
+
+C​ONVERTING​ A
+             ​ ​ PR I​NTO​ ​A​ PO:
+These are the steps the Buyers will take to move a request line item into a Purchase
+Order:
+
+Purchase Request Submitted:​ The Buyer receives an email notification each time a
+Purchase Request has been Approved and is now awaiting Sourcing. The Buyer can
+view the Purchase Request via the ‘View Purchase Request’ option.
+
+Search for a Request
+
+   1. In the Search bar enter the associated keywords or request number.
+
+   2. Select a specific Request by clicking the box to the left of the row.
+
+   3. Click ‘Prepare PO’ to move forward with the process.
+
+
+
+
+   4. Confirm preselected supplier
+
+
+
+
+                                                                         Vroozi Sourcing​ 3
+                                                                                          ​ 2
+                                                                       Last Updated 2/7/2020
+         ○   Request will move from ‘Ready for sourcing’ list to the the ‘Selected for
+             sourcing’ list on the right side of the field.
+
+  5. Confirm all Order details are correct, paying particular attention to the
+      Payment Terms and Shipping Address.
+
+
+
+
+  ●   Edit or Remove Line Item and/or add ‘Add Item’.
+  ●   Click ‘Submit’ to send request to the Supplier
+
+
+
+
+PO S​TATUS
+
+
+                                                                        Vroozi Sourcing​ 3
+                                                                                         ​ 3
+                                                                      Last Updated 2/7/2020
+Use the Tabs at the top of the Buy Route screen to view POs in various statuses of
+the procurement process.
+
+   ●   Drafts: Not yet submitted to supplier
+
+   ●   InProgress: PO Data enroute to supplier
+
+   ●   Ordered: Supplier has PO and is process
+
+   ●   Cancelled: PO cancelled by internal user
+
+   ●   Received: Supplier has sent the items and internal user has verified receipt
+       and provided a Goods Receipt.
+
+   ●   Invoiced: Invoice processed.
+
+
+
+
+PO P​ROCESSING​ S​TATUS
+Repository for any Purchase Orders that have failed in the order process. You can
+click the number to view and review what changes need to be made. The Vroozi
+support team is notified if a PO fails and will reach out with details.
+
+
+
+
+                                                                      Vroozi Sourcing​ 3​ 4
+                                                                     Last Updated 2/7/2020
+B​UY​ R​OUTE​ N​OTIFICATIONS
+Buyers:
+
+Will receive email notification when a PR requires Buy Route review. Selecting ‘View
+Purchase Request’ will navigate the Buyer to the specific PR within Vroozi.
+
+
+
+
+Requesters:
+
+Will receive email notification as the PR progresses through the Buy Route flow:
+
+   1. The Requisition review is complete
+   2. The PR has converted to a Purchase Order. (shown below)
+         ● Select View Purchase Order to see if any changes have been made.
+
+
+
+
+   3. The P0 has been submitted to the Supplier.
+
+
+
+
+                                                                      Vroozi Sourcing​ 3
+                                                                                       ​ 5
+                                                                    Last Updated 2/7/2020
+  Vroozi Sourcing​ 3
+                   ​ 6
+Last Updated 2/7/2020
+

@@ -1,0 +1,198 @@
+FEATURE TOGGLES
+Additional Vroozi Features that can be activated.
+Please contact the Vroozi Support Team to enable these features.
+
+
+
+Feature Toggle                          Description
+
+PURCHASE_EXPRESS                        Purchase Express Module which enables a role
+                                        that allows employees to share lists with power
+                                        users, who create purchase requisitions in ERP
+                                        systems. Requires a Purchase Express license.
+
+COLLABORATIVE_LISTS                     Toggle for collaborative list where users can
+                                        share shopper lists with each other
+
+PR_RESUBMISSION                         Requesters are able to resubmit a rejected
+                                        Purchase Request
+
+ACCOUNTS_PAYABLE_WORKFLOW               Toggle to turn on AP Module (invoice)
+
+ACCOUNTS_PAYABLE_WORKFLOW__IN           Allow multiple PO assignment to the same
+VOICE_MULTIPLE_POS                      Invoice
+
+ACCOUNTS_PAYABLE_WORKFLOW__DO           Allow the rounding up on Invoice Total
+CUMENT_TOTALS_ROUNDING
+
+ACCOUNTS_PAYABLE_WORKFLOW__IN           Enable OCR parsing functionality on Vroozi
+VOICE_OCR                               Invoices
+
+ACCOUNTS_PAYABLE_WORKFLOW__IN           If this feature is enabled then email invoice will
+VOICE_OCR_AUTO_PROCESSING               be created as Draft after successful OCR
+                                        processing
+
+ACCOUNTS_PAYABLE_WORKFLOW__IN           Billing and shopping addresses captured from
+VOICE_OCR_ADDRESS_MATCHING              Invoice document using Vroozi intelligent scan
+                                        & capture.
+
+ACCOUNTS_PAYABLE_WORKFLOW__ME           Enable Memos feature
+MO
+
+ACCOUNTS_PAYABLE_WORKFLOW__ME           Automatically creation of Memo if there is a
+MO__AUTO_MEMOS                          difference in Invoice Total, additional tax, etc
+
+ACCOUNTS_PAYABLE_WORKFLOW__LO           Audit Trail on Invoice, Memo & Payment Request
+GS
+
+ACCOUNTS_PAYABLE_WORKFLOW__RE           Allow to modify on Approved/Posted/Paid
+POSTING                                 Invoices / Memos
+
+ACCOUNTS_PAYABLE_WORKFLOW__PO           Allows designated users to edit and post an
+STED_DOCUMENTS_EDITING                  Invoice that is already in posted status
+
+
+                                                                            Feature Toggles 1
+                                                                                     Feb 2025
+ACCOUNTS_PAYABLE_WORKFLOW_AN      Allow combination of percentage and/or values
+D_MULTIPLE_SUBTOTAL_TOLERANCES    in subtotal tolerances in Invoice for Exception
+                                  Handling
+
+ACCOUNTS_PAYABLE_WORKFLOW__AC     Filter accounting objects based on the Company
+COUNTING_OBJECTS_FILTERED_BY_CO   Code and vice versa in Invoice Items, Memo
+MPANY_CODE                        Items and Payment Request Items
+
+ACCOUNTS_PAYABLE_WORKFLOW__TO     Functionality to apply N-way Match after
+LERANCES_CURRENCY_CONVERSION      Tolerance is converted to invoice’s default
+                                  currency
+
+ACCOUNTS_PAYABLE_WORKFLOW__PU     Purchasing organization feature for AP
+RCHASING_ORGANIZATION             documents
+
+PAYMENT_REQUESTS                  Toggle for Payment Request Module
+
+DOWNLOAD_ALL_CATALOGS             Toggle to enable the feature for master
+                                  administrator to download all catalogs together
+                                  in one click
+
+EXPENSES                          Activate the Vroozi Expense Module
+
+INVOICE_PAYMENTS                  If this feature is enabled then status of invoice
+                                  will be updated to Paid if external system sends
+                                  this status
+
+SUPPLIER_DISCOVERY                Toggle for Activate the Supplier Directory.
+                                  Requires a separate license.
+
+QUICK_RFQ                         Toggle for RFQ (ie: tactical bidding or “3 bids and
+                                  a buy” capability in Vroozi) module
+
+SUPPLIER_PORTAL                   Toggle for Supplier Portal module
+
+POCR_EXTERNAL_CHANNELS            If this toggle is on then POCR will be done in
+                                  external system
+
+ADVANCED_SHIPMENT_NOTICE          Toggle to enable Advance Ship Notice (ASN)
+                                  feature
+
+SDM_TRAINING_VIDEO                Add an embedded video on Supplier Directory
+                                  landing page
+
+ESTIMATED_TAX_DISTRIBUTION        Add a new Distribution option in the Supplier
+                                  Tax summary that will do the distribution
+                                  proportional to calculated tax amount
+
+MULTILINGUAL_PRODUCT_SEARCH       Catalog search with multilingual support
+
+RECEIPT_BY_VALUE                  Allows for reception of PO by value
+
+RECEIPT_CANCELLATION              Cancel an existing GR (Goods Receipt)
+
+                                                                    Feature Toggles 2
+                                                                                Feb 2025
+RECEIPT_ITEM_CANCELLATION         Item level cancellation in GR (Goods Receipt).
+                                  Customers without this toggle will see “Delete”
+                                  while Cancel function will keep items in “Cancel”
+                                  status.
+
+PO_ITEM_CANCELLATION              Allow cancellation of item in POCR
+
+DOCUMENT_FLOW                     Document flow functionality
+
+INTEGRATION__ESIGNATURE_SOVOS     Feature to allow Digital Signature on Invoice via
+                                  API
+
+PURCHASE__GR_TOLERANCE            Configure Threshold for GR. This will appear on
+                                  the Supplier master record if enabled
+
+PURCHASE__SOURCING_RULE_ENHAN     Additional Fields added to Sourcing Rule
+CED                               definition (company code)
+
+PURCHASE__WITHHOLDING_TAX         Support of Withholding Tax
+
+ACCOUNTS_PAYABLE__BANK_INFO       Bank Info can be added on Supplier record
+                                  which will appear on Invoices
+
+PURCHASE__BUDGET                  Toggle to turn on Budget module
+
+PURCHASE__BUDGET_WORKFLOW         Toggle to enable Budget Approver workflow
+                                  with Budget Module
+
+PURCHASE__PO_ADDITIONAL_FILTERS   New PO screen will appear where user can
+                                  search if this toggle is enabled
+
+PURCHASE__SUPPLIER_CUSTOM_FIELD   Custom fields can be associated with Suppliers if
+S                                 this toggle is enabled. These fields appear on
+                                  Supplier Directory
+
+PURCHASE__COMPANY_ACCOUNTING_     Allow for accounting objects to be
+LINE_ITEM_CONFIGURATION           required/optional at line item level in PR
+                                  creation
+
+PURCHASE__CHANGE_REQUEST_NUMB     Separate number scheme for Purchase Request
+ER_SCHEME                         and Change Request documents
+
+INTEGRATION_GRR_BEFORE_POCR       System will automatically create Goods Return if
+                                  user cancels an item in POCR
+
+PURCHASE_GR_NOTIFICATION          Supplier will receive GR notification via email if
+                                  this toggle is enabled
+
+
+PURCHASE_POCR_LINE_ITEM_TYPE_RE   Allow POCR change to be restricted based on
+STRICTIONS                        Original PO type
+
+*PURCHASE__USE_PR_TOTAL_FOR_SR_   Feature to compare complete PR total with
+
+                                                                     Feature Toggles 3
+                                                                               Feb 2025
+MATCHING                         Sourcing Rule to trigger Sourcing Workflow
+                                 accordingly
+
+PURCHASE_BUYER_ROUTE_ITEM_REJE   Allow Buy route item to be rejected before
+CTION                            sourcing PO
+
+PURCHASE_CUSTOM_FIELDS_SOURCIN   Enhanced Sourcing Rule to support Custom
+G_RULES                          fields, Company Code (list type fields only)
+
+PURCHASE__BUYER_PR_WORKFLOW      Feature to allow Buyer to reject a PR
+
+PURCHASE__OWNERSHIP_CHANGE       Feature to allow admin to change the ownership
+                                 of PO
+
+ACCOUNTS_PAYABLE_WORKFLOW__EN    Feature to enable the new dynamic workflow for
+HANCED_WORKFLOW                  Purchase and Invoice
+
+ACCOUNTING_STRING_VALIDATION     Activate the accounting string validation feature
+
+ACCOUNTING_STRING_UI_CRUD        Accounting string CRUD operations in UI feature
+
+PURCHASE_TERMS_AND_CONDITIONS    Enhancement of Terms & Conditions
+                                 Management and Assignment in POs
+
+
+
+
+                                                                  Feature Toggles 4
+                                                                           Feb 2025
+

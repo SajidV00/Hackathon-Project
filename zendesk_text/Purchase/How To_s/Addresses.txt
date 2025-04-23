@@ -1,0 +1,40 @@
+Address Assignment
+Grab & Go o
+          ​ n the creation and use of new delivery/shipping addresses.
+
+
+   1. If enabled, any user with Requisition editing rights can create a
+      new addresses under ​My Data​.
+
+
+
+
+   2. New addresses can also be created from the Requisition draft.
+        ● Remove the default address and select ‘New Address’ or select from
+           another previously created address.
+
+
+
+
+Note: ​Users cannot set a self created address as their Default Address but they can
+remove the Default Address at the requisition draft and
+replace with another.
+Required Address Information
+   ✓ Name
+   ✓ Country
+   ✓ Street
+   ✓ City/State/Zip Code
+   ✓ Phone
+   ✓ Email
+
+
+
+What if I can’t create an address?
+Reach out to your internal Vroozi Administrators as they may have disabled user
+ability to create addresses.
+
+
+
+
+                                                                                       1
+

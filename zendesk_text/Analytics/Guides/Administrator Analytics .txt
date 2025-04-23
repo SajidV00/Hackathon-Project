@@ -1,0 +1,266 @@
+           Administrator
+             Analytics
+       Guide for users with access to the Administrator Dashboard
+
+
+The administrator dashboard is featured in all Administrator navigation panels and
+may also be added as a user permission at each user’s record or via the user builk
+upload tool. See the administrator guide for more information.
+
+
+
+
+Table of Contents:
+Administrator Analytics                                                                2
+   Dashboard Navigation                                                                2
+   Spend Reporting Dashboard                                                           3
+   Supplier Reporting Dashboard                                                        4
+   Document Reporting Dashboard                                                        5
+   Catalog Reporting Dashboard                                                         6
+   User Reporting Dashboard                                                            7
+
+Report Filters                                                                         8
+
+Sharing Analytics                                                                      8
+   Schedule Reports                                                                    9
+   Download Reports                                                                   10
+   Send Reports                                                                       10
+
+
+
+
+                                                               Administrator Analytics 1​
+
+                                                                 Last Update 10/14/2020
+Administrator Analytics
+D​ASHBOARD​ N​AVIGATION
+Administrator dashboard access can be assigned to any user at their user record or if
+added to the user’s credentials in an uploaded bulk user file.
+
+The Administrator Dashboard displays metrics for all document and workflow types.
+
+Below is the list of ‘Looks’ on the Administrator Dashboard:
+
+   1. Current Month Spend: ​Describes the current month spend. The number
+      directly below it is the comparison from the previous month.
+   2. Purchase Request Count This Month: ​Describes the number of purchase
+      requests submitted in the current month.
+   3. Current Month Purchase Orders: ​Describes the purchase orders in the
+      “approved’ state. The number below describes the change for the current
+      month.
+
+
+
+
+   4. Total Invoices: ​Describes the total number of invoices submitted for a
+      specific month.
+   5. Catalogs Expiring: D
+                         ​ escribes catalogs expiring in the current month.
+
+
+
+                                                               Administrator Analytics 2
+                                                                                       ​
+
+                                                                  Last Update 10/14/2020
+   6. Purchase Request Count: D
+                              ​ escribes the status of all the purchase requests
+      in the company at any current time.
+   7. Analytics by Category ​Click to view s​ pecific dashboards by desired topic
+   8. Purchase Request Count: D  ​ escribes the total number since Go-Live.
+      Organized by status.
+   9. Top 10 Suppliers: ​Describes the top 10 suppliers by the amount spent with
+      that supplier.
+
+
+
+
+S​PEND​ R​EPORTING​ D​ASHBOARD
+
+
+
+
+This dashboard contains the following metrics:
+
+   1. Total Spend since Go-Live: T
+                                 ​ his metric calculates total spend from the time
+      the client started at Vroozi.
+   2. Current Month Spend: ​ This visualization describes the current month spend.
+      The number directly below it is the comparison from the previous month.
+   3. Total Spend YTD: ​ Describes the spend from the year to the current date.
+   4. Average Orders: ​ Describes the average from the approved purchase orders
+
+
+
+                                                               Administrator Analytics 3
+                                                                                       ​
+
+                                                                  Last Update 10/14/2020
+   5. Internal Catalog Spend​: This metric describes internal spend. This will
+      exclude punch out spend and spend not on contract.
+   6. Punchout Catalog Spend: ​This metric describes punchout catalog spend.
+      This will exclude internal spend and spend not on contract.
+   7. All Purchase Orders:​ Describes all the approved purchase orders.
+
+S​UPPLIER​ R​EPORTING​ D​ASHBOARD
+
+
+
+
+This dashboard contains the following metrics:
+
+   1. Total Sales: ​This metric describes the total sales with that specific supplier.
+
+   2. Total orders: ​A count of the total Purchase Orders with that supplier.
+
+   3. Supplier Details: ​Describes every supplier spend
+
+
+
+
+                                                                  Administrator Analytics 4
+                                                                                          ​
+
+                                                                     Last Update 10/14/2020
+   4. Supplier Spend by Month: ​ Breakdown of overall spending by month
+
+
+
+D​OCUMENT​ R​EPORTING​ D​ASHBOARD
+
+
+
+
+This dashboard contains the following metrics:
+
+   1. Purchase Request Count: ​Describes the purchase request count for
+      submitted purchase requests.
+   2. Purchase Orders the Month: D ​ escribes the purchase orders submitted this
+      month that were approved.
+   3. Confirmed Goods Receipts: ​Describes the goods receipts that were
+      submitted.
+   4. Orders Y/Y by month: ​describes the purchase orders submitted month by
+      month.
+   5. Expiring Catalogs This Quarter: L​ ist of catalogs that have or will expire
+      during the given quarter.
+
+
+
+                                                              Administrator Analytics 5
+                                                                                      ​
+
+                                                                Last Update 10/14/2020
+   6. Average Purchase Order amount: d
+                                     ​ escribes average purchase order
+      amounts by month.
+   7. Spend by State: ​the spend by the state it was submitted in.
+   8. PO Total Count: Shows the status of all the purchase orders.
+
+
+
+C​ATALOG​ R​EPORTING​ D​ASHBOARD
+
+
+
+
+This dashboard contains:
+
+   1. Active catalogs: ​Shows the active catalogs
+   2. Expiring Catalogs this Quarter: C​ alculates the catalogs expiring this quarter.
+   3. Catalog Status: ​Describes the status of the catalogs
+   4. Most popular items per catalog: ​Describes the most popular item per
+      catalog.
+   5. Catalog compliance: ​ Describes the percent of catalog compliance.
+
+                                                                Administrator Analytics 6
+                                                                                        ​
+
+                                                                  Last Update 10/14/2020
+   6. Top ten Catalogs ​ Describes the top categories by spend.
+
+U​SER​ R​EPORTING​ D​ASHBOARD
+
+
+
+
+This dashboard contains the following metrics:
+
+   1. Active Users: ​ Shows total active users.
+   2. ActIve/inactive Users: G   ​ raph of Active & Inactive Users. Select user group to
+      drill into details including spend limit and last login.
+   3. Active Users by Role:​ Describes the count by role
+   4. Spend by User: ​Describes the total spend since user creation.
+
+
+
+
+                                                                  Administrator Analytics 7
+                                                                                          ​
+
+                                                                     Last Update 10/14/2020
+All Analytics Users
+
+Report Filters
+Filtering allows the user to filter data into something more meaningful. To use the
+filter apply the following:
+
+   1. Select a report Category and navigate to the Filter (top left corner)
+   2. In the drop down menu select filtering parameters (will vary slightly
+      depending on the category.
+   3. Select Run.
+
+
+
+
+Sharing Analytics
+You can select to export data through the Vroozi Analytics module. Select the gear
+icon to reveal download options.
+
+   1. Use the menu navigation to select download data
+
+   2. Select desired action. (next page)
+
+
+
+
+                                                                Administrator Analytics 8
+                                                                                        ​
+
+                                                                  Last Update 10/14/2020
+S​CHEDULE​ R​EPORTS
+Schedule a report or ‘look’ to be sent out at regular intervals via email or sftp.
+Reports can be sent to any user role within your organization.
+   1. Select the gear icon in the right corner of the screen.
+   2. Select ‘Save & Schedule’
+
+
+
+
+   3. Define the format of the report to be sent, the delivery schedule, etc.
+
+
+
+
+                                                                   Administrator Analytics 9
+                                                                                           ​
+
+                                                                      Last Update 10/14/2020
+D​OWNLOAD​ R​EPORTS
+Name & Select formatting preferences (below)
+
+
+
+
+S​END​ R​EPORTS
+Customize and select a recipient(s) to send the exported data to.
+
+
+
+
+                                                               Administrator Analytics 1​ 0
+
+                                                                    Last Update 10/14/2020
+Administrator Analytics 1​ 1
+
+   Last Update 10/14/2020
+

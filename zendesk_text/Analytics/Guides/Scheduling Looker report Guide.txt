@@ -1,0 +1,77 @@
+How to schedule Looker reports using PMAN/SmartOCI
+
+
+There are two components that you can schedule
+
+1. Dashboard
+   a. To schedule, please follow the subsequent steps that are indicated in green.
+
+
+
+
+      i. A pop-up window will open, allowing the client to fill in the corresponding fields based on their requirements.
+
+
+
+
+      ii. List of supported destinations.
+iii. List of supported destinations files
+
+
+
+
+iv. In case a dashboard includes any filters, you can apply them during the scheduling process.
+
+
+
+
+v. Advance Option
+   The client has the ability to configure schedule settings such as Custom Message, Page Size (if the destination is PDF), Delivery
+   Timezone, and more.
+     vi. Please click the "Save" button to save the schedule. The next popup will resemble the screen shown below.
+
+
+
+
+        1. To test and verify if the file is sending the correct data, you should click on the "Send Now" button.
+        2. Finally, simply click on "Done" to close this window.
+  b. Limitation:
+      i. The email destination does not support sending CSV/PDF files larger than 25 MB in size.
+     ii. By default, the CSV table data will only be sent with a limited number of rows, typically set to 500 rows.
+
+
+
+
+2. Look (Report)
+  a. Open Look from the dashboard that you wish to schedule
+      i. At both the dashboard level and the Look (report) level, you will find three dots that provide additional options and functionality.
+
+     ii. We have covered the first component, which is how to schedule a dashboard. (Highlighted in red in the screenshot below)
+     iii. To schedule a "Look," click on the three dots that are highlighted in Green below
+b. Once the Look is opened/loaded, apply the desired filter on the report (e.g., "Cost Center with Description = 021 - test"). Then, click
+  on the gear icon   ⚙️ and select the "Schedule" option.
+
+
+
+
+   i. Give your Scheduler Name
+   ii. Select destination (Email/Amazon S3/SFTP)
+  iii. Fill in the Email Address if you choose the destination as Email
+  iv. Choose destination Format (DataTable, Visualization, CSV or Excel, etc.)
+   v. Select schedule frequency (Daily, Weekly, Monthly, Hourly, or By Minute)
+
+  vi. Verify the filter applied on the report reflected in the schedule (If not expand the filter section and apply the filter on it.)
+  vii. Under the Advanced Option section
+      1. There are key aspects that are important and recommended to consider, including:
+         a. Send this schedule if (there are results)
+         b. Limit (All Results)
+
+         c. Check all boxes
+         d. Timezone (Select your respective region to get the file on time)
+c. Limitation:
+    i. Sending a CSV / Excel or any type of file larger than 25 MB using the email destination is not supported.
+      1. In this scenario, it is recommended to use the SFTP (Secure File Transfer Protocol) destination.
+
+   ii. By default, when scheduling a "Look" with "Results in Table," only a limited number of rows will be included in the sent results,
+     typically set to 500 rows.
+

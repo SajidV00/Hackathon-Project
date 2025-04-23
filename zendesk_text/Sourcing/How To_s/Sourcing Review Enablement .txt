@@ -1,0 +1,126 @@
+Sourcing Review Enablement
+Quick ‘how to’ on the creation of Sourcing Review Workflows.
+
+
+
+A Sourcing Review is the process of having a Purchase Requisition go through a
+special workflow (reviewed by a Sourcing Approver) to ensure the company is
+receiving the best price, from the most appropriate supplier on any item or service
+needed.
+Since not all orders need to go through this kind of review; the company's Admin
+can set rules that would trigger the review of a purchase request or change
+request. The company's Admin will set these tables dependent upon the direction of
+the Company’s Sourcing team. Once the sourcing workflow is activated, all PR's will
+be checked against the rules set on the tables explained below.
+
+
+
+
+CREATE SOURCING APPROVERS
+Responsible for sourcing review of specific Requisitions before the requisition goes
+through any financial approval. Sourcing
+Approvers apply to the use of Sourcing Rules
+outside of any Buy Route workflows.
+
+Sourcing Approver Role
+   ●   Users with the Sourcing Approver role can
+       be added to other roles.
+          ➢ Master Data >Users >Create a new
+             user
+   ●   Editing rights​ applied as a global setting.
+
+
+
+
+Sourcing Workflow Enablement
+   1. Toggle on ‘Sourcing Workflow’
+
+   2. Toggle on ‘Editable PR’ to allow all sourcing approvers to have access to Edit
+      Purchase Requests. This is a global function and cannot be removed at the
+      individual approver level. (​ Shown on next page)
+
+
+
+
+                                                                                       1
+Sourcing Rules
+A Logic Rule Table sets the rules at which the PR is flagged for sourcing review and
+determines when the special workflow is activated. Through this feature Admins can
+activate/ deactivate items, search and filter or add a
+new Sourcing Rule.
+When editing this page, fill out all the required fields
+and click 'Save Sourcing Rule' button.
+
+*​Indicates a Required field.
+
+*​Catalog Type
+Can be set for Catalog or Non-Catalog Items.
+
+
+Currency
+Sourcing Workflows can be defined based on the
+currency being used. The system will convert the
+Requester spend threshold, the approvers approval limit and/or the PR total value to
+the default currency based on the exchange rate configured for currency type in the
+master data table.
+
+Rules can be applied to All Currencies or a specific currency. (‘Apply to All Currencies’
+shown on right) If the latter setting is chosen, only Requisitions with items
+containing the currency specified will be applied to the workflow.
+
+
+
+*​Amount
+Enter currency amount that will necessitate
+review.
+
+
+
+                                                                                        2
+If ‘Apply to All Currencies’ is selected, the currency symbol will be removed from the
+‘Amount’ field. (​ Shown below) ​All previous Sourcing Rule configurations remain.
+
+
+
+Categories
+Select existing Category(s) to apply to the Sourcing
+Rule. Multiple categories can be selected.
+
+
+
+Suppliers
+Toggle on to ‘Apply to All Suppliers’ or instead add
+specific ‘Blacklisted’ suppliers to the rule.
+(Shown below)
+If ‘Apply to All Suppliers’ is toggled off, ‘Black
+listed Suppliers’ becomes a Required field.
+
+
+
+
+Supplier Part Number
+This is a free text field to enter a part number. Only one part number can be entered
+so the rule would apply only to that part number. If
+using part number, be sure that any category or
+specific supplier selected match the category and
+supplier for the part number.
+
+
+
+Sourcing Approvers
+Select specific Sourcing Approvers who will be responsible for any requisitions that
+are flagged for review by this rule. If multiple Sourcing Approvers are selected, only
+one person is needed to review. The Requester will be prompted to select one of the
+Approvers before they can submit their requisition.
+
+
+
+
+If no sourcing approvers are selected here and the field is left blank, the Requester
+will select one approver from ​All​ Sourcing Approvers.
+
+
+
+
+                                                                                         3
+

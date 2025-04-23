@@ -1,0 +1,24 @@
+Understanding ​Content Views and Groups
+Grab & Go​ outlining the Content Views & Groups relationship to your Shopper’s
+experience.
+
+
+
+CONTENT VIEWS
+Grouping of suppliers and supplier catalogs into logical sets. All types of supplier
+catalogs can be included.
+          ● Region                                       ● Division
+          ● Commodity                                    ● Groups of users
+
+A single Content View can belong to multiple Content Groups.
+
+CONTENT GROUPS
+Used to determine which Content Views and catalogs a Shopper will have access to
+when logging in.
+   ●   Users are assigned to Content Groups in Vroozi Purchase module in M
+                                                                         ​ aster
+       Data > Users​.
+The diagram below shows an example of how ​Shoppers​ are associated with different
+Content Views​ and G
+                   ​ roups​.
+

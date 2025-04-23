@@ -1,0 +1,90 @@
+Purchase Order Change Request
+(POCR)
+The POCR functionality allows a range of modifications to be made to an existing
+Purchase Order (PO). Changes to a PO may be necessary based on supplier
+communication or updates to internal organizational needs.
+
+
+
+POCR S​ETTINGS​:
+POCR permissions are defined through the enablement of global settings.
+Administrators identify which changes or combinations of changes can be made to
+a PO. POCR permissions can be defined by:
+
+   ●   Product Type: Materials, Services, Blanket, Invoice
+
+   ●   Header level & Line Item Level permissions
+
+   ●   Requisition Type: Catalog & Non-Catalog permissions
+
+POCR’s can be performed when a PO is in any of following Statuses:
+
+   1. Ordered
+   2. Partially Confirmed (Available in Supplier)
+   3. Shipped
+   4. Confirmed
+   5. Received
+   6. Invoiced
+
+POCR will NOT be allowed for the following PO Statuses:
+
+   1. SUBMITTED
+   2. PAID
+
+NOTE:​ ​ An Administrator can complete a POCR on behalf of a Requester as long as
+the PO is in a state that allows a Change Request.
+
+C​REATE​ A
+         ​ ​ PO C​HANGE​ R​EQUEST​:
+Retrieve the Purchase Order requiring a change. PO's in 'Invoiced' Or Received'
+status cannot have POCRs performed agains them.
+
+   1. Click on the PO # link.
+   2. Click on the blue FAB button located in the bottom
+       right corner of      the PO display screen.
+
+   3. Click ‘Change Order’ (shown on right)
+   4. The PO is now ready to be edited based on editing permissions defined for
+      your organization.
+
+   5. Add any additional information.
+
+   6. Click ‘Submit’.
+
+   7. The ​Change Request​ will
+      generate a new Request
+      document. The new request can
+      be viewed from the ‘Related
+      Documents’.
+
+         ➢ The change request
+           document generated via the POCR process will go through any defined
+           sourcing or financial approval workflows. The change summary will
+           display all changes made to the PO, including field-level changes
+           displaying the before and after values or assignments. (shown below)
+
+   8. Once the Change Request is approved by the approver(s), the original PO is
+      updated with the new changes. While the document will retain the same PO
+      number a new version number will appear in the PO header. (shown below)
+
+         ➢ NotIfication that the POCR has been approved will be sent via email.
+
+
+
+
+Your suppliers will receive an email notification confirming what changes have been
+made. At that time, cXML enable or Supplier Portal suppliers can again confirm or
+dispute the PO at the header or line item level.
+
+The Purchase Order history trail from creation to
+current status (shown on right) can be accessed
+in the PO’s action panel. From the history trail,
+users can drill down to view the line-item level
+changes made to the document, including
+field-level changes for edited items.
+
+
+
+
+                                                                                   ​2
+

@@ -1,0 +1,225 @@
+                  Marketplace Shopper
+                                Guide
+
+Table of Contents:
+
+Marketplace                                                      2
+
+Homepage                                                         2
+
+Supplier Catalogs                                                3
+
+Announcements                                                    3
+
+Create an Order                                                  4
+   Perform an Advanced Search                                    5
+   Saved Searches                                                5
+
+Lists                                                            6
+   Create Shopping Lists                                         6
+   Add to Lists                                                  6
+
+Compare Search Items                                             7
+
+
+
+
+                                        Marketplace Quick Guide ​ 1
+Marketplace
+Vroozi Marketplace is an Amazon-like shopping experience but better because it is
+specifically tailored to your buying needs. You can search and shop for items among
+multiple supplier catalogs, compare prices, add items to your cart, create shopping
+lists & save your search results.
+
+
+
+Homepage
+
+
+
+
+   1. Federated Search bar​: Search by keyword, item number, etc.
+   2. Categories: ​Search among the categories based on your customized
+      catalogs.
+   3. My Searches: A
+                   ​ ccess recent or saved searches
+   4. Suppliers ​Supplier Catalog Icons. Click to access.
+
+
+
+
+                                                            Marketplace Quick Guide ​ 2
+Supplier Catalogs
+
+                                                                        Catalog Card
+Type             Description
+                                                                        Example
+
+Hosted           Specific catalog items with pricing and images are
+Supplier         loaded into the Vroozi platform.
+Catalog          (‘Browse’ appears on catalog card)
+
+Punchout         Items are hosted in the Supplier’s website. Shoppers
+Supplier         return to Vroozi Marketplace once ready to check
+Catalog          out their cart.
+                 (Supplier name appears on catalog card)
+
+
+Level 2          Shoppers can select view uploaded catalog items
+Catalog          internally and are directed to the vendor website to
+                 add to cart or view items not housed within the
+                 internal catalog.
+                 (‘Browse’ & Supplier name appears on catalog card)
+
+
+
+
+Announcements
+Look out for Announcements, Information, & special Welcome Messages from your
+Administrators.
+   ●   Announcements: ​ ​Found on
+       your homepage.
+       Announcements are color
+       coded ​red​, y
+                    ​ ellow​ and g
+                                 ​ reen
+       based on urgency. Red is the
+       highest priority.
+       Announcements can be
+       dismissed once read.
+
+   ●   Welcome Message:
+       System-wide message for all
+       users
+
+   ●   Information: ​Pinned to the Welcome bar and cannot be dismissed.
+
+
+
+
+                                                           Marketplace Quick Guide ​ 3
+Create an Order
+ 1.      Launch from your external ERP
+
+2.       Begin Shopping:​ Perform a search or select a Catalog from the homepage.
+
+3.       When ready, select items to view or add to cart. Update quantity as needed.
+
+      ● Select the product’s name to view a complete description.
+
+
+
+
+4.       Click cart icon to perform a quick view or your cart or access in full screen.
+
+
+
+
+5.       Complete order and check out.
+
+
+
+
+6.       Transaction is completed your external ERP
+
+
+
+
+                                                             Marketplace Quick Guide ​ 4
+Searches
+Use the federated search bar to search by the following descriptors:
+
+      1. Short Description
+      2. Long Text
+      3. Supplier Part Number
+      4. Manufacturer Part Number
+      5. Material Group
+      6. Supplier
+      7. Searchable Custom Field
+
+
+Perform an Advanced Search
+Select the downward facing arrow to the right of the search bar to select more
+specific search parameters.
+
+
+
+
+Saved Searches
+Save searches you want to access or view at a later date.
+
+ 1.    Select ‘Save Search’ at the top of the results field.
+
+
+
+
+ 2.    Name your search and ‘Save’.
+
+
+
+
+                                                               Marketplace Quick Guide ​ 5
+ 3.       Access ‘Saved Searches’ from the homepage. Your five
+          most recent searches will be listed.
+
+
+
+
+Lists
+Create lists for items you frequently purchase or items you
+are not yet ready to purchase. Saved lists can be used an
+unlimited amount of time.
+   ● Select from saved lists in the top right corner.
+
+
+Create Shopping Lists
+Select items & click Create New or previously created list
+      ●   Click the arrow next to the product name
+
+
+
+
+Add to Lists
+Select items & add to current list
+      ●   Click the arrow next to the product name
+
+
+
+
+                                                         Marketplace Quick Guide ​ 6
+     Internal:
+
+
+
+
+     Punchout:
+
+
+
+
+Note​: Punchout catalog items cannot be added to a list until they are added and
+then viewed from the cart.
+
+
+
+
+Compare Search Items
+1.   Check ‘Compare’ below the image of a product you want to compare against
+     others.
+
+
+
+
+                                                      Marketplace Quick Guide ​ 7
+2.   Once all items have been added select ‘Compare’ at the top of the search field.
+
+
+
+
+3.   View items, add to cart or return to search results.
+
+
+
+
+                                                            Marketplace Quick Guide ​ 8
+

@@ -1,0 +1,52 @@
+Internal Catalog Error Resolutions
+
+
+
+
+Row Number                Errors                                Explaination                                                  Instructions
+                                              None of the mandatory fields should be        All required fields in the catalog excel sheet must present i.e, #ItemNumber,
+             Missing Required Fields
+    1                                         missing                                       NEW_ITEM-DESCRIPTION/NEW_ITEM-MATNR, NEW_ITEM-VENDORMAT,
+                                              The given colummn header does not match       NEW_ITEM-MATGROUP, NEW_ITEM-PRICE/ITEM-TIERED_PRICING/ITEM-
+             Column Header does not match                                                   There  should be no
+                                                                                            PRICE_EDITABLE         spelling mistake or any error in the header names.
+                                                                                                                , NEW_ITEM-CURRENCY
+    2                                         the System header
+                                          Column header does not follow the proper          Column hearders must follow the proper syntax as per the catalog template
+             Unknown column header is used
+    3                                     Syntax                                            file and should be of the same name. Random headers are not allowed
+
+             NEW_ITEM-PRICE Format Issue Field does not match the required format           Must be Floating number with upto 4 digit decimal value at max.
+    4
+
+             NEW_ITEM-PRICE Format Issue Field does not match the required format           Currency sign (e.g. "$") is not allowed with the price column.
+    5
+
+             Skipped columns                  Columns are skipped in between the catalog There should be no empty columns in between the catalog
+    6
+                                                 Custom Field hearder does not follow the   The name of the custom field must be in proper syntax i.e. [Name of the
+             Custom field (if specified) is of unknown type
+    7                                            proper Syntax                              Field (Type)]
+                                              On the shopper view item doesn't show as      Type should be either of the one options: Fixed, List, Text, MediumText,
+             Item not being Flagged                                                         A FLAG icon
+                                                                                            LargeText,    must be associated to the Flag in the Custom field settings
+                                                                                                       Flag
+    8                                         flagged
+
+             Maximum number of allowed custom
+                                         Custom
+                                              fields
+                                                  Field
+                                                     arecount
+                                                         exceeded
+                                                              exceeds from the limit        Total custom field count should not exceed 20
+    9
+                                              Records are checked for duplication against   Highlights the duplicates, however, first record does get inserted in the
+             Duplicates
+    10                                        following six column values:                  system skipping the following item records. Either one of these values must
+                                               NEW_ITEM-VENDOR                              be unique for different records.
+                                               NEW_ITEM-VENDORMAT
+                                               NEW_ITEM-MANUFACTMAT
+                                               NEW_ITEM-MATNR
+                                               ITEM-BUNDLE_NO
+

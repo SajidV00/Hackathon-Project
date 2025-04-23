@@ -1,0 +1,60 @@
+Edit a Catalog via D
+                   ​ irect Item Update
+
+DIRECT ITEM UPDATE
+Update item details, pricing, approvers, groups, etc. New items must be uploaded
+using the Catalog File upload process.
+   1. Locate the catalog in the ‘LIVE’
+      column and select the gear icon.
+   2. Check the box for ‘Direct Item
+      Update.’
+   3. Editing a ‘Live Catalog will create a
+      new version which will be
+      relocated to the ‘Working’ column.
+   4. Updates will not disrupt shopping
+      in current ‘Live’ Catalog.
+   5. Locate the ‘Working’ catalog and click the catalog name.
+   6. Click on a line item to open and view details.
+
+
+
+
+   7. Make the appropriate change(s)
+
+
+
+
+        .
+
+            ● Changes will be validated and saved immediately.
+
+
+                                                                                   1
+   8. If changes require approval, all Approvers assigned to the catalog will receive
+      email notification of the change.
+
+
+
+
+         ●   Administrators can bypass approval workflow and approve changes.
+
+CHANGE REPORT:
+The most recent changes made to the catalog can be viewed in the Change Report.
+   1. Locate the catalog, select the gear icon and ‘Change Report’.
+
+
+
+
+   2. The report can be retrieved from the ‘Announcements’ section on your
+      Catalog homepage.
+
+
+
+
+   3. Download & View Report.
+
+
+
+
+                                                                                        2
+

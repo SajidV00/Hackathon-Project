@@ -1,0 +1,465 @@
+             Vroozi Purchase
+                 Express
+Vroozi Express provides casual users the ability to create requests without having
+the need to access ERP platforms and systems while allowing “buy on behalf”
+scenarios.
+
+
+
+
+Table of Contents:
+User Configuration                                                                   1
+   Vroozi Express roles                                                              1
+   Create an Employee (Express Shopper)                                              1
+      User Creation through Vroozi Purchase                                          1
+      Self Registration                                                              2
+   Create a Power Shopper                                                            2
+   Power Shopper Mapping Rules Management                                            3
+   Power Shopper Mapping on Shopping Cart                                            4
+
+Employee (Shopper)                                                                   5
+   Shopper Experience                                                                5
+   Build a List                                                                      6
+   Send Lists to Power Shoppers                                                      6
+   Save a List                                                                       7
+
+Power Shopper                                                                        8
+   Notifications                                                                     8
+   Access Shared Lists                                                               8
+   Search & Filter                                                                   9
+   Convert List to Cart                                                                  9
+   Shared List Rejection Workflow                                                        11
+   Add items to Cart or List                                                            13
+   Compare Items                                                                        14
+
+
+
+
+U​SER​ C​ONFIGURATION
+V​ROOZI​ E​XPRESS​ ​ROLES
+Employee:​ Based on the user’s configured content view, a Shopper Express
+employee creates shopping lists within Vroozi Purchase.
+Power Shopper:​ Completes Shopping lists by converting to carts.
+
+C​REATE​ A
+         ​ N​ E​MPLOYEE​ (E​XPRESS​ S​HOPPER​)
+There are 2 ways to set up an Express Shopper account; Creating the
+user manually through Vroozi Purchase or sending a self registration
+link.
+
+User Creation through Vroozi Purchase
+   1. Using your Vroozi Purchase login access User set up within
+      Master Data
+   2. Once logged in, expand the ‘Master Data’ category and select
+      ‘Users’
+   3. Select ‘Create a new user’ and complete all Basic user information.
+   4. Below user information expand the Vroozi Purchase Express category to
+      reveal ‘Shopper Express’ and check
+      the box next to it. (shown next page)
+Note:​ If your buying organization currently
+is not using any other aspects of Vroozi
+Purchase, this panel should ONLY be used
+for creation of Express Shoppers.
+   5. *​All details remaining on the user
+      creation page are optional.
+
+
+
+
+                                                                       Purchase Express​ ​1
+                                                                         Updated 7/27/2020
+             While entering the appropriate ‘Content Mapping Group’ is optional, it
+             is a best practice for routing conversion of lists to specific people.
+   6. Once all required fields are complete, click the blue ‘Save User’ button.
+   7. The user will then receive a Registration email asking them to create a
+      password.
+
+
+
+
+Self Registration
+As configured with the Vroozi Integration team,
+Administrators can be provided with a self registration link.
+This link can be shared with individuals who will be acting as
+Express Shoppers.
+   1. The user receives the registration link via email,
+      completes all fields and selects to ‘Sign Up.’
+   2. This triggers the Registration Notification email.
+      Open and select to ‘Activate Account.’ Further details
+      on this email can be found in the ​Getting Started with
+      Vroozi Purchase Guide​.
+
+C​REATE​ A
+         ​ ​ P​OWER​ S​HOPPER
+Power Shopper user records may be created in Vroozi Purchase a   ​ head of ​the Power
+Shopper accessing smartOCI via their external system. If a Power Shopper accesses
+smartOCI ​before this record has been created​ in Vroozi Purchase, Administrators will
+again receive email notification that a new user has registered and be asked to
+complete any missing data in that user’s record.
+
+The following outlines the process of creating a new Power Shopper record for a
+shopper that has not yet accessed the Vroozi Platform.
+   1. Select the ‘Create a New User' button.
+   2. Complete the required ‘Basic Information”
+
+
+                                                                      Purchase Express​ ​2
+                                                                        Updated 7/27/2020
+   3. Select E
+             ​ mployee​ and check the ​Power Shopper ​permission box.
+Creation of a Power Shopper will not trigger an email notification to the Power
+Shopper since he/she will never access ​Vroozi Purchase​.
+Update a Power Shopper Record
+Any updates to an
+existing Power
+Shopper record will
+trigger a different
+destination.
+Selecting ‘Send
+Confirmation’ will save
+the updates and send
+the updated
+information to your
+external system.
+See U
+    ​ ser Roles Directory​ for further details on role permissions.
+
+P​OWER​ S​HOPPER​ M​APPING​ R​ULES​ M​ANAGEMENT
+Improvements have
+been introduced to both
+the access and
+configuration of Power
+Shopper Rules.
+
+Vroozi Catalog M​ aster
+Administrators upon
+navigating to ​smartOCI->Data Mapping->Power Shoppers​ will find a link directing
+them to the V
+            ​ roozi Purchase A
+                             ​ dministrative Panel.
+
+Once the hyperlinked ‘click here’ is selected (shown above), users will be routed to
+the Power Shopper Mapping screen in V    ​ roozi Purchase​. Power Shopper
+configurations can also be accessed directly within ​Vroozi Purchase​ by accessing
+Company->Power Shoppers->Power Shopper Mapping.
+
+
+
+
+                                                                      Purchase Express​ ​3
+                                                                        Updated 7/27/2020
+Power Shopper Rules can be defined by the following:
+
+   ●   Line Item Type ​(Product, Service , Blanket, Invoice Plan) Multiple types can be
+       selected per rule.
+
+   ●   The ​Content Group​ associated to the Shopper Express user, or the Employee
+
+   ●   The ​Company Code​ associated to the Shopper Express user, or the
+                                  Requisition Line Item
+
+                                       ● The C
+                                             ​ ost Center ​associated to the
+                                    Shopper Express user, or the Requisition Line
+                                    Item
+
+                                       ● The P​ lant Code​ associated to the Shopper
+                                    Express user, or the Requisition Line Item
+
+                                       ●   The associated ​Category(s)​ code
+
+                                       ●   The S
+                                               ​ upplier(s) ​associated to the line item
+
+                                       ●   The total line item A
+                                                               ​ mount
+
+                                       ●   The C
+                                               ​ urrency ​associated to the line item
+
+   ●   The ​Power Shopper
+
+          ○   A single Power Shopper can be associated with multiple mapping rules.
+
+P​OWER​ S​HOPPER​ M​APPING​ ​ON​ S​HOPPING​ C​ART
+
+In addition to enabling S
+                        ​ hopper Express​ users to share their cart with a Power
+Shopper, rules can be used to allow Employees to submit their Requisition to an
+external system and assign to a Power Shopper in that system. For a ​Shopper
+Express​ Shopper, when they’re sharing their shopping cart with a Power Shopper,
+
+
+                                                                       Purchase Express​ ​4
+                                                                          Updated 7/27/2020
+the list of Power Shoppers they can pick from is going to be based on which
+mapping rules are applicable to their current cart.
+The rules are evaluated against every single line item in their cart as well ​and a
+                                                                                  ​ gainst
+the default preferences of the Shopper Express user creating the cart. The Vroozi
+system will compare the Content Group, Company Code, Cost Center, and Plant
+code criterion from the rules to the Shopper Express user creating the cart. Based on
+which rules are applicable to the cart, the system allows the Shopper Express user to
+select a Power Shopper to share the cart with.
+
+
+
+E​MPLOYEE​ (S​HOPPER​)
+S​HOPPER​ E​XPERIENCE
+   1. Displays the
+      most
+      recently
+      reviewed
+      catalog
+      items.
+   2. Displays a
+      Shopper’s 5​
+      most recent
+      carts. Each
+      row displays
+      one cart
+      detailing the cart number, the amount and status. Click ‘view more’ to view
+      the repository of all carts submitted.
+   3. View saved lists and/or create a ‘new list.’
+   4. View catalogs and begin adding them to a list.
+          ●  Click the star in the top left corner of each supplier
+             card to pin it to the top of your Catalog list.
+   5. View the entire repository of shared lists. Use the search bar
+      to search for a specific list. Search by number, supplier or
+      keyword.
+
+
+
+
+                                                                        Purchase Express​ ​5
+                                                                           Updated 7/27/2020
+B​UILD​ A
+        ​ ​ L​IST
+
+Employees can build a shopping list from pre-configured products and services or
+forms from contracted and approved suppliers. The products are organized and
+defined by the catalogs displayed on the shopper’s homepage. Once a catalogis
+selected users can begin viewing and adding items to their list.
+
+Select a catalog card to open and view a specific catalog.
+
+
+
+
+From the catalog view, employees can do the following:
+
+   1. Click an item name to view product specifications
+   2. Refine the search criteria
+   3. Add the item to their cart
+   4. Add the item to a new or existing list template​.
+
+
+Once you have added items to your list, click the Cart icon in the top corner of your
+screen to display your cart items. Here you can update quantity and delete items
+from your list.
+
+
+S​END​ L​ISTS​ T​ O​ P​OWER​ S​HOPPERS
+Once the list is ready for review, you are just a few clicks away from sending to a
+specified Power Shopper.
+   1. Complete all required details and update line items if needed.
+   2. Select ‘Submit’.
+   3. After clicking
+       ‘Submit’ and the
+       Requisition is
+       finalized​,
+       Shoppers are
+       prompted to
+       select from the
+
+
+
+
+                                                                       Purchase Express​ ​6
+                                                                          Updated 7/27/2020
+       applicable list of Power Shoppers.
+
+
+
+
+Once a list has been Sent to a Power Shopper it remains in Pending status until
+either of the following:
+   ●   Pending​ =
+                ​ The list has ​not​ yet been added to a cart
+   ●   Approved:​ L ​ ist has been added to the Power Shopper’s cart
+   ●   Rejected: ​ L
+                   ​ ist has been deleted by the Power Shopper
+
+S​AVE​ ​A​ L​IST
+Lists for products frequently requested together can be prepared and saved to use
+as often as needed. You may create as many lists as you like.
+Click the star next to any item to add
+that item to the default ‘Favorites’ list
+or create a ‘new list’.
+If ‘new list’ is selected, you can
+customize the list name and/or add the list item to your cart.
+
+
+
+
+                                                                       Purchase Express​ ​7
+                                                                          Updated 7/27/2020
+P​OWER​ S​HOPPER
+N​OTIFICATIONS
+Power Shoppers will receive email notification
+when a new list is shared with them by an Express
+Shopper. The subject line of the email will include
+the list's unique document number.
+       .
+
+A​CCESS​ S​HARED​ L​ISTS
+Upon connecting to Vroozi Catalog, Power
+Shoppers may access the lists shared with them via
+2 locations on their homepage.
+
+   ●   ‘Information’ bar -​ Located in the center of
+       the login page this will indicate the number of lists shared.
+
+   ●   Lists’ icon​ - Located next to the shopping cart icon, the number of shared lists
+       awaiting review will also populate.
+
+
+
+
+Once selected, you can view the repository of lists. Click the arrow to the right of
+each list to view specific item details. (shown next page)
+
+
+
+
+                                                                       Purchase Express​ ​8
+                                                                          Updated 7/27/2020
+Note:​ Lists items cannot be edited from this page but can be edited once added to
+a cart.
+
+S​EARCH​ & F​ILTER
+Use the ‘Filter Lists By’ options to search for lists by specific employee, date, line item
+quantity or amount.
+
+
+
+
+C​ONVERT​ L​IST​ ​TO​ C​ART
+Power Shoppers wishing to convert a list to cart may do so by selecting ‘Add to Cart’.
+
+
+
+
+                                                                         Purchase Express​ ​9
+                                                                            Updated 7/27/2020
+You can add as many lists as you choose to a cart before selecting to “Checkout
+Now’. Example below shows 1 list already in the cart with another to be added.
+
+
+
+
+Note: ​ T
+        ​ he quantity displayed on the cart icon indicates the total number of line
+items across all carts. The example below shows a cart with 4 total line items
+created from 3 lists.
+
+
+
+
+Once a list(s) has been converted to a cart, you may edit the list items and quantities
+(shown next page) before sending that cart to your external system. However, you
+may not add items to the list. If wishing to do this, you should either reject the cart
+and advise the user to add the appropriate items or create a new cart yourself and
+confirm this in the cart rejection note back to the Shopper Express employee.
+
+
+
+
+                                                                     Purchase Express​ ​10
+                                                                         Updated 7/27/2020
+Multiple lists can be added to one cart. At which point, they will be grouped by
+supplier and not by individual list. The Shopper Express user is NOT notified of any of
+the described changes at this stage.
+Checkout Cart: Select ‘Checkout Now’ to send the cart to your SRM or ERP. (shown
+below)
+
+
+
+
+S​HARED​ L​IST​ R​EJECTION​ W​ORKFLOW
+Power Shoppers ​are able to return a shared list back to the Shopper Express u
+                                                                             ​ ser
+when rejecting it.
+Rejection selection on the Shared List view:
+
+
+
+
+                                                                      Purchase Express​ ​11
+                                                                         Updated 7/27/2020
+When rejecting a list, they may also provide notes with details about why the list has
+been rejected and the appropriate steps required for approval.
+Rejection Note field:
+
+
+
+
+Rejection will trigger an email notification to the Shopper Express ​user ​including any
+notes submitted during rejection.
+
+
+
+
+Employees can click ‘View Rejected Cart’ to navigate directly to the rejected list by
+clicking the action button included in the email.
+Shopper Express Users can view the rejection message within List view. From here,
+quantities can be edited, items can be removed. ‘Resubmit List’.
+
+
+
+
+                                                                      Purchase Express​ ​12
+                                                                         Updated 7/27/2020
+If additional items need to be added to the current ‘Rejected’ List, click the
+horizontal ellipsis (shown on right) next to ‘Resubmit List’ to add the items to a new
+list.
+
+
+
+
+The updated list can then be resubmitted back to the Power Shopper that originally
+rejected it or a new Power Shopper as available in the Power Shopping selection
+mapping.
+
+A​DD​ I​ TEMS​ ​TO​ C​ART​ ​OR​ L​IST
+Use the search bar or search directly within the supplier catalog listed under
+‘Suppliers’ to add items to the new cart created by you.
+
+
+
+
+From the cart view, add items to a cart converted from an employee list by clicking
+‘Continue Shopping’. (shown on next page)
+
+
+
+
+                                                                     Purchase Express​ ​13
+                                                                         Updated 7/27/2020
+C​OMPARE​ I​TEMS
+Like items appearing in a search result can be compared.
+   1. Check the box next to each item.
+   2. When ready select ‘Compare’
+
+
+
+
+   3. At the Comparison view, add selected items to cart or select ‘Back to Search
+      Results’. (shown on next page)
+
+
+
+
+                                                                   Purchase Express​ ​14
+                                                                       Updated 7/27/2020
+

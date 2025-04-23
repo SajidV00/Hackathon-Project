@@ -1,0 +1,117 @@
+Create PO via Buy Route
+Buyers can bypass PR workflow and create a rush PO via Buy Route.
+
+NOTE: Only users assigned to the ‘Buyer’ role will be able to create these
+types of direct purchase orders.
+
+STEP 1:
+From the Buyer navigation panel, select ‘Create Order.’
+
+STEP 2:
+The ‘Create a Purchase Order’ window will appear.
+
+
+
+
+Fill in the required information fields:
+
+   ●   Supplier Name
+   ●   Order Type
+   ●   Payment Terms
+   ●   Order Name
+   ●   FOB Terms (Optional)
+   ●   Company Code
+   ●   Currency
+STEP 3:
+Click the green ‘Continue’ button to proceed with the order.
+
+
+
+
+STEP 4:
+Click the blue ‘Add Item’ button to add line items to the order.
+
+
+
+
+                                                                   2
+STEP 5:
+Fill in the required line item fields, same as you would to submit a free text or
+non-catalog purchase request.
+
+   1. Type (select product or service)
+   2. Category (use the drop down menu or search to select the category which
+      best classifies the line item)
+   3. Description
+   4. Unit price (cost)
+   5. Currency (defaults to USD)
+   6. Quantity
+   7. UoM (unit of measure)
+   8. Supplier
+   9. Service Period or Delivery Date depending on ‘Type’ selected.
+
+
+
+
+STEP 6:
+Enter the appropriate accounting information for the line item.
+
+STEP 7:
+Enter the company information for the Purchasing Organization and Plant
+fields. Select the correct tax option from the drop down menu (i.e. taxable, tax
+exempt, etc.)
+
+
+
+                                                                                    3
+NOTE: Requirements will vary based on your organization’s configurations.
+
+
+
+
+Click the green ‘Save Item’ button to save the line item to the purchase order.
+
+
+
+
+STEP 8:
+Repeat steps 5-8 as needed until all line items have been added to the purchase
+order. Click the green ‘Continue’ button to proceed once all line items have been
+added.
+
+
+
+
+                                                                                  4
+STEP 9:
+Click the shipping address field and select the appropriate address from the
+dropdown menu. Add any internal comments regarding the purchase order and
+any notes or instructions for the supplier into the appropriate fields.
+
+
+
+
+STEP 10:
+Click the green ‘Finish’ button to create a draft of your purchase order. Review
+and verify all information entered into the purchase order is accurate. Add any
+shipping instructions if necessary.
+
+
+
+
+                                                                                   5
+STEP 11:
+Click the green ‘Submit’ button to send the Purchase Order to the supplier.
+
+
+
+
+STEP 12:
+The Order can then be found in ‘PO Status’ under ‘In Progress’. This status will
+remain until the Supplier confirms shipment of the item(s).
+
+
+
+
+                                                                                   6
+

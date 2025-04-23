@@ -1,0 +1,167 @@
+Create a Punchout Catalog
+
+To use ​Punchouts​, S
+                    ​ hoppers​ click on the supplier card and are redirected to the
+vendor website. Once items are placed into the cart, S  ​ hoppers​ check out of the
+vendor website and the items are transferred into the M   ​ arketplace c
+                                                                       ​ art.
+
+All content and pricing is hosted and therefore managed by the supplier.
+
+
+S​TEP​ 1: C​REATE​ ​OR​ U​PDATE​ ​THE​ S​UPPLIER​ R​ECORD
+      ●   See separate materials for details on this step
+
+
+
+S​TEP​ 2: C​ONFIRM​ S​UPPLIERS​ C​ATALOG​ C​OMMUNICATION​ ​STANDARD
+
+Communication Standards:
+cXML(punchout catalog) > cXML PO > cXML Invoice
+      ●   cXML is the standard punch out communication for eProcurement.
+cXML (punchout catalog) > cXML to EDI translation PO > EDI to cXML translation
+Invoice
+      ●   EDI is encrypted transmission of information between systems that is only
+          readable between systems. EDI requires use of a third party to translate Vroozi
+          cXML POs to EDI for the supplier. The supplier sends an EDI invoice back then
+          our third party translates it to cXML for Vroozi Invoice system to accept it.
+OCI (punchout catalog) > SAP PO > SAP Invoice
+      ●   Typically for clients using Vroozi Marketplace shopping experience in place of
+          Vroozi Purchase tool.
+The communication standard will determine what type of External Definitions are
+required.
+
+
+
+S​TEP​ 3: B​UILD​ ​THE​ C​ATALOG​ F​ILE
+Items with an *​ ​ Indicate fields specific to a Punchout catalog.
+
+ 1.       Under C
+                ​ atalog Management​, click the ​Create​ button near the top right of the
+          Catalog Management​ screen.
+
+ 2.       Select the ​Catalog​ option from the drop down. A C
+                                                            ​ reate Catalog​ window will
+          appear.
+
+
+                                                                                           1
+3.    Enter the ​Catalog Name​. This is a required field.
+
+4.    Because this is a P
+                        ​ unchout Catalog​, there is no need to add a C
+                                                                      ​ atalog File​ or
+      Image File​.
+
+5.    Link the catalog to a supplier by selecting an option from the ​Supplier
+      Company​ field.
+
+6.    When creating a P
+                      ​ unchout Catalog​, it is mandatory to check the ​External
+      Catalog b
+              ​ ox.
+
+7.    *​After checking the ​External Catalog​ box, additional fields populate:​*
+
+         ●   Search Allowed: A  ​ llows S
+                                        ​ hoppers​ t​ o​ search for the Punchout catalog
+             items using the universal search bar. The results will pull item
+             specifications from the vendor’s website. This functionality depends on
+             the supplier’s ability to support ​OCI Background Search​.
+
+8.    Do not check the D​ irect Item Update​ box,​ as it only applies to creating
+      Internal Catalogs​.
+
+9.    Click the carrot to expand the areas you would like to update for the catalog
+      being created. All of the fields in these areas are not considered mandatory for
+      catalog creation and can be updated at a later time. See the ​Edit a Catalog
+      section for more information.
+
+10.   Skip the A
+               ​ dditional Fields​ area, as this is only relevant to ​Internal Catalogs​.
+
+11.   *​External Catalog Definitions​*
+
+         ●   Select the ​Communication Standard​ ​using the drop-down menu.
+
+         ●   Select the HTTP request ​Method​ for a request-response. The options
+             are P
+                 ​ ost​ and ​Get​.
+
+         ●   Look for Images in: ​Use the drop-down menu to indicate where Item
+             images are located if not part of the standard OCI.
+
+12.   *​Enter ​Punchout Requirements​*
+
+      External Catalog Definitions should be provided by the punchout supplier. The
+      credentials provided create the transactional communication or extraction of
+      information between Vroozi, the supplier and any other applications you may
+      use. Supplier definition requirements vary depending on whether the
+      supplier uses a cXML or OCI format.
+
+
+
+
+                                                                                            2
+       OCI Requirements:
+          1. URL
+          2. Username
+          3. Password
+       cXML Requirements:
+          1. Punchout URL (catalog location)
+          2. <From> Identity ​(identifies the customers)
+          3. <Shared Secret> (​ password between Vroozi & Supplier)
+        A
+        ​ dditional fields that may be required based on Supplier set up.
+          ●   P.O. URL
+          ●   <To> Domain
+          ●   <To> Identity
+          ●   <From> Domain (Identifies the supplier)
+          ●   <Sender> Domain
+          ●   <Sender> Identity
+       Click the A
+                 ​ dd​ button to enter additional parameters.
+
+ 13.   *​Validate Punchout​*​: C
+                               ​ lick to verify the Punchout credentials successfully
+       connect to the Supplier shopping site. If the parameters are incorrect, there
+       will be a standard error message from the vendor’s website.
+
+          ●   Saved cXML credentials can be viewed and or updated in either the
+              Vroozi Catalog​ record or in V
+                                           ​ roozi Purchase​ under ​Documents ->cxML
+              Setup.
+
+          ●
+
+ 14.   Add the catalog to a Content View.​ ​Select all the relevant C
+                                                                    ​ ontent Views​ to be
+       associated with this catalog by checking the box next to the N  ​ ame​.
+
+ 15.   Approvers: Select individuals responsible for catalog approval before it can be
+       published ​Live​ to Shoppers. Only one of the selected Approvers needs to
+       Approve the catalog before it can be moved to the Live column by an
+       Administrator.
+
+ 16.   Create​ the new catalog. The catalog will now be housed in the ‘Working’
+       column of the content management view.
+
+I​MPORTANT​ N​EXT​ S​TEPS​:
+
+
+
+                                                                                         3
+●   Once the catalog has been successfully validated and created, reach out to
+    the Vroozi Content team to share the details of your new punchout catalog.
+    Our content team can perform the internal validation necessary to ensure
+    Vroozi and the supplier system are communicating correctly. The content
+    team can be reached by emailing s​ upport@vroozi.com​ with subject: ​New
+    Punchout Catalog.
+●   If applicable, cXML transmission for the supplier’s invoice or supplier ASN
+    must be created in V​ roozi Purchase​ ->​Documents ->cxML Setup.
+
+
+
+
+                                                                                  4
+

@@ -1,0 +1,445 @@
+  Request for Quote
+       Guide
+Request for Quote (RFQ) enables buying organizations to request quotes for services
+and/or products. The selected suppliers can then reply to the request with a bid that
+is either accepted or rejected. Once the best price and/or terms are obtained, the
+quote will convert to a Requisition draft where once submitted will go through any
+designated financial review.
+
+
+
+
+Table of Contents
+Workflows & Roles                                                                      3
+   Buyer                                                                               3
+           Alternate Buyer Setting                                                     3
+   RFQ Workflow #1                                                                     4
+   RFQ Workflow #2                                                                     5
+   RFQ Workflow #3                                                                     6
+
+Step by Step Workflow                                                                  7
+   Create an RFQ from ‘Ready for Sourcing’                                            15
+   Compare Bids                                                                       15
+   RFQ List                                                                           17
+   Copy RFQs                                                                         20
+
+
+
+
+                                                                                 RFQs​ 1​
+                                                                        Updated 2/7/2020
+         RFQs​ 2
+               ​
+Updated 2/7/2020
+Workflows & Roles
+B​UYER
+(Buy Route & Request for Quote Role)
+
+Has access to both Vroozi Catalog and Vroozi Purchase. Allowed to create POs, add
+non-catalog items, add line items from approved PRs and release POs associated
+with their assigned buyer group.
+   ● Access to Catalog content in smartOCI, is based on
+       assigned Content Views
+   ● Unable to administer, create, update or delete any
+       catalogs in the Content Manager
+
+  Additional Permissions:
+   ● Ability to code/edit a PR/PO may be restricted at user
+     creation.
+   ● Manage Suppliers
+
+Alternate Buyer Setting
+
+Similar to the ‘Out of Office’ functionality for Financial Approvers, Buyers may set an
+Alternate Buyer​ to act on their behalf. When configured, in the Buyer’s Profile the
+Alternate Buyer​ can be selected from a pre-populated list of all users with the B​ uyer
+role. (shown below)
+
+
+
+
+In this scenario, when an RFQ form is submitted by a Requester, both the original
+Buyer and designated Alternate Buyer will receive email notification of the form.
+Both Buyers can take the appropriate actions against it. Once one Buyer opens the
+form, the RFQ is then assigned to them and will be removed from the other Buyer’s
+‘Submitted Requests’ view.
+
+
+
+There are ​three ​(3)​ possible RFQ Workflows based on how or Requesters and
+Buyers are configured.
+
+                                                                                    RFQs​ 3
+                                                                                          ​
+                                                                           Updated 2/7/2020
+RFQ W​ORKFLOW​ #1
+Requester has permission to ‘Submit Request Forms’. Buyer brings expertise to
+submit the request to Suppliers, approve bids and release back to the Requester.
+
+ ●   Requester initiates the RFQ process and assigns a Buyer. The assigned Buyer
+     reviews quote, adds additional details and submits to suppliers. Once supplier
+     bids are received, the Buyer will accept a bid and send the Request draft back
+     to the Requester with the accepted supplier and line item details. The
+     Requester will then complete the Requisition, triggering the next phase in the
+     procurement workflow; financial review if applicable or conversion to PO.
+
+
+
+
+                                                                                RFQs​ 4
+                                                                                      ​
+                                                                       Updated 2/7/2020
+RFQ W​ORKFLOW​ #2
+Requester is able to ‘Submit RFQ to Suppliers’ and will incur all responsibilities
+associated with the Buyer in Workflow #1.
+
+
+
+
+                                                                                    RFQs​ 5
+                                                                                          ​
+                                                                           Updated 2/7/2020
+RFQ is initiated from ‘Create RFQ’.
+
+
+
+
+RFQ W​ORKFLOW​ #3
+Ability to create RFQs is limited to only users with the Buyer or Administrator role.
+The Buyer initiates the RFQ process, submits to Supplies, approves/rejects bids and
+converts the bid to submitted requisition is done by the Buyer.
+
+
+
+
+                                                                                  RFQs​ 6
+                                                                                        ​
+                                                                         Updated 2/7/2020
+Step by Step Workflow
+The following contains Workflow #1. The Buyer or Requester role can be omitted for
+Workflows #2 and #3, respectively.
+
+
+
+
+Requester:​ ​ Creates Request Form
+
+
+
+
+   1. Name your request.
+   2. For each line item added, select Product or Service.
+   3. Provide a Description.
+
+
+    Tip:​ Be as specific as possible. Any additional requests about price, etc can be
+    added in the comments field at the bottom of the RFQ.
+
+
+   4. Select Category (optional)
+
+                                                                                   RFQs​ 7
+                                                                                         ​
+                                                                          Updated 2/7/2020
+         ●  The Category field will include a pre-defined list of categories previously
+            created in the Vroozi system.
+         ● Once the category is selected, the buyers and groups listed under
+            ‘Assignment of Buyer or Buyer Group’ will populate a listing of the
+            appropriate buyer groups associated with that category.
+   5. Enter needed Quantify
+   6. Select UOM
+   7. Desired Delivery
+   8. Choose suppliers to recommend.
+         ●   This can be left empty if Employee does not have any.
+
+
+
+
+         ●   If needed, add new recommended supplier (shown below)
+
+
+
+
+   9. Assign a Buyer
+          ● Add additional message (optional)
+   10. Submit
+
+
+
+Buyer:​ ​Receives email notification of the Employee’s Request. The email will
+include the Request Form Number the subject line and all pertinent details in the
+body of the email.
+
+
+
+
+                                                                                  RFQs​ 8
+                                                                                        ​
+                                                                         Updated 2/7/2020
+Requester:​ ​ The Requester will be notified via email when the Buyer edits the
+Request.
+
+
+
+
+      The request can be accessed via email by clicking ‘Review Request Form’ This
+      will take the Buyer to the RFQ which will be housed under ‘RFQ List’ →
+      ‘Submitted Request’
+
+           ●   Submitted: Employee has submitted the Request to Buyer
+           ●   Converted: Buyer has converted the Request to an RFQ
+
+
+
+
+                                                                               RFQs​ 9
+                                                                                     ​
+                                                                      Updated 2/7/2020
+Buyer:​ ​ V
+          ​ iews all details of the Request. If ready to move forward, selects ‘Convert
+to RFQ.’ (shown below)
+
+
+
+
+      Completes required details for RFQ and edit all other details as needed.
+
+          1. End due dates for Supplier Bids
+          2. Select a category for each requested line item.
+          3. Add notes to the Supplier. (While this field is optional, this is a good
+             location to include any pricing specifications)
+          4. Submit for bidding.
+
+
+
+
+                                                                                    RFQs​ 1​ 0
+                                                                            Updated 2/7/2020
+Buyer:​ ​Once submitted the RFQ will be viewable in the ‘Submitted RFQs’ tab
+within the ‘RFQ List’ category.
+
+
+
+
+Requester:​ ​ Receives email notification that the request has been submitted to
+Supplier(s). The email notification will include the Sourcing Approver’s name and
+RFQ number.
+
+
+
+
+                                                                                RFQs​ 1​ 1
+                                                                        Updated 2/7/2020
+Supplier: ​ ​Receives email notification of the request for bid.
+
+
+
+
+After selecting ‘Create Bid’ the supplier will be directed to the Quote draft where
+they can complete the required details. (​ shown below)
+
+
+
+
+                                                                                  RFQs​ 1​ 2
+                                                                          Updated 2/7/2020
+Buyer:​ ​ Views bids by clicking on the bid number. If appropriate awards or rejects
+the bids.
+
+   ●   Awarded bid​ = Award status
+   ●   Rejected bid​ = Rejected status
+   ●   Acknowledged = Supplier has received and opened the supplier webform but
+       not submitted it
+
+
+
+
+   ●   See Compare Bids section.
+
+
+
+
+                                                                                RFQs​ 1​ 3
+                                                                        Updated 2/7/2020
+   ●   Status of bid converts from ‘Submitted’ to ‘Awarded’
+
+
+
+
+   ●   RFQs with Awarded bids can be retrieved in the Awarded Bids tab of the ‘RFQ
+       List’ category.
+
+
+
+
+Buyer: ​ The awarded bid is assigned back to the Requester to complete the PR.
+
+
+
+
+   ●   This action creates the Purchase Request draft and is reflected in the status.
+
+
+
+
+Requester: ​ Retrieves the PR in ‘draft’ status
+                                                                                  RFQs​ 1​ 4
+                                                                          Updated 2/7/2020
+   ●   Completes all required details and submits PR for approval.
+   ●   The completed Purchase Request will go through an approval workflow per
+       the buying organization’s configuration.
+
+
+
+C​REATE​ ​AN​ RFQ ​FROM​ ‘R​EADY​ F​ OR​ S​OURCING​’
+From ‘Ready for Sourcing, Buyers can create an RFQ.
+
+   ●   Once the PO(s) are selected for Sourcing. Click the ellipses to select ‘Prepare
+       RFQ’
+
+
+
+
+C​OMPARE​ B​IDS
+Once bids have been submitted by suppliers, use the ‘Compare’ feature to view bids
+side by side before awarding one.
+
+
+                                                                                  RFQs​ 1​ 5
+                                                                          Updated 2/7/2020
+From the ‘Bid Overview’ portion of the RFQ Draft, check the box next to each Bid.
+
+
+
+
+Select ‘Compare.’
+
+
+
+
+Before acceptance, bids can be compared side by side. Once comparison is
+complete, close the ‘Bid Comparison’ screen and select your bid.
+
+
+
+
+                                                                               RFQs​ 1​ 6
+                                                                       Updated 2/7/2020
+RFQ L​IST
+As seen by​ Employees ​with Permission to Submit Request Forms
+Provides visibility to your company’s Request for Quote (RFQ) process. Within the
+RFQ List, the system will sort all RFQs based on their Status. Select each Status in the
+top tabs to review the RFQs in various stages.
+   Requests in Draft
+   This section shows all the requests that are currently open and in draft by users.
+   These forms have not yet been submitted to the buyers for processing.
+          1. Request #: ​ Unique number associated with each draft.
+          2. Request Name:​ Naming convention given at time of creation
+          3. Requester Name:​ User who created the drafted Request.
+          4. Created Date:​ Date Request draft was initiated.
+
+
+
+
+   Submitted Requests
+   This section shows all requisitions submitted from users to buyers to convert into
+   Request for Quotes which are then submitted to specific suppliers.
+          1. Request Name: ​Name Requester has attached to the RFQ
+          2. Status:
+                     ○ Converted
+                     ○ Submitted
+
+
+
+
+                                                                                  RFQs​ 1​ 7
+                                                                          Updated 2/7/2020
+   Note:​ ‘Submitted Requests’ and ‘Submitted RFQs’ will include a Status
+   update.
+
+
+
+RFQs in Draft
+This section shows all Request for Quotes (RFQs) that buyers are currently
+working and have not yet been submitted to any suppliers.
+      1. RFQ #: ​ Unique number associated with each RFQ.
+      2. RFQ Name:​ Naming convention entered at the time of creation
+      3. Requester Name:​ User who submitted the RFQ.
+      4. Created Date:​ Date request was initiated.
+
+
+
+
+Submitted RFQs
+This section shows all Request for quotes (RFQs) that buyers have submitted to
+suppliers for bidding. In this section the Bids will have multiple statuses
+
+
+                                                                            RFQs​ 1​ 8
+                                                                    Updated 2/7/2020
+(Submitted, A
+            ​ ccepted​, Cancelled, Closed), depending on the action taken by
+both the buyer and supplier.
+      1. Bid Overview: ​ A unique Bid number is created for each Supplier Bid.
+      2. Due Date: D​ eadline set by the requester for Supplier(s) to submit bids.
+      3. Status:
+            ○ Closed - Bidding has ceased
+            ○ Submitted - RFQ has been submitted and is now awaiting
+                Supplier(s) bid.
+            ○ Expired - Bid due date has passed
+      4. Submitted Date: D  ​ ate the RFQ was submitted for quotes. Does not
+         indicate when RFQ was viewed by Supplier.
+
+
+
+
+                                                                             RFQs​ 1​ 9
+                                                                     Updated 2/7/2020
+   Awarded Bids
+   This section shows all RFQs that have been ‘Awarded’ to a supplier or ‘Converted’
+   into requisitions for approval and PO creation.
+
+         1. Bid #: A unique Bid number is created for each Supplier Bid.
+
+         2. RFQ #: The original RFQ from which the Bid is produced. In many cases
+            there will be multiple Bids from the same RFQ number.
+
+         3. Requester Name: User who submitted the RFQ.
+
+         4. Supplier: Name of Supplier included in bid.
+
+         5. Status: Indicates whether the Bid has been Awarded or a PR has been
+            created
+
+         6. Awarded Date: Date bid was converted into a PO.
+
+
+
+
+C​OPY​ RFQ​S
+Users can copy the RFQ document either from the display RFQ page or the RFQ list
+page by clicking on the ellipsis and selecting “Copy RFQ.”
+
+
+
+
+                                                                              RFQs​ 2​ 0
+                                                                       Updated 2/7/2020
+Extend Bid due Date and Time: ​Users have the ability to extend the bid due
+date/time on an RFQ after an RFQ has been submitted to suppliers. This gives users
+the flexibility to allow for ample time for the bidding process to complete, ensuring
+they get the best value with each Quote they receive.
+
+
+
+
+When you click on the Pencil (edit) icon, the user will receive the following modal
+which will allow him/her to change the bid Due Date for the selected RFQ.
+
+
+
+
+                                                                                 RFQs​ 2
+                                                                                       ​ 1
+                                                                         Updated 2/7/2020
+

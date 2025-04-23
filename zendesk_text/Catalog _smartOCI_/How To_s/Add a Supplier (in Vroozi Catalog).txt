@@ -1,0 +1,85 @@
+Add a Supplier
+Grab & Go on the configuration of a new Supplier in Vroozi Catalog/Marketplace.
+
+
+Navigate to the Suppliers tab and select ‘Create Supplier.’
+
+
+
+
+CONFIGURATION
+Depending on your organization’s Integration, your Suppliers may be created outside of
+Vroozi. In this case, you would return to the Supplier Record in Vroozi to update a few key
+details. These details are underlined below.
+ 1.    Complete the Company Information
+           ● Unique Supplier ID - Generated at the top. All areas marked with a red
+               asterisk* are mandatory fields.
+           ● Default Supplier ID - Confirm number from your ERP system
+           ● DUNS Number - 9 digit ID number for the physical location of the business.
+               This is optional.
+           ● State, City, Zip are mandatory if USA is selected as Country.
+ 2. Default Preferences: Update using the drop down menus.
+ 3. Upload Logo: Using an image from your computer upload a logo to be associated
+       with the supplier PNG, JPG, JPEG, and GIF images are supported and will be resized
+       automatically.
+
+
+
+
+ 4.   Supplier ID Field & Number: Enter from your ERP system.
+ 5.   Unique System ID: Generated while creating the System Definition in the
+      Company Settings screen. This is a required field.
+ 6.   Supplier Configuration
+         ● Minimum Order Value - Defined by supplier. Shoppers will not be able to
+            checkout an item if the total amount is less than the amount specified here.
+         ● Non Catalog and/or Catalog Supplier - Check the boxes based on the type
+            of catalog.
+         ● Single Source Supplier - If checked an order from this supplier cannot be
+            combined with another supplier. At the shopping cart level, Requesters who
+
+                                                                                           1
+               attempt to mix suppliers with a single source supplier will be asked to create
+               separate requests.
+           ●   Include in Supplier Card - Refers to the supplier widgets on the Shopper
+               Homepage. As long as this checkbox is checked, this supplier will be visible
+               in the assigned shopper’s view. Without the card, your shoppers can still
+               search for and retrieve the supplier’s content via the search bar.
+           ●   Disable Browse - Unchecking this box will hide the Browse link in the
+               Supplier’ Card. When a supplier’s card displays the Browse link, users can
+               click to access the internal catalog content. If this box is unchecked,
+               Shoppers will still be able to search for this content using the search bar but
+               cannot click to view the entire catalog from the catalog tile.. (Only applies to
+               Internal Catalogs)
+           ●   Currency Code - Select for your organization.
+
+  7.          Navigate back to the center of the supplier record to Save.
+  8. Company Attributes: Suppliers can be
+        ranked higher or lower in the search results
+        for Shoppers
+           ●   Adjust the attribute weight accordingly
+               by inputting the appropriate weighting
+               factor in the box to the right of the
+               checked attribute. The higher the
+               number, the higher the supplier’s
+               product will be placed in a shopper’s
+               search results.
+  9. Add or Create Content Views for this supplier. Without assignment to content
+      views your users will not have access to the supplier.
+  10. Approvers: can be assigned to all catalogs associated with this supplier at this
+      time. These Approvers will be notified when changes are made to this catalog.
+  11. Supplier Users: can be created from this page, and is optional. These Supplier
+      Users can load and manage supplier content that an Administrator has defined.
+
+  12.
+
+
+Note: Vroozi Purchase customers can enrich the Supplier’s information (including
+contracts, cXML transmission types, etc) in the supplier’s Master Data record. Customers
+leveraging only Vroozi Marketplace will enrich the supplier data in your external ERP
+used for PO creation.
+
+
+
+
+                                                                                              2
+

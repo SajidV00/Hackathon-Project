@@ -1,0 +1,88 @@
+Configure C
+          ​ ontent Views and Groups
+Grab & Go​ on the customization of catalog access based on user role, region or
+commodity.
+
+
+
+
+Content Views​: G
+                ​ rouping of catalogs and non-catalog suppliers into logical sets.
+  ● A single Content View can belong to multiple Content Groups.
+  ● Ex: Region, Commodity, Division, Content groups are then assigned to
+     Content Views.
+   ●
+
+Content Groups​: Users assigned to a Content View(s). This assignment determines
+what catalogs and non-catalog suppliers users will have access to.
+  ● A single Content Group may be assigned to multiple Content Views.
+
+
+
+
+A​CCESS​ C​ONTENT​ V​IEWS​ & G​ROUPS
+Content Views & Groups are configured from the same location within V
+                                                                    ​ roozi
+Catalog
+   1. Within the​ C ​ ontent Manager​ tab and
+      select ​Content Views​/Groups.
+   2. There are 2​ ​ tabs separating C
+                                     ​ ontent Group
+      and ​Content View​ management.
+
+
+
+
+C​REATE​ A
+         ​ ​ N​EW​ C​ONTENT​ ​GR
+                               ​ OUP​ ​OR​ ​V​IEW
+Since Views are associated to Groups, Content Views should be created first.
+   1. Click ​Create ​from t​ he left navigation
+      panel.
+   2. Type in the Content View or Group
+      Name in the text field
+   3. The View/Group​ ​status defaults to
+      Active: Yes​. To create an ​Inactive
+      Content Group​, click on it to change it
+      to A
+         ​ ctive: No​.
+
+   4. Select A
+             ​ dd Content Views f​ or Content
+      Group​ Creation a​ nd select A
+                                   ​ dd Catalogs ​for
+      Content View Creation.
+         ● Check the box next to the View/Group
+             name to select it. More than one or all
+             can be selected at a time. (shown on
+             right)
+         ● Save.
+      Note: ​Catalogs can be associated to Views at
+      the catalog record or at the Content View
+      Manager.
+
+   5. Returning to the Content Group/View draft, select ​Save
+
+
+
+
+S​UPPLIER​ V​IEWS
+Suppliers not associated to a catalog can be configured as a ​Non-Catalog​ supplier
+and associated to a Content View at the Supplier record. (shown below)
+E​DIT​ V​IEWS​ ​OR​ G​ROUPS
+D​ELETE​, A​CTIVATE​ ​OR​ D​ELETE
+Select the Group or View and either Delete, Activate or Deactivate.
+
+
+
+
+E​DIT
+Click on the Group/View Name to reveal edit screen. View/update name or add
+Catalogs/Views.
+
+
+
+
+Remove a View or Catalog by checking the box next to the name and selecting
+Remove.
+

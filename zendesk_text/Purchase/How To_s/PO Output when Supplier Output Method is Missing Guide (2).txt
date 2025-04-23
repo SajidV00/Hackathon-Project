@@ -1,0 +1,119 @@
+   PO Output Configuration When
+   the Supplier Output Method is
+              Missing
+The Purchase Request (PR) and Purchase Order (PO) configuration options for PO
+Output enable Admins to configure the process and controls for cases when the PO
+Output method is missing from the Supplier master record. We know that for some
+companies missing PO Output is an error, but in other cases that triggers an internal
+process to output the order, or it could be a PO in place for invoice matching. To
+configure how you want to control for the case when the PO Output method is
+missing, we delivered the following configuration options.
+
+   ●   Purchase Request
+          ○ Allow PR Submission without Supplier Output Method
+                ■ Allow creation of auto-generated POs in the PENDING OUTPUT
+                  state (Note, this is only an option when “Allow PR Submission
+                  without Supplier Output Method” is turned ON)
+                      ● Off: will create POs in the status “Pending Output”
+                      ● On: will automatically create POs in the “Ordered” status
+          ○ Allow PR Submissions to Ad-Hoc email address when Supplier Output
+            Method is not given (Note, this is only an option when “Allow PR
+            Submission without Supplier Output Method” is turned ON)
+                ■ Allow Requesters to transmit POs that are in PENDING OUTPUT
+                  (Note, this is only an option when “Allow PR Submissions to
+                  Ad-Hoc email address when Supplier Output Method is not
+                  given” is turned ON)
+                      ● Without an email address the system will
+                             ○ Off: create POs in “Pending Output” status
+                             ○ On: create POs in “Ordered” status
+                              ●   Purchase Order
+                                     ○ Allow PO Submissions without Supplier Output Method
+                                     ○ Allow PO Submissions to Ad-hoc email address
+
+
+
+                           Purchase Requests
+
+                           Controls the ability to submit Purchase Requests and the Requester activities when
+                           the PO Output method is missing from the supplier master record.
+
+
+
+Configuration                                 Result                                              PO Status
+
+Allow PR Submission without Supplier Output       ●    Requesters can submit the Purchase         Configurable:
+Method                                                 Request                                    PO in status “Pending Output” or
+                                                  ●    They will see a notification that the PO   New (September 2023 Release): PO in
+                                                       Output is missing.                         “Ordered” status
+
+Allow PR Submissions to Ad-Hoc email              1. Requester can enter an email address           1. With email output - PO sent to email
+address when Supplier Output Method is not           and submit                                        address. PO Status is “Ordered”
+given*                                            2. Continue without an email address              2. Configurable: Without an email address
+                                                                                                       - PO is created in “Pending Output”
+                                                                                                       status or New (September 2023
+                                                                                                       Release): PO is created in “Ordered”
+                                                                                                       status
+
+Both toggles are off                          Requesters are not able to submit Purchase          N/A
+                                              Requests
+
+
+                           *Requesters need to be enabled in their user profile to allow the user to specify
+                           ad-hoc PO output by checking “Specify Ad-hoc PO Output”
+
+
+
+                           POs in the new status “Pending Output”
+
+                           This status is applied to Purchase Requests that would have gone out AutoPO
+                           (automatically generated POs from approved Purchase Requests), but could not be
+                           output due to the missing output method. Please note that Purchase Orders in
+                           “Pending Output” will need to be processed by Requesters, Buyers, or Admins.
+
+                              ●   If Requesters are not enabled for ad-hoc email, then they can “Save Final PO”
+                                  to update the status from “Pending Output” to “Ordered”. The order will not
+                                  be sent to suppliers (ie: there is no output method).
+                              ●   If Requesters are able to add ad-hoc emails, then they can add the email
+                                  address and submit. The PO status changes to “Ordered”. Purchase Orders
+                                  are sent to the ad hoc email address.
+
+
+
+                           Buy Route
+
+                           Please note, that if you are using Buy Route, then the behavior is different because
+                           the Buyer role processes orders. In Buy Route, Purchase Orders will be created in
+                           “Draft” status for buyers to process. Also, the ad-hoc email is not applicable because
+                           buyers provide the output method.
+
+
+
+                           Purchase Orders
+
+                           Controls the ability to submit Purchase Orders and update PO status when the PO
+                           Output method is missing from the supplier master record.
+
+
+
+Configuration                                 Result                                               PO Activities and Status
+
+Allow PO Submissions without Supplier         PO is set up for internal processes (eg: print, or      ●   PO status is “Ordered”
+Output Method                                 2- and 3-way match). POs are ordered, but no            ●   PO Notification Email is sent to the
+                                              order is sent to the supplier (ie: no output                buyer with PO attachment
+                                              method is defined).
+
+Allow PO Submissions to Ad-hoc email          Users with access to POs have the option to          On “Submit” in the PO, the user either:
+address**                                     add or change the email address for the PO             1. Enters an email address and selects
+                                              output in the PO.                                          “Send PO to Supplier”. PO status
+                                                                                                         changes to “Ordered” and sent to the
+                                                                                                         email address.
+                                                                                                     2. Selects “Save as Final. The order is not
+                                                                                                         sent to the supplier, but the PO status
+                                                                                                         changes to “Ordered”
+
+Both toggles are off                          PO is blocked from being submitted                   PO status is “Pending Output”
+
+
+                           ** Orders with PO Output identified in the supplier master record can be changed by
+                           buyers.
+

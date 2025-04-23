@@ -88,7 +88,7 @@ def build_test_prompt_rag(prompt,testing_json, vectorstore, k=2):
     # Create final prompt
     return f"""{context_examples}
 
-Now, based on the above examples, interpret the following input and produce the expected output.Take Resolution as a feature upgrade and us business language for the output . Do not use Fixed keyword in the output.Be a little descriptive
+Now, based on the above examples, interpret the following input and produce the expected output. Generate release notes in the established format and write the entire document in a professional, business-oriented tone.{prompt}
 
 Input:
 {query_str}

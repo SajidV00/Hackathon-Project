@@ -1,0 +1,73 @@
+Approver Settings FAQs
+This ​Grab & Go​ covers when to use the various approval settings available to
+financial approvers.
+
+
+
+
+A​LTERNATE​ A​PPROVER
+Essentially acts a “clone” of the original approver
+
+  ●       Receives the ​same​ email notifications and can perform the ​same actions​ as
+          the original
+
+  ●       “Inherits” the same attributes as the original, including approval levels and
+          next approver
+
+  ●       Requisition and approval status show up in both user’s approval queues
+
+When to Use:
+      ✓ A long-term “back-up” or “second contact” for approvals
+
+      ✓ Coverage for unplanned availability
+
+      ✓ Minimizes maintenance activity
+
+Need to Know Info:
+      ✓ Creates a scenario where both users can attempt the same action
+
+      ✓ Requisitions show up in both users’ queues
+
+      ✓ Changes affect only newly created documents, not previously existing ones
+
+      ✓ Settings are performed and visible only within the approver’s profile
+
+
+
+O​UT​ ​OF​ O​FFICE
+A temporary process that forwards emails/actions to another user
+
+      ●   Retains same roles/privileges as initially set for a limited time period
+
+      ●   Easy to set and control; automatically expires
+
+
+
+
+                                                                                          1
+When to Use:
+  ✓ Short term need
+Need to Know Info:
+  ✓ Changes affect only newly created documents, not previously existing ones
+
+  ✓ The settings are performed and visible only within your own profile
+
+  ✓ Automatically expire and reset upon date completion
+
+  ✓ Alternate and OOO together are not compatible
+
+
+
+
+N​EXT​ S​TEPS
+  ✓ Review ​your current approver levels/flow
+
+        ○   Next approver, fallback approver, auto-forward timeframe
+
+  ✓ Inform​ your Alternate or OOO approver of your settings
+
+
+
+
+                                                                                2
+

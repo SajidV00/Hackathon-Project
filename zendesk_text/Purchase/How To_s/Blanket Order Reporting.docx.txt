@@ -1,0 +1,46 @@
+      Reporting
+    Outstanding
+   Quantities and
+  Values for Blanket
+       Orders
+Blanket orders that have outstanding quantity to be invoiced can be displayed on
+the “PO - Received not Invoiced” (RNI) report.
+
+
+
+
+                                                                     AP Analytics 1
+
+                                                               Last Update 9/19/2023
+The filter pane appears on the right side
+
+
+
+
+The user can search search on blanket orders by applying filters on:
+
+   ●   Order Type: is “Blanket”
+   ●   Invoiced Status: is not “Invoiced”
+
+This will show the Blanket orders that have not been invoiced yet. The columns
+below show the outstanding quantity and remaining amount.
+
+
+
+
+                                                                             AP Analytics 2
+
+                                                                       Last Update 9/19/2023
+Additionally, clicking on the information icon will display the following information
+about the Received status and Invoiced status.
+
+
+
+
+                                                                           AP Analytics 3
+
+                                                                     Last Update 9/19/2023
+      AP Analytics 4
+
+Last Update 9/19/2023
+

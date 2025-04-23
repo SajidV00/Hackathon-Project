@@ -1,0 +1,212 @@
+Manage Your ​Discovery​ Suppliers
+
+
+C​REATE​ ​A​ S​UPPLIER
+Create and manage your suppliers from
+the ​Master Data -> Supplier​ category.
+
+   1. Select to ‘Create a New Supplier’
+
+
+
+
+   2. Once a new record is created,
+      populate each tab in the supplier
+      record with the applicable
+      information. The Business,
+      Contract and Insurance Info entered will be visible on the Supplier record.
+
+
+
+
+Basic Info
+Buying organizations using only Vroozi Discovery: The
+following fields must be completed:
+          ● Name
+          ● Vendor ID
+          ● Address
+          ● Phone Number
+          ● Language
+          ● ‘Supplier Discovery’ Toggle - must be turned on. (shown on right)
+
+
+Note: ​Buying organizations using V​ roozi Discovery w
+                                                     ​ ith other Vroozi modules will need
+to update additional toggles on this tab. Toggles will vary based on your Master Data
+configurations and business workflow needs. Please see the V  ​ roozi Purchase
+Administrator Guide ​for further details.
+Business Info
+None of the details listed in this tab are required. They do however enrich the information
+your users will have access to when selecting a supplier.
+
+                                                 Payment Terms
+                                                    ● Associated Payment Terms to each
+                                                 supplier. Payment Terms are created with
+                                                 the Master Data category.
+                                                 Categories
+                                                    ● Associate each Supplier to a
+                                                 specific category(s). When a user searches
+                                                 by category all associated Suppliers will
+                                                 appear. (shown below)
+                                                 Description
+                                                    ● Content entered here is often
+                                                 provided by the Supplier but can of
+                                                 course be customized for your specific
+                                                 business needs. The descriptions will then
+       be listed with the other Supplier information during a Supplier search.
+
+Search Keywords
+
+   ●   Associate keywords to each supplier. Keywords can be
+       used by your end users during a Supplier Discovery
+       Search.
+   ●   User view of a keyword search for “chair”:
+
+
+
+
+Contract Terms
+Like ‘Business Info’, none of the information listed in
+this tab is required. It is a best practice to update
+‘Contract Status’, ‘Effective Date of Agreement’,
+                                                                         Discovery Suppliers 2
+                                                                                             ​
+‘Contract Terms’​. The specific contract or other contractual documents can be attached
+for easy reference.
+
+
+
+Insurance Info
+Like ‘Contract Info’, none of the information listed in this tab is required. It does however,
+enrich the information your Basic and Power Users have access to.
+
+S​UPPLIER​ A​TTRIBUTES
+Direct spend to specific types of providers or social causes by creating attributes that can
+then be assigned to suppliers.
+
+   1. Select the ‘Name’ users will see
+      when selecting to search by that
+      attribute.
+   2. ‘Status’ will default to Active but
+      may be set as Inactive at any
+      time during creation or post creation.
+   3. Write a brief attribute ‘Description’.
+   4. Select a pre-populated icon or upload your own.
+   5. Save
+
+
+
+
+S​UPPLIER​ C​ATEGORIES
+Allow for Supplier searching by Category! Once created, categories can be associated with
+Supplier r​ ecords​.
+
+Any Supplier
+created in Vroozi
+Purchase Master
+
+
+                                                                            Discovery Suppliers 3
+                                                                                                ​
+Data table with Supplier Discovery toggle turned on will display.
+Create and manage supplier categories.
+
+
+Create Categories
+   1. Select Type; Level 1, 2 or 3.
+         ✓ AL  ​ evel 2​ category is a subcategory
+             associated with a Level 1 category.
+                 ● Example: Level 1 (parent) category
+                    is “Marketing” and the Level 2
+                    (child) category could be
+                    “Materials”.
+
+           ✓ Level 3​ category is a subcategory
+              associated with a Level 2 and Level 1
+              category.
+                   ● Example: Level 1 (parent) category is “Marketing” and the Level 2
+                      (child) category could be “Materials” and the Level 3 category is
+                      “Brochures.”
+Note: ​ A Level 1 category with “subcategories” cannot be deleted until the level 2 or 3
+categories are deleted or assigned to a different category.
+
+   2. Enter ‘Company Label’. This will be a category assignment displayed on any
+      supplier record associated with it.
+   3. Enter ‘Category Code’.
+   4. Enter ‘Company Category Code’.
+   5. Enter a brief description.
+
+Saved Categories can then be associated with a particular supplier on the supplier record.
+(shown on right) Suppliers may be associated with multiple categories.
+Your users can then search for suppliers associated to a specific category. (next page)
+
+
+
+
+P​AYMENT​ T​ERMS
+Create and manage Payment Terms.
+
+
+
+
+                                                                          Discovery Suppliers 4
+                                                                                              ​
+Active Payment Terms can be associated with a particular supplier on the supplier record.
+(shown below)
+
+
+
+
+C​ONTRACT​ T​ERMS
+   1. Create and manage Contract Terms from this view.
+
+   2. Once created, contract terms can be selected and applied to Supplier records on
+      the Contract Terms tab.
+
+
+
+
+C​ONTRACT​ S​TATUS
+Create and manage Contract Statuses from this subcategory. Once created, Contract
+Status can be selected and applied to
+Supplier records on the ‘Contract Info’ tab.
+
+   ●   Only statuses listed as ‘Active’ can be
+       selected on the supplier record.
+
+
+
+
+                                                                       Discovery Suppliers 5
+                                                                                           ​
+S​UPPLIER​ D​ISCOVERY​ L​OCATIONS
+Allow your users to search by location!
+
+Create and manage ‘Locations’ from this
+subcategory. Once created, Locations can be
+selected and applied to Supplier records on the
+‘Basic Info’ tab. Once created, locations can be
+associated with your suppliers. Only locations
+listed as ‘Active’ can be selected on the supplier
+record.
+
+G​UIDELINES
+Customize the terms and guidelines to be applied for sourcing and use of supplier
+information.
+
+Indicate if you would like your end users to view Sourcing Guidelines. If desired, edit the
+Sourcing Guidelines they will see.
+
+
+
+
+Guidelines created in this setting, are viewed and accessed by users at any time under the
+Sourcing Guidelines category of their navigation panel. See View Sourcing Guidelines for
+further details.
+
+
+
+
+                                                                          Discovery Suppliers 6
+                                                                                              ​
+

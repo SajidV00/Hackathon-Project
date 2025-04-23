@@ -1,0 +1,1088 @@
+             Vroozi Invoice User
+                                 Guide
+Guide covering the various functionality and workflows available in Vroozi Invoice.
+
+
+
+
+Table of Contents:
+
+Vroozi Invoicing Terminology                                                           2
+
+User Roles                                                                             3
+
+Invoice Flows                                                                          3
+   Create a new Vroozi PO based Invoice                                                3
+   Create a new Vroozi PO based Invoice from a Document                                5
+   Create a new Invoice not associated with a Vroozi PO (Non-PO Based)                 7
+   ‘Assign’ or ‘Park’ Invoice                                                          7
+   Submit Invoice for ‘Coding’                                                         8
+   ‘Code’ an Invoice                                                                   9
+   Edit line item data                                                                10
+   Use Tax Field and Distribution Calculation                                          11
+   Adjust Tax & Shipping Distribution                                                 12
+   Submit Invoice for ‘Ready To Post’                                                 13
+   Post Invoices to ERP                                                               13
+   Posting Errors                                                                     14
+   Re-invoicing                                                                       14
+       Workflow with Re-invoicing enabled:                                            14
+       Supplier Portal Workflow                                                       15
+   Edit Documents in a Post-Approval Status                         16
+
+Invoice Functionality                                              17
+   Designate Invoice as ‘Final Invoice’                            17
+      Additional Conditions                                        18
+      Final Invoices from the Supplier Portal                      18
+   ‘Copy’ Feature at the Invoice Line Item                         19
+   PO Lookup                                                       20
+   Split an Account Assignment                                      21
+   View Invoice History                                            22
+
+Exception Handling                                                 24
+   Configuration                                                   24
+      Goods Receipt Requirements (For 3-Way Match)                 24
+      Tolerances                                                   25
+      Exception Handlers                                           25
+   Alerts                                                          26
+      Alert Types                                                  26
+   Exception Flows                                                 27
+      Price Discrepancy                                            27
+      Missing Goods Receipt                                        29
+   Multi-PO Invoice Exceptions                                      31
+
+Tips & Tricks                                                      32
+   Invoice Line Item Searching                                     32
+   In-Line Editing                                                 33
+   Apply All and Presets                                           33
+   Focus on Exceptions                                             34
+
+Invoice Notifications                                               35
+   Overdue invoices                                                 35
+   Exception Handling                                               36
+
+
+
+
+                                                     Invoicing Guide 1
+                                                      Updated 5/18/2021
+Vroozi Invoicing Terminology
+Hopper: Central receiver for all incoming supplier invoices. Invoices may be sent via
+cXML, emailed PDF and the Vroozi Supplier Portal.
+
+Perfect Invoice: An invoice without any exceptions or alerts.
+
+Tolerance: Defined value or quantity in which a buying organization identifies a
+mismatch between the PO submitted to a Supplier and the Supplier’s invoice may
+diverge. A breach of enabled tolerances will result in an Exception alert at the invoice
+level.
+
+Alert: An Alert is displayed when a value on an invoice line-item (e.g. price, quantity,
+etc.) is within the defined tolerance but triggers a different tolerance to be breached,
+thus creating an exception.
+
+Exception: Notification that an invoice line item exceeds any defined tolerances.
+
+Credit Memo: A statement of credit owed, typically initiated by the supplier.
+
+Debit Memo: A statement of a ‘credit’, that the buying organization creates typically
+created proactively by the buying organization.
+
+
+
+
+                                                                         Invoicing Guide 2
+                                                                          Updated 5/18/2021
+User Roles
+ Role          Additional          Description
+               Role
+               Allowances
+
+ Accounts      ●    Allow for      Approve or reject an invoice.
+ Payable            coding of
+ Approver           invoice        *Role only applicable if admin requires buying
+               ●    Allow for      organization to manually approve invoices.
+                    editing an
+                    invoice
+                    during
+                    approval
+
+ Accounts      NA                  Retrieve, view and run reports on specific invoices in
+ Payable                           the following statuses
+ Auditor                                   1. Posted
+                                           2. Paid
+                                           3. Partially Paid
+                                   *Can be restricted to view specific business units or
+                                   locations based on company code allocations.
+                                   *Cannot be designated as an exception handler.
+
+ Accounts      NA                  View all invoices in the system. They can intercept,
+ Payable                           code, approve and post invoices to the financial
+ Manager                           system.
+
+ Accounts      ●    Allow for      Process and submit invoices for coding and
+ Payable            coding of an   approval, assign invoices to other AP processors or
+ Processor          invoice        managers. park invoices Submit invoices for
+                                   Exception Handling
+                                   *Only have access to your own invoices.
+
+
+Invoice Flows
+CREATE A NEW VROOZI PO BASED INVOICE
+Create a new Vroozi PO based Invoice, using an attachment from the Hopper.
+
+
+
+
+                                                                       Invoicing Guide 3
+                                                                         Updated 5/18/2021
+Task Performed by: AP Processor, AP Manager, Administrator
+   Steps:
+
+   1. In the ‘Inbox’, otherwise referred to as the ‘Hopper’, click on the sender name
+      to view the supplier document.
+
+
+
+
+   2. From the preview screen, preview other invoices using ‘Previous’ and ‘Next’ or
+      Select ‘Create Invoice’ to move forward with processing of the current
+      document.
+
+
+
+
+   3. Enter the relevant Purchase Order # from the supplier invoice attachment.
+      The Company Code, Supplier, Payment Terms (if it is set), and the line item
+      fields are then populated with the values from the PO.
+
+   4. Manually fill out the mandatory and other relevant fields that did not populate
+      from the PO by referring to Invoice attachment on the left -- Supplier Invoice
+      #, Invoice Date, Payment Terms (if not already set), Shipping Charges
+      (optional), Tax (optional), Notes About Invoice (optional), and Invoice Total.
+         ●   PO based invoices will default to the currency of the PO. Non-PO based
+             invoices will still require manual selection.
+
+
+
+
+                                                                       Invoicing Guide 4
+                                                                         Updated 5/18/2021
+CREATE A NEW VROOZI PO BASED INVOICE FROM A DOCUMENT
+Create a new Vroozi PO based Invoice (using a document in your computer)
+Task Performed by: AP Processor, AP Manager, Administrator
+
+
+
+
+   1. Click ‘Create Invoice’ on the blue navigation bar to the left.
+
+   2. Select ‘Upload attachment’ and select the relevant Invoice document from
+      your computer. Once selected, the PDF copy of the document will be visible
+      on the left half of the screen.
+
+   3. To add multiple documents (e.g. supporting documentation) to the Invoice,
+      click on the ‘paperclip’ icon above the attached Invoice document. There is no
+      restriction on the number of documents that can be uploaded/attached to an
+      Invoice in Vroozi.
+
+   4. Enter the relevant Purchase Order # from the supplier invoice attachment.
+      The Company Code, Supplier, Payment Terms (if set), and the line item fields
+      are then populated with the values from the PO.
+
+   5. Manually fill out the mandatory and other relevant fields in the ‘Create Invoice’
+      page by referring to Invoice attachment on the left -- Supplier Invoice #,
+      Invoice Date, Payment Terms (if not already set), Shipping Charges (optional),
+      Tax (optional), Notes About Invoice (optional), and Invoice Total.‘
+
+
+
+
+                                                                       Invoicing Guide 5
+                                                                         Updated 5/18/2021
+6. Enter appropriate Subtotal, tax & Invoice totals.
+
+
+
+
+7. ‘Save’ or ‘Submit’.
+
+
+
+
+                                                       Invoicing Guide 6
+                                                        Updated 5/18/2021
+CREATE A NEW INVOICE NOT ASSOCIATED WITH A VROOZI PO
+(NON-PO BASED)
+Task Performed by: AP Processor, AP Manager
+   Steps:
+
+   1. ‘Create Invoice’ in the
+      blue navigation bar and
+      upload an Invoice
+      document from your
+      computer on the ‘Create
+      Invoice’ page. (right)
+
+      OR
+
+      On the Inbox page, click
+      on any email (in the
+      ‘Sent By’ field) on
+      ‘Incoming Invoices’ (also referred to as the ‘Hopper’) and select the Invoice
+      document to be attached to the Invoice after previewing Invoices on the
+      ‘Preview’ page.
+
+   2. Manually fill out all the fields on the ‘Create Invoice’ page -- Company Code,
+      Supplier, Supplier Invoice #, Invoice Date, Payment Terms (if not already set),
+      Payment Due Date, Shipping Charges (optional), Tax (optional), line item info,
+      Notes About Invoice (optional), and Invoice Total.
+
+   3. ‘Save’ or ‘Submit’
+
+
+‘ASSIGN’ OR ‘PARK’ INVOICE
+Task Performed by: AP Processor, AP Manager
+   Steps:
+
+   1. Create a new Invoice or open up an existing Invoice in ‘Draft’ status.
+
+   2. Enter the requisite data on the ‘Create/Edit’ Invoice page. This step is optional.
+      You will be able to ‘Assign’ or ‘Park’ an Invoice even without entering any data
+      on the Invoice.
+
+
+
+
+                                                                         Invoicing Guide 7
+                                                                          Updated 5/18/2021
+   3. Click ‘Submit’. You will be able to see ‘Assign’ and ‘Park’, along with other
+      options (if applicable). If you choose to ‘Assign’ an Invoice to another AP
+      Processor or Manager, select the name of the AP Processor or Manager that
+      you would like to assign it to, from the drop-down list. If you choose to ‘Park’
+      the Invoice, it will not require you to shortlist another AP User.
+
+
+
+
+An invoice can also be assigned to another user without any action being taken. This
+can be achieved at the top of the electronic invoice screen. (shown below.)
+
+
+SUBMIT INVOICE FOR ‘CODING’
+Task Performed by: AP Processor, AP Manager
+   Steps:
+
+   1. Perform all
+      required steps to
+      create a new
+      Invoice.
+
+   2. Once you click
+      ‘Submit’ the
+      ‘Invoice
+      Destination’
+      pop-up will
+      appear.
+
+   3. On the ‘Invoice Destination’ pop-up select ‘Coding’. The Target User field may
+      be pre-populated based on what is configured by the Admin; if not, select a
+
+
+
+
+                                                                         Invoicing Guide 8
+                                                                          Updated 5/18/2021
+      User from the Target User drop-down to send the Invoice to.
+
+   4. Enter comments/instructions on the Comments field. This is optional.
+
+   5. Click ‘Submit’. The Invoice will transition to ‘Coding’ status.
+
+
+‘CODE’ AN INVOICE
+Task Performed by: AP Processor or AP Approver (with coding permissions)
+   Steps:
+
+   1. Click ‘Code Invoices’ on the left side navigation bar
+             OR
+      Navigate to the ‘Inbox’, locate the Invoice that you want to ‘code’ from the
+      ‘Tasks’ section on the left, and click on the Invoice Number.
+
+
+
+
+   2. If you navigated to the ‘Code Invoices’ page, clicking on the Invoice Number.
+
+   3. On the ‘Invoice Details’ page, scroll down to the line-item and click the
+      ‘calculator’ icon located on the far right of the line-item.
+
+
+
+
+   4. Enter the accounting information and click on the ‘tick’ icon.
+
+   5. Select destination (typically Return) and ‘Submit’.
+
+
+
+                                                                        Invoicing Guide 9
+                                                                         Updated 5/18/2021
+   6. The AP Processor can then view the Invoice in his/her ‘Tasks’ on the Invoice
+      page.
+
+
+EDIT LINE ITEM DATA
+Task Performed by: AP Processor, AP Manager, Administrator
+
+   1. Navigate to the ‘Create/Edit Invoice’ page, select the relevant Purchase Order #
+      from the drop-down menu. The Company Code, Supplier, Payment Terms (if it is
+      set), and the line item fields are then populated.
+   2. Scroll down to the line item section and click on the ‘pencil’ icon on the right of the
+      line item that you want to edit.
+
+
+
+
+   3. Edit the line item fields that you want to modify. Line item and data is distributed
+      into two tabs; ‘General Information' and 'Accounting’. The split design is
+      displayed when viewing and editing a line item. In either instance the view will
+      default to the ‘General Information’ tab. Select ‘Next’ or click ‘Accounting’ to
+      navigate there. Line item changes can be saved (check mark in bottom right
+      corner) from either the ‘General Information’ or Accounting’ view.
+
+
+
+
+                                                                             Invoicing Guide 10
+                                                                               Updated 5/18/2021
+   4. Once complete, click on the checkmark icon. To cancel the changes performed,
+      click the ‘X’ (cross) icon next to the ‘tick’ icon.
+
+
+USE TAX FIELD AND DISTRIBUTION CALCULATION
+Tax on the storage, use, or consumption of a taxable item or service on which sales
+tax has not been paid.
+
+Use tax is a complementary or compensating tax to the sales tax. The ‘Use Tax’ field
+allows buying organizations to designate the tax amount that will be paid to the
+supplier or accrued and paid to the government at a later date. Any tax that is not
+due to the supplier will be auto suggested and manually entered in the ‘Use Tax
+field’ at the line item level.
+    ● Use Tax will be calculated at the line item level, based on the Vertex Calculated
+        sales tax or the supplier sales tax amount. Use Tax will then be aggregated at
+        the invoice summary level, and be reflected in the Invoice total.
+
+
+
+
+   ●   If a line item has multiple split account distributions, the system will auto
+       suggest the Use Tax Calculation based on the total % of the line item that is
+       being applied to the specific split.
+
+
+
+
+                                                                       Invoicing Guide 11
+                                                                         Updated 5/18/2021
+   If Use Tax is defined at the invoice summary level, the system will not auto
+   calculate the Use Tax at the line item level.
+
+
+
+
+ADJUST TAX & SHIPPING DISTRIBUTION
+Tax and Shipping distribution options are available at the invoice and memo creation
+screen allowing Processors to select from predefined distribution options.
+
+Distribution settings can be accessed by clicking the Calculator icon next to the Tax &
+Shipping totals.
+
+
+
+
+                                                                       Invoicing Guide 12
+                                                                         Updated 5/18/2021
+   1. Enter appropriate Subtotal, tax & Invoice totals.
+   2. ‘Submit’ and select a destination.
+
+
+SUBMIT INVOICE FOR ‘READY TO POST’
+Task Performed by: AP Processor, AP Manager
+   Steps:
+
+   1. Perform all the steps required to complete the invoice. Once you click on
+      ‘Submit’ and the ‘Invoice Destination’ pop-up appears.
+
+   2. Select ‘Ready To Post’ then ‘Submit’ after entering any comments on the
+      Comments field. The Invoice is auto- approved and available in the ‘Ready To
+      Post’ page under the ‘Ready for Posting’ section.
+
+
+POST INVOICES TO ERP
+Prerequisite: Invoice should have been approved by all Approvers.
+Task Performed by: AP Manager
+   Steps:
+
+   1. On the left side navigation panel, click on 'Ready To Post'.
+
+   2. From the 'Ready for posting' section on the left, select the Invoice(s) that you
+      want to post. The selected Invoices will now show up in the ‘Selected for
+
+
+
+
+                                                                        Invoicing Guide 13
+                                                                          Updated 5/18/2021
+      posting’ section on the right.
+
+   3. Once you have selected all the Invoices to post, select all the Invoices in the
+      ‘Selected for posting’ section and then click 'Post'.
+
+   4. The status of the selected Invoice(s) conversion into external payment system
+      is not viewed in the ‘Export Details’ section. If the selected Invoice(s) fails to
+      post, you can either choose to ‘resend’ (or re-post) the Invoices or edit the
+      Invoice to correct any errors on the Invoice
+
+
+POSTING ERRORS
+Within the ‘Post Invoice’ page, the ‘Resend’ feature can be found
+next to any Invoices that Failed to send. with added to the invoice
+line header of the ‘Post Invoice’ page.
+
+
+
+
+RE-INVOICING
+Check with your administrator to understand if re-invoicing has been enabled for
+your organization.
+
+The need to re-invoice for an item(s) most frequently occurs when a Supplier as part
+of the return to replacement process, re-bills for the applicable items.
+
+Without these configurations, a credit memo can be applied but a second invoice
+sent by the supplier for the rebilled items or services, can not be reflected in Vroozi.
+Instead you can directly post the invoice to your financial system or create the
+invoice as a Non-PO based invoice, referencing the PO number in an open free text
+field.
+
+Workflow with Re-invoicing
+enabled:
+Once a credit memo is created and
+linked to a PO or Invoice, the
+settings for re-opening can be
+viewed directly below the linked
+documents. Example below is an
+
+
+
+                                                                           Invoicing Guide 14
+                                                                             Updated 5/18/2021
+example of a buying organization that via the configurations has elected not to use
+the re-opening of the invoice tool.
+
+In the scenario below demonstrates how the re-opening of a PO has been allowed.
+The Supplier’s Invoice for the re-billed item can be referenced back to the PO. The
+invoice can then be keyed in as normal. Previously invoiced items can still be viewed
+by selecting ‘Show invoiced items’ above the line items in the right corner.
+
+
+
+
+Supplier Portal Workflow
+Suppliers in the Vroozi Supplier Portal the ‘Flip to
+Invoice’ option will not be available on POs opened
+back up for rebilling. Instead they need to select
+‘Create Invoice’ and link to the PO. Once this has
+been done, the Invoice line items will only display
+the items reflected in the Credit Memo.
+
+Above the line item description an
+‘Acknowledgement of Changes’ message indicates
+that items from the linked PO have previously been
+Invoiced. To proceed forward, the supplier user must
+select ‘Acknowledge Change’.
+
+To view specific details of the proceeding invoice,
+users can click the carrot below the
+Acknowledgement button. (next page)
+
+
+
+
+                                                                      Invoicing Guide 15
+                                                                        Updated 5/18/2021
+Once ‘Acknowledge Changes’ is selected, the warning message will disappear. The
+invoiced items can still be viewed by selecting ‘Show invoiced items’. (shown below)
+The invoice line items should then be edited to reflect only the re-billed items.
+
+
+
+
+EDIT DOCUMENTS IN A POST-APPROVAL STATUS
+If enabled by your Administrator, specified AP users will have the ability to re-open
+and edit invoices/memos in the allowed statuses. (Approved, Ready to Post, Posting
+Failed and Posted)
+
+Changes can be initiated by selecting the edit icon directly above
+the document status. (on right)
+
+Some changes, such as Price or Qty changes will reroute the
+document through 2/3-way match review and check against any
+applicable tolerances. This may result in an additional approval workflow. Header
+level changes such as Supplier document number or payment terms will not require
+any additional approval or validation.
+
+
+
+
+                                                                      Invoicing Guide 16
+                                                                         Updated 5/18/2021
+Invoice Functionality
+DESIGNATE INVOICE AS ‘FINAL INVOICE’
+AP Processors mayfinalize an invoice and close the related PO. The Final invoice
+indicator is located directly under the linked PO (as shown below). The indicator will
+default to ‘No’ but can be changed to Final Invoice by clicking ‘Yes.’
+
+Final Invoices are most often applied to Blanket or Service POs when the allocated
+PO amount is not representative of the Actual PO value. The PO actual amount is
+what the buying organization is invoiced for.
+
+   ●   For example the service PO may be for $600 but the actual invoice may only
+       come in at $550. In this case the AP Processor can elect to close the invoice for
+       receiving and future invoices created against the PO by selecting ‘Final
+       Invoice’.
+
+Currently Final Invoice functionality does not apply to invoices with multiple POs. The
+final invoice indicator will appear on invoices with more than one PO but the toggle
+defaulted to ‘No’ cannot be changed as it could be for a single PO.
+
+   1. The PO will be closed for receiving, therefore no longer requiring a Goods
+      Receipt.
+
+   2. If there are items
+      that have not
+      been invoiced
+      those remaining
+      items will be
+      cancelled.
+
+          ● The non
+             Invoiced
+             items will
+             be
+             removed
+             from the
+             PO.
+
+          ● The auditing trail will show the changes.
+
+
+
+
+                                                                        Invoicing Guide 17
+                                                                          Updated 5/18/2021
+ Note: After closing a PO for receiving and invoicing, if the PO still remains in
+ another status besides INVOICED, an email is sent out to Requesters and/or Buyers
+ with instructions on how to close the PO. This will ONLY happen if the amount
+ received is higher than the amount of the ‘Last Invoiced’.
+
+Posted short closed invoices will display the message ‘This is a Final Invoice’ directly
+under the linked PO. (next page)
+
+
+
+
+Additional Conditions
+If other Invoices for the same PO are in progress under following statuses the system
+will display a warning message before marking invoice as ‘Final Invoice’.
+
+   ●   DRAFT                                          ●   REJECTED
+   ●   PARKED                                         ●   APPROVED
+   ●   CODING                                         ●   READY TO POST
+   ●   EXCEPTION                                      ●   POSTING
+   ●   PENDING                                        ●   POSTING FAILED
+
+
+
+Final Invoices from the Supplier Portal
+
+In the event an Invoice is marked as a
+‘Final Invoice’ by a supplier user in the
+Supplier Portal, AP Processors will see 2
+identifiers on the Supplier’s Invoice.
+(right)
+
+   1. Upon opening the Final Invoice
+      indicator will already be flagged
+      to ‘Yes’.
+
+   2. The Linked PO will reference the
+      original PO total while the
+
+
+
+
+                                                                         Invoicing Guide 18
+                                                                           Updated 5/18/2021
+       Invoice total will reflect the short closed final invoice total.
+
+‘COPY’ FEATURE AT THE INVOICE LINE ITEM
+To improve the speed of manually indexing a Non-PO invoice, the ‘Copy Line Item’
+feature can be done on the Invoice draft. Similar to the existing ‘Copy’ functionality at
+the Requisition level, AP users can copy an existing line item on an Invoice.
+
+As a user who is able to edit Invoice,
+Memo or Payment Request, Vroozi is
+now able to copy existing item(s) so
+that if you enter similar items more
+quickly. This will copy the items DNA
+data but it will not associate it to any
+existing Purchase Order.
+
+   1. Click the ‘Copy’ icon.
+
+   2. When selected, the system will prompt review of the duplicated line item.
+      From here edits can be made. (next page)
+
+
+
+
+   3. Once the new line item is saved to
+      the Invoice ‘Draft’ it will be
+      displayed under the Non-PO
+      header. If a new line item is added
+      to a PO based invoice Processors
+      will receive a warning that must be
+      cleared before indexing can be
+      complete.
+
+
+
+
+                                                                          Invoicing Guide 19
+                                                                            Updated 5/18/2021
+The Invoice total will update to include the value of the newly added items.
+
+
+
+
+PO LOOKUP
+Click the magnifying glass icon to the right of the PO field, doing so will open the PO
+Lookup options. Here you can narrow your search as needed.
+
+
+
+
+All PO search results will be sorted from newest to oldest.
+
+
+
+
+                                                                      Invoicing Guide 20
+                                                                         Updated 5/18/2021
+Click on a PO to view in a separate window.
+
+Select a PO to link to the invoice by clicking the exit icon at the end of each line item.
+Any icons greyed out have already been selected for an invoice.
+
+
+
+
+SPLIT AN ACCOUNT ASSIGNMENT
+   1. Select Split Account Assignment Distribution
+          ●   By Quantity
+          ●   By Value
+
+
+
+                                                                          Invoicing Guide 21
+                                                                            Updated 5/18/2021
+         ●   By Percent
+
+
+
+
+   2. Select the distribution amount.
+   3. Select the appropriate accounting string for each assignment.
+   4. Click the + sign to add the additional split assignment
+
+
+
+
+VIEW INVOICE HISTORY
+Invoice History can be viewed from the Invoice quick reference panel.
+If present on the invoice, the history will include the exception
+handling history.
+
+      History Trail:
+
+
+
+
+      Click the resolution to view the specific details:
+
+
+
+
+                                                                      Invoicing Guide 22
+                                                                        Updated 5/18/2021
+If present on the invoice the history will also display any comments added by users.
+
+
+
+
+                                                                      Invoicing Guide 23
+                                                                        Updated 5/18/2021
+Exception Handling
+Vroozi provides an exception handling workflow for invoice discrepancies to be
+reviewed, resolved, and approved for payment.
+
+Invoice processing settings can be set to a 2 or 3-way match review:
+
+   ●   2-Way Match: The PO and the associated Invoice must match within any set
+       tolerances.
+   ●   3-Way Match: The PO, Invoice, and Goods Receipt (P0 & Invoice must match
+       within any set tolerances) and receipt of Goods is required)
+
+
+
+
+       = sign: indicates exact match required unless tolerances are set.
+
+
+CONFIGURATION
+Configurations are set by the AP Administrator. See Invoice Configuration guide for
+further details.
+
+Goods Receipt Requirements (For 3-Way Match)
+
+Goods receipt requirements as set by the Administrator. (next page)
+
+
+
+
+                                                                       Invoicing Guide 24
+                                                                           Updated 5/18/2021
+Goods receipt requirements can also be set at the supplier record. (below)
+
+
+
+
+Tolerances
+Tolerances can be set in which only invoices that breach defined thresholds are
+subject to Exception Handling.
+
+Please see the AP Configuration Guide for further details.
+
+
+Note: Tolerance configuration is based on over quantity amounts only.
+Underbilled invoices will not be flagged.
+
+
+
+Exception Handlers
+Specific exception handlers can be set based on the type of exception. When an
+exception is flagged on an invoice and an AP Processor selects the destination, the
+group will appear in the recipient field.
+
+
+
+
+                                                                     Invoicing Guide 25
+                                                                        Updated 5/18/2021
+ALERTS
+Alerts will display on an invoice if there is a corresponding header level exception
+displayed on the invoice. An Alert appears to notify users that there is a difference,
+giving them an opportunity to make a correction.
+
+Alerts will appear in a different color (green) than exceptions, and will not require a
+resolution.
+
+
+
+
+Alert Types
+   ●   Line Item Price Alert is displayed for a PO based line-item only if a Subtotal
+       Exception is displayed for that PO within the invoice.
+   ●   Line Item Total Alert is displayed for a PO based line-item only if a Subtotal
+       Exception is displayed for that PO within the invoice.
+   ●   Line Item Quantity Alert is displayed for a PO based line-item only if a Subtotal
+       Exception and/or a Total Quantity Exception is displayed for that PO within the
+       invoice.
+   ●   Line Item Tax Alert for any PO based line-item is displayed only if the Total Tax
+       Exception is displayed on the invoice.
+   ●   Line Item Shipping Alert for any PO based line-item is displayed only if the
+       Total Shipping Exception is displayed on the invoice.
+   ●   Additional Line Item Alert is displayed only if one or more of the following
+       exceptions are displayed on the invoice: Total Tax, Total Shipping, or Additional
+       Line Item(s) Total Exception.
+
+
+
+
+                                                                         Invoicing Guide 26
+                                                                           Updated 5/18/2021
+EXCEPTION FLOWS
+
+Price Discrepancy
+  1. AP processes the invoice, and checks the PO against a 2 or 3-way match
+     depending on the goods receipt setting. Based on the tolerances set by the
+     administrator, the system will alert the user of any exceptions.
+
+
+
+
+        ●   Invoice will be in ‘Draft’ status until submitted to an Exception Handler
+            for review in which invoice status becomes ‘Exception’.
+
+
+
+
+                                                                      Invoicing Guide 27
+                                                                        Updated 5/18/2021
+Note: An AP user who is also designated as an Exception Handler may adjust
+invoice values prior to Exception Handling submission or choose to “Ignore
+Exception”
+
+
+2. Exception Handling user group or type is selected and then assigned to a
+   specific user or group within that type. (As configured by the Administrator)
+
+      ●   Comments can be submitted with the exception
+
+
+
+
+                                                                  Invoicing Guide 28
+                                                                     Updated 5/18/2021
+  3. The assigned exception handler will review the invoice, and submit a
+     resolution back to the AP user. The following resolutions can be submitted.
+     Comments can be added via ‘Message to AP department’. (next page)
+
+
+
+        ●   Pay the Purchase Order -
+            Select to pay the price and
+            the quantity specified on the
+            PO. This resolution will be
+            applied to all line-items
+            containing exceptions.
+        ●   Pay the Invoice - Select this
+            option if you want Accounts
+            Payable to pay the price and
+            the quantity specified on the
+            invoice. This resolution will
+            only be applied to the
+            line-items containing
+            exceptions.
+        ●   Don’t Pay and Delete the
+            Invoice - Select this option if
+            you do NOT want Accounts
+            Payable to pay the invoice. Instead you would like AP to wait for a new
+            corrected invoice.
+
+  4. AP user ‘Accepts' or 'Rejects' the resolution provided by the Exception Handler.
+
+  5. Depending on Posting configurations set at the administrator level, the
+     resolved invoice will either automatically move to Posting or return to the
+     Invoice team via the ‘Task’s category in the inbox.
+
+Missing Goods Receipt
+  1. AP Processor, reviews the supplier invoice, updates
+     any values allowing the system to check the PO
+     against a 2 or 3-way match depending on the
+     goods receipt setting. The system will then alert the
+     user of any exceptions.
+
+  2. If there is a missing goods receipt, the exception
+     notification will display the quantity which remains
+     open. (Note: for 3-way match only)
+
+        ●   Invoice will be in ‘Draft’ status until
+            submitted to an Exception Handler for
+
+
+
+                                                                     Invoicing Guide 29
+                                                                       Updated 5/18/2021
+          review in which invoice status becomes ‘Exception’.
+
+3. Exception Handling is then assigned to a specific user or group.
+
+
+
+
+      ●   Comments can be submitted with the exception
+4. The assigned exception handler will review the invoice, and create a goods
+   receipt for the associated purchase order. Once completed, the invoice will be
+   returned to AP for approval. (below)
+
+
+
+
+5. Upon returning from exception handling, the AP user can review the audit
+   trail which tracked the entire process.
+       ● All comments are visible in this trail
+
+
+
+
+                                                                  Invoicing Guide 30
+                                                                      Updated 5/18/2021
+MULTI-PO INVOICE EXCEPTIONS
+For multi-PO invoices AP Processors may assign PO exception review to the
+originator of each PO with exceptions. Previously only one Exception Handler could
+be assigned and would be responsible for resolving all exceptions regardless of who
+initiated them.
+
+For multi-exception invoices, AP Processors can still choose
+any applicable Exception Groups but can now also choose the
+specific PO creator to resolve their exception. (shown on
+right)
+
+Once one user resolves their exception, the Invoice will return
+to the AP Processor via ‘Tasks’.
+
+AP user view of the returned Invoice displaying the
+remaining exception:
+
+
+
+
+                                                                    Invoicing Guide 31
+                                                                       Updated 5/18/2021
+The AP user will see the sender’s exception has been resolved (shown above) and
+can now assign an exception resolution to the next PO creator or Exception Group.
+(shown below)
+
+
+
+
+Tips & Tricks
+This section includes tips and tricks that will save you and your team time.
+
+INVOICE LINE ITEM SEARCHING
+Reduce indexing time by leveraging
+line item searching.
+
+To initiate a search, simply click the
+magnifying glass icon found at the
+bottom of an invoice.
+
+
+
+
+Once selected, a search bar will appear
+across the top of the invoice line items.
+(on right)
+
+As descriptive search terms are entered the system will intelligently narrow down the
+line items. (shown below)
+
+
+
+
+                                                                       Invoicing Guide 32
+                                                                         Updated 5/18/2021
+IN-LINE EDITING
+Make in line edits!
+
+With in-line editing AP Processors simply
+click into the displayed categories; GL
+Account, Price, Quantity and Tax (if
+applicable) to perform a direct edit. If
+further editing is required, the pen icon may
+still be selected, expanding the line item
+view to all editable fields.
+
+To make edits, simply hover over the
+applicable line item fields.
+
+For GL Account edits, select from the drop down. Price and quantity edits will be free
+text fields. Simply click out of the field to close edit and complete the invoice.
+
+
+APPLY ALL AND PRESETS
+Use ‘Apply All’ and ‘Presets’ for quick bulk line item changes to accounting
+strings
+
+
+
+
+   1. Check the items you want to apply the same changes to and ‘Apply All’
+   2. Edit the accounting segments accordingly.
+   3. Settings include ‘Apply All’
+   4. Select ‘Apply Changes’
+
+Create ‘Presets’ for frequently used accounting strings
+
+   1. From the Apply All view select ‘Manage Presets’
+
+
+
+                                                                      Invoicing Guide 33
+                                                                        Updated 5/18/2021
+   2. Name your Preset
+   3. Complete the required
+      Company and Accounting
+      Information.
+   4. Save.
+
+Note: You can edit a saved preset
+from this view by selecting it from
+the ‘Select Preset’ field.
+
+Next time you want to use a preset,
+simply remove ‘None’ from the
+‘Select Preset’ field and choose
+from your unique list of previously
+created Presets.
+
+
+
+
+FOCUS ON EXCEPTIONS
+Get the exception faster!
+
+Located next to the green action button at
+the bottom of the Invoice, users can now
+click the target button (shown on right) to
+drill in on the exception message(s). Once
+selected, the target will redirect the user’s view to the exception message(s).
+
+
+
+
+                                                                       Invoicing Guide 34
+                                                                          Updated 5/18/2021
+Invoice Notifications
+AP users will receive email reminders when invoices require their attention.
+
+
+
+
+OVERDUE INVOICES
+All invoices that are not yet posted and past due date. Applies to any invoices with a
+status other than ‘Paid’
+
+   1. Select ‘Take Action Now’ to open the invoice in Vroozi Purchase.
+
+
+
+
+                                                                       Invoicing Guide 35
+                                                                          Updated 5/18/2021
+EXCEPTION HANDLING
+Sent to a member or group assigned to review invoice submitted for ‘Exception
+Handling’.
+
+   1. If it’s a mismatch, the email will contain discrepancy details. Otherwise the
+      message in red will state ‘Missing Goods Receipt’
+   2. Select ‘View Invoice’ to open the invoice and review for exception handling
+
+
+
+
+                                                                      Invoicing Guide 36
+                                                                         Updated 5/18/2021
+

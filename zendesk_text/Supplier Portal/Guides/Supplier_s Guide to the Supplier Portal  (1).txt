@@ -1,0 +1,831 @@
+                 Supplier’s Guide to the
+                          Supplier Portal
+The Supplier Portal is a ​Cloud-based portal solution with s​ elf-service capabilities and
+point and click interface, c ​ reating fluent process flows and communication between
+suppliers and their buyers.
+
+Suppliers like you can confirm, reject and dispute POs, view document history, send
+notices of shipment and invoice purchase orders for your Vroozi clients.
+
+
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                 0
+Table of Contents:
+Portal Dashboard                                             3
+   Features                                                  3
+
+Account Activation                                           5
+   User Profile                                              6
+
+Portal Configurations                                        6
+   Company Info                                              6
+      Change History                                         7
+   Manage Users                                              7
+      User Roles                                             8
+
+Purchase Order Workflows                                     8
+   Purchase Order Notifications                              8
+   Access a New PO                                           9
+   View a ‘Ready’ Status PO                                 10
+      PO Custom Fields                                       11
+   Confirm a PO                                              11
+      Confirm PO from ‘Tasks’                               12
+      Confirm PO from ‘PO Details’                          12
+   Dispute a PO                                             13
+      Communicate Dispute Details                           14
+   Purchase Order Cancellations                             15
+   Purchase Order Change Requests                           16
+      Notification                                          16
+      Action Required                                       17
+      POCR Change Reports                                   18
+      Purchase Order Version Updates                        19
+
+Advanced Shipping Notices                                  20
+   Create an Advanced Shipping Notice                      20
+   Pending Items                                           20
+   Track Advanced Shipping Notices                          21
+
+                                        ​Vroozi Supplier Portal
+                                                             1
+Invoices                                                                               22
+   Track Invoices                                                                      22
+   Flip a PO to Invoice                                                                22
+   Invoice from Partially Confirmed POs                                                23
+   Create an Invoice without ‘Flip PO to Invoice’                                      24
+   Create an Invoice - Using a PO submitted outside of the Portal                      25
+   Final Invoice                                                                       26
+      Final Invoices from a Buying Organization                                        26
+
+Additional Functionality                                                               27
+   Comments                                                                            27
+      Add Comment                                                                      27
+      ‘Comments’ Notification                                                          28
+           Email                                                                       28
+           Respond to a Comment                                                        29
+           Push Notification                                                           29
+
+Sales Trends                                                                           30
+   Report Navigation                                                                   30
+      Narrow Down Search                                                               30
+      Schedule Reports                                                                  31
+
+
+
+
+                                                                    ​Vroozi Supplier Portal
+                                                                                         2
+Portal Dashboard
+
+
+
+
+F​EATURES
+  1. Navigation Panel: A
+                       ​ ctions and Document types organized by categories. Click to
+     view.
+  2. Document Cards​: Organized by Document Type (Orders, Shipping Notices,
+     Pending Invoices, Payments). The yellow badges within each type indicate the
+     number received over the trailing 24 hours.
+       ○ Click the document card to view.
+
+
+
+
+  3. Search Bar: O
+                 ​ nce selected, portal users can search across all transactional
+     documents entering their own key words or select by preset to search categories
+     including but not limited to, ‘Buyer, Shipping Carrier and Created Date’.
+
+
+
+
+                                                                         ​Vroozi Supplier Portal
+                                                                                              3
+4. Tasks: ​Easy access to view or take action on all actionable documents (RFQ’s, PO’s,
+   Invoices. (shown below)
+
+
+
+
+      ●   Scroll down from ‘Tasks’ to view ‘Sales Trends’ and ‘Activity.’
+
+   Once selected you will be navigated to the document search page. If a preset
+   search category is selected, further search criteria tailored to that field will
+   populate. ​(shown below)
+
+
+
+
+   Once a document category is selected, filters applicable to that document type are
+   available to aid in narrowing down your search.
+5. Activity Stream: ​ Allows a user to see the latest activity
+   (status changes, notes and messages) on all open
+   RFQ/PO/Invoice.
+
+6. Sales Trends: V
+                 ​ iew trends by a specific time frame.
+
+
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                 4
+Account Activation
+Once Registration Email & Confirmation
+
+   ●   Click ‘Activate Account’ to register
+
+Password criteria support makes it easy for a new user to create and validate their
+password. The password field will turn green once it is successfully validated.
+
+
+
+
+                                                                          ​Vroozi Supplier Portal
+                                                                                               5
+U​SER​ P​ROFILE
+Set up your personal profile.
+   ●   Edit contact details including name location and region.
+   ●   Update password
+
+
+
+
+Portal Configurations
+Configurations only apply to users with administrator access.
+
+C​OMPANY​ I​NFO
+Each display card contains specific information. Click the pen icon in the right corner to
+edit the information for each of the
+following card categories. Fields without
+the editing icon are completed by the
+buying organization.
+   ●   Company Info
+   ●   Business Info
+   ●   Insurance
+   ●   Supplier Contact
+   ●   PO Submission
+   ●   Contract Info
+Once you select a card, click the plus sign to
+enter additional details.
+
+
+
+                                                                           ​Vroozi Supplier Portal
+                                                                                                6
+Change History
+Changes to the supplier’s record are captured in the ‘Change History’ tab of the Supplier
+Supplier Profile
+Users logged in when changes are
+made to the supplier record will
+receive push notifications. These
+notifications will appear in the
+bottom left corner of the Portal
+screen.
+
+
+
+
+M​ANAGE​ U​SERS
+If permission is granted by the buying organization Supplier Administrators can manage
+users from the ‘Users’ category in the navigation panel.
+*Only Supplier Admins will have access to the ‘Users’ category.
+
+
+
+
+   1. Search for other users of your Supplier Portal
+
+   2. View or sort user Status
+
+   3. Click on a user’s name to view or edit details. Editing can also be selected in the
+      right corner of the user row.
+
+   4. Update User List:
+          ➢ Activate or Deactivate: Check the box to activate or deactivate user(s)
+          ➢ Create User: Begin New User creation
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                 7
+              *Permission must be granted by the buying organization. If granted,
+              only administrators have the ability to create users.
+
+User Roles
+There are three roles that may be assigned to Supplier Portal users. As p
+                                                                        ​ reviously​ noted,.
+supplier permission to add/edit users can be optioned by the buying
+organization’s administrator(s)
+
+      Administrator:​ ​ T
+                        ​ he Administrator can create users, edit the
+      company profile, add comments to and create all transactional
+      documents.
+
+      Order Processor:​ ​ ​The Order Processor can reject and confirm
+      POs, create invoices and ASNs and add comments to
+      transactional documents.
+
+      Content Manager:​ ​ T
+                          ​ he Content Manager Role allows the
+      supplier user to manage their Vroozi Catalog content with a
+      single sign on via the Portal. Content Managers can create and
+      update catalogs on the buying organization’s behalf. Buying
+      organization approval will still be required before changes go live.
+
+          ●   The Content Manager’s Navigation Panel will include a link (shown to the
+              right) to V
+                        ​ roozi Catalog. This will open a new ​window or tab. Separate
+              training materials will be provided for users with VroozI Catalog access.
+
+
+
+
+Purchase Order Workflows
+P​URCHASE​ O​RDER​ N​OTIFICATIONS
+All Portal users will be notified via email of a new Purchase Order. Example below:
+Purchase Order Received from Buying Organization. Emails will be sent to the address
+associated with each user’s account.
+
+
+
+
+                                                                             ​Vroozi Supplier Portal
+                                                                                                  8
+   1. Document Number
+   2. Buying Organization
+   3. Buyer Name
+   4. ‘View Purchase Order’ will take you to the Portal to view the full document details.
+Portal users are also notified via email when an Advanced Shipping Notice is submitted or
+an Invoice has been paid, Notifications are also sent to the email address associated with
+their Portal login.
+
+A​CCESS​ ​A​ N​EW​ PO
+Purchase Orders can be retrieved 2 ways within the Supplier Portal
+
+   1. Portal Dashboard
+         ○   New purchase orders can be found in your Portal dashboard as ‘Ready’.
+
+
+
+
+   2. From your Navigation panel, select the ‘Purchase Orders’ category to access your
+      entire repository of purchase orders. Your view will default to all POs in ‘Ready’
+      status.
+         ○ To remove this filter, click the ‘x’ next to ‘Ready’.
+
+
+
+
+                                                                           ​Vroozi Supplier Portal
+                                                                                                9
+V​IEW​ ​A​ ‘R​EADY​’ S​TATUS​ PO
+Take action or view a ‘Read/y’ Purchase Order from the line item or select the PO number
+to view details or take action.
+From the PO view, you may complete several actions:
+
+   1. View line item details.
+   2. Dispute or Confirm Items (if this action has not yet been completed)
+   3. Confirm, Reject or Cancel - Select the horizontal ellipses to select from these
+      options.
+
+
+
+
+                                                                           ​Vroozi Supplier Portal
+                                                                                               10
+PO Custom Fields
+Custom Fields relevant to your business relationship with the buying organization may be
+present on a Purchase Order. These custom fields will be displayed above the line item
+details.
+Custom Field as seen in the Supplier Portal
+
+
+
+
+C​ONFIRM​ A
+          ​ ​ PO
+Confirmation of PO can be executed from the ‘​PO Detail’, ‘PO Status’
+and Dashboard ‘Tasks’.
+From the ‘Tasks’ click the checkbox icon (shown below) to confirm
+items.
+
+
+
+
+                                                                        ​Vroozi Supplier Portal
+                                                                                            11
+Confirm PO from ‘Tasks’
+Selecting ‘Confirm PO’ from ‘Tasks’ will trigger a new screen displaying all PO line items.
+From here, users must indicate which items they would like to confirm. The selection will
+default to ​all i​ tems contained in the PO. Unclick the leftmost box in each line item to
+remove its confirmation. When ready, select ‘Confirm.’
+
+
+
+
+Confirm PO from ‘PO Details’
+Confirmation from the ‘PO Details’ screen will require users to check all or check
+individual boxes for partial PO confirmation. W
+                                              ​ hen ready, select ‘Confirm Items.’
+
+
+
+
+The addition of ‘Confirmation Notes’ (shown on next page) is optional. O​ nce ‘confirm’ has
+been selected, an email notification will be sent to the PO orginiator and any notes will be
+displayed in the Buyer’s confirmation.
+
+
+
+
+                                                                           ​Vroozi Supplier Portal
+                                                                                               12
+‘Partially Confirmed’ POs will remain in the ‘Tasks’ view in ‘Partially Confirmed’ status until
+all items have been confirmed.
+
+
+
+
+D​ISPUTE​ A
+          ​ ​ PO
+Supplier users may ​Dispute ​individual or all i​ tems on a Buying Organization’s Purchase
+Order. Like Confirmation, Dispute may be performed from the ‘PO Detail’ screen, ‘PO
+Status’ screen and Dashboard ‘Tasks’ section.
+
+      Below, Dispute selected from Dashboard ‘Tasks’.
+
+
+
+
+If Dispute is selected for some PO line items but not all, the PO status will display as
+‘Partially Disputed’.
+
+From the ‘Tasks’ view, once the Dispute Order icon is selected, the Dispute Order screen
+will prompt the Supplier user to select ‘Reason for Dispute’ next to that line item.
+
+
+                                                                             ​Vroozi Supplier Portal
+                                                                                                 13
+Based on the ‘Reason for Dispute’ selected, users will be prompted to update other fields
+in the line item. In the example (shown above) if ‘Out of Stock’ or ‘Delivery Date Extension’
+is selected, the Delivery Date field will become editable and then must be updated before
+the Dispute can be submitted.
+
+Communicate ​Dispute​ Details
+Users may select to send a general message regarding all items in PO by entering details
+in the ‘Message field directly below the line items. (shown below)
+Users wish to spend a message that specifically addresses only the dispute items should
+select the tablet and pen icon in the Actions column. (shown below)
+
+
+
+
+Once clicked, a new screen displaying only the disputed line items and the ‘Additional
+Dispute Information’ field. In addition to completing a message you may also adjust the
+delivery date (if applicable) from this screen.
+
+
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                14
+After completing the Additional Dispute Information’ select ‘Save’ to return to the original
+Dispute view. Here, you will now see an eye icon in the action column indicating there is a
+message to view.
+
+
+
+
+Once submitted to the buying org, the status of each item will display in the PO details
+screen. Any users with access to the PO can view the Dispute message.
+
+
+
+
+Note: POs containing line items that have been disputed ​and a​ line item(s) that have
+been confirmed will inherit the ‘Partially Confirmed’ status.
+
+
+
+P​URCHASE​ O​RDER​ C​ANCELLATIONS
+If a PO is cancelled at the buying organization level, Supplier Portal users will receive
+email notification. Email communication
+
+As shown below, the Supplier
+email subject line will contain
+the PO number, that it was
+cancelled and the name of
+the Buying Organization.
+
+
+From the email, users can
+click View Order to access the
+Purchase Order in the Vroozi
+Portal. Here, users will see the
+new PO status ‘Cancelled’.
+
+
+
+
+                                                                             ​Vroozi Supplier Portal
+                                                                                                 15
+Supplier Portal Users will also see the PO cancellation in their Activity’ bar. (shown below)
+
+
+
+
+P​URCHASE​ O​RDER​ C​HANGE​ R​EQUESTS
+Notification
+As agreed upon in your contract, a Buying Organization’s Administrator may give their
+buyers the ability to make certain changes to purchase orders that have not yet been
+fulfilled. This is referred to as Purchase Order Change Request (POCR) The scope of
+changes would be based on contractual agreement between the supplier and buying
+organization.
+If enabled at the buying organization level, POs in the following statuses may have POCRs
+performed against them; ​Ready, Confirmed, Partially Confirmed, Disputed, Partially
+Disputed.
+
+
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                16
+When a change is made to an unfulfilled purchase order, any logged in users will receive a
+push notification. The notification will appear in the bottom left corner of the screen. You
+may click the notification to view the change.
+
+
+
+
+Action Required
+Once viewed, the changed PO will identify the changes.
+   1. The changed PO will display as Version 2.
+   2. The type of change will be specified about the line item.
+   3. The affected items will be highlighted in the line item descriptions.
+          ●   Changes to a line item will be highlighted in yellow, while removal of items
+              (as shown below) will be highlighted in red.
+
+
+
+
+                                                                              ​Vroozi Supplier Portal
+                                                                                                  17
+Changes made to a line item:
+
+
+
+
+There are no additional steps required of the supplier team. The supplier user will simply
+need to confirm, dispute or create an ASN as they would normally do for a new Purchase
+Order.
+
+
+
+
+POCR Change Reports
+If a POCR occurs on a Purchase Order, a change report will be generated and can be
+downloaded or printed by clicking ‘Print’ on PO Detail page. To support the review of
+changes, the PO change report will also be emailed to vendors.
+Click the Print Icon to download or print report:
+
+
+
+
+                                                                          ​Vroozi Supplier Portal
+                                                                                              18
+The Change Report will be included at the end of the PO.
+
+
+
+
+Purchase Order Version Updates
+Purchase Order versions will be updated if ​any f​ ield on a Purchase Order gets updated
+through POCR. These changes and new version numbers will be visible on Purchase
+Orders on the ‘PO Details’ and ‘PO Status’ screens in Supplier Portal.
+PO Status screen:
+
+
+
+
+                                                                          ​Vroozi Supplier Portal
+                                                                                              19
+Advanced Shipping Notices
+Notify your buyers of shipments using Advanced Shipping Notifications (ASN). Notification
+will go directly to the individual who submitted the PO.
+   ●   Note:​ While creation of an ASN is not required it is a best practice and may be the
+       standard set by your buyers.
+
+C​REATE​ ​AN​ A​DVANCED​ S​HIPPING​ N​OTICE
+Shipment Notice can be generated from Purchase Orders with ‘Ready’ or ‘Confirmed’
+statuses.
+
+
+
+
+   1. Enter shipping information as received by Carrier.
+
+   2. Enter any desired messages to Buyer
+
+   3. Add Shipping Information
+
+   4. Delete, Save or Submit.
+
+          ●   Saved ASNs move to the ‘Draft’ tab of the Shipping Notices category.
+
+   5. Upon submission, the employee from the buying company is informed that the
+      associated Purchase Order has shipped.
+
+P​ENDING​ I​TEMS
+Items in an ASN if that item or a specific quantity of items is not yet ready to ship.
+
+
+
+                                                                             ​Vroozi Supplier Portal
+                                                                                                 20
+Remove a line item(s):​ From the ASN draft for any items that are not yet ready for
+shipment by clicking the garbage can icon.
+Reduce Quantity: If an item is removed from an ASN because the Pending Items icon will
+highlight on the ASN.
+Click the Pending Icon to view items awaiting an ASN. From the Pending view, check the
+box next to the item(s) to add to the ASN draft.
+
+
+
+
+T​RACK​ A​DVANCED​ S​HIPPING​ N​OTICES
+   ●   View all inclusive list of all POs with ASNs
+   ●   Shipment Notices will be found in ‘Draft’ ,’Shipped’, ‘Received’ and ‘Cancelled’
+       statuses
+
+
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                21
+Invoices
+The Supplier Portal allows the supplier user to generate Invoices.
+   ●   Invoices can be generated directly through Purchase Orders or their associated
+       Advance Shipping Notices. (​ Flip to Invoice)
+
+T​RACK​ I​NVOICES
+View all inclusive list of Invoices. List includes ‘Drafts’, ‘Pending’, ‘In Process’ and ‘Paid’
+statuses.
+   ●   Invoices will be the
+       following statuses
+       based on the
+       actions taken
+       against them.
+           ○ Draft
+           ○ Pending
+           ○ Paid
+           ○ Partially Paid
+           ○ Rejected
+
+F​LIP​ A
+       ​ ​ PO ​TO​ I​NVOICE
+‘Flip a PO’ to Invoice only applies to POs submitted via the Supplier Portal.
+The next step for a ​Confirmed​ or S
+                                   ​ hipped​ invoice is to ‘Flip PO to Invoice’.
+
+   1. Locate the PO you wish to create an Invoice against.
+
+   2. Two ways to ‘Flip PO to Invoice’
+          ✓ From the search results
+            select the ellipses in the
+            filter column. Once clicked
+            the ‘Flip PO to Invoice’
+            option will appear.
+
+          ✓ From the PO screen, hover
+            over the bottom right corner and click the ellipses to reveal the ‘Flip PO to
+            Invoice’. (shown on next page)
+
+
+
+
+                                                                                   ​Vroozi Supplier Portal
+                                                                                                       22
+   3. Select Flip PO to Invoice’ to the invoice draft. (As shown below the PO will already
+      be linked to the PO draft.)
+
+
+
+
+   4. Unless using a PO outside the system or other documentation to support invoice,
+      uploading and attachment will not be
+      required.
+
+   5. Complete the Invoice Details including your
+      invoice number, Invoice date, Payment Terms
+      and Payment Due Date. Match your uploaded
+      PO to the buyer PO to create the Invoice. Enter
+      missing details, confirm all other details are
+      correct and submit.
+
+I​NVOICE​ ​FROM​ P​ARTIALLY​ C​ONFIRMED​ PO​S
+‘Partially Confirmed’ POs can be invoiced directly from the ‘Tasks’ view by clicking the
+rotating arrow icon. (shown below) This action will create an invoice o​ nly for items​ that
+have been confirmed.
+
+
+
+
+                                                                              ​Vroozi Supplier Portal
+                                                                                                  23
+The Invoice draft will only display the ​confirmed​ item(s). The invoice can then be created
+as you would any other invoice.
+
+
+
+
+C​REATE​ ​AN​ I​NVOICE​ ​WITHOUT​ ‘F​LIP​ PO ​TO​ I​NVOICE​’
+   1. Select ‘Create Invoice’ from bottom of the Navigation Panel. This will open the
+      Invoice draft.
+
+   2. Link the documents by retrieving your PO. Select the magnifying glass.
+
+
+
+
+                                                                            ​Vroozi Supplier Portal
+                                                                                                24
+   3. Complete the Invoice Details including your invoice number, Invoice date, Payment
+      Terms and Payment Due Date. Match your uploaded PO to the buyer PO to create
+      the Invoice. Enter missing details, confirm all other details are correct and submit.
+
+   4. The PO then moves to ‘Pending’ until payment is received and confirmed.
+
+
+
+
+C​REATE​ ​AN​ I​NVOICE​ - U​SING​ ​A​ PO S​ UBMITTED​ ​OUTSIDE​ ​OF
+THE​ P​ORTAL
+
+   1. Select ‘Create Invoice’ from bottom of the Navigation Panel
+
+   2. Select ‘Upload Attachment’ (shown below) to retrieve the
+      buying organization PO you would like to flip to an invoice.
+
+
+
+
+   3. Copy the PO details from the left side of the screen onto the invoice draft on the
+      right side of the screen.
+
+
+
+                                                                          ​Vroozi Supplier Portal
+                                                                                              25
+   4. Confirm all line items details are correct.
+
+   5. Select ‘Submit’ to send the invoice to the buying organization.
+
+F​INAL​ I​NVOICE
+Supplier Portal Users have the ability to define an invoice as a ‘Final Invoice’, essentially
+short closing the Invoice. The Final invoice indicator is
+located directly under the linked PO. (right) The
+indicator will default to ‘No’ but can be changed to
+Final Invoice by clicking ‘Yes.’
+
+Final Invoices are most often applied to Blanket or
+Service POs when the allocated PO amount is not
+representative of the Actual PO value. The PO actual
+amount is what the buying organization is invoiced for.
+
+   ●   For example the service PO may be for $600 but the actual invoice may only come
+       in at $550. In this case the Portal user can elect to close the invoice for receiving
+       and future invoices created against the PO by selecting ‘Final Invoice’.
+
+Currently Final Invoice functionality does not apply to invoices with multiple POs. The final
+invoice indicator will appear on invoices with more than one PO but the toggle defaulted
+to ‘No’ cannot be changed as it could be for a single PO.
+
+If there are items that have n
+                             ​ ot​ been invoiced those remaining items will be ​cancelled​.
+The non Invoiced items will then be removed from the PO and the audit trail will reflect
+the changes.
+
+
+Final Invoices from a Buying Organization
+
+                                                                              ​Vroozi Supplier Portal
+                                                                                                  26
+Supplier users viewing an invoice designated as ‘Final Invoice’ by the buying organization,
+will see “This is a final invoice.” noted on the Invoice. This message will be visible once the
+Invoice has been processed and submitted for coding, approval, or posting by the buying
+organization. (below)
+
+
+
+
+Additional Functionality
+C​OMMENTS
+Comments can be added to each document type (PO, ASN, Invoice) by navigating to the
+Quick Navigation tools running along the right side of any opened document. Comments
+allow you to tag and message your internal portal users or buying organization’s users.
+Please review the steps below.
+
+Add Comment
+   1. Click A
+            ​ dd Comments
+
+
+
+
+   2. Complete Message
+
+
+
+                                                                             ​Vroozi Supplier Portal
+                                                                                                 27
+         ●   Comments will be viewable by all users with access to the document. To
+             specifically notify a user(s), type @ to retrieve a list of users to tag in the
+             comment.
+
+
+
+
+         ●   Any user(s) tagged will receive email notification of a ‘Comment’.
+         ●   The addition of a document ‘Comment’ to a new PO or invoice will be
+             viewable in the Portal Dashboard ‘Tasks
+
+
+
+
+‘Comments’ Notification
+When a comment has been added to a document either by an buying organization
+employee or within your supplier organization Portal, tagged users are made aware of a
+comment two ways; via email and if logged in via Push notification.
+
+Email
+Once the email is retrieved, click ‘Respond in Vroozi’ to navigate to the commented
+document in the Portal.
+
+
+
+
+                                                                               ​Vroozi Supplier Portal
+                                                                                                   28
+Respond to a Comment
+Click the link in the pop-up notification to view the commented document. Once the
+document with the new comment is opened, the comment field will expand into view.
+From here, you can make a comment or take action as needed.
+
+
+
+
+Push Notification
+When a Supplier Portal user who is logged in while another user tags them in a comment
+that SP user will receive a push notification.
+
+
+
+
+                                                                      ​Vroozi Supplier Portal
+                                                                                          29
+Sales Trends
+
+
+
+
+   ●   Reporting features are found on the Portal Dashboard. Select any of the visible
+       graphs or data tiles to view specific details
+
+R​EPORT​ N​AVIGATION
+Narrow Down Search
+Click the milestone dates to drill down to specific details.
+
+
+
+
+   ●   Select Specific terms (shown above) and view or download the results. (shown
+       below)
+
+
+
+
+                                                                          ​Vroozi Supplier Portal
+                                                                                              30
+   ●   Download sales trends table as shown in your dashboard.
+
+
+
+
+Schedule Reports
+Select the Gear icon (shown above)
+
+   1. Name
+   2. Select destination
+   3. Add 1 or multiple recipients
+   4. Select format
+   5. Set report frequency
+
+
+
+
+                                                                 ​Vroozi Supplier Portal
+                                                                                     31
+

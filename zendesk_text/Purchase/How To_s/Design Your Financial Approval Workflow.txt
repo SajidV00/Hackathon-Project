@@ -1,0 +1,76 @@
+Design your ​Financial Approval
+Workflow
+
+Configure a financial approval workflow through the creation of Approvers and Workflow
+settings in the Master Administrator panel.
+
+
+Workflows allow organizations to create a global approach to requisition approval;
+selecting a single approver based on Requisition amount and Approver Limit or setting a
+series of approval escalations based on dollar amount.
+
+Create Approvers
+   1. Create any approvers you wish to utilize in the workflow. M
+                                                                ​ aster Data >Users.
+
+   2. Within each Approver’s user record, under ‘Approval Settings’ designate the
+      ‘Approval Limit’ for each approver and select
+      ‘Next Approver.’
+
+         ✓ When first creating your approval chain,
+           it’s best to start backwards; creating or
+           updating your top approver (person with the highest Approval Limit) and
+           then move backwards to the next highest and so on. This approach allows
+           for easy retrieval of ‘Next Approver’ because the Approver is already in the
+           system.
+
+Staircase Workflow:
+Create an upward review of a requisition ensuring individuals in
+different departments or levels of responsibility can sign off on
+spend. The number of approvers in the staircase is based on the
+requisition amount and ‘Approval Limit’ set for each Approver.
+                       Example: ​ S
+                                  ​ taircase Approval workflow view
+                       from a submitted requisition.​ James’ approval limit is $500, Carol’s
+                       Approval Limit is $2,000 and Sarah’s approval limit is $5,000. The
+                       requisition submitted for approval is $2,659. (​ shown on left)
+                          ✓ In this example the submitted requisition will first be sent to
+                       James to Review. If approved, it will go to the next approver; Carol
+                       Tester.​ (James’ view shown on the next page)
+
+
+
+
+                                                                                               1
+Spend Limit Workflow:
+Workflow enables a 1​ ​stop approval process based on requisition amount. The system will
+automatically bypass any approvers set with a lower approval threshold and send the
+requisition to the approver’s whose threshold limit is not exceeded
+by the requisition amount.
+      Example:​ ​ S
+                  ​ pend Limit Approval workflow view from a
+      submitted requisition.
+          ✓ In the example below, Carol Tester’s account designates
+            Sarah Burns as the next approver for requisitions
+            beyond $2,000. Using a Spend Limit Workflow, the requisition for $2,659.00
+            will go directly to Sarah.
+
+
+
+
+          ✓ Sarah’s requisition approval limit is $5,000 which stops the requisition from
+            needing to go to the next approver. It
+            will start and stop with her. (​ Sarah’s
+            user record shown on right)
+
+
+Fallback Approver
+Regardless of if/how ‘Out Of Office’ functionality is enabled, all organizations will have the
+option to set a Fallback Approver from the list of users with
+Approver credentials.
+A designated Fallback Approver will catch any requisitions that
+have bypassed approval within any workflows.
+
+
+                                                                                             2
+

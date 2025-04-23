@@ -1,0 +1,37 @@
+Create A User
+Create a new user(s) in Vroozi. Users for Vroozi Invoice, Purchase, Sourcing and Purchase
+Express modules can all be created from this tool.
+
+
+P​ROCESS​:
+To create, view or edit a user, access the ‘Users’ from the ‘Master
+Data’ category in your navigation panel.
+
+
+Select the ‘Create a New User' button.
+   1. Complete Basic Information.
+   2. Select User Role. For each Vroozi Module, click the downward arrow to view the
+      specific roles within that category.
+
+
+
+
+          ○   Please see the U
+                             ​ ser Access Directory​ for specific details on core role
+              functions and permissions.
+          ○   Many user roles can be combined. Those which cannot be combined with a
+              specific role will be grayed out once an incompatible role is selected.
+   3. Complete the remaining fields, indicating the Accounting classifications for the
+      user. Classifications listed are based on the accounting string and addresses
+      configured in your Master Data; ‘Addresses’, ‘Organization’ & ‘Accounting’ set up..
+         ○ As you begin typing in each field, the previously creating accounting
+             segments will populate.
+
+
+
+
+   4. Once all fields are complete, click the blue ‘Save User’ button.
+Within seconds of creation, the new user will receive email notification of their new Vroozi
+account.
+                                                                                            1
+

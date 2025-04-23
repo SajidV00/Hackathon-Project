@@ -1,0 +1,66 @@
+Edit an Internal Catalog v
+                         ​ ia File Upload
+Add new items, update item details, prices, approvers, groups, etc.
+
+
+UPLOAD CHANGES
+   1. Locate the catalog in the ‘Live’ column and select the gear icon.
+         ○ Editing a ‘Live Catalog will create a new version in ‘Working’
+         ○ Updates will not disrupt shopping in current ‘Live’ Catalog
+   2. Select ‘Edit.’
+   3. Upload the saved file under ‘Catalog File.’
+
+
+
+
+   4. Under ‘Additional’ section - Select:
+        ○ ‘Merge & Update: ​*Default Setting. Select if file only includes the new
+           or updated items. These items would then be merged with the Master
+           List of items for that catalog.
+        ○ Overwrite All:​ ​Upload Master Template with a  ​ ll​ items including new or
+           updated ones.
+
+
+
+
+   5. If changes require approval, all Approvers assigned to the catalog will receive
+      email notification of the change.
+         ○ Administrators can bypass approval workflow and approve
+           changes.
+             •  If manually approved
+                by administrator, the
+                Publish
+                Confirmation screen
+                will prompt users to
+                select ‘Publish’
+
+
+Any shoppers with items affected by the update in their shopping cart will not be
+able to purchase those items. They must remove the items & re-added to their cart.
+
+
+
+
+                                                                                        1
+CHANGE REPORT:
+The most recent changes made to the catalog can be viewed in the Change Report.
+The change report will not be accessible until 5-10 minutes after changes have been
+made.
+   1. Locate the catalog, select the gear icon and ‘Change Report’.
+
+
+
+
+   2. The report can be retrieved from the ‘Announcements’ section on your
+      Catalog homepage.
+
+
+
+
+   3. Download & View Report:
+
+
+
+
+                                                                                      2
+

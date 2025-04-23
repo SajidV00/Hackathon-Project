@@ -1,0 +1,552 @@
+           Vroozi Roles Directory
+Table of Contents:
+
+Admin Interface Roles                          1
+   Purchase Administrator (Master Data)         1
+   Master Administrator                         1
+   Catalog Administrator                       2
+
+Purchasing and Receiving Roles                 2
+   Buyer                                       2
+   Central Receiver                            3
+
+Shopper Interface Roles                        3
+   Employee (Requester)                        3
+   Shopper Express                             5
+   Power Shopper                               5
+   Marketplace Shopper                         5
+   Vroozi Expense                              6
+
+Approver Roles                                 6
+   Content Approver                            6
+   Approver (Financial)                        8
+   Sourcing Approver                           8
+
+Accounts Payable Roles                         8
+   AP Processor                                8
+   AP Approver                                 9
+   AP Auditor                                  9
+   AP Manager                                  9
+
+Supplier Portal Roles - Supplier Users         9
+   Administrator                               10
+   Order Processor                             10
+   Content Manager                             10
+
+Quick Reference User Guide by Vroozi Service   11
+Admin Interface Roles
+PURCHASE ADMINISTRATOR (MASTER DATA)
+Vroozi Module: Purchase
+
+Permissions:
+  ●   Set up and maintain the company’s Master Data. Including:
+         ○ Content Access Mapping (restricts the catalog content users can view)
+         ○ Data Mapping (material groups, unit of measure, currencies)
+         ○ External Web Service Integration
+         ○ Order Approval Workflow Rules
+         ○ Organizational and Accounting data
+         ○ BuyRoute Configuration
+  ●   View all catalog content within the company, without any restrictions.
+  ●   Administer user accounts and setup content access rules.
+Additional Details:
+  ●   A company can have multiple users which have the Administrator role
+      assigned to them
+  ●   Admins have access to every area of the Vroozi SpendTech Procure to Pay +
+      Marketplace platform and the ability to configure company-wide settings.
+
+
+
+MASTER ADMINISTRATOR
+Vroozi Module: Catalog
+
+Permissions:
+  ●   Access to every area of the smartOCI and have the ability to configure
+      company-wide settings.
+  ●   Perform any actions on catalog content within their company.
+  ●   View all catalog content within the company, without any restrictions.
+  ●   Administer user accounts and setup content access rules.
+  ●   Set up and maintain the company’s Master Data. Including:
+         ○ Content Access Mapping (restricts the catalog content that users can
+            view and access)
+         ○ Data Mapping (material groups, unit of measure, vendor ids, currencies)
+         ○ External ERP Integration
+         ○ Content Approval Workflow Rules
+Additional Details:
+
+
+                                                               Vroozi Roles Directory 1
+  ●   A company can have multiple users which have the Master Admin role
+      assigned to them
+  ●   A Master Administrator automatically inherits all other Catalog user roles;
+      except the Power Shopper role.
+
+
+
+CATALOG ADMINISTRATOR
+Vroozi Module: Catalog
+
+Permissions:
+  ●   Administer catalog content in their company,​ if​ given​ ​the appropriate Content
+      View assignments.
+         ○ Can only access content within their assigned Content View(s)
+  ●   Administer user accounts which have Content Approver, Buyer, Supplier,
+      Shopper or Shopper Only Access roles assigned to them.
+         ○ Content Admin users will only be able to view/administer user accounts
+            with the same Content View assignments on their profile
+  ●   View and manage Supplier records in Vroozi Catalog (smartOCI)
+Additional Details:
+  ●   Can only be assigned by a Master Administrator.
+Unable to:
+  ●   Configure a company’s Master Data or change company wide settings.
+
+
+
+
+Purchasing and Receiving Roles
+BUYER
+Vroozi Module: Purchase
+
+Permissions:
+  ●   Can access both Vroozi Catalog (smartOCI) and Vroozi Purchase
+  ●   May only access catalog content in Catalog based on their assigned C​ ontent
+      Views
+  ●   Manually create purchase orders (PO) in Vroozi Purchase
+  ●   Add non-catalog line items to manually created POs in Vroozi Purchase
+  ●   Compile POs, using line items from approved PRs
+         ○ Buyers can only see items from approved PRs, if those items are
+            automatically assigned by the system, to the Buyer’s relevant Buyer
+            Group
+
+                                                                  Vroozi Roles Directory 2
+         ○ Modify an existing PO
+  ●   Finalize and submit POs, sending them to the relevant suppliers
+Additional Details:
+  ●   A company can have many users with the Buyer role assigned to them
+  ●   Buyers can only be associated to a Buyer Group by Administrators
+Unable to:
+  ●   Administer, create, update or delete any catalogs in the Content Manager
+
+
+
+
+CENTRAL RECEIVER
+Vroozi Module: Purchase
+
+Permissions:
+  ●   Receive against all Company Purchase Orders.
+  ●   Complete returns against received Purchase Orders.
+Additional Details:
+  ●   Can be assigned as a single role or in combination with the Requester role.
+      (next category)
+
+
+
+Shopper Interface Roles
+EMPLOYEE (REQUESTER)
+Vroozi Module: Purchase
+
+Permissions:
+  ●   Create purchase requests
+  ●   Create catalog and non-catalog free text line items in a purchase request
+  ●   Bulk upload line items against a purchase request.
+  ●   Add attachment(s) against a purchase request.
+  ●   Access the request status page to track the status of their purchase requests.
+  ●   Access the purchase order status page to track the status of the company’s
+      purchase orders.
+  ●   Access the receipt status page to track the goods receipts against purchase
+      orders and once received can perform a goods receipt against items from
+      their purchase order.
+
+Additional Details:
+
+
+                                                                 Vroozi Roles Directory 3
+●   Spending threshold and specific approver can be set for each individual
+    Requester. Otherwise approval will default to global setting.
+
+
+
+
+                                                              Vroozi Roles Directory 4
+SHOPPER EXPRESS
+Vroozi Module: Express
+
+Permissions:
+  ●   Create unique list/carts that they can be shared with their perspective power
+      shoppers.
+  ●   Track their orders from their ‘List Status Page’.
+Additional Details:
+  ●   A hybrid role with specific access to Catalog Content only.
+  ●   No accounting data is required to submit an order.
+
+
+
+POWER SHOPPER
+Vroozi Module: Express
+
+Permissions:
+  ●   View and process user defined shopping lists that have been shared with
+      them by a Shopper Express user.
+  ●   Add a list to the Shopping cart, and checkout the contents to an external ERP
+      system. The ERP system is used for further processing of the order.
+  ●   Dismiss a shared list by selecting ‘Remove’
+
+Additional Details:
+  ●   A company can have multiple users with the Power Shopper role assigned to
+      them
+  ●   Can only view shared lists from Shopper Express users, as long as they have
+      the same Content Groups assigned.
+  ●   Role can only be administered by Master Admins
+
+
+MARKETPLACE SHOPPER
+Vroozi Module: Marketplace
+
+Permissions:
+  ●   Shop from pre-approved catalogs.
+  ●   Create free text requests.
+  ●   Create unique lists which can be shared with other shoppers.
+
+Additional Details:
+
+                                                                    Vroozi Roles Directory 5
+  ●   Launch of Marketplace is generated from an ERP system.
+  ●   Checkout of a Shopping Cart is completed in an ERP system.
+
+
+
+
+VROOZI EXPENSE
+Vroozi Module: Expense
+
+Permissions:
+  ●   Create expense reports for personal spending and submit to the company’s
+      financial approver to be reimbursed.
+  ●   Take pictures of receipts and add to expense ‘Wallet’ to be used for future use.
+  ●   Track mileage - if used by buying organization.
+  ●   Access the expense status section to keep track of submitted expenses.
+Additional Details:
+  ●   Employees submitting personal expenses for reimbursement.
+
+
+
+Approver Roles
+CONTENT APPROVER
+Vroozi Module: Catalog
+
+Permissions:
+  ●   Approve or reject catalog content that is assigned to their Content Views.
+
+Unable to:
+  ●   Administer other user accounts
+  ●   Administer Supplier records
+  ●   Administer any catalog content, other than Approving or Rejecting the
+      content
+  ●   View any catalog content outside of their assigned Content Views
+Additional Details:
+  ●   A company can have multiple users which have the Content Approver role
+      assigned to them.
+  ●   Content Approvers can only be administered by Master Admins and Content
+      Admins
+  ●   Can be associated directly to catalogs or to a Supplier record.
+
+                                                                  Vroozi Roles Directory 6
+○   When assigned to a Supplier, they are automatically associated to all
+    catalogs belonging to that Supplier.
+
+
+
+
+                                                        Vroozi Roles Directory 7
+APPROVER (FINANCIAL)
+Vroozi Module: Purchase
+
+Permissions:
+          ●   View any Requisition assigned to them and approve, or reject them
+
+Unable to:
+   ●   Create new Requisitions.
+   ●   Make any changes or modifications to the company’s Master Data, or
+       companywide configurations.
+   ●   Administer any other user or supplier records.
+
+Additional Details:
+   ●   Buying organizations may have multiple approvers assigned to a single
+       requisition through the use of Approval Limits & the enablement of the
+       Staircase Approval Workflow.
+
+
+SOURCING APPROVER
+Vroozi Module: Sourcing
+
+Permissions:
+   ●   Filter and edit Purchase Requests (PRs) prior to financial approval.
+   ●   Approve or Reject PRs.
+Additional Details:
+   ●   A company can have multiple users with the Sourcing Approver role assigned
+       to them
+
+
+
+Accounts Payable Roles
+Vroozi Module for all Roles: Vroozi Invoice
+
+AP PROCESSOR
+Permissions:
+   ●   Create and submit Invoices including:
+          ○ Submit Invoices for approval
+          ○ Submit Invoices for coding
+          ○ Submit Invoices for Exception Handling
+   ●   Assign Invoices to other AP Processors or Managers
+   ●   Park Invoices
+
+                                                                   Vroozi Roles Directory 8
+   ●   Track Invoices submitted for approval and coding.
+   ●   If ‘Coding’ permission is assigned to AP Processors, they can enter or modify
+       Invoice accounting information when it is submitted to them for coding.
+
+
+AP APPROVER
+Permissions:
+   ●   Review Invoices submitted for approval, and ‘approve’ or ‘reject’ them.
+   ●   If ‘coding’ permission is assigned to AP Approvers, they can enter or modify
+       Invoice accounting information.
+   ●   If ‘editing’ permission is assigned, Approvers can modify the information on an
+       Invoice when it is submitted to them for approval.
+
+
+
+AP AUDITOR
+Permissions:
+   ●   May only view invoices from the specific business units or locations assigned
+       to them.
+   ●   Retrieve, view and run reports on specific invoices in the following statuses
+           ○ Posted
+           ○ Paid
+           ○ Partially Paid
+Additional Details:
+  ● May not be combined with AP Manager or Processor roles.
+
+
+
+AP MANAGER
+Permissions:
+   ●   Able to perform all the tasks that an AP Processor and Approver can do.
+   ●   Intercept and approve an Invoice that is pending approval from any AP
+       Approver. Once an AP Manager intercepts and approves an Invoice the status
+       become ‘Approved’ and does not require approvals from subsequent
+       approvers, if any.
+Additional Details:
+   ●   Only AP Managers are able to post Invoices to external system.
+
+
+
+Supplier Portal Roles - Supplier Users
+Vroozi Module for all Roles: Supplier Portal
+
+
+                                                                  Vroozi Roles Directory 9
+ADMINISTRATOR
+Permissions:
+   ●   Create new Portal users
+   ●   Edit Company Profile
+   ●   Add comments to POs and Invoices
+   ●   Create all transactional documents
+
+
+
+
+ORDER PROCESSOR
+Permissions:
+   ●   Reject & Confirm POs
+   ●   Create Invoices and ASNs
+   ●   Add comments to POs and Invoices
+
+
+
+CONTENT MANAGER
+Permissions:
+   ●   Manage Vroozi Catalog content with a single sign on via the Portal.
+   ●   Create Catalogs
+Unable to:
+   ●   Approve, publish or delete catalogs.
+   ●   Make changes to the parent supplier record
+Additional Details:
+  ● Before going ‘Live’ any changes to Catalogs made will be subject to approval
+       by buying organization users
+
+
+
+
+                                                                 Vroozi Roles Directory 10
+Quick Reference User Guide by Vroozi
+Service
+Vroozi       Role              Additional   Description
+Service                        Role
+                               Allowances
+
+             Master            NA           All-encompassing role with access to all
+Vroozi       Administrat                    aspects of their company wide settings
+Catalog      or                             including setting up and maintaining the
+                                            Company’s master data. Including Content
+                                            mapping, data mapping, external ERP
+                                            mapping, reporting and approval workflows.
+
+             Content           NA           With the appropriate content view
+             Administrat                    assignments, can administer all catalog
+             or                             content and create new users.
+
+             Content           NA           Associated directly to catalogs or Supplier
+             Approver                       Records for approval or rejection of content.
+                                            Unable to administer content.
+
+Vroozi       Employee          NA           Search and browse authorized goods and
+Marketplac                                  services in the Marketplace from hosted
+e                                           catalogs, internal inventory catalogs, level 2
+                                            punch-out catalogs and punch-out catalogs.
+
+             Buyer             NA           Search and browse authorized goods and
+                                            services in the Marketplace from hosted
+                                            catalogs, internal inventory catalogs, level 2
+                                            punch-out catalogs and punch-out catalogs.
+
+Vroozi       Administrat       All          All-encompassing role allowed to view
+Purchase     or                             manage all system configurations and all
+             (Master)                       Master data.
+
+             Content           NA           Manage content without having access to
+             Administrat                    effect change to their company settings like a
+             or                             Master Administrator would.
+
+             Purchase          NA           Approve PRs based on organization defined
+             Approver                       approval limits.
+                                            *Can only view PRs assigned to them.
+
+             Central       ●     Specify    Process Goods Receipts or Returns on behalf
+             Receiver            Access -   of any requester within an organization or
+                                 Company    within assigned business unit or location.
+                                 Code &
+
+
+                                                                        Vroozi Roles Directory 11
+                           Plant
+
+             Employee     ● Restrict    Submit PRs, process own Good Receipts or
+                            Coding of   Returns and Resolve Invoices.
+                            PR/PO       *Ability to cancel or short close POs if setting
+                          ● Submit      activated by Admin.
+                            Request
+                            Forms
+                          ● Submit
+                            RFQs to
+                            Supplier
+
+Vroozi       Buyer        ● Manage      Have access to all both Vroozi Catalog and
+Sourcing                    Suppliers   Vroozi Purchase. Allowed to create new users,
+                          ● Restrict    Create POs and release POs.
+                            Coding of
+                            PR/PO
+
+             Sourcing     NA            Filter and edit PRs prior to financial approval.
+             Approver                   Approve PRs.
+
+Vroozi       Role         Additional    Description
+Service                   Role
+                          Allowances
+
+Vroozi       Power        NA            Act on shared carts from Shopper Express and
+Purchase     Shopper                    submit back to ERP system for ordering.
+Express
+*Marketpla
+             Shopper      NA            Catalog access to view and create a cart and
+ce Users
+             Express                    share with their Power Shopper.
+
+Vroozi       Supplier     NA            Management of Supplier Discovery Master
+Supplier     Discovery                  Data; Supplier & User Records, Production
+Discovery    Admin                      Records, Account Settings, Reports,
+                                        Categories, Attributes
+
+             Supplier     ● Allow EF    View assigned supplier record information
+             Discovery      Approvals   within a specific area which they have been
+             Power User                 assigned to. Information includes Supplier
+                                        Contract, Contact, details, Insurance, Products
+                                        & Services
+                                        *Acts as an approver for Exception Form (New
+                                        Supplier Request) and Export Reports.
+
+             Supplier     ● Allow EF    View assigned supplier record information
+             Discovery      Approvals   within a specific area which they have been
+             Basic User                 assigned to. Information includes Supplier
+                                        Contract, Contact, details, Insurance, Products
+                                        & Services
+
+Vroozi       Accounts     ● Allow for   Approve or reject an invoice.
+
+
+                                                                     Vroozi Roles Directory 12
+Invoice    Payable         coding of
+           Approver        invoice      *Role only applicable if admin requires buying
+                         ● Allow for    organization to manually approve invoices.
+                           editing an
+                           invoice
+                           during
+                           approval
+
+           Accounts      NA             Retrieve, view and run reports on specific
+           Payable                      invoices in the following statuses
+           Auditor                       1. Posted
+                                         2. Paid
+                                         3. Partially Paid
+                                        *Can be restricted to view specific business
+                                        units or locations based on company code
+                                        allocations.
+                                        *Cannot be designated as an exception
+                                        handler.
+
+           Accounts      NA             View all invoices in the system. They can
+           Payable                      intercept, code, approve and post invoices to
+           Manager                      financial system.
+
+           Accounts      ● Allow for    Process and submit invoices for coding and
+           Payable         coding of    approval, assign invoices to other AP
+           Processor       an invoice   processors or managers. park invoices Submit
+                                        invoices for Exception Handling
+                                        *Only have access to own invoices.
+
+Vroozi     Expense       NA             Create and submit expense reports to
+Expense    Requester                    Supervisor who is designated Approver.
+
+           Expense       NA             Approve Expense reports based on
+           Approver                     organization defined approval standards.
+
+Vroozi     Role          Additional     Description
+Service                  Role
+                         Allowances
+
+Vroozi     Administrat   NA             The Administrator can create users, edit the
+Supplier   or                           company profile, add comments to and create
+Portal                                  all transactional documents.
+
+
+           Order         NA             The Order Processor can reject and confirm
+           Processor                    POs, create invoices and ASNs and add
+                                        comments to transactional documents.
+
+
+           Content       NA             The Content Manager Role now allows the
+           Administrat                  supplier user to manage their Vroozi Catalog
+
+
+                                                                   Vroozi Roles Directory 13
+or   content with a single sign on via the Portal.
+     Content Managers can create and update
+     catalogs on the buying organization’s behalf.
+     Buying organization approval will still be
+     required before changes go live.
+
+
+
+
+                                Vroozi Roles Directory 14
+

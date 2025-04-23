@@ -1,0 +1,2107 @@
+               Vroozi Catalog
+Content Administrator Guide
+ Vroozi Catalog provides buying organizations with a powerful and simple
+ web-based tool to create product and service catalogs. Functions, such as
+ drag-and-drop approval processes and pre-defined templates, empower
+ procurement professionals and keep the catalog management process simple.
+
+
+
+
+Table of Contents
+Introduction                                                                   4
+  Key Terms                                                                    4
+  Administrator Homepage Anatomy                                               5
+
+My Account: Account Preferences                                                8
+  User Information                                                             8
+  Password Change                                                              8
+  Forgot Password (for Administrators)                                         8
+  Default Settings                                                             9
+  My Account: Message Center                                                   9
+     Accessing the Message Center                                              9
+
+Company Settings                                                              10
+  Add & Delete Images (Logo Upload & Removal)                                 10
+  Mapping Configuration                                                        11
+  Forms Configuration                                                         12
+  System Definitions                                                          14
+     Add A System                                                             14
+
+
+
+
+                                                             Vroozi Catalog ​ 0
+                                                                  Update 7/1/2020
+      Remove a System                                              14
+   Homepage Cards                                                  15
+      Add an Announcement                                          15
+      Add Information                                              16
+      Edit Welcome Message                                         16
+      Edit a Homepage Card                                         17
+      Delete a Homepage Card                                       17
+      Supplier Card Preferences (Icon Order)                       17
+   Help Content                                                    18
+      Manage FAQs                                                  18
+      Manage Policies                                              18
+      Manage Contact Information                                   19
+      View Help Content                                            20
+   Approval Workflow Preferences                                   20
+
+Suppliers                                                          21
+   Create a Supplier                                               21
+   Supplier Bulk Upload                                            21
+   Supplier Company List                                           22
+      Search                                                       22
+      Edit an Existing Supplier                                    23
+      Activate, Deactivate or Delete a Supplier                    23
+      Create a Custom Attribute                                    24
+
+Content Views & Groups                                             26
+   Content Views                                                   26
+   Content Groups                                                  26
+   Configuration                                                   27
+
+Catalog Management                                                 27
+   Catalog Manager Anatomy                                         27
+      Catalog Search & Filter                                      28
+      Export Catalog Content                                       28
+
+Create an Internal Catalog                                        30
+   Internal Catalog Definition                                     30
+   Catalog Creation                                                30
+   Internal Catalog Images                                         30
+      Use Tiered Pricing                                           31
+
+
+
+                                                  Vroozi Catalog ​ 1
+                                                       Update 7/1/2020
+      Policy Items (Find a Vendor)                                    32
+
+Create a Punchout Catalog                                            34
+   Catalog Creation                                                   34
+
+Create a Level II Punchout                                            36
+   Level II Catalog Definition                                        36
+   Catalog Creation                                                   36
+
+Edit a Catalog                                                        38
+   Edit a Catalog (Direct Item Update)                                38
+   Edit a Catalog (File Upload)                                       38
+   Catalog Version Management                                         38
+
+Approve, Reject & Publish Catalogs                                    39
+   Approve a Catalog                                                  39
+   Reject a Catalog                                                   39
+   Publish a Catalog                                                 40
+   Deactivate a Catalog                                              40
+   Activate a Catalog                                                 41
+   Delete a Catalog                                                   41
+   Approve a Catalog Item                                             41
+   Reject a Catalog Item                                              42
+   Publish a Catalog Item                                             43
+   Delete a Catalog Item                                              43
+
+Custom Fields                                                        45
+   Custom Field Types                                                 45
+   Create a Custom Field                                              46
+   Activate or Deactivate Or Delete a Custom Field                   47
+
+Company Users                                                        48
+   Create a User                                                     48
+   Edit a User                                                       48
+   Activate, Deactivate or Delete a User                              49
+   Reset a User’s Password                                           49
+
+Data Mapping                                                         50
+   Category Mapping                                                   50
+   Supplier ID Mapping                                                52
+   Content Access Mapping                                             53
+
+
+
+                                                     Vroozi Catalog ​ 2
+                                                          Update 7/1/2020
+Unit of Measure (UoM) Mapping                    54
+Currency Mapping                                 54
+
+
+
+
+                                Vroozi Catalog ​ 3
+                                     Update 7/1/2020
+I​NTRODUCTION
+What is Vroozi Catalog?
+Vroozi Catalog i​ s a web-based content management system and catalog search
+engine. It allows corporate buyers and shoppers to search for products and services.
+More simply, Vroozi Catalog is the first step in your e-procurement process, as this is
+where you build shopper catalogs.
+
+Customers leveraging the ​Vroozi Marketplace​ shopping experience​, products and
+services are stored within the supplier catalogs and then sent to your organization’s
+external system where it will convert to a Requisition. All information regarding
+approvals and resulting Purchase Order(s) are stored within that external system.
+
+Customers leveraging the Vroozi Purchase shopping experience​, products and
+services are stored within the supplier catalogs. Requested items are converted into
+a Requisition within Vroozi. Upon approval the Purchase Order is electronically sent
+to the supplier(s). All information related to the PO is stored within Vroozi.
+
+
+
+
+K​EY​ T​ERMS
+During the setup process, you will configure several items in ​Catalog ​, including:
+
+   ✓ Suppliers​: To specify basic information about the suppliers that you company
+     orders from.
+
+
+
+
+                                                                      Vroozi Catalog ​ 4
+                                                                            Update 7/1/2020
+  ✓ Catalogs​: Inventory of supplier items or services available to shoppers or
+    requesters.
+
+  ✓ Categories​: To determine how the suppliers’ product information is
+    categorized and presented to shoppers in your system.
+       ● Ex: Furniture, IT, Electronics, Uniforms.
+  ✓ Users​: The term “user” when seen in this guide refers to the individuals
+    initiating the request of items or goods process.
+        ● Users within a Buying Organizations leveraging the full C   ​ atalog​ to
+            Vroozi Purchase ​workflow are referred to as R
+                                                         ​ equesters​.
+        ● Users within a Buying Organizations utilizing C  ​ atalog​ content that is
+            then sent to an ERP, are referred to as ​Shoppers.
+
+  ✓ Content Views​: G
+                    ​ rouping of catalogs and suppliers into logical sets.
+      ● Ex: Region, Commodity, Division, Content groups are then assigned to
+         Content Views.
+      ● A single Content View can belong to multiple Content Groups.
+  ✓ Content Groups​: Users assigned to a Content View(s). This assignment
+    determines with catalogs and suppliers users will have access to.
+       ● Content Groups may be assigned to multiple Content Views
+
+  ✓ External ERP Systems​: To specify which external E
+                                                     ​ nterprise Resource
+    Planning (ERP)​ systems shoppers will use to access your ​Marketplace
+    instance.
+
+  ✓ Unique System ID​: ​ Identifies the Shopper's originating ERP system
+
+  ✓ Unique Supplier ID:​ The unique code generated by Vroozi Catalog to identify
+    the supplier within Catalog .
+
+A​DMINISTRATOR​ H​OMEPAGE​ A​NATOMY
+
+
+
+
+                                                                     Vroozi Catalog ​ 5
+                                                                          Update 7/1/2020
+1. Your Logo Icon​: Clicking on it brings you back to the landing page of Vroozi
+   Catalog
+2. Search Bar​: You are able to search across catalogs and catalog content.
+3. Your Name/Account​: Your account gives you access to your personal
+   Preferences​, M​ essages​, and ​Help​. This is also where you are able to and sign
+   out.
+4. Settings​: Allows you to configure your C   ​ ompany Settings​ for items such as
+   Homepage Cards​ and images.
+5. Shopper View​: Clicking on the ​Shopper View​ button will take the
+   Administrator​ to the S
+                         ​ hopper User Interface​ ​(UI)​. This user will be subject to
+   their assigned Content Views, which determine what content they are able to
+   see. Users can use this functionality to review loaded catalog content as it
+   would appear to a ​Shopper​. This ​Shopper View​ is meant to be used as a
+   read-only function, as users are not able to check out their S   ​ hopping Cart
+   contents to an external ERP system.
+6. Navigation Tabs:
+
+
+
+                                                                    Vroozi Catalog ​ 6
+                                                                          Update 7/1/2020
+      ●    Vroozi Catalog​: Gives access, creation and editing rights to ​Catalog
+           Management​ and C    ​ ontent Views​.
+      ● Company Users​: Where all ​User Management​ activities take place, like
+           user creation, activation, deactivation, and deletion.
+      ● Data Mapping​: This is a module that is used to configure the ​Data
+           Mapping​ for external ERP from C   ​ atalog ​. Only M
+                                                               ​ aster Administrators
+           have access to this area.
+      ● Suppliers​: Where all S    ​ upplier Management​ activities take place like
+           defining A​ ttributes​ and uploading suppliers.
+7. Homepage Cards/Announcements​: There are several types of ​Homepage
+   Cards​ available and must be created by the ​Master Administrator​. These
+   cards provide the user with insight into various sections of ​Marketplace
+8. Summary​: An overview of your company’s catalog, supplier, and user
+   statistics. (​Further reporting available through Vroozi Analytics)
+
+
+
+
+                                                                   Vroozi Catalog ​ 7
+                                                                         Update 7/1/2020
+M​Y​ A​CCOUNT​: A​CCOUNT​ P​REFERENCES
+The ​My Account​ area allows you to customize your profile information, update your
+password and amend your default settings all in one place.
+
+U​SER​ I​NFORMATION
+Before you get started using the system, it is recommended to set your information.
+Follow the steps below to personalize your account.
+ 1.   Hover ​over the area that has the A ​ ccount​ drop down menu and your name.
+      Select P​ references​ off the drop-down menu by clicking on it.
+ 2.   Fill out all the required information indicated by a red asterisk​*​. F
+                                                                            ​ ax​ is optional.
+ 3.   Save.
+
+
+
+P​ASSWORD​ C​HANGE
+You may update your password from the account ‘Preferences’ area. Follow the
+instructions below if you currently know your password or have a temporary
+password and would like to change it to a new one.
+  1.   Also, in ‘Preferences’, scroll​ down to the bottom of the page and expand the
+       Password Change​ section by clicking on the carrot.
+  2.   Input your O ​ ld Password​.
+  3.   Type in your ​New Password​, then confirm the same password. Your N       ​ ew
+       Password​ must be different from your O    ​ ld Password​ in order to be valid.
+  4.   Save.
+
+
+
+F​ORGOT​ P​ASSWORD​ (​FOR​ A​DMINISTRATORS​)
+If you are an ​Administrator​, but not the M
+                                           ​ aster Administrator​, you are able to take
+care of this internally by contacting your company’s ​Master Admin​ and asking them
+to reset your password for you.
+
+As a​ Master Administrator, Marketplace d ​ oes not allow you to reset your own
+password. Another M ​ aster Admin​ (on the same level) has to reset your password for
+you. See the ​Reset a User’s Password​ section for step by step instructions.
+
+If you are the only ​Master Admin​ for your organization, and you forgot your
+password, S ​ ubmit a Request​ on the ​Vroozi Zendesk​ website at
+
+
+
+                                                                          Vroozi Catalog ​ 8
+                                                                                Update 7/1/2020
+https://vroozi.zendesk.com​. There are instructions on how to do this in the ​Help
+section.
+
+D​EFAULT​ S​ETTINGS
+Before you get started using the system, it is recommended to enter your ​Default
+Settings​. Follow the steps below to update this section.
+ 1.   Near the top right of the screen, hover b ​ ack to ​Account​ ​and P
+                                                                        ​ references​ off
+      the drop-down menu by clicking on it.
+ 2.   Scroll down to and expand the D   ​ efault Settings​ section by clicking on the
+      carrot.
+ 3.   Fill out all of the default information to your specifications using the
+      drop-down menus. ​Note: The Records per Page area pertains to lists
+      displayed throughout the system like Users, Suppliers, etc.
+ 4.   Save. ​You will receive a success notification.
+
+
+
+M​Y​ A​CCOUNT​: M​ESSAGE​ C​ENTER
+Vroozi Catalog h
+               ​ as an internal messaging system for users to communicate with
+each other that can be accessed from the M​ y Account​ drop down menu.
+
+Accessing the Message Center
+The ​Vroozi Catalog Message Center​ provides users with the ability to communicate
+with other users of the application from their organization. It also serves as a central
+repository of all standard system-generated notifications, like catalog approval or
+publishing messages also received via email. This section shows how to view items in
+the ​Message Center​.
+  1.   Near the top right of the screen, hover over the area that has the ​Account
+       drop down menu and your name. Select M       ​ essages​ off the drop-down menu
+       by clicking on it.
+  2.   Select the ​Message​ option from the drop-down menu. You will be navigated
+       to the ​Message Center​.
+  3.   Click on the notifications email link in the ​From​ column to view the message
+       details. Just like email applications, the V
+                                                  ​ roozi Catalog Message​ Center​ has
+       Mark as Read​ and ​Delete​ functionalities.
+
+
+
+
+                                                                         Vroozi Catalog ​ 9
+                                                                               Update 7/1/2020
+C​OMPANY​ S​ETTINGS
+As the ​Master​ A
+                ​ dministrator​, you will configure your C
+                                                         ​ ompany Setting Defaults​. This
+section outlines how to view and manage this information.
+
+
+A​DD​ & D​ELETE​ I​MAGES​ (L​OGO​ U​PLOAD​ & R​EMOVAL​)
+Master Admins​ can upload company logos so that they are visible to the community
+of users. ​Near the top right of the screen, hover over the ​Settings​ area with a C
+                                                                                   ​ og
+Wheel​. Select ‘​ C
+                  ​ ompany Settings​’​ off the drop-down menu by clicking on it.
+
+ 1.    Navigate to the middle of the screen. There is an ​Images​ section displaying
+       three kinds of logos to upload i​n Vroozi Catalog​.
+
+
+
+
+Company Logo​: This is your company logo that is visible to users from the home
+screen. When users click on this, it will navigate them back to the landing page.
+No Image Logo​: ​ P​icture associated with a
+                                           ​ listed ​item w
+                                                          ​ hich is not available.
+
+
+
+
+                                                                       Vroozi Catalog ​ 10
+                                                                              Update 7/1/2020
+Find Vendor Logo​: When uploaded, this logo can be accessed from the ​Find a
+Vendor Supplier Card ​on the S ​ hopper User Interface (UI)​ landing page. When
+Shoppers can’t find what they need in internal catalogs, they can click on the ​Find
+Vendor Widget​ in the ​Homepage​ supplier area to create ​Free Text Requests​.
+  1. To add or update the logos, click the ​Add Image​ button.
+  2.  Click the B
+                ​ rowse​ button.
+  3.  Make the image selection from a file you have saved on your computer and
+      click O
+            ​ pen​. (not pictured)
+
+ 4.    Scroll down to the bottom of the screen.
+
+
+
+
+ 5.    To delete the ​No Image​ and ​Find Vendor Logos​, simply click the red ​X​.
+ 6.    Save.
+
+
+
+M​APPING​ C​ONFIGURATION
+
+Navigate to the Mapping section of the Company Settings area. You may click inside
+On or Off areas to make your selections. T​ urning these options On or Off, enables or
+disables the 4 functions (listed below) within Catalog . If this option is turned Off, the
+application will not execute when a Shopper checks out of their Shopping Cart to an
+external ERP system.
+
+
+
+
+Category Mapping​: Turning this option O   ​ n​ or ​Off​, enables or disables t​ he Category
+Mapping​ function within ​Catalog ​. If this option is turned O  ​ ff​, the application will not
+execute ​Category Mapping​ when a ​Shopper​ checks out of their S         ​ hopping Cart​ to an
+external ERP system.
+Unit of Measure​: Turning this option ​On​ or ​Off​, enables or disables the U   ​ nit of
+Measure Mapping (UoM)​ function in C    ​ atalog ​. If this option is turned O ​ ff​, the
+
+
+
+                                                                            Vroozi Catalog ​ 11
+                                                                                  Update 7/1/2020
+application will not execute the ​UoM Mapping​ when a ​Shopper​ checks out of their
+Shopping Cart​ to an external ERP system.
+Currency Mapping​: Turning this option O         ​ n​ or ​Off​, enables or disables the C
+                                                                                        ​ urrency
+Mapping f​ unction in C ​ atalog ​. If this option is turned ​Off​, the application will not
+execute the ​Currency Mapping​ when a ​Shopper​ checks out of their S             ​ hopping Cart
+to an external ERP system.
+Transfer Custom Field Description​: V       ​ roozi Catalog supports​ extending the catalog
+template with C ​ ustom Fields​. This ​Custom Field​ name and data can be transferred
+to the external ERP system when the S         ​ hopper​ checked out of the ​Shopping Cart​.
+Turning ​on​ the T​ ransfer Custom Field Description​ sends over the C         ​ ustom Field
+name and data.
+
+
+
+F​ORMS​ C​ONFIGURATION
+ 1.    Navigate to the ​Forms​ section of the C ​ ompany Settings​ area. You may click
+       inside O
+              ​ n​ or O
+                      ​ ff​ areas to make your selections. In order to send data from the
+       Not in Catalog​ form fields, you can map them to the NEW_ITEM-CUST_FIELD1
+       through 5.
+
+
+
+
+Not in Catalog​: Selecting O
+                           ​ n​ allows for end users to create F
+                                                               ​ ree Text Requests​,
+meaning that they may place requests outside of the uploaded catalog contents.
+Limit Request​: Selecting ​On​ allows for end users to use the N  ​ ot in Catalog ​form to
+create ​Limit Orders​. A L
+                         ​ imit Order​ is consisting of a requirement that will be
+delivered over a period of time.
+Free Text Identifier​: When a ​Shopper​ adds a request from the N​ ot in Catalog​ form
+to their cart, the data needs to be transferred from that order to the external ERP
+system upon checkout. There are certain fields that are part of a ​Free Text​ ​Request
+
+
+
+                                                                             Vroozi Catalog ​ 12
+                                                                                    Update 7/1/2020
+that are not included in the standard OCI schema of catalog fields that V        ​ roozi
+Catalog automatically​ recognizes. To work around this limitation, these fields are
+mapped from the ​Free Text Request t​ o OCI fields that are part of ​Vroozi​ standard
+catalog schema but are mostly unused. These fields are the NEW_ITEM-CUST_FIELD1
+to 5. This particular field is an identifier that can be utilized within the external ERP
+system to tell if the order is a F​ ree Text​ R
+                                              ​ equest​ or not. This field and the ​Limit Item
+Identifier ​are usually mapped to the same OCI field.
+Limit Item Identifier​: When a ​Shopper​ adds a request from the N   ​ ot in Catalog​ form
+to their cart, the data needs to be transferred from that order to the external ERP
+system upon checkout. This particular field is an identifier that can be utilized within
+the external ERP system to tell if the order is a ​Free Text​ ​Request​ or not. L
+                                                                                ​ imit Item
+and F​ ree Text Identifier f​ ields are usually mapped to the same OCI field. ​(see Free
+Text Identifier description above for more information)
+Required Date​: When creating a ​Free Text Request​ with the N      ​ ot in Catalog​ form,
+Shoppers​ must provide a date that they require the product or service to be
+delivered. This date is specified in the ​Date From​ field. This field’s data can be
+mapped into an OCI field and sent over to the external ERP system.
+Delivery Date From​: When creating a L     ​ imit Item​ request with the ​Not in Catalog
+form, ​Shoppers​ must provide a date that they require the product or service to be
+delivered. This date is specified in the ​Date From​ field. This field’s data can be
+mapped into an OCI field and sent over to the external ERP system.
+
+
+
+
+                                                                          Vroozi Catalog ​ 13
+                                                                                Update 7/1/2020
+S​YSTEM​ D​EFINITIONS
+This section allows the M
+                        ​ aster​ ​Administrator​ to configure the external ERP systems.
+The user will need to provide the external system’s name and communication
+method to be used—this is either OCI or cXML.
+
+Add A System
+ An organization can setup ​Vroozi Catalog to​ allow S      ​ hoppers​ to access the
+ marketplace from multiple ERP systems. This area allows ​Master Administrators​ to
+ configure these external ERP systems and their ​Unique Identifiers​, so that V      ​ roozi
+ Catalog can​ recognize what system the S        ​ hopper​ is using to login and access the
+ marketplace.
+ Vroozi Catalog can​ utilize this knowledge of the shopper’s originating ERP system
+ to execute custom data mapping that is different from the standard mapping (that
+ the ​Master Admin​ has previously set up), upon checkout.
+   1. Select​ ‘​ S
+                 ​ ettings​’​ > ‘​Company Settings​’
+   2. Scroll down to the ​System Definitions​ section of the C     ​ ompany Settings​ area.
+   3. Expand the S     ​ ystem Definitions​ area by clicking on the carrot.
+
+
+
+
+   4. Click the A
+                ​ dd​ button. (not pictured)
+   5. Type in the ​System Name​.
+   6. Select the ​Communication Method​ from the drop-down menu—either OCI or
+      cXML.
+   7. Save. ​Your new system will appear in the S
+                                                ​ ystem Definitions​ list.
+
+
+
+Remove a System
+This section outlines how to delete a system from ​Catalog ​. Removing a system will
+stop any transfer of data from ​Vroozi Catalog to​ that particular external ERP system
+for all users.
+
+
+
+
+   1. Check the box next to the S
+                                ​ ystem Name​ you would like to remove.
+
+
+
+                                                                       Vroozi Catalog ​ 14
+                                                                              Update 7/1/2020
+   2. Click the R
+                ​ emove​ button.
+   3. You will receive a ​Deletion Confirmation​ pop up. Click the ​Delete​ button.
+
+
+
+H​OMEPAGE​ C​ARDS
+The ​Homepage Cards​ area of the system allows ​Master Administrators​ to create
+welcome messages for their organization’s M
+                                          ​ arketplace Shoppers​, and to publish
+Announcements​.
+
+Add an Announcement
+This section outlines how to add an ​Announcement​ to the ​Homepage​. Unlike other
+Homepage Cards​, A  ​ nnouncements​ can be dismissed by clicking the X, and there
+can be more than one ​Announcement​ published at the same time.
+
+All A
+    ​ nnouncements​ are displayed for ​Administrators​; however, S
+                                                                 ​ hoppers​ only see
+Announcements​ that are assigned to their specific ​Content Group​.
+
+
+
+
+   1. Back in ‘Company Settings’, scroll down to the ‘​Homepage Cards​’​ section of
+      the C
+          ​ ompany Settings​ area.
+   2. Expand the H ​ omepage Cards​ area by clicking on the carrot. (not pictured)
+   3. Click the A
+                ​ dd Announcement​ button on the right side of the screen. You may
+      need to scroll down in order to see this.
+   4. Using the drop down, select the ​Content Group​ you would like to publish to.
+
+
+
+
+   5. Select the ​Category Color​ that the users see using the drop-down menu.
+   6. Type the ​Announcement​ in the text box. Custom font and hyperlinking are
+      available.
+
+
+
+
+                                                                      Vroozi Catalog ​ 15
+                                                                            Update 7/1/2020
+ Announcements​ will be displayed on the H​ omepage ​immediately. The user is able
+ to dismiss the A
+                ​ nnouncement​ after reading it.
+
+Add Information
+Information Cards c   ​ annot be dismissed by the user. Only one I​ nformation Card​ can
+be published at a time.
+    1. In ​Company Settings​ s​ ​croll down to the H
+                                                   ​ omepage Cards​ section of the
+       Company Settings​ area.
+    2. Expand the H  ​ omepage Cards​ area by clicking on the carrot. (not pictured)
+    3. Click the A​ dd Information​ button on the right side of the screen. You may
+       need to scroll down in order to see this.
+    4. Using the drop down, select the ​Content Group​ you would like to publish to.
+    5. Type the ​Information​ in the text box. Custom font and hyperlinking are
+       available.
+    6. The ​Information​ will be displayed for users like the last picture.
+
+
+
+
+Edit Welcome Message
+This section outlines how to edit the W
+                                      ​ elcome Message​ to the H  ​ omepage​. This
+image for the S ​ hopper User Interface (UI)​ should not exceed 505 pixels by 200 pixels
+(i.e. 505 x 200).
+   1. Scroll down to the ​Homepage Cards​ section of the ​Company Settings​ area.
+   2. Expand the H  ​ omepage Cards​ area by clicking on the carrot. (not pictured)
+   3. Scroll down to the ​Shopper Welcome​ area.
+   4. Select the ​Welcome Type​—either ​Text​ or I​ mage​. Only one type can be
+      displayed at a time.
+   5. Depending on your W     ​ elcome Type​ selection, click the E
+                                                                  ​ dit Welcome Message
+      button for T​ ext​, or upload a ​Welcome Image​ by clicking the ​Add​ button.
+
+
+
+
+                                                                      Vroozi Catalog ​ 16
+                                                                            Update 7/1/2020
+Edit a Homepage Card
+   1. Expand the H ​ omepage Cards​ area by clicking on the carrot.
+   2. Locate the existing I​ nformation o
+                                        ​ r​ Announcement​ that needs updating.
+   3. Click on the text of the H​ omepage Card​ you would like to edit—do not click
+      the X unless you want to delete the entire card. A pop-up window will appear.
+   4. Here, the assigned ​Content Group(s)​, the C​ ategory​ color, and the text can be
+      updated.
+   5. Your H​ omepage Card​ has been successfully updated and will immediately
+      take effect for user
+
+
+
+Delete a Homepage Card
+   1. Locate the existing I​ nformation o
+                                        ​ r​ Announcement​ that needs deleting.
+   2. Click the X on the right-hand side. Your ​Homepage Card​ will be deleted
+      immediately and taken out of your view and user view.
+
+
+
+
+Supplier Card Preferences (Icon Order)
+Suppliers can be sorted by ascending and descending alphabetical order or date of
+when the catalog was created. The picture below is an example of what the icons
+look like on the ​Shopper View​ landing page.
+
+
+
+
+   1. In ​Settings​ select ​Company Settings​ off the drop-down menu by clicking on it.
+   2. Scroll down to the ​Homepage Cards​ section of the ​Company Settings​ area.
+   3. Expand the H   ​ omepage Cards​ area by clicking on the carrot.
+   4. Scroll down to locate the ​Supplier Card​ area immediately above ​Help Content​.
+   5. Use the ​Order By​ drop down menu to make the selection of how the supplier
+      icons will be viewed. The changes will take effect immediately in the S
+                                                                            ​ hopper
+      View​.
+
+
+
+
+                                                                     Vroozi Catalog ​ 17
+                                                                           Update 7/1/2020
+H​ELP​ C​ONTENT
+The ​Help Content​ is accessible to ​Vroozi Catalog users​ by navigating into their
+Account​ area below their name. It contains F ​ AQ​, ​Policies​, and ​Contact information​.
+These areas can be managed and updated from the C         ​ ompany Settings​ area by the
+Master Administrator​.
+
+Manage FAQs
+Personalized company​ FAQs​ (​Frequently Asked Questions​) can be viewed by both
+Administrators​ and ​Shoppers​ in the H
+                                      ​ elp​ section under their A
+                                                                 ​ ccount​ drop down
+menu. This is not mandatory; however, the ​FAQ​ area will be blank for users if no
+information is entered. This section outlines how to enter and edit the ​FAQ
+information in the C
+                   ​ ompany Settings.
+
+
+
+
+   1. Scroll down to the ​Help Content​ section of the ​Company Settings​ area.
+   2. Expand the H   ​ elp Content​ area by clicking on the carrot.
+   3. Click the A ​ dd FAQ​ if the F
+                                   ​ AQ​ is blank. If there is an existing F
+                                                                           ​ AQ​, this button
+      will read E​ dit FAQ​ instead. The same pop up box will appear for both A        ​ dd​ and
+      Edit​ functions.
+   4. Input your organization’s F    ​ AQ​ information using the comprehensive​ Rich Text
+      Editor​ to customize content.
+   5. Save​.
+
+Manage Policies
+Personalized company​ Policies​ can be viewed by both ​Administrators​ and S    ​ hoppers
+in the H
+       ​ elp​ section under their A
+                                  ​ ccount​ drop down menu. This is not mandatory;
+however, the ​Policy​ area will be blank for users if no information is entered. This
+section outlines how to enter and edit the P  ​ olicy​ information in the ​Company
+Settings​.
+
+
+
+
+                                                                           Vroozi Catalog ​ 18
+                                                                                  Update 7/1/2020
+   1. Scroll down to the ​Help Content​ section of the ​Company Settings​ area.
+   2. Expand the H  ​ elp Content​ area by clicking on the carrot.
+   3. Click the A
+                ​ dd Policies​ button if the ​Policy s​ ection is currently blank. If there is
+      an existing P​ olicy​, this button will read E ​ dit Policy​ instead. The same pop up
+      box will appear for both A   ​ dd​ and ​Edit​ functions.
+
+
+
+
+   4. Input your organization’s P​ olicy​ information using the comprehensive​ Rich
+      Text Editor​ to customize content.
+   5. Click Save.​ To view your updated ​Help​ information, see V​ iewing Help Content
+      section for instructions.
+
+
+
+
+Manage Contact Information
+Personalized company​ Contact Information​ can be viewed by both A        ​ dministrators
+and S
+    ​ hoppers​ in the H
+                      ​ elp​ section under their A
+                                                 ​ ccount​ drop down menu. This is not
+mandatory, however the “​Contact Us​” area will be blank for users if no information is
+entered. This section outlines how to enter and edit the P  ​ olicy​ information in the
+Company Settings​.
+
+
+
+
+   1. Expand the H
+                 ​ elp Content​ area by clicking on the carrot.
+
+
+
+                                                                           Vroozi Catalog ​ 19
+                                                                                  Update 7/1/2020
+   2. Click the A​ dd Contact Info​ button if the ​Contact Us ​section is currently blank.
+      If there is existing C
+                           ​ ontact Info​, this button will read ​Edit Contact Info​ instead.
+      The same pop up box will appear for both ​Add​ and E      ​ dit​ functions.
+
+
+
+
+   3. Input your organization’s C​ ontact Information​ using the comprehensive​ Rich
+      Text Editor​ to customize content.
+
+
+
+View Help Content
+Where the ​Help Content​ is created and where it can be viewed is located in two
+areas of C
+         ​ atalog .​ This section describes how to view the H    ​ elp Content​ by starting
+from the A ​ dministrator Homepage​.
+   1. Click on the ​Help​ option on the drop-down menu. You will be navigated to the
+       Help Content​.
+   2. You are able to select F  ​ AQs​, P
+                                        ​ olicies​ and C
+                                                       ​ ontact Information​ by clicking on
+       the corresponding tab.
+
+
+
+
+A​PPROVAL​ W​ORKFLOW​ P​REFERENCES
+Configure when the system should generate email notifications for content
+Approvers​ to review and approve or reject catalog updates. These notifications are
+triggered when an existing catalog is edited or updated. ​Master Admins​ can use any
+combination of these settings.
+If none of these are checked (enabled) then the system will not generate these email
+notifications for content approvers to review changes.
+    1. Select C
+              ​ ompany Settings​ off the drop-down menu by clicking on it.
+   2. Scroll down to the ​Approval​ W
+                                    ​ orkflow​ of the ​Company Settings​ area.
+   3. Expand the A​ pproval​ ​Workflow​ area by clicking on the carrot.
+
+
+
+
+                                                                         Vroozi Catalog ​ 20
+                                                                                Update 7/1/2020
+   4. “For any change to required field in catalogs and/or quotes”​ If there is a
+      change to the mandatory fields of an item that already exists in the previous
+      version of the catalog, then an email notification will be sent to the assigned
+      Approver​ to approve or reject this type of change if this box is checked.
+   5. “For any new item added to catalog and/or quotes”​ If there is a new item
+      being added to the catalog or quote, then an email notification will be sent to
+      the assigned ​Approver​ to approve or reject if this box is checked.
+   6. “If price changes more than X percent in catalogs and/or quotes”​ M   ​ aster
+      Administrators​ can specify a percentage (%) value if the price of an existing
+      item changes by more than the specified percentage value. An email
+      notification will be sent to the assigned A
+                                                ​ pprover​ to approve or reject if this
+      box is checked.
+   7. If you check the last box, you may choose to update the percentage value.
+   8. Save.
+
+
+
+
+S​UPPLIERS
+There are multiple ways to add suppliers in s​ martOCI​—as a single supplier or as a
+Bulk Upload w
+            ​ ith a template.
+
+C​REATE​ A
+         ​ ​ S​UPPLIER
+Please see C
+           ​ reate a Supplier​ Grab & Go documentation for further details.
+
+
+
+S​UPPLIER​ B​ULK​ U​PLOAD
+Upload multiple suppliers at the same time into ​Vroozi Catalog using​ a template.
+Suppliers have to be uploaded or created before ​Supplier Data Mapping​ can occur.
+   1. If you don’t already have it, download the S
+                                                 ​ upplier Bulk Upload Template
+      from the ​Vroozi Catalog U​ pload File Templates​ section of the ​Vroozi Helpdesk
+      at h​ ttps://vroozi.zendesk.com​.
+
+
+
+
+                                                                     Vroozi Catalog ​ 21
+                                                                           Update 7/1/2020
+   2. Fill out the template with supplier information. For more ​details​ of how to
+      enter data correctly, click the I​ nstructions​ tab. From this tab you will be able to
+      see if s column is required (green) or optional (orange).
+
+
+
+
+   3. S​ave the completed supplier template file to your computer.
+   4. Log in to s​ martOCI​.
+   5. Click on the ​Suppliers​ tab.
+   6. In the S
+             ​ upplier Management​ area, Click the ​Browse​ button and follow the
+      prompts to select and open a file on your computer.
+
+
+
+
+   7. If there is anything that is wrong with the template data, you will receive an
+      error notification describing what needs to be fixed.
+
+S​UPPLIER​ C​OMPANY​ L​IST
+Where ​Master​ A
+               ​ dministrators​ can search and manage suppliers in ​Catalog ​.
+
+Search
+   1. Click on the ​Suppliers​ tab​ and n​avigate to the S
+                                                         ​ upplier Company List​ area.
+   2. Type in the name or partial name of the supplier, or the U   ​ nique Supplier ID​,
+      then click the S ​ earch​ magnifying glass icon.
+   3. You may filter by using the ​Type​ drop down menu. ​Type​ filter options include
+      All​, ​Catalog Suppliers​, and N
+                                     ​ on-Catalog Suppliers.
+   4. To see the supplier details, click on the linked ​Company Name​.
+   5. The search area can be cleared by clicking on the Reset button.
+
+
+
+
+                                                                       Vroozi Catalog ​ 22
+                                                                               Update 7/1/2020
+Edit an Existing Supplier
+  1. Navigate to the ​Supplier Company List​ area.
+  2. Search for the supplier you would like to edit.
+  3. Click on the linked C
+                         ​ ompany Name​ that you would like to edit.
+  4. Make any necessary changes to the supplier details. The image below has
+     been condensed to only show the header level of each editable category.
+  5. Save.
+
+
+
+
+Activate, Deactivate or Delete a Supplier
+  1. Navigate to the ​Supplier Company List​ area.
+  2. Search for the supplier you would like to ​Activate​, D     ​ eactivate ​or​ ​ Delete​.
+  3. Check the box next to the C      ​ ompany Name(s)​. More than one supplier can be
+     Activate​, ​Deactivate o  ​ r​ Delete​.​at the same time.
+  4. Click the A​ ctivate​, D
+                            ​ eactivate ​or​ Delete​.​ b
+                                                       ​ utton. Your changes will be saved.
+
+
+
+
+                                                                        Vroozi Catalog ​ 23
+                                                                                Update 7/1/2020
+A pop up will appear with a ​Deletion Confirmation​. Click the D
+                                                               ​ elete​ button. The
+supplier will be deleted from the ​Supplier Company List​ and for all users.
+
+
+
+Create a Custom Attribute
+Items with certain ​Company Attributes​, like a “​Green​” or “​Minority Owned​” can be
+ranked higher or lower in the search results for S  ​ hoppers​ and can be demarcated by
+different attribute icons. This section shows how to create a ​Custom Company
+Attribute​. There is a set of default ​Company Attributes​, but A  ​ dministrators​ are able
+to make up their own C   ​ ustom Attributes​ in addition to the default list.
+    1. From the S  ​ upplier Attributes Management​ page, click ‘​ ​Add Attribute​’.
+    2. Enter an A​ ttribute Name​ into the text box. This field is required.
+    3. Type in an ​Attribute Description​. This is optional.
+    4. Click the A​ dd​ button to upload a L​ ogo File​. ​Vroozi Catalog will​ automatically
+       resize the ​Logo File​. Follow the prompts to browse for a file and open it. This is
+       optional but recommended.
+    5. Click Save.​ The newly created ​Attribute​ will be available to be checked and
+       weighted for all ​Company Suppliers​.
+
+
+
+
+                                                                        Vroozi Catalog ​ 24
+                                                                               Update 7/1/2020
+Activate or Deactivate a Custom Attribute
+   1. From the S ​ upplier Attributes a ​ rea, use the check ​boxes​ to select the A
+                                                                                   ​ ttribute
+      Name(s)​. More than one A   ​ ttribute​ can be selected at a time.
+   2. Click the A
+                ​ ctivate​ or D
+                              ​ eactivate​ button.
+   3. A yellow notification will flash across the top as a reminder to republish the
+      associated catalogs for the changes to take effect. (not pictured)
+
+Delete a Custom Attribute
+This section shows how to delete an existing ​Custom Company Attribute​. Default
+Attributes​ that are already available in ​Vroozi Catalog cannot​ be deleted, only
+Custom Attributes​ that a ​Master​ ​Administrator​ creates can be deleted.
+
+An alternative to deleting, is to D ​ eactivate​ the ​Custom Attribute​. Deactivating also
+hides the ​Attribute​ from the S ​ hopper​, but unlike deleting, the deactivated ​Attribute
+can be made A  ​ ctive​ again. See the ​Activate or Deactivate a Custom Attribute
+section for more information.
+   1. From the S   ​ upplier Attributes a ​ rea, use the check box to select the ​Custom
+       Company​ A    ​ ttribute Name(s) t​ o be deleted. More than one ​Attribute​ can be
+       selected at a time.
+   2. Click the D ​ elete​ button.
+   3. A ​Deletion Confirmation​ will appear. Click the ​Delete​ button to continue.
+
+
+
+
+                                                                         Vroozi Catalog ​ 25
+                                                                                Update 7/1/2020
+C​ONTENT​ V​IEWS​ & G​ROUPS
+C​ONTENT​ V​IEWS
+Grouping of suppliers and supplier catalogs into logical sets. All types of supplier
+catalogs can be included.
+          ● Region                                        ● Division
+          ● Commodity                                     ● Groups of users
+
+A single Content View can belong to multiple Content Groups.
+
+C​ONTENT​ G​ROUPS
+Used to determine which Content Views and catalogs a Shopper will have access to
+when logging in.
+    ●   Users are assigned to Content Groups in the Vroozi Purchase module in
+        Master Data > Users​.
+The diagram below shows an example of how ​Shoppers​ are associated with
+different C
+          ​ ontent Views​ and G
+                              ​ roups​.
+
+
+
+
+                                                                     Vroozi Catalog ​ 26
+                                                                            Update 7/1/2020
+C​ONFIGURATION
+See t​ raining materials​ on Content Group & View management for details on how to
+add, delete or edit Views/Groups.
+
+
+
+
+C​ATALOG​ M​ANAGEMENT
+The ​Vroozi Catalog Manager​ provides an interface with a three-column layout that
+Administrators​ can search and filter catalogs of all statuses.
+
+
+
+
+C​ATALOG​ M​ANAGER​ A​NATOMY
+   1. Content Manager Tab​: How to navigate to the ​Catalog
+   2. Create​: This button is located both at the top and bottom of the screen. Click
+      on it and a window appears with a C     ​ atalog Creation​ page.
+   3. Custom Fields​: This button is located both at the top and bottom of the
+      screen. Clicking on it navigates the user to the ​Custom Field​s M   ​ anagement
+      page.
+   4. Refresh​: The R​ efresh​ button refreshes the screen and reflects any new
+      changes by​ t​ he user.
+   5. Search Within​: This S ​ earch​ bar allows searching across ​Working​, ​Approved​,
+      and ​Live​ catalogs. Use it in combination with the F ​ ilter Options​ for a more
+      specific search.
+   6. Filter Options​: Users are able to filter company catalogs by S   ​ upplier Name
+      and ​Catalog Type​. C​ atalog Types​ include ​Internal​ and ​External Catalogs a ​ nd
+      Quotes​.
+
+
+
+                                                                       Vroozi Catalog ​ 27
+                                                                              Update 7/1/2020
+   7. Working Column​: These are catalogs that have been uploaded or updated.
+      The ​Working Column​, unlike the A ​ pproved​ or L
+                                                       ​ ive Columns​, allows
+      Administrators​ to edit catalog content. They will not be visible to V​ roozi
+      Catalog S​ hoppers​ until they are approved, then published to the ​Live
+      Column​.
+   8. Approved Column​: These are catalogs that have already been approved by
+      the designated approvers for that catalog. However, they will still not be
+      available to M
+                   ​ arketplace ​Shoppers​ until they are published to the L  ​ ive
+      Column​.
+   9. Live Column​: These are catalogs that have both approved and published.
+      They are available to use and view by ​Marketplace Shoppers​.
+
+
+
+ Catalog Search & Filter
+   1. Click the carrot next to the filter selection to expand either the S  ​ upplier
+      Name​ or ​Catalog Type​ area. Only one of these areas can be expanded at the
+      same time but are able to filter results simultaneously if selections are made
+      in both.
+   2. Use the check boxes to make the filter selections.
+   3. To clear all F
+                   ​ ilter Options​ and search terms, click the R
+                                                                ​ eset​ button. This will
+      repopulate all catalogs that were previously excluded from view.
+
+
+
+
+  TIP!​ ​When navigating away from the Catalog Management page, the search
+  and filter functions will automatically reset, and the view of all catalogs will be
+  restored.
+
+
+
+
+Export Catalog Content
+At any time, uploaded catalog items can be exported from the C ​ atalog
+Management​ screen into a CSV file.
+   1. Within the C​ o​ntent Manager​ tab and select C
+                                                    ​ atalog Management​.
+
+
+
+                                                                      Vroozi Catalog ​ 28
+                                                                             Update 7/1/2020
+2. F​ind the catalog you would like to export. (​Working, Approved or Live)
+3. Hover over the catalog. Then, click the ​Cog Wheel​ icon and select the E
+                                                                           ​ xport
+   option.
+
+
+
+
+4. A notification will flash at the top of the screen to let you know ​the e
+                                                                           ​ xport is
+   in progress
+5. An email will be sent to from ​notifications@vroozi.com​. Open the email and
+   click the ​Download File​ link. Alternatively, you can copy and paste the URL
+   into your browser to begin the download.
+6. Open the downloaded file to view and save it.
+
+
+
+
+                                                                   Vroozi Catalog ​ 29
+                                                                          Update 7/1/2020
+C​REATE​ A
+         ​ N​ I​NTERNAL​ C​ATALOG
+Administrators a   ​ re able to create​ ​different types of catalogs with V
+                                                                          ​ roozi Catalog​,
+including ​Internal Catalogs​, E  ​ xternal Catalogs​, and ​Level 2 Punchout Catalogs​.
+Specific configurations may be used for ​Internal Catalogs​, like ​Tiered Pricing​ and
+Policy Items​ (​ Find a Vendor)​ functionality.
+
+I​NTERNAL​ C​ATALOG​ D​EFINITION
+Where ​Shoppers​ can search across a pre-loaded, pre-approved list of items within
+the ​Marketplace ​application.
+
+C​ATALOG​ C​REATION
+Catalogs can be assigned to the C
+                                ​ ontent View​ at the time of creation. ​Vroozi
+Catalog Manager​ supports catalogs formatted with .XLSX (Excel) and .CSV files.
+The Vroozi provided Internal Catalog template can be accessed ​here​.
+
+Required Internal Catalog Fields​: When uploading an I​ nternal Catalog​ file, certain
+fields are mandatory. These ​Required Fields​ are:
+    1. #Item Number
+    2. NEW_ITEM-DESCRIPTION o    ​ r​ NEW_ITEM-MATNR
+    3. NEW_ITEM-VENDORMATE
+    4. NEW_ITEM-PRICE
+    5. NEW_ITEM-CURRENCY
+    6. NEW_ITEM-UOM
+    7. NEW_ITEM-MATGROUP
+
+
+See Internal Catalog training materials for further details on I​ nternal Catalog
+creation.
+
+
+
+I​NTERNAL​ C​ATALOG​ I​MAGES
+There are two ways to attach images.
+
+By entering urls in the image column of the Internal Catalog Template.
+
+
+
+
+                                                                         Vroozi Catalog ​ 30
+                                                                                 Update 7/1/2020
+By entering the name of the image in the image column and uploading a .zip folder
+of images along with the sheet. The image names must match the names listed in
+the Image Column. The system then automatically picks the image from the zipped
+folder which is mapped against the item. Please see the screenshots below for
+better understanding.
+
+ 1.      To upload a .ZIP (zipped) ​Image File​, click the B
+                                                           ​ rowse​ button and follow the
+         prompts to select and open an image to associate with the new catalog.
+ 2.      Type in the ​Supplier Company​ (vendor) name in the text field.
+ 3.      Do not check the E ​ xternal Catalog ​(Punchout Catalog)​ check box. See the
+         Create a Punchout Catalog ​section if you are creating a P   ​ unchout Catalog​.
+
+
+
+
+Use Tiered Pricing
+Tiered Pricing ​is a way to encourage ​Shoppers​ to buy larger quantities of a product
+by applying discounts based on the quantity ordered. These discounts may be
+“tiered” so that they increase as the order amount is raised.
+Administrators​ are able to define different tiers of price against each item in order
+to give discounts on high volume purchases within ​Internal Catalogs​. T     ​ iered Pricing
+can either be defined through an Excel spreadsheet or through the D      ​ irect Item
+Update​ function within an individual line item. For more information, see the ​Edit a
+Catalog Item​ section.
+When entering information into the S   ​ upplier Catalog​ template, there is a column
+called ITEM-TIERED_PRICING. Fill in the data for T  ​ iered Pricing​ items. For items that
+do not have ​Tiered Pricing​, the NEW_ITEM-PRICE column must be filled out
+instead—one or the other needs to be populated with data, but not both. ​Tiered
+Pricing​ also cannot be applied on B​ undle​ and Q​ uote​, meaning that the ​Tiered
+Pricing​ discount cannot be used in combination with a “bundle” discount.
+The ITEM-TIERED_PRICING field must be filled out in a specific way. Use the tips and
+example below to enter the data correctly.
+
+
+
+
+ In this example, the first 50 of the items purchased are $49.99, and 51 or more of
+ the items will cost $45.99.
+
+      1. Brackets​: Values entered in the square brackets [] indicate the quantity,
+         whereas the values entered before the brackets indicate the price of the
+
+
+
+
+                                                                        Vroozi Catalog ​ 31
+                                                                              Update 7/1/2020
+       quantity. Depending on the quantity entered by the ​Shopper​, the respective
+       price will be reflected in the S
+                                      ​ hopping Cart​.
+   2. Semicolons​ (;)​: A closing ​semicolon​; is required after each closed bracket
+      containing the quantity.
+   3. Plus, Sign (+)​: The plus sign + after the largest listed quantity indicates that
+      this is the lowest tiered price and any additional volume will not result in a
+      lower price.
+
+
+Policy Items (Find a Vendor)
+By marking the P​ olicy Item​ field in the catalog template, S
+                                                             ​ hoppers​ are able to
+quickly look up the A​ pproved Vendor Item List​ on the ​Homepage​ using the F    ​ ind a
+Vendor​ widget.
+
+
+
+
+ When uploading the catalog template, make sure to populate the following fields
+ to utilize the ​Policy Item​ A
+                              ​ pproved Vendor List. T
+                                                     ​ hese columns, although they are
+ associated, may not be next to each other on the template.
+
+
+
+
+   1. NEW_ITEM-DESCRIPTION: ​A short description of the item requested.
+   2. NEW_ITEM-LONGTEXT: A
+                         ​ long, detailed description of the item requested.
+   3. NEW_ITEM-MATGROUP: T     ​ o ensure proper categorization of the ​Policy Item​,
+      you must input your desired ​Product Category​ code in the
+      NEW_ITEM-MATGROUP field. This will allow Shoppers to also browse this
+
+
+
+
+                                                                      Vroozi Catalog ​ 32
+                                                                             Update 7/1/2020
+   Policy Item​ from the ​Category Tree​ represented on the left side of the
+   Shopper Homepage​.
+4. NEW_ITEM-VENDOR: ​This field must contain the V     ​ roozi Unique Supplier ID
+   that is associated to the supplier records in your account to ensure the items
+   are properly associated with the desired vendor
+5. ITEM-POLICY: ​When filling out the catalog template, put an “X” in the P     ​ olicy
+   Item​ column if you would like the ​Shoppers​ to browse this vendor using the
+   Approved Vendor List​ widget. If there is a blank lift in the P
+                                                                 ​ olicy Item​ column,
+   the item will not be considered a ​Policy Item​ and won’t be visible when the
+   Shopper​ clicks on the ​Vendor List​.
+
+
+
+
+                                                                   Vroozi Catalog ​ 33
+                                                                          Update 7/1/2020
+C​REATE​ A
+         ​ ​ P​UNCHOUT​ C​ATALOG
+To use ​Punchouts​, S
+                    ​ hoppers​ click on the supplier card and are redirected to the
+vendor website. Once items are placed into the cart, S  ​ hoppers​ check out of the
+vendor website and the items are transferred into the M   ​ arketplace c
+                                                                       ​ art.
+
+All content and pricing is hosted and therefore managed by the supplier.
+
+
+
+C​ATALOG​ C​REATION
+   1. S​elect C
+              ​ atalog Management​.
+   2. Click the C​ reate​ button near the top right of the C        ​ atalog Management
+      screen.
+   3. Select the ​Catalog​ option from the drop down. A C             ​ reate Catalog​ window will
+      appear.
+   4. Enter the ​Catalog Name​. This is a required field.
+   5. Because this is a P ​ unchout Catalog​, there is no need to add a C          ​ atalog File​ or
+      Image File​.
+   6. Type in the ​Supplier Company​ (vendor) name in the text field.
+   7. When creating a P    ​ unchout Catalog​, it is mandatory to check the ​External
+      Catalog b ​ ox.
+   8. After checking the ​External Catalog​ box, an option appears to allow a search.
+      (not pictured) Selecting S     ​ earch Allowed
+   ● Search Allowed: A      ​ llows S ​ hoppers​ t​ o​ search for P
+                                                                  ​ unchout​ items using the
+      Marketplace s​ earch bar and the results will be pulled in from the vendor’s
+      website. This functionality depends on whether the vendor supports ​OCI
+      Background Search​.
+   9. Do not check the D     ​ irect Item Update​ box,​ as it only applies to creating
+      Internal Catalogs​.
+
+
+
+
+                                                                             Vroozi Catalog ​ 34
+                                                                                      Update 7/1/2020
+10. Click the carrot to expand the areas you would like to update for the catalog
+    being created. All of the fields in these areas are not considered mandatory
+    for catalog creation and can be updated at a later time. See the E       ​ dit a
+    Catalog​ section for more information.
+11. Skip the A ​ dditional Fields​ area, as this is only relevant to ​Internal Catalogs​.
+12. Expand the E     ​ xternal Catalog Definitions​ area.
+13. Select the ​Standard Communication Method ​using the drop-down menu.
+    This is either OCI or CXML.
+14. Select the HTTP request ​Method​ for a request-response. The options are P        ​ ost
+    and ​Get​.
+15. Look for Images in: ​Use the drop-down menu to indicate where to Item
+    images are not part of the standard OCI. Make this selection if the vendor
+    may send over images have been uploaded.
+16. Click the A ​ dd​ button to specify at least one ​Punchout​ parameter (i.e. a URL).
+    Vroozi Catalog ​uses these parameters to construct the P       ​ unchout​ web service
+    request. The number of parameters needed depends on the vendor
+    authentication requirements for ​Shoppers​ to use their website.
+17. Click the V  ​ alidate​ ​Punchout​ button to validate the parameters entered. This
+    verifies the P  ​ unchout​ is working correctly. If the parameters are incorrect,
+    there will be a standard error message from the vendor’s website. (not
+    pictured/variable)
+
+
+
+
+18. After expanding the C   ​ ontent Views​ area, select all the relevant C ​ ontent Views
+    to be associated with this catalog by checking the box next to the ​Name​.
+19. After expanding the A    ​ pprovers​ area, select the people that have approval
+    rights for this catalog before it can be published L   ​ ive​ to S
+                                                                     ​ hoppers​. Only one of
+    the selected A  ​ pprovers​ needs to ​Approve ​the catalog before it can be moved
+    to the ​Live​ column by an ​Administrator.
+20. Click the C ​ reate​ button at the very bottom right of the page to create the
+    new catalog in the system. No changes will be saved until the ​Create​ button
+    is clicked.
+
+
+
+
+                                                                       Vroozi Catalog ​ 35
+                                                                              Update 7/1/2020
+C​REATE​ A
+         ​ ​ L​EVEL​ II P​UNCHOUT
+L​EVEL​ II C​ATALOG​ D​EFINITION
+A ​Level II Punchout​ has both an uploaded ​Internal Catalog​ for the vendor within
+the application, a
+                 ​ nd​ an external P
+                                   ​ unchout Catalog​. S
+                                                       ​ hoppers​ given access to this
+type of catalog will be able to use both methods of shopping in tandem to find
+items for the vendor.
+
+C​ATALOG​ C​REATION
+   1. Create a Catalog
+   2. Enter the ​Catalog Name​. This is a required field.
+   3. Click the B​ rowse​ button next to C ​ atalog File​ area and follow the prompts to
+      select and open the saved catalog template. See the T       ​ IPS!​ below for fields
+      relevant to L ​ evel II Punchouts​. For additional details about where to find and
+      fill out the catalog template, see the C  ​ reate an Internal Catalog​ section.
+
+
+     TIP!​ There is a Configurable Item Flag column in the catalog template
+     (ITEM-CONFIG). When marking this field with an X, an Order from Supplier
+     button will be visible for Shoppers instead of the typical Add to Cart button.
+     What the Order from Supplier button does is punches the Shopper out to the
+     Vendor’s website to see the most up to date pricing information for that
+     particular item. An example of when this is useful is when the item price
+     changes often and a static price uploaded in the catalog wouldn’t be
+     accurate.
+
+
+
+     TIP!​ A
+           ​ ny mandatory Custom Fields listed in the template that have to do
+     with Configurable items, like size or color selections, will result in having a
+     Configurable Item button available to Shoppers. This button allows the
+     Shopper to make choices before adding the item into the cart. This is
+     different from the Configurable Item Flag mentioned above, even though
+     both include the term “configurable,” different columns are used.
+
+
+
+
+                                                                      Vroozi Catalog ​ 36
+                                                                              Update 7/1/2020
+4. To upload .ZIP (zipped) ​Image File​, click the B      ​ rowse​ button and follow the
+    prompts to select and open an image to associate with the new catalog.
+5. Type in the ​Supplier Company​ (vendor) name in the text field.
+6. When creating a P        ​ unchout Catalog​, it is mandatory to check the ​External
+    Catalog b  ​ ox.
+7. Expand the E       ​ xternal Catalog Definitions​ area.
+8. Select the ​Standard Communication Method ​using the drop-down menu.
+    This is either OCI or CXML.
+9. Select the HTTP request ​Method​ for a request-response. The options are P              ​ ost
+    and ​Get​.
+10. Use the drop-down menu to indicate where to ​Look for Images​. Item images
+    are not part of the standard OCI. Make this selection if the vendor may send
+    over images have been uploaded.
+11. Click the A ​ dd​ button to specify at least one ​Punchout​ parameter (i.e. a URL).
+    Vroozi Catalog uses​ these parameters to construct the P            ​ unchout​ web service
+    request. The number of parameters needed depends on the vendor
+    authentication requirements for ​Shoppers​ to use their website.
+12. Click the V  ​ alidate​ ​Punchout​ button to validate the parameters entered. This
+    verifies the P   ​ unchout​ is working correctly. If the parameters are incorrect,
+    there will be a standard error message from the vendor’s website. (not
+    pictured/variable)
+13. After expanding the C      ​ ontent Views​ area, select all the relevant C  ​ ontent Views
+    to be associated with this catalog by checking the box next to the ​Name​.
+14. After expanding the A       ​ pprovers​ area, select the people that have approval
+    rights for this catalog before it can be published L       ​ ive​ to S
+                                                                         ​ hoppers​. Only one of
+    the selected A      ​ pprovers​ needs to ​Approve ​the catalog before it can be moved
+    to the ​Live​ column by an ​Administrator​.
+15. Click the C   ​ reate​ button at the very bottom right of the page to create the
+    new catalog in the system. No changes will be saved until the ​Create​ button
+    is clicked.
+
+
+
+
+                                                                         Vroozi Catalog ​ 37
+                                                                                 Update 7/1/2020
+E​DIT​ ​A​ C​ATALOG
+Existing catalogs and items can be edited in ​Vroozi Catalog ​while listed in the
+Working c ​ olumn. When catalog changes are made, there is also a catalog version
+functionality to keep track of the updates.
+
+E​DIT​ ​A​ C​ATALOG​ (D​IRECT​ I​TEM​ U​PDATE​)
+Catalogs can be edited in two ways in ​Vroozi Catalog. B   ​ y selecting D
+                                                                         ​ irect Item
+Update​, ​Admins​ are able to edit the catalog items directly from the U   ​ ser Interface
+by duplicating an already ​Approved​ or L​ ive​ catalog into the W​ orking​ column to
+make amendments. Alternatively, catalogs can be edited by uploading an Excel file.
+See the ​Edit a Catalog (File Upload)​ section for instructions.
+
+See D
+    ​ irect Item Update​ materials for further details.
+
+E​DIT​ ​A​ C​ATALOG​ (F​ILE​ U​PLOAD​)
+Uploading the catalog template is the only way to add n
+                                                      ​ ew​ items to an existing
+catalog.
+
+See F
+    ​ ile Upload​ materials for further details.
+
+
+
+C​ATALOG​ V​ERSION​ M​ANAGEMENT
+Vroozi Catalog a  ​ utomatically stores new catalog version information. Any catalogs
+that are in the ​Approved​ or L
+                              ​ ive​ columns are locked in read-only mode. A new
+version of the catalog is created whenever the ​Administrator​ edits the catalog
+details (i.e. item price).
+Unlike editing catalog details, changing the catalog header level information does
+not create a new version of the catalog. Below is a list of what is considered header
+data that doesn’t create a new catalog version:
+
+   ●   Catalog Name
+   ●   Catalog ID
+   ●   Start Date
+   ●   End Date
+   ●   External Catalog Definition
+
+
+
+
+                                                                      Vroozi Catalog ​ 38
+                                                                             Update 7/1/2020
+New catalog versions when ​Approved​ or P
+                                        ​ ublished​ as ​Live​, replace the original
+catalog. There can only be one new version of an existing catalog in the system at
+any given time.
+
+   1. S​elect C
+              ​ atalog Management​.
+   2. If needed, use the S
+                         ​ earch Within​ and/or ​Filter​ functions to find the desired
+      catalog(s).
+   3. Click on the carrot(s) next to the catalog name to reveal the summary
+      information.
+   4. You will be able to view the ​Version Number​ in addition to other creation
+      data.
+
+
+A​PPROVE​, R​EJECT​ & P​UBLISH​ C​ATALOGS
+A​PPROVE​ ​A​ C​ATALOG
+Vroozi Catalog h ​ as “drag and drop” functionality for designated users to approve
+catalogs. This section shows how to approve a newly edited or uploaded catalog.
+Administrators a  ​ nd​ Approvers​ of a catalog will be notified via email when there is a
+pending catalog awaiting approval. After approval, a notification is sent out to
+Administrators​ and the other ​Approvers​ assigned to that particular catalog. Only
+one ​Approver​ needs to approve in order for the catalog to have an ​Approved​ status.
+   1. S​elect C
+              ​ atalog Management​.
+   2. Find the catalog in the ​Working​ column you would like to ​Approve​. You may
+       choose to use the S  ​ earch Within​ or F
+                                               ​ ilter​ functions to find it.
+   3. If needed, review the catalog details. (not pictured)
+   4. Drag and drop the catalog from the W       ​ orking​ column to the A    ​ pproved
+       column.
+   5. An A​ pprove Confirmation​ message will appear. Click the ​Approve​ button. The
+       catalog will now appear in the ​Approved​ column.
+
+
+
+R​EJECT​ ​A​ C​ATALOG
+Administrators a ​ nd​ Approvers​ of a catalog will be notified via email when there is a
+pending catalog awaiting their approval. If rejected, the catalog will be listed in the
+Working​ column with a ​Rejected​ status. This section outlines how to reject a
+catalog that is pending approval in the ​Working​ column.
+Approvers​ and ​Administrators​ are also able to reject catalogs that are in the
+Approved​ column by dragging and dropping them back into the ​Working​ column.
+
+
+
+                                                                      Vroozi Catalog ​ 39
+                                                                             Update 7/1/2020
+   1. S​elect C
+              ​ atalog Management​.
+   2. Find the catalog in the ​Working​ column. You may choose to use the ​Search
+      Within​ or F​ ilter​ functions to find it.
+   3. If needed, review the catalog details. (not pictured)
+   4. Hover over the catalog to reveal the C     ​ og Wheel​. Then, click the ​Reject​ option
+      from the drop-down menu.
+
+
+
+
+   5. A ​Reject Confirmation​ message will appear. Click the ​Reject​ button.
+
+
+
+P​UBLISH​ ​A​ C​ATALOG
+Approvers a​ nd​ Administrators​ will be notified via email when a catalog is A  ​ pproved
+and is waiting to be published.
+   1. S​elect C
+              ​ atalog Management​.
+   2. Find the catalog in the ​Approved​ or column. You may choose to use the
+       Search Within​ or ​Filter​ functions to find it.
+   3. Drag and drop the catalog from the A      ​ pproved​ column to the ​Live​ column.
+   4. A ​Publish Confirmation​ message will appear. Click the ​Publish​ button. The
+       catalog will now appear in the ​Live​ column. An email will be sent notifying
+       Approvers​ and ​Administrators​ that the catalog has been published.
+
+
+ TIP!​ ​If the same catalog has been published previously, the newly published
+ version will replace the old version in the Live column.
+
+
+
+D​EACTIVATE​ ​A​ C​ATALOG
+   1. Find the catalog you would like to D
+                                         ​ eactivate​ in the L ​ ive​ column. You may
+      choose to use the S
+                        ​ earch Within​ or F
+                                           ​ ilter​ functions to find it.
+
+
+
+
+                                                                        Vroozi Catalog ​ 40
+                                                                                Update 7/1/2020
+   2. Hover over the catalog and click on the C
+                                              ​ og Wheel.​ Then, select the
+      Deactivate​ option from the drop-down menu.
+
+
+
+
+   3. A ​Deactivate Confirmation​ will appear. Click the D
+                                                         ​ eactivate​ button.
+   4. The catalog will remain in the L
+                                     ​ ive​ column, now with an O​ ffline​ (deactivated)
+      status.
+
+A​CTIVATE​ A
+           ​ ​ C​ATALOG
+   1. Find the catalog you would like to A​ ctivate​.
+                       ● Deactivated catalogs will have an O       ​ ffline​ status. You may
+              choose to use the S
+                                ​ earch Within​ or F​ ilter​ functions to find it.
+   2. Hover over the catalog and click on the C  ​ og Wheel.​ Then, select the A     ​ ctivate
+      option from the drop-down menu.
+   3. A​n A
+          ​ ctivate Confirmation​ will appear. Click the A ​ ctivate​ button. The catalog
+      will be activated and remain in the ​Live​ column.
+
+
+D​ELETE​ ​A​ C​ATALOG
+An alternative to deleting, is to D
+                                  ​ eactivate​ the catalog. Deactivating also hides the
+catalog from the ​Shopper’s v ​ iew, but unlike deleting, an ​Inactive​ supplier can be
+made ​Active​ again. See the ​Deactivate a Catalog​ section for more information.
+
+   1. Find the catalog you would like to D      ​ elete​. You may choose to use the ​Search
+      Within​ or F
+                 ​ ilter​ functions to find it.
+   2. Click on the ​Cog Wheel.​ Then, select the D     ​ elete​ option from the drop-down
+      menu. (​ shown above)
+   3. A ​Deletion Confirmation​ will appear. Click the ​Delete​ button. The catalog will
+      be removed.
+
+A​PPROVE​ ​A​ C​ATALOG​ I​TEM
+
+
+
+
+                                                                          Vroozi Catalog ​ 41
+                                                                                 Update 7/1/2020
+Administrators a ​ nd​ Approvers​ of a catalog will be notified via email when there are
+pending catalog items awaiting approval. This section describes how to approve
+items within a catalog.
+   1. In the W
+             ​ orking​ column, click on the C   ​ atalog​ N​ ame​ link of the catalog with
+      items you would like to approve. You may need to use the S          ​ earch Within
+      and/or F​ ilter​ functions to find the catalog.
+   2. You will be navigated to the C    ​ atalog Item ​screen with a list of catalog items.
+   3. Updated items will have a ​Pending Approval Status​.
+   4. If needed, click on the item D   ​ escription​ link to see the ​Item Details​ screen.
+      (not pictured)
+   5. Select the items to approve by using the c       ​ heckbox​ in grey next to the
+      Description​.
+   6. Click the A ​ pprove​ button. The items will be approved.
+
+
+
+
+R​EJECT​ ​A​ C​ATALOG​ I​TEM
+Approvers​ and ​Administrators​ will be notified via email when there are pending
+catalog items awaiting their approval.
+   1. In the W
+             ​ orking​ column, click on the C   ​ atalog​ N
+                                                          ​ ame​ link of the catalog with
+      items you would like to approve or reject. You may need to use the S         ​ earch
+      Within​ and/or F​ ilter​ functions to find the catalog.
+   2. You will be navigated to the C   ​ atalog Item ​screen with a list of catalog items.
+   3. Updated items will have a ​Pending Approval Status​.
+   4. If needed, click on the item D  ​ escription​ link to see the ​Item Details​ screen.
+      (not pictured)
+   5. Select the items to reject by using the ​checkbox​ in grey next to the
+      Description​.
+   6. Click the R
+                ​ eject​ button. The items will be rejected, and the catalog will
+      remain in the W​ orking​ column with a ​Partially Rejected​ or Pa​rtially Approved
+      status.
+
+
+
+
+                                                                       Vroozi Catalog ​ 42
+                                                                               Update 7/1/2020
+P​UBLISH​ ​A​ C​ATALOG​ I​TEM
+ Administrators a  ​ nd​ Approvers​ of a catalog will be notified via email when there
+ are pending catalog items awaiting approval. This section shows how ​Admins​ can
+ publish only selected catalog items within the catalog, without publishing the
+ entire catalog item list.
+   1. Select​ C
+              ​ atalog Management​.
+   2. Find the name of the catalog containing the items you would like to publish.
+      You may need to use the ​Search Within​ and/or F       ​ ilter​ functions to find the
+      catalog.
+   3. Click on the ​Catalog​ N  ​ ame​ containing items you would like to publish in the
+      Approved​ or L  ​ ive​ column. You will be navigated to the C     ​ atalog Item s​ creen
+      with a list of catalog items. See the T  ​ IP!​ below for additional information.
+
+
+  TIP! ​If the unpublished items are in the Approved column, it will have an
+  Unpublished status. If some but not all the catalog items are already Live (and
+  visible to Shoppers), the catalog will be in the Live column with a Partially
+  Published status.
+
+
+   4. Find the item(s) you would like to publish. You may choose to use the S        ​ earch
+      Within​ function, or page through the catalog list.
+   5. Check the box next to the item’s D    ​ escriptions​ to select them.
+   6. Click the P ​ ublish​ button. The item’s statuses will change from A   ​ pproved​ to
+      Published​. An email notifying A   ​ dmins​ and A​ pprovers​ will be sent notifying
+      them of the newly published items.
+   7. Click the B  ​ ack​ button in the navigation bar on the left to return to the
+      Catalog Management s​ creen. (not pictured)
+   8. The catalog will be in the ​Live​ column with a P   ​ artially Published​ status. Until
+      all​ the items in the catalog are published, it will continue to be labeled as
+      Partially​ Published​.
+
+D​ELETE​ ​A​ C​ATALOG​ I​TEM
+Administrators c​ an delete individual line items while the catalog is in the​ Working
+column in​ Catalog . The catalog must have Direct Item Update checked. ​See the
+Edit a Catalog (Direct Item Update) ​section for more information.
+
+
+
+
+                                                                         Vroozi Catalog ​ 43
+                                                                                 Update 7/1/2020
+Vroozi Catalog does​ not allow individual items to be added directly from the ​User
+Interface (UI)​. To add items, the catalog template must be updated with the
+changes and uploaded. See the ​Edit a Catalog (File Upload) ​section for
+instructions on how to do this.
+  1. Select C
+            ​ atalog Management​.
+  2. Click on the ​Catalog​ N ​ ame​ link in the ​Working​ column. ​The catalog ​must​ be
+     in the Working column for an item to be deleted.
+  3. Find the items you would like to delete. You may use the search function to
+     do this.
+  4. Check the box next to item(s) you would like to delete.
+  5. Click the D ​ elete​ button.
+  6. A ​Deletion Confirmation​ window will appear. Click the D   ​ elete​ button. The
+     item will be removed from the catalog.
+
+
+
+
+                                                                     Vroozi Catalog ​ 44
+                                                                            Update 7/1/2020
+C​USTOM​ F​IELDS
+In ​Vroozi Catalog​, A
+                     ​ dministrators​ have the option of defining custom
+characteristics for the vendor catalog and/or line items within a catalog called
+Custom Fields​.
+
+
+
+
+   1. Select ‘Create Custom Field’
+      ● Attach to specific catalogs
+   2. Sort Custom Fields View
+   3. Search by keyword or click name to view
+   4. Check the box next to the name then Delete, Activate or Deactivate selected
+       Views or Groups.
+
+C​USTOM​ F​IELD​ T​YPES
+Custom Fields​ allow A​ dministrators​ to tailor catalog and line item characteristics for
+system users. These fields are able to be created and managed by amending and
+uploading the catalog template in the system. This section defines the different
+types of customizable fields.
+There are four types of ​Custom Fields​ available in ​Catalog ​: I​ nput Field​, F
+                                                                                 ​ ixed Value​,
+and L
+    ​ ist/Drop Down​.
+
+
+
+
+                                                                         Vroozi Catalog ​ 45
+                                                                                 Update 7/1/2020
+6. Input Field (Text)​: The ​Input Field​ data type is an editable area that is
+   available on the item detail screen for the ​Shopper​. This free text area may be
+   used by the S ​ hopper​ to add comments to the item before adding it to the
+   cart. An example of this is shipping information. There are three font sizes of
+   Input Fields​—small, medium, and large. In order to associate these fields with
+   an item in the catalog, enter an “X” in the item’s input type custom field cell.
+                 i.  Input Field—Field Declaration: TEXT
+                ii.  Input Medium Field—Field Declaration: MEDIUMTEXT
+               iii.  Input Field Large—Field Declaration: LARGETEXT
+7. Fixed Value​: The ​Fixed Value​ appears as a label on the item details screen.
+   This field may contain any information that the supplier or purchasing
+   company would like to display other than the default catalog fields. This is a
+   fixed body of text and can be used for things like address information.
+8. List/Drop Down​: The ​List​ or D ​ rop-Down​ field allows the Shopper to select
+   from a list of options, like size or color choices. This supports D ​ ynamic Part
+   Numbering​ and P    ​ rice Modification​ based on the Shopper’s selections. This
+   catalog field accepts | | (vertical bars) to indicate selection. For example, this
+   field accepts P​ rice Adders a​ nd​ Subtractors​. The list items are separated by
+   semicolons, and if there are associated P   ​ rice Adders/Subtractors​, this is
+   designated by adding a numerical value after a colon, prior to the semi-colon
+   separator. When a user selects a value with a ​Price Adder​ or S     ​ ubtractor​, the
+   price of the item dynamically will change. If the value is positive, then the
+   updated price will be the value plus the original price. If it is a negative value,
+   then the updated price will be the value subtracted from the original
+   amount.
+9. Flags​: A ​Flag​ field can be associated with items and can be used as item
+   attributes that can be used by the ​Shopper​ to filter search results. In order to
+   associate these fields with an item in a catalog, an "X" must be entered in the
+   item's corresponding ​Flag Custom Field​ cell. They work like ​Supplier
+   Attributes​, except these are associated with individual items in a catalog,
+   as opposed to all items associated with a supplier. Unlike the ​Supplier
+   Attribute​ weight functionality, F ​ lags​ don’t affect the ranking of search results.
+
+
+
+                                                                    Vroozi Catalog ​ 46
+                                                                            Update 7/1/2020
+       An icon image can be uploaded for a F
+                                           ​ lag​ field. This icon will appear with the
+       item on the search result and product detail page for S  ​ hoppers​.
+
+C​REATE​ A
+         ​ ​ C​USTOM​ F​IELD
+   1. S​elect C​ atalog Management​.
+   2. Near the top left of the V     ​ roozi Catalog​ screen, click the ​Custom Fields​ button.
+   3. Click on the ​Create Custom Field​ button.
+   4. Enter the ​Field Name​ that will be listed on the catalog template to associate
+       with the ​Custom Field​. This is a required field.
+   5. Enter the ​Display Name​, which is how the field will appear to ​Shoppers​. This
+       is a required field.
+   6. Enter a D  ​ escription​ if needed. Only A  ​ dministrators​ are able to view this
+       information.
+   7. Choose the field T    ​ ype​ from the drop-down menu. See the ​Custom Field
+       Types​ section for more information.
+   8. The ​Custom Field Defaults​ area will update based on the field T         ​ ype​ selection
+       made above. Fill this section out accordingly.
+   9. Save.
+   10. Click the A ​ dd Catalogs​ button to associate catalogs.
+   11. Find the catalogs that you would like to associate with the C        ​ ustom Field
+       being created. You may choose to use the S         ​ earch Catalogs​ function.
+   12. Check the box next to the C       ​ atalog Name​ to select it.
+   13. Click Save.​ Your selected catalogs will be listed. (not pictured)
+   14. Click the B  ​ ack​ button to return to the C ​ ustom Fields Management​ screen.
+       (not pictured)
+
+
+
+A​CTIVATE​ O
+           ​ R​ D​EACTIVATE​ O​R​ D​ELETE​ ​A​ C​USTOM​ F​IELD
+An alternative to deleting, is to D   ​ eactivate​ the field. Deactivating also hides the
+Custom Field​ from the ​Shopper’s v      ​ iew, but unlike deleting the field is listed as an
+Inactive​ record that can be made ​Active​ again.
+   1. S​elect C
+              ​ atalog Man​ag    ​ ement​.
+   2. Near the top left of the V    ​ roozi Catalog​ screen, click the ​Custom Fields​ button.
+   3. Find the ​Custom Field Name​ you would like to A         ​ ctivate​, D
+                                                                           ​ eactivate or
+       Delete​.​ You may choose to use the S      ​ earch Custom Fields​ bar to find it.
+   4. Check the box to select it.
+   5. Click the A ​ ctivate​ or D
+                                ​ eactivate​ button.
+
+
+
+
+                                                                          Vroozi Catalog ​ 47
+                                                                                  Update 7/1/2020
+Vroozi Catalog ​ 48
+       Update 7/1/2020
+C​OMPANY​ U​SERS
+See U
+    ​ ser Roles with Definitions and Quick Reference Guide​ for user role
+descriptions and permissions.
+
+C​REATE​ A
+         ​ ​ U​SER
+Users are created in the Company Users tab. Further details on creating a user can
+be accessed ​here​.
+
+
+
+
+ TIP!​ ​A user can have multiple roles. A user can be any combination of an
+ Administrator, Approver and Buyer. Depending on what roles a user is assigned,
+ they will be granted specific privileges within Catalog. However, if a user is
+ assigned the role of Master Administrator, they will be assigned the other three
+ roles at the same time.
+ Only​ Master Admins h  ​ ave the rights to create other​ Master Admins ​and
+ Administrators.
+
+
+
+E​DIT​ ​A​ U​SER
+Once the user has been created, they receive a “​Welcome to Catalog ​” email with a
+username, temporary password, and a link to ​Vroozi Catalog. F​ or more information
+about getting started with the welcome email, see ‘​Logging in for the First-Time’
+section.
+   1. Select​ C
+              ​ ompany Users​.
+   2. Use the ​Search User​ function to find the user you would like to edit.
+   3. Click on the user’s ​Email Address​ link
+
+
+
+
+                                                                  Vroozi Catalog ​ 49
+                                                                            Update 7/1/2020
+   4. N​ear the top the A
+                        ​ dministrator Homepage​, click the ​Company Users​ tab.
+      You will be navigated to the U  ​ ser Management​ screen.
+   5. Make the necessary edits to the U   ​ ser Settings​ or D
+                                                             ​ efault Preferences​ areas.
+      Any field with a red asterisk​*​ cannot be left blank.
+   6. Click Save.​ The user will be created and sent the “​Welcome to Catalog ​”
+      email.
+
+
+
+A​CTIVATE​, D​EACTIVATE​ O
+                         ​ R​ D​ELETE​ ​A​ U​SER
+   1. F​ind the user you would like to ​Activate​ or D ​ eactivate​.
+   2. Check the box next to the user’s ​Email Address​ to select it.
+   3. Click the A
+                ​ ctivate​ ​Deactivate​ or D
+                                           ​ elete​ button.
+TIP!​ Y
+      ​ ou cannot not Activate, Deactivate or Delete your own account.
+
+TIP! ​ A
+       ​ dministrators are not able to Activate or Deactivate other Administrators.
+Only Master Admins can deactivate another Admin.
+
+
+
+R​ESET​ ​A​ U​SER​’​S​ P​ASSWORD
+Administrators​ are able to reset another user’s password in the U ​ ser Management
+area of ​Catalog .​ This section shows the steps to take to do a password reset.
+Marketplace d ​ oes not allow you to reset your own password as an ​Administrator​.
+For more information of resetting an ​Admin​ or M ​ aster Admin​ password, see the
+Forgot Password (For Administrators) ​section.
+
+   1. F​ind the user you would like to edit.
+   2. Check the box next to the user’s ​Email Address​ to select it.
+   3. Click the R
+                ​ eset Password​ link. An email will be sent to the user with a new
+      temporary password. They are then able to log in to M  ​ arketplace ​and create
+      a new password. See the P ​ assword Change​ section for more information.
+
+
+
+
+                                                                       Vroozi Catalog ​ 50
+                                                                              Update 7/1/2020
+D​ATA​ M​APPING
+Vroozi Catalog a ​ llows for various types of data mapping files to be uploaded.
+data mapping​ is the process of ​mapping data​ fields from a source file to their
+related target fields
+Each template includes a M   ​ apping​ tab and an ​Instructions​ tab to assist in filling out
+the data properly.
+
+C​ATEGORY​ M​APPING
+Categories classify products and services in a way that makes sense for your
+organization. Using ​Category Mapping​, M
+                                        ​ arketplace d​ ynamically maps the
+supplier-provided category codes, to the categories that your organization uses.
+This section outlines how to upload P
+                                    ​ roduct Category​ template files into ​Catalog ​.
+
+Every time you upload a mapping file, existing mappings will be overridden.
+   1. If you don’t already have it, download the C   ​ ategory Mapping Template​ from
+       the Vroozi HelpDesk.
+   2. Fill out the template with the ​Product Category​ information. For more details
+       of how to enter data correctly, click the I​ nstructions​ tab. From this tab you
+       will be able to see if a column is required (peach/light orange) or optional
+       (bold orange).
+
+
+
+
+                                                                         Vroozi Catalog ​ 51
+                                                                                Update 7/1/2020
+ The ​Display​ column is used to flag individual rows in these tables, to be visible to
+      the S
+          ​ hopper​.
+
+For ​Category Mapping​, U   ​ oM​ and ​Currency​ mapping tables, unless a particular row
+is flagged for ​Display,​ the value is not going to be visible in the ​Not in Catalog​ form
+on ​Shopper User Interface (UI)​. This assumes that the buying organization is using
+the ​Not in Catalog​ form.
+
+Because the C   ​ ategory​ mapping table is used to set up both category mapping
+behavior upon shopping cart checkout, and the ​Category Tree​ that ​Shoppers​ see,
+the ​Display​ flag also affects the ​Category Tree​. Unless a particular row is flagged to
+be displayed, it won't show up in the ​Shopper​ category tree.
+
+UoM​ and ​Currency​ mapping tables can also be set up to show their data to
+Shoppers​, based on the ​Shopper's​ associated ​Content Group​.
+
+   ●   The ​Category Mapping​, ​UoM​ and ​Currency​ mapping values can now be
+       associated with C
+                       ​ ontent Views​.
+
+When the ​Shopper​ logs in, the system uses the assigned ​Content Group​ to
+determine which C  ​ ontent Views​ can access, then only shows the appropriate
+Category​, U
+           ​ oM​ and ​Currency​ codes in the ​Not in Catalog​ form. This assumes that
+the buying organization is using the N ​ ot in Catalog​ form.
+
+   1. Save the completed C   ​ ategory Mapping​ template file to your computer.
+   2. Log in to C​ atalog ​.
+   3. Click on the ​Data Mapping​ tab.
+   4. The ​Category Mapping ​tab is the first of the mapping tabs and will already be
+      selected for you. Click the B​ rowse​ button and follow the prompts to select
+      and open the completed C    ​ ategory Mapping​ file on your computer.
+   5. If there is anything that is wrong with the template data, you will receive a
+      Download Error Report​ link. Clicking on this will download a PDF file that
+      contains details on a row-by-row basis of the issues in the file.
+   6. If you would like to download the existing mapping file at any time, click the
+      Download Processed Data​ link.
+
+
+
+
+                                                                        Vroozi Catalog ​ 52
+                                                                               Update 7/1/2020
+S​UPPLIER​ ID M​APPING
+Before S
+       ​ upplier ID ​mapping can be done, the suppliers must first exist in the
+system. See additional supplier-related sections for more information if you haven’t
+already done this.
+
+Every time you upload a mapping file, existing mappings will be overridden.
+
+   1. If you don’t already have it, download the S  ​ upplier ID Mapping Template
+      from the ​Marketplace U ​ pload File Templates​ section of the knowledge base
+      at h​ ttps://vroozi.zendesk.com​.
+                         ● The template name is ​Vendor_ID_Mapping_Template
+   2. Fill out the template with the ​Vendor ID i​ nformation. For more detail of how
+      to enter data correctly, click the ​Instructions​ tab. From this tab you will be
+      able to see if a column is required (peach/light orange), optional (bold
+      orange).
+
+
+
+
+   3. Back in Vroozi Catalog, c​lick on the ​Data Mapping​ tab.
+   4. Click the S​ upplier ID​ tab.
+   5. Click the B ​ rowse​ button and follow the prompts to select and open the
+      completed C    ​ urrency​ file on your computer.
+   6. If there is anything that is wrong with the template data, you will receive a
+      Download Error Report​ link. Clicking on this will download a PDF file that
+      contains details on a row-by-row basis of the issues in the file.
+   7. If you would like to download the existing mapping file at any time, click the
+      Download Processed Data​ link.
+
+
+
+
+                                                                   Vroozi Catalog ​ 53
+                                                                          Update 7/1/2020
+C​ONTENT​ A​CCESS​ M​APPING
+
+A ​S​hopper​ logging into​ Vroozi Marketplace or Vroozi Purchase n       ​ eeds to have
+Content Views​ associated with them in order to be able to access any content in the
+system. These C    ​ ontent View​ associations are made via the assignment of a ​Content
+Group​.
+The default method to determine which ​Content Group​ should be assigned to the
+current user requires that the ​Content Group’s​ CGROUPTOKEN or CGROUPNAME
+be passed to M   ​ arketplace ​as a parameter in the URL. This token is unique to a
+particular C  ​ ontent Group​ and used to identify the ​Content Group​ to be assigned.
+Administrators​ can optionally choose to include the M        ​ arketplace g​ enerated token
+for an external ERP system configured in their account. This token should be
+provided under the SYSTEMID parameter. This can be used to specify the C            ​ ontent
+Group​ association if the Shopper is logging in from a particular external ERP
+system. If the URL does not contain a CGROUPTOKEN or CGROUPNAME, then the
+user’s ​Unique Identifier​ value (UNAME) is used to assign a mapped ​Content Group
+to them.
+     1. If you don’t already have it, download the C      ​ ontent Access Mapping Template
+        from the ​Marketplace U      ​ pload File Templates​ section of the knowledge base
+        at h​ ttps://vroozi.zendesk.com​.
+     2. Fill out the template with content information. For more detail of how to
+        enter data correctly, click the I​ nstructions​ tab. From this tab you will be able
+        to see if s column is required (peach/light orange) or optional (bold orange)
+     3. Log in to C    ​ atalog ​.
+     4. Click on the ​Data Mapping​ tab.
+     5. Click the C  ​ ontent Access​ tab.
+     6. Click the B   ​ rowse​ button and follow the prompts to select and open the
+        completed C       ​ ontent Access​ file on your computer.
+
+
+
+
+   7. If there is anything that is wrong with the template data, you will receive a
+      Download Error Report​ link. Clicking on this will download a PDF file that
+      contains details on a row-by-row basis of the issues in the file.
+   8. If you would like to download the existing mapping file at any time, click the
+      Download Processed Data​ link.
+
+
+
+
+                                                                       Vroozi Catalog ​ 54
+                                                                              Update 7/1/2020
+U​NIT​ O
+       ​ F​ M​EASURE​ (U​OM
+                          ​ ) M​APPING
+
+This section shows how to upload a Unit​ of Measure (UoM) m​ apping into the
+Marketplace​ u​ sing a template. Every time you upload a mapping file, existing
+mappings will be overridden.
+
+   1. If you don’t already have it, download the U   ​ oM Mapping Template​ from the
+      Marketplace U  ​ pload File Templates​ section of ​Vroozi Helpdesk a  ​ t
+      https://vroozi.zendesk.com​.
+   2. Fill out the template with content information. For more detail of how to
+      enter data correctly, click the I​ nstructions​ tab. From this tab you will be able
+      to see if a column is required (peach/light orange) or optional (bold orange).
+
+
+
+
+   3. Log in to Catalog .
+   4. Click on the ​Data Mapping​ tab.
+   5. Click the U​ nit of Measure​ tab.
+   6. Click the B ​ rowse​ button and follow the prompts to select and open the
+      completed U    ​ nit of Measure​ file on your computer.
+   7. If there is anything that is wrong with the template data, you will receive a
+      Download Error Report​ link. Clicking on this will download a PDF file that
+      contains details on a row-by-row basis of the issues in the file.
+   8. If you would like to download the existing mapping file at any time, click the
+      Download Processed Data​ link.
+
+C​URRENCY​ M​APPING
+This section shows how to upload C
+                                 ​ urrency m
+                                           ​ apping into the Marketplace​ ​using a
+template. Every time you upload a mapping file, existing mappings will be
+overridden.
+
+   1. If you don’t already have it, download the C
+                                                 ​ urrency Mapping Template​ from
+      the M​ arketplace Upload​ File Templates​ section of the knowledge base at
+      https://vroozi.zendesk.com​.
+
+
+
+
+                                                                      Vroozi Catalog ​ 55
+                                                                             Update 7/1/2020
+2. Fill out the template with content information. For more d      ​ etails​ of how to
+   enter data correctly, click the I​ nstructions​ tab. From this tab you will be able
+   to see if s column is required (peach/light orange) or optional (bold orang​e.)
+
+
+
+
+3. Log in to C  ​ atalog ​.
+4. Click on the ​Data Mapping​ tab.
+5. Click the C​ urrency​ tab.
+6. Click the B ​ rowse​ button and follow the prompts to select and open the
+   completed C     ​ urrency​ file on your computer.
+7. If there is anything that is wrong with the template data, you will receive a
+   Download Error Report​ link. Clicking on this will download a PDF file that
+   contains details on a row-by-row basis of the issues in the file.
+8. If you would like to download the existing mapping file at any time, click the
+   Download Processed Data​ link.
+
+
+
+
+                                                                   Vroozi Catalog ​ 56
+                                                                          Update 7/1/2020
+

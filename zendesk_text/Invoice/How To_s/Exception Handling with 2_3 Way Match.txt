@@ -1,0 +1,296 @@
+Exception Handling with ⅔ Way Match
+Overview of Exception Handling enablement and workflows.
+
+
+
+
+Table of Contents:
+
+⅔ Way Exception Handling                                                     2
+
+Set Goods Receipt Requirements                                               2
+
+Tolerances                                                                   3
+   Set Exception Tolerances                                                  3
+   Set Exception Handlers                                                    4
+
+Approval Workflow                                                            5
+
+Exception Handling Test Cases                                                6
+   MisMatch Exception                                                        6
+   Missing Goods Receipt                                                     8
+
+Exception Handling History                                                   9
+
+
+
+
+                                                           Updated 10/31/19​ ​1
+⅔ W​AY​ E​XCEPTION​ H​ANDLING
+Vroozi provides an exception handling workflow for invoice discrepancies to be
+reviewed, resolved and approved for payment.
+
+Invoice processing settings can be set to a 2
+                                            ​ ​ or 3
+                                                   ​ -way​ match review:
+
+2-Way Match: ​The PO and
+Invoice must match within
+any set tolerances.
+
+3-Way Match:​ ​The PO,
+Invoice, and Goods Receipt
+must match within any set
+tolerances.
+
+= sign​: indicates exact match
+required u ​ nless​ tolerances are
+set.
+
+
+S​ET​ G​OODS​ R​ECEIPT​ R​EQUIREMENTS
+Document > Settings > Goods Receipts
+
+Goods receipt requirements as set by the Administrator (below):
+
+
+
+
+Goods receipt requirements set on the supplier record (below)
+
+
+
+                                                                           Updated 10/31/19​   2
+   ●   Will override the Administrator settings if​ Goods Receipts (GR) are set to 'on'.
+       If GR's are set to 'off', then the Supplier GR setting will not override the global
+       GR setting.
+   ●   Threshold will designate the purchase order dollar value in which a Goods
+       Receipt is required. Purchase orders under this value will be an assumed
+       receipt.
+
+
+
+
+T​OLERANCES
+Accounts Payable > Settings > Exceptions
+
+Tolerances can be set in which only invoices that breach these defined thresholds
+are subject to Exception Handling.
+   ● For example; defining the price delta between PO and Invoice which would
+      be subject to Exception Handling
+
+You can enable (or disable) the following 6
+                                          ​ ​T
+                                             ​ olerance types:
+   1. Product & Service Price - Line item & Subtotal
+   2. Product & Service Quantity - Line item & Total
+   3. Blanket Line item “Total” Tolerance
+   4. Additional Line Item and Total
+   5. Shipping - Line item and Total
+   6. Tax - Line item and Total Tax
+
+
+
+
+                                                                         Updated 10/31/19​   3
+Note: T
+      ​ olerance configuration is based on over quantity amounts ​only​.
+Underbilled invoices will ​not b
+                               ​ e flagged.
+
+
+Set Exception Tolerances
+   1. Enable Tolerances (if desired)
+   2. Set Unit (Number or Percentage) for each enabled tolerance
+   3. Enter Value
+          ●   Value set at 0 when toggled “On” designates no tolerance. Meaning
+              that the invoice has to exactly match the PO.
+          ●   System automatically approves any value under set tolerance
+          ●   Note: Value excludes taxes and shipping
+
+
+
+
+Set Exception Handlers
+Accounts Payable > Settings >
+Exceptions
+
+
+   1. Select Role Types (Accounts
+      Payable or
+      Procurement/Purchasing)
+         ○ Select multiple or
+            single users within that type.
+         ○ Set Forward Invoices to:
+         ○ And/or
+   2. Create custom group (Click the plus sign shown above)
+          ○   Enter the name of the exception handling group.
+
+
+                                                                    Updated 10/31/19​   4
+Members:
+List the users belonging to the group who would be responsible for handing invoice
+exceptions.
+    ● Exception groups selected and/or created will be listed for the user to select
+       from when they attempt to submit an invoice for Exception Handling —
+       Requester/Buyer and Central Receivers are listed by default.
+
+Forward Invoices to:
+   ●   Select ‘All users in the group’ option to forward invoices with exceptions to all
+       users within the group.
+   ●   Select ‘Specific user in the group” option to forward invoices with exceptions
+       to a specific user within the group.
+
+
+
+
+ RECOMMENDED​:​ Select ‘All users’ or ‘specific user in group’ to either forward an
+ invoice with exceptions to all users or a specific user within the group.
+
+
+
+Changes to an Existing Group
+
+   ●   To e
+          ​ dit​, select the pen icon from the right.
+   ●   To d​ elete, s​ elect the trash button
+
+
+A​PPROVAL​ W​ORKFLOW
+Accounts Payable -> Settings -> Preferences
+
+Set Auto-approval rules post exception handling.
+
+
+
+
+                                                                       Updated 10/31/19​   5
+Updated 10/31/19​   6
+E​XCEPTION​ H​ANDLING​ T​EST​ C​ASES
+
+MisMatch Exception
+  1. AP processes the invoice, and checks the PO against a 2 or 3-way match
+     depending on the goods receipt setting. The system will alert the user of any
+     exceptions.
+
+
+
+
+  2. Invoice will be subject to Exception Handling based on the tolerances set by
+     the Administrator.
+        ● Invoice will be in ‘Draft’ status until submitted to an Exception Handler
+           for review in which invoice status becomes ‘Exception’.
+
+  3. Exception Handling is assigned to a specific user or group within that type. (As
+     configured by the Administrator)
+        ● Comments can be
+           submitted with the
+           exception
+
+  4. The assigned exception handler
+     will review the invoice, and
+     submit a resolution back to the
+     AP user. The following
+     resolutions can be submitted.
+
+                                                                    Updated 10/31/19​   7
+   Comments can be added via ‘Message to AP department’ (picture on next
+   page)
+
+       ●   Pay the Purchase Order​ -​ Select this option if you want Accounts
+           Payable to pay the price and the quantity specified on the PO. This
+           resolution will be applied to all line-items containing exceptions.
+       ●   Pay the Invoice​ -​ Select this option if you want Accounts Payable to
+           pay the price and the
+           quantity specified on the
+           invoice. This resolution will
+           only be applied to the
+           line-items containing
+           exceptions.
+
+       ●   Don’t Pay and Delete the
+           Invoice​ - Select this
+           option if you do N​ OT​ want
+           Accounts Payable to pay
+           the invoice. Instead you
+           would like AP to wait for a
+           new ​corrected invoice.
+
+5. If the invoice is clear of any other
+   exceptions the invoice will
+   automatically move to the next
+   stage of processing. (Approval or Posting). If further exceptions appear the
+   user will need to either complete the remaining exceptions, or Return to AP
+   who can re-assign remaining exceptions to another user.
+
+6. If auto-approval post exception handling is enabled the invoice will bypass
+   manual approval by the AP Processor. If auto-approval is disabled, the invoice
+   will be forwarded for approval by the AP Processor, who can retrieve the
+   invoice from the ‘Tasks’ field in the Vroozi Hopper.
+
+
+
+
+                                                                   Updated 10/31/19​   8
+Missing Goods Receipt
+  1. Once a PO is linked to the Invoice, the system will automatically search for the
+     Goods Receipt. If a Goods Receipt required for the PO and one is not present
+     the Missing Goods Receipt Exception will appear.
+  2. AP processor should continue to manually index the invoice (completing all
+     required fields and if needed update
+     the Invoice draft to match the Supplier
+     Invoice.
+        ● Invoice will be in ‘Draft’ status
+            until submitted to an Exception
+            Handler for review in which
+            invoice status becomes
+            ‘Exception’.
+
+  3. Exception Handling is then assigned to
+     a specific user or group. (below)
+        ● Comments can be submitted
+           with the exception
+
+  4. The assigned exception handler (typically the original Requester) will review
+     the invoice, and create a goods receipt for the associated purchase order.
+     Once completed, the invoice will be
+     returned to AP for approval. (next page)
+
+  5. If the invoice is clear of any other
+     exceptions the invoice will automatically
+     move to the next stage of processing.
+     (Approval or Posting). If further
+     exceptions appear the user will need to
+     either complete the remaining
+     exceptions, or Return to AP who can
+     re-assign remaining exceptions to
+     another user.
+
+  6. If auto-approval post exception handling
+     is enabled the invoice will bypass manual
+     approval by the AP Processor. If auto-approval is disabled, the invoice will be
+
+
+                                                                     Updated 10/31/19​   9
+       forwarded for approval by the AP Processor, who can retrieve the invoice from
+       the ‘Tasks’ field in the Vroozi Hopper.
+
+
+E​XCEPTION​ H​ANDLING​ H​ISTORY
+Note:​ Upon returning from exception handling,
+the AP user can review the audit trail in the
+Invoice History to track the entire exception
+handling process. (shown to right)
+
+Click a tile to learn more.
+
+
+
+
+View details:
+
+
+
+
+                                                                   Updated 10/31/19​   10
+

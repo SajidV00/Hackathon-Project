@@ -1,0 +1,794 @@
+                   Vroozi Invoice
+
+       Configuration Guide
+Guide to the Invoice specific settings that enable specific Invoice permissions and
+
+workflows.
+
+
+
+
+Table of Contents:
+
+Getting Started                                                                       2
+   Vroozi Invoicing Vernacular                                                        2
+   Learning Tools                                                                     2
+      Tool Tips                                                                       2
+      Learn More                                                                      2
+
+User Roles                                                                            3
+
+Approval Groups & Workflows                                                           4
+  Approval Groups                                                                     4
+  Approval Routing Rules                                                              4
+  Coding Workflows                                                                    5
+
+Inbox/Hopper Rules                                                                    5
+   Email Access Assignment                                                            5
+   Structured Document Submission Access Rules                                        6
+
+Supplier Invoice Set up                                                               6
+  Allow cXML Invoice Receipt                                                          6
+Goods Receipts                                                                        6
+  Supplier Goods Receipt Settings                                                     6
+  Global settings by PO type                                                          7
+
+Exception Handling                                                                    7
+   Tolerances                                                                         8
+      Set Exception Tolerances                                                        9
+   Exception Handlers                                                                 9
+      Making Changes to an Existing Group                                            10
+
+Accounts Payable Preferences                                                         10
+   AP Document Approvals                                                             10
+   Optical Character Recognition (OCR)                                                11
+   Automatic Creation and Processing of Invoices                                      11
+      Supplier Portal Invoice Workflows                                              12
+      Selection of Exception Group/Types                                             13
+   Invoice Attachments                                                               13
+      Require attachments while creating/editing invoice                             13
+   Reinvoicing Settings                                                              13
+      Configuration                                                                  13
+   Permissions for Invoice Re-Opening                                                14
+   Automatic Approval of Invoices (Post Exception Handling)                          15
+   Posting of AP Documents                                                           15
+   Inbox Failure Notifications                                                       16
+      Workflow                                                                       16
+
+Tax and Shipping                                                                     17
+   Distribution                                                                      17
+      Vertex Tax                                                                     18
+   Tax Codes                                                                         18
+   Account Mapping                                                                   18
+
+Discounts                                                                            19
+   Distribution                                                                      19
+
+
+
+
+                                                          Invoice Configuration Guide 1
+                                                                       Updated 5/18/2021
+Getting Started
+VROOZI INVOICING VERNACULAR
+Hopper (Inbox): Central receiver for all incoming supplier invoices. Invoices may be
+sent via cXML, emailed PDF and the Vroozi Supplier Portal.
+
+Tolerance: Defined value or quantity in which a buying organization identifies a
+mismatch between the PO submitted to a Supplier and the Supplier’s invoice may
+diverge. A breach of enabled tolerances will result in an Exception alert at the invoice
+level.
+
+Alert: An Alert is displayed when a value on an invoice line-item (e.g. price, quantity,
+etc.) is within the defined tolerance but triggers a different tolerance to be breached,
+thus creating an exception.
+
+Exception: Notification that an invoice line item exceeds any defined tolerances.
+
+Perfect Invoice: An invoice without any exceptions or alerts.
+
+Memo: Either a credit or debit identifying an overcharge, refund due back or other
+arrangement of money back to the buying organization.
+
+LEARNING TOOLS
+
+Tool Tips
+Please see the tool tips (? icon) positioned next to many AP settings or fields.
+Toggling over a tooltip will reveal additional details about the setting or field it is
+positioned next to.
+
+Example below:
+
+
+
+
+Learn More
+Select ‘Learn More’ to expand the description of an explanation it is positioned next
+to. The detailed explanation will expand within the current view.
+
+Example below:
+
+
+
+
+Once clicked:
+
+
+
+
+                                                                 Invoice Configuration Guide 2
+                                                                              Updated 5/18/2021
+User Roles
+ Role            Additional         Description
+                 Role
+                 Allowances
+
+ Accounts        ● Allow for        Approve or reject an invoice.
+ Payable           coding of
+ Approver          invoice          *Role only applicable if admin requires buying
+                 ● Allow for        organization to manually approve invoices.
+                   editing an
+                   invoice during
+                   approval
+
+ Accounts        NA                 Retrieve, view and run reports on specific invoices in
+ Payable                            the following statuses
+ Auditor                                    1. Posted
+                                            2. Paid
+                                            3. Partially Paid
+                                    *Can be restricted to view specific business units or
+                                    locations based on company code allocations.
+                                    *Cannot be designated as an exception handler.
+
+ Accounts        NA                 View all invoices in the system. They can intercept,
+ Payable                            code, approve and post invoices to the financial
+ Manager                            system.
+
+ Accounts        ● Allow for        Process and submit invoices for coding and
+ Payable           coding of an     approval, assign invoices to other AP processors or
+ Processor         invoice          managers. park invoices Submit invoices for
+                                    Exception Handling
+                                    *Only have access to their own invoices.
+
+
+
+Please see role materials for further descriptions.
+
+
+
+
+                                                              Invoice Configuration Guide 3
+                                                                           Updated 5/18/2021
+Approval Groups & Workflows
+Administrators may set Invoice approval and invoice coding rules separately and
+independently from your Hopper rules. You can route these rules through 5
+configurations.
+   1. Approval Groups
+   2. Approval
+      Routing Rules
+   3. Coding
+      Workflows
+   4. Email Access
+      Assignments
+   5. Structured
+      Document
+      Submission
+      Access Rules
+
+APPROVAL GROUPS
+Accounts Payable > Workflow
+
+
+Define the user groups that will be applied to the
+Approval Routing Rules.
+   ● Only previously created Approvers can be added
+      to the Approver(s) list.
+
+
+
+
+APPROVAL ROUTING RULES
+Allows you to define the specific approvers for invoices
+based on the Company code or Plant code assigned at
+the header level. Once an AP Processor selects to submit
+and send an Invoice for approval, the invoice will be
+intelligently routed to the appropriate Approvers
+triggered by an associated rule.
+
+Approval order follows the order as names are entered in
+the Approvers field (shown above)
+
+   ●   Example: Approver James Rob, then on to
+       Approver Kelly Solano, 3rd approval from Jaroslav,
+       last approver required Sam Shields.
+
+
+
+
+                                                            Invoice Configuration Guide 4
+                                                                         Updated 5/18/2021
+CODING WORKFLOWS
+Assign which AP Coders should be listed as potential assignees for documents based
+                          on the Company Code or Plant Code referenced. Once
+                          an AP Processor selects to submit and send an Invoice
+                          for coding, the invoice will be intelligently routed to the
+                          appropriate coder triggered by an associated rule.
+
+                            Tip! Coding Workflows are particularly useful for non-PO
+                            based invoices, as these invoices will not inherit any
+                            account assignment from previously created documents
+                            in Vroozi.
+
+
+
+
+Inbox/Hopper Rules
+Accounts Payable > Email Setup
+
+Segregate incoming "e-mail" and electronic submission (cXML, EDI and Supplier
+Portal) documents.
+
+
+
+
+EMAIL ACCESS ASSIGNMENT
+Leveraging multiple AP Inbox accounts, administrators may assign specific AP
+                                 processors to an inbox. Once enabled, only the
+                                 identified processors can act on the emailed PDF
+                                 supplier documents sent to the
+                                 defined Inbox alias.
+
+                                  All the AP users associated with the email alias in
+                                  the ‘Email Access Assignment’ rule will receive an
+
+
+
+
+                                                            Invoice Configuration Guide 5
+                                                                         Updated 5/18/2021
+email notification when an invoice assigned to them has come through the Inbox.
+
+AP users will then receive the supplier documents into their specific inbox based on
+the conditions defined in the rule(s).
+
+STRUCTURED DOCUMENT SUBMISSION ACCESS RULES
+Like the PDF invoice routing segregation,
+administrators may segregate incoming
+electronic (cXML, EDI, Supplier Portal) documents
+into defined Vroozi AP Inboxes.
+
+Once rules are configured, the system will scan
+the Vroozi PO linked to the supplier invoice for the
+appropriate Company and Plant code and
+intelligently route that document to the
+appropriate AP User’s inbox.
+
+
+
+
+Supplier Invoice Set up
+Master Data > Suppliers > Supplier Record > Basic Info
+
+Identify how each supplier will be submitting Invoices
+
+
+ALLOW CXML INVOICE RECEIPT
+To enable receipt of cXML invoices on a global level,
+toggle on ‘Allow cXML Invoice Receipt’.
+
+
+
+ Note: cXML invoice credentials must be configured for each supplier. This can be
+ done in the cXML Setup category in the navigation panel.
+
+
+
+
+Goods Receipts
+SUPPLIER GOODS RECEIPT SETTINGS
+Master Data > Suppliers
+
+
+
+
+                                                            Invoice Configuration Guide 6
+                                                                         Updated 5/18/2021
+Goods receipt requirements and threshold can be set within each supplier record
+  ● Supplier settings will
+     overwrite global if Goods
+     Receipts Required is
+     toggled 'on'. (as shown
+     below) If toggled 'off',
+     then the Supplier GR
+     setting will not overwrite
+     the global setting.
+  ● Threshold will designate
+     the purchase order dollar
+     value above which a
+     Goods Receipt is
+     required. Purchase orders
+     under any defined value
+     will be an assumed
+     receipt.
+
+
+
+GLOBAL SETTINGS BY
+PO TYPE
+Document > Settings > Goods
+Receipts
+
+Toggle on each Purchase Order
+type to enable THE global
+Goods Receipt requirement.
+
+
+
+
+Exception Handling
+Vroozi provides an exception handling workflow for invoice discrepancies to be
+reviewed, resolved, and approved
+for payment. Invoice processing
+settings can be set to a 2 or
+
+2-Way Match: The PO and the
+associated Invoice must match
+within any set tolerances.
+
+
+
+                                                           Invoice Configuration Guide 7
+                                                                        Updated 5/18/2021
+3-Way Match: The PO, Invoice, and Goods Receipt (P0 & Invoice must match within
+any set tolerances) and receipt of Goods is required)
+      = sign: indicates exact match required unless tolerances are set.
+
+
+TOLERANCES
+Accounts Payable > Settings > Exceptions
+
+Tolerances can be set in which only invoices that breach defined mismatch
+thresholds are subject to Exception Handling.
+
+      Example as shown below: Defining a unit percentage of 10% as an
+      acceptable line item price mismatch between the PO and Supplier Invoice.
+
+
+
+
+      Mismatches above. 10% would be subject to Exception Handling. Tolerances
+      defined at the subtotal or total may flag an exception based on any values set.
+
+
+
+
+                                                            Invoice Configuration Guide 8
+                                                                         Updated 5/18/2021
+Set Exception Tolerances
+
+
+
+
+   1. Enable Tolerances (if desired)
+      If it is not enabled, the system will not do any comparison of that tolerance.
+      Set Unit (Number or Percentage) for each enabled tolerance
+   2. Enter Value
+           ● Value set at 0 when toggled “On” designates zero tolerance. Meaning
+                that the invoice has to exactly match the PO.
+
+
+
+ Note: Tolerance configurations are based on over quantity amounts only.
+ Underbilled invoices will not be flagged.
+
+
+
+
+EXCEPTION HANDLERS
+Accounts Payable > Settings > Exceptions
+
+
+Exception handlers are individuals assigned to the resolution of exceptions based on
+type. Enable exception handling workflow by first creating the exception groups.
+Group roles can then be defined in Preferences.
+
+
+
+
+   1. Select Role Types (Accounts Payable or Procurement/Purchasing)
+          ○   Select multiple or single users within that type.
+          ○   Set Forward Invoices to:
+              And/or
+      Create custom group (Click the plus sign shown above)
+          ○ Enter the name of the exception handling group.
+   2. Members: List the users belonging to the group who would be responsible
+      for handing invoice exceptions.
+          ● Exception groups selected and/or created will be listed for the user to
+             select from when they attempt to submit an invoice for Exception
+             Handling — Requester/Buyer.
+
+
+
+
+                                                              Invoice Configuration Guide 9
+                                                                           Updated 5/18/2021
+          ●  Central Receivers Group is listed by default only if there is a Missing
+             Goods Receipt exception on the invoice.
+   3. Forward Invoices to: Select ‘All users in the group’ option to forward
+      invoices with exceptions to all users within the group.
+         ● Select ‘All users’ or ‘specific user in group’ to either forward an invoice
+             with exceptions to all users or a specific user within the group.
+
+
+
+
+   Making Changes to an Existing Group
+   ●   To edit, select the pen icon from the right.
+   ●   To delete, select the trash button
+
+
+
+
+Accounts Payable Preferences
+AP DOCUMENT APPROVALS
+Enable workflow for AP document review
+
+Require only the AP user creating/editing a PO based invoice to approve it for
+payment
+Indicate if approval from the AP user is sufficient or if financial approval is required.
+Toggled on indicates AP is final approver.
+
+   ●   Vroozi Recommends: Toggle on as 2/3 way match is already reviewing
+       documents.
+
+   ●   If toggled on, 'Approve' will be listed as an Invoice destination
+
+
+
+
+                                                               Invoice Configuration Guide 10
+                                                                             Updated 5/18/2021
+Require only the AP user creating/editing a Non-PO based invoice to approve it
+for payment
+
+   ●   Vroozi Recommends: Require further approval since 2/3 match is not available.
+
+   ●   If toggle is off, 'Submit for Approval' will be listed as an Invoice destination
+
+Require only the AP user creating/editing a credit memo to approve it for
+posting
+
+   ●   Vroozi Recommends: Require further approval since 2/3 match is not available.
+
+   ●   If toggle is off, 'Submit for Approval' will be listed as an Invoice destination
+
+OPTICAL CHARACTER RECOGNITION (OCR)
+Technology that reads, recognizes and extracts content off of an electronic
+document
+   ● OCR functionality only applies to PO based invoices.
+   ● Based on specifications built into the OCR engine PO invoices can be read
+     with 95% accuracy.
+
+
+
+
+See OCR documentation for specific details. OCR functionality is an additional fee.
+Please see the sales team for details.
+
+
+Note: OCR technology is an additional service that does require Vroozi assistance
+to effectively implement. Please contract success@vroozi.com with any questions.
+
+
+
+AUTOMATIC CREATION AND PROCESSING OF INVOICES
+Automate the cXML and Supplier Portal invoice workflow.
+
+
+Note: Automation of the review process will bypass the review of line item coding
+and any alerts that may have been activated.
+
+
+   1. Create and approve
+      incoming cXML invoices
+      without exceptions
+
+          ●   Toggle on to allow the
+              automatic processing
+
+
+
+
+                                                                Invoice Configuration Guide 11
+                                                                              Updated 5/18/2021
+            of cXML invoices without exceptions. cXML invoices with exceptions will
+            go through the hopper for exception review.
+
+  2. Submit incoming PO based cXML invoices for Exception Handling
+
+        ●   That only contain one or more Goods Receipt related exceptions
+
+               ○   If toggled on, the selection of a Goods Receipt Group must be
+                   defined at the end of this section.
+
+        ●   That contain additional exceptions
+
+               ○   If toggled on, the selection of the additional exceptions group
+                   must be defined at the end of this section.
+
+
+
+
+Supplier Portal Invoice Workflows
+  1. Create and approve incoming invoices from Supplier Portal without
+     exceptions
+
+     Toggle on to bypass manual review of invoices created and submitted by
+     suppliers via the supplier portal.
+
+        ●   Applicable for buying organizations utilizing the Vroozi Supplier Portal.
+
+
+
+
+  2. ‘Submit incoming PO based invoices from Supplier Portal for Exception
+     Handling’
+
+        ●   That only contain one or more Goods Receipt related exceptions
+
+        ●  If toggled on, the selection of a Goods Receipt Group must be defined
+           at the end of this section.
+     That contain additional exceptions
+
+        ●   If toggled on, the selection of the additional exceptions group must be
+            defined at the end of this section.
+
+
+
+                                                           Invoice Configuration Guide 12
+                                                                         Updated 5/18/2021
+Selection of Exception Group/Types
+Here you can direct Exceptions based on type. You may only select from existing
+groups. New groups can be created in Accounts Payable ->Settings ->Exceptions
+
+   1. Select ‘User Group/Type’ that invoices only contain Goods Receipt related
+      exceptions should be submitted to:
+
+   2. Select ‘User Group/Type’ that invoices containing additional exceptions should
+      be submitted to:
+
+
+
+INVOICE ATTACHMENTS
+
+Require attachments while creating/editing invoice
+If toggled on - all buying organization users or supplier submitted within Vroozi
+modules to include an invoice.
+
+
+
+
+REINVOICING SETTINGS
+This section defines whether your buying organization will allow POs that have
+already been invoiced to be re-opened when a Credit Memo is created against that
+PO.
+
+The most frequent use case is a supplier who as part of the return to replacement
+process, re-bills for the applicable items. Without these configurations,
+pre-deployment of this new functionality, when the credit was applied and a second
+supplier invoice was sent, that second invoice from the rebilled items or services,
+could not be reflected in Vroozi. Instead requiring that the invoice directly post to
+each customer’s financial system or the invoice was treated as Non-PO based
+invoice.
+
+Configuration
+   1. Within this field, checking the box next to each setting adds that option to the
+      AP Processor view on the Memo draft.
+
+         ✅ Yes: Creation of the emoe
+             reopens the PO for rebilling.
+
+
+
+                                                            Invoice Configuration Guide 13
+                                                                          Updated 5/18/2021
+          ✅ No: The Invoice will work as it previously had and the invoice once
+             posted cannot be reopened. This is a default setting selection cannot be
+             toggled off because it’s default.
+
+          ✅ Undetermined: Selection by the AP Processor will not immediately
+             open the PO. Instead it will keep the reopening the PO a possibility after
+             the invoice has been posted. This is best when an AP Processor
+             processing the memo is uncertain if a PO will be reinvoiced in the
+             future.
+
+   2. Select default reopening option for credit memos submitted via cXML and
+      auto-processed.
+         ● Simply select yes or no based on how often your organization will use
+            this feature.
+
+See the Invoice User Guide for the re-invoicing workflow.
+
+
+
+PERMISSIONS FOR INVOICE RE-OPENING
+   1. Administrators may determine which post approval status invoices can be
+      returned to editing. This covers invoices in Approved, Ready to Post, Posting
+      Failed and Posted status.
+
+   2. With the
+      selection of an
+      AP user type(s)
+      (‘Any AP
+      Manager’ or
+      ‘Document
+      Owner’)
+      Administrators
+      determine who
+      within their organization will have permission to edit documents in these
+      statuses.
+
+If you wish to use this feature, you must complete both fields. If statuses are selected
+but user type is not, the new permissions will not take effect for any users.
+
+NOTE: In the event that a customer org enables editing for invoices in ‘Posted’
+status while leveraging an integration with their financial system; they will need to
+delete the originally posted invoice from their financial system before reposting the
+new edited invoice in Vroozi.
+
+
+
+
+                                                             Invoice Configuration Guide 14
+                                                                           Updated 5/18/2021
+AUTOMATIC APPROVAL OF INVOICES (POST EXCEPTION
+HANDLING)
+Preferences for automatic approval after exception handling.
+
+Approve invoices containing no exceptions or errors
+When this setting is 'On’, invoices returning from Exception Handling with no further
+exceptions or errors are automatically submitted for approval or are automatically
+approved by the system. These invoices are then ready to ‘Post’ to your financial
+system.
+Approve invoices with exception resolutions.
+When this setting is ‘On’, the exception handler’s selected resolution will be
+automatically approved and sent to either Ready to Post or sent directly for Posting
+based on automatic posting configurations. If toggled ‘Off’ invoices returning from
+exception handling will be sent back to ‘Tasks’ for manual review and approval.
+
+
+
+
+POSTING OF AP DOCUMENTS
+Automatically Post ‘Approved’ AP Documents
+  ● Toggle ‘On’ makes Automatic approval settings Toggled off, fill out Automatic
+     approvals manually.
+
+Posting of AP Invoices without a connector
+  ● Toggle ‘On’ indicates the buying
+      organization wants to invoice manually
+      post to the external system.
+
+Post Memos as a negative number
+   ●   Toggle ‘On’ to allow for the negative value transference of all Memo total
+       amounts to your financial system.
+
+
+
+
+                                                             Invoice Configuration Guide 15
+                                                                           Updated 5/18/2021
+INBOX FAILURE NOTIFICATIONS
+Designate who within your system will receive notifications when the Vroozi system
+detects that an AP document failed to successfully hit your Inbox.
+
+CONFIGURATION
+As a system
+administrator, you have
+the ability to configure
+whom these
+notifications of failed
+invoices can be sent to.
+
+Multiple users with any of the following roles may be selected to receive these
+notifications.
+
+   ●   Administrators (including the current user)
+   ● AP Managers
+   ● AP Processors
+The initial email notification will include an attached error report. Thereafter
+recipients will receive an email notification every 24 hours until the failure(s) is
+resolved. Reports will include an aggregated list of failures from the last year
+including the most recent failure(s).
+
+WORKFLOW
+When an invoice failure occurs, the AP Inbox (Hopper) view will display an error
+message. (next page)
+
+
+
+
+There are 2 separate email notifications sent to all the active users defined in the
+Inbox Failure Notification AP Settings.
+
+   1. Inbox Failure Notification: While the subject of the email will vary
+       depending on the reason for the failure, the subject will flag an issue. (next
+       page)
+          ○ Timing: Immediately upon system recognition of the failure
+
+
+
+
+                                                                Invoice Configuration Guide 16
+                                                                              Updated 5/18/2021
+   2. Hopper Error Report Notification: This email will contain an attached error
+      report summarizing all failures.
+         ○ Timing: Daily if there are any failures in the preceding 24 hours.
+         ○ The attached error report will be titled ‘Inbox Failures_Date’. (shown
+             below)
+
+
+
+
+Tax and Shipping
+DISTRIBUTION
+Set automatic distribute the total Tax and Shipping for invoices and memos.
+
+Toggling on the various fields in this section will prompt the display of additional
+distribution options as seen below.
+
+
+
+
+                                                             Invoice Configuration Guide 17
+                                                                           Updated 5/18/2021
+Vertex Tax
+For Vertex based tax calculations another distribution type is available; ‘Proportional
+to Estimated tax’. When selected, tax will
+be distributed (while maintaining decimal
+precision) based on the tax that is returned
+by the tax connector. This default option
+will only be visible in the Master Data > AP
+Settings when the Vertex tax connector is
+on.
+
+
+
+TAX CODES
+See Purchase Administrator guide for details on how to set tax codes.
+
+ACCOUNT MAPPING
+Account Mapping is used to assign GL Accounts for Tax and Shipping Charges when
+these values are specified at the header level only. This allows Vroozi to map
+amounts for payment in your external financial applications during the posting of
+invoices.
+
+Click into each field below each category; Tax and shipping, respectively, and select
+the appropriate GL account.
+
+
+
+
+                                                             Invoice Configuration Guide 18
+                                                                           Updated 5/18/2021
+Discounts
+DISTRIBUTION
+Accounts Payable->Settings->Preferences->Tax, Shipping and Discount Distribution.
+A discount distribution preset can be defined in the Administrator panel. (shown
+below) Unless a preset is defined in the
+Administrator panel (shown below), the
+distribution selection defaults to ‘Do Not
+Distribute’. A distribution selection at the
+summary will override the administrator preset.
+Distribution type can be selected at the Invoice
+level by clicking the calculator icon in the ‘Calc.
+Discount’ field. Distributions can be selected as
+follows; Proportional to Subtotal, Equal in all line items, Quantity based, First line
+item, or No Distribution. (shown below)
+
+
+
+
+                                                               Invoice Configuration Guide 19
+                                                                             Updated 5/18/2021
+
