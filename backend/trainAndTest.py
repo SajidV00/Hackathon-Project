@@ -142,7 +142,14 @@ def updateToDateRAGDB():
 def testingJsonWithClaude(release_name, prompt):
     extract_jira_data(release_name)
     testing_json = read_json_file(release_name)
-    return testing(prompt, testing_json, vectorStore)
+    response= testing(prompt, testing_json, vectorStore)
+    save_markdown_to_file(response.content)
+    return response
 
+
+def save_markdown_to_file(markdown_content: str, filename="release.md", folder="data"):
+    file_path = Path(folder) / filename
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write(markdown_content)
 
 updateToDateRAGDB()
