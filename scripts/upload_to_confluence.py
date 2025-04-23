@@ -9,11 +9,13 @@ SPACE_KEY = 'TS'
 PARENT_PAGE_ID = 4421320706
 MARKDOWN_FILE = '../data/release.md'
 
-with open(MARKDOWN_FILE, 'r', encoding='utf-8') as f:
-    md_content = f.read()
-html_content = markdown.markdown(md_content)
-soup = BeautifulSoup(html_content, 'html.parser')
-confluence_body = str(soup)
+def openingRMFile():
+    with open('/Users/sajidsaleem/Documents/Hackathon-Project/data/release.md', 'r', encoding='utf-8') as f:
+        md_content = f.read()
+        html_content = markdown.markdown(md_content)
+        soup = BeautifulSoup(html_content, 'html.parser')
+        confluence_body = str(soup)
+        return confluence_body
 
 
 def get_page_id(title):
@@ -25,6 +27,7 @@ def get_page_id(title):
 
 
 def push_to_confluence(rc_name):
+    confluence_body=openingRMFile()
     page_title = f'{rc_name} Release Notes'
     page_id = get_page_id(page_title)
 

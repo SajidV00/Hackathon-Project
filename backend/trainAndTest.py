@@ -112,7 +112,7 @@ RELEASE_FAISS_PATH = "faiss_release_store"
 
 # Chunking logic
 def chunk_release_documents(docs):
-    splitter = RecursiveCharacterTextSplitter(chunk_size=8000, chunk_overlap=800)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=60000, chunk_overlap=6000)
     return splitter.split_documents(docs)
 
 # Save FAISS
@@ -141,8 +141,8 @@ def updateToDateRAGDB():
                 Document(page_content=batch["prompt"], metadata={"expected_output": batch["expected_output"]})
                 for batch in batched_prompts
             ]
-            chunked_docs = chunk_release_documents(docs)
-            create_and_save_release_faiss(chunked_docs)
+            #chunked_docs = chunk_release_documents(docs)
+            create_and_save_release_faiss(docs)
             vectorStore = load_release_vectorstore()
             print("Vector store built and saved.")
     else:

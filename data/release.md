@@ -1,74 +1,95 @@
-# Release Notes - RC-2025-5
+April 22, 2025
+**[Image here]**
+                   Vroozi April 2025
+                        Release Notes
+**[Image here]**
+Table of Contents:
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)                2
+   Enhanced Invoice Dispute Process                                                    2
+   Voided Invoice Handling Improvements                                               3
+   Document Flow Search Enhancements                                                  4
+   UI Enhancements for Dispute Management                                             4
+   Email Notifications for Invoice Disputes                                           5
+Vroozi Supplier Portal                                                                6
+   Enhanced Dispute Management Actions                                                6
+Resolutions                                                                           7
 
-## New Features & Enhancements
+# Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)
 
-### Payables: Invoice Dispute Process Improvements
-- **Enhanced Supplier Portal Actions**: Implemented intuitive action options (View/Edit) for disputed invoices in Supplier Portal, enabling suppliers to efficiently manage invoice disputes through a streamlined interface. This enhancement improves supplier satisfaction and operational efficiency.
+## ENHANCED INVOICE DISPUTE PROCESS
+Vroozi has enhanced the invoice dispute process to enable more efficient handling of invoice discrepancies between AP users and suppliers. The new functionality includes:
 
-- **Document Flow Search Capabilities**: Added ability to search and view Disputed and Voided invoices in Document Flow, with enhanced visibility of high-level invoice details and linked documents. Access is intelligently controlled based on user roles and historical interactions.
+- Improved dispute reason selection and validation
+- Streamlined dispute routing to suppliers
+- Enhanced visibility of dispute status and history
+- Automated email notifications for dispute actions
+- Comprehensive audit trail of dispute resolution
 
-- **Dispute UI Enhancements**: 
-  - Improved the Dispute Destination Dialog Box with better field alignment and readability
-  - Enhanced multi-selection display for dispute reasons
-  - Optimized layout and spacing for improved user experience
-  - Reorganized field positioning for better workflow
+This enhancement helps companies better manage invoice disputes, accelerate resolution times, and maintain clear documentation of the dispute process.
 
-- **Email Notification System**: Implemented comprehensive email notifications for dispute-related actions:
-  - Automated notifications for dispute submissions
-  - Resolution notifications for void, amend, or reject actions
-  - Customized email templates with direct document access
-  - Role-based notification routing
+## VOIDED INVOICE HANDLING IMPROVEMENTS 
+Several enhancements have been made to improve how voided invoices are handled:
 
-### Taxes Module Modernization
-- **Tax Management Interface**: Completely redesigned the tax management interface with modern Angular components, providing a more responsive and user-friendly experience.
+- Voided invoices are now automatically excluded from final invoice calculations
+- Voided invoices no longer trigger overdue email notifications
+- Purchase Orders referenced in voided invoices remain available for new invoices
+- Improved visibility of void status across the system
 
-- **Tax Code Administration**: Enhanced tax code management capabilities with improved validation and data consistency checks.
+These improvements ensure more accurate invoice processing and prevent unnecessary notifications and restrictions related to voided documents.
 
-- **Withholding Tax Management**: Modernized withholding tax functionality with streamlined workflows and better data visualization.
+## DOCUMENT FLOW SEARCH ENHANCEMENTS
+The Document Flow search functionality has been enhanced to include:
 
-### Multi-Unit ID Management
-- **Business Unit Configuration**: Implemented sophisticated business unit management capabilities allowing administrators to:
-  - Configure multiple business units from a central interface
-  - Manage user access across different business units
-  - Control role-based permissions at unit level
+- Ability to search and view disputed invoices
+- Ability to search and view voided invoices
+- Enhanced visibility of document relationships
+- Improved access controls based on user roles
+- High-level invoice details available directly in search results
 
-- **User Management Enhancements**: 
-  - Improved user profile management across multiple business units
-  - Enhanced access control mechanisms
-  - Streamlined user authentication workflows
+These enhancements provide greater visibility into invoice history and status, enabling users to more efficiently track and manage documents.
 
-### System Health & Configuration
-- **Health Check Improvements**: 
-  - Added comprehensive health monitoring for Kafka UI
-  - Enhanced system status reporting
-  - Improved diagnostic capabilities
+## UI ENHANCEMENTS FOR DISPUTE MANAGEMENT
+The dispute management interface has been improved with several usability enhancements:
 
-- **Configuration Management**: 
-  - Implemented centralized configuration management
-  - Enhanced property handling for accounting and budget APIs
-  - Improved system reliability and maintainability
+- Clearer display of dispute reasons and comments
+- Improved field alignment and readability
+- Enhanced multi-selection capabilities
+- Streamlined dispute destination dialog
+- More intuitive warning messages
 
-## RESOLUTION
-1. Optimized query performance by improving sorting logic in paginated queries, reducing database load and improving response times.
+These UI improvements make the dispute process more user-friendly and reduce potential for errors.
 
-2. Enhanced user experience by implementing proper validation for tax code updates and synchronization across the system.
+## EMAIL NOTIFICATIONS FOR INVOICE DISPUTES
+A comprehensive email notification system has been implemented for invoice disputes:
 
-3. Improved system stability by resolving authentication edge cases in multi-unit ID scenarios.
+- Notifications when disputes are initiated
+- Alerts when suppliers take action on disputes
+- Notifications for dispute resolution
+- Direct links to disputed invoices
+- Clear status updates in email subject lines
 
-4. Enhanced data consistency by implementing proper handling of voided invoices in various system workflows.
+This enhancement ensures all parties stay informed throughout the dispute resolution process.
 
-5. Improved system reliability by implementing proper error handling and validation in the invoice dispute process.
+# Vroozi Supplier Portal
 
-6. Enhanced user interface responsiveness by optimizing component loading and data synchronization.
+## ENHANCED DISPUTE MANAGEMENT ACTIONS
+Supplier Portal users now have improved options for handling disputed invoices:
 
-7. Improved system security by implementing proper access control validation in multi-unit ID scenarios.
+- Clear action options (View/Edit) for disputed invoices
+- Ability to view dispute details in read-only mode
+- Direct access to amend disputed invoices
+- Streamlined dispute resolution workflow
+- Enhanced visibility of dispute history
 
-8. Enhanced data integrity by implementing proper validation for accounting and budget-related operations.
+These enhancements help suppliers respond to disputes more efficiently and maintain better communication with AP teams.
 
-## Technical Updates
-- Upgraded various Angular components to improve system performance and maintainability
-- Enhanced API documentation with improved examples and usage guidelines
-- Implemented new health check endpoints for better system monitoring
-- Updated configuration management system for improved reliability
+# Resolutions
 
-For detailed technical documentation and implementation guides, please refer to the system documentation.
+- Enhanced the dispute destination dialog box with improved field alignment and clearer display of multiple dispute reasons
+- Improved the display of dispute reasons and resolution comments at the top of invoice pages for better visibility
+- Optimized the handling of voided invoices in final invoice calculations and overdue notifications
+- Enhanced document flow search capabilities to include disputed and voided invoices
+- Improved the user interface for dispute management with clearer field labels and intuitive warning messages
+- Enhanced email notifications for dispute-related actions to keep all parties informed
+- Optimized the supplier portal interface for handling disputed invoices with clearer action options
+- Improved the visibility of dispute history and resolution status across the system
