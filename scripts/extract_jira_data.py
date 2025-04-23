@@ -1,18 +1,21 @@
 import json
+import os
 from collections import defaultdict
 from pathlib import Path
 
 import requests
+from dotenv import load_dotenv
 from requests.auth import HTTPBasicAuth
 
+load_dotenv()
 JIRA_DOMAIN = 'smartoci.atlassian.net'
-EMAIL = 'talqeen.ahmad@vroozi.com'
-API_TOKEN = 'ATATT3xFfGF0iT9TMX5uO3qBSsRsRwrWdjfvEnnPsn5R0gtoIh4_TmumkS3XZ5PAtcUZSsBJGFoiPdQln4edat9jt1fBPEksIXn_MXHZebfoQlVIbsKoveHMWvvHT-biflfHbZm2Mjem5Lboq8akKwncNoiHEphaC8IhAzbbla__pvPR7J2_DT4=66ACB0F8'
+EMAIL = os.getenv('ATLASSIAN_USER_EMAIL')
+ATLASSIAN_API_TOKEN = os.getenv('ATLASSIAN_API_TOKEN')
 PAGE_SIZE = 50
 EPIC_LINK_FIELD_ID = 'customfield_11400'
 URL = f'https://{JIRA_DOMAIN}/rest/api/3/search'
 
-AUTH = HTTPBasicAuth(EMAIL, API_TOKEN)
+AUTH = HTTPBasicAuth(EMAIL, ATLASSIAN_API_TOKEN)
 HEADERS = {
     'Accept': 'application/json'
 }

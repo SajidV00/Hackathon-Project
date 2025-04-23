@@ -1,13 +1,18 @@
+import os
+
 import markdown
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
+load_dotenv()
 CONFLUENCE_BASE_URL = 'https://smartoci.atlassian.net/wiki'
-USERNAME = 'talqeen.ahmad@vroozi.com'
-API_TOKEN = "ATATT3xFfGF0iT9TMX5uO3qBSsRsRwrWdjfvEnnPsn5R0gtoIh4_TmumkS3XZ5PAtcUZSsBJGFoiPdQln4edat9jt1fBPEksIXn_MXHZebfoQlVIbsKoveHMWvvHT-biflfHbZm2Mjem5Lboq8akKwncNoiHEphaC8IhAzbbla__pvPR7J2_DT4=66ACB0F8"
+USERNAME = os.getenv('ATLASSIAN_USER_EMAIL')
+API_TOKEN = os.getenv('ATLASSIAN_API_TOKEN')
 SPACE_KEY = 'TS'
 PARENT_PAGE_ID = 4421320706
 MARKDOWN_FILE = '../data/release.md'
+
 
 def openingRMFile():
     with open('/Users/sajidsaleem/Documents/Hackathon-Project/data/release.md', 'r', encoding='utf-8') as f:
@@ -27,7 +32,7 @@ def get_page_id(title):
 
 
 def push_to_confluence(rc_name):
-    confluence_body=openingRMFile()
+    confluence_body = openingRMFile()
     page_title = f'{rc_name} Release Notes'
     page_id = get_page_id(page_title)
 

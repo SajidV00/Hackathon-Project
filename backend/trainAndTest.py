@@ -5,18 +5,20 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+from dotenv import load_dotenv
 from langchain.docstore.document import Document
 from langchain.prompts import PromptTemplate
 from langchain.schema import HumanMessage
 from langchain_anthropic import ChatAnthropic
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+
 # Add the *project root* to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.extract_jira_data import extract_jira_data
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-
+load_dotenv()
 finalResult = []
 
 
@@ -107,13 +109,14 @@ Input:
 
 vectorStore = None
 
-
 RELEASE_FAISS_PATH = "faiss_release_store"
+
 
 # Chunking logic
 def chunk_release_documents(docs):
     splitter = RecursiveCharacterTextSplitter(chunk_size=60000, chunk_overlap=6000)
     return splitter.split_documents(docs)
+
 
 # Save FAISS
 def create_and_save_release_faiss(docs, save_path=RELEASE_FAISS_PATH):
@@ -121,10 +124,12 @@ def create_and_save_release_faiss(docs, save_path=RELEASE_FAISS_PATH):
     vectorstore = FAISS.from_documents(docs, embeddings)
     vectorstore.save_local(save_path)
 
+
 # Load FAISS
 def load_release_vectorstore(path=RELEASE_FAISS_PATH):
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     return FAISS.load_local(path, embeddings, allow_dangerous_deserialization=True)
+
 
 def updateToDateRAGDB():
     global vectorStore
@@ -141,16 +146,17 @@ def updateToDateRAGDB():
                 Document(page_content=batch["prompt"], metadata={"expected_output": batch["expected_output"]})
                 for batch in batched_prompts
             ]
-            #chunked_docs = chunk_release_documents(docs)
+            # chunked_docs = chunk_release_documents(docs)
             create_and_save_release_faiss(docs)
             vectorStore = load_release_vectorstore()
             print("Vector store built and saved.")
     else:
         print("Vector store already initialized.")
 
+
 def testing(prompt, testing_json, vectorstore):
     prompt = build_test_prompt_rag(prompt, testing_json, vectorstore, k=2)
-    api_key = "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"
+    api_key = os.getenv('ANTHROPIC_API_TOKEN')
     llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", temperature=0, anthropic_api_key=api_key)
     # Call Claude
     response = llm.invoke([HumanMessage(content=prompt)])
@@ -161,7 +167,7 @@ def testingJsonWithClaude(release_name, prompt):
     updateToDateRAGDB()
     extract_jira_data(release_name)
     testing_json = read_json_file(release_name)
-    response= testing(prompt, testing_json, vectorStore)
+    response = testing(prompt, testing_json, vectorStore)
     save_markdown_to_file(response.content)
     return response
 
@@ -170,4 +176,3 @@ def save_markdown_to_file(markdown_content: str, filename="release.md", folder="
     file_path = Path(folder) / filename
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(markdown_content)
-
