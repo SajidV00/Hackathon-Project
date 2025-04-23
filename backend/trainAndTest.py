@@ -88,7 +88,7 @@ def build_test_prompt_rag(prompt,testing_json, vectorstore, k=2):
     # Create final prompt
     return f"""{context_examples}
 
-Now, based on the above examples, interpret the following input and produce the expected output.{prompt}
+Now, based on the above examples, interpret the following input and produce the expected output.Take Resolution as a feature upgrade and us business language for the output . Do not use Fixed keyword in the output.Be a little descriptive
 
 Input:
 {query_str}
@@ -109,9 +109,7 @@ def RAGImplementation(batched_prompts):
 
 def testing(prompt,testing_json,vectorstore):
     prompt = build_test_prompt_rag(prompt,testing_json, vectorstore, k=2)
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        api_key = "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"
+    api_key = "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"
     llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", temperature=0 , anthropic_api_key=api_key)
     # Call Claude
     response = llm.invoke([HumanMessage(content=prompt)])
@@ -130,7 +128,7 @@ def updateToDateRAGDB():
         print("Vector store already initialized.")
 
 
-def testingJsonWithClaude(prompt):
+def testingJsonWithClaude(release_name,prompt):
     testing_json=read_json_file("RC-2025-5")
     return testing(prompt,testing_json,vectorStore)
 

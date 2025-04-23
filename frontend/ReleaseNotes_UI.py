@@ -28,7 +28,7 @@ def release_notes_page():
     # ✨ Generate Analysis
     if st.button("✨ Generate Analysis"):
         if prompt and release_name:
-            response = testingJsonWithClaude(prompt)
+            response = testingJsonWithClaude(release_name,prompt)
             st.session_state["llm_response"] = response.content if hasattr(response, "content") else str(response)
         else:
             st.warning("⚠️ Please enter both Prompt and Release Name.")
