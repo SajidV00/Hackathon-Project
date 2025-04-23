@@ -2,6 +2,7 @@ import os
 import sys
 
 from backend.trainAndTest import testingJsonWithClaude
+from backend.trainAndTestOnZenDesk import test_zendesk_chat_response
 
 # Add the *project root* to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -53,7 +54,7 @@ def chatbot_page():
         with st.chat_message("user"):
             st.markdown(prompt)
         with st.spinner("Thinking..."):
-            llm_response = call_claude_sonnet(prompt)
+            llm_response = test_zendesk_chat_response(prompt)
         st.session_state["messages"].append({"role": "assistant", "content": llm_response})
         with st.chat_message("assistant"):
             st.markdown(llm_response)

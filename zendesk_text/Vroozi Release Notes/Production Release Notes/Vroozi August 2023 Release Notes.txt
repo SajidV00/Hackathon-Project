@@ -1,0 +1,87 @@
+August 18, 2023
+
+
+
+
+                    Vroozi August 2023
+                          Release Notes
+
+Table of Contents:
+Vroozi Purchase (Administrator, Requesters, Approvers, Buyers, Central Receivers,
+AP Users)                                                                         2
+   Document Flow Search Change - Select Document Type                             2
+   Administrator Roles will have access to POs in Pending Output status           2
+Vroozi Invoice (AP Processors, AP Managers)                                       3
+   Additional Keyboard Shortcuts for the Vroozi Invoice                           3
+Resolutions                                                                       4
+Vroozi Purchase (Administrator, Requesters,
+Approvers, Buyers, Central Receivers, AP
+Users)
+DOCUMENT FLOW SEARCH CHANGE - SELECT DOCUMENT TYPE
+
+Document Flow will now require a user to select a document type for faster and more
+precise searches. Search “All” will no longer be an option.
+
+As soon as the user types in the “Search by document number…” field, a “Select the
+document type” drop down will appear for the user to select the appropriate document
+type to search.
+
+
+
+
+ADMINISTRATOR ROLES WILL HAVE ACCESS TO POS IN PENDING OUTPUT
+STATUS
+
+In the previous release, we introduced a new Purchase Order (PO) status "Pending
+Output". This status identified POs that required action due to missing PO output in
+the supplier record. These Purchase Orders were only visible to the Requester who
+generated the order from their Purchase Request. In the previous release, Requesters
+would have to complete the activity in the PO to process the POs further.
+
+
+
+
+                                                                Release Preview 8/11/2023 2
+With this release, POs in the "Pending Output" status will now be visible to Admin users
+and will be available for Admins to process the order.
+
+
+
+
+Vroozi Invoice (AP Processors, AP Managers)
+
+ADDITIONAL KEYBOARD SHORTCUTS FOR THE VROOZI INVOICE
+
+More keyboard shortcuts for invoice processors to make quick actions. The new
+keyboard shortcuts are:
+
+   ●   Document Inbox / Document Archive
+          ○ Delete Document = [shift] + [d]
+          ○ Move to Archive = [shift] + [a] (Document Inbox context)
+          ○ Move to Inbox = [shift] + [alt] + [a] (Document Archive context)
+   ●   Document Inbox / Invoice, Memo, PRQ - PDF viewer
+          ○ Zoom in = [shift] + [+] or [shift] + [=]
+          ○ Zoom out = [shift] + [-] or [shift] + [_]
+          ○ Zoom to actual size / Zoom to page level = [shift] + [0] or [shift] + [)]
+          ○ Rotate Clockwise = [shift] + [r]
+          ○ Rotate Counterclockwise = [shift] + [alt] + [r]
+          ○ Next Page = [shift] + [>]
+          ○ Previous Page = [shift] + [<]
+   ●   Track Invoices/Memos/PRQ
+          ○ Next Page = [j]
+          ○ Previous Page = [k]
+
+
+
+
+                                                                      Release Preview 8/11/2023 3
+Resolutions
+ ●   Improved the Purchase Orders screen performance.
+ ●   If a Sourcing Reviewer has the ability to edit Purchase Requests and Change
+     Requests, they will now be able to edit any custom fields in the document.
+
+
+
+
+                                                            Release Preview 8/11/2023 4
+

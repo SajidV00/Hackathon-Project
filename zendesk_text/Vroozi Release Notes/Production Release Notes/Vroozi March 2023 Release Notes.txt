@@ -1,0 +1,134 @@
+March 24, 2023
+
+
+
+
+                      Vroozi March 2023
+                          Release Notes
+
+Table of Contents:
+Vroozi Purchase (Approvers)                                    2
+   Unified Task Display for all Purchasing Approvals           2
+Vroozi Invoice (AP Processors, AP Managers)                    3
+   Introducing Keyboard Shortcuts                              3
+   Read-Only Access to Invoices for Authorized AP Processors   4
+Resolutions                                                    6
+Vroozi Purchase (Approvers)
+UNIFIED TASK DISPLAY FOR ALL PURCHASING APPROVALS
+
+All Sourcing Review, Financial Review, and Budget Review tasks have been unified in
+one screen “Approve Requests”. In addition, approvers can now use a search bar in
+that screen to quickly search and filter for specific approval tasks.
+
+
+
+
+The user can apply a filter (filters are in screenshot below) on the search bar to find the
+desired Purchase Request.
+
+
+
+
+                                                                      Release Preview 3/3/2023 2
+Vroozi Invoice (AP Processors, AP Managers)
+INTRODUCING KEYBOARD SHORTCUTS
+
+AP Users can now use keyboard shortcuts to perform quick actions. Hovering a mouse
+over the buttons will display the keyboard shortcuts in tooltips.
+
+
+
+
+Pressing [Shift]+[?] displays all relevant shortcuts on screen.
+
+
+
+
+The list of all shortcuts:
+
+   ●   Global shortcuts
+          ○ Create invoice [shift]+[i]
+          ○ Create memo [shift]+[m]
+
+
+
+
+                                                                  Release Preview 3/3/2023 3
+   ●   Document actions
+         ○ View all Shortcuts relevant to the document [shift]+[?]
+         ○ Submit current document [shift]+[s]
+         ○ Delete current document [shift]+[d]
+         ○ Close document [esc]
+              ■ Note: only available if document is opened as the modal dialog
+         ○ Add item [shift]+[enter]
+         ○ Search items [/]
+         ○ Navigate to the next document [j]
+         ○ Navigate to the previous document [k]
+   ●   Document Item actions (if item editing)
+         ○ View all Shortcuts relevant to the document [shift]+[?]
+         ○ Save item [shift] [enter]
+         ○ Close item [esc]
+         ○ Next item tab [shift]+[j]
+         ○ Previous item tab [shift]+[k]
+         ○ Note: Document shortcuts should be overridden or disabled
+   ●   Document Item actions (if item viewing)
+         ○ Close [esc]
+         ○ Next item tab [shift]+[j]
+         ○ Previous item tab [shift]+[k]
+         ○ Note: Document shortcuts should be overridden or disabled
+   ●   Document Inbox actions
+         ○ Create invoice [shift]+[i]
+         ○ Create memo [shift]+[m]
+         ○ Navigate to the next document [j]
+         ○ Navigate to the previous document [k]
+
+Note: global shortcuts to create invoice and memos are only available to the roles that
+have access to create the documents.
+
+
+
+READ-ONLY ACCESS TO INVOICES FOR AUTHORIZED AP PROCESSORS
+
+Admins can now not only give edit access, but also give read-only access to AP
+Processors for Invoices using the AP Settings (Admin Panel => AP Settings => Inbox).
+The access settings defined under “Structured Document Submission Access Rules”
+will grant AP users access to specific invoices based on company code, plant, and cost
+centers. “Structured Document Submission Access Rules” apply to invoices from
+integrated suppliers, such as cXML and Supplier Portal invoices.
+
+
+
+
+                                                                    Release Preview 3/3/2023 4
+One AP user named in the Access Rule can edit and take action on the invoice. The
+other AP user(s) named in the Access Rule will be granted access to view (but not edit)
+the invoice.
+
+
+
+
+                                                                   Release Preview 3/3/2023 5
+Resolutions
+ ●   Invoice performance improvements on the PO drop down to create an invoice
+     from a PO.
+ ●   Improve PO identification and matching for companies using Doc Parser for
+     OCR.
+ ●   For companies that use the Purchase Request (PR) scheduler, the system will no
+     longer submit a PR with blank lines.
+ ●   SSO users can now view an Advance Ship Notice directly after clicking the View
+     ASN button link in the email. Previously, this button was taking SSO users to a
+     login page.
+ ●   Prevent the system from showing browser autocomplete for inputs like date
+     picker, currency and typeahead.
+ ●   The status of a cXML PO will be updated to canceled if all items have been
+     canceled by the user. Previously the status did not update appropriately.
+ ●   Budget Management
+        ○ The system will release the budget on line item cancellation
+        ○ An assigned approver should see a Purchase Request (PR) in read-only
+            mode in the case when an alternate approver approves it.
+
+
+
+
+                                                                Release Preview 3/3/2023 6
+

@@ -1,0 +1,44 @@
+December 20, 2024
+
+
+
+
+                     Vroozi January 2025
+                         Release Preview
+
+Table of Contents:
+Resolutions                                                                           2
+
+
+
+
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming January 10, 2025*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on December 20, 2024.
+Resolutions
+ ●   Resolved an issue affecting Purchase Order status updates when receiving and
+     canceling an ASN. When a user cancels the ASN and the PO's amount is within
+     the 'Goods Receipt Threshold' limit, the system will correctly update the
+     Purchase Order status to 'Confirmed' on both the Supplier Portal and Purchase
+     Manager.)
+ ●   Implemented performance improvements for the Hopper inbox document
+     processing.
+ ●   Fixed Invoice status issue where "Paid" in Great Plains were incorrectly showing
+     as "Posted" in our system has been resolved.
+ ●   Enhanced “Terms & Conditions” load time that affected clients that have a
+     significantly large number of Company Codes, or Suppliers, the system would
+     become unresponsive. This performance issue has now been resolved.
+ ●   For certain accounting and organizations Master Data objects; e.g. Cost Centers,
+     GL Accounts etc. the system was displaying leading zeros despite the client
+     having configured the system to NOT display these leading zeroes. This issue has
+     been resolved.
+
+
+
+
+                                                                      Release Preview 2
+

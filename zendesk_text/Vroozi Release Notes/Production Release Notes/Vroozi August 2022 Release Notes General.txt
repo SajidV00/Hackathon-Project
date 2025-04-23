@@ -1,0 +1,240 @@
+August 20th, 2022
+
+
+
+
+                      Vroozi August 2022
+                            Release Notes
+
+Table of Contents:
+Vroozi Integration (All)                                                      2
+   API to load and sync budgets with Vroozi                                   2
+   Identify a PR line with a budget in the PR create API                      3
+
+Vroozi Supplier Directory                                                    4
+   Add custom fields to the supplier record                                  4
+      Creating the Custom Field                                              4
+      Creating and Editing Custom Fields and Values in the Supplier Record   6
+      Displaying the Custom Field Data in the Supplier Directory             8
+      Changing Custom Fields                                                 9
+
+Vroozi Intelligence for Accounts Payable Invoice Automation (APIA) (AP
+Processors)                                                                   9
+   Scan and Capture Shipping and Billing Addresses                            9
+   Eliminate Extraneous line items from the invoice                          10
+
+Vroozi Invoice (AP Processors, AP Managers)                                  11
+   Edit line item descriptions using inline editing                           11
+   Performance improvement for the header level typeaheads                   12
+
+Resolutions                                                                  13
+Vroozi Integration (All)
+
+API TO LOAD AND SYNC BUDGETS WITH VROOZI
+
+Customers using Vroozi’s new Budget Management (see March 2022 Release Notes)
+will be able to use APIs to create and maintain budgets from external data and systems.
+It enables companies to continue to use their budget systems and tools to create and
+maintain budgets in Vroozi so that spend in Vroozi stays within your budgets.
+
+The Budget APIs include:
+   ● List Budgets - GET
+   ● Create Budget - POST
+   ● Upsert Budget - POST
+   ● Get Budget - GET
+   ● Update Budget using Merge - POST
+   ● Update Budget - PUT
+   ● Delete Budget - DELETE
+   ● Delete Budget Association - DELETE
+   ● Get Budget by Name - GET
+   ● Delete Budget Association using Budget Name - DELETE
+
+See https://docs-api.vroozi.com/#/Budgets for the API documentation.
+
+
+
+
+                                                                   Release Notes 8/20/2022 2
+IDENTIFY A PR LINE WITH A BUDGET IN THE PR CREATE API
+
+Customers using Vroozi’s new Budget Management (see March 2022 Release Notes)
+will be able to use the budget field in the Create Purchase Request API to identify a
+Purchase Request line item with a budget. This ensures that all spend, including
+purchase requests generated from external systems and data, are tracked against
+budgets.
+
+See https://docs-api.vroozi.com/#/Purchase%20Requests/post_purchase_requests for
+the API documentation.
+
+
+
+
+                                                                    Release Notes 8/20/2022 3
+Vroozi Supplier Directory
+
+ADD CUSTOM FIELDS TO THE SUPPLIER RECORD
+
+Companies can add custom fields to the supplier record that can be displayed in the
+Supplier Directory. The functionality needs to be enabled by the Vroozi support team.
+
+CREATING THE CUSTOM FIELD
+
+In the Admin Panel (Documents -> Custom Fields), an admin can specify the fields that
+could be used in the supplier record.
+
+
+
+
+                                                                   Release Notes 8/20/2022 4
+The custom field can then be assigned to the Basic Info, Business Info, Insurance Info,
+and/or the Contract Info tabs of the supplier record.
+
+
+
+
+                                                                     Release Notes 8/20/2022 5
+Also, Custom fields can be identified as a supplier record field using the Custom Field
+Bulk Upload template using new optional columns introduced into the template:
+“Basic Info”, “Business Info”, “Insurance Info”, and “Contract Info”.
+
+
+
+
+At this time, the supplier record custom fields can only be FIXED or LIST type.
+
+Other notes about creating custom fields
+
+   ●   If a custom field is associated with a supplier record tab, it cannot be left empty.
+       It must have a value in it.
+   ●   A single tab can include multiple custom fields.
+   ●   A single custom field can be associated with multiple tabs on the same supplier
+       record.
+   ●   LIST type custom fields must always have predefined values that can be used
+       once the custom field is associated with a supplier record.
+   ●   FIXED type custom fields may or may not have a default value. Admins can
+       specify the fixed type custom field's value on the supplier record itself.
+
+
+
+
+CREATING AND EDITING CUSTOM FIELDS AND VALUES IN THE SUPPLIER RECORD
+A new custom field section has been added to the supplier record. Once the custom
+field is created per above, this section allows Admins to associate the custom field and
+data with the supplier. Each custom field can either use the default value, as
+configured in the custom field management section of the Admin Panel, or pick a
+different value.
+
+Custom fields can also be designated as "Searchable" so it can be used as a search
+parameter in the Supplier Directory search engine for standard and advanced search.
+
+
+
+
+                                                                       Release Notes 8/20/2022 6
+Release Notes 8/20/2022 7
+Custom fields can also be created and managed and assigned values for each supplier
+using the supplier bulk upload sheet. This can be done using the following new
+columns added to the upload template:
+          ○ Basic_Info_CustomFieldName
+          ○ Basic_Info_CustomFieldValue
+          ○ Business_Info_CustomFieldName
+          ○ Business_Info_CustomFieldValue
+          ○ Insurance_Info_CustomFieldName
+          ○ Insurance_Info_CustomFieldValue
+          ○ Contract_Info_CustomFieldName
+          ○ Contract_Info_CustomFieldValue
+
+Admins can specify a custom field by either its Field Name or its Display Name. Each
+custom field that the user wants to associate with a specific supplier record should be
+specified on a single row in the file for that supplier.
+
+
+
+DISPLAYING THE CUSTOM FIELD DATA IN THE SUPPLIER DIRECTORY
+
+When a user opens the supplier in the Supplier Directory, the user can view all the
+supplier information, including the custom fields and the relevant values.
+
+
+
+
+                                                                    Release Notes 8/20/2022 8
+CHANGING CUSTOM FIELDS
+All changes made to the Custom Fields on the supplier record are captured by the
+Supplier Record Audit Log and can be viewed from the “Change History” tab in the
+supplier record.
+
+Supplier Directory Admins are only able to manage the supplier record custom fields.
+They will not be able to make changes to custom fields that will affect other
+transactional documents or catalog items.
+
+
+
+
+Vroozi Intelligence for Accounts Payable
+Invoice Automation (APIA) (AP Processors)
+
+
+SCAN AND CAPTURE SHIPPING AND BILLING ADDRESSES
+
+
+
+                                                                  Release Notes 8/20/2022 9
+Vroozi Intelligence will capture the shipping and billing address from scanned invoices
+and match the addresses with addresses defined in the company’s master data. Vroozi
+Intelligence will use third-party address information to correctly match addresses.
+
+
+
+
+ELIMINATE EXTRANEOUS LINE ITEMS FROM THE INVOICE
+
+Vroozi Intelligence will eliminate extraneous line items from the invoice scan so it only
+captures the line items AP Processors need to quickly create and reconcile an invoice.
+For instance, extraneous lines may include lines totaling 0.00 or tax lines.
+
+
+
+
+                                                                    Release Notes 8/20/2022 10
+Vroozi Invoice (AP Processors, AP Managers)
+
+EDIT LINE ITEM DESCRIPTIONS USING INLINE EDITING
+
+AP Processors will be able to quickly edit invoice line item descriptions using the inline
+editing. Note: inline editing is available for all invoice types, but it will be most useful to
+adjust any descriptions captured by Vroozi Intelligence ie: adjust any extraneous
+information picked up by the invoice capture.
+
+
+
+
+                                                                        Release Notes 8/20/2022 11
+PERFORMANCE IMPROVEMENT FOR THE HEADER LEVEL TYPEAHEADS
+
+Users will see significant performance improvements in typeahead searches for invoice
+header level drop down fields. The search results will display much faster as users type
+into the drop down field.
+
+
+
+
+                                                                   Release Notes 8/20/2022 12
+Resolutions
+ ●   Bulk uploads were not using the lead time from the catalog items to calculate
+     the delivery date when the delivery date field was empty in the bulk upload. This
+     has been corrected. Now for bulk uploads:
+        ○ if the delivery date is in the bulk upload file, then the system will use that
+           delivery date.
+        ○ if the delivery date is not in the bulk upload file then the system will use
+               ■ the catalog item lead time if available
+               ■ the company default lead time when a catalog item is not available
+                   or the item is non-catalog
+ ●   Now an invoice will match the PO in the case when a requester creates an
+     address during Purchase Request creation.
+
+
+
+
+                                                                  Release Notes 8/20/2022 13
+

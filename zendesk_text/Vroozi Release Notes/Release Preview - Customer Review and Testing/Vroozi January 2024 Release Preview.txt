@@ -1,0 +1,81 @@
+December 15, 2023
+
+
+
+
+                     Vroozi January 2024
+                         Release Preview
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                             2
+   Create/Update Accounting Strings in the Admin Panel                      2
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)      4
+   Accounting Changes are Highlighted after Exception Handling or Coding.   4
+Resolutions                                                                 4
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming January 5th, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on December 15th, 2023.
+
+
+
+
+Vroozi Purchase (Administrator)
+CREATE/UPDATE ACCOUNTING STRINGS IN THE ADMIN PANEL
+
+In the December 2023 Release, Vroozi launched Accounting Validation to significantly
+improve accounting accuracy on purchasing and invoice documents by adhering to
+defined valid accounting strings. In this release, Administrators can define the
+accounting strings in the Admin Panel User Interface (UI). Administrators will be able
+to create, read, update, and delete the accounting strings.
+
+Please note that the option to change accounting strings will need to be enabled by
+the Vroozi support team. Otherwise, the accounting strings will need to be created,
+updated, or deleted via APIs. Please contact our support team to enable this feature.
+
+When enabled, Administrators will have the option to Activate, Deactivate, or Create a
+new accounting string in the Accounting Validation screen.
+
+
+
+
+Create a New Accounting String
+
+When creating a valid accounting string, administrators will provide the company and
+accounting information to define the valid string with a validity period.
+
+
+
+
+                                                                 Release Preview 12/15/2023 2
+Release Preview 12/15/2023 3
+Vroozi Invoice (AP Processor, AP Approvers,
+AP Coders and AP Managers)
+
+ACCOUNTING CHANGES ARE HIGHLIGHTED AFTER EXCEPTION HANDLING
+OR CODING.
+
+
+
+If a user changes a document’s accounting in the Exception or Coding processes,
+Vroozi will highlight the changes to the AP Processor after the document is submitted
+to AP. Vroozi will now show an informational message that accounting changes were
+performed and highlight the changes. This will give AP the opportunity to review the
+accounting prior to approval/posting.
+
+
+
+
+Resolutions
+   ●   The PO Transmission Report will now be sent to the subscribed email.
+   ●   cXML Credit Memos for POs in the Disputed status with the error “Re-invoicing is
+       missing” will no longer get stuck.
+
+
+
+
+                                                                 Release Preview 12/15/2023 4
+

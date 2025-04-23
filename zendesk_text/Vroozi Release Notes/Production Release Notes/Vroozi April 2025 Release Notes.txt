@@ -1,0 +1,59 @@
+April 11, 2025
+
+
+
+
+                         Vroozi April 2025
+                            Release Notes
+
+Table of Contents:
+Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory Power User,
+Supplier Directory Basic User)​                                                          2
+   Supplier Directory User Experience Enhancements​                                      2
+       Full display of all fields including custom fields​                               2
+       Introduction of User Groups to the Guidelines​                                    2
+       More Information in the Admin’s User Display​                                     3
+Resolutions​                                                                             3
+Vroozi Supplier Directory (Admin, Supplier
+Directory Admin, Supplier Directory Power
+User, Supplier Directory Basic User)
+SUPPLIER DIRECTORY USER EXPERIENCE ENHANCEMENTS
+Additional improvements have been made to the Supplier Directory making the
+experience more efficient and user-friendly. For one, user-generated reports can now be
+filtered by group (groups were introduced in the March release). This release also includes:
+
+
+FULL DISPLAY OF ALL FIELDS INCLUDING CUSTOM FIELDS
+Users no longer need to expand the fields to display all the content in a section,
+including all the custom fields added to the supplier record. The new page display also
+reduces scrolling.
+
+
+
+
+INTRODUCTION OF USER GROUPS TO THE GUIDELINES
+
+
+
+
+                                                                              Release Notes 2
+MORE INFORMATION IN THE ADMIN’S USER DISPLAY
+
+
+
+Admins can easily identify user roles, group, and project details within the User display.
+
+
+
+
+Resolutions
+   ●​ The system will now correctly load the appropriate Tax Code value on the Apply
+      to All modal, for the situation when a company has all 4 accounting objects (Cost
+      Centres, WBS Elements, Internal Orders, Profit Centers) turned off in the Admin
+      settings UI.
+
+
+
+
+                                                                                 Release Notes 3
+

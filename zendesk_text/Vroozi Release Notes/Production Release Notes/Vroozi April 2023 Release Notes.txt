@@ -1,0 +1,144 @@
+April 28, 2023
+
+
+
+
+                          Vroozi April 2023
+                             Release Notes
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                             2
+   Language-Neutral Toggles in the Admin Panel                                              2
+   Accounting Elements Filtering in the Invoice based on Company Code                       2
+   Read-Only Access to Invoices for Authorized AP Processors - Now Includes Manually Created
+   Invoices                                                                                 3
+Vroozi Invoice (AP Processors, AP Managers)                                                 5
+   AP Processors will be able to search all invoices in Document Flow where they have
+   Access                                                                                   5
+Resolutions                                                                                 6
+Vroozi Purchase (Administrator)
+LANGUAGE-NEUTRAL TOGGLES IN THE ADMIN PANEL
+
+All toggle switches in the Admin Panel that have On and Off labels, will be replaced
+
+with        and         respectively.
+
+
+
+
+ACCOUNTING ELEMENTS FILTERING IN THE INVOICE BASED ON COMPANY
+CODE
+
+   ●   Accounting accuracy
+   ●   Fast and easy coding for improved invoice process efficiency
+
+Make it fast and easy for AP Processors to find and apply the right accounting coding
+on invoices.
+
+The accounting elements that an AP Processor can select for invoice line item
+accounting can be filtered by Company Code. To present the relevant accounting
+elements to the AP Processor based on the Company Code, the Administrator will turn
+on ‘Dictate Accounting via Company Code’ in the Admin Panel under Master Data =>
+Organization.
+
+
+
+
+                                                                      Release Notes 4/28/2023 2
+With the toggle enabled, an AP User will only be able to view and assign accounting
+elements based on the Company Code selected at the invoice header. Previously AP
+Users were able to select any accounting element regardless of the Company Code.
+
+If ‘Dictate Accounting via Company Code’ is turned off, AP users will be able to view
+all the accounting elements and be able to select values that are assigned to a different
+Company Code. However, on selecting such a value the system will change the
+Company Code at the invoice header based on the selection, and will show a
+notification message to the user.
+
+
+
+
+This feature will be initially deactivated for all customers.
+
+
+
+READ-ONLY ACCESS TO INVOICES FOR AUTHORIZED AP PROCESSORS -
+NOW INCLUDES MANUALLY CREATED INVOICES
+
+   ●   More users, if authorized, will have visibility into invoice information and status
+   ●   AP users can get the information they need directly in Vroozi without the emails
+       and phone calls
+
+This was previously released in the March 2023 Release for automated invoices only.
+With the April Release, the Access Rules apply to manually created Invoices.
+
+Admins can not only give edit access, but also give read-only access to AP Processors
+for Invoices using the AP Settings (Admin Panel => AP Settings => Inbox). The access
+settings defined under “Structured Document Submission Access Rules” will grant AP
+users access to specific invoices based on company code, plant, and cost centers.
+
+
+
+
+                                                                      Release Notes 4/28/2023 3
+One AP user named in the Access Rule can edit and take action on the invoice. The
+other AP user(s) named in the Access Rule will be granted access to view (but not edit)
+the invoice.
+
+
+
+Example: An access rule exists that comprises of 3 users: User #1, User #2, and User #3.
+
+
+
+   Assignee       Who can edit / take action on         Who can view the invoice?
+                         the invoice?
+
+
+
+
+                                                                     Release Notes 4/28/2023 4
+ None             User #1, User #2, User #3          User #1, User #2, User #3
+
+
+
+ User #1          User #1                            User #1, User #2, User #3
+
+
+
+
+Vroozi Invoice (AP Processors, AP Managers)
+
+
+AP PROCESSORS WILL BE ABLE TO SEARCH ALL INVOICES IN DOCUMENT
+FLOW WHERE THEY HAVE ACCESS
+
+   ●   AP users can quickly get the invoice information they need directly in Vroozi
+       without the emails and phone calls
+
+New invoice access rules provide AP Processors with read-only access to invoices (See
+the description above for “Read-Only Access to Invoices for Authorized AP Processors -
+Now Includes Manually Created Invoices”). AP Processors that use Document Flow are
+now able to search for and view all invoices where they have access.
+
+
+
+
+                                                                    Release Notes 4/28/2023 5
+Resolutions
+ ●   An AP user will again be able to open POs in a new tab from the PO lookup page
+     in the invoice.
+ ●   Comments added in a Payment Request will now take a tagged user to the
+     Payment Request from the comment in Notifications.
+ ●   The system will not create duplicate Customer records when using the
+     integration API.
+ ●   Changing a currency in a PO will now trigger the workflow for the PO Change
+     Request (POCR) .
+ ●   The AP Settings in the Admin Panel will now display the proper configurations
+     for invoice tolerance exceptions.
+
+
+
+
+                                                                Release Notes 4/28/2023 6
+

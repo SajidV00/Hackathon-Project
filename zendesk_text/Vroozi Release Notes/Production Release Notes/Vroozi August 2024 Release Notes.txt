@@ -1,0 +1,135 @@
+August 9, 2024
+
+
+
+
+                    Vroozi August 2024
+                          Release Notes
+
+Table of Contents:
+
+Vroozi Administration (Admin)                                                2
+   Change History in the User Profile                                        2
+Vroozi Purchase (Requesters, Buyers, and Central Receivers)                  4
+   Extended Future Delivery or Service Period End Dates                      4
+   Allow receipt of PO items based on when the individual item was ordered   4
+Analytics (AP Manager Dashboard)                                             4
+   Invoice Data Tracking Dashboard                                           4
+       Document Inbox (Hopper) Report                                        5
+       Electronic Invoice Report                                             5
+       Invoice Aging Report                                                  5
+       PR Aging Report                                                       5
+Resolutions                                                                  5
+Vroozi Administration (Admin)
+
+CHANGE HISTORY IN THE USER PROFILE
+
+User Change History will now be available in the User profile for enhanced transparency
+and auditability. A detailed historical record will capture all modifications made to the
+user’s record.
+
+This feature will be automatically enabled for all customers - no additional
+configuration will be required. To view a User’s Profile Change History, navigate to
+Master Data > Users > Edit User > Change History.
+
+
+
+
+                                                                          Release Preview 2
+Release Preview 3
+Vroozi Purchase (Requesters, Buyers, and
+Central Receivers)
+
+EXTENDED FUTURE DELIVERY OR SERVICE PERIOD END DATES
+
+Users can now specify future delivery or service period end dates for Purchase Request
+and Purchase Order line items up to the year 2099. Previously, users were only able to
+select a future date up to 5 years from the date of Purchase Requisition or Purchase
+Order creation. This restricted companies from creating orders that spanned more
+than 5 years (eg: projects and capital expenditures). Now companies are able to create
+multi-year orders that span greater than 5 years.
+
+
+
+ALLOW RECEIPT OF PO ITEMS BASED ON WHEN THE INDIVIDUAL ITEM WAS
+ORDERED
+
+Goods Receipts can now be backdated to reflect the actual date of delivery for received
+items, or service start date even if the “start date” or “received date” is before the
+Purchase Order issue date. This new feature allows enhanced data accuracy, ensuring
+records reflect accurate delivery dates and timelines that provides the user with greater
+flexibility.
+
+Example: A user submits a PO on 7/1/2024 which includes 2 line items. Line item 1 has a
+start date of 10/1/2024, and line item 2 has a start date of 2/1/2024. Line Item 1 on the
+Goods Receipt can have a received or start date backdated to the PO creation date
+(7/1/24), however line item 2 can have a received or start date dated back to the listed
+start of the service period (2/1/24).
+
+This feature will be automatically enabled and available to all customers by default.
+
+
+
+Analytics (AP Manager Dashboard)
+
+INVOICE DATA TRACKING DASHBOARD
+
+New reports have been added to the AP Manager Dashboard under Invoice Data
+Tracking to give users, with access, a holistic view of invoices in process.
+
+
+
+
+                                                                          Release Preview 4
+DOCUMENT INBOX (HOPPER) REPORT
+Provides users with more details into invoices in the Vroozi Invoice Hopper, including
+number of days, last updated date, and source (email, cXML, or Supplier Portal).
+
+ELECTRONIC INVOICE REPORT
+Gives users a view into how electronic invoices, coming in via cXML, were processed in
+Vroozi and the invoice status.
+
+INVOICE AGING REPORT
+Users can view the lifecycle of an invoice and the number of days at different stages in
+the process from the hopper/creation in Vroozi to when it’s posted to the financial
+system.
+
+PR AGING REPORT
+Users can view the lifecycle of a Purchase Request from Draft to Approved in Vroozi.
+The report provides further insight into Purchase Requests that are pending approval,
+such as the number of days in approval and the approver who needs to approve.
+
+
+
+Resolutions
+   ●   Improved Vroozi Intelligence cognitive scan and capture (OCR) to automatically
+       fill in the Purchase Order number from the invoice document in the case when
+       the supplier was not recognized.
+   ●   Corrected a labeling issue with the Vertex Tax code field.
+   ●   Eliminated an error for companies who bulk updated their Dynamic Workflow
+       rules with only a location type condition.
+   ●   Also for the bulk upload of Dynamic Workflow approval rules, email addresses
+       are now case-insensitive (ie: any case and a mix of cases).
+   ●   Improved the Invoice/Memo PO Lookup search to include the Company Code.
+   ●   The Invoice Status navigation menu now shows the bubble count of invoices in
+       the exception queue.
+   ●   Addressed an issue where a rounding error was affecting the distributed total
+       amount in certain special cases.
+   ●   During a Purchase Order Change Request (POCR), an editable header custom
+       field will now be updated when a user removes a value in the field.
+   ●   Also for a Purchase Order Change Request (POCR), when the service period
+       date is the only change in the order status “Received”, the status will remain
+       “Received” and not revert to “Ordered”.
+
+
+
+
+                                                                         Release Preview 5
+●   Approval status in historical documents will reflect the approval chain as it was
+    performed and not present the current approval configuration.
+
+
+
+
+                                                                      Release Preview 6
+

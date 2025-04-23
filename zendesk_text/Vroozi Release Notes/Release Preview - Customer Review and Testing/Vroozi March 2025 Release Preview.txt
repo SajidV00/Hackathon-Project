@@ -1,0 +1,57 @@
+February 14, 2025
+
+
+
+
+                     Vroozi March 2025
+                       Release Preview
+
+Table of Contents:
+Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory
+Power User, Supplier Directory Basic User)​                                       2
+   User Groups for Supplier Record Access Control and Improved Maintenance in the
+   Supplier Directory​                                                            2
+Resolutions​                                                                      2
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming March 14, 2025*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on February 14, 2025.
+
+
+
+
+Vroozi Supplier Directory (Admin, Supplier
+Directory Admin, Supplier Directory Power
+User, Supplier Directory Basic User)
+
+USER GROUPS FOR SUPPLIER RECORD ACCESS CONTROL AND IMPROVED
+MAINTENANCE IN THE SUPPLIER DIRECTORY
+User Groups deliver structured, role-based access and settings to the Vroozi Supplier
+Directory.
+
+To control access, users are assigned to a user group. Supplier records are then linked to
+one or more user groups to control user visibility to the supplier record. The supplier bulk
+upload/download now supports a User Group field so it can be used to assign supplier
+records to user groups.
+
+For better supplier record maintenance, Supplier Directory Admins can filter and manage
+supplier records on the basis of User Groups.
+
+
+
+
+Resolutions
+   ●​ Updated the Japanese translation for “Profit Center”.
+   ●​ Fixed an error that was triggered in the approval when the company’s Fallback
+      Approver was set as a Sourcing Reviewer’s alternate approver.
+   ●​ Resolved an issue with the Purchase Request Apply to All automatically
+      populating the Tax Code field when a user selected a Company Code
+
+
+
+
+                                                                              Release Preview 2
+

@@ -1,0 +1,122 @@
+March 15, 2024
+
+
+
+
+                          Vroozi March 2024
+                               Release Notes
+
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                                    2
+   Accounting String Bulk Upload                                                                   2
+   Make Accounting Strings Active or Inactive in the Accounting Validation Configuration           3
+   Auto Invoice Date Calculation Toggle in the Supplier Records                                    4
+   Toggle for Admins to Configure Invoice Coding and Apply All during Invoice Exception Handling   4
+Vroozi Purchase (Budget Approver)                                                                  5
+   Accounting Validation in Budget Workflow                                                        5
+Resolutions                                                                                        5
+Vroozi Purchase (Administrator)
+
+ACCOUNTING STRING BULK UPLOAD
+
+Administrators will be able to upload accounting strings for Accounting Validation in
+the Admin Panel using files in XLSX or CSV formats. Like other Vroozi master data
+uploads, Administrators can download a template or export the existing data as a
+starting point to build/maintain an upload file. If there are any validation errors in the
+upload, an error report will be available for the Administrator to download.
+
+Note: For data exports, when the accounting string records exceed 1 million, the system
+will automatically switch to CSV format, as XLSX cannot accommodate over 1 million
+records.
+
+
+
+
+Please contact support if you want the accounting string feature to be enabled.
+
+
+
+
+                                                                    Release Preview 2/23/2023 2
+MAKE ACCOUNTING STRINGS ACTIVE OR INACTIVE IN THE ACCOUNTING
+VALIDATION CONFIGURATION
+
+A new field “Status” is available when creating or editing an accounting string to
+designate a string as active or inactive for Accounting Validation. This will enable
+Admins to quickly adjust the validation as accounting strings become active/inactive.
+
+
+
+
+                                                                Release Preview 2/23/2023 3
+AUTO INVOICE DATE CALCULATION TOGGLE IN THE SUPPLIER RECORDS
+
+For companies where the delivery date determines the invoice start date,
+Administrators have the ability to enable the Auto Invoice Date Calculation setting
+within the Supplier record.   With the feature enabled, the delivery date specified
+during Goods Receipt (GR) creation will automatically populate as the Invoice Date on
+the supplier’s invoices.
+
+
+
+
+Note: Please contact the Vroozi support team to enable this toggle. This toggle setting
+will be saved and tracked on the Supplier change history page in future releases.
+
+
+
+TOGGLE FOR ADMINS TO CONFIGURE INVOICE CODING AND APPLY ALL
+DURING INVOICE EXCEPTION HANDLING
+
+This release introduces a new toggle in Invoice Coding Access, to allow Admins to
+enable or disable Coding and "Apply to All" functionality for Employee, Buyers, and AP
+Coders, during Exception Handling. Previously, these features required contacting
+Vroozi Support for activation. With this update, Admins have direct control over these
+settings.
+
+This is available on Accounts Payable => Settings => Preferences screen
+
+
+
+
+                                                                  Release Preview 2/23/2023 4
+Vroozi Purchase (Budget Approver)
+ACCOUNTING VALIDATION IN BUDGET WORKFLOW
+
+The Accounting Validation process will now be triggered when the budget approver
+approves a Purchase Request (PR). This will be applicable when both budget workflow
+and accounting validation features are enabled.
+
+
+
+
+Resolutions
+   ●   Improved processing time for large catalog files containing more than 900,000
+       items.
+   ●   Payment Terms in the Purchase Order header now appear in ascending order.
+
+
+
+
+                                                               Release Preview 2/23/2023 5
+●   Fixed an issue where the system populated the incorrect cost center when using
+    the Purchase Request line item bulk upload functionality.
+●   The system will now trigger accounting validation when an invoice, in Pending
+    status, is loaded or refreshed.
+●   When a user created a Goods Receipt (GR) for an invoice with GR exception, the
+    invoice was not routing to the right user/group for accounting validation errors.
+    The system now accurately detects and routes the invoice to the correct
+    user/group to resolve the accounting validation error.
+●   Tax Calculations will now be automatically updated in the invoice when a user
+    modifies the item quantity or unit price via inline editing.
+●   Previously, draft invoices generated from cXML could not be updated after
+    canceling the corresponding purchase orders. Users experienced a persistent
+    "required fields" error. Now, the draft invoices can be updated and saved
+    correctly for canceled POs.
+
+
+
+
+                                                               Release Preview 2/23/2023 6
+

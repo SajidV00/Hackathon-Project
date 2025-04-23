@@ -1,0 +1,103 @@
+October 27, 2023
+
+
+
+
+                   Vroozi October 2023
+                        Release Notes
+
+Table of Contents:
+Vroozi Purchase and Invoice (Administrator)                                 2
+   New Role: Accounts Payable Coder                                         2
+   Updated PO Layout to Display Custom Fields                               2
+Vroozi Purchase (Requesters, Buyers, and Central Receivers)                 3
+   Add PO Document Level Attachments during a Purchase Order Change Request
+   (POCR)                                                                   3
+Vroozi Invoice (Exception Handlers)                                         3
+   Coding for Exception Handlers                                            3
+Resolutions                                                                 4
+Vroozi Purchase and Invoice (Administrator)
+
+NEW ROLE: ACCOUNTS PAYABLE CODER
+
+Vroozi introduces a new role, AP Coder. Prior to this release, coding was a permission
+underneath the AP Processor and AP Approver Roles, which meant that non-AP users
+who needed to do coding were given more AP capabilities than just coding. With this
+release, AP Coder is a separate role that is no longer tied to the AP roles. Non-AP users
+can now be assigned the AP Coder role to just code documents.
+
+
+
+
+Note: Requesters and Buyers will be able to code their own invoices (ie: their
+requisitions and orders) by default when assigned. This new permission enables the
+user to code all invoices where they are assigned.
+
+
+
+UPDATED PO LAYOUT TO DISPLAY CUSTOM FIELDS
+
+
+We improved the PO line item custom field readability in the pdf PO layout. Previously
+suppliers could not get the information they needed from the PO line item custom
+fields because it was hard to discern one field from another when there were multiple
+fields. Now, each custom field is clearly and independently presented under the line
+item to improve the readability.
+
+
+
+
+                                                                   Release Preview 10/27/2023 2
+Vroozi Purchase (Requesters, Buyers, and
+Central Receivers)
+
+ADD PO DOCUMENT LEVEL ATTACHMENTS DURING A PURCHASE ORDER
+CHANGE REQUEST (POCR)
+
+Users can now add document level attachments to Purchase Orders during the
+Purchase Order Change Request (POCR) process. Previously, users could only add
+attachments to individual PO line item items.
+
+
+
+Vroozi Invoice (Exception Handlers)
+
+CODING FOR EXCEPTION HANDLERS
+
+Users assigned for exception processing will now be able to code documents during
+invoice exception resolution. Requesters will be able to code by default unless they are
+restricted from coding PRs and POs in their user profile. Other exception handlers will
+require the new AP Coder role (see “New Role: AP Coder” under the Vroozi Purchase
+and Invoice (Admin) section) to be assigned to them to code an invoice in exception.
+
+
+
+
+Note: Contact Vroozi Support if you want this feature activated. The configuration is
+not yet available in the Vroozi Admin Panel. Currently, a user will only be made aware
+of coding changes if they view the audit trail in the invoice.
+
+
+
+
+                                                                  Release Preview 10/27/2023 3
+Resolutions
+ ●   Users with “Restrict Coding of PR/PO” in their user profile will no longer be able to
+     make changes to coding during the PO Change Request (POCR).
+ ●   Users tagged in a Goods Receipt will be redirected to the relevant Goods Receipt
+     page from the Notifications section.
+ ●   Fixed an issue where a newly added line item in the POCR did not update the
+     version of the PO, did not show in the PO Audit trail, and did not show on the PO
+     PDF document when a Preset was applied in the Apply to All.
+ ●   When attachments are added to a PO document during a POCR, it will show
+     properly in the PO Audit trail and in the Attachments section.
+ ●   All exception handlers in a group will now be able to view invoices assigned to the
+     group for exception resolution.
+ ●   Previously, specific pdf invoices did not display completely. Now, the invoices will
+     render properly.
+
+
+
+
+                                                                   Release Preview 10/27/2023 4
+

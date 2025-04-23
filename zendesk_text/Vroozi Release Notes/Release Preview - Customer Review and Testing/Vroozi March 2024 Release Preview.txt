@@ -1,0 +1,140 @@
+February 23, 2024
+
+
+
+
+                        Vroozi March 2024
+                           Release Preview
+
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                               2
+   Accounting String Bulk Upload                                              2
+   Status Field on Create/Edit Accounting String Modal                        3
+   Auto Invoice Date Calculation Toggle for Supplier Records                  4
+   Unified Exception Handling Configuration Toggle in Invoice Coding Access   4
+Vroozi Purchase (Budget Approver)                                             5
+   Accounting Validation in Budget Workflow                                   5
+Resolutions                                                                   5
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming March 15th, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on February 24th, 2024.
+
+
+
+
+Vroozi Purchase (Administrator)
+ACCOUNTING STRING BULK UPLOAD
+
+Administrators will be able to upload the accounting string from the UI using XLSX or
+CSV file format. Administrators will also have the ability to download the template or
+export the data. If there are any validation errors, an error report will also be available for
+the Administrator to download.
+
+Please contact support if you want the accounting string feature to be enabled.
+
+Note: For data exports, when the accounting string records reach up to 1 million, the
+system will facilitate downloading in XLSX format. Should the export exceed this
+threshold, the system will automatically switch to CSV format, as XLSX cannot
+accommodate over 1 million records.
+
+
+
+
+                                                                       Release Preview 2/23/2023 2
+STATUS FIELD ON CREATE/EDIT ACCOUNTING STRING MODAL
+
+A new field “Status” has been added on create/edit accounting string modal.
+Administrator will have the option to keep a string active or inactive, in addition to the
+validity period. This will give more flexibility to the Administrator to use duration or
+status field.
+
+
+
+
+                                                                     Release Preview 2/23/2023 3
+AUTO INVOICE DATE CALCULATION TOGGLE FOR SUPPLIER RECORDS
+
+Administrators now have the ability to enable the Auto Invoice Date calculation setting
+within the Supplier record. This enhancement guarantees that the setting is
+automatically activated for new suppliers, offering convenience and ensuring
+consistency for clients leveraging this feature.
+
+
+
+
+The new feature streamlines invoice management for Admins, offering a toggle to
+easily manage the Auto Invoice Date Calculation setting in Supplier records. This
+ensures consistency across the system, eliminates manual configuration for each
+supplier, and reduces administrative overhead.
+
+Note: Please contact the Vroozi support team to enable this feature. This toggle setting
+will be saved and tracked on the Supplier change history page in the future releases.
+
+
+
+UNIFIED EXCEPTION HANDLING CONFIGURATION TOGGLE IN INVOICE
+CODING ACCESS
+
+This release introduces a new toggle feature in Invoice Coding Access, allowing Admins
+to enable or disable Coding and "Apply to All" functionality for Employee, Buyers, and
+AP Coders, during Exception Handling. Previously, these features required contacting
+Vroozi Support for activation, and users could only track coding changes through the
+invoice audit trail. With this update, Admins have direct control over these settings,
+providing a streamlined and user-friendly experience for managing Exception Handling
+processes.
+
+This is available on Accounts Payable => Settings => Preferences screen
+
+
+
+
+                                                                   Release Preview 2/23/2023 4
+Vroozi Purchase (Budget Approver)
+ACCOUNTING VALIDATION IN BUDGET WORKFLOW
+
+The Accounting Validation process will now be triggered when the budget approver
+approves a PR. This will be applicable when both budget workflow and accounting
+validation features are enabled.
+
+
+
+
+Resolutions
+   ●   Improved processing time for large catalog files containing more than 900,000
+       items.
+   ●   Changed how Payment Terms appear in the Purchase Order header. The listed
+       options now appear in ascending order.
+   ●   Fixed an issue where the system was populating the incorrect cost center, when
+       using the PR line item bulk upload functionality.
+
+
+
+
+                                                                 Release Preview 2/23/2023 5
+●   The system will trigger accounting validation when the invoice is loaded or
+    refreshed while a document is in Pending status.
+●   A bug concerning the automation of Exception Handling on Invoices after a
+    Goods Receipt (GR) creation, specifically regarding accounting string exceptions,
+    has been resolved. The system now accurately detects and manages this
+    scenario, guaranteeing seamless invoice processing despite accounting
+    validation errors occurring after GR creation.
+●   A bug concerning the failure of tax calculations to update automatically when
+    modifying item quantity or unit price via inline editing on the Create Invoice
+    screen has been resolved.
+●   A bug was fixed where draft invoices generated from CXML invoices couldn't be
+    updated after their corresponding purchase orders were canceled. Previously,
+    users experienced a persistent "required fields" error at the bottom of the invoice
+    page, hindering data saving at the backend. This fix allows details to be saved
+    correctly, ensuring smooth invoice processing even with canceled purchase
+    orders.
+
+
+
+
+                                                                 Release Preview 2/23/2023 6
+

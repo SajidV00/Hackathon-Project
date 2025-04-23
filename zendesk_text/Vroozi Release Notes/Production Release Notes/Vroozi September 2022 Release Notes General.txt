@@ -1,0 +1,147 @@
+September 30th, 2022
+
+
+
+
+                Vroozi September 2022
+                         Release Notes
+
+Table of Contents:
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)           2
+   Central Receiver can Initiate a PO Change Request (POCR)                      2
+   PO Change Request (POCR) Initiates Approval Workflow for only Financial Changes
+   3
+   New searches in the PO Status Page                                            4
+
+Vroozi Invoice (AP Managers, AP Processors)                                     4
+   Typeahead search performance improvements in invoice line items              4
+
+Vroozi Intelligence for Accounts Payable Invoice Automation (APIA) (AP
+Processors)                                                                     5
+   Contextual information in the Invoice Hopper                                 5
+   PO matching with just partial information                                    6
+   More Auto Consolidation                                                      7
+
+Resolutions                                                                     9
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+
+CENTRAL RECEIVER CAN INITIATE A PO CHANGE REQUEST (POCR)
+A Central Receiver has the ability to use the Purchase Order Status page to search for
+any Purchase Order that is made available to them via user permissions. Central
+Receivers can now initiate a PO Change Request (POCR) on those Purchase Orders.
+
+
+
+A User can be assigned the Central Receiver Role in Master Data -> Users. Access to
+company codes is also defined in the user master record.
+
+
+
+
+With the right permissions, users can search and access the orders in the PO Status
+page.
+
+
+
+
+                                                                   Release Notes 8/20/2022 2
+In the order the user can initiate the PO Change Request.
+
+
+
+
+PO CHANGE REQUEST (POCR) INITIATES APPROVAL WORKFLOW FOR
+ONLY FINANCIAL CHANGES
+
+
+
+
+                                                            Release Notes 8/20/2022 3
+Only financial changes to purchase orders will trigger an approval workflow based on
+configuration. Non-financial changes to purchase orders eg: accounting, category, and
+dates will not trigger an approval workflow.
+
+
+
+
+NEW SEARCHES IN THE PO STATUS PAGE
+In the PO status page, users have additional search terms. Users can search PO name
+and item numbers (manufacturer part number, part number, and sku).
+
+
+
+
+Vroozi Invoice (AP Managers, AP Processors)
+TYPEAHEAD SEARCH PERFORMANCE IMPROVEMENTS IN INVOICE LINE ITEMS
+
+   ● Users will see noticeable performance improvements in typeahead searches
+      for invoice item level drop down fields. The search results will display much
+      faster as users type into the drop down field.
+
+
+
+
+                                                                   Release Notes 8/20/2022 4
+Vroozi Intelligence for Accounts Payable
+Invoice Automation (APIA) (AP Processors)
+
+CONTEXTUAL INFORMATION IN THE INVOICE HOPPER
+
+Vroozi Intelligence will provide contextual information in the invoice hopper so AP
+Processors can possibly match open POs (eg: supplier didn’t provide the PO number on
+the invoice) and view historical volumes.
+
+See the blue bar at the top of the screen shot.
+
+
+
+
+                                                                Release Notes 8/20/2022 5
+PO MATCHING WITH JUST PARTIAL INFORMATION
+
+During invoice creation and data entry, Vroozi Intelligence will match POs based on
+partial information.
+
+1. Suppliers only specify the rightmost numeric portion of the PO.
+
+2. Suppliers miss a 0 as part of the PO #.
+
+
+
+
+                                                                     Release Notes 8/20/2022 6
+MORE AUTO CONSOLIDATION
+
+Companies who have been using auto consolidation will now see more scenarios
+where the invoice line items are automatically consolidated
+
+
+
+The setting to automatically consolidate invoice items is under Admin -> AP Settings ->
+Preferences -> Vroozi Intelligence.
+
+
+
+
+                                                                   Release Notes 8/20/2022 7
+Multiple invoice items will be presented as a single line item. Users can restore the
+multiple invoice line items using “Restore Item(s)”.
+
+
+
+
+.
+
+
+
+
+                                                                     Release Notes 8/20/2022 8
+Resolutions
+ ●   No resolutions this release
+
+
+
+
+                                   Release Notes 8/20/2022 9
+

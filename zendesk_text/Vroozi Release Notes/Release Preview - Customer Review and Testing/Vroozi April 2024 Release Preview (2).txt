@@ -1,0 +1,143 @@
+March 29, 2024
+
+
+
+
+                         Vroozi April 2024
+                          Release Preview
+
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                            2
+   Auto Invoice Date Calculation in the Supplier Bulk Upload Template                      2
+   Auto Invoice Date Calculation Setting in the Supplier History                           2
+   More Granular Conditions for Dynamic Workflow                                           3
+   Dynamic Workflow for Payment Requests                                                   5
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)                     6
+   Highlight Selected Comment in Document Side Panel when coming from an Email Notification6
+Resolutions                                                                                7
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming April 19th, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on March 29th, 2024.
+
+
+
+
+Vroozi Purchase (Administrator)
+
+AUTO INVOICE DATE CALCULATION IN THE SUPPLIER BULK UPLOAD
+TEMPLATE
+
+In the previous release, Vroozi introduced a new toggle in the Supplier Master Record to
+enable Auto Invoice Date Calculation (eg: invoice date calculated based on the Receipt
+date). Auto Invoice Date Calculation can now be activated by supplier in the supplier
+bulk upload file.
+
+The column heading in the file is AUTO_INVOICE_DATE_CALCULATION
+
+Note: Please contact the Vroozi Support team to enable Auto Invoice Date Calculation.
+
+
+
+AUTO INVOICE DATE CALCULATION SETTING IN THE SUPPLIER HISTORY
+
+The system now tracks changes made to the Allow Auto Invoice Date Calculation
+toggle in the supplier master data record under “Change History”.
+
+This will be available to customers using the Auto Invoice Date Calculation feature.
+
+
+
+
+                                                                   Release Preview 3/29/2024 2
+MORE GRANULAR CONDITIONS FOR DYNAMIC WORKFLOW
+
+Companies can configure more flexible approval rules with Vroozi’s new Dynamic
+Workflow.     When creating conditions to trigger workflows, company Admins can
+create more granular conditions by adding more organizational and accounting
+objects that are not seen as “Duplicate Approval Rule” issues. Previously, admins faced
+restrictions when creating approval rules that belonged to the same accounting family.
+
+Admins can create multiple conditions, but if the system identifies multiple approval
+rules for a document, it will default to sending the document to the Fallback AP
+Approver for approval.
+
+
+
+
+                                                                 Release Preview 3/29/2024 3
+Release Preview 3/29/2024 4
+Note: This applies to customers using Vroozi’s Dynamic Workflow. Customers who do
+not have the Dynamic Workflow feature enabled will need to contact the Support Team
+to activate it.
+
+
+
+DYNAMIC WORKFLOW FOR PAYMENT REQUESTS
+
+Companies can now apply the new Dynamic workflow to Payment Requests.
+
+
+
+
+                                                              Release Preview 3/29/2024 5
+Customers using Payment Requests and the Dynamic Workflow will see the option to
+select Payment Requests when configuring the workflow rules.
+
+
+
+
+To enable the Dynamic Workflow for Payment Requests, contact Vroozi Support or
+Customer Success.
+
+
+
+
+Vroozi Invoice (AP Processor, AP Approvers,
+AP Coders and AP Managers)
+
+HIGHLIGHT SELECTED COMMENT IN DOCUMENT SIDE PANEL WHEN
+COMING FROM AN EMAIL NOTIFICATION
+
+
+
+
+                                                            Release Preview 3/29/2024 6
+When users navigate from an email notification to a message, the selected comment is
+now highlighted in the document side panel comments. Users can now easily identify
+the specific comment in which they were tagged.
+
+
+
+
+Resolutions
+   ●   Gif files are now filtered to reduce logo files that appear in the invoice hopper.
+   ●   We provided a fix for how the system was rounding the calculated tax value to
+       the nearest decimal in the Purchase Request and Purchase Order.
+   ●   Users are no longer able to specify a negative value in the unit price field for line
+       items in the PR and PO.
+   ●   The system now updates the line item tax when a user copies an existing PR and
+       then manually edits the line items.
+
+
+
+
+                                                                     Release Preview 3/29/2024 7
+●   PO document history would show the unit price for newly copied line items
+    added in a POCR, as “0” even though the unit price was not zero.
+●   The system will now enforce inactive Buyer Groups when copying a Purchase
+    Request.
+●   The system assigns the correct cost centers for the company code (where there
+    are cost centers assigned to multiple company codes) in a Purchase Request
+    bulk upload.
+●   Suppliers can use ellipsis to view the complete item description in a RFQ bid.
+
+
+
+
+                                                             Release Preview 3/29/2024 8
+

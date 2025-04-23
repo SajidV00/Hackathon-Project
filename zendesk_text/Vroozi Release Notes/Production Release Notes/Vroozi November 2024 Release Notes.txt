@@ -1,0 +1,105 @@
+November 15, 2024
+
+
+
+
+                Vroozi November 2024
+                         Release Notes
+
+Table of Contents:
+Vroozi Administration (Admin)                              2
+   Company Code Restrictions for AP Managers               2
+Vroozi Purchase (Supplier)                                 3
+   Highlighting Canceled Line Items in an Updated PO PDF   3
+Resolutions                                                3
+Vroozi Administration (Admin)
+
+COMPANY CODE RESTRICTIONS FOR AP MANAGERS
+
+Administrators can restrict an Accounts Payable Manager’s visibility to Invoices and Memos
+by Company Code. This allows companies to create invoice processing strategies across
+multiple company codes and restrict invoices that need to be processed by the relevant
+company code.
+
+To enable this feature, please contact support@vroozi.zendesk.com. When enabled,
+Admins configure the restriction under Accounts Payable > Settings >Inbox > Structured
+Document Submission Access Rules.
+
+This feature is related to the ‘Restricting Inbox Visibility for AP Managers’ feature that was
+released in October 2024, where companies could restrict AP Managers to specific invoices
+defined in the inbox access rules (as opposed to AP Managers seeing all invoices).
+
+Currently this feature is rolled out to AP Managers. In future releases, we plan to include AP
+Approvers, AP Coders, and AP Auditor roles.
+
+
+
+
+                                                                       Release Notes 11/15/24 2
+Vroozi Purchase (Supplier)
+
+HIGHLIGHTING CANCELED LINE ITEMS IN AN UPDATED PO PDF
+
+Canceled line items on a Purchase Order Change Request will now be displayed more
+prominently on the PDF document that is sent to the supplier. This will provide better
+visibility into what line items were canceled on the new PO version.
+
+This feature will be available by default on all POCR documents that are sent to the supplier.
+
+
+
+
+Resolutions
+   ●   PRs that were auto-forwarded during Approval incorrectly display the Fallback
+       Approver as part of the approval chain. The Fallback Approver will no longer
+       display when a PR is auto-forwarded.
+   ●   The system will now account for deleted unreceived items in a PO Change
+       Request (POCR) to update the PO status to RECEIVED.
+   ●   Notes will no longer be duplicated for rejected POCRs where the user updated
+       the Supplier Notes.
+
+
+
+
+                                                                       Release Notes 11/15/24 3
+●   Users will be able to delete items on a rejected PO Change Request so they can
+    update and resubmit.
+●   Users will be able to access the side panel on a mobile device when in landscape
+    mode.
+●   The PO Search filter will now include POs created via Buy Route.
+●   When an admin eliminates roles in user profile, the change will be reflected in
+    the user bulk upload.
+●   Resolved an inconsistency in quantity displayed. An internal catalog would
+    appear as, “1”, but when transferred to the cart the system would display “1.0”.
+●   Eliminated the duplicate attachment when a Sourcing Reviewer uploaded an
+    attachment on a POCR.
+●   “Track All Invoices” sort by feature would display the correct results in the table.
+    However when a user entered the document view and navigated to the next
+    invoice using the arrow buttons, the search results and sorting was not
+    maintained. The next invoice in the document view will now follow the sort
+    display.
+●   Resolved an issue where the GL Account was not displayed on the Invoice PDF.
+●   Users can now view, create, and process invoices from the hopper without losing
+    their place in their work list eg: not be disrupted by new incoming invoices.
+●   Clients using the line-item configuration settings for AP documents, along with
+    the Customer field, should see the document settings (Required, Optional, or
+    Hidden) applied when valid accounting objects are used in the invoice line item
+    that are associated with one or more valid customers in the system.
+●   Fixed the issue where AP users with both AP Manager and AP Processor roles
+    were unable to see invoices in the Hopper.
+●   Resolved the issue where AP Processors could view and take action on Supplier
+    Portal invoices from the Hopper that did not follow the Structured access rule.
+●   Clients who were not using any accounting categories received a "Cost Center
+    required" error message on Non-PO OCR Invoice documents. This issue has
+    been corrected.
+●   For non-catalog items without a Unit of Measure (UOM), the system assigns “AU”
+    if that exists in the company’s UOM master data. Otherwise, UOM is left blank.
+    For catalog items, the UOM is taken from the catalog UOM.
+●   Users can now update the delivery date or service period on line items during PO
+    Change Requests.
+
+
+
+
+                                                                  Release Notes 11/15/24 4
+

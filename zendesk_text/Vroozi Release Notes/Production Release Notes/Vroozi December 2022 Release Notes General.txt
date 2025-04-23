@@ -1,0 +1,138 @@
+December 9th, 2022
+
+
+
+
+                 Vroozi December 2022
+                          Release Notes
+
+Table of Contents:
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)     2
+   PO Cancellation when orders have been received                          2
+   User can now add or update notes during PO Change Request               4
+
+Vroozi Purchase (Admin)                                                    4
+   Custom Labels can be defined for Accounting and Organization Elements   4
+   Sub-menus for Document => Settings                                      5
+
+Vroozi Intelligence for Accounts Payable Invoice Automation (APIA) (AP
+Processors)                                                                6
+   Vroozi Intelligence will match potential POs for Non PO cXML Invoices   6
+   Vroozi Intelligence will recognize Credit Memos                         7
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+
+PO CANCELLATION WHEN ORDERS HAVE BEEN RECEIVED
+A user will be able to cancel a PO document that has been received but not yet completely
+invoiced (ie: an invoice against the PO has not been posted).
+
+Previously, a user did not have the option to cancel a PO if it had been partially received. This was
+only possible by canceling each line item after doing a PO Change Request (POCR).
+
+A user will now see the option to Cancel Purchase Order on the PO Status and PO Detail screens.
+
+On the PO Status screen, it will be available under the Action & Filter menu
+
+
+
+
+On the PO Detail screen, the Cancel PO option will be available until an invoice is posted for at
+least 1 item.
+
+
+
+
+                                                                               Release Notes 11/4/2022 2
+If a user cancels the PO, a confirmation message will appear:
+
+
+
+
+When a PO is canceled, a Goods Return will be created automatically for the items that have been
+received
+
+
+
+
+                                                                          Release Notes 11/4/2022 3
+If an Invoice is Posted for an Item, the Cancel Purchase Order option will not be available to the
+user. If there are line items in the Purchase Order that have not been invoiced and the user wants
+to cancel the purchase order, then the user will have to manually cancel each remaining line item
+by doing a PO Change Request (POCR).
+
+
+
+
+USER CAN NOW ADD OR UPDATE NOTES DURING PO CHANGE REQUEST
+The notes section in a PO during a Change Request is now editable. Users making
+changes to a PO can add or update the notes.
+
+
+
+
+Vroozi Purchase (Admin)
+CUSTOM LABELS CAN BE DEFINED FOR ACCOUNTING AND ORGANIZATION
+ELEMENTS
+Admins can rename the accounting and organizational elements to better describe
+how they are being used by the company. Changing names can be done in the Admin
+Panel under Documents (Documents => Custom Labels). The Admin can define the
+custom label for:
+
+   ●   Cost Centers
+   ●   GL Accounts
+   ●   Customer
+   ●   Location
+   ●   Location Type
+   ●   Class
+
+
+
+
+                                                                            Release Notes 11/4/2022 4
+   ●   Company Code
+   ●   Plant
+   ●   Purchasing Org.
+
+
+
+
+SUB-MENUS FOR DOCUMENT => SETTINGS
+Lots of options to change the PO settings deserve a separate menu. Under Documents
+=> Settings in the Admin Panel, there is a selection for Purchase Order settings and All
+Documents.
+
+
+
+
+                                                                    Release Notes 11/4/2022 5
+Vroozi Intelligence for Accounts Payable
+Invoice Automation (APIA) (AP Processors)
+
+VROOZI INTELLIGENCE WILL MATCH POTENTIAL POS FOR NON PO CXML
+INVOICES
+
+In the last release, we introduced the feature for AP Processor to match open POs to
+the Email based Invoices in Hopper. In this release AP Processor can now match open
+POs to the cXML based Invoices.
+
+A user can assign a PO from the action column added to the PO lookup overlay.
+
+
+
+
+                                                                  Release Notes 11/4/2022 6
+A Vroozi Invoice will then be created and matched to the PO selected.
+
+
+
+
+VROOZI INTELLIGENCE WILL RECOGNIZE CREDIT MEMOS
+
+Based on Vroozi Intelligence’s cognitive recognition, Vroozi will display a Create Memo
+button to create a Credit Memo from an email attachment in the hopper.
+
+
+
+
+                                                                    Release Notes 11/4/2022 7
+

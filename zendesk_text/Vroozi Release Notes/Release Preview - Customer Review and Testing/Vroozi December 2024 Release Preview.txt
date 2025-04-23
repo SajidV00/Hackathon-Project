@@ -1,0 +1,78 @@
+November 26, 2024
+
+
+
+
+                  Vroozi December 2024
+                         Release Preview
+
+Table of Contents:
+Vroozi Analytics                                                                      2
+   Invoice Exception Tracking in Reporting                                            2
+Vroozi Invoice                                                                        2
+   Approval Preview in Invoices, Memos, and Payment Requests                          2
+Resolutions                                                                           4
+
+
+
+
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming December 13, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on November 25, 2024.
+Vroozi Analytics
+
+INVOICE EXCEPTION TRACKING IN REPORTING
+
+Invoice exception types will now be stored in the analytics database. The system will
+now capture the exceptions as the invoice transitions through various statuses and
+eventual resolution. Users with reporting access will gain insights into why invoices go
+into exception handling and how the exceptions are eventually resolved. Ultimately the
+analysis will help to reduce exceptions or to resolve exceptions faster over time.
+
+This feature will be available by default and accessible by companies with Ad Hoc
+reporting. The Vroozi team will deliver standard exception reports for all customers in
+an upcoming release. Note that the exception types will be available on any newly
+created documents (ie: it will not be available for historical invoices created prior to this
+release).
+
+
+
+Vroozi Invoice
+
+APPROVAL PREVIEW IN INVOICES, MEMOS, AND PAYMENT REQUESTS
+
+For companies using the new dynamic workflow, Invoices, Memos, and Payment
+Requests will now display an approval preview in the right-hand document menu.
+Users in the AP documents can now confirm that the document will follow the proper
+workflow.
+
+This feature will be enabled automatically for all customers who have the Dynamic
+Workflow enabled. To enable the dynamic workflow, please contact Customer Support
+or email Customer Success at success@vroozi.com
+
+
+
+
+                                                                             Release Preview 2
+Release Preview 3
+Resolutions
+ ●   The system will now display auto-created invoices to AP Processors in the
+     absence of Structured Document Submission Access Rules.
+ ●   Resolved a rounding issue with 50% distribution that prevented Payment
+     Requests from posting successfully into the ERP system.
+ ●   Fixed an issue introduced into the line item modal in the last release that
+     allowed service line items to be created with a $0.00 price. It is once again no
+     longer possible to have line items in the PR / PO with a $0.00 price.
+ ●   Delivered a more appropriate error response when a cXML order confirmation
+     was submitted for a Confirmed Order. The system previously returned a null
+     pointer exception.
+
+
+
+
+                                                                      Release Preview 4
+

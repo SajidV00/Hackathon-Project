@@ -1,0 +1,107 @@
+October 11, 2024
+
+
+
+
+                   Vroozi October 2024
+                          Release Notes
+
+Table of Contents:
+Vroozi Administration (Admin)                                     2
+   Line Item Field Configuration for AP Documents (More Fields)   2
+   Option to Restrict Invoice Inbox Visibility for AP Managers    4
+Vroozi Purchase (Supplier)                                        6
+   More Prominent PO Cancellation status on the PO PDF            6
+Resolutions                                                       7
+Vroozi Administration (Admin)
+
+LINE ITEM FIELD CONFIGURATION FOR AP DOCUMENTS (MORE FIELDS)
+
+Admins can set fields such as Cost Center, WBS, Internal Order, Profit Center, GL Account
+and Plant as optional, required, or hidden for Invoices and Memos. The settings now apply
+to AP documents line items to ensure fields are handled consistently across all
+Procure-to-Pay documents.
+
+To enable this feature, please contact support@vroozi.zendesk.com. Once enabled, line
+item fields in AP documents will adhere to the configured settings.
+
+
+
+
+                                                                   Release Notes 10/11/24 2
+Release Notes 10/11/24 3
+OPTION TO RESTRICT INVOICE INBOX VISIBILITY FOR AP MANAGERS
+
+If enabled, AP Managers will only see AP documents in the Hopper Inbox (“Document
+Inbox”) or Archive folder based on the Email Access or Structured Document Submission
+Access Rules. AP Managers will need to be explicitly assigned using the access rules to
+access AP documents in the inbox. Some companies allow AP Managers to access all
+documents, but if you want to restrict what the AP Managers can access, then this option
+will allow the restriction through the access rules.
+
+To enable this feature, please contact support@vroozi.zendesk.com. Once activated, AP
+Managers will see only the documents associated with their assigned Access Rules.
+
+
+
+The Access Rules can be defined in the Admin Panel under Accounts Payable => Settings
+=> Inbox under the sections “Email Access Rules” and “Structured Document Submission
+Access Rules”.
+
+
+
+
+                                                                  Release Notes 10/11/24 4
+Release Notes 10/11/24 5
+Vroozi Purchase (Supplier)
+
+MORE PROMINENT PO CANCELLATION STATUS ON THE PO PDF
+The canceled status will now be more prominent on a Purchase Order (PO) PDF so that
+suppliers clearly know that the order is canceled ie: not a new order.
+
+The PO pdf is generated and sent to the supplier after a user performs a Purchase Order
+Change Request (POCR). When items are canceled in an order, suppliers will now have
+better visibility into the status of the PO or PO Line items.
+
+
+
+
+                                                                  Release Notes 10/11/24 6
+Resolutions
+ ●   In Vroozi Purchase and Marketplace, users can now add fractional quantities to the
+     shopping cart from Punchout Catalogs items.
+ ●   If an item has an Item Model Number defined, the field will now be displayed in the
+     Purchase Request and Shopping Cart item details.
+ ●   Users can now customize the line item column display in the Payment Request.
+ ●   Vroozi Purchase
+         ○ Removed the GL display restriction (formerly 10 GLs) in the User Profile GL
+             Access field.
+         ○ Fixed searching in the Receipts => Ready to Receive screen. Prior to this
+             release, when the system would reset the documents list to the default state,
+             it didn’t recognize the user's new search query until the reset was complete.
+             Now the user can't enter a new value in the search field until the reset
+             operation on the screen is complete.
+         ○ PR and PO Line items will no longer be deleted after updating the supplier
+             master data.
+         ○ Resubmitting a Rejected Change Request after changing item data will
+             update the line item status to 'Change(s)' instead of 'New Addition'.
+         ○ Resolved a freezing issue in "Apply to All" caused by manually adding a %
+             sign in the Split by Percent value. The % value now defaults automatically,
+             eliminating the need for manual entry.
+ ●   Catalog change report will capture additional fields after a user updates the item
+     price via Direct Item Update.
+ ●   Fixed an issue where the configurable item checkbox functionality did not work
+     properly if existing items are updated via Merge & Update.
+ ●   Vroozi Invoice
+         ○ Improved Inbox, Invoice, and Track Invoice user experience on mobile.
+         ○ Users can now successfully select and replace an existing exception
+             percentage.
+ ●   Resolved an issue in the line item column selection (Invoice, Memo, and Purchase
+     Request) where the filtering options did not highlight relevant matches and caused
+     the Column Preferences list to reset upon selection.
+
+
+
+
+                                                                    Release Notes 10/11/24 7
+

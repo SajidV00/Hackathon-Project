@@ -1,0 +1,115 @@
+December 13, 2024
+
+
+
+
+                  Vroozi December 2024
+                            Release Notes
+
+Table of Contents:
+Vroozi Analytics                                                           2
+   Invoice Exception Tracking in Reporting                                 2
+Vroozi Invoice                                                             2
+   Approval Preview and Tracing in Invoices, Memos, and Payment Requests   2
+       Previous approval chain                                             4
+       Approval Chain - approval tracing                                   5
+Resolutions                                                                9
+Vroozi Analytics
+
+INVOICE EXCEPTION TRACKING IN REPORTING
+
+Invoice exception types will now be stored in the analytics database. The system will
+now capture the exceptions as the invoice transitions through various statuses and
+eventual resolution. Users with reporting access will gain insights into why invoices go
+into exception handling and how the exceptions are eventually resolved. Ultimately the
+analysis will help to reduce exceptions or to resolve exceptions faster over time.
+
+This feature will be available by default and accessible by companies with Ad Hoc
+reporting. The Vroozi team will deliver standard exception reports for all customers in
+an upcoming release. Note that the exception types will be available on any newly
+created documents (ie: it will not be available for historical invoices created prior to this
+release).
+
+
+
+Vroozi Invoice
+
+APPROVAL PREVIEW AND TRACING IN INVOICES, MEMOS, AND PAYMENT
+REQUESTS
+
+For companies using the new dynamic workflow, Invoices, Memos, and Payment
+Requests will now display an approval preview in the right-hand document menu.
+Users in the AP documents can now confirm that the document will follow the proper
+workflow.
+
+In addition, for invoice approvals that are in process, have completed, or have restarted
+due to rejection, the approval chain view shows the approval status and history,
+including approvers who have stepped into the process due to fallback approval, out of
+office, delegate approver, or AP Manager approval. Also, if workflow is changed and a
+new approval chain is created, Vroozi will display the previous chain information under
+“Previous Approval Chain” with a version number. The new Approval Preview and
+Tracing enables more complete invoice approval tracing to show what changed, and
+who approved.
+
+
+
+
+                                                                      Release Notes 12/13/24 2
+This feature will be enabled automatically for all customers who have the Dynamic
+Workflow enabled. To enable the dynamic workflow, please contact Customer Support
+or email Customer Success at success@vroozi.com
+
+
+
+
+                                                             Release Notes 12/13/24 3
+PREVIOUS APPROVAL CHAIN
+
+Where new approval chains are created as invoices are changed in the process, the
+system will maintain a view of the historical approval chains and version number.
+
+
+
+
+                                                                 Release Notes 12/13/24 4
+APPROVAL CHAIN - APPROVAL TRACING
+
+In the following screen shots, the approval chain shows where approvers have stepped
+into the approval chain because of fallback approval, out of office, delegate approver, or
+AP Manager approval.
+
+
+
+
+                                                                    Release Notes 12/13/24 5
+Release Notes 12/13/24 6
+Release Notes 12/13/24 7
+Release Notes 12/13/24 8
+Resolutions
+ ●   For companies who have not created structured document access rules for
+     invoices, the system will now assign auto-created invoices to AP Managers and
+     AP Processors using the correct default group.
+
+
+
+
+                                                              Release Notes 12/13/24 9
+●   For companies with email and structured invoice document access rules, AP
+    Processors will no longer see invoices if they are not assigned to any Email or
+    Structured Workflow Rules.
+●   cXML invoices with errors will now correctly appear for users configured in a
+    structured access rule.
+●   Resolved a rounding issue with 50% distribution that prevented Payment
+    Requests from posting successfully into the ERP system.
+●   Fixed an issue introduced into the line item modal in the last release that
+    allowed service line items to be created with a $0.00 price. It is once again no
+    longer possible to have line items in the PR / PO with a $0.00 price.
+●   Delivered a more appropriate error response when a cXML order confirmation
+    was submitted for a Confirmed Order. The system previously returned a null
+    pointer exception.
+
+
+
+
+                                                              Release Notes 12/13/24 10
+

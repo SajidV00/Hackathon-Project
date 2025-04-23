@@ -1,0 +1,59 @@
+January 10, 2025
+
+
+
+
+                      Vroozi January 2025
+                             Release Notes
+
+Table of Contents:
+Vroozi Analytics                             2
+   Vroozi Analytics Platform Upgrade         2
+Resolutions                                  3
+Vroozi Analytics
+
+VROOZI ANALYTICS PLATFORM UPGRADE
+
+Vroozi upgraded the Google Looker platform for Vroozi Analytics. This marks the first
+step in our journey to provide faster and enhanced analytics and to deliver on our
+migration to more advanced analytics and intelligent analytics. In this first step, Vroozi
+upgraded to the latest Looker Version for the latest features, performance
+enhancements, and security updates.
+
+
+
+
+The Analytics platform upgrade will unlock significant benefits:
+
+   ●   Faster Insights:
+   ●   Improved Performance and Scalability
+   ●   Unlock Intelligent Analytics with AI (Future Development)
+
+In the next phase of our journey, Vroozi will be updating the data model, leveraging the
+platform speed and scalability, and addressing performance and usability.
+
+
+
+
+                                                                             Release Notes 2
+Resolutions
+ ●   Improved Hopper Inbox document processing performance.
+ ●   Improved “Terms & Conditions” load time particularly where there were a
+     significant number of Company Codes or Suppliers.
+ ●   Resolved an issue affecting Purchase Order status updates when receiving and
+     canceling an ASN. When a user cancels the ASN and the PO's amount is within
+     the 'Goods Receipt Threshold' limit, the system will correctly update the
+     Purchase Order status to 'Confirmed' on both the Supplier Portal and Purchase
+     Manager.)
+ ●   Fixed Invoice status issue where "Paid" in Great Plains was incorrectly showing
+     "Posted" on the Vroozi invoice.
+ ●   For certain accounting and organizations Master Data objects; e.g. Cost Centers,
+     GL Accounts etc. the system was displaying leading zeros despite the client
+     having configured the system to NOT display these leading zeroes. This issue has
+     been resolved.
+
+
+
+
+                                                                       Release Notes 3
+

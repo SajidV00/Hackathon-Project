@@ -33,7 +33,7 @@ def create_and_save_faiss(docs, save_path="faiss_zendesk_store"):
 
 def load_zendesk_vectorstore(path="faiss_zendesk_store"):
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    return FAISS.load_local(path, embeddings)
+    return FAISS.load_local(path, embeddings,allow_dangerous_deserialization=True)
 
 def savePipline():
     docs = load_zendesk_documents()
@@ -69,6 +69,13 @@ User Query:
     
     return prompt_claude(prompt)
 
+
+def test_zendesk_chat_response(query):
+    vectorstore = load_zendesk_vectorstore()
+    response = chat_with_zendesk_context(query, vectorstore)
+    return response
+    #print("\n🤖 Claude's Response:")
+    #print(response)
 
 
 

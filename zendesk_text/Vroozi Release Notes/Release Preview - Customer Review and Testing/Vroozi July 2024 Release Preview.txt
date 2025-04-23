@@ -1,0 +1,190 @@
+June 7, 2024
+
+
+
+
+                           Vroozi July 2024
+                           Release Preview
+
+
+Table of Contents:
+Vroozi Administration (Admin)                                                           2
+   Admin Control for Out of Office Settings                                             2
+   Assign Alternative Approvers and Buyers in the User Profile                          5
+   Type Ahead Search to Assign Approvers                                                6
+   Accounting Validation Enhancements                                                   7
+      Accounting Validation Display on the Line Item View                               7
+      Provide missing Output Destination when the Accounting Validation is Successful   8
+      Add Approval Notes after the Accounting Validation is Successful                  8
+Resolutions                                                                             9
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming July 5th, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on June 7th, 2024.
+
+
+
+Vroozi Administration (Admin)
+
+ADMIN CONTROL FOR OUT OF OFFICE SETTINGS
+
+Admins now have the ability to control and manage the Out of Office (OOO) settings
+for users in the Admin Panel under Master Data > Users. To keep approvals moving
+when users forget to set up their own Out of Office configuration, the Out of Office
+settings can now be configured by the company’s Admin user.
+
+The user record now shows two tabs: “BASIC INFO” and “DELEGATION INFO”.
+
+   ●   “BASIC INFO” contains all the existing user settings, such as Basic Information,
+       Roles, Approval Settings, Document Defaults, etc.
+   ●   “DELEGATION INFO” (new) contains the Out of Office (OOO) settings that allow
+       Admins to efficiently manage OOO configurations based on the company's
+       policies and user roles.
+
+
+
+
+                                                                   Release Preview 06/07/2024 2
+In the configuration, the Admin can:
+    ● Define the validity period
+    ● Create a message
+    ● Set the Action and an Out of Office approver where applicable
+          ○ Next Approver - skips the person’s approval step and goes to the next step
+          ○ Specific Approver - select from an approver role in the system
+          ○ Do Not Forward
+
+
+
+
+                                                                Release Preview 06/07/2024 3
+The availability of the Delegation Tab is conditional upon the company's OOO settings
+and the user’s role.
+
+
+
+
+                                                                Release Preview 06/07/2024 4
+With Out of Office configuration on the user record, Admins now have greater control
+over OOO settings, especially for roles critical to keep approval workflows moving,
+including Financial Approvers, Payment Request Approvers, Sourcing Approvers, and
+Accounts Payable Approvers.
+
+
+
+
+ASSIGN ALTERNATIVE APPROVERS AND BUYERS IN THE USER PROFILE
+
+Company Admins now have the ability to assign Alternate Approvers and Buyers in the
+Admin Panel under Master Data > Users. On the Basic Info tab, the Alternative
+Approver is located in the Approval Settings and the Alternative Buyer is located under
+the Buyer Settings.
+
+
+
+
+                                                                 Release Preview 06/07/2024 5
+For the Alternate Approve, both approvers (approver and alternate) will get a
+notification to approve a document. Either approver can take action on that
+document. Similarly for the Alternate Buyer, the buyer and alternate will have the
+option to take action on the work item.
+
+Now Admins can assign alternate users to enhance the management of approval and
+purchasing workflows for faster and more flexible workflows.
+
+
+
+
+TYPE AHEAD SEARCH TO ASSIGN APPROVERS
+
+to assign an approver (eg: alternate, out of office, next approver) Vroozi introduces a
+user-friendly search field to quickly find and select an approver. Instead of scrolling
+through dropdowns, Admins can now use type ahead search to assign a person.
+
+
+
+
+                                                                    Release Preview 06/07/2024 6
+ACCOUNTING VALIDATION ENHANCEMENTS
+
+With Accounting Validation enabled, companies can make sure that valid accounting
+combinations are used in the purchasing documents. In this release, the Vroozi team
+delivered new features to enhance the validation and user experience. Please note that
+Accounting Validation needs to be enabled for your account.
+
+
+
+ACCOUNTING VALIDATION DISPLAY ON THE LINE ITEM VIEW
+
+The line item view now displays the results of the accounting validation so that users
+can take the specific actions to resolve the error(s). As the user is working in the line
+item view, the system will inform users immediately regarding any invalid accounting
+strings.
+
+
+
+
+                                                                    Release Preview 06/07/2024 7
+PROVIDE MISSING OUTPUT DESTINATION WHEN THE ACCOUNTING VALIDATION IS
+SUCCESSFUL
+
+When the Output destination is missing from the Supplier record and the system
+needs to prompt the user for the next step, the system will only prompt the user when
+the accounting validation is successful.
+
+ADD APPROVAL NOTES AFTER THE ACCOUNTING VALIDATION IS SUCCESSFUL
+
+Vroozi will run the accounting validation upon the approval of the Purchase Request
+and will only ask the approver to add approval notes if the accounting validation is
+successful. In case of an invalid accounting string, the system will only display the error
+for the accounting validation error and will not show the Add Approval Notes prompt.
+
+
+
+
+                                                                    Release Preview 06/07/2024 8
+Resolutions
+ ●   Resolved an issue where the catalog item details page would get stuck loading
+     due to a missing supplier logo.
+ ●   The system now properly searches documents based on Company Code.
+ ●   Drag-and-drop file attachment functionality now works as expected, allowing
+     users to attach files seamlessly.
+ ●   The PO closing notification email has been re-translated into Japanese.
+ ●   When invoices with 0 tax are created from PR/POs using OCR, the tax value on
+     the invoice accurately reflects zero tax.
+ ●   Tax amounts will now recalculate upon adding or updating tax codes in Apply to
+     All.
+ ●   For partial invoices, we adjusted the tolerance percentage calculation method to
+     consider the entire invoiced quantity rather than just the remaining amount.
+ ●   cXML, Supplier Portal, and Hopper invoices will only be displayed to relevant
+     users in the Document Flow.
+ ●   The system will no longer revert to a limited line item view after updating an
+     invoice line item . The system will continue to "Show all" if that’s where the user
+     started.
+ ●   "Apply to All" on non-PO Invoices will no longer trigger an error when there’s a
+     missing company code.
+ ●   AP users can search for invoice line items regardless of letter case.
+ ●   OCR icons will now be displayed correctly for all relevant fields ie: where the
+     system entered data.
+ ●   Requesters with Admin roles will only see Accept/Reject after exception
+     resolution on system-generated invoices (e.g., cXML or OCR) based on
+     structured document rules matches, or defaults to the AP Processor/Manager
+     group if no matches are found.
+ ●   The system will now release the budget amount upon PO cancellation.
+ ●   The supplier acknowledgment button will now be visible in the POCR
+     Confirmation email in all cases where this has been enabled for a supplier.
+ ●   We fixed how categories are sorted on the PR/PO line item view. The list of
+     categories will now follow the same sorting order as Category Management in
+     the Admin panel.
+ ●   We did a re-translation in Japanese for the labels used on the Save & Confirm
+     action buttons during Goods Receipt (GR) creation.
+ ●   Customers with a company code restriction in their user profile will now be able
+     to use the PR bulk upload without errors.
+
+
+
+
+                                                                  Release Preview 06/07/2024 9
+

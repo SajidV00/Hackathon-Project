@@ -1,0 +1,64 @@
+February 14, 2025
+
+
+
+
+                    Vroozi February 2025
+                        Release Notes
+
+Table of Contents:
+Vroozi Catalog Content Management (Catalog Admins)​      2
+   Catalog Update Processing Performance Improvements​   2
+Resolutions​                                             2
+Vroozi Catalog Content Management (Catalog
+Admins)
+
+CATALOG UPDATE PROCESSING PERFORMANCE IMPROVEMENTS
+
+With this release, Vroozi improved catalog upload and processing. Previously, some
+users experienced slower processing times when updating catalogs particularly when
+there were a significant number of catalog versions. We overhauled our processing
+logic to ensure more efficient handling of catalog updates. With this change, our
+testing showed faster, more consistent, and more reliable performance no matter how
+many catalog versions were in the system.
+
+   ●​ Time Savings: Customers will get significantly reduced processing times, even for
+      heavily updated catalogs.
+   ●​ Consistency: The system will exhibit reliable performance regardless of how
+      many catalog versions.
+   ●​ Scalability: Customers will be able to handle frequent updates without worrying
+      about diminishing system efficiency.
+
+This enhancement will be available to all customers. No configuration change is
+required.
+
+
+
+
+Resolutions
+   ●​ The unread notification count on the bell icon (bottom left corner of the left
+      navigation column) will now update automatically. The notification count will
+      now update dynamically as new notifications arrive, ensuring accurate and
+      real-time badge counts. No need to refresh the browser to update the count.
+   ●​ Resolved an issue on the shopping cart screen where the “Move to Request”
+      button remained enabled during processing, allowing multiple clicks and
+      causing duplicate purchase requests. The button is now disabled after the
+      request click until the operation is complete, preventing duplicates.
+   ●​ Fixed an issue where updating the shipping address at the Purchase Request
+      (PR) document level did not propagate the change to individual line items. The
+      system now correctly replicates the updated address across all line items in the
+      PR.
+
+
+
+
+                                                                          Release Notes 2
+●​ The system now consistently removes leading zeroes on the UI as per the
+   configuration to hide leading zeros, while retaining the leading zeros in the
+   database.
+
+
+
+
+                                                                        Release Notes 3
+

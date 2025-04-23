@@ -1,0 +1,255 @@
+July 7, 2023
+
+
+
+
+                        Vroozi July 2023
+                          Release Notes
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                   2
+   New Purchase Request Configuration and Control When PO Output Method is
+   Missing in the Supplier Master Record                                           2
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)            4
+   New Processes for Requesters to Submit Purchase Requests when the PO Output is
+   Missing from the Supplier Master Record                                        4
+      Requesters can submit Purchase Requests when the PO Output is missing       4
+      Requesters can enter Ad Hoc emails for PO Output                             5
+   New PO Status “Pending Output” to Indicate the Purchase Orders that need further
+   attention for PO Output                                                         5
+Vroozi Invoice (AP Processors, AP Managers)                                       7
+   Including Drafts in the Duplicate Invoice/Memo Check Plus Real-time Checks     7
+   User Experience Enhancement to Navigate from Notifications to a Comment in the
+   Invoice/Memo Document                                                          9
+   Auto-Delete Non-PO Line Items when a User References a PO in an Invoice       10
+Vroozi Intelligence for Accounts Payable Invoice Automation (APIA) (AP
+Processors)                                                                       11
+   Improvements to Invoice-Order Matching                                         11
+Resolutions                                                                       11
+Vroozi Purchase (Administrator)
+NEW PURCHASE REQUEST CONFIGURATION AND CONTROL WHEN PO
+OUTPUT METHOD IS MISSING IN THE SUPPLIER MASTER RECORD
+
+When the PO Output method is missing on the supplier master record, an
+Administrator can now define controls for the PR (new) and PO (already available) to
+direct the document to the right follow-on process and to create visibility for orders
+that need further attention in order to send the PO to the supplier.
+
+Administrators can define the controls from the Admin Panel at Documents =>
+Settings => All Documents. Two new toggles have been introduced under the
+“Purchase Requests” section under “PR Submission Configuration”.
+
+
+
+
+   ●   Allow PR Submission without Supplier Output Method - Requesters will be
+       able to submit Purchase Requests when the PO Output method is missing from
+       the supplier master record.
+          ○ For Auto PO, POs will be created in the status “Pending Output” (new
+              status)
+          ○ For Buy Route, POs will be created in “Draft” status for Buyers to further
+              process.
+   ●   Allow PR Submissions to Ad-hoc email address when Supplier Output
+       Method is not given - Requesters will be able to provide an ad-hoc email
+       address for the PO output when submitting the Purchase Request.
+          ○ Please note: This is not applicable for companies using Buy Route. In Buy
+              Route, the buyer will provide the PO output method.
+
+
+
+
+                                                                      Release Notes 7/7/2023 2
+Note: Specific Requesters need to be given permission in their user master data to be
+able to add the ad-hoc email address
+
+
+
+
+Note: Change to the Admin Panel UI for the PO configuration
+
+Please note that the second option for the PO configuration, “Allow PO Submissions to
+Ad-hoc email address”, no longer has the sub option “Allow Requesters to provide
+alternate output email addresses”. That is now controlled through the new Purchase
+Request configurations.
+
+
+
+
+See the January 2023 Release Notes for a description of the PO Submission
+configuration when the Supplier Output Method is missing.
+
+
+
+
+                                                                    Release Notes 7/7/2023 3
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+
+NEW PROCESSES FOR REQUESTERS TO SUBMIT PURCHASE REQUESTS
+WHEN THE PO OUTPUT IS MISSING FROM THE SUPPLIER MASTER RECORD
+
+
+
+REQUESTERS CAN SUBMIT PURCHASE REQUESTS WHEN THE PO OUTPUT IS MISSING
+When “Allow PR Submission without Supplier Output Method” is enabled, Requesters
+will be able to submit Purchase Requests when the PO Output method is missing from
+the supplier master record for one or more of the PR lines.
+
+When requesters submit Purchase Requests with missing PO Output, they will see an
+on-screen notification that the PO Output is missing and will have a choice to submit
+the PR or cancel.
+
+
+
+
+   ●   When the user selects “Submit”:
+         ○ For automatically generated POs (ie: Auto PO), POs will be created in the
+            status “Pending Output” (new status)
+         ○ For Buy Route, POs will be created in “Draft” status for Buyers to further
+            process.
+
+
+
+
+                                                                    Release Notes 7/7/2023 4
+REQUESTERS CAN ENTER AD HOC EMAILS FOR PO OUTPUT
+
+With “Allow PR Submissions to Ad-Hoc email address when Supplier Output Method is
+not given” enabled, Requesters will be able to enter an email address in the Purchase
+Request for the PO output.
+
+When requesters submit the Purchase Request, they will see an on-screen notification
+that the PO Output is missing and will be given the option to supply the email address
+for the PO output.
+
+
+
+
+The PO will be submitted to the supplier using the email address provided.
+
+
+
+
+NEW PO STATUS “PENDING OUTPUT” TO INDICATE THE PURCHASE
+ORDERS THAT NEED FURTHER ATTENTION FOR PO OUTPUT
+
+For suppliers that do not have a PO Output method defined in the supplier master
+record, the system will create POs in a new status “Pending Output”. The new status is
+applied to POs automatically generated (ie: Auto PO) when the new PR configuration,
+“Allow PR Submission without Supplier Output Method” is enabled and the Requester
+
+
+
+
+                                                                    Release Notes 7/7/2023 5
+does not input an email at the time of submitting the Request or the Requester is not
+able to enter an email address per configuration.
+
+
+
+
+Please note, that if you are using Buy Route, POs will be created in the “Draft” status.
+
+The PO will be available on the Purchase Order screen
+
+
+
+
+                                                                       Release Notes 7/7/2023 6
+The Requester can access the Purchase Order and submit the PO to the Supplier. The
+requester will see the below message after clicking Submit button on the PO
+
+
+
+
+   ●   If the user clicks “Save Final PO”, the status of the PO will change to ORDERED
+       but it will not be sent (ie: no output method is defined).
+   ●   If the user enters an email address, “Send PO to Supplier” will be enabled and
+       clicking the button will send the PO to the email address. The status of PO will
+       change to ORDERED.
+
+
+
+Vroozi Invoice (AP Processors, AP Managers)
+
+INCLUDING DRAFTS IN THE DUPLICATE INVOICE/MEMO CHECK PLUS
+REAL-TIME CHECKS
+
+Documents under Draft status will now be taken into account to identify whether an
+invoice or memo is a duplicate.
+
+When a user tries to create an invoice with a duplicate supplier and supplier invoice
+number Vroozi will indicate a potential duplicate.
+
+
+
+
+                                                                      Release Notes 7/7/2023 7
+Users can then view a section at the bottom of the invoice with the potential
+duplicate(s).
+
+
+
+
+If one of the documents is submitted, the user will not be able to submit the other
+duplicate document(s).
+
+Vroozi Invoice will also check the invoice hopper and inbox for duplicates in real time.
+As documents are processed and new drafts are created in the system, Vroozi Invoice
+will identify the potential duplicates in the hopper and inbox.
+
+
+
+
+                                                                       Release Notes 7/7/2023 8
+USER EXPERIENCE ENHANCEMENT TO NAVIGATE FROM NOTIFICATIONS TO
+A COMMENT IN THE INVOICE/MEMO DOCUMENT
+
+Users can seamlessly navigate from a comment in the Notifications Center to the
+highlighted comment in the invoice or memo document.
+
+When a user clicks the notification in the Notification Center…
+
+
+
+
+                                                                  Release Notes 7/7/2023 9
+the user is taken directly to the highlighted comment in the document.
+
+
+
+
+AUTO-DELETE NON-PO LINE ITEMS WHEN A USER REFERENCES A PO IN
+AN INVOICE
+
+To reduce invoice processing time and to avoid confusion with duplicate PO and
+non-PO line items, the system will auto-delete non-PO line items once a user
+references a PO in the invoice. This is applicable for invoices that are created from
+Vroozi Intelligence Cognitive Scan and Capture (ie OCR), cXML, and Supplier Portal.
+
+
+
+
+                                                                     Release Notes 7/7/2023 10
+Vroozi Intelligence for Accounts Payable
+Invoice Automation (APIA) (AP Processors)
+
+IMPROVEMENTS TO INVOICE-ORDER MATCHING
+
+The algorithm to capture, parse, and match a PO from a PDF invoice has been
+improved. Previously, the system did not automatically assign the PO and created
+non-PO invoice lines if it did not recognize the supplier. Now Vroozi Intelligence will
+assign the PO, assign the supplier from the order, and set up the PO lines in the invoice
+for the AP Processor.
+
+
+
+
+Resolutions
+   ●   No resolutions to release at this time.
+
+
+
+
+                                                                    Release Notes 7/7/2023 11
+

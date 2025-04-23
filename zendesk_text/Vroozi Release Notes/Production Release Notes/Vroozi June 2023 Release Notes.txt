@@ -1,0 +1,271 @@
+June 2, 2023
+
+
+
+
+                        Vroozi June 2023
+                           Release Notes
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                     2
+   Sourcing Review Rules by Company Code                                             2
+   Use List-Type Custom Field to trigger a Sourcing Review for Purchase Order Change
+   Requests (POCR)                                                                   3
+   Create a Two-Step Sourcing Review                                                4
+   Custom Number Range for Purchase Order Change Requests (POCR)                     5
+   Document Ownership Change for Purchase Orders                                    6
+   Additional Purchase Order Change Request (POCR) Configurations                   7
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)               8
+   Sourcing Reviewer Section added on Purchase Request and Purchase Order
+   Change Request screens                                                           8
+Vroozi Invoice (AP Processors, AP Managers)                                         11
+   More Keyboard Shortcuts to Navigate the Vroozi Invoice (Tab and Escape)          11
+   Better User Navigation in the Invoice/Memo History                              14
+Resolutions                                                                        15
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+released June 2nd, 2023.        The Vroozi Release Notes offers descriptions of
+enhancements, application fixes, new features and new modules when applicable to
+ensure your continued success.
+
+
+
+
+Vroozi Purchase (Administrator)
+SOURCING REVIEW RULES BY COMPANY CODE
+
+Admins will be able to set up Sourcing Review rules using the organization object
+Company Code. Companies can now expand approvals or define more specific rules to
+enforce processes and approvals that may vary by the company codes.
+
+This feature is not available by default. Please request the Vroozi Support team to
+enable this feature for your company.
+
+
+
+
+                                                               Release Notes 5/24/2023 2
+USE LIST-TYPE CUSTOM FIELD TO TRIGGER A SOURCING REVIEW FOR
+PURCHASE ORDER CHANGE REQUESTS (POCR)
+
+Admins can trigger a Sourcing Review for PO Change Requests (POCRs) using a
+List-type custom field in the Purchase Order header. Companies can now create more
+custom workflows for PO Change Requests.
+
+In the Sourcing Review workflow configuration, an Admin will define the custom field
+that will trigger the Sourcing Review. When the custom field is changed on the PO, it
+will trigger the Sourcing Review.
+
+
+
+
+                                                                   Release Notes 5/24/2023 3
+This feature is not available by default. Please request the Vroozi Support team to
+enable this feature for your company
+
+
+
+
+CREATE A TWO-STEP SOURCING REVIEW
+
+Companies can capture more custom and flexible workflows in a two-step Sourcing
+Review for Purchase Requests (PR) and Purchase Order Change Requests (POCR).
+
+In the Sourcing Review workflow configuration, Admins create an initial Sourcing
+Review using the toggle “Use this rule as a pre-check before Souring Review”. When
+this rule is applicable to the PR or POCR document, the system will set up a two-step
+Sourcing Review with this rule as the initial approval.
+
+In the PR or POCR, the user will be asked to select the initial Sourcing approver as well
+as the subsequent approver using dropdowns that have the configured approvers (See
+the section: Sourcing Reviewer Section added on Purchase Request and Purchase
+Order Change Request screens).
+
+This feature is not available by default. Please request the Vroozi Support team to
+enable this feature for your company.
+
+
+
+
+                                                                     Release Notes 5/24/2023 4
+CUSTOM NUMBER RANGE FOR PURCHASE ORDER CHANGE REQUESTS
+(POCR)
+
+Vroozi now allows companies to define a custom number range for Purchase Order
+Change Request (POCR) documents. Prior to this release, POCRs were assigned a
+number from the Purchase Request number series. Now, a specific series can be
+defined for the PO Change Request. Admins can view the current number range
+under Documents => Types and Numbers. The number range cannot be changed from
+the UI. You will need to contact the Vroozi Support Team to configure the number
+range.
+
+
+
+
+                                                             Release Notes 5/24/2023 5
+This feature is not available by default. Please request the Vroozi Support team to
+enable this feature for your company.
+
+
+
+
+DOCUMENT OWNERSHIP CHANGE FOR PURCHASE ORDERS
+
+The Administrator can change the ownership of Purchase Orders from one user to
+another. If a user leaves the organization, has been deactivated, or has been removed
+from the system, the Administrator can transfer ownership in the Admin Panel using
+Documents => Ownership Change. The ownership can be transferred to Requesters or
+Administrator roles only.
+
+Note: With this release, the team delivered a filtering and search User Experience for
+ownership changes (eg: filter on document type and owner). Document ownership
+will support other purchasing document types and roles in future releases.
+
+
+
+
+                                                                     Release Notes 5/24/2023 6
+This feature is not available by default. Please request the Vroozi Support team to
+enable this feature for your company.
+
+
+
+ADDITIONAL PURCHASE ORDER CHANGE REQUEST (POCR)
+CONFIGURATIONS
+
+Vroozi has added more permissions and controls in the Purchase Order Change
+Request (POCR) configuration (ie: Document Settings). These settings enable/disable
+the changes users are allowed to make to Purchase Orders.
+
+
+
+Change Shipping Information for Catalog PO or Non-Catalog PO
+
+Users are able to change shipping information for catalog or non-catalog POs.
+
+
+
+
+                                                                  Release Notes 5/24/2023 7
+Change Item Order Quantity or Unit of Measure (UoM)
+
+For catalog line items, users would be able to change the Order Quantity or Unit of
+Measure.
+
+
+
+
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+SOURCING REVIEWER SECTION ADDED ON PURCHASE REQUEST AND
+PURCHASE ORDER CHANGE REQUEST SCREENS
+
+
+
+
+                                                                Release Notes 5/24/2023 8
+Both the Purchase Request (PR) and Purchase Order Change Request (POCR) screens
+have a new header section to select the Sourcing Reviewer. A new dedicated section
+will be displayed with the appropriate controls and messaging for sourcing reviewer
+selection.
+
+Purchase Request (PR)
+
+
+
+
+                                                                Release Notes 5/24/2023 9
+Purchase Order Change Requests (POCR)
+
+
+
+
+Add and Assign an Initial Approver in the Sourcing Review (New)
+
+If multi-step Sourcing Review is configured (new), then the user will make the approver
+selection(s) for the initial and follow-on sourcing approvals when applicable in the
+Sourcing Review section.
+
+
+
+
+                                                                  Release Notes 5/24/2023 10
+Vroozi Invoice (AP Processors, AP Managers)
+MORE KEYBOARD SHORTCUTS TO NAVIGATE THE VROOZI INVOICE (TAB
+AND ESCAPE)
+
+Vroozi users who like to navigate using the keyboard can use the Tab key to quickly
+navigate to the next interactive element in the Vroozi invoice. “Tab Order” will take the
+user sequentially through the user interface when they press the Tab on the keyboard.
+
+In addition:
+    ● Alt/Shift + Tab will take the user back to the previous interactive element on the
+      page.
+    ● Escape (Ecs) will close a dialog box
+
+
+
+Invoice/Memo submission
+
+The user can tab from the radio buttons under “Select Next Action” to the Comments
+field. The user can close the dialog by selecting the Esc key.
+
+
+
+
+                                                                   Release Notes 5/24/2023 11
+Split Attachment
+
+The user can tab from the input box to the radio button by pressing Tab.
+
+
+
+
+Action Confirmation Dialog
+
+
+
+
+                                                                  Release Notes 5/24/2023 12
+Create Dialog for multi-page invoice
+
+
+
+
+                                       Release Notes 5/24/2023 13
+BETTER USER NAVIGATION IN THE INVOICE/MEMO HISTORY
+
+When a user clicks on any audit entry/log within the invoice/memo history and hits the
+back option, the system will direct them back to the same audit log item where they
+started. Previously, the system redirected users back to the top.
+
+
+
+
+                                                                  Release Notes 5/24/2023 14
+When the user goes back to the history, the system will display where they left off in
+the history at the selected item.
+
+
+
+Resolutions
+   ●   The system will no longer display error messages for invoices that total correctly.
+   ●   Discounts will now be auto-distributed among the invoice/memo line items
+       based on the configured option.
+
+
+
+
+                                                                    Release Notes 5/24/2023 15
+●   For companies with the expense module enabled, the system will now correctly
+    navigate users to the Vroozi Marketplace landing page when they click the
+    company logo instead of the Expenses page.
+●   System will now maintain the search filters applied in the Notification Center for
+    the duration of the user session so users can return to the filtered page.
+●   This release introduces performance improvements for invoice search in the
+    Document Flow and Track Invoices screen.
+
+
+
+
+                                                                Release Notes 5/24/2023 16
+

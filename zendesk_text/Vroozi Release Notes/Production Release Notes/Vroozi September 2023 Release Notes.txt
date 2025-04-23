@@ -1,0 +1,165 @@
+September 22, 2023
+
+
+
+
+                Vroozi September 2023
+                          Release Notes
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                    2
+   Enhanced Controls for Purchase Request Processing when the Order Output
+   Method is Missing                                                               2
+   Separate “Transfer History” and “Running Tasks” Tables under Ownership Change   4
+Vroozi Purchase (Buyers)                                                           5
+   Buyer Roles will have access to POs in Pending Output status                    5
+Vroozi Invoice (AP Coders)                                                         5
+   Apply All for AP Coders                                                         5
+Resolutions                                                                        6
+Vroozi Purchase (Administrator)
+
+ENHANCED CONTROLS FOR PURCHASE REQUEST PROCESSING WHEN THE
+ORDER OUTPUT METHOD IS MISSING
+
+Vroozi introduces two new configurations in the Admin Panel (Documents => All
+Documents in the Purchase Requests => PR Submission Configurations section) to
+control how Purchase Requests should be submitted when the order output method is
+missing from the Supplier master data record.
+
+        ○   Allow creation of auto-generated POs in the PENDING OUTPUT state
+        ○   Allow Requesters to transmit POs that are in PENDING OUTPUT
+
+
+
+
+These two options enhance the controls for the existing “Allow PR Submissions without
+Supplier Output Method” and “Allow PR Submissions to Ad-hoc email address when
+Supplier Output Method is not given” to let companies either create Orders
+automatically from approved Purchase Requests in the Pending Output or Ordered
+status.
+
+
+
+
+                                                                 Release Notes 9/22/2023 2
+Configuration                    Result                              PO Status
+
+Allow PR Submission without         ●     Requesters can submit      Configurable (new):
+Supplier Output Method                    the Purchase Request       PO in status “Pending Output”
+                                    ●     They will see a            or
+                                          notification that the PO   New: PO in “Ordered” status
+                                          Output is missing.
+
+Allow PR Submissions to             1. Requester can enter an           1. With email output - PO
+Ad-Hoc email address when              email address and                   sent to email address.
+Supplier Output Method is not          submit                              PO Status is “Ordered”
+given*                              2. Continue without an              2. Configurable (new):
+                                       email address                       Without an email
+                                                                           address - PO is created
+                                                                           in “Pending Output”
+                                                                           status or New: PO is
+                                                                           created in “Ordered”
+                                                                           status
+
+Both toggles are off             Requesters are not able to          N/A
+                                 submit Purchase Requests
+
+
+    *Requesters need to be enabled in their user profile to allow the user to specify ad-hoc
+    PO output by checking “Specify Ad-hoc PO Output”
+
+
+
+       1) With “Allow PR Submissions without Supplier Output Method” enabled, you can
+          allow creation of auto-generated POs in the PENDING OUTPUT state.
+
+       ●   Purchase Orders will be automatically generated from approved Purchase
+           Requests and will be in the “Ordered” status.
+
+    So now instead of users flipping the order from Pending Output to Ordered, the system
+    will create the Order directly in Ordered status. However, because there is no output
+    method, the orders will not be sent anywhere. Some customers will use these orders to
+    print and send for example, or to match with invoices (2- and 3-way match).
+
+       2) With “Allow PR Submissions to Ad-hoc email address when Supplier Output
+          Method is not given” enabled AND you allow creation of auto-generated POs in
+          the Pending status, you can then allow Requesters to transmit POs that are in
+          PENDING OUTPUT.
+             ● Purchase Orders will be automatically generated from approved Purchase
+                Requests and will be in the “Ordered” status.
+
+
+
+
+                                                                             Release Notes 9/22/2023 3
+Note that in this case when an ad hoc email address is not provided, the Purchase
+Order can now be configured to go into Ordered status (new), but will not be sent
+anywhere ie: no output method has been provided. When an ad hoc email address has
+been provided, the PO status is Ordered and will be output to the email address
+provided (existing).
+
+For more information on the full configuration, please see PO Output Configuration
+When the Supplier Output Method is Missing – Vroozi HelpDesk (zendesk.com)
+
+
+
+SEPARATE “TRANSFER HISTORY” AND “RUNNING TASKS” TABLES UNDER
+OWNERSHIP CHANGE
+
+The Ownership Change page under the Admin Panel => Documents will now display
+two separate tables:
+
+   ●   Transfer History - displays completed document transfers
+   ●   Running Tasks - displays document transfers in process
+
+Once a transfer is complete, the job will move from Running Tasks to Transfer History.
+
+
+
+
+                                                                    Release Notes 9/22/2023 4
+Vroozi Purchase (Buyers)
+
+BUYER ROLES WILL HAVE ACCESS TO POS IN PENDING OUTPUT STATUS
+
+In a previous release, we introduced a new Purchase Order (PO) status "Pending
+Output". This status identified POs that required action due to missing PO output in
+the supplier record.
+
+With this release, POs in the "Pending Output" status will now be visible to Buyers who
+can then process the orders.
+
+
+
+
+Vroozi Invoice (AP Coders)
+APPLY ALL FOR AP CODERS
+
+Accounts Payable Approvers who have the option to code invoices will now have access
+to Apply All. AP Coders will now be able to select multiple invoice line items to quickly
+assign the correct accounting.
+
+
+
+
+                                                                    Release Notes 9/22/2023 5
+Resolutions
+ ●   The system will now correctly route Purchase Request items to the appropriate
+     Buyer Group based on the BuyRoute configuration.
+ ●   “Ready for Sourcing” in BuyRoute now correctly shows the “Display Name” from
+     the Supplier record, as opposed to the default “Name” field.
+ ●   The team fixed a bug with the “Customer” accounting element when it is a
+     required field. Previously, the field was not available to users in the line item
+     details so they would not be able to select a value. If the field was required, then
+     it was impossible for the user to fix the error and continue with the Purchase
+     Request or Purchase Order process. The only option was to have Customer as
+     optional. Now users will be able to fix the error when the Customer field is
+     empty.
+ ●   The Purchase Request line item grid now displays appropriately on mobile
+     browsers.
+
+
+
+
+                                                                    Release Notes 9/22/2023 6
+

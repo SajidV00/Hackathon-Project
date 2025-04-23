@@ -1,0 +1,290 @@
+December 1, 2023
+
+
+
+
+                   Vroozi December 2023
+                           Release Notes
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                           2
+   Ensuring Accounting Accuracy using Accounting Validation               2
+   New Dynamic Financial Review Workflow                                  5
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)    9
+   Vroozi Accounting Validation for Purchasing Documents                  9
+Vroozi Purchase (Suppliers)                                              11
+   Improved System Messaging to Suppliers Confirming POs via Email       11
+       Successful confirmation                                           12
+       PO already confirmed                                              14
+       Error                                                             15
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)   16
+   New Financial Review for Invoices                                     16
+   Vroozi Accounting Validations for Invoice Documents                   17
+Resolutions                                                              18
+Vroozi Purchase (Administrator)
+ENSURING ACCOUNTING ACCURACY USING ACCOUNTING VALIDATION
+
+Accounting Validation ensures accounting accuracy for all transactions by having the
+documents (purchasing and invoice documents) follow valid accounting strings (ie: a
+valid combination of accounting objects). If a company decides to enable this feature, a
+new sub-menu item, “Accounting Strings”, will be available in the Admin panel under
+Master Data
+
+
+
+
+This menu option reveals the valid Accounting Strings in the system that will be used in
+the Accounting Validation check.
+
+
+
+
+                                                                    Release Notes 12/1/2023 2
+With this release, purchasing and invoice documents will be validated against
+combinations of Company Code, Cost Center, GL Account and Location. More
+accounting objects will be added to the strings in future releases.
+
+
+
+
+                                                                  Release Notes 12/1/2023 3
+In this release accounting strings cannot be created or updated from the User Interface
+(UI), but will need to be created and updated through a Vroozi API. Please see the
+Accounting Strings API documentation in our API library.
+
+At this time, companies will need to request Vroozi Support to turn on this feature.
+
+
+
+
+                                                                     Release Notes 12/1/2023 4
+NEW DYNAMIC FINANCIAL REVIEW WORKFLOW
+
+Vroozi developed a new dynamic workflow for Financial Review that will enable more
+customizable and flexible approval paths using the accounting and organizational
+objects. This is the first of multiple releases to expand the approval workflow
+capabilities.
+
+The new workflow adds more workflow configurations so that companies can create
+approval paths based on accounting and organizational objects, in addition to paths
+based on a delegation of authority. The new workflow configuration can be applied to
+Purchase Request, PO Change Request, Invoice and Memo approvals (Financial
+Reviews).
+
+Note: This new workflow will replace the company’s existing Financial Review and the
+Staircase approval must be selected. Once enabled, references to approver and next
+approver in the user profile will no longer be seen (ie: the former workflow
+configuration).
+
+In addition to the Fallback Approver already configured in the workflow for Purchase
+Requests and PO Change Requests, the company will be able to define a fallback
+Accounts Payable (AP) Approver under Company => Workflow screen.
+
+
+
+
+                                                                   Release Notes 12/1/2023 5
+Admins can define the workflow paths in the Admin panel under a new section called
+“Approval Rules” within Company => Workflow.
+
+
+
+
+The Admin can add a new rule by clicking on the “Add Approval Rule” button. The
+workflow can be assigned to Purchase Requests, Change Requests, Invoices and
+Memos.
+
+
+
+
+                                                                 Release Notes 12/1/2023 6
+Under Condition(s) the admin defines the objects that trigger the workflow. The
+following financial and organizational objects can be selected for the workflow
+configuration:
+
+   ●   Company Code
+   ●   Plant
+   ●   Cost Center
+   ●   GL Account
+   ●   Location
+   ●   Project
+
+Under “Approval Chain” the admin creates the list of approvers with their individual
+approval limits. Documents matching the conditions will be routed through the
+defined approval chain until the spend on the document is satisfied by the approver’s
+approval authority. If no matching rule is found, the document will be routed to the
+fallback approver.
+
+
+
+
+                                                                   Release Notes 12/1/2023 7
+If the document’s accounting or organizational objects change as it moves through the
+chain of approvers, the system will re-evaluate the document and change the approval
+path accordingly.
+
+Also, the next approver is evaluated at each step of the approval. If any of the next
+approvers change in the approval rule while a document is in the workflow, the system
+will route the approval based on the updated approval path. Note: documents already
+with an approver will not change based on the approval rule change.
+
+At this time, companies will need to request Vroozi Support to turn on this feature.
+
+
+
+
+                                                                     Release Notes 12/1/2023 8
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+
+VROOZI ACCOUNTING VALIDATION FOR PURCHASING DOCUMENTS
+
+Accounting Validation ensures accounting accuracy for purchasing transactions by
+having the documents follow valid accounting strings (ie: a valid combination of
+accounting objects). The validation will be done when a:
+
+   ●   Requester submits a Purchase Request (PR) for approval.
+   ●   Sourcing Approver tries to approve a Purchase Request (PR) or PO Change
+       Request (POCR).
+   ●   Financial Approver tries to approve a PR or POCR.
+   ●   User tries to submit a PO Change Request (POCR).
+   ●   Buyer tries to manually submit a PO.
+
+The following message will appear when Accounting Validation is in progress:
+
+
+
+
+                                                                  Release Notes 12/1/2023 9
+When the validation is successful, the user will get the following message.
+
+
+
+
+However, if the validation identifies errors in the accounting string, the user will get the
+following message
+
+
+
+
+                                                                      Release Notes 12/1/2023 10
+and the system will identify the line items with the error.
+
+
+
+
+In this case the user will have to correct the error with a valid accounting string before
+they can proceed with the activity.
+
+
+
+
+Vroozi Purchase (Suppliers)
+IMPROVED SYSTEM MESSAGING TO SUPPLIERS CONFIRMING POS VIA
+EMAIL
+
+This release introduces messaging improvements to make the confirmation status
+more clear to suppliers who use email to confirm Purchase Orders (POs). This reduces
+the supplier support calls from when the confirmation status was unclear.
+
+In existing functionality, if the Administrator has enabled PO Acknowledgement for
+emailed POs (ie: PO Output is email), suppliers can confirm POs directly from the email.
+Suppliers will see a “Confirm Order” button in the email.
+
+
+
+
+                                                                     Release Notes 12/1/2023 11
+Now when the Supplier confirms the PO, suppliers will see the following new
+messages:
+
+SUCCESSFUL CONFIRMATION
+
+
+
+
+                                                         Release Notes 12/1/2023 12
+Release Notes 12/1/2023 13
+PO ALREADY CONFIRMED
+
+
+
+
+                       Release Notes 12/1/2023 14
+ERROR
+
+
+
+
+        Release Notes 12/1/2023 15
+Vroozi Invoice (AP Processor, AP Approvers,
+AP Coders and AP Managers)
+
+NEW FINANCIAL REVIEW FOR INVOICES
+
+A new Financial Approval is available for invoices that allow companies to create more
+flexible and configurable approval workflows based on accounting and organizational
+objects. See New Dynamic Financial Review Workflow under Vroozi Purchase
+(Administrator).
+
+Once turned on, invoices that meet the workflow conditions will be assigned
+automatically to approvers based on the defined approval path and approval limits.
+Previously, AP Processors had to select an approver when submitting for approval.
+
+
+
+
+                                                                  Release Notes 12/1/2023 16
+VROOZI ACCOUNTING VALIDATIONS FOR INVOICE DOCUMENTS
+
+Accounting Validation ensures accounting accuracy for invoices by having the invoices
+and credit memos follow valid accounting strings (ie: a valid combination of accounting
+objects). The validation will be done when a:
+
+   ●   New Line item is saved.
+   ●   User tries to submit the Invoice for:
+          ○ Approval
+          ○ Exception Handling
+          ○ Coding
+   ●   User clears the exception on the invoice.
+   ●   AP Approver approves the invoice.
+   ●   AP Coder does any coding
+
+If the system identifies an invalid accounting string, then the user will receive an error
+message that identifies the line items and the problem.
+
+
+
+
+The AP Processor is required to rectify the error by choosing a valid accounting string
+prior to invoice submission. Alternatively, the AP Processor may opt to forward the
+invoice to the AP Coder for error resolution.
+
+On submit, if an accounting string has been deactivated, removed, or edited, the
+system displays this message to refresh the invoice.
+
+
+
+
+                                                                      Release Notes 12/1/2023 17
+The user will then view the invoice with the error messages to fix the errors.
+
+
+
+Resolutions
+   ●   When the minimum order quantity was missing in the catalog, the system
+       would not allow a user to order less than 1 of that item. Now users will be able to
+       order any quantity greater than 0 to include decimal quantities.
+   ●   Previously, Notes from Supplier were not displayed to the requester or buyer in
+       the Bid view. The supplier notes will now be displayed when the buyer or
+       requester reviews the bid.
+   ●   Users will be able to pick receipt dates older than 1 year. For customers who
+       keep POs open for more than a year (eg: multi-year PO), the system will now
+       allow users to create Goods Receipts against these POs as far back as the date
+       the PO was sent to the supplier.
+
+
+
+
+                                                                     Release Notes 12/1/2023 18
+

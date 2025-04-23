@@ -1,0 +1,199 @@
+August 16, 2024
+
+
+
+
+                  Vroozi September 2024
+                       Release Preview
+
+Table of Contents:
+Vroozi Administration (Admin)                                                 2
+   Line Item Field Configuration for AP Documents                             2
+   Multiple Purchase Order Terms & Conditions                                 3
+   Vroozi Budgets can be Defined against any Accounting/Organization Object   3
+   Vroozi Budget Management Bulk Upload                                       5
+Vroozi Invoice (AP Processor, AP Coder, AP Manager)                           6
+   Enhanced “Apply to All” in the Vroozi Invoice                              6
+   Customizable Invoice and Memo Line Item Column Display                     7
+Vroozi Purchase (Buyers)                                                      8
+   Select or Change the Purchase Order Terms & Conditions                     8
+Resolutions                                                                   8
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming September 13th, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on August 9th, 2024.
+
+
+
+
+Vroozi Administration (Admin)
+
+LINE ITEM FIELD CONFIGURATION FOR AP DOCUMENTS
+When Admins define fields such as Location, Customer, Class, and Project as Required, Optional, or
+Hidden, the settings now apply to AP documents. This delivers more consistency to what line item
+information is captured and managed, and reduces the manual adjustments and potential
+inconsistencies between documents.
+
+Currently this applies to Location, Customer, Class, and Project Line Item Field Configuration settings.
+Other accounting fields such as Cost Center, WBS Element, Internal Order, Profit Center, Plant, and GL
+Account will be supported in a future release.
+
+To enable this feature, please submit a Help Ticket to Vroozi Support to request this feature.
+
+
+
+
+                                                                                        Release Preview 2
+MULTIPLE PURCHASE ORDER TERMS & CONDITIONS
+
+Customers now have the ability to maintain multiple Purchase Order Terms and
+Conditions, which can be applied based on company or supplier.
+
+Administrators can configure Vroozi to assign Terms and Conditions based on Supplier
+or Company Code, or Buyers can select the Terms and Conditions for a specific
+Purchase Order (PO). Users will be able to create, manage or update the Terms and
+Conditions on a draft PO prior to submission, or via a Purchase Order Change Request
+(POCR). All changes and updates made to the Terms and Conditions in the Purchase
+Order will be recorded in the PO Change History.
+
+This feature will be automatically enabled for all Vroozi customers. To manage, update,
+or change this feature navigate to Admin Panel -> Documents -> Settings -> Purchase
+Orders
+
+
+
+VROOZI BUDGETS CAN BE DEFINED AGAINST ANY
+ACCOUNTING/ORGANIZATION OBJECT
+
+Vroozi expanded Budget Management to include all the Organizational and
+Accounting Objects. Companies now have greater control to ensure budgets are
+enforced for all spend under management.
+
+Companies that have Budget Management activated can add and edit budgets under
+Admin Panel => Master Data => Budgets.
+
+
+
+
+                                                                         Release Preview 3
+In the Budget, the Admin or Budget Owner can add or edit the accounting string to
+include the accounting and organizational objects that can access the budget.
+
+
+
+
+                                                                      Release Preview 4
+If your company is not using Budget Management today, please contact Customer
+Support (eg: support ticket) or Customer Success (success@vroozi.com).
+
+
+
+VROOZI BUDGET MANAGEMENT BULK UPLOAD
+
+As an alternative to the Budget APIs, customers using Vroozi Budget Management can
+now upload budgets through a file upload/download process based on an upload
+template.
+
+Under Admin => Master Data => Budgets the Admin roles can download the template,
+download the current budget configuration, or upload a file.
+
+
+
+
+                                                                    Release Preview 5
+The Budget Bulk Upload template contains a sheet for the fields that define the
+budget as well as an Instructions sheet for how to enter the budget data into the fields.
+
+If your company is not using Budget Management today, please contact Customer
+Support (eg: support ticket) or Customer Success (success@vroozi.com).
+
+
+
+Vroozi Invoice (AP Processor, AP Coder, AP
+Manager)
+
+ENHANCED “APPLY TO ALL” IN THE VROOZI INVOICE
+All the recent enhancements to “Apply to All” in Vroozi Purchase are now available in Vroozi Invoice,
+which means “Apply to All” has a consistent experience across the Vroozi Procure-to-Pay documents.
+
+When using the “Apply to All” functionality, Vroozi now evaluates the user’s proposed changes in the
+Vroozi Invoice for data consistency (e.g. the change is valid for that company code) for the selected line
+items. If the changes are valid, the changes will be applied to all the selected line items. By contrast, if
+the proposed data changes are not valid, the line items will remain unmodified and the user will receive
+a message on the document UI. In the case where a user modifies a single field in which other fields
+are dependent, the corresponding child fields will be displayed for the user to fill out within the Apply to
+All module upon validation.
+
+
+
+
+                                                                                         Release Preview 6
+This feature will be automatically enabled in all customers.
+
+
+
+
+CUSTOMIZABLE INVOICE AND MEMO LINE ITEM COLUMN DISPLAY
+
+Users are now able to personalize the line item columns displayed on the Vroozi Invoice and Memo
+documents. Users will now be able to see pertinent data based on their specific needs at a glance to
+ensure accuracy and to streamline the process of managing and reviewing line item details.
+
+The column setting is available under a “gear” icon on the right side of the line field label area.
+
+
+
+
+In the Column preferences, users can select and deselect the fields that are displayed at a glance in the
+Vroozi Invoice.
+
+
+
+
+                                                                                          Release Preview 7
+Vroozi Purchase (Buyers)
+SELECT OR CHANGE THE PURCHASE ORDER TERMS & CONDITIONS
+
+Customers now have the ability to maintain multiple Purchase Order Terms and
+Conditions. Buyers can select the Terms and Conditions for a specific Purchase Order
+(PO). In addition, Buyers will be able to create, manage or update the Terms and
+Conditions on a draft PO prior to submission, or via a Purchase Order Change Request
+(POCR). All changes and updates made to the Terms and Conditions in the Purchase
+Order will be recorded in the PO Change History.
+
+
+
+
+Resolutions
+   ●   Updated Japanese translation for PO Close notification email.
+   ●   Also, under translation, user group names will now be translated and displayed
+       accurately within Vroozi.
+   ●   Resolved an issue where the Location field was not updating correctly on the
+       Invoice document when using "Apply to All".
+
+
+
+
+                                                                       Release Preview 8
+●   Invoices created and processed at the exact same time would create duplicate
+    Invoice numbers, which would cause errors when posting the invoices to
+    external systems. The system will no longer create duplicate invoice numbers.
+●   This release fixes an issue in the “Apply to All” feature where Quantity, Value, and
+    Amount fields in the "Changes to be Applied" tab were not populated with
+    preset values.
+●   Resolves an issue where users were able to approve their own PRs if they were
+    part of the defined approval chain in the new dynamic workflow. Now, if the
+    requester or the person that owns the PO in the case of a POCR is part of the
+    approval chain, the system will automatically skip that individual, and move onto
+    the next approver in the chain.
+●   Updated the email Buyers receive for POs or PO Change Requests (POCR) for
+    visibility into the type of document they are receiving.
+
+
+
+
+                                                                        Release Preview 9
+

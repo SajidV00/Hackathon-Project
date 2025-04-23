@@ -1,0 +1,153 @@
+May 24, 2024
+
+
+
+
+                       Vroozi May 2024
+                         Release Notes
+
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                                2
+   New Dynamic Workflow Trigger Based on Highest Value                         2
+   More Accounting and Organizational Elements are available for the Dynamic
+   Workflow Conditions                                                         2
+   Bulk Upload/Download to Create and Maintain the Dynamic Workflow Approval
+   Rules                                                                       4
+Vroozi Purchase & Invoice (Employee, Buyer, Approver, AP Processor, AP
+Approvers, AP Coders and AP Managers)                                          5
+   Introducing Drag-and-Drop Columns                                           5
+Resolutions                                                                    6
+Vroozi Purchase (Administrator)
+
+NEW DYNAMIC WORKFLOW TRIGGER BASED ON HIGHEST VALUE
+
+Administrators have a new option to trigger the dynamic workflow approvals based on
+the accounting combination with the highest total spend value across all the line
+items. This means that approver(s) responsible for the highest spend in a Purchase
+Requests, Purchase Order Change Requests, Payment Requests, Memos, and Invoices
+will make the approval decision for that document.
+
+The new option to trigger the approval is available in the Admin Panel under Company
+=> Workflow => Approval Matching Method. Admins will have the option to select the
+new approval trigger based on the accounting combination with the highest value, or
+based on the first line item (default).
+
+
+
+
+Note: Customers will need to have the New Dynamic Workflow enabled in their Vroozi
+system. The new Dynamic Workflow provides greater flexibility and control in the
+approval process to adapt the approvals to better suit specific financial oversight
+requirements (eg: based on combinations of organizational and accounting elements).
+The new Dynamic Workflow delivers more of the financial approvals that reduce
+financial risks and improve compliance with internal controls.
+
+
+MORE ACCOUNTING AND ORGANIZATIONAL ELEMENTS ARE AVAILABLE FOR
+THE DYNAMIC WORKFLOW CONDITIONS
+
+The Dynamic Workflow introduces additional accounting and organizational elements
+to expand the approval workflow coverage and control more spend categories under
+management. The new accounting and organizational elements include:
+
+
+
+
+                                                                Release Notes 05/24/2024 2
+   ●   WBS Elements
+   ●   Internal Orders
+   ●   Profit Centers
+   ●   Classes
+   ●   Customers
+   ●   Purchasing Organizations
+   ●   Location Types
+
+The additional elements allow for more precise and relevant workflow configurations
+that better align with the specific financial controls and organizational structures of the
+organization.
+
+The configuration is available in the Admin Panel under Company => Workflow =>
+Approval Rules. The accounting and organizational objects are selected in the workflow
+condition(s) to trigger the rule.
+
+
+
+
+                                                                     Release Notes 05/24/2024 3
+Note: Customers will need to have the New Dynamic Workflow enabled in their Vroozi
+system. The new Dynamic Workflow provides greater flexibility and control in the
+approval process to adapt the approvals to better suit specific financial oversight
+requirements (eg: based on combinations of organizational and accounting elements).
+The new Dynamic Workflow delivers more of the financial approvals that reduce
+financial risks and improve compliance with internal controls.
+
+
+
+BULK UPLOAD/DOWNLOAD TO CREATE AND MAINTAIN THE DYNAMIC
+WORKFLOW APPROVAL RULES
+
+Admins will have the ability to manage the Dynamic Workflow approval rules more
+efficiently through a bulk upload and download using a file in .XLSX file format.
+The bulk upload/download is available in the Approval Rules configuration in the Admin
+Panel under Company => Workflow => Approval Rules. A downloadable template is
+provided in the system to set up the correct format for the upload. Also, an error report
+can be downloaded to quickly correct any issues with the latest upload.
+
+
+
+
+Note: Customers will need to have the New Dynamic Workflow enabled in their Vroozi
+system. The new Dynamic Workflow provides greater flexibility and control in the
+approval process to adapt the approvals to better suit specific financial oversight
+requirements (eg: based on combinations of organizational and accounting elements).
+The new Dynamic Workflow delivers more of the financial approvals that reduce
+financial risks and improve compliance with internal controls.
+
+
+
+
+                                                                   Release Notes 05/24/2024 4
+Vroozi Purchase & Invoice (Employee, Buyer,
+Approver, AP Processor, AP Approvers, AP
+Coders and AP Managers)
+
+INTRODUCING DRAG-AND-DROP COLUMNS
+This release introduces drag-and-drop functionality to the user experience. Users will
+now be able to rearrange columns according to their preference using a new green
+grip icon that appears when hovering over the column header. Drag-and-Drop
+Columns will be available on:
+
+   ●   Track Invoices (all statuses)
+   ●   Track Memos (all statuses)
+   ●   Resolve Invoices
+   ●   Code Invoices
+   ●   Approve Invoices
+   ●   Code Memos
+   ●   Approve Memos
+   ●   Payment Request
+   ●   Approve Payment Request
+   ●   Purchase Order
+
+The new drag-and-drop delivers enhanced customization and usability for users in
+those documents.
+
+
+
+
+                                                                   Release Notes 05/24/2024 5
+Resolutions
+ ●   When Purchase Requests were submitted and sent to external systems (eg: and
+     ERP system), the email notifications to Requesters indicated that the PR was
+     approved. The email notification will now more accurately state that the PR has
+     been submitted to the External System for further processing.
+ ●   This release resolves an issue where the Apply to All modal would not close after
+     selecting the Tax Code field in the Invoice and Memo.
+ ●   .msg files are no longer supported for upload to an invoice document. The file
+     type causes errors when posting the Invoice to NetSuite.
+
+
+
+
+                                                                 Release Notes 05/24/2024 6
+

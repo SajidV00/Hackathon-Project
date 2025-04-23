@@ -1,0 +1,110 @@
+February 9, 2024
+
+
+
+
+                   Vroozi February 2024
+                        Release Preview
+
+
+Table of Contents:
+Vroozi Purchase (Administrator)                                          2
+   Additional Parameters for Buyer Groups                                2
+Vroozi Purchase (Requesters, Buyers, and Central Receivers)              4
+   Enhanced “Apply to All” (Vroozi Purchase)                             4
+Vroozi Invoice (AP Processor, AP Approvers, AP Coders and AP Managers)   6
+   Purchasing Organization now available on Invoices and Memos           6
+Resolutions                                                              7
+Vroozi Purchase (Administrator)
+ADDITIONAL PARAMETERS FOR BUYER GROUPS
+
+Additional parameters can now be used to define a Buyer Group.
+
+   ●   Company Codes
+   ●   Cost Centers
+   ●   GL Codes
+   ●   Projects
+   ●   Locations
+
+Buyer Groups define how Purchase Request line items in BuyRoute and Purchase
+Orders are assigned to Buyers. Prior to this release, Buyer Groups could only be defined
+based on supplier and category. New additional accounting and organizational
+parameters enable companies to distribute work items and orders to specific buyers to
+improve sourcing and PO maintenance process efficiency.
+
+Buyer Groups are defined in the Admin Panel under Master Data => Buyer Data =>
+Buyer Groups
+
+
+
+
+                                                                    Release Notes 2/9/2024 2
+Release Notes 2/9/2024 3
+Vroozi Purchase (Requesters, Buyers, and
+Central Receivers)
+ENHANCED “APPLY TO ALL” (VROOZI PURCHASE)
+
+Users will be able to change a single field in “Apply to All”. Prior to this release, users
+were always required to enter data in multiple fields during Apply All to maintain valid
+parent-child accounting relationships eg: GLs assigned to a Company Code.
+
+The “Apply to All” feature has been enhanced for the following Vroozi Purchase
+documents:
+
+   ●   Purchase Request
+   ●   Change Request
+   ●   Purchase Order
+   ●   POCR
+
+Now, when a user changes a field, Vroozi will evaluate if the change is valid. For
+instance, if a user changes the GL account for multiple lines using Apply All, the system
+will evaluate the proposed change against Company Code (parent object) for each
+selected line item. If the GL is valid for that Company Code, then the system will
+change the line item. If the GL is not assigned to the Company Code, the system will
+not modify the line item and display a message that the proposed change could not be
+applied.
+
+Similarly, if a user changes a parent object during “Apply to All” (eg: Company Code), we
+know that the change will impact child objects, such as GL Code, Cost Center, Project,
+etc. In that case, the system will prompt the user to provide values for affected child
+objects during “Apply to All”.
+
+
+
+
+                                                                       Release Notes 2/9/2024 4
+Release Notes 2/9/2024 5
+Vroozi Invoice (AP Processor, AP Approvers,
+AP Coders and AP Managers)
+
+PURCHASING ORGANIZATION NOW AVAILABLE ON INVOICES AND MEMOS
+
+When configured, the system will display Purchasing Organization on Invoices and
+Memos at the line item level under General Information.
+
+
+
+
+With this enhancement, the Purchasing Organization code can now be transmitted
+from Vroozi to the company’s external ERP system for both Invoices and Memos.
+
+Customers will need to contact Vroozi Support to activate this feature. Once this
+feature is enabled, Administrators can change the settings in the Admin panel. Under
+Documents => Settings => All Documents => Line item Field Configuration => Company
+Information, Admins can choose the appropriate Purchasing Organization field setting:
+Required, Optional, or Hidden.
+
+
+
+
+                                                                  Release Notes 2/9/2024 6
+Resolutions
+ ●   When utilizing the 'Apply to All' functionality on Invoices & Memos, the system
+     will now accurately filter Cost Center, Plant, Location, and Class based on the
+     selected Company Code.
+
+
+
+
+                                                                   Release Notes 2/9/2024 7
+

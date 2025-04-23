@@ -1,0 +1,100 @@
+June 12, 2024
+
+
+
+
+                    Vroozi August 2024
+                          Release Scope
+
+Table of Contents:
+
+Vroozi Administration                                                        2
+   Change History Tab in User Profile                                        2
+   Date selection controls now go up to the year 2099                        3
+   Allow receipt of PO items based on when the individual item was ordered   4
+Resolutions                                                                  4
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming August 9th, 2024*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on July 12th, 2024.
+
+
+
+Vroozi Administration (Admin)
+
+CHANGE HISTORY TAB IN USER PROFILE
+
+User Change History will now be documented in the User profile, providing a detailed
+historical record capturing all modifications made to the User’s record which enhances
+transparency and auditability.
+
+This feature will be automatically enabled for all customers upon release, there are no
+additional configurations required. To view a User’s Profile Change History, navigate to
+Master Data > Users > Edit User > Change History.
+
+
+
+
+                                                                         Release Preview 2
+DATE SELECTION CONTROLS NOW GO UP TO THE YEAR 2099
+
+Users can now specify future delivery or service period end dates for line items up to
+the year 2099. Previously, users were only able to select a future date up to 5 years from
+the date of Purchase Requisition or Purchase Order creation.
+
+
+
+
+                                                                          Release Preview 3
+ALLOW RECEIPT OF PO ITEMS BASED ON WHEN THE INDIVIDUAL ITEM WAS
+ORDERED
+
+Goods Receipts can now be backdated to reflect the actual date of delivery for received
+items, or service start date even if the “start date” or “received date” is before the Purchase
+Order issue date. This new feature allows enhanced data accuracy, ensuring records reflect
+accurate delivery dates and timelines that provides the user with greater flexibility.
+
+Example: A user submits a PO on 7/1/2024 which includes 2 line items. Line item 1 has a
+start date of 10/1/2024, and line item 2 has a start date of 2/1/2024. Line Item 1 on the Goods
+Receipt can have a received or start date backdated to the PO creation date (7/1/24),
+however line item 2 can have a received or start date dated back to the listed start of the
+service period (2/1/24).
+
+This feature will be automatically enabled and available to all customers by default.
+
+
+
+
+Resolutions
+   ●   Improved system functionality to automatically pre-fill Purchase Order numbers
+       from PDFs during OCR, even if the supplier is not recognized, ensuring better
+       accuracy in matching Purchase Orders.
+   ●   Corrected a labeling issue with the Vertex Tax code field.
+   ●   An error would occur when bulk updating Dynamic Workflow Rules that only
+       included a location type as a condition.
+   ●   Updated the system to ensure that email addresses used for approvers during bulk
+       upload of approval rules in Dynamic Workflow are treated as case-insensitive.
+   ●   Purchase Orders can now be searched based on Company Code on the
+       Invoice/Memo PO Lookup page.
+   ●   The Navigation Pane should show the bubble count of invoices in the exception
+       queue, providing visibility into outstanding invoices.
+   ●   Addressed an issue where a rounding error was affecting the distributed total
+       amount in certain special cases.
+   ●   Purchase Order header custom fields were not being updated or saved when a user
+       removed the value of an “editable” custom field, on the Purchase Order header,
+       using the Purchase Order Change Request process.
+   ●   When a user creates a Purchase Order Change Request against a Received
+       Purchase Order, where the “service period date” was the only change made, the PO
+       status would incorrectly revert to Ordered. Now, the PO status will only change if a
+       user makes a change that would require the PO to be reopened for further receiving.
+   ●   Approval Status on Approved or Rejected Purchase Requests will now reflect the
+       historically accurate approval chain to ensure transparency and auditing capabilities.
+
+
+
+
+                                                                              Release Preview 4
+

@@ -1,0 +1,197 @@
+November 4th, 2022
+
+
+
+
+                Vroozi November 2022
+                         Release Notes
+
+Table of Contents:
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)   2
+   Users can Customize the Purchase Request Line Item Column Display     2
+   Budget Review Workflow                                                2
+   Purchase Request Approval Status Name Changes                         3
+   PO Related Documents has a new section for Change Requests            5
+
+Vroozi Purchase (Admin)                                                  6
+   Budget Approval to Prevent Spend Over Budget                          6
+
+Vroozi Intelligence for Accounts Payable Invoice Automation (APIA) (AP
+Processors)                                                              8
+   Potential Purchase Order Matches for Invoices in the Hopper           8
+   Performance Improvements from Hopper to Invoice Creation              9
+
+Vroozi Marketplace (Catalog Admin)                                       10
+   Support for S4 HANA Web HTML User Interface                           10
+
+Resolutions                                                              10
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+
+USERS CAN CUSTOMIZE THE PURCHASE REQUEST LINE ITEM COLUMN
+DISPLAY
+Users can customize the columns they want displayed for the Purchase Request (PR)
+line items. Users will select the columns using a new settings option on the line item
+header bar. The Column Preferences will be saved as the default view for the user.
+
+
+
+
+BUDGET REVIEW WORKFLOW
+The new role Budget Approver now has the ability to approve or reject the purchase
+requests that will cause spend to exceed their budget. A Budget Review will take place
+after the Financial Review (ie: approval based on the value of the Purchase Request).
+Budget Approvers have an Approve or Reject decision.
+
+
+
+A Budget Approver is assigned to a budget in the Admin Panel (See Vroozi Purchase
+(Admin)). In addition, the Budget Approver can edit or create budgets if given the
+access in their user master data record.
+
+
+
+
+                                                                    Release Notes 11/4/2022 2
+A new status “Budget Review” has been created to indicate Purchase Requests in a
+Budget Approval.
+
+
+
+
+PURCHASE REQUEST APPROVAL STATUS NAME CHANGES
+
+
+Previously, Purchase Requests in a financial approval process (ie: approval based on the
+value of the Purchase Request) were given the status “Pending”. The Purchase
+Request statuses have been updated so that the user knows what level of approval the
+Purchase Request is sitting. The new Purchase Request statuses (in order when
+used/applicable):
+
+
+
+
+                                                                    Release Notes 11/4/2022 3
+1. Sourcing Review
+2. Financial Review (new)
+3. Budget Review (new)
+
+
+
+
+                            Release Notes 11/4/2022 4
+PO RELATED DOCUMENTS HAS A NEW SECTION FOR CHANGE REQUESTS
+
+All Purchase Order Change Requests (POCRs) will be displayed in its own section of the
+Purchase Order Related Documents panel.
+
+
+
+
+                                                                  Release Notes 11/4/2022 5
+Vroozi Purchase (Admin)
+BUDGET APPROVAL TO PREVENT SPEND OVER BUDGET
+If a Purchase Request will cause spend to exceed budget, Budget Management in
+Vroozi will initiate a Budget Approval after Financial Approval in the approval workflow.
+A new role Budget Approver has been introduced to review and approve Purchase
+Requests that will hit their budget. You will need to:
+
+          ○   Turn on Budget Approval Workflow in the Admin Panel under Budgets
+
+
+
+
+          ○   Assign a user the role Budget Approver and the ability to create or
+              approve budgets in the User master record.
+
+
+
+
+                                                                     Release Notes 11/4/2022 6
+         ○   In the budget, select the option “The system should allow the user to
+             submit the purchase request or purchase order, but require a budget
+             approver on it”, under “When over budget…”.
+
+         ○   Assign the approver(s) to the Budget.
+
+
+
+
+Under the above configuration, when a Purchase Request is over budget, it will go
+through Budget Review right after the Financial Review. The status of Purchase
+Request will be “Budget Review” (new).
+
+
+
+
+                                                                   Release Notes 11/4/2022 7
+Vroozi Intelligence for Accounts Payable
+Invoice Automation (APIA) (AP Processors)
+
+POTENTIAL PURCHASE ORDER MATCHES FOR INVOICES IN THE HOPPER
+
+In the last release, we introduced contextual information to display possible purchase
+order matches for invoices in the invoice hopper using Vroozi Intelligence. In this
+release, AP Processors can now use that information to match open POs to the invoice
+(eg: suppliers may not have provided the PO number on the invoice).
+
+
+
+
+A user can assign a PO from the action column added to the PO lookup overlay.
+
+
+
+
+                                                                   Release Notes 11/4/2022 8
+A Vroozi Invoice will then be created and matched to the PO selected.
+
+
+
+
+PERFORMANCE IMPROVEMENTS FROM HOPPER TO INVOICE CREATION
+
+This release delivers a faster conversion of invoices from the Vroozi Invoice hopper to
+the invoice document when Vroozi Intelligence populates the invoice fields from the
+scanned document.
+
+
+
+
+                                                                     Release Notes 11/4/2022 9
+Vroozi Marketplace (Catalog Admin)
+
+SUPPORT FOR S4 HANA WEB HTML USER INTERFACE
+
+Vroozi smartOCI Marketplace can now be configured to integrate with the S4 HANA
+Web HTML version. The configuration enables a seamless flow between S4 and the
+Vroozi Marketplace as the user changes windows from one to the next in their browser.
+This specific update applies to calls to the Vroozi Marketplace (SmartOCI) directly from
+the SAP purchasing documents (eg: Shopping Cart) through a Web HTML user
+interface option in S4. Vroozi has introduced an additional parameter in the webservice
+configuration for S4 Hana that will ensure the successful return of the cart.
+
+The S4 GUI and Fiori UI versions are not affected and use the traditional catalog
+configurations.
+
+
+
+
+Resolutions
+   ●   Central Receivers who will need to process invoice exceptions (eg: invoice
+       without Goods Receipt) will receive an email notification when the invoice goes
+       for Exception Handling. All Central Receives in the group will receive the
+       notification.
+   ●   Vroozi Intelligence will now correctly scan and capture the last page in
+       multiple-page documents in the invoice hopper after being split for invoice
+       creation. Prior to this release, all split pages were captured correctly except for
+       the last page.
+   ●   The default Buyer Group was not displayed in the Purchase Request line item
+       modal. The system will now display the correct associated Buyer Group for all
+       catalog Purchase Request lines.
+
+
+
+
+                                                                     Release Notes 11/4/2022 10
+

@@ -1,0 +1,72 @@
+March 14, 2025
+
+
+
+
+                       Vroozi April 2025
+                       Release Preview
+
+Table of Contents:
+Vroozi Supplier Directory (Admin, Supplier Directory Admin, Supplier Directory
+Power User, Supplier Directory Basic User)​                                      2
+   Supplier Directory User Experience Enhancements​                              2
+      Full display of all fields including custom fields​                        2
+      Introduction of User Groups to the Guidelines​                             3
+      More Information in the Admin’s User Display​                              3
+Resolutions​                                                                     4
+Please see the descriptions below for the Vroozi SpendTech™ module enhancements
+coming April 11, 2025*. The Vroozi early release preview offers descriptions of
+enhancements, application fixes, new features and new modules when applicable. To
+ensure your continued success, release notes with the features that will be deployed
+into production will be provided closer to the release date. Early access for review and
+testing will be available in Vroozi customer test environments (System Name: SOCI or
+PERF) on March 14, 2025.
+
+
+
+
+Vroozi Supplier Directory (Admin, Supplier
+Directory Admin, Supplier Directory Power
+User, Supplier Directory Basic User)
+SUPPLIER DIRECTORY USER EXPERIENCE ENHANCEMENTS
+Additional improvements have been made to the Supplier Directory making the
+experience more efficient and user-friendly. For one, user-generated reports can now be
+filtered by group (groups were introduced in the March release). This release also includes:
+
+
+FULL DISPLAY OF ALL FIELDS INCLUDING CUSTOM FIELDS
+Users no longer need to expand the fields to display all the content in a section,
+including all the custom fields added to the supplier record. The new page display also
+reduces scrolling.
+
+
+
+
+                                                                             Release Preview 2
+INTRODUCTION OF USER GROUPS TO THE GUIDELINES
+
+
+
+
+MORE INFORMATION IN THE ADMIN’S USER DISPLAY
+
+
+
+
+                                                Release Preview 3
+Admins can easily identify user roles, group, and project details within the User display.
+
+
+
+
+Resolutions
+   ●​ The system will now correctly load the appropriate Tax Code value on the Apply
+      to All modal, for the situation when a company has all 4 accounting objects (Cost
+      Centres, WBS Elements, Internal Orders, Profit Centers) turned off in the Admin
+      settings UI.
+
+
+
+
+                                                                               Release Preview 4
+

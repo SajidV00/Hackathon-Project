@@ -1,0 +1,137 @@
+February 24, 2023
+
+
+
+
+                    Vroozi February 2023
+                          Release Notes
+
+Table of Contents:
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)          2
+   One-Stop Notification Center for all Announcements and Communications where a
+   User is Tagged                                                               2
+
+Vroozi Invoice (AP Processors)                                                 4
+   Configure Auto Calculation in Invoice and Memo Totals                       4
+
+Resolutions                                                                    8
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+
+ONE-STOP NOTIFICATION CENTER FOR ALL ANNOUNCEMENTS AND
+COMMUNICATIONS WHERE A USER IS TAGGED
+
+This will be the first of many enhancements to the Vroozi notification center so that
+users will have one place to go for all their communications. In the February release, all
+announcements and comments where a user is tagged can be accessed from one
+centralized notification center.
+
+At the bottom-left of the user’s screen in the blue main navigation area is where a user
+accesses the Notification Center (a bell icon). Whenever there is a new announcement
+or a user is tagged in comments, the bell icon counter will show the count of unread
+notifications.
+
+
+
+
+Notification screen will contain both Announcements added by the Admin and all the
+comments in documents tagged to the user.
+
+
+
+
+                                                                Vroozi Release Notes 2/24/2023 2
+Clicking on the tagged message will take the user to the respective document and
+system will automatically show the comments:
+
+
+
+
+The user can then respond to a comment.
+
+
+
+
+                                                            Vroozi Release Notes 2/24/2023 3
+Vroozi Invoice (AP Processors)
+CONFIGURE AUTO CALCULATION IN INVOICE AND MEMO TOTALS
+
+Auto population of totals in the footer of invoices and memos can now be configured. If
+“Auto Population of Footer Totals” is configured by the Admin in the AP Settings
+(Accounts Payable => Settings => Preferences), Vroozi will automatically calculate the
+enabled values.
+
+
+
+
+If the toggle is off then Vroozi will not populate the calculated values, but will use the
+values from the cXML or OCR data..
+
+With auto population of footer totals, AP users no longer need to key in the total values
+when they make an update to an AP document. Vroozi will do the total calculations.
+
+AP users will see a new toggle on the invoice and memo. When an invoice is created,
+this toggle is turned off by default and Vroozi will populate values from cXML or OCR
+where applicable.
+
+
+
+
+                                                                  Vroozi Release Notes 2/24/2023 4
+Once the toggle is turned on, Vroozi will auto-populate the totals with calculated
+values.
+
+
+
+
+                                                               Vroozi Release Notes 2/24/2023 5
+With the toggle on, when the user makes a change to the document, Vroozi calculates
+the totals that are enabled in the configuration.
+
+
+
+
+                                                            Vroozi Release Notes 2/24/2023 6
+Vroozi will display an alert message when the amount being posted is different from
+the amount that was originally submitted.
+
+
+
+
+                                                             Vroozi Release Notes 2/24/2023 7
+Resolutions
+ ●   Only those AP users having access to invoices/memos (through the access rules)
+     will now see the respective document even if it is unassigned. Previously,
+     unassigned invoices did not follow the access rules.
+
+ ●   For the Vroozi Marketplace “Not in a Catalog” scenario, users were not able to
+     create shopping carts for items where prices had blanks (eg: “12. 34”). Vroozi
+     Marketplace will now remove the spaces and add the item to the cart.
+
+ ●   Resolved an issue in the Purchase Request line item bulk upload for customers
+     who had multiple company codes linked to multiple GL and customer accounts.
+     The system was unable to map the accounting information correctly on the PR
+     when it was created. The customer field will now be picked up by the system in
+     the line item bulk upload.
+
+ ●   Improved Japanese language translations for specific system notifications,
+     tooltips, and field labels in Vroozi Purchase.
+
+
+
+
+                                                              Vroozi Release Notes 2/24/2023 8
+●   Performance improvement when creating an invoice from the hopper.
+
+●   Invoice attachment containing (“) quotes will now be processed successfully.
+
+●   Purchase Orders (PO) created through the Purchase Order API will now show
+    the correct PO Name in Vroozi.
+
+●   A purchase order containing a free line item can now be canceled.
+
+
+
+
+                                                            Vroozi Release Notes 2/24/2023 9
+

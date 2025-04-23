@@ -1,0 +1,64 @@
+July 22nd, 2022
+
+
+
+
+                         Vroozi July 2022
+                           Release Notes
+
+Table of Contents:
+Vroozi Invoice (AP Processors, AP Managers)                         2
+   Addition of Billing and Shipping Address to the invoice header   2
+   Invoice duplicate check enhancements                             2
+
+Resolutions                                                         5
+Vroozi Invoice (AP Processors, AP Managers)
+
+ADDITION OF BILLING AND SHIPPING ADDRESS TO THE INVOICE HEADER
+
+
+The additional fields provide more information to the AP Processor, particularly when
+processing on behalf of multiple company codes. Note: the information also enables
+Vroozi Intelligence to more accurately identify the company code.
+
+
+
+
+INVOICE DUPLICATE CHECK ENHANCEMENTS
+
+
+This enhancement reduces the AP Processor work to quickly identify duplicate invoices.
+Duplicate invoices will now be recognized and highlighted in the Hopper/Inbox itself.
+The user no longer needs to create an invoice first to be informed that it is a duplicate.
+Additional enhancements include:
+
+   ●   The duplicate check is not case sensitive
+   ●   Include Parked invoices
+   ●   Eliminate Company Code from the duplicate check
+
+
+
+
+                                                                     Release Notes 7/22/2022 2
+   ●   Include the Invoice Total
+   ●   Introduced new error messages when an invoice is identified as a duplicate.
+       Users will see a duplicate or a potential duplicate error message.
+
+
+
+
+Duplicate check in the Vroozi Invoice Hopper
+
+
+
+
+                                                                   Release Notes 7/22/2022 3
+Release Notes 7/22/2022 4
+Resolutions
+ ●   Fix for date localization on invoices
+
+
+
+
+                                             Release Notes 7/22/2022 5
+

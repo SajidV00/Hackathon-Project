@@ -1,0 +1,357 @@
+January 13, 2023
+
+
+
+
+                    Vroozi January 2023
+                           Release Notes
+
+Table of Contents:
+Vroozi Purchase (Admin)                                                              2
+   PO Output when the Supplier Output Method is Missing or the Email Needs to be
+   Changed                                                                            2
+      Allow PO Submissions without Supplier Output method                             2
+      Allow PO Submissions to Ad-hoc email address                                   4
+      Allow Requesters to provide alternate output email addresses (a sub option that
+      is displayed when the first option is toggled to On)                           4
+   Employee Restriction to Company and GL Codes                                       5
+   Display Name Changes the way the Supplier Name is Displayed in Vroozi and
+   Internal Communications                                                            5
+   Goods Receipt and Returns Email Notifications to Suppliers                        9
+   Include/Exclude Tax and Shipping Charges for Financial Approvals                 12
+   More Options for Purchase Order Change Requests (POCR)                           13
+
+Vroozi Purchase (Requesters, Approvers, Buyers, and Central Receivers)              14
+   Purchase Order Output by the Buyer when the Output Method is Missing             14
+   Adding Ad-Hoc email addresses for PO Output                                      16
+   Purchase Order Short Close Enhancements                                          18
+
+Vroozi Integration                                                                  20
+   Duplicate Invoice Check in NetSuite                                              20
+
+Resolutions                                                                         20
+Vroozi Purchase (Admin)
+PO OUTPUT WHEN THE SUPPLIER OUTPUT METHOD IS MISSING OR THE
+EMAIL NEEDS TO BE CHANGED
+
+When the PO Output method is missing in the Supplier master record or if an email is
+missing or needs to be changed, an Admin can configure how the PO can be
+processed. New options are now available under Documents => Settings => Purchase
+Orders.
+
+
+
+
+ALLOW PO SUBMISSIONS WITHOUT SUPPLIER OUTPUT METHOD
+
+With the configuration toggle off, users will not be able to “submit” a Purchase Order
+when the output method is missing in the supplier master record. Requesters will not
+be able to create Purchase Requests to suppliers without an Output Method defined.
+
+
+
+
+                                                                 Release Preview 12/23/2022 2
+If a Buyer creates a PO and the Output Method is missing on the supplier master
+record a PO will be created in Draft status. The Buyer will not be able to submit the PO.
+
+With the configuration toggle on, users will be able to “submit” an order when the
+output method is missing on the supplier master record.
+
+   ●   Requesters will be able to create Purchase Requests. The system will create a PO
+       in “Ordered” status and the PO will be sent to the Buyer via email with a PO pdf
+       attachment (ie: does not go to the vendor because there is no output method
+       assigned).
+
+
+
+
+   ●   Users will also be able to change the status of a Purchase Order from DRAFT to
+       ORDERED without the system sending the PO (ie: does not go to the vendor
+       because there is no output method assigned)
+
+
+
+
+                                                                   Release Preview 12/23/2022 3
+ALLOW PO SUBMISSIONS TO AD-HOC EMAIL ADDRESS
+
+With the configuration toggle on, users have the option to add or change the email
+address for the PO output in the PO. The ad hoc email can be used when 1) the
+supplier record is missing the Output Method or 2) the supplier record has an Output
+Method defined, but the email address needs to be changed for the specific order. All
+subsequent communications with the supplier will use the new ad hoc email address.
+
+ALLOW REQUESTERS TO PROVIDE ALTERNATE OUTPUT EMAIL ADDRESSES (A SUB
+OPTION THAT IS DISPLAYED WHEN THE FIRST OPTION IS TOGGLED TO ON)
+
+Requesters, with permission in their user master record, have the option to add or
+change the email address for the PO output in the Purchase Request.
+
+
+
+
+                                                                 Release Preview 12/23/2022 4
+EMPLOYEE RESTRICTION TO COMPANY AND GL CODES
+Admins can now restrict Employees to Company and GL Codes in the User record.
+Admins can assign multiple codes to an employee.
+
+
+
+
+Employees will only be able to use their assigned Company and GL Code in Purchase
+Request (PR) line items.
+
+
+
+
+DISPLAY NAME CHANGES THE WAY THE SUPPLIER NAME IS DISPLAYED IN
+VROOZI AND INTERNAL COMMUNICATIONS
+The Supplier Master Record has two fields, Name and Display Name. Admins have the
+ability to change the Display Name of the Supplier, which changes how the supplier is
+displayed in the application and internal email communication. All external email
+communications to the Supplier will display the “Name” field.
+
+
+
+
+                                                                Release Preview 12/23/2022 5
+With the January release into production, empty Display Name fields will be populated
+with the Name field.
+
+
+
+Display Name will be used in all system documents (eg: Purchase Requests, Purchase
+Orders, Goods Receipts, Invoices, and Memos) where the supplier name is displayed.
+
+
+
+
+Internal Email notification will use the “Display Name” of the supplier.
+
+
+
+
+                                                                   Release Preview 12/23/2022 6
+Release Preview 12/23/2022 7
+External communications will display the “Name” field from the supplier record.
+
+
+
+
+                                                                Release Preview 12/23/2022 8
+GOODS RECEIPT AND RETURNS EMAIL NOTIFICATIONS TO SUPPLIERS
+Suppliers can now receive email notification for Goods Receipts and Goods Returns
+created in Vroozi. This feature is not available by default and can be turned on for the
+company, per request.
+
+Emails will be sent to the email addresses in the “Output Email” and in the “Send PO
+Alerts” fields of the supplier record.
+
+
+
+
+                                                                   Release Preview 12/23/2022 9
+Once a PO is received (a Goods Receipt is submitted), an email notification is sent with
+a pdf attachment.
+
+
+
+
+                                                                 Release Preview 12/23/2022 10
+Release Preview 12/23/2022 11
+INCLUDE/EXCLUDE TAX AND SHIPPING CHARGES FOR FINANCIAL
+APPROVALS
+
+
+Admins can configure if tax and shipping charges should be considered for Financial
+Review. If excluded, the sub-total amount will be used to determine the Financial
+Review.
+
+This can be configured on Company => Workflow screen
+
+
+
+
+Once the toggle is on, Sub-total section of PR will show the label “Total Amount in
+Financial Review”. The Total amount in Financial Review will be the amount that is
+checked against the Employee’s Spend Limit and will determine the approver(s) for
+Financial Approval workflow.
+
+
+
+
+                                                                Release Preview 12/23/2022 12
+MORE OPTIONS FOR PURCHASE ORDER CHANGE REQUESTS (POCR)
+
+More options have been added to the POCR configuration so you can limit or add more
+options for what users can change during a PO change process. The configuration is in
+the Admin panel under Documents => Settings => Purchase Orders.
+
+Based on the toggles, the Buyer, Employee or Central Receiver roles who can perform
+changes to a PO will be able to make the corresponding changes to the fields in the
+Purchase Order.
+
+The following toggles are available for Catalog Line Items.
+
+
+
+
+The new options are:
+   ● Cancel items has been renamed to Remove items
+   ● Change Item Category
+   ● Change Item Description
+   ● Change Item Identifier
+   ● Change Item SKU Number
+   ● Change Tax Info
+
+
+
+The following options are available for Non-Catalog Line Items
+
+
+
+
+                                                                 Release Preview 12/23/2022 13
+The new options are:
+   ● Cancel items has been renamed to Remove items
+   ● Change Item Category
+   ● Change Item Description
+   ● Change Tax Info
+
+
+
+
+Vroozi Purchase (Requesters, Approvers,
+Buyers, and Central Receivers)
+PURCHASE ORDER OUTPUT BY THE BUYER WHEN THE OUTPUT METHOD IS
+MISSING
+
+If Vroozi is configured to “Allow PO Submissions without Supplier Output Method” (See
+Admin configuration), the system will “submit” Purchase Orders (POs) when the
+Output Method is missing from the supplier master record.
+
+   ●   Requesters will be able to create Purchase Requests. The system will create a PO
+       in “Ordered” status and the PO will be sent to the Buyer via email with a PO pdf
+       attachment (ie: does not go to the vendor because there is no output method
+       assigned). Buyers can then process orders outside the system (eg: print and
+       send/fax scenarios).
+
+Requesters will be notified that the PO will be created and output to the Buyer..
+
+
+
+
+                                                                 Release Preview 12/23/2022 14
+Release Preview 12/23/2022 15
+   ●   The buyer role will also be able to change the status of a Purchase Order from
+       DRAFT to ORDERED without the system sending the PO (ie: does not go to the
+       vendor because there is no output method assigned)
+
+
+
+
+ADDING AD-HOC EMAIL ADDRESSES FOR PO OUTPUT
+
+If Vroozi is configured to “Allow PO Submissions to Ad-hoc email address” (See Admin
+configuration), users can specify an alternate, ad hoc email address to send the
+Purchase Order. The ad hoc email can be used when 1) the supplier record is missing
+the Output Method or 2) the supplier record has an Output Method defined, but the
+email address needs to be changed for the specific order. All subsequent
+communications with the supplier will use the new ad hoc email address.
+
+
+
+For a PO in Draft status, the user will be able to provide the email address in the
+Purchase Order after clicking the submit button on the PO.
+
+
+
+
+                                                                   Release Preview 12/23/2022 16
+In the case where there is a PO output method defined in the supplier record, the
+Buyer will have the option to change the PO recipient email address after clicking the
+ellipsis button next to Submit.
+
+
+
+
+If Vroozi is configured to “Allow Requesters to provide alternate output email addresses”
+and given permission in their user master record (See Admin configuration), the
+Employee role will have the ability to enter an ad hoc email address in the Purchase
+Request. The user will be notified that the email address is missing in one or more of
+
+
+
+                                                                 Release Preview 12/23/2022 17
+the line items in the Purchase Request. The requester can then provide the email
+address in the Purchase Request after clicking Submit.
+
+
+
+
+PURCHASE ORDER SHORT CLOSE ENHANCEMENTS
+
+If a partial receipt against a Purchase Order (PO) exists, a user will have the option to
+short close a PO (“Close for receiving”) from the:
+
+   ●   Purchase Order status screen
+   ●   Purchase Order document screen
+   ●   PO Change Request (POCR) screen
+
+
+
+
+                                                                    Release Preview 12/23/2022 18
+On the Purchase Order Status screen, after clicking the additional options menu
+(ellipsis or 3-dot menu) on the right, the user will see the option “Close for receiving”.
+
+
+
+
+In the Purchase Order document and after clicking the additional options button
+(ellipsis or 3-dot button) at the button right, the user will see the option “Close for
+receiving”
+
+
+
+
+In the POCR screen, the user will be able to short close a line item or can completely
+close the PO document.
+
+
+
+
+                                                                     Release Preview 12/23/2022 19
+On clicking the Action menu option in the line item, the user will see the option “Close
+for receiving”. This will close the line item only.
+
+
+
+
+If the user wants to close the complete PO, the user will see the option “Close for
+Receiving” after clicking the ellipsis menu option on the Submit button.
+
+
+
+
+Vroozi Integration
+
+DUPLICATE INVOICE CHECK IN NETSUITE
+
+For NetSuite invoice integrations, Vroozi will check during posting if an invoice with the
+same supplier and supplier invoice number already exists in Netsuite. If it exists then
+the system will return an error message instead of posting to Netsuite.
+
+
+
+
+Resolutions
+
+   ●   Not applicable for this release
+
+
+
+
+                                                                  Release Preview 12/23/2022 20
+
